@@ -1,5 +1,97 @@
-<section class="contenu quiz-placeholder">
-  <h1>Quiz : <span class="texte-degrade">{{ themeId() }}</span></h1>
-  <p>🚧 Le moteur de quiz arrive en Phase 3 !</p>
-  <a class="btn btn-primaire" routerLink="/">← Retour aux thèmes</a>
+<section class="contenu quiz">
+
+  <!-- État : chargement -->
+  @if (chargement()) {
+    <p class="quiz__info">Chargement du quiz…</p>
+  }
+
+  <!-- État : erreur -->
+  @else if (erreur()) {
+    <div class="quiz__info quiz__info--erreur">
+      <p>⚠️ {{ erreur() }}</p>
+      <a class="btn btn-primaire" routerLink="/">← Retour aux thèmes</a>
+    </div>
+  }
+
+  <!-- État : le moteur est prêt (m = l'instance de MoteurQuiz) -->
+  @else if (moteur(); as m) {
+
+    <!-- En-tête : thème + barre de progression -->
+    <header class="quiz__entete">
+      <a class="quiz__retour" routerLink="/">←</a>
+      <div class="quiz__theme">
+        @if (themeInfo(); as t) {
+          <span class="quiz__emoji">{{ t.emoji }}</span> {{ t.nom }}
+        }
+      </div>
+      <div class="quiz__compteur">{{ m.nbMaitrisees() }} / {{ m.nombreTotal() }}</div>
+    </header>
+
+    <div class="barre">
+      <div class="barre__remplissage" [style.width.%]="m.progression()"></div>
+    </div>
+
+    <!-- Cas 1 : la partie est terminée → bilan -->
+    @if (m.termine()) {
+      <div class="bilan">
+        <div class="bilan__emoji">🎉</div>
+        <h2>Bravo, thème maîtrisé !</h2>
+        <p class="bilan__texte">
+          Tu as répondu correctement aux {{ m.nombreTotal() }} questions.
+        </p>
+        <p class="bilan__erreurs">
+          @if (m.nbErreurs() === 0) {
+            Et ça, sans la moindre erreur. Sans-faute parfait ! ✨
+          } @else {
+            Nombre d'erreurs avant maîtrise : <strong>{{ m.nbErreurs() }}</strong>.
+          }
+        </p>
+        <div class="bilan__actions">
+          <button class="btn btn-primaire" (click)="m.recommencer()">↻ Recommencer</button>
+          <a class="btn" routerLink="/">Autres thèmes</a>
+        </div>
+      </div>
+    }
+
+    <!-- Cas 2 : une question est en cours (q = la question préparée) -->
+    @else if (m.questionCourante(); as q) {
+      <article class="question">
+        <p class="question__enonce">{{ q.question.enonce }}</p>
+
+        <div class="choix-liste">
+          @for (choix of q.choixMelanges; track $index) {
+            <button
+              class="choix"
+              [class.choix--correct]="m.aRepondu() && $index === q.indexBonneReponse"
+              [class.choix--incorrect]="m.aRepondu() && $index === m.reponseSelectionnee() && $index !== q.indexBonneReponse"
+              [class.choix--attenue]="m.aRepondu() && $index !== q.indexBonneReponse && $index !== m.reponseSelectionnee()"
+              [disabled]="m.aRepondu()"
+              (click)="m.repondre($index)">
+              <span class="choix__lettre">{{ ['A', 'B', 'C', 'D'][$index] }}</span>
+              <span class="choix__texte">{{ choix }}</span>
+            </button>
+          }
+        </div>
+
+        <!-- Bloc d'explication, affiché UNIQUEMENT après avoir répondu -->
+        @if (m.aRepondu()) {
+          @let estBonne = m.reponseSelectionnee() === q.indexBonneReponse;
+          <div class="explication" [class.explication--bonne]="estBonne" [class.explication--mauvaise]="!estBonne">
+            <p class="explication__verdict">
+              @if (estBonne) {
+                ✅ Bonne réponse !
+              } @else {
+                ❌ Raté ! Cette question reviendra plus tard.
+              }
+            </p>
+            <p class="explication__texte">{{ q.question.explication }}</p>
+          </div>
+
+          <button class="btn btn-primaire question__suivant" (click)="m.questionSuivante()">
+            Question suivante →
+          </button>
+        }
+      </article>
+    }
+  }
 </section>
