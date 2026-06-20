@@ -1,0 +1,44 @@
+[
+  {
+    "id": "mangas-1",
+    "enonce": "Dans quel sens se lit traditionnellement un manga ?",
+    "choix": ["de gauche à droite", "de droite à gauche", "de haut en bas uniquement", "du centre vers l'extérieur"],
+    "bonneReponse": 1,
+    "explication": "Au Japon, on lit les mangas de droite à gauche. Ce sens est conservé dans la plupart des éditions françaises modernes."
+  },
+  {
+    "id": "mangas-2",
+    "enonce": "Comment appelle-t-on l'auteur d'un manga ?",
+    "choix": ["un otaku", "un sensei", "un mangaka", "un shonen"],
+    "bonneReponse": 2,
+    "explication": "Un mangaka est l'auteur (dessinateur-scénariste) d'un manga. « Otaku » désigne, lui, un fan passionné."
+  },
+  {
+    "id": "mangas-3",
+    "enonce": "Quel manga d'Eiichiro Oda suit un équipage de pirates ?",
+    "choix": ["Naruto", "One Piece", "Bleach", "Dragon Ball"],
+    "bonneReponse": 1,
+    "explication": "« One Piece » d'Eiichiro Oda suit Luffy et son équipage. C'est l'un des mangas les plus vendus de l'histoire."
+  },
+  {
+    "id": "mangas-4",
+    "enonce": "Le genre « shonen » vise principalement quel public ?",
+    "choix": ["les jeunes filles", "les jeunes garçons et adolescents", "les adultes", "les très jeunes enfants"],
+    "bonneReponse": 1,
+    "explication": "Le « shonen » vise un public de jeunes garçons et d'ados. Le « shojo » vise lui un public de jeunes filles."
+  },
+  {
+    "id": "mangas-5",
+    "enonce": "Qui a créé le manga « Dragon Ball » ?",
+    "choix": ["Masashi Kishimoto", "Tite Kubo", "Eiichiro Oda", "Akira Toriyama"],
+    "bonneReponse": 3,
+    "explication": "Akira Toriyama est le créateur de « Dragon Ball ». Kishimoto a fait Naruto, Kubo a fait Bleach, Oda a fait One Piece."
+  },
+  {
+    "id": "mangas-6",
+    "enonce": "Quel manga met en scène l'humanité assiégée par des géants ?",
+    "choix": ["Death Note", "L'Attaque des Titans", "Fullmetal Alchemist", "My Hero Academia"],
+    "bonneReponse": 1,
+    "explication": "« L'Attaque des Titans » (Shingeki no Kyojin) de Hajime Isayama met en scène l'humanité retranchée derrière des murs face aux titans."
+  }
+]

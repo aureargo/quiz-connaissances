@@ -1,0 +1,44 @@
+[
+  {
+    "id": "animes-1",
+    "enonce": "De quel pays l'« animé » est-il originaire ?",
+    "choix": ["la Corée du Sud", "la Chine", "le Japon", "les États-Unis"],
+    "bonneReponse": 2,
+    "explication": "L'« anime » désigne l'animation japonaise. Le terme vient du mot anglais « animation »."
+  },
+  {
+    "id": "animes-2",
+    "enonce": "Quel studio est célèbre pour « Mon voisin Totoro » et « Le Voyage de Chihiro » ?",
+    "choix": ["Toei Animation", "le studio Ghibli", "Madhouse", "Kyoto Animation"],
+    "bonneReponse": 1,
+    "explication": "Le studio Ghibli, cofondé par Hayao Miyazaki, est célèbre pour Totoro, Chihiro, Princesse Mononoké…"
+  },
+  {
+    "id": "animes-3",
+    "enonce": "Qui a réalisé « Le Voyage de Chihiro » ?",
+    "choix": ["Makoto Shinkai", "Hayao Miyazaki", "Satoshi Kon", "Mamoru Hosoda"],
+    "bonneReponse": 1,
+    "explication": "« Le Voyage de Chihiro » (2001), réalisé par Hayao Miyazaki, a remporté l'Oscar du meilleur film d'animation."
+  },
+  {
+    "id": "animes-4",
+    "enonce": "Quel animé suit un carnet qui tue ceux dont on y écrit le nom ?",
+    "choix": ["Code Geass", "Steins;Gate", "Death Note", "Monster"],
+    "bonneReponse": 2,
+    "explication": "Dans « Death Note », Light Yagami trouve un carnet qui tue quiconque dont il écrit le nom en pensant à son visage."
+  },
+  {
+    "id": "animes-5",
+    "enonce": "Comment appelle-t-on un fan passionné d'animés et de mangas ?",
+    "choix": ["un senpai", "un otaku", "un kawaii", "un mangaka"],
+    "bonneReponse": 1,
+    "explication": "Un « otaku » est un passionné, souvent d'animés et de mangas. Au Japon, le terme reste plus péjoratif qu'en Occident."
+  },
+  {
+    "id": "animes-6",
+    "enonce": "Quel film de Makoto Shinkai (2016) met en scène deux ados qui échangent leurs corps ?",
+    "choix": ["A Silent Voice", "Weathering with You", "Your Name", "5 centimètres par seconde"],
+    "bonneReponse": 2,
+    "explication": "« Your Name » (Kimi no Na wa, 2016) de Makoto Shinkai raconte deux adolescents qui échangent mystérieusement leurs corps."
+  }
+]

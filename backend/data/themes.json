@@ -40,5 +40,47 @@
     "emoji": "🗃️",
     "categorie": "Bases de données",
     "description": "Le langage universel des bases de données relationnelles."
+  },
+  {
+    "id": "crypto",
+    "nom": "Crypto",
+    "emoji": "🪙",
+    "categorie": "Crypto & Web3",
+    "description": "Bitcoin, blockchain, smart contracts et compagnie."
+  },
+  {
+    "id": "mangas",
+    "nom": "Mangas",
+    "emoji": "📖",
+    "categorie": "Culture geek",
+    "description": "La bande dessinée japonaise et ses grands titres."
+  },
+  {
+    "id": "animes",
+    "nom": "Animés",
+    "emoji": "📺",
+    "categorie": "Culture geek",
+    "description": "L'animation japonaise, des studios cultes aux chefs-d'œuvre."
+  },
+  {
+    "id": "jeux-video",
+    "nom": "Jeux vidéo",
+    "emoji": "🎮",
+    "categorie": "Culture geek",
+    "description": "Consoles, mascottes et licences incontournables."
+  },
+  {
+    "id": "echecs",
+    "nom": "Échecs",
+    "emoji": "♟️",
+    "categorie": "Jeux & stratégie",
+    "description": "Les règles et concepts du roi des jeux de plateau."
+  },
+  {
+    "id": "pays",
+    "nom": "Pays",
+    "emoji": "🌍",
+    "categorie": "Culture générale",
+    "description": "Capitales, géographie et records du monde."
   }
 ]

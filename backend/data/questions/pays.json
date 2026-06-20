@@ -1,0 +1,44 @@
+[
+  {
+    "id": "pays-1",
+    "enonce": "Quelle est la capitale de l'Australie ?",
+    "choix": ["Sydney", "Melbourne", "Canberra", "Perth"],
+    "bonneReponse": 2,
+    "explication": "La capitale de l'Australie est Canberra, choisie comme compromis entre les villes rivales Sydney et Melbourne."
+  },
+  {
+    "id": "pays-2",
+    "enonce": "Quel est le plus grand pays du monde par superficie ?",
+    "choix": ["le Canada", "la Russie", "la Chine", "les États-Unis"],
+    "bonneReponse": 1,
+    "explication": "La Russie est de loin le plus grand pays du monde (~17 millions de km²), à cheval sur l'Europe et l'Asie."
+  },
+  {
+    "id": "pays-3",
+    "enonce": "Quel pays est le plus peuplé du monde depuis 2023 ?",
+    "choix": ["la Chine", "l'Inde", "les États-Unis", "l'Indonésie"],
+    "bonneReponse": 1,
+    "explication": "Depuis 2023, l'Inde est le pays le plus peuplé du monde, dépassant la Chine."
+  },
+  {
+    "id": "pays-4",
+    "enonce": "Sur quel continent se trouve principalement l'Égypte ?",
+    "choix": ["l'Asie", "l'Europe", "l'Afrique", "l'Amérique"],
+    "bonneReponse": 2,
+    "explication": "L'Égypte se situe principalement en Afrique ; seule sa péninsule du Sinaï se trouve en Asie."
+  },
+  {
+    "id": "pays-5",
+    "enonce": "Quelle est la capitale du Canada ?",
+    "choix": ["Toronto", "Ottawa", "Montréal", "Vancouver"],
+    "bonneReponse": 1,
+    "explication": "La capitale du Canada est Ottawa. Toronto est la plus grande ville, mais n'est pas la capitale."
+  },
+  {
+    "id": "pays-6",
+    "enonce": "Quel pays a une forme caractéristique de botte ?",
+    "choix": ["l'Espagne", "l'Italie", "la Grèce", "le Portugal"],
+    "bonneReponse": 1,
+    "explication": "L'Italie a une forme reconnaissable de botte, qui s'avance dans la mer Méditerranée."
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "jeux-video-1",
+    "enonce": "Quel plombier moustachu est la mascotte de Nintendo ?",
+    "choix": ["Sonic", "Mario", "Link", "Kirby"],
+    "bonneReponse": 1,
+    "explication": "Mario, le plombier créé par Shigeru Miyamoto, est la mascotte emblématique de Nintendo."
+  },
+  {
+    "id": "jeux-video-2",
+    "enonce": "Dans quel jeu construit-on un monde à partir de blocs cubiques ?",
+    "choix": ["Roblox", "Terraria", "Minecraft", "Fortnite"],
+    "bonneReponse": 2,
+    "explication": "Minecraft, sorti en 2011, est le jeu de construction par blocs cubiques le plus vendu au monde."
+  },
+  {
+    "id": "jeux-video-3",
+    "enonce": "Quelle entreprise a créé la console PlayStation ?",
+    "choix": ["Microsoft", "Sony", "Nintendo", "Sega"],
+    "bonneReponse": 1,
+    "explication": "La PlayStation (1994) est la console de Sony. Microsoft fabrique la Xbox, et Nintendo la Switch."
+  },
+  {
+    "id": "jeux-video-4",
+    "enonce": "Comment s'appelle le héros de la série « The Legend of Zelda » ?",
+    "choix": ["Zelda", "Ganon", "Link", "Epona"],
+    "bonneReponse": 2,
+    "explication": "Le héros s'appelle Link. Zelda est la princesse, Ganon l'antagoniste, et Epona la jument."
+  },
+  {
+    "id": "jeux-video-5",
+    "enonce": "Quel jeu d'Epic Games a popularisé le « battle royale » grand public ?",
+    "choix": ["Among Us", "Valorant", "Fortnite", "Overwatch"],
+    "bonneReponse": 2,
+    "explication": "Fortnite (Epic Games) a démocratisé le battle royale : 100 joueurs s'affrontent, un seul survit."
+  },
+  {
+    "id": "jeux-video-6",
+    "enonce": "Quel hérisson bleu ultra-rapide est la mascotte de Sega ?",
+    "choix": ["Crash Bandicoot", "Sonic", "Rayman", "Pac-Man"],
+    "bonneReponse": 1,
+    "explication": "Sonic, le hérisson bleu, fut créé par Sega pour concurrencer le Mario de Nintendo."
+  }
+]
