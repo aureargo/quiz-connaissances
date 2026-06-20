@@ -18,7 +18,7 @@
 
     <!-- En-tête : thème + barre de progression -->
     <header class="quiz__entete">
-      <a class="quiz__retour" routerLink="/">←</a>
+      <a class="quiz__retour" routerLink="/" aria-label="Retour aux thèmes">←</a>
       <div class="quiz__theme">
         @if (themeInfo(); as t) {
           <span class="quiz__emoji">{{ t.emoji }}</span> {{ t.nom }}
@@ -27,7 +27,7 @@
       <div class="quiz__compteur">{{ m.nbMaitrisees() }} / {{ m.nombreTotal() }}</div>
     </header>
 
-    <div class="barre">
+    <div class="barre" role="progressbar" [attr.aria-valuenow]="m.progression()" aria-valuemin="0" aria-valuemax="100">
       <div class="barre__remplissage" [style.width.%]="m.progression()"></div>
     </div>
 
@@ -53,45 +53,55 @@
       </div>
     }
 
-    <!-- Cas 2 : une question est en cours (q = la question préparée) -->
-    @else if (m.questionCourante(); as q) {
-      <article class="question">
-        <p class="question__enonce">{{ q.question.enonce }}</p>
+    <!-- Cas 2 : une question est en cours.
+         On l'enveloppe dans un @for d'UN seul élément, "tracké" par l'id de la
+         question. Ainsi, quand la question change, Angular recrée le bloc DOM
+         et l'animation d'entrée se rejoue à chaque fois. -->
+    @else {
+      @for (q of [m.questionCourante()]; track q?.question?.id ?? 'aucune') {
+        @if (q) {
+          <article class="question">
+            <p class="question__enonce">{{ q.question.enonce }}</p>
 
-        <div class="choix-liste">
-          @for (choix of q.choixMelanges; track $index) {
-            <button
-              class="choix"
-              [class.choix--correct]="m.aRepondu() && $index === q.indexBonneReponse"
-              [class.choix--incorrect]="m.aRepondu() && $index === m.reponseSelectionnee() && $index !== q.indexBonneReponse"
-              [class.choix--attenue]="m.aRepondu() && $index !== q.indexBonneReponse && $index !== m.reponseSelectionnee()"
-              [disabled]="m.aRepondu()"
-              (click)="m.repondre($index)">
-              <span class="choix__lettre">{{ ['A', 'B', 'C', 'D'][$index] }}</span>
-              <span class="choix__texte">{{ choix }}</span>
-            </button>
-          }
-        </div>
-
-        <!-- Bloc d'explication, affiché UNIQUEMENT après avoir répondu -->
-        @if (m.aRepondu()) {
-          @let estBonne = m.reponseSelectionnee() === q.indexBonneReponse;
-          <div class="explication" [class.explication--bonne]="estBonne" [class.explication--mauvaise]="!estBonne">
-            <p class="explication__verdict">
-              @if (estBonne) {
-                ✅ Bonne réponse !
-              } @else {
-                ❌ Raté ! Cette question reviendra plus tard.
+            <div class="choix-liste">
+              @for (choix of q.choixMelanges; track $index) {
+                <button
+                  class="choix"
+                  [style.animation-delay.ms]="$index * 60"
+                  [class.choix--correct]="m.aRepondu() && $index === q.indexBonneReponse"
+                  [class.choix--incorrect]="m.aRepondu() && $index === m.reponseSelectionnee() && $index !== q.indexBonneReponse"
+                  [class.choix--attenue]="m.aRepondu() && $index !== q.indexBonneReponse && $index !== m.reponseSelectionnee()"
+                  [disabled]="m.aRepondu()"
+                  (click)="m.repondre($index)">
+                  <span class="choix__lettre">{{ ['A', 'B', 'C', 'D'][$index] }}</span>
+                  <span class="choix__texte">{{ choix }}</span>
+                </button>
               }
-            </p>
-            <p class="explication__texte">{{ q.question.explication }}</p>
-          </div>
+            </div>
 
-          <button class="btn btn-primaire question__suivant" (click)="m.questionSuivante()">
-            Question suivante →
-          </button>
+            <!-- Bloc d'explication, affiché UNIQUEMENT après avoir répondu -->
+            @if (m.aRepondu()) {
+              @let estBonne = m.reponseSelectionnee() === q.indexBonneReponse;
+              <div class="explication" [class.explication--bonne]="estBonne" [class.explication--mauvaise]="!estBonne">
+                <p class="explication__verdict">
+                  @if (estBonne) {
+                    ✅ Bonne réponse !
+                  } @else {
+                    ❌ Raté ! Cette question reviendra plus tard.
+                  }
+                </p>
+                <p class="explication__texte">{{ q.question.explication }}</p>
+              </div>
+
+              <button class="btn btn-primaire question__suivant" (click)="m.questionSuivante()">
+                Question suivante →
+              </button>
+            } @else {
+              <p class="question__astuce">⌨️ Astuce : touches <kbd>1</kbd>–<kbd>4</kbd> pour répondre.</p>
+            }
+          </article>
         }
-      </article>
+      }
     }
   }
 </section>

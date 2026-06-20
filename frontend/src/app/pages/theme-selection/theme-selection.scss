@@ -9,6 +9,7 @@
 .accueil__entete {
   text-align: center;
   margin-bottom: 44px;
+  animation: apparition 0.4s ease both;
 
   h1 {
     font-size: clamp(2rem, 5vw, 3.2rem); /* taille fluide selon l'écran */
@@ -71,6 +72,8 @@
   position: relative;
   overflow: hidden;
   transition: transform 0.15s ease, border-color 0.15s ease;
+  /* Fondu d'entrée (opacité seule pour ne pas gêner le `transform` du survol). */
+  animation: fondu 0.45s ease both;
 
   /* Liseré dégradé qui apparaît au survol, en haut de la carte */
   &::before {

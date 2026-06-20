@@ -114,3 +114,46 @@ body {
 .btn-primaire:hover {
   filter: brightness(1.08);
 }
+
+/* ---- Accessibilité : contour visible au clavier (Tab) ---- */
+:focus-visible {
+  outline: 2px solid var(--primary-2);
+  outline-offset: 2px;
+}
+
+/* ---- Animation d'apparition réutilisable (fondu + léger glissement) ---- */
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fondu SIMPLE (opacité seule). Utile sur des éléments qui ont déjà un effet
+   de survol basé sur `transform` : animer aussi le transform ici entrerait en
+   conflit avec le survol. */
+@keyframes fondu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---- Respect des préférences d'accessibilité ----
+   Si l'utilisateur a demandé "moins d'animations" dans son système, on les
+   coupe. C'est une bonne pratique (confort, mal des transports...). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

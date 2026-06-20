@@ -1,4 +1,4 @@
-import { Component, OnInit, inject, input, signal } from '@angular/core';
+import { Component, HostListener, OnInit, inject, input, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { forkJoin } from 'rxjs';
 
@@ -61,5 +61,40 @@ export class Quiz implements OnInit {
         this.chargement.set(false);
       }
     });
+  }
+
+  /**
+   * Navigation au CLAVIER (bonus confort).
+   * @HostListener écoute un événement (ici keydown sur tout le document) et
+   * appelle cette méthode. '$event' transmet l'objet KeyboardEvent.
+   *   - touches 1–4 (ou A–D) : sélectionne une réponse ;
+   *   - Entrée / Espace après réponse : passe à la question suivante.
+   */
+  @HostListener('document:keydown', ['$event'])
+  gererClavier(evenement: KeyboardEvent): void {
+    const m = this.moteur();
+    if (!m || m.termine()) {
+      return;
+    }
+    const courante = m.questionCourante();
+    if (!courante) {
+      return;
+    }
+
+    if (!m.aRepondu()) {
+      const touche = evenement.key.toLowerCase();
+      // On cherche l'index correspondant, que ce soit un chiffre ou une lettre.
+      const parChiffre = ['1', '2', '3', '4'].indexOf(touche);
+      const parLettre = ['a', 'b', 'c', 'd'].indexOf(touche);
+      const index = parChiffre !== -1 ? parChiffre : parLettre;
+
+      if (index !== -1 && index < courante.choixMelanges.length) {
+        m.repondre(index);
+        evenement.preventDefault();
+      }
+    } else if (evenement.key === 'Enter' || evenement.key === ' ') {
+      m.questionSuivante();
+      evenement.preventDefault();
+    }
   }
 }

@@ -80,6 +80,7 @@
   border-radius: var(--radius);
   padding: 28px;
   box-shadow: var(--shadow);
+  animation: apparition 0.35s ease both; /* entrée à chaque nouvelle question */
 }
 
 .question__enonce {
@@ -110,6 +111,9 @@
   padding: 16px 18px;
   cursor: pointer;
   transition: border-color 0.15s ease, background 0.15s ease, transform 0.1s ease;
+  /* Fondu d'entrée en cascade (le délai est fixé dans le template selon l'index).
+     On anime l'opacité seule pour ne pas gêner le `transform` du survol. */
+  animation: fondu 0.4s ease both;
 
   &:not(:disabled):hover {
     border-color: rgba(124, 92, 255, 0.6);
@@ -168,6 +172,7 @@
   padding: 18px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
+  animation: apparition 0.3s ease both;
 
   &--bonne {
     background: var(--success-bg);
@@ -196,6 +201,26 @@
   justify-content: center;
 }
 
+/* Astuce clavier affichée sous les choix tant qu'on n'a pas répondu. */
+.question__astuce {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+
+  kbd {
+    display: inline-block;
+    min-width: 20px;
+    padding: 1px 6px;
+    border-radius: 6px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-bottom-width: 2px;
+    font-family: inherit;
+    font-size: 0.8rem;
+  }
+}
+
 /* --- Écran de bilan (fin de partie) --- */
 .bilan {
   text-align: center;
@@ -204,6 +229,7 @@
   border-radius: var(--radius);
   padding: 48px 28px;
   box-shadow: var(--shadow);
+  animation: apparition 0.4s ease both;
 }
 
 .bilan__emoji {
