@@ -1,0 +1,44 @@
+[
+  {
+    "id": "go",
+    "nom": "Go",
+    "emoji": "🐹",
+    "categorie": "Programmation",
+    "description": "Le langage de Google : simple, compilé et conçu pour la concurrence."
+  },
+  {
+    "id": "angular",
+    "nom": "Angular",
+    "emoji": "🅰️",
+    "categorie": "Programmation",
+    "description": "Le framework front-end de Google, écrit en TypeScript."
+  },
+  {
+    "id": "java",
+    "nom": "Java",
+    "emoji": "☕",
+    "categorie": "Programmation",
+    "description": "Le grand classique de la POO, multiplateforme grâce à la JVM."
+  },
+  {
+    "id": "cpp",
+    "nom": "C++",
+    "emoji": "➕",
+    "categorie": "Programmation",
+    "description": "Puissant et bas niveau, avec une gestion fine de la mémoire."
+  },
+  {
+    "id": "rust",
+    "nom": "Rust",
+    "emoji": "🦀",
+    "categorie": "Programmation",
+    "description": "Sûreté mémoire sans ramasse-miettes grâce au système d'ownership."
+  },
+  {
+    "id": "sql",
+    "nom": "SQL",
+    "emoji": "🗃️",
+    "categorie": "Bases de données",
+    "description": "Le langage universel des bases de données relationnelles."
+  }
+]

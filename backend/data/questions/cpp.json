@@ -1,0 +1,44 @@
+[
+  {
+    "id": "cpp-1",
+    "enonce": "Quel opérateur alloue dynamiquement de la mémoire en C++ ?",
+    "choix": ["new", "alloc", "create", "make"],
+    "bonneReponse": 0,
+    "explication": "`new` réserve de la mémoire sur le tas et renvoie un pointeur. (En C historique, on utilisait `malloc`, moins typé.)"
+  },
+  {
+    "id": "cpp-2",
+    "enonce": "Quel mot-clé libère la mémoire réservée avec `new` ?",
+    "choix": ["free", "delete", "release", "dispose"],
+    "bonneReponse": 1,
+    "explication": "À chaque `new` doit correspondre un `delete`, sinon on provoque une fuite mémoire. `free` est l'équivalent pour `malloc` (en C)."
+  },
+  {
+    "id": "cpp-3",
+    "enonce": "Quel idiome lie la durée de vie d'une ressource à celle d'un objet ?",
+    "choix": ["Le ramasse-miettes (GC)", "Le RAII", "L'ARC", "Le comptage manuel"],
+    "bonneReponse": 1,
+    "explication": "RAII (Resource Acquisition Is Initialization) : la ressource est libérée automatiquement dans le destructeur de l'objet. C'est la base des smart pointers."
+  },
+  {
+    "id": "cpp-4",
+    "enonce": "Quel symbole sert à déclarer un pointeur ?",
+    "choix": ["&", "*", "#", "@"],
+    "bonneReponse": 1,
+    "explication": "`int* p;` déclare un pointeur vers un int. L'esperluette `&` sert, elle, à récupérer l'adresse d'une variable ou à déclarer une référence."
+  },
+  {
+    "id": "cpp-5",
+    "enonce": "Quel mot-clé active le polymorphisme (résolution à l'exécution) ?",
+    "choix": ["dynamic", "abstract", "virtual", "override"],
+    "bonneReponse": 2,
+    "explication": "Une méthode `virtual` peut être redéfinie dans une classe fille et sera appelée selon le type réel de l'objet à l'exécution."
+  },
+  {
+    "id": "cpp-6",
+    "enonce": "Comment nomme-t-on la bibliothèque standard de conteneurs et d'algorithmes ?",
+    "choix": ["Boost", "STL", "glibc", "BCL"],
+    "bonneReponse": 1,
+    "explication": "La STL (Standard Template Library) fournit `vector`, `map`, `sort`, etc. Boost est une bibliothèque tierce, très répandue mais non standard."
+  }
+]

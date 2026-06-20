@@ -1,0 +1,44 @@
+[
+  {
+    "id": "go-1",
+    "enonce": "Quel mot-clé permet de lancer une goroutine (un fil d'exécution léger) ?",
+    "choix": ["thread", "go", "spawn", "async"],
+    "bonneReponse": 1,
+    "explication": "On préfixe simplement un appel de fonction par `go` : `go maFonction()`. Le runtime Go orchestre alors des milliers de goroutines très efficacement."
+  },
+  {
+    "id": "go-2",
+    "enonce": "Quelle syntaxe déclare ET initialise une variable avec inférence de type ?",
+    "choix": ["int x = 5", "x := 5", "let x = 5", "var x = int(5)"],
+    "bonneReponse": 1,
+    "explication": "L'opérateur `:=` déclare une variable en déduisant son type de la valeur. Il ne s'utilise qu'à l'intérieur d'une fonction."
+  },
+  {
+    "id": "go-3",
+    "enonce": "Comment une fonction Go signale-t-elle classiquement une erreur ?",
+    "choix": ["En renvoyant une valeur et une error", "En levant une exception", "En renvoyant -1", "En modifiant une variable globale"],
+    "bonneReponse": 0,
+    "explication": "Go n'utilise pas d'exceptions pour le contrôle de flux courant. La convention est de renvoyer `(résultat, error)` puis de tester `if err != nil`."
+  },
+  {
+    "id": "go-4",
+    "enonce": "À quoi sert le mot-clé `defer` ?",
+    "choix": ["À gérer les imports", "À définir une constante", "À reporter un appel jusqu'à la fin de la fonction", "À déclarer une goroutine"],
+    "bonneReponse": 2,
+    "explication": "`defer f()` exécute `f()` juste avant que la fonction englobante ne se termine. Idéal pour libérer une ressource (fermer un fichier, par exemple)."
+  },
+  {
+    "id": "go-5",
+    "enonce": "Quel outil reformate le code selon le style standard de Go ?",
+    "choix": ["golint", "goprettier", "gofmt", "gobeautify"],
+    "bonneReponse": 2,
+    "explication": "`gofmt` (souvent appelé via `go fmt`) impose un style unique à tout l'écosystème Go. Fini les débats sur l'indentation !"
+  },
+  {
+    "id": "go-6",
+    "enonce": "Comment crée-t-on un canal (channel) transportant des entiers ?",
+    "choix": ["new(chan int)", "channel<int>()", "chan int{}", "make(chan int)"],
+    "bonneReponse": 3,
+    "explication": "Les canaux permettent aux goroutines de communiquer. On les crée avec `make`, tout comme les slices et les maps."
+  }
+]

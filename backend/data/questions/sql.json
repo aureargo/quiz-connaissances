@@ -1,0 +1,44 @@
+[
+  {
+    "id": "sql-1",
+    "enonce": "Quelle commande récupère des données dans une table ?",
+    "choix": ["GET", "SELECT", "FETCH", "READ"],
+    "bonneReponse": 1,
+    "explication": "`SELECT colonnes FROM table` est la commande de lecture fondamentale du SQL."
+  },
+  {
+    "id": "sql-2",
+    "enonce": "Quelle clause filtre les LIGNES selon une condition ?",
+    "choix": ["FILTER", "HAVING", "WHERE", "IF"],
+    "bonneReponse": 2,
+    "explication": "`WHERE` filtre les lignes avant tout regroupement. `HAVING` filtre lui APRÈS un `GROUP BY` (sur des résultats agrégés)."
+  },
+  {
+    "id": "sql-3",
+    "enonce": "Quel mot-clé combine les lignes de deux tables liées ?",
+    "choix": ["JOIN", "MERGE", "LINK", "COMBINE"],
+    "bonneReponse": 0,
+    "explication": "`JOIN` relie deux tables via une condition, souvent une clé étrangère : `... FROM a JOIN b ON a.id = b.a_id`."
+  },
+  {
+    "id": "sql-4",
+    "enonce": "Quelle commande insère une nouvelle ligne ?",
+    "choix": ["ADD", "INSERT", "CREATE", "PUT"],
+    "bonneReponse": 1,
+    "explication": "`INSERT INTO table (colonnes) VALUES (...)`. `CREATE` sert lui à créer des structures (table, base…), pas des lignes."
+  },
+  {
+    "id": "sql-5",
+    "enonce": "Quelle fonction d'agrégation compte le nombre de lignes ?",
+    "choix": ["SUM", "TOTAL", "COUNT", "NUMBER"],
+    "bonneReponse": 2,
+    "explication": "`COUNT(*)` renvoie le nombre de lignes. `SUM`, lui, additionne les valeurs d'une colonne numérique."
+  },
+  {
+    "id": "sql-6",
+    "enonce": "Quelle clause trie les résultats d'une requête ?",
+    "choix": ["SORT BY", "ORDER BY", "GROUP BY", "ARRANGE"],
+    "bonneReponse": 1,
+    "explication": "`ORDER BY colonne ASC|DESC` trie le résultat. À ne pas confondre avec `GROUP BY`, qui regroupe les lignes pour les agréger."
+  }
+]
