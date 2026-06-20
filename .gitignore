@@ -1,0 +1,29 @@
+# ---------------------------------------------------------------------------
+# .gitignore — fichiers et dossiers que git doit ignorer (ne pas versionner)
+# ---------------------------------------------------------------------------
+
+# === Backend Go ===
+# Binaires compilés (on ne versionne JAMAIS un exécutable, on le recompile)
+backend/quiz-server
+backend/quiz-server.exe
+backend/*.exe
+# Dossier de sortie éventuel
+backend/bin/
+
+# === Frontend Angular / Node ===
+# Les dépendances : énormes et reconstructibles via `npm install`
+frontend/node_modules/
+# Résultat du build de production
+frontend/dist/
+# Cache du compilateur Angular
+frontend/.angular/
+# Logs npm
+**/npm-debug.log*
+
+# === Divers / éditeurs ===
+.DS_Store
+Thumbs.db
+*.log
+.vscode/*
+!.vscode/extensions.json
+.idea/
