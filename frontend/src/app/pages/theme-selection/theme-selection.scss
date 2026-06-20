@@ -1,0 +1,120 @@
+/* Styles propres à la page de sélection de thème.
+   Ils sont "encapsulés" : ils ne s'appliquent qu'à CE composant. */
+
+.accueil {
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.accueil__entete {
+  text-align: center;
+  margin-bottom: 44px;
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem); /* taille fluide selon l'écran */
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+}
+
+.accueil__sous-titre {
+  margin-top: 12px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.accueil__info {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 40px 0;
+  font-size: 1.1rem;
+
+  &--erreur {
+    color: var(--danger);
+  }
+}
+
+/* --- Une catégorie (ex : "Programmation") --- */
+.categorie {
+  margin-bottom: 40px;
+}
+
+.categorie__titre {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* --- La grille de cartes (responsive : autant de colonnes que possible) --- */
+.grille-themes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+/* --- Une carte de thème (cliquable) --- */
+.carte-theme {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+
+  /* Liseré dégradé qui apparaît au survol, en haut de la carte */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background: var(--accent-gradient);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba(124, 92, 255, 0.5);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.carte-theme__emoji {
+  font-size: 2.2rem;
+}
+
+.carte-theme__nom {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.carte-theme__desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  flex-grow: 1;
+}
+
+.carte-theme__badge {
+  margin-top: 10px;
+  align-self: flex-start;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--primary-2);
+  background: rgba(192, 96, 255, 0.12);
+  border-radius: 999px;
+  padding: 4px 12px;
+}

@@ -1,0 +1,18 @@
+<!-- Layout commun à toutes les pages -->
+<div class="app">
+  <header class="app__entete">
+    <!-- Lien vers l'accueil. routerLink="/" navigue sans recharger la page. -->
+    <a class="app__logo" routerLink="/">
+      🧠 <span class="texte-degrade">Quiz</span> Connaissances
+    </a>
+  </header>
+
+  <main class="app__contenu">
+    <!-- C'est ICI qu'Angular insère la page correspondant à l'URL courante. -->
+    <router-outlet />
+  </main>
+
+  <footer class="app__pied">
+    Projet pédagogique Angular + Go — code commenté en français.
+  </footer>
+</div>

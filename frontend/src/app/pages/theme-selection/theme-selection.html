@@ -1,0 +1,48 @@
+<!-- =========================================================================
+     Template de la page de sélection de thème.
+
+     On utilise la nouvelle syntaxe de control-flow d'Angular (17+) :
+       @if (...) { ... } @else { ... }   pour les conditions
+       @for (x of liste; track x.id) { ... }  pour les boucles
+     `track` aide Angular à savoir quel élément est quel (performances).
+     ========================================================================= -->
+
+<section class="contenu accueil">
+  <header class="accueil__entete">
+    <h1>Teste tes <span class="texte-degrade">connaissances</span> 🧠</h1>
+    <p class="accueil__sous-titre">
+      Choisis un thème. Les questions ratées reviendront jusqu'à ce que tu les maîtrises !
+    </p>
+  </header>
+
+  <!-- État : chargement en cours -->
+  @if (chargement()) {
+    <p class="accueil__info">Chargement des thèmes…</p>
+  }
+
+  <!-- État : erreur -->
+  @else if (erreur()) {
+    <p class="accueil__info accueil__info--erreur">⚠️ {{ erreur() }}</p>
+  }
+
+  <!-- État : données chargées → on affiche les thèmes par catégorie -->
+  @else {
+    @for (groupe of themesParCategorie(); track groupe.categorie) {
+      <div class="categorie">
+        <h2 class="categorie__titre">{{ groupe.categorie }}</h2>
+
+        <div class="grille-themes">
+          @for (theme of groupe.themes; track theme.id) {
+            <!-- routerLink navigue vers /quiz/<id> sans recharger la page -->
+            <a class="carte-theme" [routerLink]="['/quiz', theme.id]">
+              <span class="carte-theme__emoji">{{ theme.emoji }}</span>
+              <span class="carte-theme__nom">{{ theme.nom }}</span>
+              <span class="carte-theme__desc">{{ theme.description }}</span>
+              <span class="carte-theme__badge">{{ theme.nbQuestions }} questions</span>
+            </a>
+          }
+        </div>
+      </div>
+    }
+  }
+</section>

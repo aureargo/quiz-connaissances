@@ -1,0 +1,116 @@
+/* =========================================================================
+   styles.scss — styles GLOBAUX de l'application (chargés une seule fois).
+   On y met : les "design tokens" (couleurs, espacements...), un petit reset
+   CSS, et la typographie de base. Les styles spécifiques à un composant vont,
+   eux, dans le fichier .scss de ce composant.
+   ========================================================================= */
+
+/* ---- Design tokens : des variables CSS réutilisables partout ----
+   Centraliser les couleurs ici permet de changer tout le thème en un endroit. */
+:root {
+  /* Fonds (du plus sombre au plus clair) */
+  --bg: #0f1020;
+  --surface: #1a1c33;
+  --surface-2: #23264a;
+
+  /* Texte */
+  --text: #f2f3ff;
+  --text-muted: #9aa0c7;
+
+  /* Couleurs d'accent (dégradé violet → rose) */
+  --primary: #7c5cff;
+  --primary-2: #c060ff;
+  --accent-gradient: linear-gradient(135deg, #7c5cff 0%, #c060ff 60%, #ff6ec7 100%);
+
+  /* États */
+  --success: #2ecc8f;
+  --success-bg: rgba(46, 204, 143, 0.14);
+  --danger: #ff5d6c;
+  --danger-bg: rgba(255, 93, 108, 0.14);
+
+  /* Bordures, rayons, ombres */
+  --border: rgba(255, 255, 255, 0.08);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* ---- Reset minimal ----
+   box-sizing: border-box fait que padding/border sont inclus dans width/height,
+   ce qui rend les calculs de tailles beaucoup plus intuitifs. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 700px at 15% -10%, rgba(124, 92, 255, 0.25), transparent 60%),
+    radial-gradient(1000px 600px at 110% 10%, rgba(255, 110, 199, 0.18), transparent 55%),
+    var(--bg);
+  background-attachment: fixed;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Quelques classes utilitaires réutilisables ---- */
+
+/* Conteneur centré avec largeur max */
+.contenu {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Texte avec dégradé (couleur découpée sur le texte) */
+.texte-degrade {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Bouton générique */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: inherit;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: transform 0.12s ease, filter 0.15s ease, background 0.15s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Bouton principal (avec le dégradé d'accent) */
+.btn-primaire {
+  background: var(--accent-gradient);
+  border: none;
+  color: white;
+}
+.btn-primaire:hover {
+  filter: brightness(1.08);
+}

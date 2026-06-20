@@ -1,0 +1,37 @@
+/* Styles du layout racine (en-tête, contenu, pied de page). */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__entete {
+  position: sticky; /* l'en-tête reste collé en haut au défilement */
+  top: 0;
+  z-index: 10;
+  padding: 16px 20px;
+  background: rgba(15, 16, 32, 0.72);
+  backdrop-filter: blur(12px); /* effet "verre dépoli" sur ce qui défile dessous */
+  border-bottom: 1px solid var(--border);
+}
+
+.app__logo {
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.app__contenu {
+  flex: 1; /* prend toute la hauteur restante → pied de page en bas */
+}
+
+.app__pied {
+  text-align: center;
+  padding: 24px 20px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+}
