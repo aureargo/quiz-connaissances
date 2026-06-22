@@ -1,0 +1,72 @@
+[
+  {
+    "id": "echecs-m1",
+    "enonce": "À quel résultat aboutit une position de « pat » ?",
+    "choix": ["une victoire des blancs", "une victoire des noirs", "une partie nulle", "la reprise de la partie"],
+    "bonneReponse": 2,
+    "explication": "Le pat survient quand un joueur n'est pas en échec mais n'a aucun coup légal : la partie est déclarée nulle."
+  },
+  {
+    "id": "echecs-m2",
+    "enonce": "Quelle pièce peut réaliser la prise « en passant » ?",
+    "choix": ["le pion", "la tour", "le fou", "le cavalier"],
+    "bonneReponse": 0,
+    "explication": "Seul un pion peut prendre « en passant » un pion adverse qui vient d'avancer de deux cases en passant à côté de lui."
+  },
+  {
+    "id": "echecs-m3",
+    "enonce": "Quelle est la valeur relative classique de la dame, en points ?",
+    "choix": ["3", "5", "9", "12"],
+    "bonneReponse": 2,
+    "explication": "Dans le barème usuel, la dame vaut environ 9 points, loin devant la tour (5) et les pièces mineures (3)."
+  },
+  {
+    "id": "echecs-m4",
+    "enonce": "Quelle est la valeur relative classique d'un fou ou d'un cavalier ?",
+    "choix": ["1", "3", "5", "9"],
+    "bonneReponse": 1,
+    "explication": "Les pièces mineures (fou et cavalier) valent environ 3 points chacune ; le pion sert d'unité (1 point)."
+  },
+  {
+    "id": "echecs-m5",
+    "enonce": "Combien de tours chaque joueur possède-t-il en début de partie ?",
+    "choix": ["une", "deux", "trois", "quatre"],
+    "bonneReponse": 1,
+    "explication": "Chaque camp dispose de deux tours, placées dans les coins de l'échiquier."
+  },
+  {
+    "id": "echecs-m6",
+    "enonce": "Qu'est-ce qu'une « fourchette » ?",
+    "choix": ["une attaque simultanée de deux pièces adverses", "un échange forcé des deux dames", "une ouverture très agressive", "une nulle obtenue par répétition"],
+    "bonneReponse": 0,
+    "explication": "Une fourchette attaque deux pièces (ou plus) à la fois ; le cavalier y excelle car il peut menacer des pièces qui ne se défendent pas entre elles."
+  },
+  {
+    "id": "echecs-m7",
+    "enonce": "Qu'est-ce qu'une pièce « clouée » (un clouage) ?",
+    "choix": ["une pièce immobilisée car elle protège une pièce plus précieuse", "une pièce capturée puis remise sur l'échiquier", "une pièce placée au centre pour le contrôler", "une pièce échangée contre une pièce de valeur égale"],
+    "bonneReponse": 0,
+    "explication": "Une pièce clouée ne peut (ou ne devrait) pas bouger, car elle masque une pièce plus précieuse, souvent le roi, face à une attaque en ligne."
+  },
+  {
+    "id": "echecs-m8",
+    "enonce": "Combien de cavaliers chaque joueur possède-t-il en début de partie ?",
+    "choix": ["un", "deux", "trois", "quatre"],
+    "bonneReponse": 1,
+    "explication": "Chaque camp a deux cavaliers, placés entre les tours et les fous sur la première rangée."
+  },
+  {
+    "id": "echecs-m9",
+    "enonce": "Comment nomme-t-on la phase de début de partie (contrôle du centre, développement) ?",
+    "choix": ["l'ouverture", "le milieu de jeu", "la finale", "le zugzwang"],
+    "bonneReponse": 0,
+    "explication": "L'ouverture est la première phase : on y développe ses pièces et on dispute le centre, avant le milieu de jeu puis la finale."
+  },
+  {
+    "id": "echecs-m10",
+    "enonce": "Dans quel cas la nulle « par répétition » peut-elle être réclamée ?",
+    "choix": ["la même position apparaît trois fois", "cinquante coups passent sans prise", "les deux joueurs sont d'accord", "le roi adverse est encerclé"],
+    "bonneReponse": 0,
+    "explication": "Si la même position (mêmes pièces, même trait, mêmes droits) se présente trois fois, un joueur peut réclamer la nulle par triple répétition."
+  }
+]

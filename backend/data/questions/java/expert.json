@@ -1,0 +1,72 @@
+[
+  {
+    "id": "java-e1",
+    "enonce": "Que garantit le mot-clé `volatile` sur un champ partagé entre threads ?",
+    "choix": ["L'atomicité des opérations", "La visibilité des écritures entre threads", "Le verrouillage exclusif", "La persistance sur disque"],
+    "bonneReponse": 1,
+    "explication": "`volatile` empêche la mise en cache locale du champ par un thread : chaque lecture voit la dernière écriture des autres threads. Il assure la visibilité, pas l'atomicité (ex : `i++` reste non atomique)."
+  },
+  {
+    "id": "java-e2",
+    "enonce": "Qu'est-ce que le « type erasure » des génériques ?",
+    "choix": ["Une optimisation faite par le GC", "L'effacement des paramètres de type générique", "Une exception levée à l'exécution", "Le nettoyage des imports inutilisés"],
+    "bonneReponse": 1,
+    "explication": "À l'exécution, `List<String>` et `List<Integer>` sont toutes deux des `List` : le compilateur efface les paramètres de type à la compilation (pour la compatibilité ascendante), d'où l'impossibilité de faire `new T[]`."
+  },
+  {
+    "id": "java-e3",
+    "enonce": "Quelle est la différence entre `StringBuilder` et `StringBuffer` ?",
+    "choix": ["Aucune différence notable", "StringBuffer est synchronisé, pas StringBuilder", "StringBuilder est immuable", "StringBuffer est désormais obsolète"],
+    "bonneReponse": 1,
+    "explication": "Les deux sont des chaînes mutables. `StringBuffer` synchronise ses méthodes (thread-safe mais plus lent) ; `StringBuilder`, non synchronisé, est préféré en mono-thread car plus rapide."
+  },
+  {
+    "id": "java-e4",
+    "enonce": "Quel est l'effet du mot-clé `final` appliqué à une CLASSE ?",
+    "choix": ["Elle ne peut pas être instanciée", "Elle ne peut pas être héritée", "Ses champs deviennent constants", "Ses méthodes deviennent statiques"],
+    "bonneReponse": 1,
+    "explication": "Une classe `final` (comme `String`) interdit l'héritage (le sous-classement). Sur une méthode, `final` empêche sa redéfinition ; sur une variable, sa réaffectation."
+  },
+  {
+    "id": "java-e5",
+    "enonce": "Qu'est-ce qu'un `record` (Java 16+) ?",
+    "choix": ["Un journal de logs", "Une classe immuable concise pour porter des données", "Une transaction de base de données", "Un type énuméré"],
+    "bonneReponse": 1,
+    "explication": "`record Point(int x, int y) {}` génère automatiquement le constructeur, les accesseurs, `equals`, `hashCode` et `toString`. Parfait pour des objets de données immuables."
+  },
+  {
+    "id": "java-e6",
+    "enonce": "Quel est le rôle du compilateur JIT de la JVM ?",
+    "choix": ["Vérifier la syntaxe du code", "Compiler le bytecode en code natif", "Gérer la mémoire allouée", "Charger les classes au démarrage"],
+    "bonneReponse": 1,
+    "explication": "Le JIT (Just-In-Time) repère à la volée les méthodes « chaudes » (fréquemment exécutées) et les compile en code machine optimisé. C'est pourquoi une application Java « chauffe » et accélère avec le temps."
+  },
+  {
+    "id": "java-e7",
+    "enonce": "Quelle est la différence entre une exception « checked » et « unchecked » ?",
+    "choix": ["Aucune", "La checked doit être déclarée ou attrapée", "L'unchecked arrête toujours la JVM", "La checked n'a pas de stack trace"],
+    "bonneReponse": 1,
+    "explication": "Les checked (sous-classes d'`Exception` hors `RuntimeException`) imposent `throws` ou `try/catch`. Les unchecked (`NullPointerException`…) ne l'imposent pas et reflètent souvent des bugs de programmation."
+  },
+  {
+    "id": "java-e8",
+    "enonce": "Qu'est-ce qui distingue `HashMap` de `TreeMap` ?",
+    "choix": ["HashMap maintient les clés triées", "HashMap n'a pas d'ordre garanti, TreeMap est triée", "TreeMap est plus rapide en O(1)", "HashMap n'autorise pas les null"],
+    "bonneReponse": 1,
+    "explication": "`HashMap` (table de hachage) offre un accès moyen en O(1) mais sans ordre garanti. `TreeMap` (arbre rouge-noir) maintient les clés triées, au prix d'opérations en O(log n)."
+  },
+  {
+    "id": "java-e9",
+    "enonce": "Que garantit le mot-clé `synchronized` ?",
+    "choix": ["Que le code s'exécute plus vite", "Qu'un seul thread à la fois exécute le bloc", "Que la méthode est asynchrone", "Que la variable est volatile"],
+    "bonneReponse": 1,
+    "explication": "`synchronized` acquiert le moniteur (verrou intrinsèque) d'un objet : les autres threads attendent. Il assure exclusion mutuelle ET visibilité, mais peut créer de la contention."
+  },
+  {
+    "id": "java-e10",
+    "enonce": "Que définit la relation « happens-before » du modèle mémoire Java (JMM) ?",
+    "choix": ["L'ordre de compilation des classes", "Une garantie de visibilité entre threads", "La priorité des threads", "L'ordre d'appel des constructeurs"],
+    "bonneReponse": 1,
+    "explication": "Si une action A « happens-before » B, alors les effets de A (ordre et visibilité des opérations mémoire) sont garantis visibles par B. Le JMM établit ces règles (via `synchronized`, `volatile`, démarrage de thread…) pour rendre le code concurrent prévisible."
+  }
+]

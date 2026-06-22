@@ -1,44 +1,72 @@
 [
   {
-    "id": "cpp-1",
+    "id": "cpp-f1",
     "enonce": "Quel opérateur alloue dynamiquement de la mémoire en C++ ?",
     "choix": ["new", "alloc", "create", "make"],
     "bonneReponse": 0,
     "explication": "`new` réserve de la mémoire sur le tas et renvoie un pointeur. (En C historique, on utilisait `malloc`, moins typé.)"
   },
   {
-    "id": "cpp-2",
+    "id": "cpp-f2",
     "enonce": "Quel mot-clé libère la mémoire réservée avec `new` ?",
     "choix": ["free", "delete", "release", "dispose"],
     "bonneReponse": 1,
     "explication": "À chaque `new` doit correspondre un `delete`, sinon on provoque une fuite mémoire. `free` est l'équivalent pour `malloc` (en C)."
   },
   {
-    "id": "cpp-3",
+    "id": "cpp-f3",
     "enonce": "Quel idiome lie la durée de vie d'une ressource à celle d'un objet ?",
     "choix": ["Le ramasse-miettes (GC)", "Le RAII", "L'ARC", "Le comptage manuel"],
     "bonneReponse": 1,
     "explication": "RAII (Resource Acquisition Is Initialization) : la ressource est libérée automatiquement dans le destructeur de l'objet. C'est la base des smart pointers."
   },
   {
-    "id": "cpp-4",
+    "id": "cpp-f4",
     "enonce": "Quel symbole sert à déclarer un pointeur ?",
     "choix": ["&", "*", "#", "@"],
     "bonneReponse": 1,
     "explication": "`int* p;` déclare un pointeur vers un int. L'esperluette `&` sert, elle, à récupérer l'adresse d'une variable ou à déclarer une référence."
   },
   {
-    "id": "cpp-5",
+    "id": "cpp-f5",
     "enonce": "Quel mot-clé active le polymorphisme (résolution à l'exécution) ?",
     "choix": ["dynamic", "abstract", "virtual", "override"],
     "bonneReponse": 2,
     "explication": "Une méthode `virtual` peut être redéfinie dans une classe fille et sera appelée selon le type réel de l'objet à l'exécution."
   },
   {
-    "id": "cpp-6",
+    "id": "cpp-f6",
     "enonce": "Comment nomme-t-on la bibliothèque standard de conteneurs et d'algorithmes ?",
     "choix": ["Boost", "STL", "glibc", "BCL"],
     "bonneReponse": 1,
     "explication": "La STL (Standard Template Library) fournit `vector`, `map`, `sort`, etc. Boost est une bibliothèque tierce, très répandue mais non standard."
+  },
+  {
+    "id": "cpp-f7",
+    "enonce": "Comment affiche-t-on du texte sur la sortie standard (avec <iostream>) ?",
+    "choix": ["printf(\"x\")", "std::cout << \"x\"", "print(\"x\")", "echo \"x\""],
+    "bonneReponse": 1,
+    "explication": "`std::cout << \"x\";` envoie du texte vers le flux de sortie. L'opérateur `<<` enchaîne les éléments : `std::cout << a << b;`."
+  },
+  {
+    "id": "cpp-f8",
+    "enonce": "Quelle extension désigne typiquement un fichier d'en-tête C++ ?",
+    "choix": [".cpp", ".h ou .hpp", ".exe", ".obj"],
+    "bonneReponse": 1,
+    "explication": "Les déclarations vont dans un en-tête (`.h`/`.hpp`) que l'on `#include`, et les définitions dans le `.cpp` correspondant."
+  },
+  {
+    "id": "cpp-f9",
+    "enonce": "Quel mot-clé définit une classe ?",
+    "choix": ["object", "class", "type", "define"],
+    "bonneReponse": 1,
+    "explication": "`class MaClasse { ... };` définit une classe (n'oubliez pas le point-virgule final !). `struct` fait presque la même chose, avec une visibilité publique par défaut."
+  },
+  {
+    "id": "cpp-f10",
+    "enonce": "Comment inclut-on la bibliothèque d'entrées/sorties standard ?",
+    "choix": ["import iostream", "#include <iostream>", "using iostream", "require(\"iostream\")"],
+    "bonneReponse": 1,
+    "explication": "La directive préprocesseur `#include <iostream>` insère les déclarations de `std::cin`, `std::cout`, etc. avant la compilation."
   }
 ]

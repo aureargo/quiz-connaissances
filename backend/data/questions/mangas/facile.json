@@ -1,44 +1,72 @@
 [
   {
-    "id": "mangas-1",
+    "id": "mangas-f1",
     "enonce": "Dans quel sens se lit traditionnellement un manga ?",
     "choix": ["de gauche à droite", "de droite à gauche", "de haut en bas uniquement", "du centre vers l'extérieur"],
     "bonneReponse": 1,
     "explication": "Au Japon, on lit les mangas de droite à gauche. Ce sens est conservé dans la plupart des éditions françaises modernes."
   },
   {
-    "id": "mangas-2",
+    "id": "mangas-f2",
     "enonce": "Comment appelle-t-on l'auteur d'un manga ?",
     "choix": ["un otaku", "un sensei", "un mangaka", "un shonen"],
     "bonneReponse": 2,
     "explication": "Un mangaka est l'auteur (dessinateur-scénariste) d'un manga. « Otaku » désigne, lui, un fan passionné."
   },
   {
-    "id": "mangas-3",
+    "id": "mangas-f3",
     "enonce": "Quel manga d'Eiichiro Oda suit un équipage de pirates ?",
     "choix": ["Naruto", "One Piece", "Bleach", "Dragon Ball"],
     "bonneReponse": 1,
     "explication": "« One Piece » d'Eiichiro Oda suit Luffy et son équipage. C'est l'un des mangas les plus vendus de l'histoire."
   },
   {
-    "id": "mangas-4",
+    "id": "mangas-f4",
     "enonce": "Le genre « shonen » vise principalement quel public ?",
     "choix": ["les jeunes filles", "les jeunes garçons et adolescents", "les adultes", "les très jeunes enfants"],
     "bonneReponse": 1,
     "explication": "Le « shonen » vise un public de jeunes garçons et d'ados. Le « shojo » vise lui un public de jeunes filles."
   },
   {
-    "id": "mangas-5",
+    "id": "mangas-f5",
     "enonce": "Qui a créé le manga « Dragon Ball » ?",
     "choix": ["Masashi Kishimoto", "Tite Kubo", "Eiichiro Oda", "Akira Toriyama"],
     "bonneReponse": 3,
     "explication": "Akira Toriyama est le créateur de « Dragon Ball ». Kishimoto a fait Naruto, Kubo a fait Bleach, Oda a fait One Piece."
   },
   {
-    "id": "mangas-6",
+    "id": "mangas-f6",
     "enonce": "Quel manga met en scène l'humanité assiégée par des géants ?",
     "choix": ["Death Note", "L'Attaque des Titans", "Fullmetal Alchemist", "My Hero Academia"],
     "bonneReponse": 1,
     "explication": "« L'Attaque des Titans » (Shingeki no Kyojin) de Hajime Isayama met en scène l'humanité retranchée derrière des murs face aux titans."
+  },
+  {
+    "id": "mangas-f7",
+    "enonce": "Quel manga de Masashi Kishimoto suit un jeune ninja turbulent ?",
+    "choix": ["Bleach", "Naruto", "Hunter x Hunter", "Fairy Tail"],
+    "bonneReponse": 1,
+    "explication": "« Naruto » suit Naruto Uzumaki, ninja du village de Konoha rêvant de devenir Hokage. C'est l'un des « Big Three » du Shonen Jump avec One Piece et Bleach."
+  },
+  {
+    "id": "mangas-f8",
+    "enonce": "Quel genre de manga vise un public de jeunes filles ?",
+    "choix": ["le shonen", "le shojo", "le seinen", "le kodomo"],
+    "bonneReponse": 1,
+    "explication": "Le « shojo » cible les jeunes filles (souvent romance, relations). À ne pas confondre avec le « josei », destiné aux femmes adultes."
+  },
+  {
+    "id": "mangas-f9",
+    "enonce": "De quelle couleur la grande majorité des mangas est-elle imprimée ?",
+    "choix": ["en couleur", "en noir et blanc", "en sépia", "en bleu"],
+    "bonneReponse": 1,
+    "explication": "Pour des raisons de coût et de rythme de production hebdomadaire, les mangas sont presque toujours en noir et blanc, parfois avec quelques pages couleur en début de volume."
+  },
+  {
+    "id": "mangas-f10",
+    "enonce": "Quel mangaka, surnommé « le dieu du manga », a créé « Astro Boy » ?",
+    "choix": ["Hayao Miyazaki", "Osamu Tezuka", "Eiichiro Oda", "Akira Toriyama"],
+    "bonneReponse": 1,
+    "explication": "Osamu Tezuka (1928-1989) a façonné le manga et l'animé modernes. Grand admirateur de Walt Disney, il en a repris le style des grands yeux expressifs."
   }
 ]

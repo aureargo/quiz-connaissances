@@ -25,15 +25,25 @@ export class QuizApi {
   // 💡 Alternative : configurer un "proxy" Angular pour appeler simplement /api.
   private readonly baseUrl = 'http://localhost:8080/api';
 
-  // Récupère la liste des thèmes.
-  // HttpClient.get<T>() renvoie un Observable : un flux asynchrone auquel on
-  // s'abonne pour recevoir la réponse quand elle arrive.
+  // Récupère la liste des thèmes en version LÉGÈRE (sans les niveaux) : juste de
+  // quoi afficher les tuiles de l'accueil. HttpClient.get<T>() renvoie un
+  // Observable : un flux asynchrone auquel on s'abonne pour recevoir la réponse.
   getThemes(): Observable<Theme[]> {
     return this.http.get<Theme[]>(`${this.baseUrl}/themes`);
   }
 
-  // Récupère les questions d'un thème donné.
-  getQuestions(themeId: string): Observable<Question[]> {
-    return this.http.get<Question[]>(`${this.baseUrl}/themes/${themeId}/questions`);
+  // Récupère UN thème complet, niveaux compris (ex : themeId="echecs").
+  // Appelé par la sous-page de sélection du niveau : on ne charge les niveaux
+  // que du thème réellement consulté, pas de tous les thèmes d'un coup.
+  getTheme(themeId: string): Observable<Theme> {
+    return this.http.get<Theme>(`${this.baseUrl}/themes/${themeId}`);
+  }
+
+  // Récupère les questions d'un thème POUR UN NIVEAU donné
+  // (ex : themeId="animes", niveau="expert").
+  getQuestions(themeId: string, niveau: string): Observable<Question[]> {
+    return this.http.get<Question[]>(
+      `${this.baseUrl}/themes/${themeId}/questions/${niveau}`
+    );
   }
 }

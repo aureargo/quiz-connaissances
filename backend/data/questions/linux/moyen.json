@@ -1,0 +1,72 @@
+[
+  {
+    "id": "linux-m1",
+    "enonce": "Quelle commande recherche les lignes contenant un motif dans un fichier ?",
+    "choix": ["find", "grep", "search", "match"],
+    "bonneReponse": 1,
+    "explication": "`grep motif fichier` affiche les lignes correspondantes. C'est l'outil de filtrage par excellence, souvent branché en bout de tube : `ls -l | grep .txt`."
+  },
+  {
+    "id": "linux-m2",
+    "enonce": "Quel symbole envoie la sortie d'une commande comme entrée d'une autre ?",
+    "choix": [">", "&", "|", ";"],
+    "bonneReponse": 2,
+    "explication": "Le tube `|` (« pipe ») connecte la sortie standard d'une commande à l'entrée de la suivante : `cat log.txt | grep erreur` filtre le contenu affiché."
+  },
+  {
+    "id": "linux-m3",
+    "enonce": "Quel symbole redirige la sortie d'une commande vers un fichier (en l'écrasant) ?",
+    "choix": [">", "<", "|", "&"],
+    "bonneReponse": 0,
+    "explication": "`commande > fichier` écrit la sortie dans le fichier en remplaçant son contenu. Pour ajouter à la fin sans écraser, on double le chevron : `>>`."
+  },
+  {
+    "id": "linux-m4",
+    "enonce": "Quelle commande modifie les droits d'accès d'un fichier ?",
+    "choix": ["chown", "chmod", "chgrp", "setperm"],
+    "bonneReponse": 1,
+    "explication": "`chmod` (« change mode ») gère les permissions lecture/écriture/exécution : `chmod +x script.sh` rend un script exécutable. `chown` change le propriétaire."
+  },
+  {
+    "id": "linux-m5",
+    "enonce": "Quelle commande recherche des fichiers dans une arborescence selon des critères ?",
+    "choix": ["locate", "grep", "find", "which"],
+    "bonneReponse": 2,
+    "explication": "`find` parcourt récursivement les dossiers : `find . -name \"*.log\"` liste tous les fichiers `.log` sous le dossier courant. Il filtre aussi par taille, date, etc."
+  },
+  {
+    "id": "linux-m6",
+    "enonce": "Quelle commande liste les processus en cours d'exécution ?",
+    "choix": ["jobs", "proc", "ps", "list"],
+    "bonneReponse": 2,
+    "explication": "`ps` (« process status ») affiche les processus. La forme courante `ps aux` montre ceux de tous les utilisateurs avec leur identifiant (PID) et leur consommation."
+  },
+  {
+    "id": "linux-m7",
+    "enonce": "Quelle commande termine un processus à partir de son identifiant (PID) ?",
+    "choix": ["stop", "kill", "end", "halt"],
+    "bonneReponse": 1,
+    "explication": "`kill 1234` envoie un signal d'arrêt au processus n°1234. S'il résiste, `kill -9 1234` force la fin sans lui laisser le temps de se fermer proprement."
+  },
+  {
+    "id": "linux-m8",
+    "enonce": "Quelle commande affiche seulement les premières lignes d'un fichier ?",
+    "choix": ["top", "first", "head", "start"],
+    "bonneReponse": 2,
+    "explication": "`head` montre par défaut les 10 premières lignes ; `head -n 5` en montre 5. Son opposé, `tail`, affiche la fin et `tail -f` suit un fichier qui grandit."
+  },
+  {
+    "id": "linux-m9",
+    "enonce": "Quelle commande affiche l'espace disque libre et utilisé des partitions ?",
+    "choix": ["du", "df", "free", "disk"],
+    "bonneReponse": 1,
+    "explication": "`df` (« disk free ») résume l'occupation des systèmes de fichiers ; `df -h` l'affiche en unités lisibles (Go, Mo). À ne pas confondre avec `du`, qui mesure la taille d'un dossier."
+  },
+  {
+    "id": "linux-m10",
+    "enonce": "Quelle commande exécute la commande suivante avec les droits administrateur ?",
+    "choix": ["admin", "root", "sudo", "su"],
+    "bonneReponse": 2,
+    "explication": "`sudo` (« superuser do ») lance une commande avec les privilèges d'administrateur, le temps de cette commande seulement : `sudo apt update`. Il demande en général le mot de passe."
+  }
+]

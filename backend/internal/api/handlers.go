@@ -4,6 +4,7 @@ package api
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 
@@ -33,25 +34,45 @@ func (s *Server) Routes() http.Handler {
 	// dans le motif. Plus besoin de bibliothèque externe.
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /api/themes", s.handleThemes)
-	mux.HandleFunc("GET /api/themes/{id}/questions", s.handleQuestions)
+	mux.HandleFunc("GET /api/themes/{id}", s.handleTheme)
+	mux.HandleFunc("GET /api/themes/{id}/questions/{niveau}", s.handleQuestions)
 
 	// On enveloppe le routeur dans le middleware CORS (voir plus bas).
 	return cors(mux)
 }
 
-// handleThemes répond à GET /api/themes : renvoie la liste des thèmes en JSON.
+// handleThemes répond à GET /api/themes : renvoie la liste des thèmes en JSON,
+// en version LÉGÈRE (sans les niveaux). Suffisant pour les tuiles de l'accueil ;
+// les niveaux sont chargés à la demande via handleTheme.
 func (s *Server) handleThemes(w http.ResponseWriter, r *http.Request) {
-	repondreJSON(w, http.StatusOK, s.store.Themes())
+	repondreJSON(w, http.StatusOK, s.store.ResumesThemes())
 }
 
-// handleQuestions répond à GET /api/themes/{id}/questions.
-func (s *Server) handleQuestions(w http.ResponseWriter, r *http.Request) {
-	// r.PathValue("id") récupère la variable {id} déclarée dans le motif de route.
+// handleTheme répond à GET /api/themes/{id} : renvoie UN thème complet, avec ses
+// niveaux. C'est la sous-page de sélection du niveau qui l'appelle, au clic sur
+// une tuile : on ne charge alors que les niveaux du thème consulté.
+func (s *Server) handleTheme(w http.ResponseWriter, r *http.Request) {
 	id := r.PathValue("id")
 
-	questions, ok := s.store.Questions(id)
+	theme, ok := s.store.Theme(id)
 	if !ok {
-		repondreErreur(w, http.StatusNotFound, "thème introuvable : "+id)
+		repondreErreur(w, http.StatusNotFound,
+			fmt.Sprintf("thème %q introuvable", id))
+		return
+	}
+	repondreJSON(w, http.StatusOK, theme)
+}
+
+// handleQuestions répond à GET /api/themes/{id}/questions/{niveau}.
+func (s *Server) handleQuestions(w http.ResponseWriter, r *http.Request) {
+	// r.PathValue("...") récupère les variables {id} et {niveau} du motif de route.
+	id := r.PathValue("id")
+	niveau := r.PathValue("niveau")
+
+	questions, ok := s.store.Questions(id, niveau)
+	if !ok {
+		repondreErreur(w, http.StatusNotFound,
+			fmt.Sprintf("aucune question pour le thème %q au niveau %q", id, niveau))
 		return
 	}
 	repondreJSON(w, http.StatusOK, questions)

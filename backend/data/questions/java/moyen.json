@@ -1,0 +1,72 @@
+[
+  {
+    "id": "java-m1",
+    "enonce": "Que signifie qu'une `String` est « immuable » en Java ?",
+    "choix": ["Elle est privée", "Son contenu ne peut plus changer après création", "Elle est limitée à 255 caractères", "Elle ne peut pas être null"],
+    "bonneReponse": 1,
+    "explication": "Toute « modification » d'une String crée en réalité un NOUVEL objet. C'est pourquoi on préfère `StringBuilder` pour de nombreuses concaténations."
+  },
+  {
+    "id": "java-m2",
+    "enonce": "Quelle différence entre `==` et `.equals()` sur deux objets ?",
+    "choix": ["Aucune", "`==` compare les références, `.equals()` compare le contenu", "`==` compare le contenu, `.equals()` les références", "`.equals()` est plus rapide"],
+    "bonneReponse": 1,
+    "explication": "`==` teste si deux variables pointent le MÊME objet. `.equals()` (souvent redéfini) teste l'égalité LOGIQUE du contenu. Piège classique avec les String."
+  },
+  {
+    "id": "java-m3",
+    "enonce": "Qu'est-ce que l'« autoboxing » ?",
+    "choix": ["Le chiffrement automatique d'un objet", "La conversion automatique entre primitif et wrapper", "La copie d'un tableau en mémoire", "La sérialisation d'un objet en JSON"],
+    "bonneReponse": 1,
+    "explication": "Java convertit tout seul `int` en `Integer` (boxing) et inversement (unboxing), par exemple pour stocker un `int` dans une `List<Integer>`."
+  },
+  {
+    "id": "java-m4",
+    "enonce": "Dans un `try/catch/finally`, quand le bloc `finally` s'exécute-t-il ?",
+    "choix": ["Seulement en cas d'erreur", "Seulement en cas de succès", "Presque toujours, exception ou non", "Jamais, dans aucun cas"],
+    "bonneReponse": 2,
+    "explication": "`finally` s'exécute dans tous les cas (succès, exception, return). Idéal pour libérer une ressource — d'où le `try-with-resources` qui automatise ce nettoyage."
+  },
+  {
+    "id": "java-m5",
+    "enonce": "À quoi servent les génériques, comme `List<String>` ?",
+    "choix": ["À accélérer le code", "À garantir le type des éléments", "À chiffrer les données", "À paralléliser les boucles"],
+    "bonneReponse": 1,
+    "explication": "Les generics apportent la sécurité de type dès la compilation : impossible d'ajouter un `Integer` dans une `List<String>`. Fini les transtypages (casts) manuels et risqués."
+  },
+  {
+    "id": "java-m6",
+    "enonce": "Qu'a introduit Java 8 avec les expressions lambda (`x -> x * 2`) ?",
+    "choix": ["Un nouveau type primitif numérique", "Une écriture concise d'interface fonctionnelle", "Une forme de multithreading léger", "Un nouveau type d'annotation"],
+    "bonneReponse": 1,
+    "explication": "Une lambda fournit le corps d'une interface ne déclarant qu'une seule méthode (fonctionnelle). Elle a rendu l'API Stream et le code fonctionnel possibles."
+  },
+  {
+    "id": "java-m7",
+    "enonce": "Que signifie le mot-clé `static` sur un membre ?",
+    "choix": ["Il est constant, comme final", "Il appartient à la classe, pas à l'instance", "Il est accessible uniquement en privé", "Il est exécuté avant le constructeur"],
+    "bonneReponse": 1,
+    "explication": "Un membre `static` est partagé par toutes les instances et s'appelle via la classe (`Math.PI`, `Integer.parseInt`). Il existe même sans aucun objet créé."
+  },
+  {
+    "id": "java-m8",
+    "enonce": "Quel outil de build et de gestion de dépendances est emblématique de Java ?",
+    "choix": ["npm", "Maven", "Cargo", "pip"],
+    "bonneReponse": 1,
+    "explication": "Maven (fichier `pom.xml`) et Gradle automatisent la compilation, les tests et le téléchargement des dépendances depuis des dépôts comme Maven Central."
+  },
+  {
+    "id": "java-m9",
+    "enonce": "Que fait le ramasse-miettes (Garbage Collector) de la JVM ?",
+    "choix": ["Compile le code source en bytecode", "Libère la mémoire des objets inaccessibles", "Optimise les boucles à l'exécution", "Gère le cycle de vie des threads"],
+    "bonneReponse": 1,
+    "explication": "Le GC récupère automatiquement la mémoire des objets que plus aucune référence n'atteint. Le développeur n'a donc pas à libérer la mémoire manuellement comme en C/C++."
+  },
+  {
+    "id": "java-m10",
+    "enonce": "Quelle est la valeur par défaut d'un champ d'instance de type objet non initialisé ?",
+    "choix": ["0", "null", "\"\"", "Une erreur de compilation"],
+    "bonneReponse": 1,
+    "explication": "Les champs objets valent `null` par défaut (les numériques valent 0, les booléens `false`). Attention : une variable LOCALE non initialisée, elle, provoque une erreur de compilation."
+  }
+]

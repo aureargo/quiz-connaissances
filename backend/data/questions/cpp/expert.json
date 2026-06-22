@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cpp-e1",
+    "enonce": "Que permet la sémantique de déplacement (move semantics, C++11) via `std::move` ?",
+    "choix": ["Déplacer un fichier sur le disque", "Transférer les ressources sans copie", "Déplacer le pointeur de pile", "Paralléliser une boucle"],
+    "bonneReponse": 1,
+    "explication": "Plutôt que copier (ex : dupliquer un grand tableau), un constructeur de déplacement « vole » les ressources internes de la source, sans copie coûteuse. `std::move` transforme une lvalue en rvalue pour l'autoriser."
+  },
+  {
+    "id": "cpp-e2",
+    "enonce": "Qu'est-ce qu'un « undefined behavior » (comportement indéfini) ?",
+    "choix": ["Une exception standard", "Un comportement que le standard ne définit pas", "Un avertissement du compilateur", "Un test qui échoue"],
+    "bonneReponse": 1,
+    "explication": "Déréférencer un pointeur nul, dépasser un tableau, ou un débordement signé sont des UB, aux conséquences imprévisibles : le programme peut planter, sembler marcher, ou faire n'importe quoi. Le compilateur peut même optimiser en supposant qu'ils n'arrivent jamais."
+  },
+  {
+    "id": "cpp-e3",
+    "enonce": "Que dit la « règle des cinq » (rule of five) ?",
+    "choix": ["Une classe a au plus 5 méthodes", "Définir l'un des cinq oblige à penser aux autres", "Il faut 5 niveaux d'héritage maximum", "Un template prend 5 paramètres"],
+    "bonneReponse": 1,
+    "explication": "Les cinq sont : destructeur, constructeur de copie, opérateur de copie, constructeur de déplacement, opérateur de déplacement. Définir l'un suggère une gestion manuelle des ressources — donc de définir (ou `=default`/`=delete`) les autres."
+  },
+  {
+    "id": "cpp-e4",
+    "enonce": "À quoi sert `constexpr` ?",
+    "choix": ["À déclarer une variable globale", "À évaluer une expression à la compilation", "À créer un pointeur constant", "À rendre une méthode virtuelle"],
+    "bonneReponse": 1,
+    "explication": "Une fonction `constexpr` peut produire une constante calculée par le compilateur (ex : taille de tableau, valeur de template). Cela déplace du calcul du runtime vers le build."
+  },
+  {
+    "id": "cpp-e5",
+    "enonce": "Pourquoi déclarer un destructeur `virtual` dans une classe de base destinée à être héritée ?",
+    "choix": ["Pour accélérer la destruction", "Pour appeler le bon destructeur dérivé", "Pour interdire l'héritage", "Pour rendre la classe abstraite"],
+    "bonneReponse": 1,
+    "explication": "Sans destructeur virtuel, `delete basePtr;` sur un objet dérivé n'appelle que le destructeur de base → comportement indéfini / fuite. Le rendre virtuel corrige la chaîne de destruction."
+  },
+  {
+    "id": "cpp-e6",
+    "enonce": "Quelle est la différence entre `std::unique_ptr` et `std::shared_ptr` ?",
+    "choix": ["Aucune", "unique_ptr = exclusif ; shared_ptr = partagé", "shared_ptr est plus léger", "unique_ptr peut être copié librement"],
+    "bonneReponse": 1,
+    "explication": "`unique_ptr` ne peut pas être copié (un seul propriétaire, déplaçable). `shared_ptr` compte les références et libère quand le compteur tombe à zéro (attention aux cycles → `weak_ptr`)."
+  },
+  {
+    "id": "cpp-e7",
+    "enonce": "Que fait le mot-clé `explicit` devant un constructeur à un seul argument ?",
+    "choix": ["Il rend le constructeur public", "Il interdit la conversion implicite", "Il rend le constructeur constexpr", "Il force l'inlining de l'appel"],
+    "bonneReponse": 1,
+    "explication": "Sans `explicit`, `MaClasse obj = 42;` convertirait implicitement `42` vers ce type. Avec `explicit`, seule la construction directe `MaClasse obj(42);` est permise — on évite des conversions surprises."
+  },
+  {
+    "id": "cpp-e8",
+    "enonce": "Que sont la RTTI et `dynamic_cast` ?",
+    "choix": ["Un système de build", "L'identification de type à l'exécution", "Une bibliothèque réseau", "Un gestionnaire de threads"],
+    "bonneReponse": 1,
+    "explication": "La RTTI (Run-Time Type Information) permet un transtypage sûr dans une hiérarchie polymorphe : `dynamic_cast<Derive*>(base)` renvoie `nullptr` si la conversion est invalide. Elle nécessite au moins une fonction virtuelle dans la base."
+  },
+  {
+    "id": "cpp-e9",
+    "enonce": "Que garantit `std::vector` quant à la disposition de ses éléments en mémoire ?",
+    "choix": ["Ils sont dispersés (comme une liste chaînée)", "Ils sont contigus en mémoire", "Ils sont triés", "Ils sont en lecture seule"],
+    "bonneReponse": 1,
+    "explication": "Le stockage contigu de `vector` permet de le passer à une API C via `.data()` (pointeur brut) et favorise le cache CPU, mais implique des réallocations + copies quand la capacité est dépassée."
+  },
+  {
+    "id": "cpp-e10",
+    "enonce": "Qu'est-ce que la liaison statique vs dynamique d'un appel de méthode ?",
+    "choix": ["Statique = à l'édition de liens, dynamique = au chargement", "Statique = à la compilation ; dynamique = via la vtable", "Aucune différence", "Dynamique concerne uniquement les templates"],
+    "bonneReponse": 1,
+    "explication": "Un appel non virtuel est lié statiquement (type connu à la compilation). Un appel `virtual` passe par la vtable de l'objet au runtime : la bonne fonction est choisie selon le type RÉEL à l'exécution."
+  }
+]

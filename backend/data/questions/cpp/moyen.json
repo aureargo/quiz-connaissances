@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cpp-m1",
+    "enonce": "À quoi servent les « smart pointers » comme `std::unique_ptr` ?",
+    "choix": ["À accélérer les calculs", "À libérer automatiquement la mémoire", "À chiffrer des données", "À remplacer les références"],
+    "bonneReponse": 1,
+    "explication": "Grâce au RAII, un smart pointer libère sa ressource dans son destructeur. Plus besoin de `delete` manuel : on évite fuites et doubles libérations."
+  },
+  {
+    "id": "cpp-m2",
+    "enonce": "Quelle est la différence entre passage par valeur et passage par référence (`&`) ?",
+    "choix": ["Aucune", "La référence évite la copie de l'argument", "La valeur est toujours plus lente", "La référence crée un pointeur nul"],
+    "bonneReponse": 1,
+    "explication": "Passer par valeur copie l'argument. Passer par référence (`void f(T& x)`) travaille sur l'objet original (donc sans copie et modifiable) — souvent en `const T&` pour interdire la modification."
+  },
+  {
+    "id": "cpp-m3",
+    "enonce": "Que signifie une méthode déclarée `const` (ex : `int taille() const`) ?",
+    "choix": ["Elle est statique", "Elle ne modifie pas l'objet", "Elle ne renvoie rien", "Elle est privée"],
+    "bonneReponse": 1,
+    "explication": "Le `const` en fin de signature garantit que la méthode ne modifie pas l'état de l'objet. On peut donc l'appeler sur un objet `const`."
+  },
+  {
+    "id": "cpp-m4",
+    "enonce": "Qu'est-ce qu'un `template` en C++ ?",
+    "choix": ["Un fichier de configuration", "Un patron de code paramétré par type", "Une feuille de style", "Un pointeur intelligent"],
+    "bonneReponse": 1,
+    "explication": "`template<typename T> T max(T a, T b)` génère une version générique du code pour chaque type utilisé. C'est le fondement de la STL (`vector<int>`, `vector<string>`…)."
+  },
+  {
+    "id": "cpp-m5",
+    "enonce": "À quoi sert `std::vector` ?",
+    "choix": ["À stocker une seule valeur", "À fournir un tableau dynamique", "À gérer des threads", "À lire un fichier"],
+    "bonneReponse": 1,
+    "explication": "`std::vector<T>` est un tableau redimensionnable qui grandit automatiquement (`push_back`). Ses éléments sont contigus en mémoire, ce qui le rend très efficace en parcours."
+  },
+  {
+    "id": "cpp-m6",
+    "enonce": "Que permet la « surcharge d'opérateur » (operator overloading) ?",
+    "choix": ["Créer de nouveaux opérateurs", "Définir un opérateur pour ses propres types", "Surcharger le processeur", "Ignorer les erreurs"],
+    "bonneReponse": 1,
+    "explication": "On peut écrire `Vecteur operator+(const Vecteur&, const Vecteur&)` pour additionner deux objets avec `a + b` (idem pour `==`, `<<`…). Pratique, mais à utiliser avec parcimonie pour rester lisible."
+  },
+  {
+    "id": "cpp-m7",
+    "enonce": "Quelle est la SEULE différence entre `struct` et `class` en C++ ?",
+    "choix": ["struct ne peut pas avoir de méthodes", "La visibilité par défaut des membres", "class est plus rapide", "struct n'autorise pas l'héritage"],
+    "bonneReponse": 1,
+    "explication": "Techniquement, seule la visibilité par défaut diffère (membres et héritage) : publique pour `struct`, privée pour `class`. Par convention, on réserve `struct` aux agrégats de données simples."
+  },
+  {
+    "id": "cpp-m8",
+    "enonce": "Que représente l'espace de noms `std` ?",
+    "choix": ["Le code de l'utilisateur", "L'espace de la bibliothèque standard", "Un type d'entier", "Le tas mémoire"],
+    "bonneReponse": 1,
+    "explication": "Tous les éléments standard (`std::cout`, `std::vector`, `std::string`…) vivent dans `std`. On les préfixe par `std::` ou on écrit `using namespace std;` (déconseillé à grande échelle)."
+  },
+  {
+    "id": "cpp-m9",
+    "enonce": "Que représente `nullptr` (introduit en C++11) ?",
+    "choix": ["Le nombre zéro entier", "Un pointeur nul correctement typé", "Une chaîne de caractères vide", "Une exception de type pointeur"],
+    "bonneReponse": 1,
+    "explication": "`nullptr` est de type `std::nullptr_t` : remplaçant de `NULL`, il lève les ambiguïtés de ce dernier (souvent un simple `0`) dans la résolution de surcharge."
+  },
+  {
+    "id": "cpp-m10",
+    "enonce": "Que permet le mot-clé `auto` (C++11) ?",
+    "choix": ["Allouer automatiquement de la mémoire", "Laisser le compilateur déduire le type", "Lancer un thread", "Importer un module"],
+    "bonneReponse": 1,
+    "explication": "`auto it = v.begin();` évite d'écrire un type long et complexe. Le type reste statique : il est simplement DÉDUIT depuis l'initialisation, à la compilation."
+  }
+]

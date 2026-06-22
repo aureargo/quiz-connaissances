@@ -1,0 +1,72 @@
+[
+  {
+    "id": "crypto-f1",
+    "enonce": "Quelle est la toute première cryptomonnaie créée ?",
+    "choix": ["Ethereum", "Bitcoin", "Litecoin", "Dogecoin"],
+    "bonneReponse": 1,
+    "explication": "Bitcoin, lancé en 2009, est la première cryptomonnaie. Les autres sont apparues ensuite."
+  },
+  {
+    "id": "crypto-f2",
+    "enonce": "Comment s'appelle le registre distribué qui enregistre les transactions ?",
+    "choix": ["le cloud", "le torrent", "la blockchain", "le datawarehouse"],
+    "bonneReponse": 2,
+    "explication": "La blockchain (chaîne de blocs) est un registre distribué et quasi infalsifiable où sont inscrites les transactions."
+  },
+  {
+    "id": "crypto-f3",
+    "enonce": "Sous quel pseudonyme l'inventeur de Bitcoin est-il connu ?",
+    "choix": ["Satoshi Nakamoto", "Vitalik Buterin", "Elon Musk", "Hal Finney"],
+    "bonneReponse": 0,
+    "explication": "Satoshi Nakamoto est le pseudonyme de l'inventeur de Bitcoin, dont l'identité réelle reste inconnue à ce jour."
+  },
+  {
+    "id": "crypto-f4",
+    "enonce": "Quelle blockchain a popularisé les « smart contracts » ?",
+    "choix": ["Bitcoin", "Ethereum", "Cardano", "Solana"],
+    "bonneReponse": 1,
+    "explication": "Ethereum a popularisé les smart contracts : des programmes qui s'exécutent automatiquement sur la blockchain."
+  },
+  {
+    "id": "crypto-f5",
+    "enonce": "Comment nomme-t-on la validation des transactions par « preuve de travail » ?",
+    "choix": ["le staking", "le minage", "le hachage", "le forking"],
+    "bonneReponse": 1,
+    "explication": "Le minage (mining) valide les transactions via la preuve de travail, en résolvant des calculs coûteux. Le staking relève, lui, de la preuve d'enjeu."
+  },
+  {
+    "id": "crypto-f6",
+    "enonce": "Que signifie « NFT » ?",
+    "choix": ["Jeton non fongible", "Network File Transfer", "New Financial Tool", "Nouveau format de transaction"],
+    "bonneReponse": 0,
+    "explication": "Un NFT (Non-Fungible Token, soit « jeton non fongible ») est un jeton unique et non interchangeable, souvent utilisé pour certifier la propriété d'un objet numérique."
+  },
+  {
+    "id": "crypto-f7",
+    "enonce": "Quelle est la cryptomonnaie native de la blockchain Ethereum ?",
+    "choix": ["le Bitcoin", "l'Ether", "le Ripple", "le Tether"],
+    "bonneReponse": 1,
+    "explication": "L'Ether (symbole ETH) est la monnaie d'Ethereum : elle sert à payer les frais d'exécution des transactions et des smart contracts."
+  },
+  {
+    "id": "crypto-f8",
+    "enonce": "Comment nomme-t-on l'outil qui stocke vos clés et vos cryptomonnaies ?",
+    "choix": ["un mineur", "un wallet", "un nœud", "un bloc"],
+    "bonneReponse": 1,
+    "explication": "Un wallet (portefeuille) conserve vos clés privées et permet d'envoyer/recevoir des cryptos. Il peut être logiciel (en ligne) ou matériel (clé physique, plus sûre)."
+  },
+  {
+    "id": "crypto-f9",
+    "enonce": "Qu'est-ce qu'un « stablecoin » ?",
+    "choix": ["Une crypto très volatile", "Une crypto à valeur stable", "La plus ancienne crypto", "Un NFT garanti"],
+    "bonneReponse": 1,
+    "explication": "Un stablecoin (USDT, USDC…) garde une valeur stable, généralement arrimée 1 pour 1 à une monnaie classique comme le dollar. Il sert de refuge ou de moyen d'échange."
+  },
+  {
+    "id": "crypto-f10",
+    "enonce": "Quel est le nombre maximal de bitcoins qui existeront ?",
+    "choix": ["Illimité", "21 millions", "100 millions", "1 milliard"],
+    "bonneReponse": 1,
+    "explication": "L'offre de Bitcoin est plafonnée à 21 millions d'unités. Cette rareté programmée est au cœur de l'argument « or numérique »."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "mangas-e1",
+    "enonce": "Quel manga est le plus vendu de toute l'histoire ?",
+    "choix": ["Dragon Ball", "One Piece", "Naruto", "Détective Conan"],
+    "bonneReponse": 1,
+    "explication": "« One Piece » dépasse les 500 millions d'exemplaires en circulation, un record mondial. Il détient un Guinness pour le plus de volumes d'une même série par un seul auteur."
+  },
+  {
+    "id": "mangas-e2",
+    "enonce": "Quel auteur de « Hunter x Hunter » est célèbre pour ses longues pauses (hiatus) ?",
+    "choix": ["Yoshihiro Togashi", "Tite Kubo", "Sui Ishida", "Gege Akutami"],
+    "bonneReponse": 0,
+    "explication": "Yoshihiro Togashi (également auteur de « Yu Yu Hakusho ») interrompt fréquemment « Hunter x Hunter », notamment pour des raisons de santé."
+  },
+  {
+    "id": "mangas-e3",
+    "enonce": "Quelle œuvre cyberpunk de Katsuhiro Otomo (manga de 1982) est devenue un film d'animation culte ?",
+    "choix": ["Ghost in the Shell", "Akira", "Gunnm", "Blame!"],
+    "bonneReponse": 1,
+    "explication": "« Akira » dépeint un Néo-Tokyo dystopique. Son adaptation animée de 1988, réalisée par Otomo lui-même, a fait connaître l'animé japonais en Occident."
+  },
+  {
+    "id": "mangas-e4",
+    "enonce": "Quel dessinateur a illustré « Death Note » et « Bakuman » ?",
+    "choix": ["Takeshi Obata", "Tsugumi Ohba", "Yusuke Murata", "Kohei Horikoshi"],
+    "bonneReponse": 0,
+    "explication": "Takeshi Obata, au trait très détaillé, met en images les scénarios d'autres auteurs. Il a aussi dessiné « Hikaru no Go »."
+  },
+  {
+    "id": "mangas-e5",
+    "enonce": "Quel mangaka a créé « Slam Dunk » ET la fresque historique « Vagabond » ?",
+    "choix": ["Takehiko Inoue", "Naoki Urasawa", "Kentaro Miura", "Inio Asano"],
+    "bonneReponse": 0,
+    "explication": "Takehiko Inoue passe d'un manga de basket énergique à l'encre contemplative de « Vagabond », saluée pour la beauté de ses planches."
+  },
+  {
+    "id": "mangas-e6",
+    "enonce": "Quel maître de l'horreur a dessiné « Uzumaki », centré sur une malédiction en spirale ?",
+    "choix": ["Junji Ito", "Kazuo Umezu", "Hideshi Hino", "Suehiro Maruo"],
+    "bonneReponse": 0,
+    "explication": "Junji Ito est la référence de l'horreur en manga (« Tomie », « Gyo »). « Uzumaki » montre une ville obsédée et déformée par le motif de la spirale."
+  },
+  {
+    "id": "mangas-e7",
+    "enonce": "Dans quelle décennie Osamu Tezuka a-t-il lancé le manga « Astro Boy » ?",
+    "choix": ["les années 1930", "les années 1950", "les années 1970", "les années 1990"],
+    "bonneReponse": 1,
+    "explication": "« Tetsuwan Atom » (Astro Boy) débute en 1952. Tezuka l'adaptera en 1963 en la première série animée TV japonaise hebdomadaire."
+  },
+  {
+    "id": "mangas-e8",
+    "enonce": "Comment nomme-t-on les petites pages bonus humoristiques souvent placées en fin de volume ?",
+    "choix": ["un omake", "un tankobon", "un mook", "un raw"],
+    "bonneReponse": 0,
+    "explication": "Un « omake » (« supplément ») est un contenu bonus : strips comiques, croquis, mot de l'auteur… Le terme s'emploie aussi pour les bonus d'un animé."
+  },
+  {
+    "id": "mangas-e9",
+    "enonce": "Quel manga de SF de Masamune Shirow a inspiré un film d'animation de 1995 influent ?",
+    "choix": ["Ghost in the Shell", "Cowboy Bebop", "Steins;Gate", "Ergo Proxy"],
+    "bonneReponse": 0,
+    "explication": "« Ghost in the Shell » (Kokaku Kidotai) explore conscience et cybernétique. Le film de Mamoru Oshii (1995) a notamment influencé « Matrix »."
+  },
+  {
+    "id": "mangas-e10",
+    "enonce": "Combien de tomes la série record « One Piece » compte-t-elle (ordre de grandeur) ?",
+    "choix": ["environ 30", "environ 60", "plus de 100", "exactement 200"],
+    "bonneReponse": 2,
+    "explication": "Démarrée en 1997, « One Piece » a dépassé les 100 tomes en 2021 et continue. L'histoire n'est toujours pas terminée à ce jour."
+  }
+]

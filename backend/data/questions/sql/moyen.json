@@ -1,0 +1,72 @@
+[
+  {
+    "id": "sql-m1",
+    "enonce": "Que garantit une clé primaire (PRIMARY KEY) ?",
+    "choix": ["Le tri des lignes", "L'identité unique de chaque ligne", "Le chiffrement", "La sauvegarde automatique"],
+    "bonneReponse": 1,
+    "explication": "Une clé primaire identifie de façon unique chaque ligne (valeurs uniques et non NULL). Une table n'en a qu'une (éventuellement composée de plusieurs colonnes)."
+  },
+  {
+    "id": "sql-m2",
+    "enonce": "À quoi sert une clé étrangère (FOREIGN KEY) ?",
+    "choix": ["À chiffrer une colonne", "À relier une table à une autre", "À trier les résultats", "À accélérer les SELECT"],
+    "bonneReponse": 1,
+    "explication": "Une clé étrangère pointe vers la clé primaire d'une autre table et garantit l'intégrité référentielle : le SGBD empêche d'insérer une référence vers une ligne inexistante."
+  },
+  {
+    "id": "sql-m3",
+    "enonce": "Quelle différence entre INNER JOIN et LEFT JOIN ?",
+    "choix": ["Aucune", "LEFT JOIN garde toutes les lignes de gauche", "INNER JOIN est plus lent", "LEFT JOIN ne renvoie que la table de gauche"],
+    "bonneReponse": 1,
+    "explication": "`INNER JOIN` ne garde que les lignes appariées des deux côtés. `LEFT JOIN` garde TOUTES les lignes de gauche, même sans correspondance ; les colonnes de droite valent alors NULL."
+  },
+  {
+    "id": "sql-m4",
+    "enonce": "Que fait la clause GROUP BY ?",
+    "choix": ["Trie les lignes du résultat", "Regroupe les lignes par valeur commune", "Supprime les lignes en double", "Joint deux tables liées"],
+    "bonneReponse": 1,
+    "explication": "`GROUP BY ville` crée un groupe par ville pour appliquer des agrégats ; on peut alors calculer `COUNT(*)` ou `AVG(salaire)` pour chaque groupe."
+  },
+  {
+    "id": "sql-m5",
+    "enonce": "Quelle est la différence entre WHERE et HAVING ?",
+    "choix": ["Aucune", "WHERE filtre avant l'agrégation, HAVING après", "HAVING est plus rapide", "WHERE ne marche pas avec les nombres"],
+    "bonneReponse": 1,
+    "explication": "`WHERE` s'applique aux lignes individuelles avant `GROUP BY`. `HAVING` filtre les groupes agrégés, par exemple `HAVING COUNT(*) > 5`."
+  },
+  {
+    "id": "sql-m6",
+    "enonce": "Que fait le mot-clé DISTINCT ?",
+    "choix": ["Trie le résultat", "Élimine les lignes en double", "Compte les lignes", "Renomme une colonne"],
+    "bonneReponse": 1,
+    "explication": "`SELECT DISTINCT ville FROM clients` ne renvoie chaque ville qu'une seule fois, même si plusieurs clients y habitent."
+  },
+  {
+    "id": "sql-m7",
+    "enonce": "Que représente la valeur NULL en SQL ?",
+    "choix": ["Le nombre zéro", "Une chaîne vide", "L'absence de valeur", "La valeur false"],
+    "bonneReponse": 2,
+    "explication": "NULL signifie « pas de valeur » (inconnue ou non renseignée). Il se teste avec `IS NULL` (et non `= NULL`), car toute comparaison avec NULL donne… NULL (ni vrai, ni faux)."
+  },
+  {
+    "id": "sql-m8",
+    "enonce": "Quel opérateur teste si une valeur figure dans une liste ?",
+    "choix": ["HAS", "IN", "CONTAINS", "ANYOF"],
+    "bonneReponse": 1,
+    "explication": "`WHERE pays IN ('France', 'Belgique', 'Suisse')` est plus lisible qu'une suite de `OR`. La liste peut aussi provenir d'une sous-requête."
+  },
+  {
+    "id": "sql-m9",
+    "enonce": "À quoi sert une transaction (BEGIN / COMMIT / ROLLBACK) ?",
+    "choix": ["À accélérer les requêtes", "À grouper des opérations « tout ou rien »", "À créer une table temporaire", "À indexer une colonne"],
+    "bonneReponse": 1,
+    "explication": "Une transaction valide (`COMMIT`) ou annule (`ROLLBACK`) un ensemble d'opérations d'un bloc : c'est « tout ou rien ». Exemple : un virement (débit + crédit) doit réussir entièrement ou pas du tout."
+  },
+  {
+    "id": "sql-m10",
+    "enonce": "Que recherche `WHERE nom LIKE '%art%'` ?",
+    "choix": ["Les noms valant exactement 'art'", "Les noms contenant la séquence 'art'", "Les noms commençant par 'art'", "Les noms de 3 lettres"],
+    "bonneReponse": 1,
+    "explication": "Avec `LIKE`, `%` remplace n'importe quelle suite de caractères. `%art%` matche 'Martin', 'Arthur', 'carte'… Le `_` remplace, lui, exactement un caractère."
+  }
+]

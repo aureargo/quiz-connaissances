@@ -1,0 +1,72 @@
+[
+  {
+    "id": "pays-m1",
+    "enonce": "Quelle est la capitale du Brésil ?",
+    "choix": ["Rio de Janeiro", "São Paulo", "Brasília", "Salvador"],
+    "bonneReponse": 2,
+    "explication": "Brasília, ville construite de toutes pièces et inaugurée en 1960, est la capitale du Brésil, et non Rio ou São Paulo."
+  },
+  {
+    "id": "pays-m2",
+    "enonce": "Quel pays s'étend sur le plus grand nombre de fuseaux horaires ?",
+    "choix": ["la Russie", "les États-Unis", "la France", "la Chine"],
+    "bonneReponse": 2,
+    "explication": "Grâce à ses territoires d'outre-mer répartis sur tout le globe, la France couvre 12 fuseaux horaires, plus que tout autre pays."
+  },
+  {
+    "id": "pays-m3",
+    "enonce": "Quel pays est entièrement entouré par l'Afrique du Sud ?",
+    "choix": ["le Lesotho", "l'Eswatini", "le Botswana", "la Namibie"],
+    "bonneReponse": 0,
+    "explication": "Le Lesotho est un enclavé : son territoire est totalement encerclé par l'Afrique du Sud."
+  },
+  {
+    "id": "pays-m4",
+    "enonce": "Quelle monnaie est partagée par vingt pays européens en 2026 ?",
+    "choix": ["l'euro", "le franc", "la livre", "le florin"],
+    "bonneReponse": 0,
+    "explication": "La zone euro compte 20 pays en 2026, la Croatie l'ayant rejointe en 2023. L'euro est leur monnaie commune."
+  },
+  {
+    "id": "pays-m5",
+    "enonce": "Quel fleuve traverse la ville de Paris ?",
+    "choix": ["la Loire", "la Seine", "le Rhône", "la Garonne"],
+    "bonneReponse": 1,
+    "explication": "La Seine traverse Paris d'est en ouest avant de se jeter dans la Manche au Havre."
+  },
+  {
+    "id": "pays-m6",
+    "enonce": "Quel est le plus petit État indépendant du monde ?",
+    "choix": ["Monaco", "le Vatican", "Nauru", "Saint-Marin"],
+    "bonneReponse": 1,
+    "explication": "Le Vatican, avec environ 0,44 km², est le plus petit État souverain du monde, enclavé dans Rome."
+  },
+  {
+    "id": "pays-m7",
+    "enonce": "De quel pays Wellington est-elle la capitale ?",
+    "choix": ["l'Australie", "la Nouvelle-Zélande", "les Fidji", "l'Afrique du Sud"],
+    "bonneReponse": 1,
+    "explication": "Wellington est la capitale de la Nouvelle-Zélande ; Auckland en est la ville la plus peuplée."
+  },
+  {
+    "id": "pays-m8",
+    "enonce": "Le mont Everest se trouve à la frontière du Népal et de quel pays ?",
+    "choix": ["l'Inde", "la Chine", "le Bhoutan", "le Pakistan"],
+    "bonneReponse": 1,
+    "explication": "Le sommet de l'Everest marque la frontière entre le Népal et la Chine (région autonome du Tibet)."
+  },
+  {
+    "id": "pays-m9",
+    "enonce": "Quel est le plus vaste désert chaud du monde ?",
+    "choix": ["le Gobi", "le Kalahari", "le Sahara", "l'Atacama"],
+    "bonneReponse": 2,
+    "explication": "Le Sahara, en Afrique du Nord, est le plus grand désert chaud du monde (~9 millions de km²)."
+  },
+  {
+    "id": "pays-m10",
+    "enonce": "Combien de pays membres compte l'Union européenne en 2026 ?",
+    "choix": ["25", "27", "28", "30"],
+    "bonneReponse": 1,
+    "explication": "L'Union européenne compte 27 membres en 2026, depuis le départ du Royaume-Uni (Brexit) effectif en 2020."
+  }
+]

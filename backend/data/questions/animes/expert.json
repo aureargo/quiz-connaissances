@@ -1,0 +1,72 @@
+[
+  {
+    "id": "animes-e1",
+    "enonce": "Quel studio a produit la série « Cowboy Bebop » (1998) ?",
+    "choix": ["Sunrise", "Gainax", "Madhouse", "Bones"],
+    "bonneReponse": 0,
+    "explication": "Sunrise (aussi derrière Gundam) a produit « Cowboy Bebop », chef-d'œuvre mêlant SF, jazz et western spatial."
+  },
+  {
+    "id": "animes-e2",
+    "enonce": "Qui a réalisé « Cowboy Bebop » ?",
+    "choix": ["Shinichiro Watanabe", "Hideaki Anno", "Yoshiyuki Tomino", "Gen Urobuchi"],
+    "bonneReponse": 0,
+    "explication": "Shinichiro Watanabe, également réalisateur de « Samurai Champloo », est célèbre pour son usage de la musique comme moteur narratif."
+  },
+  {
+    "id": "animes-e3",
+    "enonce": "Qui a réalisé le film d'animation « Ghost in the Shell » (1995), influence revendiquée de « Matrix » ?",
+    "choix": ["Mamoru Oshii", "Katsuhiro Otomo", "Satoshi Kon", "Isao Takahata"],
+    "bonneReponse": 0,
+    "explication": "Mamoru Oshii a livré une œuvre contemplative sur l'identité à l'ère cybernétique. Son esthétique a directement inspiré les sœurs Wachowski."
+  },
+  {
+    "id": "animes-e4",
+    "enonce": "Quel studio, fondé par d'anciens de Gainax, a produit « Kill la Kill » et « Cyberpunk: Edgerunners » ?",
+    "choix": ["Studio Trigger", "P.A. Works", "David Production", "CloverWorks"],
+    "bonneReponse": 0,
+    "explication": "Studio Trigger est reconnaissable à son animation explosive et survitaminée. « Cyberpunk: Edgerunners » (2022) a relancé l'intérêt pour le jeu Cyberpunk 2077."
+  },
+  {
+    "id": "animes-e5",
+    "enonce": "Que désigne le terme « sakuga » chez les amateurs d'animés ?",
+    "choix": ["Un type de scénario original", "Une séquence d'animation très soignée", "La musique du générique de fin", "Un format d'épisode très court"],
+    "bonneReponse": 1,
+    "explication": "« Sakuga » désigne les moments où l'animation monte en qualité (fluidité, détail). Certains animateurs vedettes ont un style reconnaissable que les fans s'amusent à repérer."
+  },
+  {
+    "id": "animes-e6",
+    "enonce": "Quel réalisateur d'« Evangelion » a aussi co-réalisé le film « Shin Godzilla » (2016) ?",
+    "choix": ["Hideaki Anno", "Mamoru Hosoda", "Makoto Shinkai", "Hayao Miyazaki"],
+    "bonneReponse": 0,
+    "explication": "Hideaki Anno, figure du studio Gainax puis fondateur du studio Khara, a réinventé Godzilla avec une mise en scène très personnelle."
+  },
+  {
+    "id": "animes-e7",
+    "enonce": "Quel studio renommé a été frappé par un incendie criminel meurtrier en 2019 ?",
+    "choix": ["Kyoto Animation", "Toei Animation", "Madhouse", "Pierrot"],
+    "bonneReponse": 0,
+    "explication": "L'incendie criminel du studio Kyoto Animation a coûté la vie à 36 personnes et provoqué une onde de choc mondiale, suivie d'un immense élan de solidarité."
+  },
+  {
+    "id": "animes-e8",
+    "enonce": "Quel studio anime principalement la franchise « Pokémon » ?",
+    "choix": ["OLM, Inc.", "Toei Animation", "Bones", "ufotable"],
+    "bonneReponse": 0,
+    "explication": "Le studio OLM produit la série animée « Pokémon » depuis 1997. Discret, il œuvre sur l'une des plus longues séries d'animation en cours."
+  },
+  {
+    "id": "animes-e9",
+    "enonce": "Quelle œuvre de 1963 d'Osamu Tezuka est considérée comme la première série animée TV japonaise hebdomadaire ?",
+    "choix": ["Astro Boy", "Kimba le lion blanc", "Le Roi Léo", "Goldorak"],
+    "bonneReponse": 0,
+    "explication": "« Astro Boy » (Tetsuwan Atom) a posé les bases de l'industrie de l'animé télévisé, y compris la cadence de production hebdomadaire et certaines techniques d'économie d'images."
+  },
+  {
+    "id": "animes-e10",
+    "enonce": "Quel studio a produit « Jujutsu Kaisen » et « Chainsaw Man » ?",
+    "choix": ["MAPPA", "ufotable", "Bones", "A-1 Pictures"],
+    "bonneReponse": 0,
+    "explication": "MAPPA s'est imposé comme un studio majeur des années 2020, au point de gérer plusieurs grosses productions de front — un rythme parfois critiqué pour ses conditions de travail."
+  }
+]

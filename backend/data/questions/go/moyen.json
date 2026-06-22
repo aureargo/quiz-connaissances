@@ -1,0 +1,72 @@
+[
+  {
+    "id": "go-m1",
+    "enonce": "Quelle est la valeur « zéro » d'un pointeur, d'une slice ou d'une map non initialisés ?",
+    "choix": ["0", "nil", "undefined", "\"\""],
+    "bonneReponse": 1,
+    "explication": "En Go, chaque type a une valeur par défaut. Pour les pointeurs, slices, maps, canaux, interfaces et fonctions, c'est `nil`."
+  },
+  {
+    "id": "go-m2",
+    "enonce": "Qu'est-ce qui distingue une slice d'un tableau (array) en Go ?",
+    "choix": ["La slice a une taille fixe inscrite dans son type", "La slice est de taille dynamique et référence un tableau sous-jacent", "Le tableau est de taille dynamique", "Il n'y a aucune différence"],
+    "bonneReponse": 1,
+    "explication": "La taille d'un array fait partie de son type (`[3]int`). Une slice (`[]int`) est une vue redimensionnable sur un tableau sous-jacent, avec une longueur et une capacité."
+  },
+  {
+    "id": "go-m3",
+    "enonce": "Que représente l'identifiant `_` (blank identifier) ?",
+    "choix": ["Une variable globale", "Une valeur volontairement ignorée", "Le pointeur nul", "Un caractère de remplissage"],
+    "bonneReponse": 1,
+    "explication": "`_` jette une valeur dont on ne veut pas, par exemple `v, _ := f()` pour ignorer l'erreur, ou `for _, x := range ...` pour ignorer l'index."
+  },
+  {
+    "id": "go-m4",
+    "enonce": "À quoi sert `range` dans une boucle `for` ?",
+    "choix": ["Générer une plage de nombres", "Itérer sur les éléments d'une collection", "Définir une plage de validité", "Trier une slice"],
+    "bonneReponse": 1,
+    "explication": "`for i, v := range maSlice` parcourt une slice, une map, une chaîne ou un canal. Il renvoie selon le cas l'index/clé et la valeur."
+  },
+  {
+    "id": "go-m5",
+    "enonce": "Comment une struct « implémente » une interface en Go ?",
+    "choix": ["Avec le mot-clé implements", "Implicitement, si elle possède les bonnes méthodes", "Par héritage d'une classe de base", "En s'enregistrant au démarrage"],
+    "bonneReponse": 1,
+    "explication": "Le « duck typing » statique de Go : aucun mot-clé. Si un type possède toutes les méthodes d'une interface, il la satisfait automatiquement."
+  },
+  {
+    "id": "go-m6",
+    "enonce": "Que permet l'instruction `select` ?",
+    "choix": ["Sélectionner des colonnes de données", "Attendre sur plusieurs canaux à la fois", "Filtrer les éléments d'une slice", "Choisir un type dynamiquement"],
+    "bonneReponse": 1,
+    "explication": "`select` se bloque jusqu'à ce qu'une de ses opérations de canal (`case <-ch`) soit prête. C'est l'outil clé pour orchestrer plusieurs goroutines."
+  },
+  {
+    "id": "go-m7",
+    "enonce": "Comment rend-on un identifiant visible en dehors de son package ?",
+    "choix": ["Le préfixer par export", "Commencer son nom par une majuscule", "Le déclarer public", "L'ajouter à un fichier d'en-tête"],
+    "bonneReponse": 1,
+    "explication": "La visibilité dépend de la casse : `Nom` (majuscule) est exporté, `nom` (minuscule) est privé au package. Simple et sans mot-clé."
+  },
+  {
+    "id": "go-m8",
+    "enonce": "Que renvoie `len(\"café\")` (chaîne encodée en UTF-8) ?",
+    "choix": ["4 (le nombre de caractères)", "5 (le nombre d'octets)", "1", "Une erreur"],
+    "bonneReponse": 1,
+    "explication": "Une chaîne Go est une suite d'octets UTF-8 ; `len` compte les OCTETS. Le « é » en occupe 2, d'où 5. Pour compter les caractères, on convertit en `[]rune`."
+  },
+  {
+    "id": "go-m9",
+    "enonce": "Quel package standard fournit l'annulation et les délais via `context.Context` ?",
+    "choix": ["ctx", "context", "sync", "signal"],
+    "bonneReponse": 1,
+    "explication": "Le package `context` propage une annulation, un délai (timeout) ou des valeurs à travers une chaîne d'appels — central pour les serveurs et les requêtes."
+  },
+  {
+    "id": "go-m10",
+    "enonce": "Comment exécute-t-on les tests d'un package Go ?",
+    "choix": ["go run test", "go test", "gotest", "go check"],
+    "bonneReponse": 1,
+    "explication": "`go test` compile et lance les fonctions `TestXxx(t *testing.T)` des fichiers `_test.go`. Aucun framework externe n'est nécessaire."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "git-f1",
+    "enonce": "Quelle commande initialise un nouveau dépôt Git dans le dossier courant ?",
+    "choix": ["git start", "git init", "git create", "git new"],
+    "bonneReponse": 1,
+    "explication": "`git init` crée un sous-dossier caché `.git` qui contiendra tout l'historique. Le dossier devient alors un dépôt suivi par Git."
+  },
+  {
+    "id": "git-f2",
+    "enonce": "Quelle commande affiche l'état des fichiers (modifiés, indexés, non suivis) ?",
+    "choix": ["git status", "git state", "git show", "git info"],
+    "bonneReponse": 0,
+    "explication": "`git status` est la commande la plus utilisée au quotidien : elle résume ce qui est prêt à être commité et ce qui ne l'est pas encore."
+  },
+  {
+    "id": "git-f3",
+    "enonce": "Quelle commande ajoute un fichier à la zone d'index (« staging ») ?",
+    "choix": ["git add", "git stage", "git track", "git index"],
+    "bonneReponse": 0,
+    "explication": "`git add fichier` place le fichier dans l'index, l'étape intermédiaire avant le commit. `git add .` ajoute tout le dossier courant."
+  },
+  {
+    "id": "git-f4",
+    "enonce": "Quelle commande enregistre les modifications indexées dans l'historique ?",
+    "choix": ["git save", "git commit", "git record", "git store"],
+    "bonneReponse": 1,
+    "explication": "`git commit` fige un instantané des fichiers indexés. On y joint un message décrivant le changement, souvent via l'option `-m`."
+  },
+  {
+    "id": "git-f5",
+    "enonce": "Quelle commande récupère un dépôt distant en local pour la première fois ?",
+    "choix": ["git copy", "git download", "git clone", "git fork"],
+    "bonneReponse": 2,
+    "explication": "`git clone <url>` télécharge tout le dépôt (historique compris) et configure automatiquement le dépôt distant nommé `origin`."
+  },
+  {
+    "id": "git-f6",
+    "enonce": "Quelle commande envoie les commits locaux vers le dépôt distant ?",
+    "choix": ["git upload", "git push", "git send", "git deploy"],
+    "bonneReponse": 1,
+    "explication": "`git push` publie les commits de la branche locale vers le dépôt distant. À l'inverse, `git pull` récupère les changements des autres."
+  },
+  {
+    "id": "git-f7",
+    "enonce": "Quelle commande affiche l'historique des commits ?",
+    "choix": ["git history", "git list", "git log", "git commits"],
+    "bonneReponse": 2,
+    "explication": "`git log` liste les commits du plus récent au plus ancien. Des options comme `--oneline` ou `--graph` rendent l'affichage plus compact."
+  },
+  {
+    "id": "git-f8",
+    "enonce": "Quel fichier liste les fichiers et dossiers que Git doit ignorer ?",
+    "choix": [".gitignore", ".ignore", ".gitskip", "ignore.txt"],
+    "bonneReponse": 0,
+    "explication": "Le fichier `.gitignore` contient des motifs (par exemple `node_modules/` ou `*.log`) pour exclure du suivi les fichiers générés ou sensibles."
+  },
+  {
+    "id": "git-f9",
+    "enonce": "Quelle commande télécharge les changements distants ET les intègre dans la branche courante ?",
+    "choix": ["git fetch", "git sync", "git pull", "git update"],
+    "bonneReponse": 2,
+    "explication": "`git pull` équivaut à `git fetch` (télécharger) suivi de `git merge` (fusionner). `git fetch` seul récupère sans rien intégrer."
+  },
+  {
+    "id": "git-f10",
+    "enonce": "Quelle commande crée une branche `dev` ET s'y déplace en une seule fois ?",
+    "choix": ["git branch dev", "git checkout -b dev", "git switch dev", "git merge dev"],
+    "bonneReponse": 1,
+    "explication": "`git checkout -b dev` crée la branche puis bascule dessus. La syntaxe moderne équivalente est `git switch -c dev`. `git branch dev` créerait la branche sans s'y déplacer."
+  }
+]

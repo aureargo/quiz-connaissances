@@ -18,10 +18,17 @@ type Theme struct {
 	Categorie   string `json:"categorie"`   // regroupement, ex: "Programmation"
 	Description string `json:"description"` // courte phrase de présentation
 
-	// NbQuestions n'existe PAS dans le fichier themes.json : il est calculé
-	// au chargement (voir store.go). On l'ajoute quand même au JSON renvoyé
-	// au frontend, qui aime bien afficher "12 questions".
-	NbQuestions int `json:"nbQuestions"`
+	// Niveaux n'existe PAS dans le fichier themes.json : il est déduit au
+	// chargement (voir store.go) des seuls NOMS de fichiers présents dans
+	// data/questions/<id>/ (ex : "facile.json" → "facile"), sans lire leur
+	// contenu. On y ajoute le niveau synthétique "tous". Le frontend l'affiche
+	// comme un sélecteur de difficulté.
+	//
+	// `omitempty` : ce champ est OMIS du JSON quand la slice est vide. C'est
+	// volontaire : la route /api/themes renvoie une liste LÉGÈRE (sans niveaux,
+	// pour ne pas tout charger sur la page d'accueil), tandis que la route
+	// /api/themes/{id} renvoie UN thème complet, niveaux compris.
+	Niveaux []string `json:"niveaux,omitempty"`
 }
 
 // Question représente une question à choix multiples.

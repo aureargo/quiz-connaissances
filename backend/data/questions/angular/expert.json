@@ -1,0 +1,72 @@
+[
+  {
+    "id": "angular-e1",
+    "enonce": "Qu'est-ce qu'un composant « standalone » ?",
+    "choix": ["Un composant sans template", "Un composant qui se passe de NgModule", "Un composant non testable", "Un composant racine unique"],
+    "bonneReponse": 1,
+    "explication": "Depuis Angular 14/15, un composant `standalone` importe directement ses dépendances via son tableau `imports`. Les NgModules deviennent optionnels."
+  },
+  {
+    "id": "angular-e2",
+    "enonce": "Quelle stratégie ne re-vérifie un composant que si ses entrées changent ou qu'un de ses événements se déclenche ?",
+    "choix": ["Default", "OnPush", "Manual", "Detached"],
+    "bonneReponse": 1,
+    "explication": "`ChangeDetectionStrategy.OnPush` réduit fortement le travail de détection : Angular n'inspecte le composant que sur nouvelle référence d'@Input, événement, ou signal modifié."
+  },
+  {
+    "id": "angular-e3",
+    "enonce": "Sur quelle bibliothèque repose historiquement la détection de changement automatique d'Angular ?",
+    "choix": ["RxJS", "Zone.js", "Immer", "MobX"],
+    "bonneReponse": 1,
+    "explication": "Zone.js « patche » les API asynchrones (setTimeout, événements, XHR) pour prévenir Angular qu'il faut revérifier la vue. Les signals ouvrent la voie au mode « zoneless »."
+  },
+  {
+    "id": "angular-e4",
+    "enonce": "Que fait la compilation AOT (Ahead-of-Time) ?",
+    "choix": ["Minifie les images", "Compile les templates au moment du build", "Charge les routes à la demande", "Active le rendu côté serveur"],
+    "bonneReponse": 1,
+    "explication": "L'AOT transforme les templates HTML en JavaScript pendant le build (pas dans le navigateur) : démarrage plus rapide, erreurs de template détectées tôt, et pas de compilateur expédié au client."
+  },
+  {
+    "id": "angular-e5",
+    "enonce": "Que permet la fonction `inject()` ?",
+    "choix": ["Injecter du HTML brut", "Récupérer une dépendance hors du constructeur", "Insérer un composant dynamiquement", "Forcer la détection de changement"],
+    "bonneReponse": 1,
+    "explication": "`inject(MonService)` obtient une dépendance sans la déclarer dans le constructeur, dans un contexte d'injection. Pratique dans les initialiseurs de champs, les fonctions utilitaires ou les guards."
+  },
+  {
+    "id": "angular-e6",
+    "enonce": "Que fait l'opérateur RxJS `switchMap` ?",
+    "choix": ["Fusionne tous les flux sans rien annuler", "Projette vers un nouvel Observable en annulant le précédent", "Émet uniquement la première valeur", "Met les valeurs en tampon"],
+    "bonneReponse": 1,
+    "explication": "À chaque nouvelle valeur source, `switchMap` se désabonne de l'Observable interne précédent. Idéal pour une recherche : seule la dernière requête compte."
+  },
+  {
+    "id": "angular-e7",
+    "enonce": "À quoi sert `<ng-content>` ?",
+    "choix": ["Charger une route enfant", "Projeter du contenu venu du parent", "Afficher une erreur", "Déclarer une variable de template"],
+    "bonneReponse": 1,
+    "explication": "`<ng-content>` insère le HTML que le parent a placé entre les balises du composant : c'est la « projection de contenu » (transclusion), utile pour des composants génériques (cartes, modales…)."
+  },
+  {
+    "id": "angular-e8",
+    "enonce": "À quoi sert l'attribut `track` dans `@for` (ou `trackBy` avec *ngFor) ?",
+    "choix": ["Trier la liste", "Identifier chaque élément de la liste", "Limiter le nombre d'éléments", "Suivre les clics"],
+    "bonneReponse": 1,
+    "explication": "`track item.id` donne une identité stable à chaque élément pour ne re-rendre que ce qui change. Sans cela, Angular peut détruire/recréer tout le DOM de la liste à chaque changement — coûteux."
+  },
+  {
+    "id": "angular-e9",
+    "enonce": "Que fait `effect()` dans l'API signals ?",
+    "choix": ["Crée une animation CSS", "Exécute un effet de bord réactif", "Mémorise une valeur", "Déclenche une requête HTTP planifiée"],
+    "bonneReponse": 1,
+    "explication": "`effect(() => console.log(compteur()))` relance automatiquement son corps dès qu'un signal lu à l'intérieur change. Utile pour journaliser, synchroniser, etc."
+  },
+  {
+    "id": "angular-e10",
+    "enonce": "Que représente le caractère `$` à la fin d'un nom de variable, par convention (ex : `data$`) ?",
+    "choix": ["Une variable privée", "Que la variable est un Observable", "Une chaîne de caractères", "Une valeur monétaire"],
+    "bonneReponse": 1,
+    "explication": "Le suffixe `$` (« Finnish notation ») signale par convention qu'une variable est un Observable (un flux) RxJS. Purement indicatif, mais très répandu dans la communauté."
+  }
+]

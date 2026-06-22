@@ -1,0 +1,72 @@
+[
+  {
+    "id": "crypto-m1",
+    "enonce": "Qu'est-ce qu'une « clé privée » ?",
+    "choix": ["Un mot de passe de site web", "Le secret qui permet de dépenser ses fonds", "L'adresse publique de réception", "Le nom du wallet"],
+    "bonneReponse": 1,
+    "explication": "La clé privée prouve la propriété des fonds et permet de signer les transactions. Elle ne doit JAMAIS être partagée : « not your keys, not your coins »."
+  },
+  {
+    "id": "crypto-m2",
+    "enonce": "Qu'est-ce que la « preuve d'enjeu » (Proof of Stake) ?",
+    "choix": ["Résoudre des calculs cryptographiques coûteux", "Valider des blocs en immobilisant des cryptos", "Imprimer de la monnaie sans limite", "Échanger des cryptos sur une plateforme"],
+    "bonneReponse": 1,
+    "explication": "En PoS, les validateurs sont choisis selon la quantité de crypto qu'ils bloquent (stakent) en garantie. Bien moins énergivore que la preuve de travail (minage)."
+  },
+  {
+    "id": "crypto-m3",
+    "enonce": "Que désigne la « DeFi » ?",
+    "choix": ["Une cryptomonnaie très spéculative", "La finance décentralisée, sans intermédiaire", "Un type de portefeuille en ligne", "Une bourse d'actions traditionnelle"],
+    "bonneReponse": 1,
+    "explication": "La DeFi (Decentralized Finance) reproduit prêts, échanges et placements directement sur la blockchain, sans banque, à l'aide de smart contracts."
+  },
+  {
+    "id": "crypto-m4",
+    "enonce": "Que sont les « frais de gas » sur Ethereum ?",
+    "choix": ["Une taxe écologique", "Le coût d'exécution d'une transaction", "Le prix d'achat de l'ETH", "Une commission de wallet"],
+    "bonneReponse": 1,
+    "explication": "Le « gas » mesure l'effort de calcul demandé au réseau pour une transaction ou un smart contract. Plus une opération est complexe ou le réseau congestionné, plus les frais (payés en ETH) sont élevés."
+  },
+  {
+    "id": "crypto-m5",
+    "enonce": "Qu'est-ce que le « halving » du Bitcoin ?",
+    "choix": ["Le doublement du prix du Bitcoin", "La division par deux de la récompense de minage", "Le partage d'un wallet entre plusieurs clés", "La fermeture d'une plateforme d'échange"],
+    "bonneReponse": 1,
+    "explication": "Tous les 210 000 blocs (environ 4 ans), la récompense versée aux mineurs est divisée par deux. Ce ralentissement de l'émission renforce la rareté programmée du Bitcoin."
+  },
+  {
+    "id": "crypto-m6",
+    "enonce": "À quoi sert une « phrase de récupération » (seed phrase) ?",
+    "choix": ["À se connecter à un site", "À restaurer l'accès à un wallet", "À miner plus vite", "À nommer une transaction"],
+    "bonneReponse": 1,
+    "explication": "Cette suite de mots (généralement 12 ou 24) régénère toutes les clés du wallet. La perdre = perdre ses fonds ; la divulguer = se les faire voler. On la garde hors ligne."
+  },
+  {
+    "id": "crypto-m7",
+    "enonce": "Que désigne le terme « altcoin » ?",
+    "choix": ["Une fausse monnaie", "Une crypto autre que le Bitcoin", "Une crypto stable", "Un wallet alternatif"],
+    "bonneReponse": 1,
+    "explication": "« Altcoin » = « alternative coin ». Le terme regroupe toutes les cryptos apparues après Bitcoin (Ethereum, Solana, etc.), même les plus importantes."
+  },
+  {
+    "id": "crypto-m8",
+    "enonce": "Que signifie l'expression « HODL » dans la culture crypto ?",
+    "choix": ["Vendre rapidement en cas de baisse", "Conserver ses cryptos longtemps", "Pirater le wallet d'un autre", "Miner en groupe dans une pool"],
+    "bonneReponse": 1,
+    "explication": "Née d'une faute de frappe de « hold » sur un forum en 2013, l'expression désigne la stratégie de garder ses cryptos sur le long terme, sans paniquer face à la volatilité."
+  },
+  {
+    "id": "crypto-m9",
+    "enonce": "Qu'est-ce qu'une adresse publique (de réception) ?",
+    "choix": ["Le secret à ne jamais partager", "Un identifiant public pour recevoir des fonds", "Le mot de passe d'accès au wallet", "Le nom public de la blockchain"],
+    "bonneReponse": 1,
+    "explication": "L'adresse (souvent une longue suite de caractères ou un QR code) se partage librement pour recevoir des paiements. Elle est dérivée de la clé publique, sans révéler la clé privée."
+  },
+  {
+    "id": "crypto-m10",
+    "enonce": "Pourquoi dit-on qu'une blockchain publique est « décentralisée » ?",
+    "choix": ["Elle est hébergée chez Google", "Aucune autorité unique ne la contrôle", "Elle change d'adresse souvent", "Elle est gérée par une banque centrale"],
+    "bonneReponse": 1,
+    "explication": "Chaque nœud détient une copie du registre et applique les mêmes règles de consensus. Sans point central à corrompre ou éteindre, le réseau est résilient."
+  }
+]

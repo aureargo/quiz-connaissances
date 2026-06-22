@@ -1,0 +1,72 @@
+[
+  {
+    "id": "pays-e1",
+    "enonce": "Quel pays possède le plus long littoral du monde ?",
+    "choix": ["la Russie", "le Canada", "l'Australie", "l'Indonésie"],
+    "bonneReponse": 1,
+    "explication": "Avec ses innombrables îles et fjords arctiques, le Canada a le plus long littoral du monde (plus de 200 000 km)."
+  },
+  {
+    "id": "pays-e2",
+    "enonce": "Quelle ville est le siège du gouvernement de la Bolivie ?",
+    "choix": ["Sucre", "La Paz", "Santa Cruz", "Cochabamba"],
+    "bonneReponse": 1,
+    "explication": "La Paz abrite le gouvernement et le parlement boliviens, tandis que Sucre reste la capitale constitutionnelle."
+  },
+  {
+    "id": "pays-e3",
+    "enonce": "Quel pays, malgré son immense étendue d'ouest en est, n'utilise qu'un seul fuseau horaire officiel ?",
+    "choix": ["la Chine", "la Russie", "le Canada", "les États-Unis"],
+    "bonneReponse": 0,
+    "explication": "La Chine couvre géographiquement cinq fuseaux, mais impose une heure unique (UTC+8) sur tout son territoire."
+  },
+  {
+    "id": "pays-e4",
+    "enonce": "Quel détroit sépare l'Europe de l'Afrique à leur point le plus proche ?",
+    "choix": ["le Bosphore", "le détroit de Gibraltar", "le détroit de Malacca", "le canal de Suez"],
+    "bonneReponse": 1,
+    "explication": "Le détroit de Gibraltar, large d'environ 14 km, sépare l'Espagne du Maroc et relie l'Atlantique à la Méditerranée."
+  },
+  {
+    "id": "pays-e5",
+    "enonce": "Quel pays a fait reconnaître son nom officiel « Türkiye » par l'ONU en 2022 ?",
+    "choix": ["la Turquie", "la Grèce", "la Géorgie", "l'Arménie"],
+    "bonneReponse": 0,
+    "explication": "En 2022, la Turquie a demandé à l'ONU d'utiliser « Türkiye » comme nom officiel dans toutes les langues."
+  },
+  {
+    "id": "pays-e6",
+    "enonce": "Quelle ligne imaginaire partage la Terre en hémisphères nord et sud ?",
+    "choix": ["le méridien de Greenwich", "l'équateur", "le tropique du Cancer", "le cercle polaire"],
+    "bonneReponse": 1,
+    "explication": "L'équateur, à la latitude 0°, sépare les hémisphères nord et sud. Greenwich, lui, sert de référence pour les longitudes."
+  },
+  {
+    "id": "pays-e7",
+    "enonce": "De quel pays Astana est-elle la capitale ?",
+    "choix": ["l'Ouzbékistan", "le Kazakhstan", "la Mongolie", "le Turkménistan"],
+    "bonneReponse": 1,
+    "explication": "Astana est la capitale du Kazakhstan ; elle s'est brièvement appelée Noursoultan entre 2019 et 2022."
+  },
+  {
+    "id": "pays-e8",
+    "enonce": "Quelle mer fermée, partagée par cinq pays, est en réalité le plus grand lac du monde ?",
+    "choix": ["la mer Noire", "la mer Caspienne", "la mer d'Aral", "la mer Morte"],
+    "bonneReponse": 1,
+    "explication": "La mer Caspienne, sans communication avec l'océan, est la plus grande masse d'eau intérieure : un lac, malgré son nom."
+  },
+  {
+    "id": "pays-e9",
+    "enonce": "Quel pays possède trois capitales distinctes (exécutive, législative et judiciaire) ?",
+    "choix": ["le Nigeria", "l'Afrique du Sud", "le Kenya", "l'Égypte"],
+    "bonneReponse": 1,
+    "explication": "L'Afrique du Sud répartit ses pouvoirs entre Pretoria (exécutif), Le Cap (législatif) et Bloemfontein (judiciaire)."
+  },
+  {
+    "id": "pays-e10",
+    "enonce": "Quel est le plus récent pays à avoir rejoint l'ONU après son indépendance en 2011 ?",
+    "choix": ["le Kosovo", "le Soudan du Sud", "le Timor oriental", "le Monténégro"],
+    "bonneReponse": 1,
+    "explication": "Le Soudan du Sud a accédé à l'indépendance en juillet 2011 et est devenu le 193e État membre de l'ONU la même année."
+  }
+]

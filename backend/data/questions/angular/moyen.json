@@ -1,0 +1,72 @@
+[
+  {
+    "id": "angular-m1",
+    "enonce": "Quel décorateur (ou option) déclare un service injectable global ?",
+    "choix": ["@Service", "@Injectable", "@Provider", "@Component"],
+    "bonneReponse": 1,
+    "explication": "`@Injectable({ providedIn: 'root' })` enregistre le service comme singleton disponible partout, sans devoir le déclarer dans un module."
+  },
+  {
+    "id": "angular-m2",
+    "enonce": "Comment transmet-on une donnée d'un composant PARENT vers un ENFANT ?",
+    "choix": ["Avec @Output()", "Avec @Input()", "Avec @ViewChild()", "Avec un EventEmitter"],
+    "bonneReponse": 1,
+    "explication": "L'enfant déclare une propriété d'entrée `@Input()` (ou `input()` en signals) ; le parent la renseigne via `[propriete]=\"valeur\"` dans son template."
+  },
+  {
+    "id": "angular-m3",
+    "enonce": "Comment un composant ENFANT notifie-t-il son PARENT d'un événement ?",
+    "choix": ["Avec un @Input()", "Avec un @Output()", "Avec un constructeur", "En modifiant le DOM"],
+    "bonneReponse": 1,
+    "explication": "L'enfant expose un `@Output() x = new EventEmitter()` et appelle `x.emit(valeur)`. Le parent y réagit via `(x)=\"...\"`."
+  },
+  {
+    "id": "angular-m4",
+    "enonce": "Qu'est-ce qu'un « signal » dans l'Angular moderne ?",
+    "choix": ["Un type d'événement du DOM", "Une valeur réactive qui notifie ses dépendants", "Un raccourci pour les Observables", "Un fichier de configuration réactif"],
+    "bonneReponse": 1,
+    "explication": "Un signal est un conteneur de valeur réactif (`signal(0)`, `.set()`, `.update()`). Le template et les `computed` qui le lisent se recalculent automatiquement quand il change."
+  },
+  {
+    "id": "angular-m5",
+    "enonce": "À quoi sert le pipe `async` dans un template ?",
+    "choix": ["Trier une liste d'éléments", "S'abonner à un Observable et l'afficher", "Formater une date affichée", "Appeler une API distante"],
+    "bonneReponse": 1,
+    "explication": "`{{ flux$ | async }}` s'abonne au flux (Observable ou Promise), affiche sa dernière valeur émise, et se DÉSABONNE automatiquement quand le composant est détruit (évite les fuites)."
+  },
+  {
+    "id": "angular-m6",
+    "enonce": "Que fait `computed()` dans l'API signals ?",
+    "choix": ["Lance un calcul en arrière-plan", "Dérive une valeur d'autres signals", "Met en cache une requête HTTP", "Compile le template"],
+    "bonneReponse": 1,
+    "explication": "`computed(() => a() + b())` crée un signal réactif en lecture seule, recalculé paresseusement quand l'un des signals lus change."
+  },
+  {
+    "id": "angular-m7",
+    "enonce": "En quoi consiste le « lazy loading » d'une route ?",
+    "choix": ["Charger toute l'application au démarrage", "Ne télécharger une page qu'à sa visite", "Mettre les images en cache", "Différer les requêtes HTTP"],
+    "bonneReponse": 1,
+    "explication": "Avec `loadComponent: () => import('...')`, le code de la page n'est récupéré que lorsqu'on y navigue, ce qui allège le bundle initial et accélère le démarrage."
+  },
+  {
+    "id": "angular-m8",
+    "enonce": "Quel hook de cycle de vie s'exécute une fois les `@Input()` initialisés ?",
+    "choix": ["constructor", "ngOnInit", "ngAfterViewInit", "ngOnDestroy"],
+    "bonneReponse": 1,
+    "explication": "`ngOnInit` est appelé après que les inputs ont reçu leur première valeur — idéal pour initialiser le composant. Le constructeur, lui, s'exécute trop tôt pour cela."
+  },
+  {
+    "id": "angular-m9",
+    "enonce": "À quoi sert HttpClient ?",
+    "choix": ["Manipuler le DOM", "Effectuer des requêtes HTTP", "Gérer le routing", "Compiler les styles"],
+    "bonneReponse": 1,
+    "explication": "`HttpClient` (de `@angular/common/http`) émet des requêtes GET/POST… et renvoie des Observables auxquels on s'abonne pour traiter la réponse."
+  },
+  {
+    "id": "angular-m10",
+    "enonce": "Que fait `forkJoin` (RxJS) ?",
+    "choix": ["Crée plusieurs threads parallèles", "Attend que plusieurs Observables se terminent", "Duplique un Observable existant", "Annule un abonnement en cours"],
+    "bonneReponse": 1,
+    "explication": "`forkJoin([a$, b$])` est l'équivalent réactif de `Promise.all` : il émet un tableau des dernières valeurs une fois que TOUS les flux sont complétés."
+  }
+]

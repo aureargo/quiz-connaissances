@@ -1,0 +1,72 @@
+[
+  {
+    "id": "crypto-e1",
+    "enonce": "Quelle fonction de hachage cryptographique est au cœur de la preuve de travail du Bitcoin ?",
+    "choix": ["MD5", "SHA-256", "AES", "RSA"],
+    "bonneReponse": 1,
+    "explication": "Le minage Bitcoin cherche un hachage SHA-256 du bloc commençant par assez de zéros. AES et RSA sont du chiffrement (pas du hachage), et MD5 est obsolète."
+  },
+  {
+    "id": "crypto-e2",
+    "enonce": "En quelle année le « white paper » de Bitcoin a-t-il été publié ?",
+    "choix": ["2008", "2010", "2013", "2015"],
+    "bonneReponse": 0,
+    "explication": "Satoshi Nakamoto a publié « Bitcoin: A Peer-to-Peer Electronic Cash System » le 31 octobre 2008. Le réseau a démarré (bloc genesis) en janvier 2009."
+  },
+  {
+    "id": "crypto-e3",
+    "enonce": "Qu'a réalisé « The Merge » sur Ethereum en 2022 ?",
+    "choix": ["La fusion avec Bitcoin", "Le passage à la preuve d'enjeu", "Le doublement de l'offre d'ETH", "La création des NFT"],
+    "bonneReponse": 1,
+    "explication": "The Merge a fait basculer Ethereum du minage (preuve de travail) au staking (preuve d'enjeu), réduisant sa consommation énergétique d'environ 99,9 %."
+  },
+  {
+    "id": "crypto-e4",
+    "enonce": "En quoi consiste une attaque des « 51 % » ?",
+    "choix": ["Pirater 51 % des wallets du réseau", "Contrôler plus de la moitié de la puissance du réseau", "Acheter 51 % des cryptos en circulation", "Bloquer 51 % des nœuds par DDoS"],
+    "bonneReponse": 1,
+    "explication": "En maîtrisant la majorité de la puissance de minage/staking, un acteur peut censurer ou annuler des transactions récentes (double dépense). Difficile et coûteux sur les grands réseaux comme Bitcoin."
+  },
+  {
+    "id": "crypto-e5",
+    "enonce": "Sur quel principe repose la cryptographie asymétrique utilisée par les blockchains ?",
+    "choix": ["Une seule clé partagée", "Une paire de clés publique/privée", "Un mot de passe maître", "Le chiffrement symétrique AES"],
+    "bonneReponse": 1,
+    "explication": "On signe une transaction avec sa clé privée ; n'importe qui peut vérifier la signature avec la clé publique correspondante, sans jamais connaître la clé privée."
+  },
+  {
+    "id": "crypto-e6",
+    "enonce": "À quoi servent les solutions « Layer 2 » (ex : Lightning Network, rollups) ?",
+    "choix": ["À créer de nouvelles cryptos", "À traiter des transactions hors-chaîne", "À stocker les NFT", "À remplacer les wallets"],
+    "bonneReponse": 1,
+    "explication": "Les Layer 2 regroupent ou déportent des transactions hors de la chaîne principale, puis y ancrent un résumé. Résultat : plus de débit et des frais réduits, tout en héritant de la sécurité de la couche 1 (mise à l'échelle / scaling)."
+  },
+  {
+    "id": "crypto-e7",
+    "enonce": "Qu'est-ce qu'un arbre de Merkle (Merkle tree) ?",
+    "choix": ["Un type de wallet matériel", "Une structure de hachage des transactions", "Un algorithme de minage rapide", "Un graphique de prix des cryptos"],
+    "bonneReponse": 1,
+    "explication": "Les transactions sont hachées par paires jusqu'à une unique « racine de Merkle » résumant le bloc. On peut alors prouver efficacement qu'une transaction y figure sans télécharger tout le bloc."
+  },
+  {
+    "id": "crypto-e8",
+    "enonce": "Quel problème fondamental la blockchain résout-elle, qu'aucune monnaie numérique antérieure n'avait réglé sans tiers de confiance ?",
+    "choix": ["La lenteur des paiements", "La double dépense", "L'inflation", "Le vol de mot de passe"],
+    "bonneReponse": 1,
+    "explication": "Sans autorité centrale, comment empêcher de dépenser deux fois la même pièce ? Le consensus de Nakamoto (registre ordonné + preuve de travail) résout ce problème de la double dépense."
+  },
+  {
+    "id": "crypto-e9",
+    "enonce": "Que permettent les preuves à divulgation nulle de connaissance (zero-knowledge proofs) ?",
+    "choix": ["Miner sans consommer d'électricité", "Prouver qu'on connaît une information sans la révéler", "Annuler une transaction déjà validée", "Doubler ses cryptos automatiquement"],
+    "bonneReponse": 1,
+    "explication": "Une ZK-proof convainc un vérificateur de la véracité d'une affirmation sans dévoiler les données sous-jacentes. Base des cryptos confidentielles (Zcash) et des ZK-rollups."
+  },
+  {
+    "id": "crypto-e10",
+    "enonce": "Suite à quel événement la blockchain Ethereum Classic est-elle née ?",
+    "choix": ["Le lancement du réseau Bitcoin", "Le hard fork après le piratage de « The DAO »", "La mise à jour « The Merge » de 2022", "La création du stablecoin USDT"],
+    "bonneReponse": 1,
+    "explication": "Après le vol massif sur The DAO en 2016, la communauté a hard-forké Ethereum pour annuler le hack. La chaîne d'origine, refusant ce changement (« code is law »), a survécu sous le nom d'Ethereum Classic."
+  }
+]

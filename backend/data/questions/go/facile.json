@@ -1,44 +1,72 @@
 [
   {
-    "id": "go-1",
+    "id": "go-f1",
     "enonce": "Quel mot-clé permet de lancer une goroutine (un fil d'exécution léger) ?",
     "choix": ["thread", "go", "spawn", "async"],
     "bonneReponse": 1,
     "explication": "On préfixe simplement un appel de fonction par `go` : `go maFonction()`. Le runtime Go orchestre alors des milliers de goroutines très efficacement."
   },
   {
-    "id": "go-2",
+    "id": "go-f2",
     "enonce": "Quelle syntaxe déclare ET initialise une variable avec inférence de type ?",
     "choix": ["int x = 5", "x := 5", "let x = 5", "var x = int(5)"],
     "bonneReponse": 1,
     "explication": "L'opérateur `:=` déclare une variable en déduisant son type de la valeur. Il ne s'utilise qu'à l'intérieur d'une fonction."
   },
   {
-    "id": "go-3",
+    "id": "go-f3",
     "enonce": "Comment une fonction Go signale-t-elle classiquement une erreur ?",
     "choix": ["En renvoyant une valeur et une error", "En levant une exception", "En renvoyant -1", "En modifiant une variable globale"],
     "bonneReponse": 0,
     "explication": "Go n'utilise pas d'exceptions pour le contrôle de flux courant. La convention est de renvoyer `(résultat, error)` puis de tester `if err != nil`."
   },
   {
-    "id": "go-4",
+    "id": "go-f4",
     "enonce": "À quoi sert le mot-clé `defer` ?",
-    "choix": ["À gérer les imports", "À définir une constante", "À reporter un appel jusqu'à la fin de la fonction", "À déclarer une goroutine"],
+    "choix": ["À gérer les imports d'un package", "À définir une constante globale", "À reporter un appel en fin de fonction", "À déclarer une nouvelle goroutine"],
     "bonneReponse": 2,
     "explication": "`defer f()` exécute `f()` juste avant que la fonction englobante ne se termine. Idéal pour libérer une ressource (fermer un fichier, par exemple)."
   },
   {
-    "id": "go-5",
+    "id": "go-f5",
     "enonce": "Quel outil reformate le code selon le style standard de Go ?",
     "choix": ["golint", "goprettier", "gofmt", "gobeautify"],
     "bonneReponse": 2,
     "explication": "`gofmt` (souvent appelé via `go fmt`) impose un style unique à tout l'écosystème Go. Fini les débats sur l'indentation !"
   },
   {
-    "id": "go-6",
+    "id": "go-f6",
     "enonce": "Comment crée-t-on un canal (channel) transportant des entiers ?",
     "choix": ["new(chan int)", "channel<int>()", "chan int{}", "make(chan int)"],
     "bonneReponse": 3,
     "explication": "Les canaux permettent aux goroutines de communiquer. On les crée avec `make`, tout comme les slices et les maps."
+  },
+  {
+    "id": "go-f7",
+    "enonce": "Quelle fonction est le point d'entrée d'un programme Go exécutable ?",
+    "choix": ["start()", "init()", "main()", "run()"],
+    "bonneReponse": 2,
+    "explication": "Un programme exécutable Go doit avoir un `package main` contenant une fonction `func main()`. C'est là que tout commence."
+  },
+  {
+    "id": "go-f8",
+    "enonce": "Quel mot-clé définit un nouveau type à champs (un enregistrement) ?",
+    "choix": ["class", "struct", "record", "object"],
+    "bonneReponse": 1,
+    "explication": "Go n'a pas de classes : on regroupe des champs dans une `struct`. Les méthodes s'attachent ensuite au type via un récepteur."
+  },
+  {
+    "id": "go-f9",
+    "enonce": "Quel mot-clé importe un package dans un fichier Go ?",
+    "choix": ["include", "require", "import", "use"],
+    "bonneReponse": 2,
+    "explication": "`import \"fmt\"` rend le package `fmt` disponible. On peut aussi grouper plusieurs imports entre parenthèses."
+  },
+  {
+    "id": "go-f10",
+    "enonce": "Quel est le SEUL mot-clé de boucle en Go ?",
+    "choix": ["while", "for", "loop", "foreach"],
+    "bonneReponse": 1,
+    "explication": "Go n'a que `for`. Il couvre tous les cas : boucle classique, équivalent du `while` (`for condition`), ou itération avec `for ... range`."
   }
 ]

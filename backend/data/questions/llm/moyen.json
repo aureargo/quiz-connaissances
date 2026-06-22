@@ -1,0 +1,72 @@
+[
+  {
+    "id": "llm-m1",
+    "enonce": "Que mesure la « fenêtre de contexte » d'un LLM ?",
+    "choix": ["la quantité de texte qu'il peut considérer d'un coup", "la résolution des images qu'il affiche", "le débit de sa connexion réseau", "le nombre d'utilisateurs connectés"],
+    "bonneReponse": 0,
+    "explication": "La fenêtre de contexte est le nombre maximal de tokens (prompt + réponse) que le modèle peut prendre en compte simultanément."
+  },
+  {
+    "id": "llm-m2",
+    "enonce": "Que signifie « RAG » dans le contexte des LLM ?",
+    "choix": ["Retrieval-Augmented Generation", "Random Access Gradient", "Recursive Attention Gate", "Rapid Audio Generation"],
+    "bonneReponse": 0,
+    "explication": "La génération augmentée par récupération (RAG) va chercher des documents pertinents dans une base externe pour nourrir la réponse du modèle."
+  },
+  {
+    "id": "llm-m3",
+    "enonce": "À quoi sert principalement le « RLHF » lors de l'entraînement d'un modèle ?",
+    "choix": ["ajuster le modèle selon des retours humains", "réduire le nombre de ses paramètres", "produire des images à partir de texte", "augmenter la vitesse de génération"],
+    "bonneReponse": 0,
+    "explication": "Le RLHF (apprentissage par renforcement à partir de retours humains) aligne les réponses du modèle sur ce que les humains jugent utile et sûr."
+  },
+  {
+    "id": "llm-m4",
+    "enonce": "Que contrôle le paramètre « température » d'un LLM ?",
+    "choix": ["le degré d'aléatoire des réponses", "la longueur maximale du texte", "la langue utilisée en sortie", "le coût facturé par requête"],
+    "bonneReponse": 0,
+    "explication": "Une température basse rend les réponses plus déterministes et prévisibles ; une température élevée les rend plus variées et créatives."
+  },
+  {
+    "id": "llm-m5",
+    "enonce": "Qu'est-ce qu'un modèle « open-weights » ?",
+    "choix": ["un modèle dont les paramètres sont librement diffusés", "un modèle fonctionnant entièrement hors ligne", "un modèle réservé à un usage commercial", "un modèle dépourvu de fenêtre de contexte"],
+    "bonneReponse": 0,
+    "explication": "Un modèle open-weights publie ses poids, que chacun peut télécharger et exécuter. Llama et Mistral en sont des exemples connus."
+  },
+  {
+    "id": "llm-m6",
+    "enonce": "Quelle société a développé la famille de modèles « Mistral » ?",
+    "choix": ["Mistral AI", "Hugging Face", "DeepMind", "Cohere"],
+    "bonneReponse": 0,
+    "explication": "Mistral AI, start-up française fondée en 2023, développe les modèles Mistral, en partie diffusés en open-weights."
+  },
+  {
+    "id": "llm-m7",
+    "enonce": "Que désigne le « prompt engineering » ?",
+    "choix": ["l'art de formuler des consignes efficaces", "la conception de puces électroniques", "le câblage physique des serveurs", "la traduction automatique de pages web"],
+    "bonneReponse": 0,
+    "explication": "Le prompt engineering consiste à rédiger et structurer les instructions pour obtenir d'un LLM des réponses plus fiables et précises."
+  },
+  {
+    "id": "llm-m8",
+    "enonce": "Qu'encourage la technique du « chain-of-thought » (chaîne de pensée) ?",
+    "choix": ["exposer son raisonnement étape par étape", "répondre aussi vite que possible", "ignorer le contexte fourni", "produire des illustrations détaillées"],
+    "bonneReponse": 0,
+    "explication": "Demander au modèle de détailler son raisonnement étape par étape améliore souvent ses résultats sur les problèmes de logique ou de calcul."
+  },
+  {
+    "id": "llm-m9",
+    "enonce": "Qu'appelle-t-on un modèle « multimodal » ?",
+    "choix": ["un modèle gérant texte, image et parfois son", "un modèle maîtrisant de nombreuses langues", "un modèle réparti sur plusieurs serveurs", "un modèle proposé à plusieurs tarifs"],
+    "bonneReponse": 0,
+    "explication": "Un modèle multimodal traite plusieurs types de données (texte, image, audio, voire vidéo) au sein d'un même système. C'est devenu courant en 2026."
+  },
+  {
+    "id": "llm-m10",
+    "enonce": "Pourquoi un LLM a-t-il une « date de coupure des connaissances » (knowledge cutoff) ?",
+    "choix": ["ses données d'entraînement s'arrêtent à une date", "il s'éteint automatiquement chaque nuit", "sa licence d'utilisation expire vite", "il efface sa mémoire chaque année"],
+    "bonneReponse": 0,
+    "explication": "Un modèle ne connaît que ce qui figurait dans ses données d'entraînement, arrêtées à une certaine date : il ignore les événements postérieurs, sauf si on les lui fournit (par exemple via une recherche web ou du RAG)."
+  }
+]

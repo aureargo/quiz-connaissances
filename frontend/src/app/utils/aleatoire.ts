@@ -24,3 +24,14 @@ export function melanger<T>(source: readonly T[]): T[] {
   }
   return tableau;
 }
+
+/**
+ * entierAleatoire : tire un entier au hasard dans l'intervalle [min, max]
+ * (bornes INCLUSES).
+ *
+ * Pratique pour choisir une position d'insertion dans un tableau. On répartit
+ * uniformément les (max - min + 1) valeurs possibles grâce à `Math.floor`.
+ */
+export function entierAleatoire(min: number, max: number): number {
+  return min + Math.floor(Math.random() * (max - min + 1));
+}

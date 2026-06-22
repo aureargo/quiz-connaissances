@@ -1,0 +1,72 @@
+[
+  {
+    "id": "jeux-video-m1",
+    "enonce": "Quel studio polonais a développé « The Witcher 3: Wild Hunt » ?",
+    "choix": ["CD Projekt Red", "Ubisoft", "Bethesda", "BioWare"],
+    "bonneReponse": 0,
+    "explication": "CD Projekt Red a adapté les romans d'Andrzej Sapkowski. « The Witcher 3 » est salué comme l'un des meilleurs RPG en monde ouvert."
+  },
+  {
+    "id": "jeux-video-m2",
+    "enonce": "Quelle licence de FromSoftware a donné son nom à tout un genre, le « souls-like » ?",
+    "choix": ["Dark Souls", "Bloodborne", "Sekiro", "Nioh"],
+    "bonneReponse": 0,
+    "explication": "« Dark Souls » a imposé une formule exigeante (combats punitifs, level design interconnecté, lore cryptique) reprise par tant de jeux qu'elle a créé un genre."
+  },
+  {
+    "id": "jeux-video-m3",
+    "enonce": "Quel est le jeu vidéo le plus vendu de tous les temps ?",
+    "choix": ["GTA V", "Minecraft", "Wii Sports", "Red Dead Redemption 2"],
+    "bonneReponse": 1,
+    "explication": "Avec plus de 300 millions d'exemplaires, « Minecraft » devance « GTA V ». Sa disponibilité sur quasiment toutes les plateformes y est pour beaucoup."
+  },
+  {
+    "id": "jeux-video-m4",
+    "enonce": "Que signifie l'acronyme « RPG » ?",
+    "choix": ["Rapid Play Game", "Role-Playing Game", "Real Player Graphics", "Random Path Generator"],
+    "bonneReponse": 1,
+    "explication": "Un RPG (jeu de rôle) met le joueur dans la peau d'un personnage qu'il fait évoluer (statistiques, équipement, choix narratifs). Final Fantasy, The Witcher ou Zelda en sont des exemples."
+  },
+  {
+    "id": "jeux-video-m5",
+    "enonce": "Quelle entreprise japonaise édite la série « Final Fantasy » ?",
+    "choix": ["Capcom", "Square Enix", "Bandai Namco", "Konami"],
+    "bonneReponse": 1,
+    "explication": "Square (devenu Square Enix après fusion avec Enix en 2003) édite « Final Fantasy » depuis 1987, l'une des sagas RPG les plus influentes."
+  },
+  {
+    "id": "jeux-video-m6",
+    "enonce": "Quel jeu de Valve (2004) est une référence du FPS à la narration immersive ?",
+    "choix": ["Doom", "Half-Life 2", "Quake", "Call of Duty"],
+    "bonneReponse": 1,
+    "explication": "« Half-Life 2 » a marqué par sa physique (le célèbre Gravity Gun), sa narration sans coupure et son moteur Source. Un jalon du jeu de tir à la première personne."
+  },
+  {
+    "id": "jeux-video-m7",
+    "enonce": "Que désigne le terme « speedrun » ?",
+    "choix": ["Un mode multijoueur compétitif", "Finir un jeu le plus vite possible", "Un bug d'accélération du jeu", "Une course de voitures chronométrée"],
+    "bonneReponse": 1,
+    "explication": "Les speedrunners optimisent chaque seconde, exploitant parfois des bugs (« glitches ») pour battre des records. De grands événements caritatifs comme les GDQ leur sont consacrés."
+  },
+  {
+    "id": "jeux-video-m8",
+    "enonce": "Quelle franchise de Rockstar Games simule le crime en monde ouvert ?",
+    "choix": ["Watch Dogs", "Grand Theft Auto", "Saints Row", "Mafia"],
+    "bonneReponse": 1,
+    "explication": "« Grand Theft Auto » (GTA) est l'une des franchises les plus lucratives. « GTA V » figure parmi les produits de divertissement les plus rentables de l'histoire."
+  },
+  {
+    "id": "jeux-video-m9",
+    "enonce": "Quelle plateforme de Valve domine la distribution de jeux sur PC ?",
+    "choix": ["Epic Games Store", "Steam", "GOG", "Origin"],
+    "bonneReponse": 1,
+    "explication": "Lancé en 2003, Steam est devenu le magasin de référence pour les jeux PC, avec bibliothèque, mises à jour, ateliers de mods et fonctions sociales."
+  },
+  {
+    "id": "jeux-video-m10",
+    "enonce": "Que désigne l'abréviation « PNJ » (en anglais « NPC ») ?",
+    "choix": ["Un point de sauvegarde", "Un personnage non joueur", "Un niveau secret", "Un mode multijoueur"],
+    "bonneReponse": 1,
+    "explication": "Un Personnage Non Joueur est géré par l'ordinateur : marchand, ennemi, donneur de quête… Le terme est aussi devenu une expression populaire sur internet."
+  }
+]

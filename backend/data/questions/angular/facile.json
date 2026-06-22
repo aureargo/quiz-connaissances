@@ -1,44 +1,72 @@
 [
   {
-    "id": "angular-1",
+    "id": "angular-f1",
     "enonce": "Dans quel langage écrit-on principalement une application Angular ?",
     "choix": ["JavaScript pur", "CoffeeScript", "TypeScript", "Dart"],
     "bonneReponse": 2,
     "explication": "Angular est conçu autour de TypeScript : un sur-ensemble de JavaScript qui ajoute le typage statique, très utile pour les grosses applications."
   },
   {
-    "id": "angular-2",
+    "id": "angular-f2",
     "enonce": "Quel décorateur transforme une classe en composant Angular ?",
     "choix": ["@Component", "@Directive", "@NgModule", "@Injectable"],
     "bonneReponse": 0,
     "explication": "`@Component({...})` associe à une classe un template HTML, des styles et un sélecteur. C'est la brique de base de l'interface."
   },
   {
-    "id": "angular-3",
+    "id": "angular-f3",
     "enonce": "Quelle commande crée un nouveau projet Angular ?",
     "choix": ["npm new angular", "ng new mon-projet", "angular init", "ng create"],
     "bonneReponse": 1,
     "explication": "Le CLI Angular (`ng`) fournit `ng new <nom>` pour générer un projet complet, prêt à lancer avec `ng serve`."
   },
   {
-    "id": "angular-4",
+    "id": "angular-f4",
     "enonce": "Quelle est la syntaxe correcte pour réagir à un clic (event binding) ?",
     "choix": ["[click]=\"action()\"", "{{click}}", "(click)=\"action()\"", "#click=\"action()\""],
     "bonneReponse": 2,
     "explication": "Les parenthèses `( )` indiquent une liaison d'ÉVÉNEMENT. Les crochets `[ ]` servent eux à lier une PROPRIÉTÉ (data binding entrant)."
   },
   {
-    "id": "angular-5",
+    "id": "angular-f5",
     "enonce": "Comment affiche-t-on la valeur d'une variable dans le template (interpolation) ?",
     "choix": ["{{ valeur }}", "[ valeur ]", "( valeur )", "${ valeur }"],
     "bonneReponse": 0,
     "explication": "Les doubles accolades `{{ valeur }}` insèrent le résultat d'une expression du composant directement dans le HTML."
   },
   {
-    "id": "angular-6",
+    "id": "angular-f6",
     "enonce": "Quelle bibliothèque de programmation réactive est au cœur d'Angular ?",
     "choix": ["jQuery", "Lodash", "Redux", "RxJS"],
     "bonneReponse": 3,
     "explication": "RxJS fournit les Observables, utilisés notamment par HttpClient pour gérer les flux de données asynchrones."
+  },
+  {
+    "id": "angular-f7",
+    "enonce": "Quelle commande lance le serveur de développement ?",
+    "choix": ["ng start", "ng serve", "ng run", "ng dev"],
+    "bonneReponse": 1,
+    "explication": "`ng serve` compile l'application et la sert sur http://localhost:4200 avec rechargement automatique à chaque modification."
+  },
+  {
+    "id": "angular-f8",
+    "enonce": "Quelle propriété de @Component pointe vers un fichier HTML externe ?",
+    "choix": ["template", "templateUrl", "view", "html"],
+    "bonneReponse": 1,
+    "explication": "`templateUrl: './x.html'` référence un fichier séparé. `template: '...'` permet, lui, d'écrire le HTML directement en ligne."
+  },
+  {
+    "id": "angular-f9",
+    "enonce": "Comment appelle-t-on les briques d'interface réutilisables d'Angular ?",
+    "choix": ["des modules", "des composants", "des services", "des pipes"],
+    "bonneReponse": 1,
+    "explication": "Un composant = une classe + un template + des styles. On assemble l'interface en imbriquant des composants les uns dans les autres."
+  },
+  {
+    "id": "angular-f10",
+    "enonce": "Quelle syntaxe moderne (Angular 17+) affiche un bloc conditionnellement ?",
+    "choix": ["*ngShow", "@if", "#if", "v-if"],
+    "bonneReponse": 1,
+    "explication": "Le nouveau control-flow intégré utilise `@if`, `@for` et `@switch` directement dans le template, sans importer de directive."
   }
 ]

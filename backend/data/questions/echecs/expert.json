@@ -1,0 +1,72 @@
+[
+  {
+    "id": "echecs-e1",
+    "enonce": "Qu'est-ce que le « zugzwang » ?",
+    "choix": ["une position où tout coup légal dégrade sa propre situation", "une ouverture sacrifiant un pion pour attaquer", "une finale où les deux rois s'opposent directement", "une double attaque menée par un cavalier"],
+    "bonneReponse": 0,
+    "explication": "En zugzwang, le joueur préférerait « passer » son tour : chaque coup possible empire sa position. C'est décisif en finale."
+  },
+  {
+    "id": "echecs-e2",
+    "enonce": "La règle des « 50 coups » permet de réclamer la nulle après 50 coups...",
+    "choix": ["sans prise ni mouvement de pion", "sans aucun échec porté", "sans roque effectué", "sans capture de dame"],
+    "bonneReponse": 0,
+    "explication": "Si 50 coups consécutifs s'écoulent sans capture ni avance de pion, un joueur peut réclamer la nulle : la partie ne progresse plus."
+  },
+  {
+    "id": "echecs-e3",
+    "enonce": "Sur quoi repose le mat dit « du couloir » (back-rank) ?",
+    "choix": ["un roi bloqué sur sa rangée par ses propres pions", "une colonne ouverte au centre de l'échiquier", "une diagonale tenue par les deux fous", "un cavalier posté sur une case avancée"],
+    "bonneReponse": 0,
+    "explication": "Le roi, coincé sur sa dernière rangée par ses pions non avancés, est maté par une tour ou une dame qui s'y infiltre."
+  },
+  {
+    "id": "echecs-e4",
+    "enonce": "En notation algébrique, que signifie « O-O » ?",
+    "choix": ["le petit roque", "le grand roque", "un échec au roi", "une nulle proposée"],
+    "bonneReponse": 0,
+    "explication": "« O-O » note le petit roque (côté roi) ; « O-O-O » note le grand roque (côté dame), plus long d'où le symbole supplémentaire."
+  },
+  {
+    "id": "echecs-e5",
+    "enonce": "À quoi sert le classement Elo ?",
+    "choix": ["mesurer la force relative des joueurs", "chronométrer la durée des parties", "classer les ouvertures par popularité", "compter les pièces capturées"],
+    "bonneReponse": 0,
+    "explication": "Le système Elo, du nom d'Arpad Elo, attribue un nombre de points reflétant la force d'un joueur et prédit l'issue probable d'une rencontre."
+  },
+  {
+    "id": "echecs-e6",
+    "enonce": "Quel ordinateur a battu le champion du monde Garry Kasparov en 1997 ?",
+    "choix": ["Deep Blue", "AlphaZero", "Stockfish", "Deep Thought"],
+    "bonneReponse": 0,
+    "explication": "Deep Blue, d'IBM, a vaincu Kasparov en 1997 : première victoire d'une machine sur un champion du monde en match."
+  },
+  {
+    "id": "echecs-e7",
+    "enonce": "Qu'est-ce qu'un « gambit » ?",
+    "choix": ["un sacrifice de matériel pour un avantage de développement", "une finale opposant deux tours à un roi", "un échec porté par deux pièces à la fois", "une nulle due au manque de matériel"],
+    "bonneReponse": 0,
+    "explication": "Un gambit offre du matériel (souvent un pion) dès l'ouverture pour obtenir du temps, de l'espace ou l'initiative. Le gambit du roi en est célèbre."
+  },
+  {
+    "id": "echecs-e8",
+    "enonce": "Avec un jeu parfait des deux camps, l'issue théorique d'une partie d'échecs est...",
+    "choix": ["inconnue à ce jour", "une victoire certaine des blancs", "une victoire certaine des noirs", "toujours une partie nulle"],
+    "bonneReponse": 0,
+    "explication": "Les échecs ne sont pas « résolus » : l'arbre des possibilités est trop vaste. On présume une nulle, mais cela n'est pas démontré."
+  },
+  {
+    "id": "echecs-e9",
+    "enonce": "En quoi consiste le « fianchetto » ?",
+    "choix": ["développer un fou sur la grande diagonale via b2 ou g2", "avancer ses deux pions centraux dès l'ouverture", "échanger sa dame contre les deux tours adverses", "poster ses deux cavaliers au bord de l'échiquier"],
+    "bonneReponse": 0,
+    "explication": "Le fianchetto place le fou en b2/g2 (ou b7/g7) après l'avance d'un pion cavalier : il contrôle alors une longue diagonale."
+  },
+  {
+    "id": "echecs-e10",
+    "enonce": "Combien de cases une dame contrôle-t-elle depuis une case centrale d'un échiquier vide ?",
+    "choix": ["27", "21", "14", "8"],
+    "bonneReponse": 0,
+    "explication": "Au centre (par exemple d4), la dame couvre 14 cases en lignes/colonnes et 13 en diagonales, soit 27 cases au total."
+  }
+]

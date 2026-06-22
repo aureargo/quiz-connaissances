@@ -1,0 +1,72 @@
+[
+  {
+    "id": "sql-e1",
+    "enonce": "Que signifie l'acronyme ACID (propriétés des transactions) ?",
+    "choix": ["Access, Control, Index, Data", "Atomicité, Cohérence, Isolation, Durabilité", "Async, Cache, Integrity, Distributed", "Aggregate, Count, Insert, Delete"],
+    "bonneReponse": 1,
+    "explication": "ACID garantit la fiabilité des transactions : tout-ou-rien (Atomicité), respect des contraintes (Cohérence), non-interférence (Isolation), persistance après COMMIT (Durabilité)."
+  },
+  {
+    "id": "sql-e2",
+    "enonce": "Quel est le principal compromis d'un INDEX ?",
+    "choix": ["Il accélère tout sans contrepartie", "Il accélère les lectures mais ralentit les écritures", "Il chiffre les données", "Il supprime les doublons"],
+    "bonneReponse": 1,
+    "explication": "Un index (souvent un B-tree) rend les recherches rapides, mais doit être maintenu à chaque INSERT/UPDATE/DELETE et consomme du stockage. On indexe donc avec discernement."
+  },
+  {
+    "id": "sql-e3",
+    "enonce": "Que produit un CROSS JOIN entre deux tables ?",
+    "choix": ["L'intersection des lignes", "Le produit cartésien des deux tables", "Seulement les lignes appariées", "Une erreur"],
+    "bonneReponse": 1,
+    "explication": "Un CROSS JOIN sans condition combine chaque ligne de A à chaque ligne de B, soit A × B lignes (3 × 4 = 12). Utile pour générer des combinaisons, mais coûteux et souvent le signe d'une jointure oubliée."
+  },
+  {
+    "id": "sql-e4",
+    "enonce": "Quelle est la différence entre DELETE et TRUNCATE ?",
+    "choix": ["Aucune", "TRUNCATE vide toute la table d'un bloc", "DELETE supprime la table", "TRUNCATE est filtrable par WHERE"],
+    "bonneReponse": 1,
+    "explication": "`DELETE` retire des lignes (filtrable par WHERE, journalisé ligne à ligne, déclenche les triggers). `TRUNCATE` réinitialise la table d'un bloc : beaucoup plus rapide, mais global et souvent non annulable."
+  },
+  {
+    "id": "sql-e5",
+    "enonce": "Que permettent les fonctions de fenêtrage (window functions, ex : `OVER (PARTITION BY ...)`) ?",
+    "choix": ["Créer des fenêtres graphiques", "Calculer sur un groupe sans réduire les lignes", "Limiter l'affichage", "Joindre des tables"],
+    "bonneReponse": 1,
+    "explication": "Contrairement à `GROUP BY`, elles conservent chaque ligne tout en calculant sur un groupe lié à la ligne courante. Ex : `ROW_NUMBER() OVER (PARTITION BY service ORDER BY salaire DESC)` classe les employés par service sans agréger."
+  },
+  {
+    "id": "sql-e6",
+    "enonce": "Qu'est-ce qu'une vue (VIEW) ?",
+    "choix": ["Une copie physique d'une table", "Une requête nommée vue comme une table", "Un index spécial", "Une sauvegarde"],
+    "bonneReponse": 1,
+    "explication": "Une VIEW stocke une requête réutilisable, pas les données : c'est une table virtuelle. On l'interroge comme une table, ce qui simplifie des requêtes complexes ou masque certaines colonnes. (Une vue MATÉRIALISÉE, elle, stocke le résultat.)"
+  },
+  {
+    "id": "sql-e7",
+    "enonce": "Quel est l'objectif de la normalisation (formes normales, ex : 3NF) ?",
+    "choix": ["Accélérer les SELECT", "Réduire la redondance des données", "Chiffrer la base", "Réduire le nombre de tables"],
+    "bonneReponse": 1,
+    "explication": "Normaliser décompose les tables pour qu'une donnée ne soit stockée qu'à un seul endroit, ce qui évite les anomalies de mise à jour. On dénormalise parfois ensuite, volontairement, pour gagner en performance de lecture."
+  },
+  {
+    "id": "sql-e8",
+    "enonce": "Que renvoie `COALESCE(a, b, c)` ?",
+    "choix": ["La somme de a, b et c", "La première valeur non NULL des arguments", "La dernière valeur", "Toujours NULL si l'un est NULL"],
+    "bonneReponse": 1,
+    "explication": "`COALESCE` parcourt ses arguments de gauche à droite et renvoie le premier qui n'est pas NULL. Pratique pour fournir une valeur par défaut : `COALESCE(surnom, prenom, 'Anonyme')`."
+  },
+  {
+    "id": "sql-e9",
+    "enonce": "Qu'est-ce qu'un interblocage (deadlock) en base de données ?",
+    "choix": ["Une table verrouillée en lecture seule", "Deux transactions qui s'attendent mutuellement", "Un index corrompu", "Une requête trop lente"],
+    "bonneReponse": 1,
+    "explication": "T1 verrouille A et veut B ; T2 verrouille B et veut A : chacune tient un verrou que l'autre réclame, donc aucune ne peut avancer. Le SGBD détecte ce cycle et sacrifie (rollback) l'une des transactions, la « victime »."
+  },
+  {
+    "id": "sql-e10",
+    "enonce": "À quoi sert le mot-clé EXPLAIN (ou EXPLAIN ANALYZE) ?",
+    "choix": ["À documenter une requête", "À afficher le plan d'exécution de la requête", "À corriger automatiquement la requête", "À exporter les résultats"],
+    "bonneReponse": 1,
+    "explication": "`EXPLAIN` révèle COMMENT le SGBD compte exécuter la requête : scans de table, usage des index, ordre des jointures. C'est l'outil de base pour diagnostiquer une requête lente."
+  }
+]

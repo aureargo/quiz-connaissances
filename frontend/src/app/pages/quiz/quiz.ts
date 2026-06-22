@@ -24,8 +24,11 @@ import { Theme } from '../../models/quiz.models';
 export class Quiz implements OnInit {
   private readonly api = inject(QuizApi);
 
-  // Paramètre d'URL :themeId, injecté automatiquement (withComponentInputBinding).
+  // Paramètres d'URL :themeId et :niveau, injectés automatiquement
+  // (withComponentInputBinding). Le nom de l'input DOIT correspondre au nom du
+  // paramètre déclaré dans la route ('themeId', 'niveau').
   readonly themeId = input<string>('');
+  readonly niveau = input<string>('');
 
   // --- État de la page ---
   readonly chargement = signal(true);
@@ -38,13 +41,14 @@ export class Quiz implements OnInit {
   // ngOnInit s'exécute une fois le composant initialisé (les input() sont prêts).
   ngOnInit(): void {
     const id = this.themeId();
+    const niveau = this.niveau();
 
     // forkJoin attend que PLUSIEURS Observables soient TOUS terminés, puis
-    // renvoie leurs résultats ensemble. Ici : la liste des thèmes (pour le
-    // titre/emoji) ET les questions du thème.
-    forkJoin([this.api.getThemes(), this.api.getQuestions(id)]).subscribe({
-      next: ([themes, questions]) => {
-        this.themeInfo.set(themes.find((t) => t.id === id) ?? null);
+    // renvoie leurs résultats ensemble. Ici : le thème consulté (pour le
+    // titre/emoji) ET les questions de ce thème AU NIVEAU demandé.
+    forkJoin([this.api.getTheme(id), this.api.getQuestions(id, niveau)]).subscribe({
+      next: ([theme, questions]) => {
+        this.themeInfo.set(theme);
 
         if (questions.length === 0) {
           this.erreur.set('Ce thème ne contient aucune question.');

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "mangas-m1",
+    "enonce": "Que désigne le genre « seinen » ?",
+    "choix": ["Les mangas pour enfants", "Les mangas pour un public adulte", "Les mangas de sport", "Les mangas en couleur"],
+    "bonneReponse": 1,
+    "explication": "Le seinen vise les jeunes hommes adultes : thèmes plus complexes, violence ou psychologie poussées (Berserk, Vagabond, Monster…)."
+  },
+  {
+    "id": "mangas-m2",
+    "enonce": "Dans quel magazine One Piece et Naruto ont-ils été prépubliés ?",
+    "choix": ["CoroCoro Comic", "Weekly Shonen Jump", "Young Animal", "Afternoon"],
+    "bonneReponse": 1,
+    "explication": "Le Weekly Shonen Jump (Shueisha) est le magazine de prépublication le plus emblématique : un chapitre par semaine, regroupé ensuite en volumes reliés."
+  },
+  {
+    "id": "mangas-m3",
+    "enonce": "Comment nomme-t-on le volume relié qui regroupe plusieurs chapitres ?",
+    "choix": ["un doujinshi", "un tankobon", "un omake", "un mook"],
+    "bonneReponse": 1,
+    "explication": "Le « tankobon » est le format livre vendu en librairie, par opposition à la prépublication en magazine. C'est ce qu'on collectionne dans sa bibliothèque."
+  },
+  {
+    "id": "mangas-m4",
+    "enonce": "Qu'est-ce qu'un « doujinshi » ?",
+    "choix": ["Un manga officiel", "Un manga auto-publié, non officiel", "Un magazine de prépublication", "Un prix littéraire"],
+    "bonneReponse": 1,
+    "explication": "Les doujinshi sont vendus dans des conventions comme le Comiket. Beaucoup d'auteurs pros y ont débuté. Ils sont souvent des parodies ou suites non officielles."
+  },
+  {
+    "id": "mangas-m5",
+    "enonce": "Quel mangaka a créé la dark fantasy « Berserk » ?",
+    "choix": ["Kentaro Miura", "Naoki Urasawa", "Takehiko Inoue", "Yoshihiro Togashi"],
+    "bonneReponse": 0,
+    "explication": "Kentaro Miura a dessiné « Berserk » dès 1989, référence de la dark fantasy. Son décès en 2021 a profondément marqué le monde du manga."
+  },
+  {
+    "id": "mangas-m6",
+    "enonce": "Quel manga de Takehiko Inoue est centré sur le basket-ball ?",
+    "choix": ["Captain Tsubasa", "Slam Dunk", "Haikyuu", "Hajime no Ippo"],
+    "bonneReponse": 1,
+    "explication": "« Slam Dunk » a popularisé le basket au Japon. Takehiko Inoue a aussi réalisé « Vagabond », fresque sur le samouraï Musashi Miyamoto."
+  },
+  {
+    "id": "mangas-m7",
+    "enonce": "Quel thriller de Naoki Urasawa suit le Dr Tenma traquant un tueur nommé Johan ?",
+    "choix": ["Monster", "Death Note", "Psycho-Pass", "Erased"],
+    "bonneReponse": 0,
+    "explication": "« Monster » est un thriller psychologique acclamé. Urasawa est aussi l'auteur de « 20th Century Boys » et de « Pluto »."
+  },
+  {
+    "id": "mangas-m8",
+    "enonce": "Que désigne un manga « one-shot » ?",
+    "choix": ["Un manga très long", "Une histoire complète en un seul chapitre", "Un manga en couleur", "Une adaptation de jeu vidéo"],
+    "bonneReponse": 1,
+    "explication": "Un one-shot raconte une histoire autonome, sans suite. Les auteurs s'en servent souvent pour tester un concept avant d'en faire une série."
+  },
+  {
+    "id": "mangas-m9",
+    "enonce": "Quel duo a créé « Death Note » ?",
+    "choix": ["Oda et Kishimoto", "Ohba et Obata", "Toriyama seul", "Isayama et Araki"],
+    "bonneReponse": 1,
+    "explication": "Le scénariste Tsugumi Ohba et le dessinateur Takeshi Obata ont aussi collaboré sur « Bakuman », récit sur le métier de mangaka."
+  },
+  {
+    "id": "mangas-m10",
+    "enonce": "Quel manga de Hirohiko Araki est célèbre pour ses « poses » et ses « Stands » ?",
+    "choix": ["JoJo's Bizarre Adventure", "Fist of the North Star", "Jujutsu Kaisen", "Bleach"],
+    "bonneReponse": 0,
+    "explication": "« JoJo's Bizarre Adventure » est une saga générationnelle où chaque partie suit un membre de la famille Joestar. Les « Stands » sont des pouvoirs spirituels combattants."
+  }
+]

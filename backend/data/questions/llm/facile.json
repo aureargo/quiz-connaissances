@@ -1,0 +1,72 @@
+[
+  {
+    "id": "llm-f1",
+    "enonce": "Que signifie l'acronyme « LLM » ?",
+    "choix": ["Large Language Model", "Long Logic Machine", "Linked Learning Module", "Local Language Markup"],
+    "bonneReponse": 0,
+    "explication": "« LLM » signifie Large Language Model, soit « grand modèle de langage » en français : un modèle entraîné sur d'énormes quantités de texte."
+  },
+  {
+    "id": "llm-f2",
+    "enonce": "Sur quelle architecture de réseau de neurones reposent les LLM modernes ?",
+    "choix": ["le Transformer", "le perceptron", "l'arbre de décision", "la machine de Boltzmann"],
+    "bonneReponse": 0,
+    "explication": "Depuis 2017, l'architecture Transformer domine le traitement du langage : c'est la base de GPT, Claude, Gemini, etc."
+  },
+  {
+    "id": "llm-f3",
+    "enonce": "Quelle entreprise a lancé ChatGPT fin 2022 ?",
+    "choix": ["Google", "OpenAI", "Meta", "Amazon"],
+    "bonneReponse": 1,
+    "explication": "ChatGPT, lancé par OpenAI en novembre 2022, a fait connaître les LLM conversationnels au grand public."
+  },
+  {
+    "id": "llm-f4",
+    "enonce": "Comment appelle-t-on le texte d'instruction que l'on fournit à un LLM ?",
+    "choix": ["le prompt", "le cookie", "le tampon", "le pilote"],
+    "bonneReponse": 0,
+    "explication": "Le « prompt » est la consigne ou question donnée au modèle ; sa formulation influence beaucoup la qualité de la réponse."
+  },
+  {
+    "id": "llm-f5",
+    "enonce": "Comment nomme-t-on l'unité de base en laquelle un LLM découpe le texte ?",
+    "choix": ["le bit", "le token", "le pixel", "le paquet"],
+    "bonneReponse": 1,
+    "explication": "Un LLM traite des « tokens » : des fragments de mots. La facturation et la limite de contexte se comptent en tokens."
+  },
+  {
+    "id": "llm-f6",
+    "enonce": "Que produit fondamentalement un LLM en réponse à un prompt ?",
+    "choix": ["du texte", "des modèles 3D", "des fichiers binaires", "des circuits imprimés"],
+    "bonneReponse": 0,
+    "explication": "Un LLM génère du texte, token par token, en prédisant la suite la plus probable. Les modèles multimodaux étendent ce principe à l'image ou au son."
+  },
+  {
+    "id": "llm-f7",
+    "enonce": "Comment nomme-t-on une réponse inventée mais fausse produite par un LLM ?",
+    "choix": ["une hallucination", "une compilation", "une indexation", "une régression"],
+    "bonneReponse": 0,
+    "explication": "On parle d'« hallucination » quand le modèle affirme avec assurance une information inexacte ou inventée de toutes pièces."
+  },
+  {
+    "id": "llm-f8",
+    "enonce": "Quelle famille de modèles de langage est développée par Anthropic ?",
+    "choix": ["Claude", "Gemini", "Llama", "Mistral"],
+    "bonneReponse": 0,
+    "explication": "Claude est la famille de LLM d'Anthropic. Gemini est de Google, Llama de Meta et Mistral de Mistral AI."
+  },
+  {
+    "id": "llm-f9",
+    "enonce": "Quelle famille de modèles de langage est développée par Google ?",
+    "choix": ["Gemini", "Claude", "Llama", "GPT"],
+    "bonneReponse": 0,
+    "explication": "Gemini est la famille de modèles de Google. GPT est d'OpenAI, Claude d'Anthropic et Llama de Meta."
+  },
+  {
+    "id": "llm-f10",
+    "enonce": "En quoi consiste le « fine-tuning » d'un modèle ?",
+    "choix": ["le réentraîner sur des données spécifiques", "agrandir la fenêtre de son interface", "compresser son fichier sur le disque", "chiffrer les réponses qu'il génère"],
+    "bonneReponse": 0,
+    "explication": "Le fine-tuning poursuit l'entraînement d'un modèle existant sur un jeu de données ciblé pour le spécialiser sur une tâche ou un style."
+  }
+]

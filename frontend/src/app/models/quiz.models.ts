@@ -12,12 +12,17 @@
 
 // Un thème = une catégorie de questions (ex : "Java", "Échecs").
 export interface Theme {
-  id: string;          // identifiant unique, ex: "java"
-  nom: string;         // libellé affiché, ex: "Java"
-  emoji: string;       // emoji décoratif
-  categorie: string;   // regroupement, ex: "Programmation"
-  description: string; // courte phrase de présentation
-  nbQuestions: number; // nombre de questions du thème (calculé côté serveur)
+  id: string;            // identifiant unique, ex: "java"
+  nom: string;           // libellé affiché, ex: "Java"
+  emoji: string;         // emoji décoratif
+  categorie: string;     // regroupement, ex: "Programmation"
+  description: string;   // courte phrase de présentation
+
+  // niveaux est OPTIONNEL : la liste légère (GET /api/themes, pour l'accueil) ne
+  // le renvoie pas, alors que le détail d'un thème (GET /api/themes/{id}) si.
+  // C'est juste la liste des NOMS de niveaux disponibles (ex : ["facile",
+  // "moyen", "expert", "tous"]) ; le nombre de questions n'est pas calculé.
+  niveaux?: string[];
 }
 
 // Une question à choix multiples, telle que renvoyée par l'API.

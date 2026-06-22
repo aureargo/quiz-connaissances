@@ -1,0 +1,72 @@
+[
+  {
+    "id": "go-e1",
+    "enonce": "Que se passe-t-il si on lit ou écrit sur un canal valant `nil` ?",
+    "choix": ["Une panique immédiate", "Le blocage permanent de la goroutine", "Rien, l'opération est ignorée", "Une erreur de compilation"],
+    "bonneReponse": 1,
+    "explication": "Toute opération sur un canal nil bloque pour toujours. C'est exploité dans un `select` pour « désactiver » dynamiquement un `case` en mettant son canal à nil."
+  },
+  {
+    "id": "go-e2",
+    "enonce": "Quel ordre d'itération garantit une `map` en Go ?",
+    "choix": ["L'ordre d'insertion", "L'ordre trié des clés", "Aucun, l'ordre est aléatoire", "L'ordre inverse d'insertion"],
+    "bonneReponse": 2,
+    "explication": "Le runtime randomise l'ordre de parcours d'une map à chaque exécution, justement pour empêcher tout code d'en dépendre. Pour un ordre stable, on trie les clés."
+  },
+  {
+    "id": "go-e3",
+    "enonce": "Que fait `append` quand la capacité de la slice est dépassée ?",
+    "choix": ["Il modifie le tableau sous-jacent en place", "Il alloue un nouveau tableau et y recopie les éléments", "Il panique", "Il renvoie nil"],
+    "bonneReponse": 1,
+    "explication": "Si `cap` est insuffisante, `append` alloue un tableau plus grand et copie les données. C'est pourquoi il faut toujours réaffecter : `s = append(s, x)`."
+  },
+  {
+    "id": "go-e4",
+    "enonce": "À quoi sert la directive `//go:embed` (Go 1.16+) ?",
+    "choix": ["Inliner une fonction", "Embarquer des fichiers dans le binaire", "Ignorer le vérificateur de course", "Marquer du code mort"],
+    "bonneReponse": 1,
+    "explication": "Avec le package `embed`, `//go:embed fichier.txt` intègre des fichiers (templates, assets…) directement dans l'exécutable. Plus de dépendances externes à déployer."
+  },
+  {
+    "id": "go-e5",
+    "enonce": "Quelle est la différence principale entre un récepteur valeur et un récepteur pointeur ?",
+    "choix": ["Aucune, c'est du sucre syntaxique", "Le récepteur pointeur peut modifier l'instance", "Le récepteur valeur est toujours plus rapide", "Le récepteur pointeur est interdit sur les structs"],
+    "bonneReponse": 1,
+    "explication": "`func (p *T) m()` agit sur l'objet original (et peut le modifier), tandis que `func (t T) m()` travaille sur une copie. On choisit selon le besoin de mutation et le coût de copie."
+  },
+  {
+    "id": "go-e6",
+    "enonce": "Depuis quelle version les génériques (paramètres de type) sont-ils disponibles ?",
+    "choix": ["Go 1.11", "Go 1.16", "Go 1.18", "Go 1.21"],
+    "bonneReponse": 2,
+    "explication": "Go 1.18 (mars 2022) a introduit les paramètres de type, par exemple `func Max[T constraints.Ordered](a, b T) T`."
+  },
+  {
+    "id": "go-e7",
+    "enonce": "Comment récupère-t-on le contrôle après une `panic` ?",
+    "choix": ["Avec un bloc try/catch", "Avec `recover()` dans une fonction différée", "Avec une fonction catch()", "On ne peut pas, le programme s'arrête"],
+    "bonneReponse": 1,
+    "explication": "`recover()` n'a d'effet qu'à l'intérieur d'un `defer`. Il stoppe la propagation de la panique et renvoie la valeur passée à `panic`."
+  },
+  {
+    "id": "go-e8",
+    "enonce": "Que peut faire un `defer` vis-à-vis des valeurs de retour NOMMÉES ?",
+    "choix": ["Rien, elles sont figées", "Les modifier après l'instruction return", "Les remettre à zéro obligatoirement", "Empêcher la fonction de retourner"],
+    "bonneReponse": 1,
+    "explication": "Un `defer` s'exécute après l'évaluation du `return` mais avant le retour effectif. Avec des résultats nommés, il peut donc les modifier (utile pour envelopper une erreur)."
+  },
+  {
+    "id": "go-e9",
+    "enonce": "Que détecte le drapeau `-race` du compilateur/testeur Go ?",
+    "choix": ["Les fuites de mémoire", "Les accès concurrents non synchronisés", "Les portions de code les plus lentes", "Les imports et variables inutilisés"],
+    "bonneReponse": 1,
+    "explication": "Le « race detector » (`go test -race`, `go run -race`) instrumente le binaire pour repérer à l'exécution deux accès concurrents à une même donnée dont l'un est une écriture (data race)."
+  },
+  {
+    "id": "go-e10",
+    "enonce": "Que garantit le package `sync/atomic` ?",
+    "choix": ["L'exécution séquentielle des goroutines", "Des opérations atomiques sur des entiers/pointeurs", "Le verrouillage automatique des maps", "La persistance sur disque"],
+    "bonneReponse": 1,
+    "explication": "`sync/atomic` fournit des opérations atomiques, c'est-à-dire indivisibles, de bas niveau (AddInt64, CompareAndSwap…) sans mutex. Plus rapide mais plus délicat à utiliser correctement."
+  }
+]

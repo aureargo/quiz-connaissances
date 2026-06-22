@@ -16,9 +16,20 @@ export const routes: Routes = [
     title: 'Quiz Connaissances'
   },
   {
-    // "/quiz/<id>" → page de quiz pour un thème (:themeId est un paramètre d'URL)
-    // Le composant Quiz sera créé en Phase 3.
-    path: 'quiz/:themeId',
+    // "/themes/<id>" → sous-page de sélection du NIVEAU pour un thème donné.
+    // C'est l'"étage" intermédiaire : on y arrive en cliquant une tuile de
+    // l'accueil, et c'est SEULEMENT là qu'on charge les niveaux de ce thème.
+    // :themeId est lié à l'input() du composant (withComponentInputBinding).
+    path: 'themes/:themeId',
+    loadComponent: () =>
+      import('./pages/niveau-selection/niveau-selection').then((m) => m.NiveauSelection),
+    title: 'Choix du niveau'
+  },
+  {
+    // "/quiz/<id>/<niveau>" → page de quiz pour un thème À UN NIVEAU donné.
+    // :themeId et :niveau sont des paramètres d'URL, liés automatiquement aux
+    // input() du composant grâce à withComponentInputBinding (voir app.config.ts).
+    path: 'quiz/:themeId/:niveau',
     loadComponent: () => import('./pages/quiz/quiz').then((m) => m.Quiz),
     title: 'Quiz en cours'
   },

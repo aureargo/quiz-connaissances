@@ -1,0 +1,72 @@
+[
+  {
+    "id": "rust-e1",
+    "enonce": "À quoi servent les annotations de durée de vie (lifetimes), comme `&'a T` ?",
+    "choix": ["À mesurer le temps d'exécution", "À empêcher les références pendantes", "À planifier le ramasse-miettes", "À nommer les threads"],
+    "bonneReponse": 1,
+    "explication": "Les lifetimes relient la durée de validité des références entre elles. Le compilateur les vérifie pour garantir qu'une référence ne survit pas à la donnée pointée — souvent inférées, parfois explicites."
+  },
+  {
+    "id": "rust-e2",
+    "enonce": "Quelle est la différence entre `Rc<T>` et `Arc<T>` ?",
+    "choix": ["Aucune", "`Arc` a un compteur atomique, sûr entre threads", "`Rc` est sur le tas, `Arc` sur la pile", "`Arc` est immuable"],
+    "bonneReponse": 1,
+    "explication": "Les deux comptent les références partagées. `Arc` (Atomic Reference Counted) synchronise son compteur pour le multithread ; `Rc`, plus rapide, est réservé au mono-thread."
+  },
+  {
+    "id": "rust-e3",
+    "enonce": "Que permet le bloc `unsafe` ?",
+    "choix": ["Désactiver entièrement le compilateur", "Réaliser des opérations non vérifiables par le compilateur", "Ignorer les erreurs à l'exécution", "Accélérer la compilation de la crate"],
+    "bonneReponse": 1,
+    "explication": "`unsafe` ne désactive PAS le borrow checker partout : il autorise 5 actions précises (déréférencer un pointeur brut, appeler du code externe via FFI…). Au développeur d'en garantir la correction."
+  },
+  {
+    "id": "rust-e4",
+    "enonce": "À quoi sert `Box<T>` ?",
+    "choix": ["À chiffrer une valeur", "À allouer une valeur sur le tas", "À créer un tableau", "À paralléliser un calcul"],
+    "bonneReponse": 1,
+    "explication": "`Box<T>` place sa valeur sur le tas via un pointeur propriétaire (utile pour les types récursifs ou les objets-traits `Box<dyn Trait>`). Sa taille sur la pile est celle d'un simple pointeur."
+  },
+  {
+    "id": "rust-e5",
+    "enonce": "Que signifient les traits marqueurs `Send` et `Sync` ?",
+    "choix": ["Des protocoles de communication réseau", "`Send` : transférable ; `Sync` : partageable entre threads", "Des macros d'envoi de signaux", "Des niveaux de journalisation (log)"],
+    "bonneReponse": 1,
+    "explication": "Ces traits automatiques décrivent la sûreté en concurrence : `Send` autorise le transfert entre threads, `Sync` le partage par référence. Un type non-`Send` ne peut pas franchir une frontière de thread — vérifié statiquement."
+  },
+  {
+    "id": "rust-e6",
+    "enonce": "Que permet la « mutabilité intérieure » via `RefCell<T>` ?",
+    "choix": ["Muter à travers une référence partagée", "Rendre tout immuable", "Allouer sur la pile", "Désactiver le borrow checker globalement"],
+    "bonneReponse": 0,
+    "explication": "`RefCell` déplace la vérification des règles d'emprunt de la compilation vers l'EXÉCUTION (`borrow_mut`). Enfreindre la règle provoque alors une panique au runtime — souple mais à manier prudemment."
+  },
+  {
+    "id": "rust-e7",
+    "enonce": "Que fait l'attribut `#[derive(Debug, Clone)]` ?",
+    "choix": ["Il déclare une fonction de test", "Il génère l'implémentation des traits listés", "Il importe des modules externes", "Il optimise la compilation du code"],
+    "bonneReponse": 1,
+    "explication": "`derive` est une macro qui écrit automatiquement pour vous le code des traits courants (Debug, Clone, PartialEq, Default…), évitant un `impl` manuel fastidieux."
+  },
+  {
+    "id": "rust-e8",
+    "enonce": "Comment Rust compile-t-il un code générique (monomorphisation) ?",
+    "choix": ["Par effacement de type comme en Java", "En générant une version par type concret", "Via la réflexion à l'exécution", "En interprétant le code"],
+    "bonneReponse": 1,
+    "explication": "La monomorphisation produit du code spécialisé dédié à chaque instanciation (`Vec<i32>`, `Vec<String>`…). D'où des performances égales au code écrit à la main — au prix d'un binaire plus gros."
+  },
+  {
+    "id": "rust-e9",
+    "enonce": "Que désigne une « zero-cost abstraction » en Rust ?",
+    "choix": ["Une fonctionnalité gratuite à télécharger", "Une abstraction sans surcoût à l'exécution", "Une variable globale", "Un cache mémoire"],
+    "bonneReponse": 1,
+    "explication": "Le principe : « ce que vous n'utilisez pas ne coûte rien, et ce que vous utilisez, vous ne pourriez pas le coder mieux à la main ». Les itérateurs ou génériques, par exemple, se compilent en boucles aussi efficaces qu'un `for` manuel."
+  },
+  {
+    "id": "rust-e10",
+    "enonce": "Que se passe-t-il par défaut quand on affecte une valeur non-`Copy` à une autre variable ?",
+    "choix": ["Elle est copiée en profondeur", "Sa propriété est déplacée", "Une référence est créée", "Une erreur runtime survient"],
+    "bonneReponse": 1,
+    "explication": "Rust « déplace » (move) la propriété : après `let b = a;`, utiliser `a` est une erreur de compilation, car l'ancienne variable devient inutilisable (sauf si le type implémente `Copy`, comme les entiers). Cela garantit un unique propriétaire."
+  }
+]

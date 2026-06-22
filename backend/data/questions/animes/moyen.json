@@ -1,0 +1,72 @@
+[
+  {
+    "id": "animes-m1",
+    "enonce": "Quel studio a animé « Demon Slayer », salué pour sa qualité visuelle ?",
+    "choix": ["ufotable", "MAPPA", "Wit Studio", "Bones"],
+    "bonneReponse": 0,
+    "explication": "ufotable est réputé pour fondre animation 2D et effets numériques. Son travail sur « Demon Slayer » (notamment le film Mugen Train) a battu des records au box-office."
+  },
+  {
+    "id": "animes-m2",
+    "enonce": "Quel studio a animé les premières saisons de « L'Attaque des Titans » ?",
+    "choix": ["Wit Studio", "MAPPA", "ufotable", "Madhouse"],
+    "bonneReponse": 0,
+    "explication": "Wit Studio a produit les saisons 1 à 3. Le studio MAPPA a ensuite repris la saison finale."
+  },
+  {
+    "id": "animes-m3",
+    "enonce": "Que désigne un épisode « filler » ?",
+    "choix": ["Un épisode bonus en couleur", "Un épisode hors de l'intrigue du manga", "Le tout premier épisode", "Un épisode récapitulatif"],
+    "bonneReponse": 1,
+    "explication": "Les fillers évitent que l'animé ne « rattrape » le manga. Souvent considérés comme dispensables, ils n'affectent pas la trame principale."
+  },
+  {
+    "id": "animes-m4",
+    "enonce": "Quel animé culte de Hideaki Anno (1995) met en scène Shinji et des robots géants, les Evas ?",
+    "choix": ["Neon Genesis Evangelion", "Gundam", "RahXephon", "Eureka Seven"],
+    "bonneReponse": 0,
+    "explication": "« Neon Genesis Evangelion » a révolutionné le genre mecha en y injectant psychologie et symbolisme. Une œuvre majeure, à la fin restée célèbre pour son audace."
+  },
+  {
+    "id": "animes-m5",
+    "enonce": "Quel réalisateur est connu pour ses thrillers psychologiques « Perfect Blue » et « Paprika » ?",
+    "choix": ["Satoshi Kon", "Mamoru Hosoda", "Makoto Shinkai", "Hayao Miyazaki"],
+    "bonneReponse": 0,
+    "explication": "Satoshi Kon brouillait magistralement rêve et réalité. « Paprika » (2006) est souvent cité comme une influence d'« Inception »."
+  },
+  {
+    "id": "animes-m6",
+    "enonce": "Quelle plateforme s'est spécialisée dans le streaming d'animés en simulcast ?",
+    "choix": ["Crunchyroll", "Spotify", "Twitch", "Deezer"],
+    "bonneReponse": 0,
+    "explication": "Crunchyroll diffuse les épisodes peu après leur sortie japonaise (« simulcast »). Elle est devenue la référence mondiale de l'animé légal en streaming."
+  },
+  {
+    "id": "animes-m7",
+    "enonce": "Quel animé « isekai » suit Subaru, qui revient à un point antérieur à chacune de ses morts ?",
+    "choix": ["Re:Zero", "Sword Art Online", "No Game No Life", "Konosuba"],
+    "bonneReponse": 0,
+    "explication": "Dans « Re:Zero », le pouvoir « Return by Death » renvoie Subaru dans le passé quand il meurt. Le genre « isekai » transporte un héros dans un autre monde."
+  },
+  {
+    "id": "animes-m8",
+    "enonce": "Que désigne le terme « seiyū » ?",
+    "choix": ["Un réalisateur d'animés", "Un acteur de doublage japonais", "Un scénariste de mangas", "Un compositeur de musique"],
+    "bonneReponse": 1,
+    "explication": "Les seiyū, comédiens qui prêtent leur voix aux personnages, sont au Japon de véritables stars, avec leurs fans et leurs carrières musicales. Leur métier est très codifié et respecté."
+  },
+  {
+    "id": "animes-m9",
+    "enonce": "Quel studio est réputé pour ses « tranches de vie » soignées (« K-On! », « Violet Evergarden ») ?",
+    "choix": ["Kyoto Animation", "Toei Animation", "Gainax", "Sunrise"],
+    "bonneReponse": 0,
+    "explication": "Kyoto Animation (« KyoAni ») est admiré pour la finesse de son animation et de ses personnages. Le studio a été frappé par un incendie criminel tragique en 2019."
+  },
+  {
+    "id": "animes-m10",
+    "enonce": "Quel animé mecha de 1979 a fondé une immense franchise de robots pilotés « réalistes » ?",
+    "choix": ["Mazinger Z", "Mobile Suit Gundam", "Macross", "Voltron"],
+    "bonneReponse": 1,
+    "explication": "« Mobile Suit Gundam » a lancé le sous-genre « real robot » (robots traités comme du matériel militaire) et une franchise toujours florissante des décennies plus tard."
+  }
+]

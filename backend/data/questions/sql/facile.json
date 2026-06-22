@@ -1,44 +1,72 @@
 [
   {
-    "id": "sql-1",
+    "id": "sql-f1",
     "enonce": "Quelle commande récupère des données dans une table ?",
     "choix": ["GET", "SELECT", "FETCH", "READ"],
     "bonneReponse": 1,
     "explication": "`SELECT colonnes FROM table` est la commande de lecture fondamentale du SQL."
   },
   {
-    "id": "sql-2",
+    "id": "sql-f2",
     "enonce": "Quelle clause filtre les LIGNES selon une condition ?",
     "choix": ["FILTER", "HAVING", "WHERE", "IF"],
     "bonneReponse": 2,
     "explication": "`WHERE` filtre les lignes avant tout regroupement. `HAVING` filtre lui APRÈS un `GROUP BY` (sur des résultats agrégés)."
   },
   {
-    "id": "sql-3",
+    "id": "sql-f3",
     "enonce": "Quel mot-clé combine les lignes de deux tables liées ?",
     "choix": ["JOIN", "MERGE", "LINK", "COMBINE"],
     "bonneReponse": 0,
     "explication": "`JOIN` relie deux tables via une condition, souvent une clé étrangère : `... FROM a JOIN b ON a.id = b.a_id`."
   },
   {
-    "id": "sql-4",
+    "id": "sql-f4",
     "enonce": "Quelle commande insère une nouvelle ligne ?",
     "choix": ["ADD", "INSERT", "CREATE", "PUT"],
     "bonneReponse": 1,
     "explication": "`INSERT INTO table (colonnes) VALUES (...)`. `CREATE` sert lui à créer des structures (table, base…), pas des lignes."
   },
   {
-    "id": "sql-5",
+    "id": "sql-f5",
     "enonce": "Quelle fonction d'agrégation compte le nombre de lignes ?",
     "choix": ["SUM", "TOTAL", "COUNT", "NUMBER"],
     "bonneReponse": 2,
     "explication": "`COUNT(*)` renvoie le nombre de lignes. `SUM`, lui, additionne les valeurs d'une colonne numérique."
   },
   {
-    "id": "sql-6",
+    "id": "sql-f6",
     "enonce": "Quelle clause trie les résultats d'une requête ?",
     "choix": ["SORT BY", "ORDER BY", "GROUP BY", "ARRANGE"],
     "bonneReponse": 1,
     "explication": "`ORDER BY colonne ASC|DESC` trie le résultat. À ne pas confondre avec `GROUP BY`, qui regroupe les lignes pour les agréger."
+  },
+  {
+    "id": "sql-f7",
+    "enonce": "Quelle commande modifie des lignes existantes ?",
+    "choix": ["MODIFY", "UPDATE", "CHANGE", "SET"],
+    "bonneReponse": 1,
+    "explication": "`UPDATE table SET colonne = valeur WHERE ...`. Oublier le `WHERE` modifierait TOUTES les lignes — un piège classique !"
+  },
+  {
+    "id": "sql-f8",
+    "enonce": "Quelle commande supprime des LIGNES d'une table ?",
+    "choix": ["REMOVE", "DROP", "DELETE", "ERASE"],
+    "bonneReponse": 2,
+    "explication": "`DELETE FROM table WHERE ...` supprime des lignes. Attention : `DROP TABLE` supprime, lui, la table ENTIÈRE (structure comprise)."
+  },
+  {
+    "id": "sql-f9",
+    "enonce": "Que signifie l'acronyme SQL ?",
+    "choix": ["Simple Query Language", "Structured Query Language", "Sequential Query Logic", "System Query Layer"],
+    "bonneReponse": 1,
+    "explication": "SQL = Structured Query Language, le langage standard pour interroger et manipuler les bases de données relationnelles."
+  },
+  {
+    "id": "sql-f10",
+    "enonce": "Quelle clause (MySQL/PostgreSQL) limite le nombre de lignes renvoyées ?",
+    "choix": ["CAP", "LIMIT", "MAX", "RANGE"],
+    "bonneReponse": 1,
+    "explication": "`SELECT ... LIMIT 10` ne renvoie que 10 lignes. (SQL Server emploie plutôt `TOP`, et Oracle `FETCH FIRST`.)"
   }
 ]

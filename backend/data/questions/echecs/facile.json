@@ -1,44 +1,72 @@
 [
   {
-    "id": "echecs-1",
+    "id": "echecs-f1",
     "enonce": "Combien de cases compte un échiquier ?",
     "choix": ["49", "64", "81", "100"],
     "bonneReponse": 1,
     "explication": "L'échiquier compte 64 cases (8 × 8), alternant cases claires et foncées."
   },
   {
-    "id": "echecs-2",
+    "id": "echecs-f2",
     "enonce": "Quelle est la pièce la plus puissante (la plus mobile) ?",
     "choix": ["la tour", "le fou", "la dame", "le roi"],
     "bonneReponse": 2,
     "explication": "La dame (ou reine) combine les déplacements de la tour et du fou : c'est la pièce la plus puissante."
   },
   {
-    "id": "echecs-3",
+    "id": "echecs-f3",
     "enonce": "Comment nomme-t-on la fin de partie où le roi est en échec et ne peut être sauvé ?",
     "choix": ["le pat", "échec et mat", "le roque", "la fourchette"],
     "bonneReponse": 1,
     "explication": "« Échec et mat » termine la partie. Le « pat » (roi non en échec mais aucun coup légal) est, lui, une nulle."
   },
   {
-    "id": "echecs-4",
+    "id": "echecs-f4",
     "enonce": "Quel coup spécial déplace en une fois le roi et une tour ?",
     "choix": ["la prise en passant", "le roque", "la promotion", "le pat"],
     "bonneReponse": 1,
     "explication": "Le roque met le roi à l'abri en le déplaçant de deux cases vers une tour, qui saute de l'autre côté."
   },
   {
-    "id": "echecs-5",
+    "id": "echecs-f5",
     "enonce": "Comment se déplace le cavalier ?",
     "choix": ["en diagonale", "en ligne droite", "en « L »", "d'une seule case"],
     "bonneReponse": 2,
     "explication": "Le cavalier se déplace en « L » (deux cases puis une perpendiculaire) et peut sauter par-dessus les autres pièces."
   },
   {
-    "id": "echecs-6",
+    "id": "echecs-f6",
     "enonce": "Que devient un pion qui atteint la dernière rangée ?",
     "choix": ["il est capturé", "il recule", "il est promu", "il disparaît"],
     "bonneReponse": 2,
     "explication": "Arrivé sur la dernière rangée, le pion est « promu » : on le remplace par une pièce, le plus souvent une dame."
+  },
+  {
+    "id": "echecs-f7",
+    "enonce": "Combien de pions chaque joueur possède-t-il en début de partie ?",
+    "choix": ["6", "8", "10", "16"],
+    "bonneReponse": 1,
+    "explication": "Chaque camp aligne 8 pions sur sa deuxième rangée, devant les pièces."
+  },
+  {
+    "id": "echecs-f8",
+    "enonce": "Quelle pièce se déplace uniquement en diagonale ?",
+    "choix": ["la tour", "le fou", "le cavalier", "le roi"],
+    "bonneReponse": 1,
+    "explication": "Le fou ne quitte jamais ses diagonales : chaque camp en a un sur cases claires et un sur cases foncées."
+  },
+  {
+    "id": "echecs-f9",
+    "enonce": "Quel camp joue le premier coup de la partie ?",
+    "choix": ["les noirs", "les blancs", "le hasard décide", "le joueur le plus âgé"],
+    "bonneReponse": 1,
+    "explication": "Aux échecs, ce sont toujours les blancs qui ouvrent la partie, ce qui leur donne un léger avantage d'initiative."
+  },
+  {
+    "id": "echecs-f10",
+    "enonce": "De combien de cases le roi peut-il se déplacer en un coup (hors roque) ?",
+    "choix": ["une seule", "deux", "trois", "autant qu'il veut"],
+    "bonneReponse": 0,
+    "explication": "Le roi se déplace d'une seule case dans n'importe quelle direction. Le roque est la seule exception à cette règle."
   }
 ]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "git-m1",
+    "enonce": "Quelle commande retire un fichier de l'index (le « désindexe ») tout en conservant ses modifications ?",
+    "choix": ["git reset --hard <fichier>", "git rm --cached <fichier>", "git restore --staged <fichier>", "git clean --force <fichier>"],
+    "bonneReponse": 2,
+    "explication": "`git restore --staged fichier` sort le fichier de l'index sans toucher à son contenu sur le disque. L'ancienne syntaxe équivalente était `git reset HEAD fichier`."
+  },
+  {
+    "id": "git-m2",
+    "enonce": "Quelle commande fusionne une autre branche dans la branche courante ?",
+    "choix": ["git combine <branche>", "git merge <branche>", "git join <branche>", "git apply <branche>"],
+    "bonneReponse": 1,
+    "explication": "`git merge` intègre les commits de la branche indiquée dans la branche actuelle, en créant si besoin un « commit de fusion » qui a deux parents."
+  },
+  {
+    "id": "git-m3",
+    "enonce": "À quoi sert `git stash` ?",
+    "choix": ["Supprimer définitivement une branche", "Mettre de côté temporairement les modifications en cours", "Créer une sauvegarde sur le dépôt distant", "Annuler le dernier commit effectué"],
+    "bonneReponse": 1,
+    "explication": "`git stash` range vos changements non commités dans une pile pour retrouver un répertoire propre. On les récupère ensuite avec `git stash pop`."
+  },
+  {
+    "id": "git-m4",
+    "enonce": "Quelle commande crée un commit qui ANNULE un commit précédent, sans réécrire l'historique ?",
+    "choix": ["git reset", "git revert", "git checkout", "git rollback"],
+    "bonneReponse": 1,
+    "explication": "`git revert` ajoute un nouveau commit qui inverse les changements. Contrairement à `git reset`, l'historique reste intact : c'est l'option sûre sur une branche partagée."
+  },
+  {
+    "id": "git-m5",
+    "enonce": "Que fait `git fetch`, par opposition à `git pull` ?",
+    "choix": ["Fusionner directement la branche distante", "Envoyer les commits locaux au dépôt", "Télécharger les changements distants sans les fusionner", "Supprimer les références distantes obsolètes"],
+    "bonneReponse": 2,
+    "explication": "`git fetch` met à jour les branches de suivi (`origin/main`…) mais ne touche pas à votre branche locale. C'est `git pull` qui ajoute l'étape de fusion."
+  },
+  {
+    "id": "git-m6",
+    "enonce": "Quelle commande affiche les différences entre le répertoire de travail et l'index ?",
+    "choix": ["git status", "git diff", "git show", "git changes"],
+    "bonneReponse": 1,
+    "explication": "`git diff` montre les modifications non encore indexées. `git diff --staged` affiche au contraire ce qui est déjà dans l'index, prêt à être commité."
+  },
+  {
+    "id": "git-m7",
+    "enonce": "Quelle commande renomme la branche courante ?",
+    "choix": ["git checkout -m <nom>", "git rename <nom>", "git branch -m <nom>", "git branch -r <nom>"],
+    "bonneReponse": 2,
+    "explication": "`git branch -m nouveau-nom` renomme la branche sur laquelle on se trouve. L'option `-m` signifie « move » (déplacer/renommer)."
+  },
+  {
+    "id": "git-m8",
+    "enonce": "Quelle commande supprime une branche locale déjà fusionnée ?",
+    "choix": ["git branch -x <nom>", "git remove <nom>", "git delete <nom>", "git branch -d <nom>"],
+    "bonneReponse": 3,
+    "explication": "`git branch -d` refuse de supprimer une branche dont le travail n'a pas été fusionné, pour éviter les pertes. `-D` (majuscule) force la suppression."
+  },
+  {
+    "id": "git-m9",
+    "enonce": "Que désigne `HEAD` dans Git ?",
+    "choix": ["Le tout premier commit du dépôt", "Un pointeur vers le commit courant", "La dernière version sur le dépôt distant", "Le fichier de configuration principal"],
+    "bonneReponse": 1,
+    "explication": "`HEAD` indique où l'on se trouve dans l'historique, en général le sommet de la branche active. `HEAD~1` désigne son parent, `HEAD~2` le grand-parent, etc."
+  },
+  {
+    "id": "git-m10",
+    "enonce": "Quelle commande modifie le dernier commit (son message ou son contenu) ?",
+    "choix": ["git commit --redo", "git commit --edit", "git commit --amend", "git commit --fix"],
+    "bonneReponse": 2,
+    "explication": "`git commit --amend` remplace le dernier commit par un nouveau. Comme il réécrit l'historique, on l'évite si le commit a déjà été poussé et partagé."
+  }
+]

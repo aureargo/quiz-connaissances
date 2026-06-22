@@ -50,6 +50,27 @@
   margin-right: 4px;
 }
 
+/* Petite pastille rappelant le niveau joué (sa couleur suit la difficulté). */
+.quiz__niveau {
+  margin-left: 8px;
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  vertical-align: middle;
+  border: 1px solid var(--couleur-niveau, var(--border));
+  color: var(--couleur-niveau, var(--text-muted));
+  background: color-mix(in srgb, var(--couleur-niveau, var(--text-muted)) 16%, transparent);
+}
+
+/* Couleur du niveau (réutilisée par la pastille ci-dessus). */
+.niveau--facile { --couleur-niveau: var(--facile); }
+.niveau--moyen  { --couleur-niveau: var(--moyen); }
+.niveau--expert { --couleur-niveau: var(--expert); }
+.niveau--tous   { --couleur-niveau: var(--tous); }
+
 .quiz__compteur {
   margin-left: auto;
   color: var(--text-muted);

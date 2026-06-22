@@ -57,7 +57,7 @@
   gap: 18px;
 }
 
-/* --- Une carte de thème (cliquable) --- */
+/* --- Une carte de thème : un LIEN cliquable vers la sous-page du thème --- */
 .carte-theme {
   display: flex;
   flex-direction: column;
@@ -66,16 +66,16 @@
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  text-decoration: none;
   color: var(--text);
+  text-decoration: none; /* c'est un <a> : on retire le soulignement */
   box-shadow: var(--shadow);
   position: relative;
   overflow: hidden;
-  transition: transform 0.15s ease, border-color 0.15s ease;
-  /* Fondu d'entrée (opacité seule pour ne pas gêner le `transform` du survol). */
+  transition: border-color 0.15s ease, transform 0.15s ease;
+  /* Fondu d'entrée (opacité seule pour ne pas gêner les `transform` internes). */
   animation: fondu 0.45s ease both;
 
-  /* Liseré dégradé qui apparaît au survol, en haut de la carte */
+  /* Liseré dégradé en haut de la carte, révélé quand on la survole */
   &::before {
     content: '';
     position: absolute;
@@ -87,11 +87,16 @@
   }
 
   &:hover {
-    transform: translateY(-4px);
     border-color: rgba(124, 92, 255, 0.5);
+    transform: translateY(-3px);
 
     &::before {
       opacity: 1;
+    }
+
+    /* On révèle un peu plus l'appel à l'action au survol. */
+    .carte-theme__cta {
+      color: var(--primary-2);
     }
   }
 }
@@ -111,13 +116,11 @@
   flex-grow: 1;
 }
 
-.carte-theme__badge {
-  margin-top: 10px;
-  align-self: flex-start;
-  font-size: 0.78rem;
+/* Appel à l'action en bas de carte : indique clairement qu'on peut cliquer. */
+.carte-theme__cta {
+  margin-top: 12px;
+  font-size: 0.85rem;
   font-weight: 600;
-  color: var(--primary-2);
-  background: rgba(192, 96, 255, 0.12);
-  border-radius: 999px;
-  padding: 4px 12px;
+  color: var(--text-muted);
+  transition: color 0.15s ease;
 }

@@ -1,0 +1,46 @@
+<!-- =========================================================================
+     Sous-page de sélection du NIVEAU pour un thème donné.
+     Affichée après un clic sur une tuile de l'accueil ; charge les niveaux du
+     seul thème consulté (voir niveau-selection.ts).
+     ========================================================================= -->
+
+<section class="contenu selection-niveau">
+
+  <!-- Lien de retour vers l'accueil, présent dans tous les états. -->
+  <a class="selection-niveau__retour" routerLink="/">← Tous les thèmes</a>
+
+  <!-- État : chargement en cours -->
+  @if (chargement()) {
+    <p class="selection-niveau__info">Chargement des niveaux…</p>
+  }
+
+  <!-- État : erreur -->
+  @else if (erreur()) {
+    <p class="selection-niveau__info selection-niveau__info--erreur">⚠️ {{ erreur() }}</p>
+  }
+
+  <!-- État : thème chargé → on affiche son en-tête et ses niveaux -->
+  @else if (theme(); as t) {
+    <header class="selection-niveau__entete">
+      <span class="selection-niveau__emoji">{{ t.emoji }}</span>
+      <h1 class="selection-niveau__nom">{{ t.nom }}</h1>
+      <p class="selection-niveau__desc">{{ t.description }}</p>
+    </header>
+
+    <p class="selection-niveau__consigne">Choisis un niveau de difficulté :</p>
+
+    <!-- Une carte cliquable par niveau (facile / moyen / expert / tous). -->
+    <div class="niveaux">
+      @for (niv of t.niveaux; track niv) {
+        <!-- routerLink → /quiz/<id>/<niveau> : c'est ICI qu'on lance la partie
+             (et qu'on lira enfin le fichier de questions correspondant). -->
+        <a
+          class="niveau niveau--{{ niv }}"
+          [routerLink]="['/quiz', t.id, niv]"
+          [attr.aria-label]="'Quiz ' + t.nom + ', niveau ' + niv">
+          <span class="niveau__nom">{{ niv }}</span>
+        </a>
+      }
+    </div>
+  }
+</section>

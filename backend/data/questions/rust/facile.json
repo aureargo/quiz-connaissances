@@ -1,0 +1,72 @@
+[
+  {
+    "id": "rust-f1",
+    "enonce": "Quel mécanisme garantit la sûreté mémoire en Rust sans ramasse-miettes ?",
+    "choix": ["Le système d'ownership", "Le ramasse-miettes", "Le comptage manuel", "Les exceptions"],
+    "bonneReponse": 0,
+    "explication": "Le système d'ownership (propriété) et d'emprunt (borrowing) est vérifié à la COMPILATION. Plus besoin de GC ni de gestion manuelle risquée."
+  },
+  {
+    "id": "rust-f2",
+    "enonce": "Quel mot-clé rend une variable modifiable (mutable) ?",
+    "choix": ["mutable", "var", "mut", "change"],
+    "bonneReponse": 2,
+    "explication": "En Rust, les variables sont immuables par défaut. `let mut x = 5;` autorise explicitement la modification de `x`."
+  },
+  {
+    "id": "rust-f3",
+    "enonce": "Quel outil sert de gestionnaire de paquets et de build en Rust ?",
+    "choix": ["npm", "Cargo", "crates", "rustpm"],
+    "bonneReponse": 1,
+    "explication": "Cargo gère les dépendances, la compilation, les tests… `cargo run`, `cargo build`. Les paquets, eux, s'appellent des « crates »."
+  },
+  {
+    "id": "rust-f4",
+    "enonce": "Quel type représente une valeur potentiellement absente ?",
+    "choix": ["Maybe", "Nullable", "Option", "Optional"],
+    "bonneReponse": 2,
+    "explication": "`Option<T>` vaut soit `Some(valeur)`, soit `None`. Rust n'a pas de `null`, ce qui élimine toute une classe de bugs."
+  },
+  {
+    "id": "rust-f5",
+    "enonce": "Quel type sert à gérer les erreurs récupérables ?",
+    "choix": ["Result", "Either", "Try", "Error"],
+    "bonneReponse": 0,
+    "explication": "`Result<T, E>` vaut `Ok(valeur)` en cas de succès ou `Err(erreur)` en cas d'échec. On le combine souvent avec l'opérateur `?`."
+  },
+  {
+    "id": "rust-f6",
+    "enonce": "Quelle macro affiche du texte suivi d'un retour à la ligne ?",
+    "choix": ["echo", "console.log", "println!", "print()"],
+    "bonneReponse": 2,
+    "explication": "`println!(\"Bonjour\");`. Le `!` indique que c'est une MACRO (et non une fonction classique), évaluée à la compilation."
+  },
+  {
+    "id": "rust-f7",
+    "enonce": "Quel mot-clé déclare une variable en Rust ?",
+    "choix": ["var", "let", "def", "dim"],
+    "bonneReponse": 1,
+    "explication": "`let x = 5;` déclare une variable (immuable par défaut). On ajoute `mut` pour la rendre modifiable : `let mut x = 5;`."
+  },
+  {
+    "id": "rust-f8",
+    "enonce": "Quel mot-clé définit une fonction ?",
+    "choix": ["func", "fn", "def", "function"],
+    "bonneReponse": 1,
+    "explication": "`fn additionner(a: i32, b: i32) -> i32 { a + b }`. Le type de retour suit la flèche `->`, et la dernière expression sans `;` est renvoyée."
+  },
+  {
+    "id": "rust-f9",
+    "enonce": "Comment appelle-t-on un paquet (bibliothèque) en Rust ?",
+    "choix": ["un module", "une crate", "un gem", "un bundle"],
+    "bonneReponse": 1,
+    "explication": "Une « crate » est l'unité de compilation et de distribution. On les publie et récupère sur le registre officiel crates.io."
+  },
+  {
+    "id": "rust-f10",
+    "enonce": "Quel mot-clé définit une structure de données à champs ?",
+    "choix": ["class", "struct", "record", "data"],
+    "bonneReponse": 1,
+    "explication": "`struct Point { x: f64, y: f64 }` regroupe des champs. Les comportements s'ajoutent ensuite dans un bloc `impl`."
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "id": "linux-e1",
+    "enonce": "Que signifient les droits `755` passés à `chmod` ?",
+    "choix": [
+      "Lecture/écriture/exécution pour le propriétaire, lecture/exécution pour les autres",
+      "Tous les droits pour tout le monde sans aucune restriction",
+      "Lecture seule pour le propriétaire, aucun droit pour les autres",
+      "Écriture pour le groupe, exécution pour le propriétaire uniquement"
+    ],
+    "bonneReponse": 0,
+    "explication": "Chaque chiffre est une somme : lecture=4, écriture=2, exécution=1. `7`=4+2+1 pour le propriétaire, `5`=4+1 pour le groupe et les autres. C'est le réglage typique d'un programme ou d'un dossier."
+  },
+  {
+    "id": "linux-e2",
+    "enonce": "Quelle commande est spécialisée dans le traitement de texte par colonnes (champs) ?",
+    "choix": ["sed", "awk", "cut", "tr"],
+    "bonneReponse": 1,
+    "explication": "`awk` traite le texte ligne par ligne en le découpant en champs : `awk '{print $1}'` affiche la première colonne. C'est un mini-langage à part entière, plus puissant qu'un simple filtre."
+  },
+  {
+    "id": "linux-e3",
+    "enonce": "Quelle commande remplace du texte à la volée dans un flux, via des expressions ?",
+    "choix": ["awk", "grep", "sed", "tr"],
+    "bonneReponse": 2,
+    "explication": "`sed` (« stream editor ») applique des transformations : `sed 's/ancien/nouveau/g'` remplace toutes les occurrences. Il travaille sur le flux sans ouvrir d'éditeur interactif."
+  },
+  {
+    "id": "linux-e4",
+    "enonce": "À quoi sert `xargs` dans une chaîne de commandes ?",
+    "choix": [
+      "À transformer l'entrée standard en arguments de la commande suivante",
+      "À exécuter une commande à intervalles réguliers",
+      "À compresser plusieurs fichiers en une archive",
+      "À mesurer le temps d'exécution d'une commande"
+    ],
+    "bonneReponse": 0,
+    "explication": "`xargs` lit des éléments sur l'entrée standard et les passe en arguments : `find . -name '*.tmp' | xargs rm` supprime tous les fichiers trouvés, car `rm` attend des arguments, pas une entrée."
+  },
+  {
+    "id": "linux-e5",
+    "enonce": "Quel symbole, placé en fin de commande, la lance en arrière-plan ?",
+    "choix": [";", "&&", "&", "|"],
+    "bonneReponse": 2,
+    "explication": "Une esperluette `&` finale détache la commande : le shell rend la main aussitôt et la tâche tourne en arrière-plan. À ne pas confondre avec `&&`, qui enchaîne deux commandes."
+  },
+  {
+    "id": "linux-e6",
+    "enonce": "Quelle commande crée un lien symbolique vers un fichier ?",
+    "choix": ["link", "ln -s", "symlink", "ln -h"],
+    "bonneReponse": 1,
+    "explication": "`ln -s cible nom_du_lien` crée un lien symbolique, sorte de raccourci pointant vers un autre chemin. Sans `-s`, `ln` crée un lien physique (« hard link »), de nature différente."
+  },
+  {
+    "id": "linux-e7",
+    "enonce": "Quelle commande regroupe plusieurs fichiers dans une seule archive ?",
+    "choix": ["zip", "tar", "pack", "gzip"],
+    "bonneReponse": 1,
+    "explication": "`tar` assemble une arborescence en un fichier unique : `tar -czf save.tar.gz dossier/` crée et compresse l'archive. `-x` sert à l'extraire. `gzip` seul ne compresse qu'un fichier à la fois."
+  },
+  {
+    "id": "linux-e8",
+    "enonce": "Quelle variable spéciale contient le code de retour de la dernière commande ?",
+    "choix": ["$!", "$#", "$?", "$$"],
+    "bonneReponse": 2,
+    "explication": "`$?` vaut le code de sortie de la commande précédente : `0` signifie succès, toute autre valeur indique une erreur. On l'utilise pour tester si une commande a réussi dans un script."
+  },
+  {
+    "id": "linux-e9",
+    "enonce": "Quel outil planifie l'exécution récurrente de tâches à heure fixe ?",
+    "choix": ["at", "cron", "timer", "sleep"],
+    "bonneReponse": 1,
+    "explication": "`cron` exécute des tâches selon un calendrier décrit dans une « crontab » (éditée via `crontab -e`). Pour une exécution unique différée, on emploie plutôt `at`."
+  },
+  {
+    "id": "linux-e10",
+    "enonce": "Que fait l'opérateur `2>&1` à la fin d'une commande ?",
+    "choix": [
+      "Il redirige la sortie d'erreur vers la même destination que la sortie standard",
+      "Il exécute la commande deux fois de suite",
+      "Il fusionne les deux derniers fichiers ouverts",
+      "Il limite la commande à deux secondes d'exécution"
+    ],
+    "bonneReponse": 0,
+    "explication": "Les flux ont des numéros : `1` pour la sortie standard, `2` pour les erreurs. `2>&1` envoie le flux d'erreur au même endroit que la sortie standard, par exemple pour tout capturer dans un même fichier de log."
+  }
+]

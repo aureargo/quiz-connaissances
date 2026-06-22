@@ -1,7 +1,7 @@
 import { computed, signal } from '@angular/core';
 
 import { Question } from '../models/quiz.models';
-import { melanger } from '../utils/aleatoire';
+import { entierAleatoire, melanger } from '../utils/aleatoire';
 
 /* =========================================================================
    MoteurQuiz — le CŒUR de l'application : la logique d'une partie de quiz.
@@ -86,8 +86,12 @@ export class MoteurQuiz {
   /**
    * Passe à la question suivante en appliquant la RÈGLE DE LA FILE :
    *  - réponse correcte  → la question est retirée (maîtrisée) ;
-   *  - réponse incorrecte → la question est replacée à la FIN de la file,
-   *    pour revenir plus tard.
+   *  - réponse incorrecte → la question est REMISE À UNE PLACE ALÉATOIRE dans
+   *    la file restante, pour revenir plus tard de façon imprévisible.
+   *
+   * Détail important : on évite de la replacer JUSTE après (position 0), pour
+   * ne pas la revoir immédiatement... sauf si c'est la seule question qui
+   * reste — auquel cas elle n'a, de toute façon, nulle part d'autre où aller.
    */
   questionSuivante(): void {
     const courante = this.questionCourante();
@@ -100,9 +104,20 @@ export class MoteurQuiz {
 
     this.file.update((file) => {
       const reste = file.slice(1); // tout sauf la question de tête
-      return estCorrect
-        ? reste // maîtrisée : on l'abandonne
-        : [...reste, courante.question]; // ratée : on la remet à la fin
+      if (estCorrect) {
+        return reste; // maîtrisée : on l'abandonne
+      }
+
+      // Ratée : on choisit une position d'insertion dans `reste`. Les positions
+      // valides vont de 0 (juste après) à reste.length (tout à la fin). On
+      // démarre à 1 pour ne pas la remettre en tête immédiatement ; mais si
+      // `reste` est vide, la seule place possible est 0 (elle reste seule).
+      const positionMin = reste.length === 0 ? 0 : 1;
+      const position = entierAleatoire(positionMin, reste.length);
+
+      const nouvelle = [...reste];
+      nouvelle.splice(position, 0, courante.question);
+      return nouvelle;
     });
 
     this.preparerCourante();

@@ -54,6 +54,35 @@ describe('MoteurQuiz', () => {
     expect(m.termine()).toBe(false);
   });
 
+  it('ne remet pas une question ratée juste après (sauf si elle est seule)', () => {
+    const m = new MoteurQuiz(questionsFactices()); // 3 questions
+    const ratee = m.questionCourante()!.question.id;
+
+    // On rate la 1re question : il reste 2 autres questions devant elle,
+    // donc elle ne doit PAS réapparaître immédiatement.
+    m.repondre((m.questionCourante()!.indexBonneReponse + 1) % 4);
+    m.questionSuivante();
+    expect(m.questionCourante()!.question.id).not.toBe(ratee);
+  });
+
+  it('garde la question seule restante même si elle est ratée', () => {
+    const m = new MoteurQuiz(questionsFactices());
+
+    // On réussit les 2 premières pour ne laisser qu'UNE question dans la file.
+    for (let i = 0; i < 2; i++) {
+      m.repondre(m.questionCourante()!.indexBonneReponse);
+      m.questionSuivante();
+    }
+    expect(m.nbMaitrisees()).toBe(2);
+
+    // On rate cette dernière : faute de mieux, elle reste affichée (position 0).
+    const seule = m.questionCourante()!.question.id;
+    m.repondre((m.questionCourante()!.indexBonneReponse + 1) % 4);
+    m.questionSuivante();
+    expect(m.termine()).toBe(false);
+    expect(m.questionCourante()!.question.id).toBe(seule);
+  });
+
   it('ignore les clics multiples sur une même question', () => {
     const m = new MoteurQuiz(questionsFactices());
     const q = m.questionCourante()!;

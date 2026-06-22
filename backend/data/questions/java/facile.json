@@ -1,0 +1,72 @@
+[
+  {
+    "id": "java-f1",
+    "enonce": "Quel composant exécute le bytecode Java compilé ?",
+    "choix": ["La JVM", "Le CLR", "Le moteur V8", "Le BIOS"],
+    "bonneReponse": 0,
+    "explication": "Le code Java est compilé en bytecode, puis exécuté par la JVM (Java Virtual Machine). C'est ce qui rend Java portable : « écrire une fois, exécuter partout »."
+  },
+  {
+    "id": "java-f2",
+    "enonce": "Quel mot-clé permet à une classe d'hériter d'une autre classe ?",
+    "choix": ["implements", "inherits", "extends", "super"],
+    "bonneReponse": 2,
+    "explication": "`class Chien extends Animal` fait hériter Chien de Animal. `implements` sert lui à réaliser une interface."
+  },
+  {
+    "id": "java-f3",
+    "enonce": "Quel est le type primitif pour un entier signé sur 32 bits ?",
+    "choix": ["long", "int", "short", "Integer"],
+    "bonneReponse": 1,
+    "explication": "`int` occupe 32 bits. `Integer` (majuscule) est sa version objet (wrapper), utile dans les collections."
+  },
+  {
+    "id": "java-f4",
+    "enonce": "Quelle collection interdit les éléments en double ?",
+    "choix": ["List", "Set", "Map", "ArrayList"],
+    "bonneReponse": 1,
+    "explication": "Un `Set` (ensemble) ne contient jamais deux fois la même valeur. Une `List`, elle, autorise les doublons et garde l'ordre d'insertion."
+  },
+  {
+    "id": "java-f5",
+    "enonce": "Quel mot-clé déclare une valeur qui ne peut plus être réaffectée ?",
+    "choix": ["const", "final", "static", "readonly"],
+    "bonneReponse": 1,
+    "explication": "En Java, `final` rend une variable constante (non réassignable). `const` est un mot réservé… mais inutilisé !"
+  },
+  {
+    "id": "java-f6",
+    "enonce": "Quelle méthode est le point d'entrée d'une application Java ?",
+    "choix": ["start()", "run()", "main()", "init()"],
+    "bonneReponse": 2,
+    "explication": "La JVM cherche `public static void main(String[] args)` pour démarrer le programme."
+  },
+  {
+    "id": "java-f7",
+    "enonce": "Quel mot-clé crée une nouvelle instance d'une classe ?",
+    "choix": ["create", "new", "alloc", "instance"],
+    "bonneReponse": 1,
+    "explication": "`new Chien()` appelle le constructeur et réserve l'objet sur le tas. La variable contient alors une référence vers cet objet."
+  },
+  {
+    "id": "java-f8",
+    "enonce": "Quelle instruction affiche une ligne de texte dans la console ?",
+    "choix": ["print(\"x\")", "echo(\"x\")", "System.out.println(\"x\")", "console.log(\"x\")"],
+    "bonneReponse": 2,
+    "explication": "`System.out.println(...)` écrit sur la sortie standard puis passe à la ligne. `print` (sans `ln`) n'ajoute pas le retour à la ligne."
+  },
+  {
+    "id": "java-f9",
+    "enonce": "Quel mot-clé indique qu'une classe réalise une interface ?",
+    "choix": ["extends", "implements", "uses", "has"],
+    "bonneReponse": 1,
+    "explication": "`class Canard implements Volant` engage la classe à fournir les méthodes de l'interface. Une classe peut implémenter plusieurs interfaces."
+  },
+  {
+    "id": "java-f10",
+    "enonce": "Comment écrit-on un commentaire sur une seule ligne ?",
+    "choix": ["# commentaire", "// commentaire", "-- commentaire", "; commentaire"],
+    "bonneReponse": 1,
+    "explication": "`//` commente jusqu'à la fin de la ligne. Pour un bloc sur plusieurs lignes, on utilise `/* ... */`."
+  }
+]

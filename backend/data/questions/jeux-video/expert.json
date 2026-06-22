@@ -1,0 +1,72 @@
+[
+  {
+    "id": "jeux-video-e1",
+    "enonce": "Quel jeu de Taito (1978) a déclenché la grande vague des salles d'arcade ?",
+    "choix": ["Pong", "Space Invaders", "Pac-Man", "Asteroids"],
+    "bonneReponse": 1,
+    "explication": "« Space Invaders » connut un tel succès qu'il aurait causé une pénurie de pièces de 100 yens au Japon. Il a posé les bases du shoot'em up."
+  },
+  {
+    "id": "jeux-video-e2",
+    "enonce": "Quel jeu Atari est resté tristement associé au krach du jeu vidéo de 1983 ?",
+    "choix": ["Pac-Man", "E.T. the Extra-Terrestrial", "Pitfall", "Adventure"],
+    "bonneReponse": 1,
+    "explication": "Bâclé en quelques semaines, « E.T. » sur Atari 2600 symbolise le krach de 1983. Des cartouches invendues furent même enfouies dans un désert du Nouveau-Mexique, exhumées en 2014."
+  },
+  {
+    "id": "jeux-video-e3",
+    "enonce": "Qui est le créateur de Mario, Zelda et Donkey Kong ?",
+    "choix": ["Shigeru Miyamoto", "Hironobu Sakaguchi", "Hideo Kojima", "Satoru Iwata"],
+    "bonneReponse": 0,
+    "explication": "Shigeru Miyamoto, game designer star de Nintendo, est derrière certaines des franchises les plus influentes du média. Souvent comparé à un Walt Disney du jeu vidéo."
+  },
+  {
+    "id": "jeux-video-e4",
+    "enonce": "Quel moteur de jeu d'Epic Games équipe Fortnite et de nombreux AAA ?",
+    "choix": ["Unity", "Unreal Engine", "Godot", "CryEngine"],
+    "bonneReponse": 1,
+    "explication": "L'Unreal Engine est l'un des moteurs les plus utilisés de l'industrie. Sa version 5 a popularisé des technologies comme Nanite (géométrie) et Lumen (éclairage)."
+  },
+  {
+    "id": "jeux-video-e5",
+    "enonce": "Quelle console de Sega (1998) fut la première à intégrer un modem pour le jeu en ligne ?",
+    "choix": ["la Saturn", "la Dreamcast", "la Mega Drive", "la Game Gear"],
+    "bonneReponse": 1,
+    "explication": "La Dreamcast est arrivée avec un modem intégré, en avance sur son temps. Son échec commercial a pourtant signé le retrait de Sega du marché des consoles."
+  },
+  {
+    "id": "jeux-video-e6",
+    "enonce": "Pour quel éditeur Hideo Kojima a-t-il créé la série « Metal Gear Solid » ?",
+    "choix": ["Capcom", "Konami", "Square", "Sega"],
+    "bonneReponse": 1,
+    "explication": "Kojima a développé « Metal Gear » chez Konami, pionnier de l'infiltration. Leur séparation très médiatisée en 2015 l'a conduit à fonder son propre studio (Death Stranding)."
+  },
+  {
+    "id": "jeux-video-e7",
+    "enonce": "Quel jeu de 1985 a relancé l'industrie après le krach et défini le jeu de plateforme ?",
+    "choix": ["Donkey Kong", "Super Mario Bros.", "Sonic the Hedgehog", "Mega Man"],
+    "bonneReponse": 1,
+    "explication": "Vendu avec la NES, « Super Mario Bros. » a redonné confiance au public et aux éditeurs, et fixé les codes du platformer à défilement horizontal."
+  },
+  {
+    "id": "jeux-video-e8",
+    "enonce": "Quelle technique de rendu simule le trajet réaliste de la lumière (reflets, ombres) ?",
+    "choix": ["le ray tracing", "le z-buffering", "le mip-mapping", "l'anti-aliasing"],
+    "bonneReponse": 0,
+    "explication": "Le ray tracing (lancer de rayons) calcule le parcours des rayons lumineux pour des reflets et ombres très réalistes, au prix d'une lourde charge GPU. Longtemps réservé au cinéma, il est arrivé en temps réel sur les cartes récentes."
+  },
+  {
+    "id": "jeux-video-e9",
+    "enonce": "Quel RPG de Squaresoft (1997) avec le héros Cloud a marqué la PlayStation ?",
+    "choix": ["Chrono Trigger", "Final Fantasy VII", "Secret of Mana", "Xenogears"],
+    "bonneReponse": 1,
+    "explication": "« Final Fantasy VII » a démocratisé le RPG japonais en Occident grâce à ses cinématiques 3D et son histoire culte. Il a bénéficié d'un remake très attendu à partir de 2020."
+  },
+  {
+    "id": "jeux-video-e10",
+    "enonce": "Que mesure le « FPS » au sens technique (et non le genre de jeu) ?",
+    "choix": ["le ping réseau", "le nombre d'images par seconde", "la latence d'entrée", "la résolution"],
+    "bonneReponse": 1,
+    "explication": "« Frames Per Second » désigne la fluidité de l'affichage (60 FPS = 60 images/seconde). À ne pas confondre avec « First-Person Shooter », le genre de jeu de tir."
+  }
+]

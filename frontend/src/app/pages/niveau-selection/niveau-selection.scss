@@ -1,0 +1,111 @@
+/* Styles propres à la sous-page de sélection du niveau.
+   Encapsulés : ils ne s'appliquent qu'à CE composant. */
+
+.selection-niveau {
+  padding-top: 32px;
+  padding-bottom: 64px;
+  animation: apparition 0.4s ease both;
+}
+
+/* Lien de retour discret, au-dessus de l'en-tête. */
+.selection-niveau__retour {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: var(--text);
+  }
+}
+
+.selection-niveau__info {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 40px 0;
+  font-size: 1.1rem;
+
+  &--erreur {
+    color: var(--danger);
+  }
+}
+
+/* --- En-tête : emoji + nom + description du thème --- */
+.selection-niveau__entete {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.selection-niveau__emoji {
+  font-size: 3.4rem;
+  display: block;
+}
+
+.selection-niveau__nom {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 8px;
+}
+
+.selection-niveau__desc {
+  margin-top: 8px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.selection-niveau__consigne {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+/* --- Les cartes de niveau (un par difficulté + "tous") --- */
+.niveaux {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.niveau {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 26px 18px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  text-transform: capitalize; /* "facile" → "Facile" sans dupliquer le texte */
+  font-weight: 700;
+  font-size: 1.15rem;
+  transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+  animation: fondu 0.45s ease both;
+
+  /* Pastille colorée en haut, qui rappelle la difficulté. */
+  &::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--couleur-niveau, var(--text-muted));
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: var(--couleur-niveau, var(--primary-2));
+    background: color-mix(in srgb, var(--couleur-niveau, var(--primary-2)) 12%, var(--surface));
+  }
+}
+
+/* Chaque modificateur ne fait que définir LA couleur du niveau ;
+   le reste (pastille, survol) la réutilise via la variable --couleur-niveau. */
+.niveau--facile { --couleur-niveau: var(--facile); }
+.niveau--moyen  { --couleur-niveau: var(--moyen); }
+.niveau--expert { --couleur-niveau: var(--expert); }
+.niveau--tous   { --couleur-niveau: var(--tous); }

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "llm-e1",
+    "enonce": "Dans un Transformer, quel mécanisme pondère l'importance des autres tokens d'une séquence ?",
+    "choix": ["l'auto-attention", "la convolution", "le pooling", "la rétropropagation"],
+    "bonneReponse": 0,
+    "explication": "L'auto-attention (self-attention) permet à chaque token de « regarder » les autres et d'évaluer lesquels comptent pour prédire la suite."
+  },
+  {
+    "id": "llm-e2",
+    "enonce": "Quel est le titre de l'article fondateur du Transformer, publié en 2017 ?",
+    "choix": ["« Attention Is All You Need »", "« Deep Residual Learning »", "« Generative Adversarial Nets »", "« ImageNet Classification »"],
+    "bonneReponse": 0,
+    "explication": "« Attention Is All You Need » (Vaswani et al., 2017) introduit le Transformer, abandonnant récurrence et convolution au profit de la seule attention."
+  },
+  {
+    "id": "llm-e3",
+    "enonce": "Que désigne l'architecture « MoE » utilisée par certains grands modèles ?",
+    "choix": ["Mixture of Experts", "Model of Everything", "Memory on Edge", "Multi-Output Encoder"],
+    "bonneReponse": 0,
+    "explication": "Le « mélange d'experts » (MoE) ne fait travailler qu'une partie des sous-réseaux (les « experts ») par token, ce qui réduit le coût de calcul à taille égale."
+  },
+  {
+    "id": "llm-e4",
+    "enonce": "Quel est l'objectif principal de la « quantization » d'un modèle ?",
+    "choix": ["réduire la précision numérique des poids", "agrandir sa fenêtre de contexte", "lui ajouter de nouvelles modalités", "traduire automatiquement ses sorties"],
+    "bonneReponse": 0,
+    "explication": "La quantization stocke les poids sur moins de bits (par exemple 4 bits au lieu de 16) : le modèle pèse moins lourd et tourne sur du matériel plus modeste."
+  },
+  {
+    "id": "llm-e5",
+    "enonce": "En quoi consiste la « distillation » d'un modèle ?",
+    "choix": ["entraîner un petit modèle à imiter un grand", "filtrer les données toxiques d'un corpus", "chiffrer les poids avant déploiement", "fusionner deux ensembles de données"],
+    "bonneReponse": 0,
+    "explication": "La distillation transfère le savoir d'un grand modèle « enseignant » vers un modèle « élève » plus compact, plus rapide et moins coûteux."
+  },
+  {
+    "id": "llm-e6",
+    "enonce": "À quoi sert le « Model Context Protocol » (MCP) apparu vers 2024-2025 ?",
+    "choix": ["relier les modèles à des outils et données externes", "compresser la taille des modèles", "mesurer leur consommation électrique", "convertir du code d'un langage à un autre"],
+    "bonneReponse": 0,
+    "explication": "Le MCP, standard ouvert lancé par Anthropic, normalise la connexion des LLM à des outils, fichiers et services externes (un peu comme un port universel)."
+  },
+  {
+    "id": "llm-e7",
+    "enonce": "Que désigne « LoRA », technique répandue d'adaptation efficace des modèles ?",
+    "choix": ["Low-Rank Adaptation", "Logical Recurrent Array", "Local Response Augmentation", "Linear Output Regularization"],
+    "bonneReponse": 0,
+    "explication": "LoRA n'entraîne que de petites matrices « de faible rang » ajoutées au modèle, ce qui permet de l'adapter à peu de frais sans toucher à tous ses poids."
+  },
+  {
+    "id": "llm-e8",
+    "enonce": "Que décrivent les « lois d'échelle » (scaling laws) des LLM ?",
+    "choix": ["le lien entre taille, données et performance", "la méthode de chiffrement des poids", "le routage des requêtes réseau", "la conception de l'interface utilisateur"],
+    "bonneReponse": 0,
+    "explication": "Les lois d'échelle montrent comment la performance s'améliore, de façon assez prévisible, quand on augmente conjointement les paramètres, les données et le calcul."
+  },
+  {
+    "id": "llm-e9",
+    "enonce": "Quel est le but du « décodage spéculatif » (speculative decoding) ?",
+    "choix": ["accélérer la génération via un modèle brouillon", "prédire l'identité de l'utilisateur connecté", "anticiper les cours de la bourse", "produire des images haute résolution"],
+    "bonneReponse": 0,
+    "explication": "Un petit modèle propose rapidement plusieurs tokens « brouillons » que le grand modèle vérifie d'un coup : on génère ainsi plus vite, sans changer le résultat."
+  },
+  {
+    "id": "llm-e10",
+    "enonce": "En 2026, par quel moyen les modèles les plus avancés gagnent-ils en fiabilité sur les tâches complexes ?",
+    "choix": ["en raisonnant plus longuement avant de répondre", "en augmentant la taille de leur police", "en se déconnectant régulièrement", "en réduisant leur fenêtre de contexte"],
+    "bonneReponse": 0,
+    "explication": "Les modèles dits « à raisonnement » consacrent davantage de calcul à la réflexion avant de répondre (test-time compute), ce qui améliore nettement maths et logique. C'est une tendance majeure de l'état des connaissances en 2026."
+  }
+]

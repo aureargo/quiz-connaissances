@@ -1,0 +1,72 @@
+[
+  {
+    "id": "linux-f1",
+    "enonce": "Quelle commande affiche la liste des fichiers du dossier courant ?",
+    "choix": ["dir", "ls", "list", "show"],
+    "bonneReponse": 1,
+    "explication": "`ls` (de l'anglais « list ») énumère le contenu d'un dossier. Avec `ls -l` on obtient le détail (droits, taille, date) et `ls -a` montre aussi les fichiers cachés."
+  },
+  {
+    "id": "linux-f2",
+    "enonce": "Quelle commande change le répertoire de travail courant ?",
+    "choix": ["cd", "go", "mv", "chdir"],
+    "bonneReponse": 0,
+    "explication": "`cd` (« change directory ») permet de se déplacer dans l'arborescence : `cd /etc` y va, `cd ..` remonte d'un niveau et `cd` seul ramène au dossier personnel."
+  },
+  {
+    "id": "linux-f3",
+    "enonce": "Quelle commande affiche le chemin absolu du répertoire courant ?",
+    "choix": ["where", "path", "pwd", "here"],
+    "bonneReponse": 2,
+    "explication": "`pwd` (« print working directory ») écrit le chemin complet du dossier où l'on se trouve, par exemple `/home/alice/projets`."
+  },
+  {
+    "id": "linux-f4",
+    "enonce": "Quelle commande crée un nouveau dossier ?",
+    "choix": ["newdir", "mkdir", "makedir", "createdir"],
+    "bonneReponse": 1,
+    "explication": "`mkdir` (« make directory ») crée un répertoire : `mkdir photos`. L'option `-p` crée au besoin toute une arborescence (`mkdir -p a/b/c`)."
+  },
+  {
+    "id": "linux-f5",
+    "enonce": "Quelle commande supprime un fichier ?",
+    "choix": ["del", "remove", "rm", "erase"],
+    "bonneReponse": 2,
+    "explication": "`rm` (« remove ») efface un fichier sans corbeille : la suppression est définitive. Pour un dossier et son contenu, on utilise `rm -r`."
+  },
+  {
+    "id": "linux-f6",
+    "enonce": "Quelle commande copie un fichier vers un autre emplacement ?",
+    "choix": ["cp", "copy", "dup", "clone"],
+    "bonneReponse": 0,
+    "explication": "`cp` (« copy ») duplique un fichier : `cp source.txt copie.txt`. Pour copier un dossier entier, il faut l'option récursive `cp -r`."
+  },
+  {
+    "id": "linux-f7",
+    "enonce": "Quelle commande déplace ou renomme un fichier ?",
+    "choix": ["move", "ren", "mv", "shift"],
+    "bonneReponse": 2,
+    "explication": "`mv` (« move ») sert à la fois à déplacer (`mv f.txt /tmp/`) et à renommer (`mv ancien.txt nouveau.txt`), car renommer revient à déplacer dans le même dossier."
+  },
+  {
+    "id": "linux-f8",
+    "enonce": "Quelle commande affiche le contenu texte d'un fichier dans le terminal ?",
+    "choix": ["read", "open", "type", "cat"],
+    "bonneReponse": 3,
+    "explication": "`cat` (« concatenate ») affiche le contenu d'un fichier d'un seul tenant. Pour un fichier long, `less` permet de le faire défiler page par page."
+  },
+  {
+    "id": "linux-f9",
+    "enonce": "Quelle commande affiche le manuel d'aide d'une autre commande ?",
+    "choix": ["help", "man", "info", "doc"],
+    "bonneReponse": 1,
+    "explication": "`man` (« manual ») ouvre la documentation d'une commande : `man ls` détaille toutes ses options. On quitte l'affichage avec la touche `q`."
+  },
+  {
+    "id": "linux-f10",
+    "enonce": "Quelle commande crée un fichier vide (ou met à jour sa date) ?",
+    "choix": ["touch", "make", "new", "create"],
+    "bonneReponse": 0,
+    "explication": "`touch fichier.txt` crée le fichier s'il n'existe pas, sinon il met à jour son horodatage. C'est la façon la plus rapide de créer un fichier vide."
+  }
+]

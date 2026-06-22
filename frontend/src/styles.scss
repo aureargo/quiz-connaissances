@@ -28,6 +28,12 @@
   --danger: #ff5d6c;
   --danger-bg: rgba(255, 93, 108, 0.14);
 
+  /* Couleurs des niveaux de difficulté (vert → ambre → rouge, + violet pour "tous") */
+  --facile: #2ecc8f;
+  --moyen: #f4b740;
+  --expert: #ff5d6c;
+  --tous: #c060ff;
+
   /* Bordures, rayons, ombres */
   --border: rgba(255, 255, 255, 0.08);
   --radius: 16px;

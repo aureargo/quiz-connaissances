@@ -1,0 +1,72 @@
+[
+  {
+    "id": "rust-m1",
+    "enonce": "Que signifie « emprunter » (borrowing) une valeur avec `&` ?",
+    "choix": ["La copier", "Y accéder sans la posséder", "La détruire", "La déplacer définitivement"],
+    "bonneReponse": 1,
+    "explication": "`&valeur` crée une référence : on lit (ou modifie avec `&mut`) sans prendre la propriété. Quand la référence disparaît, le propriétaire garde sa valeur."
+  },
+  {
+    "id": "rust-m2",
+    "enonce": "Combien de références MUTABLES (`&mut`) actives une valeur peut-elle avoir simultanément ?",
+    "choix": ["Autant qu'on veut", "Une seule", "Deux maximum", "Aucune"],
+    "bonneReponse": 1,
+    "explication": "La règle d'emprunt : SOIT plusieurs références partagées `&` (lecture), SOIT une unique `&mut` (écriture). C'est ce qui élimine les courses de données à la compilation."
+  },
+  {
+    "id": "rust-m3",
+    "enonce": "Que fait l'opérateur `?` placé après une expression de type `Result` ?",
+    "choix": ["Il ignore silencieusement l'erreur", "Il propage l'erreur ou extrait la valeur", "Il déclenche toujours une panique", "Il convertit le Result en Option"],
+    "bonneReponse": 1,
+    "explication": "`let f = File::open(p)?;` : si `Err`, la fonction retourne immédiatement cette erreur ; sinon `f` reçoit la valeur du `Ok`. Cela évite des `match` répétitifs."
+  },
+  {
+    "id": "rust-m4",
+    "enonce": "Qu'est-ce que l'expression `match` en Rust ?",
+    "choix": ["Une boucle", "Un filtrage par motif exhaustif", "Un opérateur ternaire", "Une comparaison de chaînes"],
+    "bonneReponse": 1,
+    "explication": "`match` compare une valeur à des motifs. Le compilateur EXIGE de couvrir tous les cas (ou un `_`), ce qui évite d'oublier une variante d'enum."
+  },
+  {
+    "id": "rust-m5",
+    "enonce": "Que sont les `trait` en Rust ?",
+    "choix": ["Des variables globales partagées", "Des comportements partageables entre types", "Des macros de génération de code", "Des modules de bibliothèque"],
+    "bonneReponse": 1,
+    "explication": "Un `trait` définit des méthodes qu'un type peut implémenter (`impl Trait for Type`) ; c'est l'équivalent des interfaces d'autres langages. Ils permettent le polymorphisme et les contraintes génériques (`T: Display`)."
+  },
+  {
+    "id": "rust-m6",
+    "enonce": "Qu'est-ce qu'une `enum` Rust peut-elle faire qu'une enum C ne peut pas ?",
+    "choix": ["Rien de plus qu'une enum C", "Chaque variante porte ses propres données", "Avoir des valeurs négatives", "Contenir des fonctions membres"],
+    "bonneReponse": 1,
+    "explication": "Les enums Rust sont des « types somme » : `enum Forme { Cercle(f64), Rectangle(f64, f64) }`. Chaque variante transporte des données différentes — d'où la puissance du `match`."
+  },
+  {
+    "id": "rust-m7",
+    "enonce": "Quelle différence entre `String` et `&str` ?",
+    "choix": ["Aucune différence réelle", "`String` est possédée, `&str` est empruntée", "`&str` est toujours plus longue", "`String` est stockée sur la pile"],
+    "bonneReponse": 1,
+    "explication": "`String` possède ses données sur le tas (redimensionnable). `&str` est une « tranche » de chaîne empruntée et immuable (souvent un littéral ou une vue sur une String)."
+  },
+  {
+    "id": "rust-m8",
+    "enonce": "Que vérifie le « borrow checker » du compilateur ?",
+    "choix": ["La vitesse du code", "Le respect des règles d'emprunt", "Le formatage", "La couverture des tests"],
+    "bonneReponse": 1,
+    "explication": "Le borrow checker prouve à la compilation qu'aucune référence ne pend (dangling) et que les emprunts mutables/partagés et les durées de vie sont respectés. C'est le gardien de la sûreté mémoire."
+  },
+  {
+    "id": "rust-m9",
+    "enonce": "Que fait `clone()` ?",
+    "choix": ["Déplace la valeur d'origine", "Crée une copie profonde explicite", "Supprime la valeur d'origine", "Crée une référence partagée"],
+    "bonneReponse": 1,
+    "explication": "`clone()` duplique explicitement les données (potentiellement coûteux). Rust ne copie pas en profondeur implicitement : on le demande, ce qui rend les coûts visibles."
+  },
+  {
+    "id": "rust-m10",
+    "enonce": "Quelle macro stoppe le programme sur un état considéré comme impossible ?",
+    "choix": ["abort!", "panic!", "exit!", "fail!"],
+    "bonneReponse": 1,
+    "explication": "`panic!(\"message\")` interrompt le thread (déroulement de la pile par défaut). On la réserve aux bugs irrécupérables ; pour les erreurs attendues, on utilise `Result`."
+  }
+]

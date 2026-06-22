@@ -1,0 +1,72 @@
+[
+  {
+    "id": "git-e1",
+    "enonce": "Quelle est la différence fondamentale entre `git merge` et `git rebase` ?",
+    "choix": ["Merge réécrit l'historique, pas rebase", "Rebase réécrit l'historique en rejouant les commits sur une nouvelle base", "Ce sont deux alias d'une même commande", "Rebase ne fonctionne que sur la branche principale"],
+    "bonneReponse": 1,
+    "explication": "`merge` préserve l'historique tel quel et crée un commit de fusion. `rebase` rejoue vos commits par-dessus une autre base, produisant un historique linéaire mais réécrit (nouveaux identifiants)."
+  },
+  {
+    "id": "git-e2",
+    "enonce": "À quoi sert `git rebase -i` (interactif) ?",
+    "choix": ["Résoudre automatiquement tous les conflits", "Réordonner, fusionner ou éditer une série de commits", "Cloner un dépôt en mode pas-à-pas", "Configurer interactivement le dépôt distant"],
+    "bonneReponse": 1,
+    "explication": "Le rebase interactif ouvre un éditeur listant les commits, où l'on peut les regrouper (`squash`), reformuler (`reword`), supprimer (`drop`) ou réordonner avant de les rejouer."
+  },
+  {
+    "id": "git-e3",
+    "enonce": "Que fait `git cherry-pick <commit>` ?",
+    "choix": ["Appliquer un commit précis sur la branche courante", "Supprimer un commit du milieu de l'historique", "Fusionner deux branches en une seule", "Annuler tous les commits non encore poussés"],
+    "bonneReponse": 0,
+    "explication": "`git cherry-pick` recrée les changements d'un commit donné en haut de la branche actuelle. Pratique pour reprendre un correctif isolé sans fusionner toute une branche."
+  },
+  {
+    "id": "git-e4",
+    "enonce": "Que fait `git reset --hard HEAD~1` ?",
+    "choix": ["Annule le dernier commit en gardant les modifications", "Crée un commit inversant le dernier commit", "Supprime le dernier commit et les modifications associées", "Désindexe seulement les fichiers du dernier commit"],
+    "bonneReponse": 2,
+    "explication": "`--hard` réinitialise l'index ET le répertoire de travail : le commit et son contenu sont perdus. `--soft` garderait tout indexé, `--mixed` (défaut) garderait les fichiers modifiés."
+  },
+  {
+    "id": "git-e5",
+    "enonce": "À quoi sert `git bisect` ?",
+    "choix": ["Trouver par dichotomie le commit ayant introduit un bug", "Découper un gros commit en plusieurs petits", "Comparer deux branches ligne à ligne", "Diviser un dépôt en plusieurs sous-modules"],
+    "bonneReponse": 0,
+    "explication": "On marque un commit « bon » et un « mauvais », et `git bisect` propose à chaque étape un commit du milieu à tester. En quelques essais (log₂ n), il isole le commit fautif."
+  },
+  {
+    "id": "git-e6",
+    "enonce": "Que journalise `git reflog` ?",
+    "choix": ["L'historique des branches distantes", "La liste des fichiers actuellement ignorés", "Tous les déplacements de HEAD, même ceux « perdus »", "Le reformatage des messages de commit"],
+    "bonneReponse": 2,
+    "explication": "Le reflog garde une trace locale de chaque position de HEAD. Il permet de retrouver un commit « disparu » après un `reset --hard` ou un rebase raté, tant qu'il n'a pas été nettoyé."
+  },
+  {
+    "id": "git-e7",
+    "enonce": "Qu'est-ce qu'une fusion en « fast-forward » ?",
+    "choix": ["Fusionner en ignorant les conflits éventuels", "Avancer le pointeur de branche sans créer de commit de fusion", "Rejouer les commits comme le ferait un rebase", "Pousser des commits sans vérification distante"],
+    "bonneReponse": 1,
+    "explication": "Quand la branche courante n'a pas divergé, Git déplace simplement son pointeur jusqu'au sommet de l'autre branche, sans commit de fusion. `git merge --no-ff` force au contraire un commit de fusion."
+  },
+  {
+    "id": "git-e8",
+    "enonce": "À quoi sert l'option `--onto` de `git rebase` ?",
+    "choix": ["Annuler proprement un rebase en cours", "Fusionner deux branches sans créer de commit", "Déplacer une série de commits sur une nouvelle base", "Rebaser uniquement le tout dernier commit"],
+    "bonneReponse": 2,
+    "explication": "`git rebase --onto cible base branche` détache une plage précise de commits et les replante ailleurs. Utile pour transplanter une fonctionnalité construite sur la mauvaise branche de départ."
+  },
+  {
+    "id": "git-e9",
+    "enonce": "Que représente un commit dans le modèle de données interne de Git ?",
+    "choix": ["Une liste de différences avec le commit précédent", "Un objet pointant vers un arbre (instantané) et ses parents", "Un fichier de patch au format unifié", "Un lien symbolique vers le sommet d'une branche"],
+    "bonneReponse": 1,
+    "explication": "Git stocke des instantanés complets : un commit référence un objet `tree` (l'arborescence des fichiers) et un ou plusieurs commits parents. Les diffs ne sont pas stockés, mais calculés à la demande."
+  },
+  {
+    "id": "git-e10",
+    "enonce": "Quel intérêt a `git push --force-with-lease` par rapport à `--force` ?",
+    "choix": ["Forcer le push même en supprimant la branche distante", "Forcer le push seulement si la branche distante n'a pas changé entre-temps", "Pousser toutes les branches locales d'un coup", "Pousser en contournant l'authentification"],
+    "bonneReponse": 1,
+    "explication": "`--force-with-lease` refuse d'écraser le dépôt distant si quelqu'un y a poussé depuis votre dernier `fetch`. C'est un garde-fou contre l'écrasement involontaire du travail des autres, absent de `--force` brut."
+  }
+]

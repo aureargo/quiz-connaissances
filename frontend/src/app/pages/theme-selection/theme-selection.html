@@ -33,12 +33,17 @@
 
         <div class="grille-themes">
           @for (theme of groupe.themes; track theme.id) {
-            <!-- routerLink navigue vers /quiz/<id> sans recharger la page -->
-            <a class="carte-theme" [routerLink]="['/quiz', theme.id]">
+            <!-- Toute la carte est un LIEN vers la sous-page du thème
+                 (/themes/<id>). C'est là qu'on choisira le niveau et qu'on
+                 chargera ses questionnaires — pas dès l'accueil. -->
+            <a
+              class="carte-theme"
+              [routerLink]="['/themes', theme.id]"
+              [attr.aria-label]="'Ouvrir le thème ' + theme.nom">
               <span class="carte-theme__emoji">{{ theme.emoji }}</span>
               <span class="carte-theme__nom">{{ theme.nom }}</span>
               <span class="carte-theme__desc">{{ theme.description }}</span>
-              <span class="carte-theme__badge">{{ theme.nbQuestions }} questions</span>
+              <span class="carte-theme__cta">Choisir un niveau →</span>
             </a>
           }
         </div>

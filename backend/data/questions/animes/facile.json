@@ -1,0 +1,72 @@
+[
+  {
+    "id": "animes-f1",
+    "enonce": "Le terme « animé » désigne spécifiquement l'animation produite dans quel pays ?",
+    "choix": ["la Corée du Sud", "la Chine", "le Japon", "les États-Unis"],
+    "bonneReponse": 2,
+    "explication": "« Anime » (アニメ), abréviation japonaise du mot « animation », désigne l'animation produite au Japon. Clin d'œil historique : Osamu Tezuka, pionnier de l'animé, s'inspirait beaucoup des dessins animés de Walt Disney."
+  },
+  {
+    "id": "animes-f2",
+    "enonce": "Quel studio est célèbre pour « Mon voisin Totoro » et « Le Voyage de Chihiro » ?",
+    "choix": ["Toei Animation", "le studio Ghibli", "Madhouse", "Kyoto Animation"],
+    "bonneReponse": 1,
+    "explication": "Le studio Ghibli, cofondé par Hayao Miyazaki, est célèbre pour Totoro, Chihiro, Princesse Mononoké…"
+  },
+  {
+    "id": "animes-f3",
+    "enonce": "Qui a réalisé « Le Voyage de Chihiro » ?",
+    "choix": ["Makoto Shinkai", "Hayao Miyazaki", "Satoshi Kon", "Mamoru Hosoda"],
+    "bonneReponse": 1,
+    "explication": "« Le Voyage de Chihiro » (2001), réalisé par Hayao Miyazaki, a remporté l'Oscar du meilleur film d'animation."
+  },
+  {
+    "id": "animes-f4",
+    "enonce": "Quel animé suit un carnet qui tue ceux dont on y écrit le nom ?",
+    "choix": ["Code Geass", "Steins;Gate", "Death Note", "Monster"],
+    "bonneReponse": 2,
+    "explication": "Dans « Death Note », Light Yagami trouve un carnet qui tue quiconque dont il écrit le nom en pensant à son visage."
+  },
+  {
+    "id": "animes-f5",
+    "enonce": "Comment appelle-t-on un fan passionné d'animés et de mangas ?",
+    "choix": ["un senpai", "un otaku", "un kawaii", "un mangaka"],
+    "bonneReponse": 1,
+    "explication": "Un « otaku » est un passionné, souvent d'animés et de mangas. Au Japon, le terme reste plus péjoratif qu'en Occident."
+  },
+  {
+    "id": "animes-f6",
+    "enonce": "Quel film de Makoto Shinkai (2016) met en scène deux ados qui échangent leurs corps ?",
+    "choix": ["A Silent Voice", "Weathering with You", "Your Name", "5 centimètres par seconde"],
+    "bonneReponse": 2,
+    "explication": "« Your Name » (Kimi no Na wa, 2016) de Makoto Shinkai raconte deux adolescents qui échangent mystérieusement leurs corps."
+  },
+  {
+    "id": "animes-f7",
+    "enonce": "Quel studio produit la longue série animée « One Piece » ?",
+    "choix": ["le studio Ghibli", "Toei Animation", "MAPPA", "Bones"],
+    "bonneReponse": 1,
+    "explication": "Toei Animation, l'un des plus anciens studios japonais, anime « One Piece » depuis 1999, ainsi que « Dragon Ball » et « Sailor Moon »."
+  },
+  {
+    "id": "animes-f8",
+    "enonce": "Comment nomme-t-on le générique musical du DÉBUT d'un épisode d'animé ?",
+    "choix": ["l'ending", "l'opening", "l'OST", "le filler"],
+    "bonneReponse": 1,
+    "explication": "L'« opening » (générique d'ouverture) lance l'épisode ; l'« ending » le clôt. Beaucoup deviennent des tubes à part entière."
+  },
+  {
+    "id": "animes-f9",
+    "enonce": "Dans l'animé « Pokémon », quelle créature jaune accompagne Sacha ?",
+    "choix": ["Bulbizarre", "Pikachu", "Salamèche", "Évoli"],
+    "bonneReponse": 1,
+    "explication": "Pikachu, Pokémon de type Électrik, est le compagnon emblématique de Sacha et la mascotte de toute la franchise."
+  },
+  {
+    "id": "animes-f10",
+    "enonce": "Quel animé met en scène des ninjas du village caché de Konoha ?",
+    "choix": ["Bleach", "Naruto", "Demon Slayer", "Jujutsu Kaisen"],
+    "bonneReponse": 1,
+    "explication": "« Naruto » se déroule à Konoha, le « village caché de la feuille ». La série a fait connaître la culture ninja à un public mondial."
+  }
+]

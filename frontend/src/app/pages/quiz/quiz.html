@@ -23,6 +23,7 @@
         @if (themeInfo(); as t) {
           <span class="quiz__emoji">{{ t.emoji }}</span> {{ t.nom }}
         }
+        <span class="quiz__niveau niveau--{{ niveau() }}">{{ niveau() }}</span>
       </div>
       <div class="quiz__compteur">{{ m.nbMaitrisees() }} / {{ m.nombreTotal() }}</div>
     </header>
