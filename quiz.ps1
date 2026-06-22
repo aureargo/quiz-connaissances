@@ -186,18 +186,27 @@ $horloge = [System.Diagnostics.Stopwatch]::StartNew()
 $pret    = $false
 
 # Teste si quelque chose ecoute sur localhost:$port (connexion TCP rapide).
+# IMPORTANT : le serveur de dev Angular (Vite) ecoute sur « localhost », ce qui
+# sous Windows se resout souvent en IPv6 (::1) et PAS en IPv4 (127.0.0.1). On
+# essaie donc les DEUX adresses, sinon on ne verrait jamais le port s'ouvrir et
+# on attendrait le timeout complet avant d'ouvrir le navigateur.
 function Port-Pret {
     param([int]$Port)
-    $client = New-Object System.Net.Sockets.TcpClient
-    try {
-        $async = $client.BeginConnect('127.0.0.1', $Port, $null, $null)
-        if ($async.AsyncWaitHandle.WaitOne(500) -and $client.Connected) { return $true }
-        return $false
-    } catch {
-        return $false
-    } finally {
-        $client.Close()
+    foreach ($adresse in @('::1', '127.0.0.1')) {
+        $ip = [System.Net.IPAddress]::Parse($adresse)
+        # On cree la socket dans la bonne famille (IPv6 ou IPv4) : une socket
+        # IPv4 refuse de se connecter a une adresse IPv6 (et inversement).
+        $client = New-Object System.Net.Sockets.TcpClient($ip.AddressFamily)
+        try {
+            $async = $client.BeginConnect($ip, $Port, $null, $null)
+            if ($async.AsyncWaitHandle.WaitOne(500) -and $client.Connected) { return $true }
+        } catch {
+            # adresse non joignable : on tente la suivante
+        } finally {
+            $client.Close()
+        }
     }
+    return $false
 }
 
 Write-Host ""

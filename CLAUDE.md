@@ -107,6 +107,25 @@ frontend Angular (`http://localhost:4200`).
 
 ## ▶️ Commandes utiles
 
+### Lanceurs « tout-en-un » (pour démarrer l'app sans rien connaître)
+
+Des scripts à la racine démarrent **les deux serveurs** d'un coup, vérifient que
+Go et Node.js sont installés, puis ouvrent le navigateur automatiquement dès que
+le frontend répond. Un lanceur par famille d'OS :
+
+| OS            | Lanceur          | Comment                                                |
+|---------------|------------------|--------------------------------------------------------|
+| Windows       | `quiz.bat`       | double-clic (il appelle `quiz.ps1`)                    |
+| Linux / macOS | `quiz.sh`        | `chmod +x quiz.sh` (1re fois) puis `./quiz.sh`         |
+
+> Pourquoi plusieurs fichiers ? `.bat`/`.ps1` ne tournent que sous Windows (les
+> popups dépendent de `System.Windows.Forms`) ; Bash n'est pas natif sous Windows.
+> Aucun format de script n'est universel, d'où **un lanceur par OS**. Les deux
+> partagent la même logique (vérif. des outils → lancement → attente du port 4200
+> en IPv4 **et** IPv6 → ouverture du navigateur).
+
+### Commandes manuelles (par serveur)
+
 ```bash
 # Backend
 cd backend && go run .                  # lancer le serveur de dev
