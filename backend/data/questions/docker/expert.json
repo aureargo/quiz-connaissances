@@ -1,0 +1,72 @@
+[
+  {
+    "id": "docker-e1",
+    "enonce": "Quel est le principal avantage d'un build « multi-stage » (multi-étapes) ?",
+    "choix": ["Construire plusieurs images en parallèle", "Obtenir une image finale légère en n'y gardant que l'artefact, pas les outils de build", "Autoriser plusieurs FROM pour augmenter la mémoire", "Compiler pour plusieurs architectures à la fois"],
+    "bonneReponse": 1,
+    "explication": "Un build multi-stage compile dans une première étape (avec le SDK, les dépendances…) puis copie seulement le binaire produit dans une image finale minimale, sans traîner les outils de compilation."
+  },
+  {
+    "id": "docker-e2",
+    "enonce": "Quelle est la différence clé entre les formes « exec » et « shell » de CMD ?",
+    "choix": ["La forme exec passe par /bin/sh -c, la forme shell non", "La forme exec (tableau JSON) lance le processus en PID 1, la forme shell l'enveloppe dans /bin/sh", "Il n'y en a aucune, c'est purement stylistique", "La forme shell démarre toujours plus vite"],
+    "bonneReponse": 1,
+    "explication": "`CMD [\"app\"]` (exec) lance le binaire en PID 1, qui reçoit donc les signaux comme SIGTERM. `CMD app` (shell) l'enveloppe dans `/bin/sh -c` : le shell devient PID 1, ce qui peut empêcher un arrêt propre."
+  },
+  {
+    "id": "docker-e3",
+    "enonce": "Sur quel mécanisme du noyau Linux repose la limitation des ressources (CPU, mémoire) d'un conteneur ?",
+    "choix": ["Les cgroups", "Les namespaces", "Le chroot", "L'hyperviseur"],
+    "bonneReponse": 0,
+    "explication": "Les `cgroups` (control groups) limitent et comptabilisent les ressources. Les `namespaces`, eux, isolent la vue (processus, réseau, montages). Les deux ensemble fondent les conteneurs Linux."
+  },
+  {
+    "id": "docker-e4",
+    "enonce": "Quel mécanisme du noyau isole la vue qu'a un conteneur des processus, du réseau et des montages ?",
+    "choix": ["Les cgroups", "Les namespaces", "Le système SELinux", "Les volumes nommés"],
+    "bonneReponse": 1,
+    "explication": "Les `namespaces` cloisonnent ce que « voit » le conteneur (PID, réseau, points de montage…), lui donnant l'illusion d'un système isolé. Les `cgroups` gèrent plutôt la quantité de ressources allouée."
+  },
+  {
+    "id": "docker-e5",
+    "enonce": "Que fait l'option `--no-cache` lors d'un `docker build` ?",
+    "choix": ["Elle désactive le cache d'images du registre distant", "Elle reconstruit toutes les couches sans réutiliser le cache de build", "Elle empêche la mise en cache des couches réseau", "Elle vide le cache disque après le build"],
+    "bonneReponse": 1,
+    "explication": "`--no-cache` force Docker à ré-exécuter chaque instruction du Dockerfile au lieu de réutiliser les couches en cache. Utile quand une étape récupère des données qui ont changé (ex. `apt-get update`)."
+  },
+  {
+    "id": "docker-e6",
+    "enonce": "Pourquoi copier `package.json` AVANT le reste du code dans un Dockerfile Node ?",
+    "choix": ["Pour réduire la taille de l'image finale", "Pour profiter du cache : tant que les dépendances ne changent pas, l'install n'est pas refaite", "Parce que l'ordre des COPY est imposé par Docker", "Pour chiffrer les dépendances séparément du code"],
+    "bonneReponse": 1,
+    "explication": "Le cache d'une couche s'invalide dès qu'un fichier copié change. En copiant d'abord `package.json` puis en lançant `npm install`, cette couche reste en cache tant que les dépendances sont stables, même quand le code applicatif évolue."
+  },
+  {
+    "id": "docker-e7",
+    "enonce": "Quel est le rôle particulier du processus en PID 1 dans un conteneur ?",
+    "choix": ["Il sert de pare-feu interne au conteneur", "Il joue le rôle d'init : il reçoit les signaux et doit récupérer les processus zombies", "Il gère l'allocation mémoire du conteneur", "Il synchronise les couches de l'image au démarrage"],
+    "bonneReponse": 1,
+    "explication": "Le PID 1 joue le rôle d'`init`. S'il ne gère pas correctement les signaux et les processus orphelins (zombies), l'arrêt peut traîner. D'où l'usage d'init légers comme `tini` (option `--init`)."
+  },
+  {
+    "id": "docker-e8",
+    "enonce": "Que fait l'instruction HEALTHCHECK d'un Dockerfile ?",
+    "choix": ["Elle scanne l'image à la recherche de failles", "Elle définit une commande testant périodiquement si le conteneur est sain", "Elle vérifie l'intégrité des couches au moment du pull", "Elle redémarre automatiquement le conteneur s'il plante"],
+    "bonneReponse": 1,
+    "explication": "`HEALTHCHECK` lance une commande à intervalle régulier (ex. un `curl` sur l'app). Selon le résultat, Docker marque le conteneur `healthy` ou `unhealthy`, une information exploitable par un orchestrateur."
+  },
+  {
+    "id": "docker-e9",
+    "enonce": "Quelle est la différence entre un volume nommé et un « bind mount » ?",
+    "choix": ["Le bind mount monte un dossier précis de l'hôte, le volume est géré par Docker dans un espace dédié", "Le volume est temporaire, le bind mount est persistant", "Le bind mount ne fonctionne que sous Windows", "Il n'y en a aucune, ce sont des synonymes"],
+    "bonneReponse": 0,
+    "explication": "Un bind mount lie un chemin exact de l'hôte au conteneur (pratique en dev). Un volume nommé est stocké et géré par Docker (souvent sous `/var/lib/docker/volumes`), plus portable et recommandé en production."
+  },
+  {
+    "id": "docker-e10",
+    "enonce": "Pourquoi `apt-get update` et `apt-get install` sont-ils souvent réunis dans un même RUN ?",
+    "choix": ["Pour gagner du temps de frappe", "Pour éviter qu'un `update` mis en cache serve un index périmé à un `install` ultérieur", "Parce que apt l'exige techniquement", "Pour réduire le nombre de variables d'environnement"],
+    "bonneReponse": 1,
+    "explication": "Séparés, le `RUN apt-get update` peut rester en cache alors que la ligne `install` change : on installerait alors avec un index de paquets obsolète. Les réunir dans un même `RUN` garantit un index à jour."
+  }
+]

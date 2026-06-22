@@ -1,0 +1,72 @@
+[
+  {
+    "id": "kubernetes-m1",
+    "enonce": "À quoi sert un objet `Namespace` ?",
+    "choix": ["À isoler logiquement des ressources au sein d'un même cluster", "À donner une adresse IP fixe à un pod", "À stocker des données persistantes", "À chiffrer le trafic entre les pods"],
+    "bonneReponse": 0,
+    "explication": "Un `Namespace` partitionne le cluster en environnements virtuels (ex. `dev`, `prod`). Cela évite les collisions de noms et permet d'appliquer des quotas et des droits séparés."
+  },
+  {
+    "id": "kubernetes-m2",
+    "enonce": "Comment Kubernetes décide-t-il sur quel node placer un nouveau pod ?",
+    "choix": ["Complètement au hasard", "Le scheduler choisit un node selon les ressources et les contraintes", "Toujours sur le node de contrôle", "L'utilisateur doit le préciser à chaque fois"],
+    "bonneReponse": 1,
+    "explication": "Le `kube-scheduler` examine les pods sans node assigné et sélectionne le plus adapté selon les ressources disponibles, les affinités, les `taints`, etc."
+  },
+  {
+    "id": "kubernetes-m3",
+    "enonce": "À quoi sert un objet `ConfigMap` ?",
+    "choix": ["À stocker des données de configuration non sensibles", "À gérer les mots de passe et clés secrètes", "À définir les règles de routage réseau", "À planifier des tâches récurrentes"],
+    "bonneReponse": 0,
+    "explication": "Un `ConfigMap` externalise la configuration (variables, fichiers) hors de l'image, ce qui permet de la modifier sans reconstruire. Pour les données sensibles, on utilise plutôt un `Secret`."
+  },
+  {
+    "id": "kubernetes-m4",
+    "enonce": "Quelle est la différence principale entre un Secret et un ConfigMap ?",
+    "choix": ["Le Secret est destiné aux données sensibles et encodé en base64", "Le Secret est simplement plus rapide à lire", "Le ConfigMap est chiffré, pas le Secret", "Il n'y en a aucune, ce sont des synonymes"],
+    "bonneReponse": 0,
+    "explication": "Tous deux stockent des paires clé-valeur, mais le `Secret` vise les données sensibles (mots de passe, jetons). Attention : par défaut il est seulement encodé en base64, pas réellement chiffré au repos."
+  },
+  {
+    "id": "kubernetes-m5",
+    "enonce": "Que fait Kubernetes lors d'un « rolling update » d'un Deployment ?",
+    "choix": ["Il remplace tous les pods d'un seul coup", "Il remplace les pods progressivement, sans interruption de service", "Il arrête l'application puis la redémarre à neuf", "Il duplique le cluster entier le temps de la mise à jour"],
+    "bonneReponse": 1,
+    "explication": "Le rolling update crée les nouveaux pods et supprime les anciens par petits lots, en gardant l'application disponible. En cas de souci, `kubectl rollout undo` revient à la version précédente."
+  },
+  {
+    "id": "kubernetes-m6",
+    "enonce": "Quel type de Service expose une application en interne, joignable seulement depuis le cluster ?",
+    "choix": ["NodePort", "LoadBalancer", "ClusterIP", "ExternalName"],
+    "bonneReponse": 2,
+    "explication": "`ClusterIP` (le type par défaut) attribue une IP interne, accessible uniquement depuis le cluster. `NodePort` et `LoadBalancer` exposent au contraire l'application vers l'extérieur."
+  },
+  {
+    "id": "kubernetes-m7",
+    "enonce": "Quelle commande affiche les journaux (logs) d'un pod ?",
+    "choix": ["kubectl logs", "kubectl debug", "kubectl trace", "kubectl journal"],
+    "bonneReponse": 0,
+    "explication": "`kubectl logs mon-pod` affiche la sortie du conteneur. Avec `-f` on suit en temps réel, et `--previous` montre les logs de l'instance précédente après un redémarrage."
+  },
+  {
+    "id": "kubernetes-m8",
+    "enonce": "Quel objet gère le routage HTTP/HTTPS externe vers les services, par nom d'hôte et par chemin ?",
+    "choix": ["Le Service", "L'Ingress", "Le Pod", "Le Namespace"],
+    "bonneReponse": 1,
+    "explication": "Un `Ingress` définit des règles de routage (ex. `api.site.com` → service A, `/blog` → service B). Il faut un contrôleur d'Ingress (NGINX, Traefik…) installé pour les appliquer réellement."
+  },
+  {
+    "id": "kubernetes-m9",
+    "enonce": "Que vérifie une « liveness probe » sur un conteneur ?",
+    "choix": ["S'il est prêt à recevoir du trafic", "S'il est toujours vivant, faute de quoi Kubernetes le redémarre", "Sa consommation de mémoire", "La validité de son image"],
+    "bonneReponse": 1,
+    "explication": "La `liveness probe` détecte un conteneur bloqué : si la sonde échoue, Kubernetes le redémarre. La `readiness probe`, elle, décide quand l'envoyer dans la rotation du Service."
+  },
+  {
+    "id": "kubernetes-m10",
+    "enonce": "Comment Kubernetes réagit-il si un conteneur dépasse sa limite de mémoire (limit) ?",
+    "choix": ["Il ignore simplement le dépassement", "Il tue le conteneur (OOMKilled) puis le redémarre", "Il déplace le pod sur un autre node", "Il augmente automatiquement la limite"],
+    "bonneReponse": 1,
+    "explication": "Dépasser la `limit` mémoire déclenche un arrêt forcé du conteneur (`OOMKilled`). Selon la politique de redémarrage, Kubernetes le relance. Le CPU, lui, est seulement ralenti (throttlé), pas tué."
+  }
+]

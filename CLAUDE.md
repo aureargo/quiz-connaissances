@@ -172,13 +172,14 @@ cd frontend && npm test -- --watch=false  # lancer les tests unitaires une fois
 > longueur et un niveau de détail comparables — voir le template pour les détails
 > et contre-exemples.
 
-## 🗂️ Thèmes actuels (14)
+## 🗂️ Thèmes actuels (17)
 
 État du **contenu** actuel (ce ne sont pas des contraintes du code, cf.
 `QUESTIONNAIRE_TEMPLATE.md`) : chaque thème a aujourd'hui trois fichiers
 (`facile.json`, `moyen.json`, `expert.json`) de 10 questions, soit 30 par thème.
 
-- **Programmation** : Go, Angular, Java, C++, Rust, Git
+- **Programmation** : Go, Angular, Java, C++, Rust, Git, Lignes de commande Linux
+- **DevOps & Conteneurs** : Docker, Kubernetes
 - **Bases de données** : SQL
 - **Crypto & Web3** : Crypto
 - **Intelligence artificielle** : LLM (connaissances arrêtées à 2026)

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "docker-f1",
+    "enonce": "Quel fichier texte décrit, étape par étape, la construction d'une image Docker ?",
+    "choix": ["Dockerfile", "docker.yml", "image.conf", "build.json"],
+    "bonneReponse": 0,
+    "explication": "Le `Dockerfile` contient les instructions (`FROM`, `RUN`, `COPY`…) que Docker exécute pour fabriquer une image. Son nom s'écrit sans extension."
+  },
+  {
+    "id": "docker-f2",
+    "enonce": "Quelle commande construit une image à partir d'un Dockerfile ?",
+    "choix": ["docker build", "docker make", "docker create", "docker compile"],
+    "bonneReponse": 0,
+    "explication": "`docker build -t mon-image .` lit le Dockerfile du dossier courant (`.`) et produit une image étiquetée (`-t`) `mon-image`."
+  },
+  {
+    "id": "docker-f3",
+    "enonce": "Quelle commande lance un nouveau conteneur à partir d'une image ?",
+    "choix": ["docker start", "docker run", "docker exec", "docker launch"],
+    "bonneReponse": 1,
+    "explication": "`docker run image` crée un conteneur depuis l'image puis l'exécute. `docker start` ne fait que relancer un conteneur déjà existant mais arrêté."
+  },
+  {
+    "id": "docker-f4",
+    "enonce": "Quelle commande liste les conteneurs en cours d'exécution ?",
+    "choix": ["docker ls", "docker ps", "docker list", "docker active"],
+    "bonneReponse": 1,
+    "explication": "`docker ps` affiche les conteneurs actifs. Pour voir aussi ceux qui sont arrêtés, on ajoute l'option `-a` : `docker ps -a`."
+  },
+  {
+    "id": "docker-f5",
+    "enonce": "Quel est le registre public officiel où l'on télécharge des images Docker ?",
+    "choix": ["Docker Hub", "Docker Store", "Image Center", "Docker Cloud"],
+    "bonneReponse": 0,
+    "explication": "Docker Hub héberge des milliers d'images officielles (`nginx`, `postgres`, `node`…). C'est le registre interrogé par défaut quand aucun autre n'est précisé."
+  },
+  {
+    "id": "docker-f6",
+    "enonce": "Quelle commande télécharge une image depuis un registre, sans lancer de conteneur ?",
+    "choix": ["docker get", "docker fetch", "docker pull", "docker import"],
+    "bonneReponse": 2,
+    "explication": "`docker pull nginx` récupère l'image en local. `docker run` la téléchargerait aussi au besoin, mais `docker pull` permet de l'avoir à l'avance."
+  },
+  {
+    "id": "docker-f7",
+    "enonce": "Quelle commande affiche la liste des images présentes en local ?",
+    "choix": ["docker images", "docker show", "docker cache", "docker repos"],
+    "bonneReponse": 0,
+    "explication": "`docker images` (ou `docker image ls`) liste les images stockées localement, avec leur dépôt, leur étiquette (« tag ») et leur taille."
+  },
+  {
+    "id": "docker-f8",
+    "enonce": "Quelle est la différence entre une image et un conteneur ?",
+    "choix": ["L'image s'exécute, le conteneur est un fichier figé", "L'image est un modèle figé, le conteneur en est une instance qui s'exécute", "Ce sont deux mots pour exactement la même chose", "L'image tourne sur le réseau, le conteneur en local"],
+    "bonneReponse": 1,
+    "explication": "L'image est un modèle en lecture seule (le « moule ») ; le conteneur est une instance vivante créée à partir de cette image. Une même image peut produire plusieurs conteneurs."
+  },
+  {
+    "id": "docker-f9",
+    "enonce": "Quelle commande arrête un conteneur en cours d'exécution ?",
+    "choix": ["docker halt", "docker stop", "docker close", "docker pause"],
+    "bonneReponse": 1,
+    "explication": "`docker stop conteneur` envoie un signal d'arrêt propre (SIGTERM) puis force l'arrêt après un délai. `docker pause` se contente de geler le conteneur sans le terminer."
+  },
+  {
+    "id": "docker-f10",
+    "enonce": "Quelle instruction d'un Dockerfile définit l'image de base d'où l'on part ?",
+    "choix": ["BASE", "FROM", "IMAGE", "SOURCE"],
+    "bonneReponse": 1,
+    "explication": "`FROM` est presque toujours la première instruction : `FROM node:20` part de l'image officielle Node 20. Tout Dockerfile s'appuie sur une base (sauf `FROM scratch`, qui part d'une image vide)."
+  }
+]

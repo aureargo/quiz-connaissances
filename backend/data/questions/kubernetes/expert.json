@@ -1,0 +1,72 @@
+[
+  {
+    "id": "kubernetes-e1",
+    "enonce": "Quel composant stocke l'état de tout le cluster Kubernetes ?",
+    "choix": ["etcd", "le kubelet", "le scheduler", "le kube-proxy"],
+    "bonneReponse": 0,
+    "explication": "`etcd` est la base de données clé-valeur distribuée qui conserve l'état désiré et actuel du cluster. Sa sauvegarde est cruciale : la perdre revient à perdre la configuration du cluster."
+  },
+  {
+    "id": "kubernetes-e2",
+    "enonce": "Quel agent s'exécute sur chaque node et garantit que les conteneurs de ses pods tournent ?",
+    "choix": ["Le kubelet", "Le kube-apiserver", "Le controller-manager", "Le composant etcd"],
+    "bonneReponse": 0,
+    "explication": "Le `kubelet` est l'agent présent sur chaque node : il reçoit les specs de pods, dialogue avec le runtime de conteneurs et remonte l'état au plan de contrôle."
+  },
+  {
+    "id": "kubernetes-e3",
+    "enonce": "Quel objet convient à une application « stateful » exigeant une identité réseau et un stockage stables par réplique ?",
+    "choix": ["Deployment", "StatefulSet", "DaemonSet", "ReplicaSet"],
+    "bonneReponse": 1,
+    "explication": "Un `StatefulSet` donne à chaque pod un nom stable et ordonné (`db-0`, `db-1`) et son propre volume persistant. Idéal pour une base de données, là où un `Deployment` traite ses pods comme interchangeables."
+  },
+  {
+    "id": "kubernetes-e4",
+    "enonce": "À quoi sert un `DaemonSet` ?",
+    "choix": ["À garantir qu'une copie d'un pod tourne sur chaque node", "À lancer une tâche unique puis s'arrêter", "À mettre l'application à l'échelle selon la charge CPU", "À stocker des secrets de façon chiffrée"],
+    "bonneReponse": 0,
+    "explication": "Un `DaemonSet` déploie un pod sur chaque node (ou un sous-ensemble). Typique des agents de logs, de supervision ou de réseau qui doivent être présents partout."
+  },
+  {
+    "id": "kubernetes-e5",
+    "enonce": "Comment agit un `taint` posé sur un node, combiné à une `toleration` ?",
+    "choix": ["Le taint repousse les pods du node, sauf ceux qui le tolèrent", "Le taint attire en priorité les pods vers le node", "Le taint chiffre tout le trafic du node", "Le taint plafonne la mémoire du node"],
+    "bonneReponse": 0,
+    "explication": "Un `taint` (« marque ») sur un node empêche les pods d'y être planifiés, sauf ceux portant une `toleration` correspondante. C'est l'inverse de l'affinité, utile pour réserver des nodes à certains usages."
+  },
+  {
+    "id": "kubernetes-e6",
+    "enonce": "Que fait un Horizontal Pod Autoscaler (HPA) ?",
+    "choix": ["Il agrandit les volumes de stockage des pods", "Il ajuste le nombre de répliques selon des métriques comme le CPU", "Il ajoute des nodes au cluster", "Il augmente la limite mémoire des pods"],
+    "bonneReponse": 1,
+    "explication": "Le HPA observe des métriques (CPU, mémoire ou personnalisées) et fait varier le nombre de répliques d'un Deployment. Pour ajouter des nodes, c'est plutôt le rôle du Cluster Autoscaler."
+  },
+  {
+    "id": "kubernetes-e7",
+    "enonce": "Dans le modèle réseau de Kubernetes, quelle affirmation est vraie par défaut ?",
+    "choix": ["Chaque pod a sa propre IP et peut joindre tout autre pod sans NAT", "Les pods partagent l'adresse IP de leur node", "Tout trafic entre pods est bloqué par défaut", "Les pods ne communiquent qu'à travers un Service"],
+    "bonneReponse": 0,
+    "explication": "Le modèle réseau impose que chaque pod ait une IP routable et puisse joindre n'importe quel autre pod sans traduction d'adresse (NAT). Pour restreindre ces flux, on ajoute des `NetworkPolicy`."
+  },
+  {
+    "id": "kubernetes-e8",
+    "enonce": "À quoi sert un objet `NetworkPolicy` ?",
+    "choix": ["À chiffrer automatiquement tout le trafic du cluster", "À définir quelles connexions réseau sont autorisées entre pods", "À attribuer des adresses IP fixes aux pods", "À équilibrer la charge entre les nodes"],
+    "bonneReponse": 1,
+    "explication": "Une `NetworkPolicy` agit comme un pare-feu au niveau des pods : elle autorise ou restreint le trafic entrant et sortant selon des sélecteurs. Elle nécessite un plugin réseau (CNI) qui la prenne en charge."
+  },
+  {
+    "id": "kubernetes-e9",
+    "enonce": "Quel est le rôle du `kube-proxy` présent sur chaque node ?",
+    "choix": ["Mettre en cache les images de conteneurs", "Programmer les règles réseau qui routent le trafic des Services vers les pods", "Planifier les pods sur les nodes", "Conserver l'état global du cluster"],
+    "bonneReponse": 1,
+    "explication": "`kube-proxy` installe les règles (iptables ou IPVS) qui redirigent l'IP virtuelle d'un Service vers l'un des pods cibles. C'est lui qui rend l'IP de Service fonctionnelle au niveau réseau."
+  },
+  {
+    "id": "kubernetes-e10",
+    "enonce": "Que permet un objet `CustomResourceDefinition` (CRD) ?",
+    "choix": ["De plafonner les ressources CPU et mémoire", "D'ajouter un nouveau type de ressource, étendant l'API Kubernetes", "De définir une règle de sauvegarde d'etcd", "De fixer un quota par namespace"],
+    "bonneReponse": 1,
+    "explication": "Une `CRD` déclare un type de ressource personnalisé dans l'API (ex. `kind: Database`), souvent piloté par un `operator`. C'est le fondement de l'extensibilité de Kubernetes."
+  }
+]

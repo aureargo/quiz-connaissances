@@ -49,6 +49,20 @@
     "description": "Le shell Unix : naviguer, manipuler des fichiers et piloter le système."
   },
   {
+    "id": "docker",
+    "nom": "Docker",
+    "emoji": "🐳",
+    "categorie": "DevOps & Conteneurs",
+    "description": "La conteneurisation : empaqueter une application et ses dépendances."
+  },
+  {
+    "id": "kubernetes",
+    "nom": "Kubernetes",
+    "emoji": "☸️",
+    "categorie": "DevOps & Conteneurs",
+    "description": "L'orchestration de conteneurs à grande échelle (« K8s »)."
+  },
+  {
     "id": "sql",
     "nom": "SQL",
     "emoji": "🗃️",

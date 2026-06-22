@@ -1,0 +1,72 @@
+[
+  {
+    "id": "kubernetes-f1",
+    "enonce": "Qu'est-ce que Kubernetes ?",
+    "choix": ["Un système d'orchestration de conteneurs", "Un moteur de base de données distribué", "Un langage de programmation", "Un format d'image de conteneur"],
+    "bonneReponse": 0,
+    "explication": "Kubernetes automatise le déploiement, la mise à l'échelle et la gestion d'applications conteneurisées réparties sur un ensemble de machines."
+  },
+  {
+    "id": "kubernetes-f2",
+    "enonce": "Quelle est la plus petite unité déployable dans Kubernetes ?",
+    "choix": ["Le conteneur", "Le pod", "Le node", "Le service"],
+    "bonneReponse": 1,
+    "explication": "Le `pod` enveloppe un ou plusieurs conteneurs qui partagent le réseau et le stockage. Kubernetes ne gère pas les conteneurs directement, mais les pods qui les contiennent."
+  },
+  {
+    "id": "kubernetes-f3",
+    "enonce": "Comment abrège-t-on couramment le mot « Kubernetes » ?",
+    "choix": ["Kube2", "K8s", "Knet", "Kdock"],
+    "bonneReponse": 1,
+    "explication": "« K8s » remplace les 8 lettres entre le K et le s de « Kubernetes » par leur nombre. La même logique donne « i18n » pour « internationalization »."
+  },
+  {
+    "id": "kubernetes-f4",
+    "enonce": "Quel outil en ligne de commande pilote un cluster Kubernetes ?",
+    "choix": ["kubectl", "kubeadm", "kubelet", "kubehost"],
+    "bonneReponse": 0,
+    "explication": "`kubectl` est l'outil client qui envoie des commandes à l'API du cluster : `kubectl get pods`, `kubectl apply`… `kubeadm` sert plutôt à installer un cluster."
+  },
+  {
+    "id": "kubernetes-f5",
+    "enonce": "Comment appelle-t-on une machine (physique ou virtuelle) qui exécute des pods ?",
+    "choix": ["Un node", "Un cluster", "Un master", "Un agent"],
+    "bonneReponse": 0,
+    "explication": "Un `node` (nœud) est une machine de travail du cluster. L'ensemble des nodes forme le `cluster`. Chaque node fait tourner les pods qui lui sont assignés."
+  },
+  {
+    "id": "kubernetes-f6",
+    "enonce": "Quel format de fichier utilise-t-on le plus souvent pour décrire des ressources Kubernetes ?",
+    "choix": ["XML", "YAML", "INI", "TOML"],
+    "bonneReponse": 1,
+    "explication": "Les manifestes Kubernetes sont presque toujours écrits en YAML : ils décrivent l'état voulu (`kind`, `metadata`, `spec`) qu'on applique ensuite avec `kubectl apply -f`."
+  },
+  {
+    "id": "kubernetes-f7",
+    "enonce": "Quelle commande affiche la liste des pods ?",
+    "choix": ["kubectl list pods", "kubectl get pods", "kubectl show pods", "kubectl pods ls"],
+    "bonneReponse": 1,
+    "explication": "`kubectl get pods` liste les pods du namespace courant, avec leur état (`Running`, `Pending`…). `kubectl get` fonctionne pour tout type de ressource (`nodes`, `services`…)."
+  },
+  {
+    "id": "kubernetes-f8",
+    "enonce": "Quel objet expose un ensemble de pods derrière une adresse réseau stable ?",
+    "choix": ["Le Service", "Le Volume", "Le Namespace", "Le ConfigMap"],
+    "bonneReponse": 0,
+    "explication": "Les pods sont éphémères et changent d'adresse IP. Un `Service` leur donne un point d'accès stable (nom DNS + IP virtuelle) et répartit le trafic entre les pods correspondants."
+  },
+  {
+    "id": "kubernetes-f9",
+    "enonce": "Quel objet gère le nombre de répliques d'une application et les recrée si elles tombent ?",
+    "choix": ["Le Deployment", "Le Pod", "Le Namespace", "L'Ingress"],
+    "bonneReponse": 0,
+    "explication": "Un `Deployment` décrit l'état voulu (ex. 3 répliques) et veille à le maintenir : si un pod meurt, il en recrée un. Il gère aussi les mises à jour progressives de l'application."
+  },
+  {
+    "id": "kubernetes-f10",
+    "enonce": "Quelle commande applique un manifeste YAML au cluster ?",
+    "choix": ["kubectl run", "kubectl apply -f", "kubectl create -m", "kubectl deploy"],
+    "bonneReponse": 1,
+    "explication": "`kubectl apply -f fichier.yaml` crée ou met à jour les ressources décrites dans le fichier. C'est l'approche « déclarative » : on décrit l'état voulu, Kubernetes se charge d'y arriver."
+  }
+]

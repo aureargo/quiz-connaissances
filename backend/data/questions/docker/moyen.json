@@ -1,0 +1,72 @@
+[
+  {
+    "id": "docker-m1",
+    "enonce": "Quelle instruction du Dockerfile exécute une commande pendant la construction de l'image ?",
+    "choix": ["CMD", "RUN", "EXEC", "BOOT"],
+    "bonneReponse": 1,
+    "explication": "`RUN` exécute une commande au moment du build (ex. `RUN apt-get install`) et crée une nouvelle couche. `CMD`, lui, définit la commande lancée au démarrage du conteneur."
+  },
+  {
+    "id": "docker-m2",
+    "enonce": "À quoi sert l'instruction EXPOSE dans un Dockerfile ?",
+    "choix": ["Elle publie le port sur la machine hôte", "Elle documente le port que le conteneur écoute, sans le publier", "Elle ouvre le port dans le pare-feu du système", "Elle redirige le port vers un autre conteneur"],
+    "bonneReponse": 1,
+    "explication": "`EXPOSE 8080` est surtout informatif : il indique le port utilisé par l'application. Pour le rendre accessible depuis l'hôte, il faut le publier avec `-p` au `docker run`."
+  },
+  {
+    "id": "docker-m3",
+    "enonce": "Quelle option de `docker run` publie le port 8080 du conteneur sur le port 80 de l'hôte ?",
+    "choix": ["-p 80:8080", "-p 8080:80", "-e 80:8080", "-v 80:8080"],
+    "bonneReponse": 0,
+    "explication": "La syntaxe est `-p hôte:conteneur`. Donc `-p 80:8080` mappe le port 80 de la machine vers le port 8080 du conteneur. `-e` sert aux variables d'environnement, `-v` aux volumes."
+  },
+  {
+    "id": "docker-m4",
+    "enonce": "Comment conserver des données au-delà de la durée de vie d'un conteneur ?",
+    "choix": ["En utilisant un volume", "En augmentant la RAM allouée", "En commitant le conteneur à chaque arrêt", "Les données sont conservées automatiquement"],
+    "bonneReponse": 0,
+    "explication": "Par défaut, la couche d'écriture d'un conteneur disparaît avec lui. Un volume (`-v` ou `docker volume`) stocke les données hors du conteneur et les rend persistantes."
+  },
+  {
+    "id": "docker-m5",
+    "enonce": "Quelle commande ouvre un shell interactif dans un conteneur déjà en cours d'exécution ?",
+    "choix": ["docker run -it conteneur bash", "docker exec -it conteneur bash", "docker shell -it conteneur", "docker attach -it conteneur"],
+    "bonneReponse": 1,
+    "explication": "`docker exec -it conteneur bash` lance un nouveau processus (un shell) dans un conteneur qui tourne déjà. `docker run` créerait au contraire un tout nouveau conteneur."
+  },
+  {
+    "id": "docker-m6",
+    "enonce": "À quoi sert le fichier `docker-compose.yml` ?",
+    "choix": ["À définir et orchestrer plusieurs conteneurs dans un seul fichier", "À remplacer le Dockerfile pour construire une image", "À configurer le démon Docker au démarrage", "À publier une image sur Docker Hub"],
+    "bonneReponse": 0,
+    "explication": "Docker Compose décrit une application multi-conteneurs (services, réseaux, volumes) dans un YAML. `docker compose up` démarre l'ensemble d'un seul coup."
+  },
+  {
+    "id": "docker-m7",
+    "enonce": "Que représente une « couche » (layer) dans une image Docker ?",
+    "choix": ["Un conteneur mis en pause", "Le résultat d'une instruction du Dockerfile, mis en cache", "Une copie de sauvegarde de l'image", "Un réseau virtuel entre conteneurs"],
+    "bonneReponse": 1,
+    "explication": "Chaque instruction (`FROM`, `RUN`, `COPY`…) crée une couche empilée et mise en cache. Si une couche ne change pas, Docker la réutilise, ce qui accélère les builds suivants."
+  },
+  {
+    "id": "docker-m8",
+    "enonce": "Quelle instruction du Dockerfile définit la commande exécutée au démarrage du conteneur ?",
+    "choix": ["RUN", "CMD", "ENTRY", "INIT"],
+    "bonneReponse": 1,
+    "explication": "`CMD` indique le processus principal lancé quand le conteneur démarre (ex. `CMD [\"node\", \"app.js\"]`). À ne pas confondre avec `RUN`, qui s'exécute lors du build."
+  },
+  {
+    "id": "docker-m9",
+    "enonce": "À quoi sert un fichier `.dockerignore` ?",
+    "choix": ["À ignorer des conteneurs lors d'un arrêt global", "À exclure des fichiers du contexte de build envoyé au démon", "À masquer des images dans `docker images`", "À empêcher la publication de certaines couches"],
+    "bonneReponse": 1,
+    "explication": "Comme `.gitignore`, il liste des chemins (ex. `node_modules`, `.git`) à ne pas envoyer au démon lors du build. Cela allège le contexte et accélère la construction."
+  },
+  {
+    "id": "docker-m10",
+    "enonce": "Quelle commande libère de l'espace en supprimant conteneurs arrêtés, réseaux et images inutilisés ?",
+    "choix": ["docker clean", "docker free", "docker system prune", "docker rm --all"],
+    "bonneReponse": 2,
+    "explication": "`docker system prune` supprime les ressources non utilisées. Avec `-a`, il enlève aussi les images sans conteneur associé. À manier avec prudence : la suppression est définitive."
+  }
+]
