@@ -1,0 +1,72 @@
+[
+  {
+    "id": "films-90-e1",
+    "enonce": "Quel film choral de 1999 de Paul Thomas Anderson se termine par une pluie de grenouilles ?",
+    "choix": ["Short Cuts", "Magnolia", "Boogie Nights", "Happiness"],
+    "bonneReponse": 1,
+    "explication": "« Magnolia » croise les destins de plusieurs personnages à Los Angeles ; sa pluie de grenouilles, allusion biblique, est l'une de ses scènes les plus commentées."
+  },
+  {
+    "id": "films-90-e2",
+    "enonce": "Quel film de Wong Kar-wai (1994) suit des policiers et un snack à Hong Kong ?",
+    "choix": ["In the Mood for Love", "Chungking Express", "Happy Together", "Les Cendres du temps"],
+    "bonneReponse": 1,
+    "explication": "« Chungking Express » est un film à deux histoires sur la solitude urbaine, devenu emblématique du cinéma de Wong Kar-wai."
+  },
+  {
+    "id": "films-90-e3",
+    "enonce": "Quel réalisateur danois cofonde le mouvement Dogme95 avec Thomas Vinterberg ?",
+    "choix": ["Lars von Trier", "Nicolas Winding Refn", "Bille August", "Susanne Bier"],
+    "bonneReponse": 0,
+    "explication": "Lars von Trier et Thomas Vinterberg signent en 1995 le manifeste Dogme95, prônant un cinéma dépouillé d'artifices."
+  },
+  {
+    "id": "films-90-e4",
+    "enonce": "Quel film iranien d'Abbas Kiarostami a remporté la Palme d'or en 1997 ?",
+    "choix": ["Le Goût de la cerise", "Et la vie continue", "Au travers des oliviers", "Le Vent nous emportera"],
+    "bonneReponse": 0,
+    "explication": "« Le Goût de la cerise » a partagé la Palme d'or avec « L'Anguille » de Shohei Imamura au Festival de Cannes 1997."
+  },
+  {
+    "id": "films-90-e5",
+    "enonce": "Dans « Usual Suspects » (1995), quel est le surnom de l'insaisissable cerveau criminel ?",
+    "choix": ["Keyser Söze", "John Doe", "Verbal", "Le Caïd"],
+    "bonneReponse": 0,
+    "explication": "Keyser Söze est la figure mythique autour de laquelle tourne tout le film de Bryan Singer, jusqu'à son célèbre retournement final."
+  },
+  {
+    "id": "films-90-e6",
+    "enonce": "Quel film des frères Coen (1996) se déroule dans le Minnesota enneigé autour d'un enlèvement raté ?",
+    "choix": ["Fargo", "The Big Lebowski", "Barton Fink", "Arizona Junior"],
+    "bonneReponse": 0,
+    "explication": "« Fargo » vaut à Frances McDormand l'Oscar de la meilleure actrice pour son rôle de policière enceinte enquêtant sur une série de meurtres."
+  },
+  {
+    "id": "films-90-e7",
+    "enonce": "Quel film taïwanais d'Ang Lee de 1994 clôt sa « trilogie de Père » autour de la cuisine ?",
+    "choix": ["Salé sucré", "Garçon d'honneur", "Pushing Hands", "Tigre et Dragon"],
+    "bonneReponse": 0,
+    "explication": "« Salé sucré » (Eat Drink Man Woman) suit un chef veuf et ses trois filles. C'est le troisième volet de la « trilogie de Père » d'Ang Lee."
+  },
+  {
+    "id": "films-90-e8",
+    "enonce": "Quel acteur incarne l'avocat new-yorkais tenté par le diable dans « L'Associé du diable » (1997) ?",
+    "choix": ["Keanu Reeves", "Al Pacino", "Brad Pitt", "Tom Cruise"],
+    "bonneReponse": 0,
+    "explication": "Keanu Reeves joue l'avocat ambitieux, face à Al Pacino dans le rôle du diable. Le film mêle thriller juridique et fantastique."
+  },
+  {
+    "id": "films-90-e9",
+    "enonce": "Quel film de Terrence Malick, sorti en 1998, marque son retour après vingt ans d'absence ?",
+    "choix": ["La Ligne rouge", "Les Moissons du ciel", "Le Nouveau Monde", "La Balade sauvage"],
+    "bonneReponse": 0,
+    "explication": "« La Ligne rouge », sur la bataille de Guadalcanal, signe le retour de Terrence Malick au cinéma après « Les Moissons du ciel » (1978)."
+  },
+  {
+    "id": "films-90-e10",
+    "enonce": "Quel film français de 1995 de Mathieu Kassovitz suit une journée en banlieue après une bavure policière ?",
+    "choix": ["La Haine", "Ma 6-T va crack-er", "L'Esquive", "État des lieux"],
+    "bonneReponse": 0,
+    "explication": "« La Haine », tourné en noir et blanc avec Vincent Cassel, a valu à Kassovitz le prix de la mise en scène à Cannes."
+  }
+]

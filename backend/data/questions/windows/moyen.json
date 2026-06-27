@@ -1,0 +1,72 @@
+[
+  {
+    "id": "windows-m1",
+    "enonce": "Quelle combinaison ouvre directement le Gestionnaire des tâches ?",
+    "choix": ["Ctrl+Alt+Suppr", "Ctrl+Maj+Échap", "Alt+F4", "Windows+T"],
+    "bonneReponse": 1,
+    "explication": "Ctrl+Maj+Échap ouvre immédiatement le Gestionnaire des tâches. Ctrl+Alt+Suppr affiche d'abord un écran intermédiaire proposant plusieurs options."
+  },
+  {
+    "id": "windows-m2",
+    "enonce": "Quelle est l'extension d'un fichier programme exécutable sous Windows ?",
+    "choix": [".run", ".exe", ".app", ".bin"],
+    "bonneReponse": 1,
+    "explication": "Les programmes Windows portent l'extension .exe (de « executable »). Les installeurs utilisent souvent .msi, et les scripts en lot l'extension .bat."
+  },
+  {
+    "id": "windows-m3",
+    "enonce": "Par quelle lettre est traditionnellement désigné le disque où Windows est installé ?",
+    "choix": ["A", "C", "D", "W"],
+    "bonneReponse": 1,
+    "explication": "Le disque système est le « C: ». Les lettres A et B étaient réservées aux lecteurs de disquettes, d'où le démarrage du disque dur à la lettre C."
+  },
+  {
+    "id": "windows-m4",
+    "enonce": "Comment s'appelle la base de données centrale de configuration de Windows ?",
+    "choix": ["Le Journal", "Le Registre", "Le Cache", "Le Noyau"],
+    "bonneReponse": 1,
+    "explication": "Le Registre stocke les réglages du système et des logiciels sous forme de clés et de valeurs. On l'édite avec l'outil regedit, à manipuler avec prudence."
+  },
+  {
+    "id": "windows-m5",
+    "enonce": "Quel système de fichiers Windows utilise-t-il par défaut sur son disque ?",
+    "choix": ["FAT32", "ext4", "NTFS", "APFS"],
+    "bonneReponse": 2,
+    "explication": "NTFS est le système de fichiers moderne de Windows : gestion des droits, journalisation et gros fichiers. ext4 est typique de Linux et APFS d'Apple."
+  },
+  {
+    "id": "windows-m6",
+    "enonce": "Quel interpréteur de commandes moderne et orienté objet Microsoft a-t-il créé ?",
+    "choix": ["Bash", "PowerShell", "Zsh", "Perl"],
+    "bonneReponse": 1,
+    "explication": "PowerShell manipule des objets, et pas seulement du texte. Il a vocation à remplacer l'ancienne Invite de commandes (cmd) pour l'administration du système."
+  },
+  {
+    "id": "windows-m7",
+    "enonce": "Quelle touche unique capture l'intégralité de l'écran dans le presse-papiers ?",
+    "choix": ["Inser", "Pause", "Impr. écran", "Verr. num"],
+    "bonneReponse": 2,
+    "explication": "La touche Impr. écran (« Print Screen ») copie tout l'écran dans le presse-papiers. Le raccourci Windows+Maj+S, lui, permet de capturer une zone choisie."
+  },
+  {
+    "id": "windows-m8",
+    "enonce": "Dans quel dossier Windows installe-t-il par défaut les applications ?",
+    "choix": ["System32", "AppData", "Program Files", "Windows"],
+    "bonneReponse": 2,
+    "explication": "Les logiciels s'installent dans « Program Files ». Sur un système 64 bits, les applications 32 bits sont placées dans « Program Files (x86) »."
+  },
+  {
+    "id": "windows-m9",
+    "enonce": "Quel raccourci ouvre l'Explorateur de fichiers ?",
+    "choix": ["Windows+R", "Windows+E", "Windows+D", "Windows+I"],
+    "bonneReponse": 1,
+    "explication": "Windows+E ouvre l'Explorateur (« E » comme Explorer). Windows+D affiche le Bureau et Windows+R ouvre la boîte de dialogue Exécuter."
+  },
+  {
+    "id": "windows-m10",
+    "enonce": "Quelle version de Windows est sortie juste après Windows 7 ?",
+    "choix": ["Windows Vista", "Windows XP", "Windows 8", "Windows 10"],
+    "bonneReponse": 2,
+    "explication": "Windows 8 (2012) a succédé à Windows 7, avec son interface à tuiles controversée. Vista et XP étaient antérieurs, et Windows 10 est venu ensuite."
+  }
+]

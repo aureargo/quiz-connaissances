@@ -1,0 +1,72 @@
+[
+  {
+    "id": "architecture-m1",
+    "enonce": "Que caractérise une architecture en microservices ?",
+    "choix": ["Un unique programme contenant tout", "Un découpage en petits services indépendants et déployables séparément", "L'absence totale de base de données", "Du code écrit uniquement en assembleur"],
+    "bonneReponse": 1,
+    "explication": "Les microservices répartissent l'application en services autonomes, chacun responsable d'un domaine et déployable seul. Cela améliore l'évolutivité au prix d'une complexité réseau accrue."
+  },
+  {
+    "id": "architecture-m2",
+    "enonce": "Quelle est une caractéristique clé d'une API REST ?",
+    "choix": ["Elle conserve l'état de la session entre les requêtes", "Chaque requête est indépendante et sans état", "Elle impose obligatoirement le format XML", "Elle fonctionne sans réseau"],
+    "bonneReponse": 1,
+    "explication": "REST est « sans état » (stateless) : chaque requête contient tout le contexte nécessaire, le serveur ne mémorise rien entre deux appels. Cela simplifie la montée en charge."
+  },
+  {
+    "id": "architecture-m3",
+    "enonce": "Dans les principes SOLID, que vise le « S » (responsabilité unique) ?",
+    "choix": ["Qu'une classe n'ait qu'une seule raison de changer", "Qu'un fichier ne dépasse pas cent lignes", "Qu'une fonction n'ait qu'un seul paramètre", "Qu'un programme tourne sur un seul serveur"],
+    "bonneReponse": 0,
+    "explication": "Le principe de responsabilité unique veut qu'un composant ne fasse qu'une chose. S'il porte plusieurs responsabilités, un changement de l'une risque d'affecter les autres."
+  },
+  {
+    "id": "architecture-m4",
+    "enonce": "À quoi sert un répartiteur de charge (load balancer) ?",
+    "choix": ["À chiffrer les mots de passe", "À distribuer les requêtes entre plusieurs serveurs", "À compresser les images envoyées", "À sauvegarder la base de données"],
+    "bonneReponse": 1,
+    "explication": "Le répartiteur de charge ventile le trafic entre plusieurs instances pour éviter qu'un seul serveur ne sature. Il améliore la disponibilité et la capacité de l'application."
+  },
+  {
+    "id": "architecture-m5",
+    "enonce": "Pourquoi ajoute-t-on un cache devant une base de données ?",
+    "choix": ["Pour augmenter la capacité de stockage", "Pour servir plus vite les données fréquemment demandées", "Pour chiffrer toutes les requêtes", "Pour supprimer les anciennes données"],
+    "bonneReponse": 1,
+    "explication": "Un cache garde en mémoire rapide les résultats souvent consultés, évitant des accès coûteux à la base. La difficulté est de l'invalider quand les données changent."
+  },
+  {
+    "id": "architecture-m6",
+    "enonce": "Que permet une file de messages (message queue) entre deux services ?",
+    "choix": ["Une communication asynchrone et découplée", "Le partage d'une même mémoire vive", "Leur exécution sur le même processeur", "La disparition de toute erreur réseau"],
+    "bonneReponse": 0,
+    "explication": "Une file de messages reçoit les messages d'un producteur et les délivre plus tard à un consommateur. Les deux services n'ont pas besoin d'être disponibles en même temps."
+  },
+  {
+    "id": "architecture-m7",
+    "enonce": "Que désigne une architecture « trois tiers » (3-tier) ?",
+    "choix": ["Trois serveurs physiques obligatoires", "Trois couches : présentation, logique métier et données", "Trois langages de programmation imposés", "Trois versions d'une même application"],
+    "bonneReponse": 1,
+    "explication": "L'architecture trois tiers sépare la présentation (interface), la logique métier (traitement) et les données (stockage). Chaque couche ne dialogue qu'avec sa voisine."
+  },
+  {
+    "id": "architecture-m8",
+    "enonce": "Quel est le rôle d'une « API Gateway » devant des microservices ?",
+    "choix": ["Compiler les services au démarrage", "Servir de point d'entrée unique qui route les requêtes", "Stocker les données de tous les services", "Remplacer le réseau interne"],
+    "bonneReponse": 1,
+    "explication": "L'API Gateway est la porte d'entrée du système : elle reçoit les requêtes clientes et les redirige vers le bon service, en gérant souvent l'authentification et la limitation de débit."
+  },
+  {
+    "id": "architecture-m9",
+    "enonce": "Qu'indique une « forte cohésion » d'un module logiciel ?",
+    "choix": ["Ses éléments concourent à une même responsabilité bien définie", "Il dépend de nombreux autres modules", "Il contient un très grand nombre de lignes", "Il est maintenu par une seule personne"],
+    "bonneReponse": 0,
+    "explication": "La cohésion mesure à quel point les éléments d'un module vont ensemble. Une forte cohésion (un module = un but clair) associée à un faible couplage est le signe d'une bonne conception."
+  },
+  {
+    "id": "architecture-m10",
+    "enonce": "Qu'est-ce qu'un service « sans état » (stateless) ?",
+    "choix": ["Un service qui ne stocke aucune information entre deux requêtes", "Un service qui ne tombe jamais en panne", "Un service dépourvu de base de données", "Un service exécuté uniquement hors ligne"],
+    "bonneReponse": 0,
+    "explication": "Un service stateless ne conserve pas d'état local entre les requêtes : on peut donc en lancer plusieurs copies interchangeables, ce qui facilite la mise à l'échelle horizontale."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ecologie-m1",
+    "enonce": "Quel accord international de 2015 vise à limiter le réchauffement bien en dessous de 2 °C ?",
+    "choix": ["l'Accord de Paris", "le Protocole de Kyoto", "le Traité de Rome", "les Accords d'Helsinki"],
+    "bonneReponse": 0,
+    "explication": "L'Accord de Paris, adopté lors de la COP21, engage les pays à contenir le réchauffement sous 2 °C, et si possible 1,5 °C, par rapport à l'ère préindustrielle."
+  },
+  {
+    "id": "ecologie-m2",
+    "enonce": "Quel gaz à effet de serre est libéré en grande quantité par l'élevage de ruminants et les rizières ?",
+    "choix": ["l'ozone", "le néon", "le méthane", "le krypton"],
+    "bonneReponse": 2,
+    "explication": "Le méthane (CH₄) a un pouvoir de réchauffement bien supérieur au CO₂ sur le court terme. La digestion des vaches et les rizières inondées en sont de grandes sources."
+  },
+  {
+    "id": "ecologie-m3",
+    "enonce": "Comment appelle-t-on la variété de toutes les espèces vivantes présentes sur Terre ?",
+    "choix": ["la photosynthèse", "la biodiversité", "la stratosphère", "la sédimentation"],
+    "bonneReponse": 1,
+    "explication": "La biodiversité désigne l'ensemble des formes de vie et de leurs interactions. Son déclin fragilise les écosystèmes dont dépendent l'alimentation, l'eau potable et le climat."
+  },
+  {
+    "id": "ecologie-m4",
+    "enonce": "Quelle couche de l'atmosphère nous protège des rayons ultraviolets du Soleil ?",
+    "choix": ["la couche d'ozone", "la couche de méthane", "la couche de carbone", "la couche de vapeur"],
+    "bonneReponse": 0,
+    "explication": "La couche d'ozone, située dans la stratosphère, filtre une grande partie des rayons UV nocifs. Le « trou » observé au-dessus de l'Antarctique se résorbe depuis l'interdiction des CFC."
+  },
+  {
+    "id": "ecologie-m5",
+    "enonce": "Quelle énergie renouvelable exploite la chaleur du sous-sol terrestre ?",
+    "choix": ["l'éolien", "l'hydraulique", "le photovoltaïque", "la géothermie"],
+    "bonneReponse": 3,
+    "explication": "La géothermie puise la chaleur naturelle des profondeurs de la Terre pour produire chaleur ou électricité. L'Islande en tire une grande partie de son énergie."
+  },
+  {
+    "id": "ecologie-m6",
+    "enonce": "Comment nomme-t-on une espèce introduite par l'homme qui prolifère au détriment de la faune locale ?",
+    "choix": ["une espèce invasive", "une espèce endémique", "une espèce migratrice", "une espèce protégée"],
+    "bonneReponse": 0,
+    "explication": "Une espèce invasive prolifère hors de son milieu d'origine et concurrence les espèces locales. Le frelon asiatique, arrivé en France vers 2004, en est un exemple."
+  },
+  {
+    "id": "ecologie-m7",
+    "enonce": "Quel terme désigne la quantité de gaz à effet de serre émise par une personne ou une activité ?",
+    "choix": ["la pluie acide", "le cycle de l'eau", "l'empreinte carbone", "la couche limite"],
+    "bonneReponse": 2,
+    "explication": "L'empreinte carbone mesure les émissions de gaz à effet de serre liées à un produit, une personne ou une activité. La réduire est un levier majeur contre le réchauffement."
+  },
+  {
+    "id": "ecologie-m8",
+    "enonce": "Quelle est la plus grande forêt tropicale du monde, essentielle aux cycles du carbone et de l'eau ?",
+    "choix": ["le Sahara", "l'Amazonie", "la toundra sibérienne", "la Camargue"],
+    "bonneReponse": 1,
+    "explication": "La forêt amazonienne est la plus vaste forêt tropicale de la planète. Elle abrite une biodiversité exceptionnelle et stocke d'énormes quantités de carbone."
+  },
+  {
+    "id": "ecologie-m9",
+    "enonce": "Comment nomme-t-on les précipitations rendues corrosives par la pollution au dioxyde de soufre, qui abîment forêts et lacs ?",
+    "choix": ["l'effet albédo", "la photosynthèse", "la subduction", "les pluies acides"],
+    "bonneReponse": 3,
+    "explication": "Les pluies acides proviennent surtout du dioxyde de soufre et des oxydes d'azote rejetés par l'industrie et les transports. Elles acidifient sols et lacs et endommagent les arbres."
+  },
+  {
+    "id": "ecologie-m10",
+    "enonce": "Que mesure-t-on en « ppm » lorsqu'on parle du CO₂ présent dans l'atmosphère ?",
+    "choix": ["sa concentration", "sa température", "sa vitesse", "son poids total"],
+    "bonneReponse": 0,
+    "explication": "Les ppm (parties par million) expriment la concentration du CO₂ dans l'air. Elle est passée d'environ 280 ppm avant l'ère industrielle à plus de 420 ppm aujourd'hui."
+  }
+]

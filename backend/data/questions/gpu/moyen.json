@@ -1,0 +1,72 @@
+[
+  {
+    "id": "gpu-m1",
+    "enonce": "Que sont les « cœurs CUDA » d'une carte graphique Nvidia ?",
+    "choix": ["de petites unités de calcul exécutées en parallèle", "des connecteurs d'alimentation", "des ventilateurs internes", "des emplacements mémoire"],
+    "bonneReponse": 0,
+    "explication": "Les cœurs CUDA sont les unités de calcul élémentaires d'un GPU Nvidia. Une carte en compte des milliers, ce qui lui donne sa puissance massivement parallèle."
+  },
+  {
+    "id": "gpu-m2",
+    "enonce": "Que désigne le « ray tracing » (lancer de rayons) ?",
+    "choix": ["simuler le trajet de la lumière pour un rendu réaliste", "afficher plus d'images par seconde", "compresser les textures", "refroidir la carte graphique"],
+    "bonneReponse": 0,
+    "explication": "Le ray tracing calcule le parcours des rayons lumineux pour produire des reflets, ombres et éclairages très réalistes. C'est coûteux en calcul, d'où des cœurs dédiés (RT cores)."
+  },
+  {
+    "id": "gpu-m3",
+    "enonce": "Quel connecteur relie aujourd'hui une carte graphique à la carte mère ?",
+    "choix": ["le PCI Express", "le port USB", "la prise HDMI", "le connecteur SATA"],
+    "bonneReponse": 0,
+    "explication": "Le slot PCI Express (PCIe) fournit le lien à très haut débit entre le GPU et le reste de la machine. Le HDMI relie l'écran, et le SATA les disques."
+  },
+  {
+    "id": "gpu-m4",
+    "enonce": "Quel type de mémoire équipe généralement les cartes graphiques modernes ?",
+    "choix": ["la GDDR", "la DDR classique des PC", "une mémoire flash NAND", "une mémoire cache L1"],
+    "bonneReponse": 0,
+    "explication": "Les cartes graphiques utilisent de la GDDR (comme la GDDR6), une mémoire optimisée pour offrir une très large bande passante, plus adaptée au graphisme que la DDR classique du système."
+  },
+  {
+    "id": "gpu-m5",
+    "enonce": "Qu'est-ce qu'un « shader » ?",
+    "choix": ["un petit programme exécuté par le GPU", "un câble vidéo", "un type de ventilateur", "un format d'image"],
+    "bonneReponse": 0,
+    "explication": "Un shader est un programme qui tourne sur le GPU pour calculer l'apparence des pixels et des sommets : couleurs, lumières, effets. Vertex et fragment shaders sont les plus courants."
+  },
+  {
+    "id": "gpu-m6",
+    "enonce": "Quelle API graphique de Microsoft est très utilisée par les jeux sous Windows ?",
+    "choix": ["DirectX", "OpenSSL", "JDBC", "POSIX"],
+    "bonneReponse": 0,
+    "explication": "DirectX (et son composant Direct3D) est l'interface de programmation graphique de Microsoft, omniprésente dans les jeux Windows et sur Xbox. OpenGL et Vulkan sont des alternatives multiplateformes."
+  },
+  {
+    "id": "gpu-m7",
+    "enonce": "Que permettent les technologies d'« upscaling » comme DLSS ou FSR ?",
+    "choix": ["calculer une image en basse résolution puis l'agrandir intelligemment", "augmenter la mémoire de la carte", "refroidir le GPU en charge", "réduire le bruit des ventilateurs"],
+    "bonneReponse": 0,
+    "explication": "Ces techniques rendent l'image dans une résolution plus basse, puis la reconstruisent vers une résolution supérieure (parfois via l'IA). On gagne en performances sans trop perdre en qualité visuelle."
+  },
+  {
+    "id": "gpu-m8",
+    "enonce": "À quoi sert le « framebuffer » (tampon d'image) d'un GPU ?",
+    "choix": ["stocker l'image qui va être envoyée à l'écran", "garder l'historique des parties jouées", "sauvegarder les pilotes", "gérer le son du jeu"],
+    "bonneReponse": 0,
+    "explication": "Le framebuffer est la zone mémoire qui contient l'image finale, pixel par pixel, avant son envoi à l'écran. On utilise souvent un double buffering pour éviter les déchirements (tearing)."
+  },
+  {
+    "id": "gpu-m9",
+    "enonce": "Pourquoi les GPU sont-ils prisés pour entraîner des réseaux de neurones ?",
+    "choix": ["ils effectuent en masse les multiplications de matrices nécessaires", "ils possèdent un très gros disque dur", "ils consomment très peu d'électricité", "ils gèrent mieux les fichiers texte"],
+    "bonneReponse": 0,
+    "explication": "L'apprentissage profond repose sur d'énormes calculs matriciels, hautement parallélisables. Le GPU, avec ses milliers d'unités, y est bien plus rapide qu'un CPU."
+  },
+  {
+    "id": "gpu-m10",
+    "enonce": "Que désigne le « TDP » d'une carte graphique ?",
+    "choix": ["la chaleur à dissiper, exprimée en watts", "le nombre de cœurs de calcul", "la quantité de VRAM", "la vitesse d'affichage en FPS"],
+    "bonneReponse": 0,
+    "explication": "Le TDP (Thermal Design Power) indique la puissance thermique, en watts, que le système de refroidissement doit évacuer. Il donne aussi une idée de la consommation électrique de la carte."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "reseaux-e1",
+    "enonce": "Combien de couches compte le modèle OSI ?",
+    "choix": ["4", "5", "7", "12"],
+    "bonneReponse": 2,
+    "explication": "Le modèle OSI décrit la communication en 7 couches : physique, liaison, réseau, transport, session, présentation et application. Il sert de référence conceptuelle pour situer chaque protocole."
+  },
+  {
+    "id": "reseaux-e2",
+    "enonce": "À quelle couche du modèle OSI opère le protocole IP ?",
+    "choix": ["La couche réseau (3)", "La couche transport (4)", "La couche physique (1)", "La couche application (7)"],
+    "bonneReponse": 0,
+    "explication": "IP travaille à la couche 3 (réseau) : il s'occupe de l'adressage et de l'acheminement des paquets entre réseaux. TCP et UDP, eux, relèvent de la couche 4 (transport)."
+  },
+  {
+    "id": "reseaux-e3",
+    "enonce": "Que fait le mécanisme NAT sur un routeur ?",
+    "choix": ["Il traduit les adresses privées en une adresse publique", "Il chiffre tout le trafic sortant", "Il ferme automatiquement les ports", "Il duplique chaque paquet reçu"],
+    "bonneReponse": 0,
+    "explication": "Le NAT (Network Address Translation) permet à plusieurs machines d'un réseau local de partager une seule adresse IP publique. C'est ce qui a longtemps repoussé l'épuisement des adresses IPv4."
+  },
+  {
+    "id": "reseaux-e4",
+    "enonce": "Combien d'adresses d'hôtes utilisables offre un sous-réseau en /24 ?",
+    "choix": ["254", "256", "128", "1024"],
+    "bonneReponse": 0,
+    "explication": "Un /24 réserve 8 bits aux hôtes, soit 256 combinaisons. On retire l'adresse réseau et l'adresse de diffusion (broadcast), ce qui laisse 254 adresses réellement attribuables."
+  },
+  {
+    "id": "reseaux-e5",
+    "enonce": "Quelles étapes composent l'établissement d'une connexion TCP ?",
+    "choix": ["SYN, SYN-ACK, ACK", "GET, POST, PUT", "PING, PONG, CLOSE", "OPEN, READ, WRITE"],
+    "bonneReponse": 0,
+    "explication": "TCP ouvre une connexion par une « poignée de main » en trois temps : le client envoie SYN, le serveur répond SYN-ACK, le client confirme par ACK. Le canal fiable est alors prêt."
+  },
+  {
+    "id": "reseaux-e6",
+    "enonce": "Sur combien de bits une adresse IPv6 est-elle codée ?",
+    "choix": ["32 bits", "64 bits", "128 bits", "256 bits"],
+    "bonneReponse": 2,
+    "explication": "IPv6 utilise 128 bits, contre 32 bits pour IPv4. Cela offre un nombre d'adresses colossal (environ 3,4 × 10^38), de quoi répondre à la pénurie d'adresses IPv4."
+  },
+  {
+    "id": "reseaux-e7",
+    "enonce": "À quoi sert le protocole ARP dans un réseau local ?",
+    "choix": ["Associer une adresse IP à une adresse MAC", "Attribuer les noms de domaine", "Chiffrer les connexions", "Router entre réseaux distants"],
+    "bonneReponse": 0,
+    "explication": "ARP (Address Resolution Protocol) trouve l'adresse MAC correspondant à une adresse IP sur le réseau local. Sans lui, une trame Ethernet ne saurait pas à quelle carte la livrer."
+  },
+  {
+    "id": "reseaux-e8",
+    "enonce": "Que permet de faire un VLAN ?",
+    "choix": ["Segmenter logiquement un réseau physique", "Augmenter la fréquence du processeur", "Remplacer le câblage par du sans-fil", "Stocker les mots de passe du réseau"],
+    "bonneReponse": 0,
+    "explication": "Un VLAN découpe un même équipement physique en plusieurs réseaux logiques isolés. On sépare ainsi, par exemple, le trafic des invités de celui de l'entreprise sans tirer de nouveaux câbles."
+  },
+  {
+    "id": "reseaux-e9",
+    "enonce": "Que désigne la MTU d'une interface réseau ?",
+    "choix": ["La taille maximale d'un paquet transmis", "Le nombre maximal de connexions", "La vitesse maximale du lien", "La durée de vie d'un paquet"],
+    "bonneReponse": 0,
+    "explication": "La MTU (Maximum Transmission Unit) est la taille du plus gros paquet transmissible sans fragmentation, souvent 1500 octets sur Ethernet. La durée de vie d'un paquet, elle, correspond au TTL."
+  },
+  {
+    "id": "reseaux-e10",
+    "enonce": "Quel protocole gère les échanges de routes entre les grands réseaux d'Internet ?",
+    "choix": ["BGP", "DHCP", "SMTP", "FTP"],
+    "bonneReponse": 0,
+    "explication": "BGP (Border Gateway Protocol) échange les routes entre systèmes autonomes (les grands opérateurs et hébergeurs). C'est la colonne vertébrale du routage mondial ; une erreur BGP peut couper des pans d'Internet."
+  }
+]

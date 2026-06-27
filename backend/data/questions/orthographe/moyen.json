@@ -1,0 +1,72 @@
+[
+  {
+    "id": "orthographe-m1",
+    "enonce": "Comment compléter « Il a perdu ___ lunettes » (les siennes) ?",
+    "choix": ["ces", "ses", "c'est", "s'est"],
+    "bonneReponse": 1,
+    "explication": "« ses » est un possessif pluriel (les siennes) : « il a perdu ses lunettes à lui ». « ces » est démonstratif et désigne (« ces lunettes-là »)."
+  },
+  {
+    "id": "orthographe-m2",
+    "enonce": "Comment compléter « ___ une très belle journée » ?",
+    "choix": ["C'est", "S'est", "Ces", "Ses"],
+    "bonneReponse": 0,
+    "explication": "« c'est » signifie « cela est » et présente quelque chose. « s'est » s'emploie uniquement avec un verbe pronominal (« il s'est levé »)."
+  },
+  {
+    "id": "orthographe-m3",
+    "enonce": "Comment compléter « Il ___ venir demain s'il le souhaite » ?",
+    "choix": ["peu", "peut", "peux", "peus"],
+    "bonneReponse": 1,
+    "explication": "« peut » est le verbe pouvoir à la 3e personne : on peut le remplacer par « pouvait ». « peu » est un adverbe de quantité (« il mange peu »)."
+  },
+  {
+    "id": "orthographe-m4",
+    "enonce": "Comment compléter « Je ___ ai dit la vérité » ?",
+    "choix": ["leur", "leurs", "l'heure", "leures"],
+    "bonneReponse": 0,
+    "explication": "Placé devant un verbe, « leur » est un pronom personnel toujours invariable (« je leur parle »). Avec un « s », « leurs » est un déterminant pluriel (« leurs livres »)."
+  },
+  {
+    "id": "orthographe-m5",
+    "enonce": "Comment compléter « ___ partiras-tu en vacances ? » ?",
+    "choix": ["Quand", "Quant", "Qu'en", "Cant"],
+    "bonneReponse": 0,
+    "explication": "« quand » signifie « à quel moment » : on peut le remplacer par « lorsque ». « quant » s'emploie avec « à » (« quant à moi »), et « qu'en » veut dire « que… en »."
+  },
+  {
+    "id": "orthographe-m6",
+    "enonce": "Quelle est l'orthographe correcte de ce mot ?",
+    "choix": ["développement", "dévelopement", "dévellopement", "développment"],
+    "bonneReponse": 0,
+    "explication": "« développement » prend deux « p » et un seul « l », et conserve le « e » de « développe » devant « -ment ». C'est le nom formé sur le verbe « développer »."
+  },
+  {
+    "id": "orthographe-m7",
+    "enonce": "Comment compléter « Ils sont ___ venus à la fête » ?",
+    "choix": ["tout", "tous", "touts", "toute"],
+    "bonneReponse": 1,
+    "explication": "Ici « tous » reprend un nom masculin pluriel (« tous les invités ») : il s'accorde. « tout » employé comme adverbe (« tout content ») reste généralement invariable."
+  },
+  {
+    "id": "orthographe-m8",
+    "enonce": "Comment compléter « Je suis ___ à partir, mes valises sont faites » ?",
+    "choix": ["près", "prêt", "prés", "prest"],
+    "bonneReponse": 1,
+    "explication": "« prêt » est un adjectif signifiant « préparé » ; il s'accorde (« elle est prête »). « près » signifie « à proximité » et reste invariable (« près de la gare »)."
+  },
+  {
+    "id": "orthographe-m9",
+    "enonce": "Comment compléter « Il faut deux ___ trois heures pour finir » ?",
+    "choix": ["voir", "voire", "voirent", "voar"],
+    "bonneReponse": 1,
+    "explication": "« voire » est un adverbe qui signifie « et même », il renforce une idée. « voir » sans « e » est le verbe (« voir un film »). Ne pas confondre les deux."
+  },
+  {
+    "id": "orthographe-m10",
+    "enonce": "Comment écrit-on « nous (commencer) le travail » au présent ?",
+    "choix": ["commencons", "commençons", "commenssons", "commencçons"],
+    "bonneReponse": 1,
+    "explication": "La cédille sous le « c » garde le son [s] devant a, o, u : « nous commençons », « il plaça ». Sans cédille, « co » se prononcerait [k]."
+  }
+]

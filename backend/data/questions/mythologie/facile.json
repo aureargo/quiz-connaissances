@@ -1,0 +1,72 @@
+[
+  {
+    "id": "myth-f1",
+    "enonce": "Qui est le roi des dieux de l'Olympe dans la mythologie grecque ?",
+    "choix": ["Poséidon", "Zeus", "Hadès", "Apollon"],
+    "bonneReponse": 1,
+    "explication": "Zeus règne sur l'Olympe, maître du ciel et de la foudre. Il partage le monde avec ses frères Poséidon (la mer) et Hadès (les Enfers)."
+  },
+  {
+    "id": "myth-f2",
+    "enonce": "Quel est le dieu romain de la guerre ?",
+    "choix": ["Vénus", "Neptune", "Mars", "Jupiter"],
+    "bonneReponse": 2,
+    "explication": "Mars est le dieu romain de la guerre, équivalent du grec Arès. Très honoré à Rome, il a donné son nom au mois de mars et à la planète Mars."
+  },
+  {
+    "id": "myth-f3",
+    "enonce": "Quel héros grec n'était vulnérable qu'au talon ?",
+    "choix": ["Ulysse", "Persée", "Achille", "Hercule"],
+    "bonneReponse": 2,
+    "explication": "Plongé enfant dans le Styx par sa mère, Achille devint invulnérable partout sauf au talon par lequel elle le tenait. D'où l'expression « talon d'Achille »."
+  },
+  {
+    "id": "myth-f4",
+    "enonce": "Quelle créature a un torse d'homme et un corps de cheval ?",
+    "choix": ["le minotaure", "le centaure", "le satyre", "le cyclope"],
+    "bonneReponse": 1,
+    "explication": "Le centaure mêle buste humain et corps de cheval. Le plus célèbre, Chiron, fut le sage précepteur de nombreux héros grecs."
+  },
+  {
+    "id": "myth-f5",
+    "enonce": "Quel dieu grec règne sur la mer, armé d'un trident ?",
+    "choix": ["Poséidon", "Zeus", "Hadès", "Arès"],
+    "bonneReponse": 0,
+    "explication": "Poséidon est le dieu des mers et des océans. Son trident pouvait déclencher tempêtes et tremblements de terre ; les Romains l'appelaient Neptune."
+  },
+  {
+    "id": "myth-f6",
+    "enonce": "Dans la mythologie nordique, qui est le dieu du tonnerre au marteau ?",
+    "choix": ["Odin", "Loki", "Thor", "Freyr"],
+    "bonneReponse": 2,
+    "explication": "Thor, fils d'Odin, manie le marteau Mjöllnir et protège les hommes et les dieux. Il a donné son nom au jeudi (« Thursday » en anglais)."
+  },
+  {
+    "id": "myth-f7",
+    "enonce": "Quel monstre féminin a des serpents à la place des cheveux ?",
+    "choix": ["l'Hydre", "la Méduse", "la Chimère", "la Harpie"],
+    "bonneReponse": 1,
+    "explication": "La Méduse, l'une des trois Gorgones, change en pierre quiconque croise son regard. Le héros Persée la décapita en se guidant avec le reflet de son bouclier."
+  },
+  {
+    "id": "myth-f8",
+    "enonce": "Quelle déesse grecque incarne l'amour et la beauté ?",
+    "choix": ["Athéna", "Héra", "Aphrodite", "Artémis"],
+    "bonneReponse": 2,
+    "explication": "Aphrodite, née de l'écume de la mer, est la déesse de l'amour et de la beauté. Les Romains l'identifiaient à Vénus."
+  },
+  {
+    "id": "myth-f9",
+    "enonce": "Quel demi-dieu grec est célèbre pour ses douze travaux ?",
+    "choix": ["Thésée", "Héraclès", "Jason", "Persée"],
+    "bonneReponse": 1,
+    "explication": "Héraclès (Hercule chez les Romains), fils de Zeus, accomplit douze travaux pour expier le meurtre des siens, comme tuer le lion de Némée et l'Hydre de Lerne."
+  },
+  {
+    "id": "myth-f10",
+    "enonce": "Quel dieu égyptien à tête de faucon est le dieu du ciel ?",
+    "choix": ["Anubis", "Rê", "Horus", "Seth"],
+    "bonneReponse": 2,
+    "explication": "Horus, fils d'Osiris et d'Isis, est représenté avec une tête de faucon. Dieu du ciel et de la royauté, les pharaons étaient considérés comme ses incarnations."
+  }
+]

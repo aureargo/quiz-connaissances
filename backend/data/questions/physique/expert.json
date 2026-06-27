@@ -1,0 +1,72 @@
+[
+  {
+    "id": "physique-e1",
+    "enonce": "Quelle équation exprime l'équivalence entre la masse et l'énergie, établie par Einstein ?",
+    "choix": ["E = mc²", "E = ½mv²", "F = ma", "E = mc"],
+    "bonneReponse": 0,
+    "explication": "E = mc² relie l'énergie d'un corps à sa masse multipliée par le carré de la vitesse de la lumière. Une infime masse correspond à une énergie colossale, principe à l'œuvre dans les réactions nucléaires."
+  },
+  {
+    "id": "physique-e2",
+    "enonce": "Parmi ces particules, laquelle porte une charge électrique négative ?",
+    "choix": ["le proton", "l'électron", "le neutron", "le photon"],
+    "bonneReponse": 1,
+    "explication": "L'électron porte une charge négative. Le proton est positif, le neutron est neutre et le photon, grain de lumière, n'a pas de charge."
+  },
+  {
+    "id": "physique-e3",
+    "enonce": "Quel principe interdit de connaître simultanément et avec précision la position et la vitesse d'une particule ?",
+    "choix": ["le principe d'exclusion de Pauli", "le principe d'incertitude de Heisenberg", "la dualité onde-corpuscule", "le principe de superposition"],
+    "bonneReponse": 1,
+    "explication": "Le principe d'incertitude de Heisenberg (1927) pose une limite fondamentale : plus on connaît la position d'une particule, moins on connaît sa quantité de mouvement, et inversement."
+  },
+  {
+    "id": "physique-e4",
+    "enonce": "Selon le deuxième principe de la thermodynamique, quelle grandeur d'un système isolé ne peut qu'augmenter ?",
+    "choix": ["l'enthalpie", "la température", "l'entropie", "la pression"],
+    "bonneReponse": 2,
+    "explication": "L'entropie, qui mesure le désordre d'un système, croît ou reste constante dans un système isolé. Ce principe donne au temps une direction privilégiée."
+  },
+  {
+    "id": "physique-e5",
+    "enonce": "Quel effet, expliqué par Einstein en 1905, décrit l'émission d'électrons par un métal éclairé ?",
+    "choix": ["l'effet Doppler", "l'effet Joule", "l'effet photoélectrique", "l'effet tunnel"],
+    "bonneReponse": 2,
+    "explication": "L'effet photoélectrique montre que la lumière transporte son énergie par paquets (les photons). Cette explication a valu à Einstein le prix Nobel de physique en 1921."
+  },
+  {
+    "id": "physique-e6",
+    "enonce": "De quoi un proton est-il composé selon le modèle standard ?",
+    "choix": ["de trois quarks", "de deux électrons", "d'un noyau et d'un photon", "de quatre neutrinos"],
+    "bonneReponse": 0,
+    "explication": "Un proton est formé de trois quarks (deux quarks « up » et un quark « down ») liés par l'interaction forte. Les quarks sont des particules élémentaires."
+  },
+  {
+    "id": "physique-e7",
+    "enonce": "Vers quelle couleur se décale la lumière d'une galaxie qui s'éloigne de nous ?",
+    "choix": ["vers le bleu", "vers le vert", "vers le rouge", "elle ne change pas"],
+    "bonneReponse": 2,
+    "explication": "C'est le décalage vers le rouge : l'éloignement étire la longueur d'onde de la lumière. Hubble s'est appuyé sur ce phénomène pour montrer que l'Univers est en expansion."
+  },
+  {
+    "id": "physique-e8",
+    "enonce": "Quelle constante relie l'énergie d'un photon à sa fréquence dans la relation E = h·f ?",
+    "choix": ["la constante de Boltzmann", "la constante de Planck", "la constante d'Avogadro", "la constante de gravitation"],
+    "bonneReponse": 1,
+    "explication": "La constante de Planck (h) est au cœur de la physique quantique : elle quantifie l'énergie d'un photon en fonction de sa fréquence. Sa petitesse explique pourquoi les effets quantiques sont invisibles à notre échelle."
+  },
+  {
+    "id": "physique-e9",
+    "enonce": "Selon la relativité restreinte, comment s'écoule le temps d'un objet très rapide, vu par un observateur immobile ?",
+    "choix": ["plus lentement", "plus rapidement", "il s'arrête net", "exactement pareil"],
+    "bonneReponse": 0,
+    "explication": "C'est la dilatation du temps : pour un observateur immobile, le temps d'un objet se déplaçant à très grande vitesse s'écoule plus lentement. L'effet n'est sensible qu'aux vitesses proches de celle de la lumière."
+  },
+  {
+    "id": "physique-e10",
+    "enonce": "Quelle force fondamentale assure la cohésion du noyau atomique ?",
+    "choix": ["la gravitation", "l'interaction faible", "l'interaction forte", "la force électromagnétique"],
+    "bonneReponse": 2,
+    "explication": "L'interaction forte lie les quarks et maintient ensemble protons et neutrons malgré la répulsion électrique entre protons. C'est la plus intense des quatre forces fondamentales."
+  }
+]

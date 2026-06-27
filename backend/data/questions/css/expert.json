@@ -1,0 +1,72 @@
+[
+  {
+    "id": "css-e1",
+    "enonce": "Parmi ces sélecteurs, lequel a la plus forte spécificité ?",
+    "choix": ["un sélecteur d'élément (`p`)", "un sélecteur de classe (`.actif`)", "un sélecteur d'identifiant (`#menu`)", "le sélecteur universel (`*`)"],
+    "bonneReponse": 2,
+    "explication": "L'identifiant (`#menu`) l'emporte sur la classe, qui l'emporte sur l'élément. À spécificité égale, c'est la dernière règle déclarée qui gagne."
+  },
+  {
+    "id": "css-e2",
+    "enonce": "Comment se comporte un élément en `position: sticky` ?",
+    "choix": ["Il reste toujours fixe à l'écran", "Il est relatif puis se fige une fois un seuil de défilement atteint", "Il est retiré du flux comme `absolute`", "Il se comporte exactement comme `static`"],
+    "bonneReponse": 1,
+    "explication": "Un élément `sticky` défile normalement, puis « colle » à une position (ex. `top: 0`) une fois ce seuil franchi. Parfait pour un en-tête qui reste visible au défilement."
+  },
+  {
+    "id": "css-e3",
+    "enonce": "Quelle valeur de `display` crée une grille bidimensionnelle ?",
+    "choix": ["flex", "grid", "table", "inline-block"],
+    "bonneReponse": 1,
+    "explication": "`display: grid` gère lignes ET colonnes en même temps (deux dimensions), là où Flexbox raisonne surtout sur un seul axe à la fois."
+  },
+  {
+    "id": "css-e4",
+    "enonce": "Que représente l'unité `fr` dans une grille CSS ?",
+    "choix": ["un pixel fractionnaire", "une fraction de l'espace disponible dans la grille", "la taille de la police courante", "un pourcentage de la fenêtre"],
+    "bonneReponse": 1,
+    "explication": "`1fr` prend une part de l'espace restant. Avec `grid-template-columns: 1fr 2fr`, la seconde colonne est deux fois plus large que la première."
+  },
+  {
+    "id": "css-e5",
+    "enonce": "Comment déclare-t-on une variable CSS (custom property) ?",
+    "choix": ["`$couleur: red;`", "`@couleur: red;`", "`--couleur: red;`", "`var couleur = red;`"],
+    "bonneReponse": 2,
+    "explication": "Une variable CSS native se déclare avec deux tirets (`--couleur: red;`) puis se réutilise via `color: var(--couleur);`. Elle est dynamique et suit la cascade, contrairement aux variables de Sass."
+  },
+  {
+    "id": "css-e6",
+    "enonce": "À quoi sert une règle `@media` ?",
+    "choix": ["À importer une police", "À appliquer des styles selon des conditions (largeur d'écran, type d'appareil…)", "À lire un fichier audio", "À déclencher une animation"],
+    "bonneReponse": 1,
+    "explication": "Les « media queries » (`@media (max-width: 600px) { ... }`) adaptent la mise en page au contexte. C'est le socle du responsive design."
+  },
+  {
+    "id": "css-e7",
+    "enonce": "Que permet la fonction `calc()` ?",
+    "choix": ["Arrondir un nombre", "Effectuer des calculs mêlant différentes unités (ex. `100% - 20px`)", "Générer une couleur aléatoire", "Compter les éléments enfants"],
+    "bonneReponse": 1,
+    "explication": "`calc()` combine des unités incompatibles autrement : `width: calc(100% - 20px)`. Très utile pour des dimensions mi-relatives, mi-absolues."
+  },
+  {
+    "id": "css-e8",
+    "enonce": "Que fait `::before` ?",
+    "choix": ["Sélectionne l'élément frère précédent", "Insère un pseudo-élément généré avant le contenu", "Cible le premier enfant", "Applique un style au survol"],
+    "bonneReponse": 1,
+    "explication": "`::before` crée un pseudo-élément stylable inséré avant le contenu, alimenté par la propriété `content`. Pratique pour des icônes ou décorations sans toucher au HTML."
+  },
+  {
+    "id": "css-e9",
+    "enonce": "À quoi est relative l'unité `em` pour une propriété comme `padding` ?",
+    "choix": ["À la taille de police de l'élément racine", "À la taille de police de l'élément courant", "À la largeur du parent", "À la résolution de l'écran"],
+    "bonneReponse": 1,
+    "explication": "`em` se base sur la `font-size` de l'élément lui-même (sauf pour `font-size`, où elle se réfère au parent). D'où des effets cumulatifs en cas d'imbrication, que `rem` évite."
+  },
+  {
+    "id": "css-e10",
+    "enonce": "Quelle est la différence entre `transition` et `animation` en CSS ?",
+    "choix": ["Aucune, ce sont des synonymes", "`transition` interpole entre deux états déclenchés ; `animation` suit des `@keyframes` et peut tourner seule, en boucle", "`animation` est simplement plus rapide", "`transition` ne fonctionne qu'au survol"],
+    "bonneReponse": 1,
+    "explication": "Une `transition` anime le passage d'un état à un autre suite à un changement (survol, classe ajoutée…). Une `animation` suit une suite d'étapes (`@keyframes`) et peut démarrer seule et boucler."
+  }
+]

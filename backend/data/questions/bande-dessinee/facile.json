@@ -1,0 +1,72 @@
+[
+  {
+    "id": "bd-f1",
+    "enonce": "Quel jeune reporter, accompagné de son chien Milou, a été créé par Hergé ?",
+    "choix": ["Spirou", "Tintin", "Gaston Lagaffe", "Lucky Luke"],
+    "bonneReponse": 1,
+    "explication": "Tintin, reporter à la houppette, vit ses aventures à travers le monde avec son fidèle fox-terrier Milou. Hergé l'a créé en 1929 dans le journal « Le Petit Vingtième »."
+  },
+  {
+    "id": "bd-f2",
+    "enonce": "Qui est le fidèle compagnon d'Astérix, grand amateur de sangliers ?",
+    "choix": ["Obélix", "Idéfix", "Panoramix", "Assurancetourix"],
+    "bonneReponse": 0,
+    "explication": "Obélix, tombé dans la marmite de potion magique étant petit, est d'une force colossale. Il livre des menhirs et raffole des sangliers et de la baston contre les Romains."
+  },
+  {
+    "id": "bd-f3",
+    "enonce": "Comment s'appelle le petit chien d'Obélix dans Astérix ?",
+    "choix": ["Milou", "Idéfix", "Rantanplan", "Bill"],
+    "bonneReponse": 1,
+    "explication": "Idéfix, minuscule chien blanc, apparaît dans « Le Tour de Gaule » et adopte Obélix. Son nom est un jeu de mots sur « idée fixe »."
+  },
+  {
+    "id": "bd-f4",
+    "enonce": "Quel cow-boy solitaire est célèbre pour « tirer plus vite que son ombre » ?",
+    "choix": ["Blueberry", "Lucky Luke", "Jerry Spring", "Buddy Longway"],
+    "bonneReponse": 1,
+    "explication": "Lucky Luke, créé par Morris, parcourt l'Ouest américain sur son cheval Jolly Jumper. Il dégaine plus vite que son ombre et finit chaque album en s'éloignant au soleil couchant."
+  },
+  {
+    "id": "bd-f5",
+    "enonce": "Comment s'appellent les petits êtres bleus vivant dans des champignons, créés par Peyo ?",
+    "choix": ["les Schtroumpfs", "les Barbapapa", "les Minions", "les Snorky"],
+    "bonneReponse": 0,
+    "explication": "Les Schtroumpfs, hauts « comme trois pommes », sont apparus en 1958 dans la série « Johan et Pirlouit ». Leur langage remplace beaucoup de mots par « schtroumpf »."
+  },
+  {
+    "id": "bd-f6",
+    "enonce": "Quel marin colérique et ami de Tintin est célèbre pour son juron « Mille sabords ! » ?",
+    "choix": ["le capitaine Haddock", "le professeur Tournesol", "Tintin", "Nestor"],
+    "bonneReponse": 0,
+    "explication": "Le capitaine Archibald Haddock, grand amateur de whisky, multiplie les jurons pittoresques comme « Mille sabords ! » ou « Tonnerre de Brest ! ». Il apparaît dans « Le Crabe aux pinces d'or »."
+  },
+  {
+    "id": "bd-f7",
+    "enonce": "Dans Astérix, quel druide prépare la fameuse potion magique ?",
+    "choix": ["Panoramix", "Abraracourcix", "Assurancetourix", "Ordralfabétix"],
+    "bonneReponse": 0,
+    "explication": "Panoramix, le druide du village, est le seul à connaître la recette de la potion magique qui donne une force surhumaine. Elle est au cœur de la résistance gauloise contre Rome."
+  },
+  {
+    "id": "bd-f8",
+    "enonce": "Quel employé de bureau paresseux et gaffeur a été créé par André Franquin ?",
+    "choix": ["Gaston Lagaffe", "Achille Talon", "Cubitus", "Boule"],
+    "bonneReponse": 0,
+    "explication": "Gaston Lagaffe, antihéros nonchalant des éditions Dupuis, accumule les catastrophes au bureau. Franquin l'a créé en 1957 dans le journal Spirou."
+  },
+  {
+    "id": "bd-f9",
+    "enonce": "Quel super-héros américain est surnommé « l'homme-araignée » ?",
+    "choix": ["Superman", "Spider-Man", "Batman", "Hulk"],
+    "bonneReponse": 1,
+    "explication": "Spider-Man, alias Peter Parker, obtient ses pouvoirs après la morsure d'une araignée radioactive. Créé chez Marvel en 1962 par Stan Lee et Steve Ditko, il lance des toiles et grimpe aux murs."
+  },
+  {
+    "id": "bd-f10",
+    "enonce": "Quel super-héros en cape rouge vient de la planète Krypton ?",
+    "choix": ["Batman", "Superman", "Iron Man", "Flash"],
+    "bonneReponse": 1,
+    "explication": "Superman, rescapé de la planète Krypton, vit sur Terre sous l'identité de Clark Kent. Créé en 1938, il est l'un des tout premiers super-héros de l'histoire des comics."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cpu-f1",
+    "enonce": "Que signifie le sigle « CPU » ?",
+    "choix": ["Central Processing Unit", "Computer Power Unit", "Central Program Utility", "Core Processing Update"],
+    "bonneReponse": 0,
+    "explication": "« CPU » signifie Central Processing Unit, soit unité centrale de traitement : le composant qui exécute les instructions des programmes."
+  },
+  {
+    "id": "cpu-f2",
+    "enonce": "Quel est le rôle principal du processeur (CPU) ?",
+    "choix": ["exécuter les instructions des programmes", "afficher l'image à l'écran", "stocker les fichiers durablement", "alimenter la carte mère en électricité"],
+    "bonneReponse": 0,
+    "explication": "Le CPU lit et exécute les instructions des programmes : calculs, comparaisons, déplacements de données. L'affichage relève du GPU et le stockage durable du disque."
+  },
+  {
+    "id": "cpu-f3",
+    "enonce": "Comment surnomme-t-on souvent le processeur dans un ordinateur ?",
+    "choix": ["le cerveau", "le squelette", "le poumon", "l'estomac"],
+    "bonneReponse": 0,
+    "explication": "On appelle souvent le CPU le « cerveau » de l'ordinateur, car c'est lui qui traite les instructions et coordonne le travail des autres composants."
+  },
+  {
+    "id": "cpu-f4",
+    "enonce": "En quelle unité exprime-t-on la fréquence d'horloge d'un processeur moderne ?",
+    "choix": ["le gigahertz", "le gigaoctet", "le mégapixel", "le kilowatt"],
+    "bonneReponse": 0,
+    "explication": "La fréquence d'horloge se mesure en hertz, et en gigahertz (GHz) pour les CPU actuels : un CPU à 3 GHz cadence environ 3 milliards de cycles par seconde. Le gigaoctet, lui, mesure une quantité de données."
+  },
+  {
+    "id": "cpu-f5",
+    "enonce": "Quels sont les deux principaux fabricants de processeurs pour PC de bureau ?",
+    "choix": ["Intel et AMD", "Nvidia et ATI", "Sony et Microsoft", "Samsung et LG"],
+    "bonneReponse": 0,
+    "explication": "Intel et AMD se partagent l'essentiel du marché des processeurs x86 pour PC. Nvidia est surtout connu pour les cartes graphiques."
+  },
+  {
+    "id": "cpu-f6",
+    "enonce": "Qu'est-ce qu'un processeur « multicœur » ?",
+    "choix": ["une puce contenant plusieurs cœurs de calcul", "un processeur cadencé à plusieurs gigahertz", "un processeur doté de plusieurs ventilateurs", "un processeur compatible avec plusieurs marques"],
+    "bonneReponse": 0,
+    "explication": "Un processeur multicœur regroupe plusieurs cœurs (unités de calcul) sur une même puce, ce qui lui permet d'exécuter plusieurs tâches réellement en parallèle."
+  },
+  {
+    "id": "cpu-f7",
+    "enonce": "À quoi sert la mémoire cache d'un processeur ?",
+    "choix": ["garder à portée les données souvent utilisées pour y accéder plus vite", "stocker les fichiers même une fois l'appareil éteint", "afficher les images en haute résolution", "refroidir le processeur"],
+    "bonneReponse": 0,
+    "explication": "Le cache est une petite mémoire très rapide, intégrée au CPU, qui conserve les données et instructions fréquemment utilisées pour éviter les accès lents à la mémoire vive."
+  },
+  {
+    "id": "cpu-f8",
+    "enonce": "Quel matériau semi-conducteur sert de base à la fabrication des processeurs ?",
+    "choix": ["le silicium", "le cuivre", "le plastique", "le verre"],
+    "bonneReponse": 0,
+    "explication": "Les puces sont gravées sur des galettes (wafers) de silicium, un semi-conducteur. Le cuivre sert aux interconnexions, mais la base reste le silicium."
+  },
+  {
+    "id": "cpu-f9",
+    "enonce": "Quel composant est spécialisé dans le calcul graphique, en complément du CPU ?",
+    "choix": ["le GPU", "le SSD", "la RAM", "le BIOS"],
+    "bonneReponse": 0,
+    "explication": "Le GPU (processeur graphique) est optimisé pour traiter en masse des calculs parallèles, idéal pour la 3D et l'image. Le CPU, lui, est plus polyvalent."
+  },
+  {
+    "id": "cpu-f10",
+    "enonce": "Que désigne un « cœur » (core) dans un processeur ?",
+    "choix": ["une unité capable d'exécuter des instructions", "un connecteur d'alimentation", "un type de mémoire externe", "un logiciel de pilotage"],
+    "bonneReponse": 0,
+    "explication": "Un cœur est une unité de traitement complète qui exécute des instructions. Un processeur quadricœur possède quatre cœurs pouvant travailler simultanément."
+  }
+]

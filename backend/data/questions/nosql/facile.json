@@ -1,0 +1,72 @@
+[
+  {
+    "id": "nosql-f1",
+    "enonce": "Comment lit-on le plus souvent l'acronyme « NoSQL » aujourd'hui ?",
+    "choix": ["No SQL Allowed", "Not Only SQL", "New Standard Query", "Non Sequential Query"],
+    "bonneReponse": 1,
+    "explication": "Compris à l'origine comme « pas de SQL », le terme est désormais lu « Not Only SQL » : ces bases complètent le relationnel plutôt que de toujours l'exclure."
+  },
+  {
+    "id": "nosql-f2",
+    "enonce": "Laquelle de ces bases de données est orientée documents ?",
+    "choix": ["MySQL", "MongoDB", "PostgreSQL", "SQLite"],
+    "bonneReponse": 1,
+    "explication": "MongoDB stocke des documents proches du JSON. Les trois autres sont des bases relationnelles classiques interrogées en SQL."
+  },
+  {
+    "id": "nosql-f3",
+    "enonce": "Sous quel format un document MongoDB est-il décrit ?",
+    "choix": ["XML", "CSV", "JSON", "YAML"],
+    "bonneReponse": 2,
+    "explication": "On manipule les documents au format JSON. En interne, MongoDB les stocke sous une forme binaire optimisée appelée BSON."
+  },
+  {
+    "id": "nosql-f4",
+    "enonce": "Redis et Memcached sont des exemples de bases de type…",
+    "choix": ["clé-valeur", "documents", "graphe", "colonnes"],
+    "bonneReponse": 0,
+    "explication": "Ces bases associent une clé à une valeur, comme un grand dictionnaire gardé en mémoire, ce qui les rend très rapides."
+  },
+  {
+    "id": "nosql-f5",
+    "enonce": "À quoi sert le plus souvent Redis ?",
+    "choix": ["Compiler du code source", "Mettre des données en cache en mémoire", "Concevoir des interfaces web", "Gérer l'impression de documents"],
+    "bonneReponse": 1,
+    "explication": "Redis garde les données en RAM, ce qui le rend ultra-rapide : on l'emploie surtout comme cache ou comme file de messages."
+  },
+  {
+    "id": "nosql-f6",
+    "enonce": "Dans MongoDB, comment appelle-t-on un groupe de documents ?",
+    "choix": ["une table", "une collection", "un tableau", "un dossier"],
+    "bonneReponse": 1,
+    "explication": "Une « collection » regroupe des documents, comme une table regroupe des lignes en SQL — mais sans schéma imposé à l'avance."
+  },
+  {
+    "id": "nosql-f7",
+    "enonce": "Quelle caractéristique distingue souvent une base NoSQL d'une base relationnelle ?",
+    "choix": ["un schéma fixe imposé", "un schéma souple ou absent", "l'usage exclusif de SQL", "l'absence totale d'index"],
+    "bonneReponse": 1,
+    "explication": "Beaucoup de bases NoSQL sont « schema-less » : on peut ajouter un champ à un document sans migration, contrairement au modèle relationnel rigide."
+  },
+  {
+    "id": "nosql-f8",
+    "enonce": "Quel besoin a fait émerger les bases NoSQL dans les années 2000 ?",
+    "choix": ["Imprimer des documents plus rapidement", "Gérer d'énormes volumes répartis sur de nombreux serveurs", "Remplacer le langage HTML des pages web", "Sécuriser le stockage des mots de passe"],
+    "bonneReponse": 1,
+    "explication": "Les géants du web (Google, Amazon…) devaient stocker des données massives réparties sur des grappes de serveurs, ce que le relationnel gérait mal."
+  },
+  {
+    "id": "nosql-f9",
+    "enonce": "Laquelle de ces bases est orientée graphe ?",
+    "choix": ["Neo4j", "Oracle", "MariaDB", "Microsoft Access"],
+    "bonneReponse": 0,
+    "explication": "Neo4j modélise des nœuds et des relations, idéal pour les réseaux sociaux ou les recommandations. Les trois autres sont relationnelles."
+  },
+  {
+    "id": "nosql-f10",
+    "enonce": "À quelle structure de programmation un stockage clé-valeur ressemble-t-il le plus ?",
+    "choix": ["une boucle for", "un dictionnaire (table de hachage)", "une fonction", "une expression régulière"],
+    "bonneReponse": 1,
+    "explication": "Le modèle clé-valeur fonctionne comme un dictionnaire : on récupère directement une valeur à partir de sa clé, sans parcourir le reste."
+  }
+]

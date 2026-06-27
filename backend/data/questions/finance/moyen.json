@@ -1,0 +1,72 @@
+[
+  {
+    "id": "finance-m1",
+    "enonce": "Qu'est-ce qu'une obligation ?",
+    "choix": ["Une part du capital d'une entreprise", "Un contrat d'assurance-vie", "Un compte d'épargne réglementé", "Un titre de dette émis par un emprunteur"],
+    "bonneReponse": 3,
+    "explication": "Une obligation est un titre de créance : l'émetteur (État ou entreprise) emprunte de l'argent, verse des intérêts (coupons), puis rembourse le capital à l'échéance."
+  },
+  {
+    "id": "finance-m2",
+    "enonce": "Que désigne la « capitalisation boursière » d'une entreprise ?",
+    "choix": ["La valeur totale de ses actions en bourse", "Son bénéfice annuel net", "Le montant total de ses dettes", "Son chiffre d'affaires annuel"],
+    "bonneReponse": 0,
+    "explication": "La capitalisation boursière se calcule en multipliant le nombre d'actions par leur cours. Elle reflète la valeur que le marché attribue à l'entreprise."
+  },
+  {
+    "id": "finance-m3",
+    "enonce": "En quoi consiste la diversification d'un portefeuille ?",
+    "choix": ["Concentrer ses fonds sur un seul actif", "Répartir ses placements pour réduire le risque", "Emprunter afin d'investir davantage", "Vendre tous ses actifs en même temps"],
+    "bonneReponse": 1,
+    "explication": "Diversifier, c'est ne pas mettre tous ses œufs dans le même panier : la perte sur un actif peut être compensée par les gains des autres."
+  },
+  {
+    "id": "finance-m4",
+    "enonce": "Que regroupe l'indice CAC 40 ?",
+    "choix": ["Les 40 plus grandes banques européennes", "Le principal taux directeur de la BCE", "Les 40 plus grandes valeurs de la Bourse de Paris", "Les 40 devises les plus échangées"],
+    "bonneReponse": 2,
+    "explication": "Le CAC 40 est l'indice phare de la Bourse de Paris : il suit le cours de 40 grandes sociétés françaises et sert de baromètre du marché."
+  },
+  {
+    "id": "finance-m5",
+    "enonce": "Quel est le rôle d'une banque centrale comme la BCE ?",
+    "choix": ["Gérer la monnaie et fixer les taux directeurs", "Être la plus grande banque commerciale du pays", "Garantir les dépôts des particuliers", "Organiser la bourse des matières premières"],
+    "bonneReponse": 0,
+    "explication": "La banque centrale (la BCE pour la zone euro) émet la monnaie et fixe les taux directeurs pour réguler l'inflation et soutenir l'économie."
+  },
+  {
+    "id": "finance-m6",
+    "enonce": "Que mesure le rendement d'un placement ?",
+    "choix": ["Le montant total qui a été investi", "La durée totale du placement", "Le risque de perte en capital", "Le gain rapporté par rapport à la somme investie"],
+    "bonneReponse": 3,
+    "explication": "Le rendement, exprimé en pourcentage, rapporte le gain (intérêts, dividendes, plus-value) à la somme investie. Il permet de comparer des placements de tailles différentes."
+  },
+  {
+    "id": "finance-m7",
+    "enonce": "Qu'est-ce qu'un taux directeur ?",
+    "choix": ["Le taux d'un crédit immobilier", "Le taux auquel la banque centrale prête aux banques", "Le taux d'imposition des sociétés", "Le taux de change entre deux devises"],
+    "bonneReponse": 1,
+    "explication": "En modifiant son taux directeur, la banque centrale change le coût de l'argent pour les banques, ce qui se répercute sur le crédit dans toute l'économie."
+  },
+  {
+    "id": "finance-m8",
+    "enonce": "Quand dit-on qu'un État est en déficit budgétaire ?",
+    "choix": ["Quand il a entièrement remboursé sa dette", "Quand il perçoit plus d'impôts que prévu", "Quand il dépense plus qu'il ne perçoit de recettes", "Quand il imprime de la monnaie sans limite"],
+    "bonneReponse": 2,
+    "explication": "Le déficit budgétaire apparaît quand les dépenses publiques d'une année dépassent les recettes (impôts, taxes). Il se finance en empruntant, ce qui alimente la dette."
+  },
+  {
+    "id": "finance-m9",
+    "enonce": "Qu'est-ce que le PEA (plan d'épargne en actions) ?",
+    "choix": ["Une enveloppe pour investir en actions avec avantage fiscal", "Un livret d'épargne garanti par l'État", "Un crédit à la consommation classique", "Un contrat d'assurance obligatoire"],
+    "bonneReponse": 0,
+    "explication": "Le PEA permet d'investir en actions européennes. Après cinq ans de détention, les gains sont exonérés d'impôt sur le revenu (les prélèvements sociaux restent dus)."
+  },
+  {
+    "id": "finance-m10",
+    "enonce": "Que se passe-t-il pour un emprunteur quand les taux d'intérêt montent ?",
+    "choix": ["Ses dettes existantes s'effacent", "Son épargne perd toute sa valeur", "Ses impôts diminuent automatiquement", "Le coût de ses nouveaux emprunts augmente"],
+    "bonneReponse": 3,
+    "explication": "Des taux plus élevés renchérissent le crédit : un nouvel emprunt coûte plus cher, ce qui tend à freiner les achats à crédit comme l'immobilier."
+  }
+]

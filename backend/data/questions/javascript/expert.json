@@ -1,0 +1,72 @@
+[
+  {
+    "id": "js-e1",
+    "enonce": "Qu'est-ce qu'une fermeture (closure) en JavaScript ?",
+    "choix": ["Une fonction qui capture les variables de sa portée englobante", "Une fonction dépourvue de nom", "Une méthode privée d'une classe", "Une fonction exécutée immédiatement"],
+    "bonneReponse": 0,
+    "explication": "Une fermeture est une fonction qui « se souvient » des variables de l'environnement où elle a été créée, même après que cet environnement a cessé d'exister. C'est la base de l'encapsulation en JavaScript."
+  },
+  {
+    "id": "js-e2",
+    "enonce": "Entre une `Promise` déjà résolue et un `setTimeout(..., 0)`, lequel s'exécute en premier ?",
+    "choix": ["la Promise, car les microtâches passent avant", "le setTimeout, car son délai est nul", "les deux exactement en même temps", "celui qui a été déclaré en premier dans le code"],
+    "bonneReponse": 0,
+    "explication": "La boucle d'événements vide entièrement la file des microtâches (promesses) avant de passer aux macrotâches (`setTimeout`). La promesse s'exécute donc avant, même avec un délai de 0."
+  },
+  {
+    "id": "js-e3",
+    "enonce": "Sur quel mécanisme repose nativement l'héritage en JavaScript ?",
+    "choix": ["la chaîne de prototypes", "les classes abstraites", "les interfaces", "la copie profonde des objets"],
+    "bonneReponse": 0,
+    "explication": "Chaque objet possède un lien vers un prototype ; une propriété absente est cherchée le long de cette chaîne. La syntaxe `class` (ES6) n'est qu'un habillage par-dessus ce système de prototypes."
+  },
+  {
+    "id": "js-e4",
+    "enonce": "Que vaut `this` à l'intérieur d'une fonction fléchée ?",
+    "choix": ["le `this` du contexte englobant", "toujours l'objet global", "undefined en mode strict", "l'objet qui a appelé la fonction"],
+    "bonneReponse": 0,
+    "explication": "Une fonction fléchée n'a pas son propre `this` : elle hérite de celui de la portée où elle est définie. C'est pratique pour les callbacks, où une fonction classique perdrait le bon `this`."
+  },
+  {
+    "id": "js-e5",
+    "enonce": "Quelle est la différence entre `null` et `undefined` ?",
+    "choix": ["`undefined` est une valeur jamais assignée, `null` une absence volontaire", "ils sont strictement identiques", "`null` est un nombre et `undefined` un objet", "`undefined` ne peut pas être comparé"],
+    "bonneReponse": 0,
+    "explication": "`undefined` signifie qu'aucune valeur n'a été attribuée (variable déclarée non initialisée). `null` est une valeur assignée délibérément pour signaler « vide ». `null == undefined` vaut `true`, mais `null === undefined` vaut `false`."
+  },
+  {
+    "id": "js-e6",
+    "enonce": "Que fait l'opérateur de coalescence des nuls `??` ?",
+    "choix": ["Il renvoie l'opérande de droite si celui de gauche vaut `null` ou `undefined`", "Il renvoie toujours l'opérande de gauche", "Il teste l'égalité stricte des deux opérandes", "Il renvoie l'opérande de droite dès que celui de gauche est falsy"],
+    "bonneReponse": 0,
+    "explication": "`a ?? b` ne bascule sur `b` que si `a` est `null` ou `undefined`. Contrairement à `||`, il laisse passer `0` et `\"\"`, qui sont des valeurs valides souvent indésirables à écraser."
+  },
+  {
+    "id": "js-e7",
+    "enonce": "Que garantit l'activation du mode strict (`\"use strict\"`) ?",
+    "choix": ["Il interdit certaines syntaxes risquées et transforme des erreurs silencieuses en exceptions", "Il accélère l'exécution d'environ 50 %", "Il active le typage statique des variables", "Il empêche l'usage des fonctions fléchées"],
+    "bonneReponse": 0,
+    "explication": "Le mode strict interdit par exemple l'usage d'une variable non déclarée et fait échouer des affectations qui échouaient silencieusement. Les modules ES et les classes sont en mode strict d'office."
+  },
+  {
+    "id": "js-e8",
+    "enonce": "Que fait la méthode `Object.freeze(obj)` ?",
+    "choix": ["Elle empêche d'ajouter, supprimer ou modifier les propriétés de l'objet", "Elle supprime toutes les propriétés de l'objet", "Elle convertit l'objet en chaîne JSON", "Elle crée une copie profonde de l'objet"],
+    "bonneReponse": 0,
+    "explication": "`Object.freeze` rend l'objet immuable en surface (les tentatives de modification échouent, silencieusement ou par erreur en mode strict). Le gel n'est pas récursif : les objets imbriqués restent modifiables."
+  },
+  {
+    "id": "js-e9",
+    "enonce": "Que désigne le terme « event loop » (boucle d'événements) ?",
+    "choix": ["Le mécanisme qui orchestre l'exécution du code asynchrone sur un seul thread", "Le ramasse-miettes qui libère la mémoire", "Le compilateur à la volée (JIT)", "La boucle de rendu graphique du navigateur"],
+    "bonneReponse": 0,
+    "explication": "JavaScript exécute le code sur un seul fil. La boucle d'événements retire les tâches de leurs files (callbacks, promesses) et les exécute une fois la pile d'appels vide, donnant l'illusion du parallélisme."
+  },
+  {
+    "id": "js-e10",
+    "enonce": "Que fait la méthode `reduce()` d'un tableau ?",
+    "choix": ["Elle agrège tous les éléments en une seule valeur accumulée", "Elle supprime les doublons du tableau", "Elle raccourcit le tableau de moitié", "Elle retire les valeurs nulles du tableau"],
+    "bonneReponse": 0,
+    "explication": "`reduce()` parcourt le tableau en maintenant un accumulateur : utile pour une somme, un produit, ou pour reconstruire n'importe quelle structure. On lui fournit une fonction et une valeur initiale."
+  }
+]

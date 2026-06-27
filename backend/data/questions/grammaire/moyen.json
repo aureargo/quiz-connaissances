@@ -1,0 +1,72 @@
+[
+  {
+    "id": "grammaire-m1",
+    "enonce": "Dans « Paul mange une pomme », quelle est la fonction de « une pomme » ?",
+    "choix": ["Sujet du verbe", "Complément d'objet direct", "Complément d'objet indirect", "Attribut du sujet"],
+    "bonneReponse": 1,
+    "explication": "« Une pomme » répond à « mange quoi ? » sans préposition : c'est le complément d'objet direct (COD). Il subit directement l'action du verbe."
+  },
+  {
+    "id": "grammaire-m2",
+    "enonce": "Dans « Elle parle à son frère », quelle est la fonction de « à son frère » ?",
+    "choix": ["Complément d'objet direct", "Complément d'objet indirect", "Complément circonstanciel", "Attribut du sujet"],
+    "bonneReponse": 1,
+    "explication": "Le complément est relié au verbe par la préposition « à » et répond à « parle à qui ? » : c'est un complément d'objet indirect (COI). L'indirect passe toujours par une préposition."
+  },
+  {
+    "id": "grammaire-m3",
+    "enonce": "Dans « Le ciel est bleu », quelle est la fonction de « bleu » ?",
+    "choix": ["Épithète", "Attribut du sujet", "Complément du nom", "Apposition"],
+    "bonneReponse": 1,
+    "explication": "« Bleu » est relié au sujet « le ciel » par le verbe d'état « est » : c'est un attribut du sujet. Une épithète, au contraire, serait collée au nom sans verbe (« le ciel bleu »)."
+  },
+  {
+    "id": "grammaire-m4",
+    "enonce": "Comment compléter « Elles sont (partir) » au passé composé ?",
+    "choix": ["parti", "partis", "partie", "parties"],
+    "bonneReponse": 3,
+    "explication": "Avec l'auxiliaire « être », le participe passé s'accorde avec le sujet. « Elles » étant féminin pluriel, on écrit « parties »."
+  },
+  {
+    "id": "grammaire-m5",
+    "enonce": "À quel mode est le verbe dans « Mange ta soupe ! » ?",
+    "choix": ["Indicatif", "Impératif", "Subjonctif", "Conditionnel"],
+    "bonneReponse": 1,
+    "explication": "L'impératif sert à donner un ordre ou un conseil. Il se conjugue sans sujet exprimé et n'a que trois personnes (mange, mangeons, mangez)."
+  },
+  {
+    "id": "grammaire-m6",
+    "enonce": "À quel temps est conjugué « j'aurai mangé » ?",
+    "choix": ["Futur simple", "Futur antérieur", "Passé composé", "Plus-que-parfait"],
+    "bonneReponse": 1,
+    "explication": "« J'aurai mangé » est au futur antérieur : auxiliaire au futur simple (« aurai ») + participe passé. Il exprime une action future achevée avant une autre (« quand j'aurai mangé, je sortirai »)."
+  },
+  {
+    "id": "grammaire-m7",
+    "enonce": "Dans « le livre que je lis », quelle est la nature du mot « que » ?",
+    "choix": ["Conjonction de coordination", "Pronom relatif", "Pronom personnel", "Adverbe"],
+    "bonneReponse": 1,
+    "explication": "« Que » est ici un pronom relatif : il relie la proposition « je lis » au nom « livre » (son antécédent) et joue dans la relative la fonction de COD."
+  },
+  {
+    "id": "grammaire-m8",
+    "enonce": "Dans « une voiture rouge », quelle est la fonction de « rouge » ?",
+    "choix": ["Épithète", "Attribut du sujet", "Complément du nom", "Apposition"],
+    "bonneReponse": 0,
+    "explication": "« Rouge » est directement accolé au nom « voiture » qu'il qualifie, sans verbe d'état : c'est une épithète. Avec un verbe d'état (« la voiture est rouge »), ce serait un attribut."
+  },
+  {
+    "id": "grammaire-m9",
+    "enonce": "Les mots « mais, ou, et, donc, or, ni, car » sont des...",
+    "choix": ["Conjonctions de subordination", "Conjonctions de coordination", "Prépositions", "Adverbes"],
+    "bonneReponse": 1,
+    "explication": "« Mais, ou, et, donc, or, ni, car » sont les conjonctions de coordination : elles relient deux mots ou propositions de même fonction, sans rapport de dépendance."
+  },
+  {
+    "id": "grammaire-m10",
+    "enonce": "Dans « Pierre, mon voisin, est gentil », quelle est la fonction de « mon voisin » ?",
+    "choix": ["Épithète", "Attribut du sujet", "Apposition", "Complément circonstanciel"],
+    "bonneReponse": 2,
+    "explication": "« Mon voisin » désigne la même réalité que « Pierre » et le complète en étant détaché par des virgules : c'est une apposition."
+  }
+]

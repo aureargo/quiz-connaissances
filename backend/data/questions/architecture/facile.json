@@ -1,0 +1,72 @@
+[
+  {
+    "id": "architecture-f1",
+    "enonce": "Que désigne « l'architecture logicielle » d'une application ?",
+    "choix": ["La couleur et le style de son interface", "La structure générale et l'organisation de ses composants", "Le langage de programmation utilisé", "La vitesse d'exécution du programme"],
+    "bonneReponse": 1,
+    "explication": "L'architecture logicielle décrit comment une application est découpée en composants et comment ceux-ci interagissent. C'est le plan d'ensemble, indépendant des détails de code."
+  },
+  {
+    "id": "architecture-f2",
+    "enonce": "Dans le motif d'architecture MVC, que désigne la lettre « M » ?",
+    "choix": ["Le modèle, qui gère les données", "Le menu de l'application", "Le module de démarrage", "La mémoire du programme"],
+    "bonneReponse": 0,
+    "explication": "MVC sépare le Modèle (données et logique métier), la Vue (affichage) et le Contrôleur (coordination). Cette répartition des rôles facilite la maintenance."
+  },
+  {
+    "id": "architecture-f3",
+    "enonce": "Dans une application web classique, où s'exécute le « backend » ?",
+    "choix": ["Dans le navigateur du visiteur", "Sur le serveur", "Sur la carte graphique", "Dans le fichier HTML"],
+    "bonneReponse": 1,
+    "explication": "Le backend tourne côté serveur : il traite la logique métier et accède aux données. Le frontend, lui, s'exécute dans le navigateur du client."
+  },
+  {
+    "id": "architecture-f4",
+    "enonce": "À quoi sert principalement une API ?",
+    "choix": ["À dessiner l'interface graphique", "À permettre à deux logiciels de communiquer", "À compiler le code source", "À héberger un site web"],
+    "bonneReponse": 1,
+    "explication": "Une API (interface de programmation) définit un contrat par lequel deux programmes échangent des données et des services, sans connaître leurs détails internes."
+  },
+  {
+    "id": "architecture-f5",
+    "enonce": "Dans le modèle client-serveur, quel est le rôle du client ?",
+    "choix": ["Stocker l'ensemble des données", "Demander des ressources ou des services", "Héberger les autres clients", "Coordonner les serveurs entre eux"],
+    "bonneReponse": 1,
+    "explication": "Le client émet des requêtes ; le serveur les traite et renvoie une réponse. Un navigateur web est un client typique face à un serveur HTTP."
+  },
+  {
+    "id": "architecture-f6",
+    "enonce": "Comment qualifie-t-on une application dont tout le code forme un seul bloc déployable ?",
+    "choix": ["Distribuée", "Monolithique", "Sans serveur", "Parallèle"],
+    "bonneReponse": 1,
+    "explication": "Une architecture monolithique regroupe toutes les fonctionnalités dans une même unité. Simple au début, elle peut devenir difficile à faire évoluer quand le projet grossit."
+  },
+  {
+    "id": "architecture-f7",
+    "enonce": "Quel est le principal avantage de découper un programme en modules indépendants ?",
+    "choix": ["Augmenter la taille du code", "Faciliter la maintenance et la réutilisation", "Supprimer le besoin de tests", "Accélérer systématiquement l'exécution"],
+    "bonneReponse": 1,
+    "explication": "Des modules bien délimités se comprennent, se testent et se modifient séparément. C'est la « séparation des responsabilités », un pilier d'une architecture saine."
+  },
+  {
+    "id": "architecture-f8",
+    "enonce": "Que mesure le « couplage » entre deux modules logiciels ?",
+    "choix": ["Le nombre de lignes qu'ils contiennent", "Leur degré de dépendance mutuelle", "Leur vitesse d'exécution", "Le nombre de leurs auteurs"],
+    "bonneReponse": 1,
+    "explication": "Un couplage fort signifie qu'un module dépend beaucoup d'un autre : le modifier risque d'en casser d'autres. On vise un couplage faible pour des composants plus autonomes."
+  },
+  {
+    "id": "architecture-f9",
+    "enonce": "Que recommande le principe de conception « DRY » ?",
+    "choix": ["Écrire le maximum de commentaires", "Éviter de dupliquer le code", "Tout regrouper dans un seul fichier", "Réécrire avant de réutiliser"],
+    "bonneReponse": 1,
+    "explication": "DRY signifie « ne te répète pas » : une même connaissance ne doit exister qu'à un seul endroit. Dupliquer du code multiplie les risques d'incohérence lors des modifications."
+  },
+  {
+    "id": "architecture-f10",
+    "enonce": "Quel est le rôle d'une base de données dans une architecture applicative ?",
+    "choix": ["Afficher l'interface utilisateur", "Conserver les données de façon durable", "Compiler le programme", "Gérer la connexion réseau"],
+    "bonneReponse": 1,
+    "explication": "La base de données assure la persistance : les données y survivent à l'arrêt de l'application. C'est la couche de stockage, distincte de la logique métier."
+  }
+]

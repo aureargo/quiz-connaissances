@@ -1,0 +1,72 @@
+[
+  {
+    "id": "myth-m1",
+    "enonce": "Selon le mythe grec, qui ouvrit une boîte libérant tous les maux sur Terre ?",
+    "choix": ["Pandore", "Perséphone", "Cassandre", "Héra"],
+    "bonneReponse": 0,
+    "explication": "Pandore, première femme créée par les dieux, ouvrit par curiosité une jarre (la « boîte ») libérant les malheurs sur l'humanité. Seule l'espérance resta au fond."
+  },
+  {
+    "id": "myth-m2",
+    "enonce": "Quel héros a tué le Minotaure dans le labyrinthe de Crète ?",
+    "choix": ["Persée", "Thésée", "Icare", "Héraclès"],
+    "bonneReponse": 1,
+    "explication": "Thésée s'enfonça dans le labyrinthe, tua le Minotaure et retrouva la sortie grâce au fil que lui avait confié Ariane, fille du roi Minos."
+  },
+  {
+    "id": "myth-m3",
+    "enonce": "Quel dieu nordique est connu pour ses ruses et ses fourberies ?",
+    "choix": ["Tyr", "Baldr", "Loki", "Heimdall"],
+    "bonneReponse": 2,
+    "explication": "Loki, dieu farceur capable de changer de forme, sème le trouble chez les dieux. Ses manigances causent la mort de Baldr et précipitent le Ragnarök."
+  },
+  {
+    "id": "myth-m4",
+    "enonce": "Qui fait traverser le fleuve des Enfers aux âmes des morts ?",
+    "choix": ["Charon", "Cerbère", "Thanatos", "Hadès"],
+    "bonneReponse": 0,
+    "explication": "Charon, le passeur, fait franchir le Styx aux défunts contre une obole. On plaçait une pièce dans la bouche des morts pour payer la traversée."
+  },
+  {
+    "id": "myth-m5",
+    "enonce": "Quelle déesse grecque jaillit tout armée de la tête de Zeus ?",
+    "choix": ["Artémis", "Déméter", "Athéna", "Héra"],
+    "bonneReponse": 2,
+    "explication": "Athéna, déesse de la sagesse et de la guerre stratégique, naquit adulte et casquée du crâne de Zeus. La cité d'Athènes lui doit son nom."
+  },
+  {
+    "id": "myth-m6",
+    "enonce": "Dans la mythologie égyptienne, quel dieu à tête de chacal pèse le cœur des morts ?",
+    "choix": ["Osiris", "Horus", "Anubis", "Thot"],
+    "bonneReponse": 2,
+    "explication": "Anubis pèse le cœur du défunt face à la plume de Maât, déesse de la justice. Un cœur trop lourd de fautes était dévoré ; sinon, le mort accédait à l'au-delà."
+  },
+  {
+    "id": "myth-m7",
+    "enonce": "Quel oiseau légendaire renaît de ses propres cendres ?",
+    "choix": ["le griffon", "le phénix", "la harpie", "le sphinx"],
+    "bonneReponse": 1,
+    "explication": "Le phénix se consume puis renaît de ses cendres, symbole de renaissance et d'immortalité. Le mythe vient d'Égypte avant d'être repris par les Grecs."
+  },
+  {
+    "id": "myth-m8",
+    "enonce": "Dans l'Odyssée, quel roi d'Ithaque met dix ans à rentrer chez lui ?",
+    "choix": ["Agamemnon", "Ménélas", "Ulysse", "Achille"],
+    "bonneReponse": 2,
+    "explication": "Ulysse erre dix ans après la guerre de Troie avant de retrouver Ithaque et son épouse Pénélope. L'Odyssée d'Homère relate ce long périple."
+  },
+  {
+    "id": "myth-m9",
+    "enonce": "Quelle créature pose une énigme aux voyageurs aux portes de Thèbes ?",
+    "choix": ["le Sphinx", "la Méduse", "l'Hydre", "la Chimère"],
+    "bonneReponse": 0,
+    "explication": "Le Sphinx dévorait ceux qui échouaient à résoudre son énigme. Œdipe trouva la réponse — « l'homme » — et délivra la cité de Thèbes."
+  },
+  {
+    "id": "myth-m10",
+    "enonce": "Dans la mythologie nordique, comment se nomme le paradis des guerriers morts au combat ?",
+    "choix": ["le Midgard", "le Valhalla", "le Ragnarök", "l'Yggdrasil"],
+    "bonneReponse": 1,
+    "explication": "Le Valhalla est la grande halle d'Odin où les guerriers tombés héroïquement festoient en attendant le combat final du Ragnarök."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "physique-m1",
+    "enonce": "Quelle est l'unité de la force dans le Système international ?",
+    "choix": ["le joule", "le newton", "le watt", "le pascal"],
+    "bonneReponse": 1,
+    "explication": "La force se mesure en newtons (N). Le joule mesure une énergie, le watt une puissance et le pascal une pression."
+  },
+  {
+    "id": "physique-m2",
+    "enonce": "Quelle grandeur physique le watt mesure-t-il ?",
+    "choix": ["l'énergie", "la force", "la puissance", "la tension"],
+    "bonneReponse": 2,
+    "explication": "Le watt mesure la puissance, soit une énergie consommée ou produite par seconde (1 W = 1 J/s). Une ampoule de 60 W consomme 60 joules chaque seconde."
+  },
+  {
+    "id": "physique-m3",
+    "enonce": "Selon la loi d'Ohm, quelle relation lie la tension U, l'intensité I et la résistance R ?",
+    "choix": ["U = R × I", "U = R ÷ I", "U = I ÷ R", "U = R + I"],
+    "bonneReponse": 0,
+    "explication": "La loi d'Ohm s'écrit U = R × I : la tension aux bornes d'une résistance est le produit de cette résistance par l'intensité qui la traverse."
+  },
+  {
+    "id": "physique-m4",
+    "enonce": "Quelle est la valeur approximative de l'accélération de la pesanteur à la surface de la Terre ?",
+    "choix": ["1,6 m/s²", "3,14 m/s²", "9,8 m/s²", "100 m/s²"],
+    "bonneReponse": 2,
+    "explication": "À la surface terrestre, g vaut environ 9,8 m/s² : chaque seconde de chute libre, la vitesse d'un objet augmente de 9,8 m/s. Sur la Lune, g n'est que de 1,6 m/s²."
+  },
+  {
+    "id": "physique-m5",
+    "enonce": "Comment appelle-t-on le passage de l'état liquide à l'état gazeux ?",
+    "choix": ["la condensation", "la vaporisation", "la fusion", "la solidification"],
+    "bonneReponse": 1,
+    "explication": "La vaporisation fait passer un corps du liquide au gaz (l'eau qui bout). Le chemin inverse, du gaz au liquide, est la condensation."
+  },
+  {
+    "id": "physique-m6",
+    "enonce": "Quelle forme d'énergie un objet possède-t-il du seul fait de son mouvement ?",
+    "choix": ["l'énergie cinétique", "l'énergie potentielle", "l'énergie thermique", "l'énergie nucléaire"],
+    "bonneReponse": 0,
+    "explication": "L'énergie cinétique est liée au mouvement : elle dépend de la masse et du carré de la vitesse (½mv²). À l'arrêt, elle est nulle."
+  },
+  {
+    "id": "physique-m7",
+    "enonce": "Quel physicien a formulé les trois lois du mouvement et la gravitation universelle ?",
+    "choix": ["Galilée", "Nikola Tesla", "Isaac Newton", "Albert Einstein"],
+    "bonneReponse": 2,
+    "explication": "Isaac Newton a publié ses lois du mouvement et la loi de la gravitation universelle en 1687 dans les « Principia ». Elles fondent la mécanique classique."
+  },
+  {
+    "id": "physique-m8",
+    "enonce": "Quelle est l'unité d'énergie dans le Système international ?",
+    "choix": ["le volt", "le watt", "le joule", "le newton"],
+    "bonneReponse": 2,
+    "explication": "L'énergie se mesure en joules (J). Soulever une pomme d'environ un mètre demande à peu près un joule de travail."
+  },
+  {
+    "id": "physique-m9",
+    "enonce": "Dans un circuit électrique, quelle grandeur s'oppose au passage du courant ?",
+    "choix": ["la résistance", "la tension", "la puissance", "la fréquence"],
+    "bonneReponse": 0,
+    "explication": "La résistance, mesurée en ohms (Ω), freine le passage du courant et transforme une partie de l'énergie en chaleur (effet Joule)."
+  },
+  {
+    "id": "physique-m10",
+    "enonce": "Selon le principe d'Archimède, quelle force subit un corps plongé dans un liquide ?",
+    "choix": ["une poussée dirigée vers le haut", "une poussée dirigée vers le bas", "une force horizontale", "aucune force"],
+    "bonneReponse": 0,
+    "explication": "Tout corps plongé dans un fluide subit une poussée verticale dirigée vers le haut, égale au poids du fluide déplacé. C'est ce qui permet aux bateaux de flotter."
+  }
+]

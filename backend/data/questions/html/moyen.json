@@ -1,0 +1,72 @@
+[
+  {
+    "id": "html-m1",
+    "enonce": "Quel attribut fournit un texte alternatif à une image (utile pour l'accessibilité) ?",
+    "choix": ["title", "alt", "src", "desc"],
+    "bonneReponse": 1,
+    "explication": "`alt` décrit l'image pour les lecteurs d'écran et s'affiche si l'image ne se charge pas. C'est essentiel pour l'accessibilité et le référencement."
+  },
+  {
+    "id": "html-m2",
+    "enonce": "Quelle balise sémantique regroupe les liens de navigation principaux ?",
+    "choix": ["<menu>", "<nav>", "<links>", "<aside>"],
+    "bonneReponse": 1,
+    "explication": "`<nav>` indique une zone de navigation. Les balises sémantiques (`<nav>`, `<header>`, `<footer>`…) donnent du sens au document, au-delà du simple `<div>`."
+  },
+  {
+    "id": "html-m3",
+    "enonce": "Quelle balise crée une liste ordonnée (numérotée) ?",
+    "choix": ["<ul>", "<dl>", "<ol>", "<li>"],
+    "bonneReponse": 2,
+    "explication": "`<ol>` (« ordered list ») numérote automatiquement ses éléments. Le `<ul>`, lui, affiche des puces sans ordre particulier."
+  },
+  {
+    "id": "html-m4",
+    "enonce": "Quelle balise définit une cellule d'en-tête dans un tableau ?",
+    "choix": ["<td>", "<tr>", "<th>", "<thead>"],
+    "bonneReponse": 2,
+    "explication": "`<th>` (« table header ») désigne une cellule d'en-tête (souvent en gras et centrée). Une cellule ordinaire est un `<td>`, et une ligne un `<tr>`."
+  },
+  {
+    "id": "html-m5",
+    "enonce": "Quelle valeur de l'attribut `type` crée une case à cocher ?",
+    "choix": ["radio", "checkbox", "check", "toggle"],
+    "bonneReponse": 1,
+    "explication": "`<input type=\"checkbox\">` crée une case à cocher (choix indépendants). Le type `radio`, lui, permet un seul choix au sein d'un groupe."
+  },
+  {
+    "id": "html-m6",
+    "enonce": "Quel attribut d'un `<label>` l'associe à un champ de formulaire précis ?",
+    "choix": ["name", "ref", "for", "target"],
+    "bonneReponse": 2,
+    "explication": "`<label for=\"email\">` se lie au champ dont l'`id` vaut `email`. Cliquer sur l'étiquette active alors le champ — pratique et accessible."
+  },
+  {
+    "id": "html-m7",
+    "enonce": "Quelle balise sémantique entoure le contenu principal et unique de la page ?",
+    "choix": ["<content>", "<main>", "<section>", "<article>"],
+    "bonneReponse": 1,
+    "explication": "`<main>` enveloppe le contenu central de la page (un seul par document). Les lecteurs d'écran peuvent ainsi sauter directement au cœur du contenu."
+  },
+  {
+    "id": "html-m8",
+    "enonce": "À quoi sert l'attribut `placeholder` d'un champ de saisie ?",
+    "choix": ["À définir la valeur envoyée par défaut", "À afficher un texte indicatif tant que le champ est vide", "À rendre le champ obligatoire", "À limiter le nombre de caractères"],
+    "bonneReponse": 1,
+    "explication": "`placeholder` affiche un exemple grisé qui disparaît dès la saisie. Ce n'est pas une valeur réelle : le champ reste vide tant que rien n'est tapé."
+  },
+  {
+    "id": "html-m9",
+    "enonce": "Quelle balise HTML5 intègre une vidéo lisible nativement ?",
+    "choix": ["<media>", "<movie>", "<video>", "<embed>"],
+    "bonneReponse": 2,
+    "explication": "`<video>` lit une vidéo sans plug-in, avec des contrôles natifs (attribut `controls`). On peut y proposer plusieurs formats via des balises `<source>`."
+  },
+  {
+    "id": "html-m10",
+    "enonce": "Quel attribut rend un champ de formulaire obligatoire ?",
+    "choix": ["mandatory", "required", "validate", "needed"],
+    "bonneReponse": 1,
+    "explication": "`required` empêche l'envoi du formulaire si le champ est vide, avec un message du navigateur. C'est une validation côté client, native et sans JavaScript."
+  }
+]

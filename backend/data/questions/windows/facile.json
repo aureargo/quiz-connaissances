@@ -1,0 +1,72 @@
+[
+  {
+    "id": "windows-f1",
+    "enonce": "Quelle entreprise développe le système d'exploitation Windows ?",
+    "choix": ["Apple", "Microsoft", "Google", "IBM"],
+    "bonneReponse": 1,
+    "explication": "Windows est édité par Microsoft depuis 1985. Apple développe son concurrent macOS, et Google le système Android pour mobiles."
+  },
+  {
+    "id": "windows-f2",
+    "enonce": "Quel raccourci clavier copie l'élément sélectionné ?",
+    "choix": ["Ctrl+C", "Ctrl+V", "Ctrl+X", "Ctrl+Z"],
+    "bonneReponse": 0,
+    "explication": "Ctrl+C copie la sélection dans le presse-papiers. Ctrl+X la coupe (déplace) et Ctrl+V colle ce qui a été copié ou coupé."
+  },
+  {
+    "id": "windows-f3",
+    "enonce": "Quel raccourci clavier colle ce qui vient d'être copié ?",
+    "choix": ["Ctrl+P", "Ctrl+B", "Ctrl+V", "Ctrl+S"],
+    "bonneReponse": 2,
+    "explication": "Ctrl+V colle le contenu du presse-papiers. La lettre V n'a pas de sens particulier : elle est simplement voisine de C et X sur le clavier."
+  },
+  {
+    "id": "windows-f4",
+    "enonce": "Comment s'appelle le menu, en bas à gauche, qui sert à lancer les programmes ?",
+    "choix": ["Le menu Démarrer", "Le menu Système", "Le menu Accueil", "Le menu Programmes"],
+    "bonneReponse": 0,
+    "explication": "Le menu Démarrer donne accès aux applications, aux paramètres et à l'extinction du PC. On l'ouvre avec la touche Windows ou le bouton en bas à gauche."
+  },
+  {
+    "id": "windows-f5",
+    "enonce": "Où vont par défaut les fichiers que l'on supprime sous Windows ?",
+    "choix": ["Dans le presse-papiers", "Dans la Corbeille", "Dans les Documents", "Dans le Cloud"],
+    "bonneReponse": 1,
+    "explication": "Les fichiers supprimés vont d'abord dans la Corbeille, d'où on peut les restaurer. Ils ne sont effacés réellement qu'en vidant la Corbeille."
+  },
+  {
+    "id": "windows-f6",
+    "enonce": "Comment s'appelle la barre, en bas de l'écran, qui regroupe les fenêtres ouvertes ?",
+    "choix": ["La barre d'état", "La barre de menus", "La barre des tâches", "La barre d'outils"],
+    "bonneReponse": 2,
+    "explication": "La barre des tâches affiche les applications ouvertes et épinglées, l'horloge et la zone de notification. Elle se trouve généralement en bas de l'écran."
+  },
+  {
+    "id": "windows-f7",
+    "enonce": "Quel programme permet de parcourir ses fichiers et dossiers ?",
+    "choix": ["Le Panneau de configuration", "L'Explorateur de fichiers", "Le Gestionnaire des tâches", "Le Bloc-notes"],
+    "bonneReponse": 1,
+    "explication": "L'Explorateur de fichiers (icône en forme de dossier) sert à naviguer dans les disques, dossiers et fichiers. On l'ouvre vite avec Windows+E."
+  },
+  {
+    "id": "windows-f8",
+    "enonce": "Quelle touche du clavier, marquée d'un logo, ouvre le menu Démarrer ?",
+    "choix": ["La touche Windows", "La touche Échap", "La touche Tab", "La touche Verr. maj"],
+    "bonneReponse": 0,
+    "explication": "La touche Windows, située entre Ctrl et Alt, ouvre le menu Démarrer. Combinée à d'autres touches, elle déclenche de nombreux raccourcis."
+  },
+  {
+    "id": "windows-f9",
+    "enonce": "Quel raccourci clavier annule la dernière action effectuée ?",
+    "choix": ["Ctrl+A", "Ctrl+Y", "Ctrl+Z", "Ctrl+S"],
+    "bonneReponse": 2,
+    "explication": "Ctrl+Z annule la dernière action dans la plupart des logiciels. Ctrl+Y (ou Ctrl+Maj+Z) refait ce qui vient d'être annulé."
+  },
+  {
+    "id": "windows-f10",
+    "enonce": "Quel raccourci bascule rapidement entre les fenêtres ouvertes ?",
+    "choix": ["Alt+Tab", "Ctrl+Tab", "Maj+Tab", "Alt+F4"],
+    "bonneReponse": 0,
+    "explication": "Alt+Tab affiche les fenêtres ouvertes et permet de passer de l'une à l'autre. Attention : Alt+F4 ferme la fenêtre active."
+  }
+]

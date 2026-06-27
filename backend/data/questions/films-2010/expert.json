@@ -1,0 +1,72 @@
+[
+  {
+    "id": "films-2010-e1",
+    "enonce": "Quel film a créé la surprise en remportant la Palme d'or au Festival de Cannes 2010 ?",
+    "choix": ["Des hommes et des dieux", "Biutiful", "Oncle Boonmee", "Tournée"],
+    "bonneReponse": 2,
+    "explication": "« Oncle Boonmee, celui qui se souvient de ses vies antérieures » du Thaïlandais Apichatpong Weerasethakul a décroché la Palme d'or 2010."
+  },
+  {
+    "id": "films-2010-e2",
+    "enonce": "Quel cinéaste américain a remporté la Palme d'or 2011 avec « The Tree of Life » ?",
+    "choix": ["Paul Thomas Anderson", "Gus Van Sant", "Sean Penn", "Terrence Malick"],
+    "bonneReponse": 3,
+    "explication": "Terrence Malick, cinéaste rare et secret, mêle l'histoire d'une famille du Texas à la naissance du cosmos. Brad Pitt et Sean Penn y jouent."
+  },
+  {
+    "id": "films-2010-e3",
+    "enonce": "Quel réalisateur autrichien a obtenu la Palme d'or 2012 pour « Amour » ?",
+    "choix": ["Ulrich Seidl", "Michael Haneke", "Stefan Ruzowitzky", "Götz Spielmann"],
+    "bonneReponse": 1,
+    "explication": "Michael Haneke filme la vieillesse d'un couple, joué par Emmanuelle Riva et Jean-Louis Trintignant. C'est sa deuxième Palme après « Le Ruban blanc »."
+  },
+  {
+    "id": "films-2010-e4",
+    "enonce": "Pour « La Vie d'Adèle » (Palme d'or 2013), le jury a exceptionnellement récompensé le réalisateur et qui d'autre ?",
+    "choix": ["Le compositeur", "Les deux actrices principales", "Le directeur de la photographie", "Le producteur"],
+    "bonneReponse": 1,
+    "explication": "Fait inédit, la Palme fut décernée à Abdellatif Kechiche et à ses deux actrices, Adèle Exarchopoulos et Léa Seydoux."
+  },
+  {
+    "id": "films-2010-e5",
+    "enonce": "Quelle particularité de tournage distingue « Boyhood » (2014) de Richard Linklater ?",
+    "choix": ["Il fut filmé sur douze années", "Il fut tourné sans aucun script", "Il fut tourné en une seule nuit", "Il fut entièrement improvisé"],
+    "bonneReponse": 0,
+    "explication": "Richard Linklater a filmé son acteur Ellar Coltrane de 6 à 18 ans, retrouvant la même équipe chaque année pendant douze ans."
+  },
+  {
+    "id": "films-2010-e6",
+    "enonce": "Quel film de Jacques Audiard, Palme d'or 2015, suit un ancien combattant tamoul réfugié en France ?",
+    "choix": ["Un prophète", "De rouille et d'os", "De battre mon cœur s'est arrêté", "Dheepan"],
+    "bonneReponse": 3,
+    "explication": "« Dheepan » suit un ex-Tigre tamoul qui tente de se reconstruire dans une cité française. Audiard y remporte la Palme d'or 2015."
+  },
+  {
+    "id": "films-2010-e7",
+    "enonce": "Quel film a finalement reçu l'Oscar du meilleur film 2017, après l'annonce erronée de « La La Land » ?",
+    "choix": ["Manchester by the Sea", "Lion", "Moonlight", "Les Figures de l'ombre"],
+    "bonneReponse": 2,
+    "explication": "Une enveloppe erronée fit annoncer « La La Land » par erreur ; c'est « Moonlight » de Barry Jenkins qui était le vrai lauréat."
+  },
+  {
+    "id": "films-2010-e8",
+    "enonce": "Quel réalisateur japonais a remporté la Palme d'or 2018 avec « Une affaire de famille » ?",
+    "choix": ["Takashi Miike", "Hirokazu Kore-eda", "Naomi Kawase", "Kiyoshi Kurosawa"],
+    "bonneReponse": 1,
+    "explication": "Hirokazu Kore-eda dépeint une famille de petits voleurs soudée par l'affection plus que par le sang. Le film décroche la Palme d'or 2018."
+  },
+  {
+    "id": "films-2010-e9",
+    "enonce": "Dans quelle ville se déroule « Roma » (2018), film en noir et blanc d'Alfonso Cuarón ?",
+    "choix": ["Rome", "Mexico", "Buenos Aires", "Madrid"],
+    "bonneReponse": 1,
+    "explication": "Malgré son titre, « Roma » se déroule dans le quartier Roma de Mexico, dans les années 1970. Le film fut produit et diffusé par Netflix."
+  },
+  {
+    "id": "films-2010-e10",
+    "enonce": "« Parasite » (2019), Palme d'or puis Oscar du meilleur film, est l'œuvre de quel cinéaste ?",
+    "choix": ["Park Chan-wook", "Lee Chang-dong", "Bong Joon-ho", "Kim Ki-duk"],
+    "bonneReponse": 2,
+    "explication": "Bong Joon-ho fait de « Parasite » le premier film non anglophone sacré meilleur film aux Oscars, après sa Palme d'or à Cannes."
+  }
+]

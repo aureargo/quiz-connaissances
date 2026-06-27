@@ -1,0 +1,72 @@
+[
+  {
+    "id": "architecture-e1",
+    "enonce": "Que sépare le motif CQRS ?",
+    "choix": ["Le code de production et le code de test", "Les opérations de lecture et les opérations d'écriture", "Le client et le serveur", "Les données et leur sauvegarde"],
+    "bonneReponse": 1,
+    "explication": "CQRS (Command Query Responsibility Segregation) distingue le modèle qui modifie les données (commandes) de celui qui les lit (requêtes). On peut alors optimiser chacun séparément."
+  },
+  {
+    "id": "architecture-e2",
+    "enonce": "Sur quoi repose l'« event sourcing » ?",
+    "choix": ["Stocker la suite des événements plutôt que l'état final", "Envoyer un courriel à chaque erreur détectée", "Effacer les journaux à chaque démarrage", "Exécuter le code à intervalles réguliers"],
+    "bonneReponse": 0,
+    "explication": "En event sourcing, on enregistre tous les événements ayant modifié l'état ; l'état courant se reconstruit en les rejouant. On obtient ainsi un historique complet et auditable."
+  },
+  {
+    "id": "architecture-e3",
+    "enonce": "Que gère le motif « saga » dans un système distribué ?",
+    "choix": ["Le rendu graphique en trois dimensions", "Les transactions réparties sur plusieurs services", "La compression des fichiers volumineux", "La génération de nombres aléatoires"],
+    "bonneReponse": 1,
+    "explication": "Une saga coordonne une transaction couvrant plusieurs services via une suite d'étapes locales, chacune dotée d'une action de compensation en cas d'échec — à défaut d'un verrou global."
+  },
+  {
+    "id": "architecture-e4",
+    "enonce": "Selon le théorème CAP, que doit-on sacrifier en cas de partition réseau ?",
+    "choix": ["La cohérence ou la disponibilité", "La sécurité ou la rapidité", "Le stockage ou le calcul", "Le client ou le serveur"],
+    "bonneReponse": 0,
+    "explication": "Le théorème CAP énonce qu'en cas de partition, un système réparti doit choisir entre rester cohérent (Consistency) ou rester disponible (Availability) : il ne peut garantir les deux."
+  },
+  {
+    "id": "architecture-e5",
+    "enonce": "Que prône l'architecture hexagonale (ports et adaptateurs) ?",
+    "choix": ["Tout regrouper dans une classe unique", "Isoler la logique métier des détails techniques externes", "Supprimer toute interface du système", "Imposer une base de données par classe"],
+    "bonneReponse": 1,
+    "explication": "L'architecture hexagonale place le domaine au centre et communique avec l'extérieur (base, interface, API) via des ports et adaptateurs. On peut changer la technologie sans toucher au métier."
+  },
+  {
+    "id": "architecture-e6",
+    "enonce": "À quoi sert un « disjoncteur » (circuit breaker) dans un système distribué ?",
+    "choix": ["À chiffrer les communications réseau", "À couper les appels vers un service défaillant pour éviter l'effondrement", "À équilibrer la consommation électrique", "À accélérer la compilation du projet"],
+    "bonneReponse": 1,
+    "explication": "Le circuit breaker surveille les appels vers un service : après trop d'échecs, il « s'ouvre » et rejette les appels un moment. Cela empêche qu'une panne ne se propage en cascade."
+  },
+  {
+    "id": "architecture-e7",
+    "enonce": "Que signifie la « cohérence à terme » (eventual consistency) ?",
+    "choix": ["Les données sont toujours identiques instantanément", "Les répliques convergent vers le même état après un délai", "La base de données ne perd jamais de données", "Les écritures y sont totalement interdites"],
+    "bonneReponse": 1,
+    "explication": "En cohérence à terme, les copies d'une donnée peuvent diverger un instant, mais finissent par s'aligner si aucune nouvelle écriture n'a lieu. C'est fréquent dans les systèmes hautement disponibles."
+  },
+  {
+    "id": "architecture-e8",
+    "enonce": "Que désigne un « bounded context » en Domain-Driven Design ?",
+    "choix": ["La limite mémoire d'un processus", "Une frontière où un modèle du domaine a un sens précis", "Le délai maximal autorisé pour une requête", "Le nombre maximal d'utilisateurs simultanés"],
+    "bonneReponse": 1,
+    "explication": "Un bounded context délimite la portée d'un modèle et de son vocabulaire métier. Un même mot peut avoir un sens différent dans deux contextes, qui restent ainsi cohérents chacun de leur côté."
+  },
+  {
+    "id": "architecture-e9",
+    "enonce": "Qu'est-ce qu'une opération « idempotente » ?",
+    "choix": ["Une opération qui échoue systématiquement", "Une opération qui donne le même résultat si on la répète", "Une opération exécutable une seule fois au maximum", "Une opération dépourvue de valeur de retour"],
+    "bonneReponse": 1,
+    "explication": "Répéter une opération idempotente ne change rien au-delà du premier appel. C'est précieux sur un réseau peu fiable : réémettre une requête ne crée pas de doublon."
+  },
+  {
+    "id": "architecture-e10",
+    "enonce": "Que vise le motif « Strangler Fig » (figuier étrangleur) ?",
+    "choix": ["Supprimer brutalement l'ancien système d'un coup", "Remplacer progressivement un système hérité morceau par morceau", "Dupliquer entièrement la base de données", "Chiffrer l'intégralité du code source"],
+    "bonneReponse": 1,
+    "explication": "Le Strangler Fig remplace un système hérité peu à peu : on dévie progressivement les fonctionnalités vers le nouveau système jusqu'à ce que l'ancien puisse disparaître, sans bascule risquée."
+  }
+]

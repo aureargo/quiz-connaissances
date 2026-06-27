@@ -1,0 +1,72 @@
+[
+  {
+    "id": "geo-f1",
+    "enonce": "Quel est le plus long fleuve du monde ?",
+    "choix": ["le Nil", "l'Amazone", "le Mississippi", "le Yangzi"],
+    "bonneReponse": 0,
+    "explication": "Le Nil, en Afrique, est traditionnellement considéré comme le plus long fleuve du monde avec environ 6 650 km, même si l'Amazone le dispute selon les méthodes de mesure."
+  },
+  {
+    "id": "geo-f2",
+    "enonce": "Quel est le plus haut sommet du monde ?",
+    "choix": ["l'Everest", "le K2", "le Kilimandjaro", "le Mont Blanc"],
+    "bonneReponse": 0,
+    "explication": "L'Everest, dans l'Himalaya, culmine à 8 849 m au-dessus du niveau de la mer, ce qui en fait le plus haut sommet de la planète."
+  },
+  {
+    "id": "geo-f3",
+    "enonce": "Quel est le plus grand océan du monde ?",
+    "choix": ["l'Atlantique", "le Pacifique", "l'océan Indien", "l'Arctique"],
+    "bonneReponse": 1,
+    "explication": "L'océan Pacifique est le plus vaste et le plus profond : à lui seul, il couvre environ un tiers de la surface du globe."
+  },
+  {
+    "id": "geo-f4",
+    "enonce": "Quel est le plus grand continent du monde par superficie ?",
+    "choix": ["l'Afrique", "l'Asie", "l'Europe", "l'Océanie"],
+    "bonneReponse": 1,
+    "explication": "L'Asie est de loin le plus grand continent (environ 44 millions de km²) et abrite aussi la majorité de la population mondiale."
+  },
+  {
+    "id": "geo-f5",
+    "enonce": "Quel est le plus grand désert du monde ?",
+    "choix": ["le Sahara", "l'Antarctique", "le Gobi", "le désert d'Arabie"],
+    "bonneReponse": 1,
+    "explication": "Un désert se définit par ses très faibles précipitations, pas par sa chaleur : l'Antarctique, désert froid, est le plus vaste du monde, devant le Sahara."
+  },
+  {
+    "id": "geo-f6",
+    "enonce": "Quelle chaîne de montagnes longe toute la côte ouest de l'Amérique du Sud ?",
+    "choix": ["les Andes", "les Rocheuses", "les Alpes", "l'Oural"],
+    "bonneReponse": 0,
+    "explication": "Les Andes s'étendent sur près de 7 000 km le long de la côte pacifique de l'Amérique du Sud, du Venezuela jusqu'à la Patagonie."
+  },
+  {
+    "id": "geo-f7",
+    "enonce": "Quelle ligne imaginaire partage la Terre en hémisphère nord et hémisphère sud ?",
+    "choix": ["l'équateur", "le méridien de Greenwich", "le tropique du Capricorne", "le cercle polaire arctique"],
+    "bonneReponse": 0,
+    "explication": "L'équateur est le cercle de latitude zéro qui sépare les deux hémisphères. Le méridien de Greenwich, lui, sépare l'est de l'ouest."
+  },
+  {
+    "id": "geo-f8",
+    "enonce": "Quelle est la plus grande île du monde ?",
+    "choix": ["l'Australie", "le Groenland", "Madagascar", "Bornéo"],
+    "bonneReponse": 1,
+    "explication": "Le Groenland est la plus grande île du monde. L'Australie est plus vaste, mais elle est considérée comme un continent, pas comme une île."
+  },
+  {
+    "id": "geo-f9",
+    "enonce": "Quelle mer sépare l'Europe du sud de l'Afrique du nord ?",
+    "choix": ["la mer Méditerranée", "la mer Rouge", "la mer Noire", "la mer Baltique"],
+    "bonneReponse": 0,
+    "explication": "La mer Méditerranée est enclavée entre l'Europe, l'Afrique et l'Asie, et communique avec l'Atlantique par le détroit de Gibraltar."
+  },
+  {
+    "id": "geo-f10",
+    "enonce": "Sur quel continent coule le fleuve Amazone ?",
+    "choix": ["l'Afrique", "l'Asie", "l'Amérique du Sud", "l'Océanie"],
+    "bonneReponse": 2,
+    "explication": "L'Amazone traverse l'Amérique du Sud, principalement le Brésil, et alimente la plus grande forêt tropicale de la planète."
+  }
+]

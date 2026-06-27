@@ -1,0 +1,72 @@
+[
+  {
+    "id": "algorithmes-e1",
+    "enonce": "Dans quel cas le tri rapide (quicksort) dégénère-t-il en O(n²) ?",
+    "choix": ["Quand la liste est déjà vide", "Quand le pivot choisi est systématiquement le pire", "Quand la liste contient des nombres négatifs", "Quand on l'exécute sur plusieurs cœurs"],
+    "bonneReponse": 1,
+    "explication": "Le quicksort est en moyenne en O(n log n), mais si le pivot tombe à chaque fois sur la plus petite ou la plus grande valeur (ex. liste déjà triée avec un pivot naïf), les partitions sont déséquilibrées et il atteint O(n²)."
+  },
+  {
+    "id": "algorithmes-e2",
+    "enonce": "Que signifie qu'un algorithme de tri est « stable » ?",
+    "choix": ["Il ne plante jamais en cours d'exécution", "Il préserve l'ordre relatif des éléments de valeur égale", "Il utilise une mémoire toujours constante", "Il s'exécute toujours en temps linéaire"],
+    "bonneReponse": 1,
+    "explication": "Un tri stable conserve l'ordre d'apparition initial entre deux éléments jugés égaux, ce qui est précieux pour trier successivement sur plusieurs critères. Le tri fusion est stable, le tri rapide ne l'est pas par défaut."
+  },
+  {
+    "id": "algorithmes-e3",
+    "enonce": "Quelle est la complexité de l'insertion dans un tas binaire (heap) ?",
+    "choix": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+    "bonneReponse": 1,
+    "explication": "Insérer dans un tas ajoute l'élément en bas puis le fait « remonter » en le comparant à ses parents le long d'une seule branche, soit O(log n). Le tas est la structure idéale d'une file de priorité."
+  },
+  {
+    "id": "algorithmes-e4",
+    "enonce": "Que garantit un arbre AVL ou rouge-noir par rapport à un arbre binaire de recherche ordinaire ?",
+    "choix": ["Qu'il reste équilibré, gardant ses opérations en O(log n)", "Qu'il n'occupe aucune mémoire supplémentaire", "Qu'il trie ses valeurs en O(n)", "Qu'il supprime les doublons automatiquement"],
+    "bonneReponse": 0,
+    "explication": "Un arbre binaire de recherche non équilibré peut dégénérer en liste (O(n)). Les arbres AVL et rouge-noir se rééquilibrent à chaque insertion ou suppression pour garantir une hauteur logarithmique, donc des opérations en O(log n)."
+  },
+  {
+    "id": "algorithmes-e5",
+    "enonce": "Quelle est la borne inférieure de complexité d'un tri fondé sur des comparaisons ?",
+    "choix": ["O(n)", "O(n log n)", "O(log n)", "O(n²)"],
+    "bonneReponse": 1,
+    "explication": "On démontre que tout tri reposant uniquement sur des comparaisons exige au moins de l'ordre de n log n comparaisons dans le pire des cas. Les tris fusion et par tas atteignent cette borne optimale."
+  },
+  {
+    "id": "algorithmes-e6",
+    "enonce": "Que signifie qu'un tri s'effectue « en place » (in-place) ?",
+    "choix": ["Il s'exécute sans utiliser le processeur", "Il n'emploie qu'une mémoire supplémentaire constante", "Il trie sans réaliser aucune comparaison", "Il conserve une copie de sauvegarde des données"],
+    "bonneReponse": 1,
+    "explication": "Un tri en place réordonne les éléments au sein du tableau d'origine, avec seulement O(1) de mémoire auxiliaire. Le tri rapide est (presque) en place ; le tri fusion classique, lui, requiert un tableau temporaire en O(n)."
+  },
+  {
+    "id": "algorithmes-e7",
+    "enonce": "Pourquoi la complexité d'une table de hachage peut-elle atteindre O(n) ?",
+    "choix": ["Parce qu'elle trie ses clés en interne", "À cause des collisions, quand trop de clés tombent au même endroit", "Parce qu'elle double régulièrement de taille", "Parce qu'elle procède de façon récursive"],
+    "bonneReponse": 1,
+    "explication": "En moyenne, une table de hachage offre un accès en O(1), mais si la fonction de hachage répartit mal les clés, beaucoup atterrissent dans le même seau ; la recherche dégénère alors en parcours linéaire O(n)."
+  },
+  {
+    "id": "algorithmes-e8",
+    "enonce": "Quelle est la complexité moyenne d'une recherche dans un arbre binaire de recherche équilibré ?",
+    "choix": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+    "bonneReponse": 1,
+    "explication": "À chaque nœud, la comparaison oriente la recherche vers le sous-arbre gauche ou droit, divisant l'espace restant par deux. Sur un arbre équilibré de hauteur logarithmique, cela donne O(log n)."
+  },
+  {
+    "id": "algorithmes-e9",
+    "enonce": "Pourquoi dit-on que l'ajout en fin d'un tableau dynamique est en temps « amorti » O(1) ?",
+    "choix": ["Parce qu'il est toujours strictement instantané", "Parce que les rares réallocations coûteuses sont réparties sur tous les ajouts", "Parce qu'il ne consomme aucune mémoire", "Parce qu'il retrie le tableau à chaque ajout"],
+    "bonneReponse": 1,
+    "explication": "Quand le tableau est plein, il double sa capacité — une opération en O(n). Mais ces doublements sont si espacés que, moyenné sur l'ensemble des ajouts, le coût par insertion reste constant : c'est la complexité amortie."
+  },
+  {
+    "id": "algorithmes-e10",
+    "enonce": "Comment le tri par dénombrement (counting sort) contourne-t-il la borne des O(n log n) ?",
+    "choix": ["En répartissant le travail sur plusieurs processeurs", "En comptant les occurrences au lieu de comparer les éléments", "En procédant de manière récursive", "En supprimant les doublons au passage"],
+    "bonneReponse": 1,
+    "explication": "Le tri par dénombrement ne compare jamais deux éléments : il compte les occurrences de chaque valeur dans un intervalle connu, puis reconstruit la suite triée. Il atteint O(n + k), échappant à la borne des tris par comparaisons."
+  }
+]

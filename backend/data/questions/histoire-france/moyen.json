@@ -1,0 +1,72 @@
+[
+  {
+    "id": "hf-m1",
+    "enonce": "Vers quelle année Clovis, roi des Francs, s'est-il fait baptiser à Reims ?",
+    "choix": ["vers 496", "vers 800", "vers 1066", "vers 1214"],
+    "bonneReponse": 0,
+    "explication": "Le baptême de Clovis, traditionnellement daté vers 496, fait de lui le premier roi franc chrétien. Cet événement lie durablement la royauté française à l'Église catholique."
+  },
+  {
+    "id": "hf-m2",
+    "enonce": "Quel souverain a été couronné empereur d'Occident à Rome en l'an 800 ?",
+    "choix": ["Charlemagne", "Clovis", "Hugues Capet", "Saint Louis"],
+    "bonneReponse": 0,
+    "explication": "Le 25 décembre 800, le pape Léon III couronne Charlemagne empereur à Rome. Il restaure ainsi un empire en Occident, près de trois siècles après la chute de Rome."
+  },
+  {
+    "id": "hf-m3",
+    "enonce": "Quelle bataille de 1214 a renforcé l'autorité du roi Philippe Auguste ?",
+    "choix": ["Bouvines", "Azincourt", "Marignan", "Pavie"],
+    "bonneReponse": 0,
+    "explication": "À Bouvines, Philippe Auguste écrase une coalition menée par l'empereur germanique et le roi d'Angleterre. Cette victoire affermit le pouvoir royal et le sentiment national."
+  },
+  {
+    "id": "hf-m4",
+    "enonce": "Quel massacre de protestants a eu lieu à Paris en août 1572 ?",
+    "choix": ["la Saint-Barthélemy", "la journée des Dupes", "la Fronde", "la Terreur"],
+    "bonneReponse": 0,
+    "explication": "Dans la nuit du 24 août 1572, le massacre de la Saint-Barthélemy fait des milliers de victimes protestantes. Il marque un sommet de violence des guerres de Religion."
+  },
+  {
+    "id": "hf-m5",
+    "enonce": "Quel cardinal fut le principal ministre du roi Louis XIII ?",
+    "choix": ["Richelieu", "Mazarin", "Colbert", "Talleyrand"],
+    "bonneReponse": 0,
+    "explication": "Le cardinal de Richelieu, ministre de Louis XIII de 1624 à 1642, renforça le pouvoir royal face aux grands seigneurs et aux protestants. Mazarin lui succéda sous Louis XIV enfant."
+  },
+  {
+    "id": "hf-m6",
+    "enonce": "En quelle année a débuté la Première Guerre mondiale ?",
+    "choix": ["1914", "1918", "1939", "1870"],
+    "bonneReponse": 0,
+    "explication": "La Première Guerre mondiale éclate en 1914 et s'achève en 1918. La France y subit des pertes énormes, notamment lors de batailles comme Verdun en 1916."
+  },
+  {
+    "id": "hf-m7",
+    "enonce": "Quel traité de 1919 a officiellement mis fin à la Première Guerre mondiale ?",
+    "choix": ["le traité de Versailles", "le traité de Rome", "le traité de Westphalie", "le traité d'Utrecht"],
+    "bonneReponse": 0,
+    "explication": "Signé le 28 juin 1919 dans la galerie des Glaces, le traité de Versailles impose de lourdes conditions à l'Allemagne, dont le ressentiment nourrira la montée des tensions."
+  },
+  {
+    "id": "hf-m8",
+    "enonce": "Quelle reine, épouse de Louis XVI, fut guillotinée en 1793 ?",
+    "choix": ["Marie-Antoinette", "Catherine de Médicis", "Anne d'Autriche", "Aliénor d'Aquitaine"],
+    "bonneReponse": 0,
+    "explication": "Marie-Antoinette, archiduchesse d'Autriche devenue reine de France, fut guillotinée le 16 octobre 1793, neuf mois après son époux Louis XVI."
+  },
+  {
+    "id": "hf-m9",
+    "enonce": "Quel roi capétien est passé à la postérité sous le nom de « Saint Louis » ?",
+    "choix": ["Louis IX", "Louis VII", "Louis XI", "Louis VI"],
+    "bonneReponse": 0,
+    "explication": "Louis IX (1226-1270), réputé pour sa piété et sa justice, fut canonisé en 1297. On raconte qu'il rendait la justice sous un chêne à Vincennes."
+  },
+  {
+    "id": "hf-m10",
+    "enonce": "Quel révolutionnaire est la figure centrale de la période dite « la Terreur » ?",
+    "choix": ["Robespierre", "Mirabeau", "Lafayette", "Necker"],
+    "bonneReponse": 0,
+    "explication": "Maximilien de Robespierre domine le Comité de salut public pendant la Terreur (1793-1794). Renversé le 9 thermidor, il fut guillotiné à son tour en juillet 1794."
+  }
+]

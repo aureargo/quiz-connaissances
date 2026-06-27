@@ -1,0 +1,72 @@
+[
+  {
+    "id": "reseaux-m1",
+    "enonce": "À quoi sert le système DNS ?",
+    "choix": ["À traduire un nom de domaine en adresse IP", "À chiffrer les mots de passe", "À accélérer le processeur", "À sauvegarder les fichiers"],
+    "bonneReponse": 0,
+    "explication": "Le DNS (Domain Name System) est l'annuaire d'Internet : il convertit un nom lisible comme « exemple.fr » en adresse IP, que les machines utilisent réellement pour communiquer."
+  },
+  {
+    "id": "reseaux-m2",
+    "enonce": "Quelle est la principale différence entre TCP et UDP ?",
+    "choix": ["TCP est sans fil, UDP est filaire", "TCP garantit la livraison, UDP privilégie la rapidité", "TCP est gratuit, UDP est payant", "TCP ne fonctionne que sur mobile"],
+    "bonneReponse": 1,
+    "explication": "TCP vérifie que chaque paquet arrive et les remet dans l'ordre, idéal pour le web ou les e-mails. UDP n'offre aucune garantie mais reste léger et rapide, utile pour la voix ou le jeu en ligne."
+  },
+  {
+    "id": "reseaux-m3",
+    "enonce": "Que fait le protocole DHCP sur un réseau ?",
+    "choix": ["Il attribue automatiquement les adresses IP", "Il chiffre les pages web", "Il bloque les publicités", "Il compresse les vidéos"],
+    "bonneReponse": 0,
+    "explication": "Le DHCP distribue automatiquement une adresse IP (et d'autres paramètres) à chaque appareil qui rejoint le réseau, évitant de tout configurer à la main. C'est la box qui assure souvent ce rôle."
+  },
+  {
+    "id": "reseaux-m4",
+    "enonce": "Qu'identifie un numéro de port, comme le 80 ou le 443 ?",
+    "choix": ["Un appareil physique", "Un service ou une application sur la machine", "Une marque de routeur", "Un pays d'origine"],
+    "bonneReponse": 1,
+    "explication": "Sur une même machine, le port distingue les services : 80 pour le web HTTP, 443 pour HTTPS, 25 pour le courrier. L'adresse IP désigne la machine, le port désigne l'application visée."
+  },
+  {
+    "id": "reseaux-m5",
+    "enonce": "Qu'est-ce qu'une adresse MAC ?",
+    "choix": ["Un identifiant physique de la carte réseau", "Un type de mot de passe", "Le nom d'un système d'exploitation", "Une adresse postale"],
+    "bonneReponse": 0,
+    "explication": "L'adresse MAC est un numéro unique inscrit dans chaque carte réseau à la fabrication. Contrairement à l'adresse IP, qui peut changer, elle reste en principe attachée au matériel."
+  },
+  {
+    "id": "reseaux-m6",
+    "enonce": "Quelle plage d'adresses est réservée aux réseaux privés ?",
+    "choix": ["192.168.0.0 – 192.168.255.255", "1.0.0.0 – 1.255.255.255", "8.8.0.0 – 8.8.255.255", "200.0.0.0 – 200.255.255.255"],
+    "bonneReponse": 0,
+    "explication": "Les plages 192.168.x.x, 10.x.x.x et 172.16–31.x.x sont réservées aux réseaux locaux et ne circulent pas sur Internet. C'est pourquoi tant de box utilisent une IP en 192.168.1.1."
+  },
+  {
+    "id": "reseaux-m7",
+    "enonce": "Quel est le rôle d'un commutateur (switch) dans un réseau local ?",
+    "choix": ["Relier les appareils et diriger les données vers le bon destinataire", "Fournir l'électricité aux appareils", "Stocker les fichiers du réseau", "Afficher les pages web"],
+    "bonneReponse": 0,
+    "explication": "Un switch interconnecte les appareils d'un réseau local et n'envoie chaque trame qu'au port concerné, grâce aux adresses MAC. C'est plus efficace que l'ancien concentrateur (hub) qui diffusait à tous."
+  },
+  {
+    "id": "reseaux-m8",
+    "enonce": "Quel port utilise par défaut le protocole HTTPS ?",
+    "choix": ["Le port 21", "Le port 25", "Le port 443", "Le port 110"],
+    "bonneReponse": 2,
+    "explication": "HTTPS (web chiffré) écoute par défaut sur le port 443, tandis que HTTP non chiffré utilise le 80. Les ports 21, 25 et 110 servent respectivement au FTP, à l'envoi de courrier (SMTP) et à sa réception (POP3)."
+  },
+  {
+    "id": "reseaux-m9",
+    "enonce": "Que permet de vérifier la commande « ping » ?",
+    "choix": ["La présence et le temps de réponse d'une machine", "La taille du disque dur", "La version de Windows", "Le niveau de batterie"],
+    "bonneReponse": 0,
+    "explication": "Ping envoie de petits messages (ICMP) à une machine et mesure le temps de réponse. C'est l'outil de base pour vérifier qu'un hôte est joignable et estimer la latence du réseau."
+  },
+  {
+    "id": "reseaux-m10",
+    "enonce": "Qu'est-ce que la passerelle par défaut d'un appareil ?",
+    "choix": ["Son antivirus principal", "L'appareil par lequel il sort vers les autres réseaux", "Son adresse e-mail", "Son mot de passe Wi-Fi"],
+    "bonneReponse": 1,
+    "explication": "La passerelle par défaut est la porte de sortie du réseau local : tout trafic destiné à l'extérieur (Internet) lui est confié. Dans une maison, c'est généralement la box."
+  }
+]

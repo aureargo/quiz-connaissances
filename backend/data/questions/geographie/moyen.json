@@ -1,0 +1,72 @@
+[
+  {
+    "id": "geo-m1",
+    "enonce": "Quelle est la plus grande étendue d'eau intérieure du monde par superficie ?",
+    "choix": ["le lac Supérieur", "la mer Caspienne", "le lac Victoria", "le lac Baïkal"],
+    "bonneReponse": 1,
+    "explication": "La mer Caspienne, malgré son nom, est un lac salé fermé. Avec environ 371 000 km², c'est de loin la plus grande étendue d'eau enclavée du globe."
+  },
+  {
+    "id": "geo-m2",
+    "enonce": "Quel est le plus haut sommet d'Afrique ?",
+    "choix": ["le mont Kenya", "le Kilimandjaro", "le mont Stanley", "le mont Cameroun"],
+    "bonneReponse": 1,
+    "explication": "Le Kilimandjaro, en Tanzanie, culmine à 5 895 m. C'est un volcan endormi et le point le plus élevé du continent africain."
+  },
+  {
+    "id": "geo-m3",
+    "enonce": "Quel détroit sépare l'Europe de l'Afrique à l'entrée de la Méditerranée ?",
+    "choix": ["le détroit de Gibraltar", "le Bosphore", "le détroit de Béring", "le détroit de Malacca"],
+    "bonneReponse": 0,
+    "explication": "Le détroit de Gibraltar, large d'à peine 14 km, relie l'Atlantique à la Méditerranée et sépare l'Espagne du Maroc."
+  },
+  {
+    "id": "geo-m4",
+    "enonce": "Quel est le plus long fleuve d'Europe ?",
+    "choix": ["le Danube", "la Volga", "le Rhin", "le Dniepr"],
+    "bonneReponse": 1,
+    "explication": "La Volga, longue d'environ 3 530 km, traverse la Russie et se jette dans la mer Caspienne : c'est le plus long fleuve d'Europe."
+  },
+  {
+    "id": "geo-m5",
+    "enonce": "Quelle est la fosse océanique la plus profonde du monde ?",
+    "choix": ["la fosse des Mariannes", "la fosse du Japon", "la fosse des Tonga", "la fosse de Porto Rico"],
+    "bonneReponse": 0,
+    "explication": "La fosse des Mariannes, dans le Pacifique, atteint près de 11 000 m de profondeur au gouffre Challenger, le point le plus bas connu des océans."
+  },
+  {
+    "id": "geo-m6",
+    "enonce": "Quelle est la plus vaste forêt tropicale du monde ?",
+    "choix": ["l'Amazonie", "le bassin du Congo", "la forêt de Bornéo", "les Sundarbans"],
+    "bonneReponse": 0,
+    "explication": "L'Amazonie couvre plus de 5 millions de km² en Amérique du Sud et concentre une part énorme de la biodiversité terrestre."
+  },
+  {
+    "id": "geo-m7",
+    "enonce": "Quel est le plus haut volcan actif d'Europe ?",
+    "choix": ["le Vésuve", "l'Etna", "le Stromboli", "le Teide"],
+    "bonneReponse": 1,
+    "explication": "L'Etna, en Sicile, dépasse 3 300 m et entre régulièrement en éruption. Le Teide est plus haut mais endormi, et géographiquement rattaché à l'Afrique."
+  },
+  {
+    "id": "geo-m8",
+    "enonce": "Quel canal relie la mer Méditerranée à la mer Rouge ?",
+    "choix": ["le canal de Panama", "le canal de Suez", "le canal de Kiel", "le canal de Corinthe"],
+    "bonneReponse": 1,
+    "explication": "Le canal de Suez, ouvert en 1869 en Égypte, évite aux navires de contourner l'Afrique pour passer d'Europe vers l'océan Indien."
+  },
+  {
+    "id": "geo-m9",
+    "enonce": "Quel est le plus grand lac d'Afrique par superficie ?",
+    "choix": ["le lac Tanganyika", "le lac Victoria", "le lac Malawi", "le lac Tchad"],
+    "bonneReponse": 1,
+    "explication": "Le lac Victoria, partagé entre trois pays d'Afrique de l'Est, est le plus grand lac du continent et l'une des sources du Nil."
+  },
+  {
+    "id": "geo-m10",
+    "enonce": "Quel courant marin chaud longe la côte est de l'Amérique du Nord avant de réchauffer l'Europe ?",
+    "choix": ["le Gulf Stream", "le courant de Humboldt", "le Kuroshio", "le courant du Labrador"],
+    "bonneReponse": 0,
+    "explication": "Le Gulf Stream transporte des eaux chaudes du golfe du Mexique vers l'Atlantique Nord, adoucissant nettement le climat de l'Europe de l'Ouest."
+  }
+]

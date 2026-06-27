@@ -1,0 +1,72 @@
+[
+  {
+    "id": "antiquite-m1",
+    "enonce": "En quelle année Jules César a-t-il été assassiné ?",
+    "choix": ["52 av. J.-C.", "44 av. J.-C.", "27 av. J.-C.", "14 apr. J.-C."],
+    "bonneReponse": 1,
+    "explication": "César fut poignardé aux ides de mars (15 mars) 44 av. J.-C. par un groupe de sénateurs menés par Brutus et Cassius, qui craignaient qu'il ne devienne roi."
+  },
+  {
+    "id": "antiquite-m2",
+    "enonce": "Quelle bataille de 490 av. J.-C. vit les Athéniens repousser les Perses ?",
+    "choix": ["Marathon", "Salamine", "Platées", "Thermopyles"],
+    "bonneReponse": 0,
+    "explication": "À Marathon, les hoplites athéniens battent l'armée de Darius Ier. La légende du messager courant annoncer la victoire à Athènes a donné son nom à l'épreuve sportive."
+  },
+  {
+    "id": "antiquite-m3",
+    "enonce": "Qui fut le premier empereur romain, héritier de Jules César ?",
+    "choix": ["Auguste", "Néron", "Trajan", "Tibère"],
+    "bonneReponse": 0,
+    "explication": "Octave, petit-neveu et fils adoptif de César, reçut le titre d'Auguste en 27 av. J.-C. et fonda l'Empire. Tibère lui succéda, Néron et Trajan régnèrent plus tard."
+  },
+  {
+    "id": "antiquite-m4",
+    "enonce": "Quelle cité de Mésopotamie est associée au célèbre Code d'Hammurabi ?",
+    "choix": ["Ur", "Ninive", "Babylone", "Uruk"],
+    "bonneReponse": 2,
+    "explication": "Le Code d'Hammurabi (vers 1750 av. J.-C.), gravé sur une stèle, est l'un des plus anciens recueils de lois. Hammurabi régnait sur Babylone, qu'il fit rayonner."
+  },
+  {
+    "id": "antiquite-m5",
+    "enonce": "Quel philosophe grec, maître de Platon, fut condamné à boire la ciguë ?",
+    "choix": ["Aristote", "Socrate", "Pythagore", "Épicure"],
+    "bonneReponse": 1,
+    "explication": "Socrate fut condamné à mort en 399 av. J.-C. à Athènes pour « impiété » et « corruption de la jeunesse ». Il n'a rien écrit : on le connaît surtout par son élève Platon."
+  },
+  {
+    "id": "antiquite-m6",
+    "enonce": "Quelles guerres ont opposé Rome et Carthage à trois reprises ?",
+    "choix": ["les guerres médiques", "les guerres puniques", "les guerres samnites", "les guerres serviles"],
+    "bonneReponse": 1,
+    "explication": "Les trois guerres puniques (264-146 av. J.-C.) se soldèrent par la destruction de Carthage. Les guerres médiques, elles, opposaient les Grecs aux Perses."
+  },
+  {
+    "id": "antiquite-m7",
+    "enonce": "Quel roi de Macédoine, père d'Alexandre, soumit les cités grecques ?",
+    "choix": ["Philippe II", "Léonidas Ier", "Darius Ier", "Ptolémée Ier"],
+    "bonneReponse": 0,
+    "explication": "Philippe II réforma l'armée macédonienne (la phalange) et imposa son hégémonie à la Grèce après la bataille de Chéronée en 338 av. J.-C. Son fils Alexandre poursuivit son œuvre."
+  },
+  {
+    "id": "antiquite-m8",
+    "enonce": "Quelle bataille navale de 31 av. J.-C. assura le pouvoir d'Octave ?",
+    "choix": ["Actium", "Salamine", "les Thermopyles", "Cannes"],
+    "bonneReponse": 0,
+    "explication": "À Actium, au large de la Grèce, Octave écrasa la flotte de Marc Antoine et de Cléopâtre. Cette victoire ouvrit la voie à l'Empire romain et à sa propre élévation."
+  },
+  {
+    "id": "antiquite-m9",
+    "enonce": "Quel historien grec est surnommé le « père de l'histoire » ?",
+    "choix": ["Thucydide", "Hérodote", "Xénophon", "Polybe"],
+    "bonneReponse": 1,
+    "explication": "Hérodote (Ve siècle av. J.-C.) rédigea ses « Enquêtes » sur les guerres médiques, premier grand récit historique en prose. Cicéron lui décerna ce surnom."
+  },
+  {
+    "id": "antiquite-m10",
+    "enonce": "Quelle cité romaine fut ensevelie par l'éruption du Vésuve en l'an 79 ?",
+    "choix": ["Ostie", "Pompéi", "Capoue", "Ravenne"],
+    "bonneReponse": 1,
+    "explication": "Pompéi fut engloutie sous les cendres du Vésuve, qui la figèrent dans le temps. Ses fouilles offrent un témoignage exceptionnel sur la vie quotidienne romaine."
+  }
+]

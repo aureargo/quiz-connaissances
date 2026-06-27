@@ -1,0 +1,72 @@
+[
+  {
+    "id": "automobile-f1",
+    "enonce": "Quelle marque automobile a pour emblème un cheval cabré ?",
+    "choix": ["Ferrari", "Lamborghini", "Maserati", "Alfa Romeo"],
+    "bonneReponse": 0,
+    "explication": "Le « cavallino rampante » (cheval cabré) est l'emblème de Ferrari depuis 1932. Lamborghini arbore un taureau, Maserati un trident et Alfa Romeo un serpent."
+  },
+  {
+    "id": "automobile-f2",
+    "enonce": "Que mesure le compteur kilométrique (odomètre) d'une voiture ?",
+    "choix": ["la vitesse instantanée", "la distance totale parcourue", "le niveau de carburant", "le régime du moteur"],
+    "bonneReponse": 1,
+    "explication": "L'odomètre cumule la distance parcourue par le véhicule depuis sa fabrication. La vitesse, elle, est affichée par le compteur de vitesse."
+  },
+  {
+    "id": "automobile-f3",
+    "enonce": "Quel carburant alimente un moteur diesel ?",
+    "choix": ["l'essence sans plomb", "le kérosène", "le gazole", "le GPL"],
+    "bonneReponse": 2,
+    "explication": "Le moteur diesel fonctionne au gazole, qui s'enflamme par compression de l'air et non grâce à une bougie d'allumage comme l'essence."
+  },
+  {
+    "id": "automobile-f4",
+    "enonce": "Quelle marque allemande a pour logo une étoile à trois branches dans un cercle ?",
+    "choix": ["BMW", "Audi", "Mercedes-Benz", "Volkswagen"],
+    "bonneReponse": 2,
+    "explication": "L'étoile à trois branches de Mercedes-Benz symbolise l'ambition de la marque sur terre, sur mer et dans les airs. BMW utilise une hélice stylisée, Audi quatre anneaux."
+  },
+  {
+    "id": "automobile-f5",
+    "enonce": "À quoi sert la pédale de frein ?",
+    "choix": ["accélérer le véhicule", "changer de vitesse", "actionner les clignotants", "ralentir et arrêter le véhicule"],
+    "bonneReponse": 3,
+    "explication": "La pédale de frein ralentit puis immobilise la voiture en serrant les plaquettes contre les disques (ou les mâchoires contre les tambours) des roues."
+  },
+  {
+    "id": "automobile-f6",
+    "enonce": "Comment appelle-t-on une voiture mue uniquement par un moteur électrique et une batterie ?",
+    "choix": ["une voiture hybride", "une voiture électrique", "une voiture diesel", "une voiture à hydrogène"],
+    "bonneReponse": 1,
+    "explication": "Une voiture 100 % électrique se déplace grâce à un moteur électrique alimenté par une batterie rechargeable, sans moteur thermique. L'hybride, elle, combine les deux."
+  },
+  {
+    "id": "automobile-f7",
+    "enonce": "Quel industriel américain a popularisé la production à la chaîne avec son modèle « Ford T » ?",
+    "choix": ["Karl Benz", "Henry Ford", "Enzo Ferrari", "Ferdinand Porsche"],
+    "bonneReponse": 1,
+    "explication": "Henry Ford généralise la chaîne de montage dès 1913 pour la Ford T, faisant chuter les coûts de production et démocratisant l'automobile aux États-Unis."
+  },
+  {
+    "id": "automobile-f8",
+    "enonce": "Quelle partie de la voiture est en contact direct avec la route ?",
+    "choix": ["le pare-brise", "les pneus", "le capot", "le rétroviseur"],
+    "bonneReponse": 1,
+    "explication": "Montés sur les jantes, les pneus sont les seuls éléments en contact avec la chaussée : ils assurent l'adhérence, la direction et le freinage."
+  },
+  {
+    "id": "automobile-f9",
+    "enonce": "Quelle marque française a pour emblème un losange ?",
+    "choix": ["Peugeot", "Renault", "Citroën", "Bugatti"],
+    "bonneReponse": 1,
+    "explication": "Le losange est l'emblème de Renault depuis le début du XXe siècle. Peugeot arbore un lion et Citroën deux chevrons."
+  },
+  {
+    "id": "automobile-f10",
+    "enonce": "Comment nomme-t-on le coussin de sécurité qui se gonfle lors d'un choc ?",
+    "choix": ["le klaxon", "l'embrayage", "l'airbag", "l'alternateur"],
+    "bonneReponse": 2,
+    "explication": "L'airbag (coussin gonflable de sécurité) se déploie en une fraction de seconde lors d'un impact pour amortir la tête et le thorax des occupants."
+  }
+]

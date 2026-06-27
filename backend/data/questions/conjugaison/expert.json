@@ -1,0 +1,72 @@
+[
+  {
+    "id": "conjugaison-e1",
+    "enonce": "Comment conjugue-t-on « faire » avec « nous » au subjonctif présent ?",
+    "choix": ["que nous faisons", "que nous fassions", "que nous faisions", "que nous fîmes"],
+    "bonneReponse": 1,
+    "explication": "Au subjonctif présent, « faire » a un radical irrégulier « fass- » : que je fasse, que nous fassions. « Faisions » serait l'imparfait de l'indicatif, et « fîmes » le passé simple."
+  },
+  {
+    "id": "conjugaison-e2",
+    "enonce": "Comment conjugue-t-on « tenir » avec « il » au passé simple ?",
+    "choix": ["il tena", "il tint", "il tenit", "il tenut"],
+    "bonneReponse": 1,
+    "explication": "« Tenir » et « venir » ont un passé simple très irrégulier en « -in » : il tint, il vint, ils tinrent. C'est une forme rare à l'oral mais courante dans les récits littéraires."
+  },
+  {
+    "id": "conjugaison-e3",
+    "enonce": "Comment compléter « il faut que tu (être) prudent » ?",
+    "choix": ["que tu es", "que tu soies", "que tu seras", "que tu sois"],
+    "bonneReponse": 3,
+    "explication": "Après « il faut que », on emploie le subjonctif. Pour « être » : que je sois, que tu sois, qu'il soit. On n'ajoute pas de « e » : « que tu soies » est une faute fréquente."
+  },
+  {
+    "id": "conjugaison-e4",
+    "enonce": "Comment compléter « elles se sont (laver) les mains » ? — accord de « lavé »",
+    "choix": ["lavé", "lavés", "lavée", "lavées"],
+    "bonneReponse": 1,
+    "explication": "Ici le COD « les mains » est placé APRÈS le verbe, donc le participe ne s'accorde pas avec le sujet : « elles se sont lavé les mains ». Le « se » est complément d'objet indirect (à elles-mêmes)."
+  },
+  {
+    "id": "conjugaison-e5",
+    "enonce": "À quel temps est conjugué « je serais venu » ?",
+    "choix": ["Le conditionnel présent", "Le conditionnel passé", "Le subjonctif passé", "Le plus-que-parfait"],
+    "bonneReponse": 1,
+    "explication": "« Je serais venu » est au conditionnel passé : auxiliaire au conditionnel présent (« serais ») + participe passé. Il exprime un fait irréel du passé (« si j'avais su, je serais venu »)."
+  },
+  {
+    "id": "conjugaison-e6",
+    "enonce": "Comment conjugue-t-on « vivre » avec « il » au passé simple ?",
+    "choix": ["il vivit", "il véquit", "il vécut", "il vivut"],
+    "bonneReponse": 2,
+    "explication": "« Vivre » a un passé simple irrégulier en « -u » : il vécut, ils vécurent. Le radical devient « véc- », comme pour « il vivra » (futur) le radical reste « vivr- »."
+  },
+  {
+    "id": "conjugaison-e7",
+    "enonce": "À quel mode et temps appartient la forme « qu'il chantât » ?",
+    "choix": ["Le subjonctif présent", "Le subjonctif imparfait", "Le passé simple", "Le conditionnel passé"],
+    "bonneReponse": 1,
+    "explication": "« Qu'il chantât » est au subjonctif imparfait, reconnaissable à son accent circonflexe à la 3e personne du singulier. Ce temps, surtout littéraire, est aujourd'hui souvent remplacé par le subjonctif présent."
+  },
+  {
+    "id": "conjugaison-e8",
+    "enonce": "Comment compléter « les fleurs que j'ai (cueillir) » au passé composé ?",
+    "choix": ["cueilli", "cueillis", "cueillie", "cueillies"],
+    "bonneReponse": 3,
+    "explication": "Avec « avoir », le participe s'accorde avec le COD placé avant. « Que » remplace « les fleurs » (féminin pluriel), placé avant le verbe : on écrit « cueillies »."
+  },
+  {
+    "id": "conjugaison-e9",
+    "enonce": "Comment conjugue-t-on « mourir » avec « il » au passé simple ?",
+    "choix": ["il mourit", "il moura", "il mourut", "il mourût"],
+    "bonneReponse": 2,
+    "explication": "Le passé simple de « mourir » est « il mourut » (sans accent). La forme « il mourût », avec accent circonflexe, serait le subjonctif imparfait : deux temps qu'il ne faut pas confondre."
+  },
+  {
+    "id": "conjugaison-e10",
+    "enonce": "Comment s'écrit le gérondif du verbe « faire » (« ... ses devoirs ») ?",
+    "choix": ["en faisant", "en faisait", "en fesant", "en faisans"],
+    "bonneReponse": 0,
+    "explication": "Le gérondif se forme avec « en » + participe présent : « en faisant ». On l'écrit « -ai- » (et non « fesant »), même si on le prononce « eu ». Il exprime la simultanéité ou la manière."
+  }
+]

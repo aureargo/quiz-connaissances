@@ -1,0 +1,72 @@
+[
+  {
+    "id": "c-f1",
+    "enonce": "Quelle fonction affiche du texte sur la sortie standard en C ?",
+    "choix": ["printf", "print", "cout", "echo"],
+    "bonneReponse": 0,
+    "explication": "`printf(\"Bonjour\\n\");` écrit sur la sortie standard. Son nom vient de « print formatted » : elle accepte des marqueurs de format comme `%d` (entier) ou `%s` (chaîne)."
+  },
+  {
+    "id": "c-f2",
+    "enonce": "Quel en-tête faut-il inclure pour utiliser `printf` et `scanf` ?",
+    "choix": ["<stdlib.h>", "<stdio.h>", "<string.h>", "<math.h>"],
+    "bonneReponse": 1,
+    "explication": "`#include <stdio.h>` (standard input/output) déclare les fonctions d'entrées/sorties comme `printf`, `scanf` et `fopen`."
+  },
+  {
+    "id": "c-f3",
+    "enonce": "Quel mot-clé déclare un nombre entier en C ?",
+    "choix": ["int", "integer", "number", "var"],
+    "bonneReponse": 0,
+    "explication": "`int n = 42;` déclare un entier. C est un langage à typage statique : le type d'une variable est précisé à la déclaration et ne change pas."
+  },
+  {
+    "id": "c-f4",
+    "enonce": "Par quelle fonction commence l'exécution d'un programme C ?",
+    "choix": ["start", "main", "begin", "run"],
+    "bonneReponse": 1,
+    "explication": "`int main(void) { ... }` est le point d'entrée : c'est elle que le système appelle au lancement. Elle renvoie un code de retour (0 = succès)."
+  },
+  {
+    "id": "c-f5",
+    "enonce": "Quel symbole sert à déclarer un pointeur en C ?",
+    "choix": ["&", "*", "#", "@"],
+    "bonneReponse": 1,
+    "explication": "`int *p;` déclare un pointeur vers un entier. L'esperluette `&` sert, elle, à obtenir l'adresse d'une variable : `p = &n;`."
+  },
+  {
+    "id": "c-f6",
+    "enonce": "Quel caractère termine une instruction en C ?",
+    "choix": ["le point .", "le point-virgule ;", "les deux-points :", "la virgule ,"],
+    "bonneReponse": 1,
+    "explication": "Chaque instruction se termine par un point-virgule `;`. L'oublier est l'une des erreurs de compilation les plus fréquentes chez les débutants."
+  },
+  {
+    "id": "c-f7",
+    "enonce": "Quelle fonction réserve de la mémoire dynamiquement sur le tas ?",
+    "choix": ["malloc", "alloc", "new", "create"],
+    "bonneReponse": 0,
+    "explication": "`malloc(taille)` (memory allocation) renvoie un pointeur vers une zone de `taille` octets. En C, il n'existe pas de mot-clé `new` comme en C++."
+  },
+  {
+    "id": "c-f8",
+    "enonce": "Quelle fonction libère la mémoire réservée avec `malloc` ?",
+    "choix": ["delete", "free", "release", "clear"],
+    "bonneReponse": 1,
+    "explication": "`free(p)` rend la mémoire au système. À chaque `malloc` doit correspondre un `free`, sinon on provoque une fuite mémoire."
+  },
+  {
+    "id": "c-f9",
+    "enonce": "Quelle extension porte un fichier de code source C ?",
+    "choix": [".c", ".cpp", ".cs", ".h"],
+    "bonneReponse": 0,
+    "explication": "Le code source va dans un fichier `.c`. Les déclarations partagées se placent dans des en-têtes `.h` que l'on inclut avec `#include`."
+  },
+  {
+    "id": "c-f10",
+    "enonce": "Quel mot-clé répète un bloc tant qu'une condition est vraie ?",
+    "choix": ["loop", "while", "repeat", "foreach"],
+    "bonneReponse": 1,
+    "explication": "`while (condition) { ... }` répète le bloc tant que la condition reste vraie. C propose aussi `for` et `do...while`."
+  }
+]

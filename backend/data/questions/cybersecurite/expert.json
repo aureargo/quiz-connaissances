@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cybersecurite-e1",
+    "enonce": "Quelle est la différence entre chiffrement symétrique et asymétrique ?",
+    "choix": ["Le symétrique utilise une seule clé partagée", "Le symétrique est toujours plus sûr", "L'asymétrique n'utilise aucune clé", "L'asymétrique ne sert qu'aux fichiers"],
+    "bonneReponse": 0,
+    "explication": "Le chiffrement symétrique (ex. AES) emploie une même clé pour chiffrer et déchiffrer. L'asymétrique (ex. RSA) utilise une paire clé publique / clé privée, ce qui résout le partage de la clé."
+  },
+  {
+    "id": "cybersecurite-e2",
+    "enonce": "Quelle faille permet d'injecter du code SQL via un champ de saisie mal filtré ?",
+    "choix": ["Le cross-site scripting", "L'injection SQL", "Le déni de service", "Le détournement de session"],
+    "bonneReponse": 1,
+    "explication": "L'injection SQL insère des commandes dans une requête à cause d'entrées non validées, permettant de lire ou altérer la base. La parade : les requêtes paramétrées (requêtes préparées)."
+  },
+  {
+    "id": "cybersecurite-e3",
+    "enonce": "Que permet une attaque de type XSS (cross-site scripting) ?",
+    "choix": ["Exécuter du script dans le navigateur d'un visiteur", "Saturer un serveur de requêtes", "Casser un algorithme de chiffrement", "Cloner une carte à puce"],
+    "bonneReponse": 0,
+    "explication": "Le XSS injecte du JavaScript malveillant dans une page, exécuté par le navigateur des visiteurs : vol de cookies, détournement de session… On s'en protège en échappant les données affichées."
+  },
+  {
+    "id": "cybersecurite-e4",
+    "enonce": "Pourquoi ajoute-t-on un « sel » (salt) avant de hacher un mot de passe ?",
+    "choix": ["Pour accélérer le hachage", "Pour réduire la taille de l'empreinte", "Pour contrer les tables précalculées", "Pour pouvoir le déchiffrer ensuite"],
+    "bonneReponse": 2,
+    "explication": "Le sel est une valeur aléatoire unique ajoutée à chaque mot de passe avant hachage. Il rend inutiles les tables précalculées (rainbow tables) et empêche deux mots de passe identiques d'avoir la même empreinte."
+  },
+  {
+    "id": "cybersecurite-e5",
+    "enonce": "Quels sont les trois piliers du modèle de sécurité « CIA » ?",
+    "choix": ["Confidentialité, intégrité, disponibilité", "Cryptage, identité, audit", "Contrôle, isolation, alerte", "Confiance, intégrité, accès"],
+    "bonneReponse": 0,
+    "explication": "Le triptyque CIA (Confidentiality, Integrity, Availability) résume les objectifs de la sécurité : garder l'information secrète, exacte et accessible aux personnes autorisées."
+  },
+  {
+    "id": "cybersecurite-e6",
+    "enonce": "En quoi consiste une attaque de l'homme du milieu (man-in-the-middle) ?",
+    "choix": ["Deviner un mot de passe par essais", "S'intercaler entre deux parties pour intercepter les échanges", "Effacer les journaux d'un serveur", "Surcharger un réseau de paquets"],
+    "bonneReponse": 1,
+    "explication": "Dans une attaque de l'homme du milieu, l'assaillant se place entre deux interlocuteurs pour lire ou modifier leurs échanges à leur insu. Le chiffrement TLS bien validé est la principale parade."
+  },
+  {
+    "id": "cybersecurite-e7",
+    "enonce": "Quel principe consiste à n'accorder que les droits strictement nécessaires à chaque utilisateur ?",
+    "choix": ["La défense en profondeur", "Le moindre privilège", "La séparation des tâches", "Le chiffrement de bout en bout"],
+    "bonneReponse": 1,
+    "explication": "Le principe du moindre privilège limite chaque compte aux seules permissions indispensables. En cas de compromission, l'attaquant hérite ainsi de droits minimaux, ce qui réduit les dégâts."
+  },
+  {
+    "id": "cybersecurite-e8",
+    "enonce": "Qu'est-ce qu'une autorité de certification (CA) garantit dans une connexion HTTPS ?",
+    "choix": ["La rapidité du serveur", "L'authenticité de la clé publique d'un site", "L'absence totale de virus", "La gratuité du site"],
+    "bonneReponse": 1,
+    "explication": "Une autorité de certification signe le certificat d'un site, attestant que sa clé publique lui appartient bien. Le navigateur fait confiance à la chaîne de certificats jusqu'à une racine reconnue."
+  },
+  {
+    "id": "cybersecurite-e9",
+    "enonce": "Pourquoi MD5 et SHA-1 sont-ils déconseillés pour la sécurité aujourd'hui ?",
+    "choix": ["Ils sont trop lents à calculer", "Ils produisent des empreintes trop longues", "Des collisions y sont devenues réalisables", "Ils ne fonctionnent que sur Windows"],
+    "bonneReponse": 2,
+    "explication": "Une collision survient quand deux entrées différentes donnent la même empreinte. Des collisions étant désormais réalisables pour MD5 et SHA-1, on leur préfère SHA-256 ou SHA-3."
+  },
+  {
+    "id": "cybersecurite-e10",
+    "enonce": "Que désigne le « zero trust » comme modèle de sécurité ?",
+    "choix": ["Faire confiance à tout le réseau interne", "Ne jamais vérifier les utilisateurs connus", "Vérifier systématiquement chaque accès", "Supprimer toute authentification"],
+    "bonneReponse": 2,
+    "explication": "Le « zero trust » part du principe qu'aucun utilisateur ni appareil n'est fiable par défaut, même à l'intérieur du réseau. Chaque accès est authentifié et vérifié, contrairement au modèle du « château fort »."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "reseaux-f1",
+    "enonce": "À quoi sert un réseau informatique ?",
+    "choix": ["À relier des appareils pour échanger des données", "À augmenter la taille de l'écran", "À refroidir le processeur", "À stocker de l'électricité"],
+    "bonneReponse": 0,
+    "explication": "Un réseau interconnecte plusieurs appareils (ordinateurs, téléphones, imprimantes…) afin qu'ils puissent communiquer et partager des données. Internet est lui-même un immense réseau de réseaux."
+  },
+  {
+    "id": "reseaux-f2",
+    "enonce": "Quel appareil relie le plus souvent un réseau domestique à Internet ?",
+    "choix": ["Le clavier", "La box (routeur)", "L'imprimante", "Le disque dur"],
+    "bonneReponse": 1,
+    "explication": "La box fournie par le fournisseur d'accès joue le rôle de routeur : elle fait la jonction entre votre réseau local et Internet, et distribue la connexion à tous vos appareils."
+  },
+  {
+    "id": "reseaux-f3",
+    "enonce": "Que désigne le Wi-Fi ?",
+    "choix": ["Un type de câble", "Une connexion réseau sans fil", "Un logiciel antivirus", "Une marque d'ordinateur"],
+    "bonneReponse": 1,
+    "explication": "Le Wi-Fi permet de connecter des appareils à un réseau par ondes radio, sans câble. Il offre de la mobilité, au prix d'une portée limitée et d'une sensibilité aux obstacles."
+  },
+  {
+    "id": "reseaux-f4",
+    "enonce": "Quel câble relie couramment un ordinateur à une box pour une connexion filaire ?",
+    "choix": ["Un câble Ethernet", "Un câble d'alimentation", "Un câble HDMI", "Un câble audio"],
+    "bonneReponse": 0,
+    "explication": "Le câble Ethernet, muni d'une prise RJ45, transporte les données du réseau. Une liaison filaire est généralement plus stable et plus rapide que le Wi-Fi."
+  },
+  {
+    "id": "reseaux-f5",
+    "enonce": "Qu'est-ce qu'une adresse IP ?",
+    "choix": ["Le nom du propriétaire", "Un identifiant de l'appareil sur le réseau", "La marque de la carte réseau", "Un mot de passe Wi-Fi"],
+    "bonneReponse": 1,
+    "explication": "L'adresse IP est un numéro qui identifie un appareil sur un réseau, un peu comme une adresse postale. Elle permet d'envoyer les données au bon destinataire."
+  },
+  {
+    "id": "reseaux-f6",
+    "enonce": "Que signifie « télécharger » un fichier ?",
+    "choix": ["Le recevoir depuis Internet", "Le supprimer définitivement", "L'imprimer sur papier", "Le renommer"],
+    "bonneReponse": 0,
+    "explication": "Télécharger (download), c'est rapatrier des données depuis un serveur distant vers son appareil. L'opération inverse, envoyer des données vers le réseau, s'appelle « téléverser » (upload)."
+  },
+  {
+    "id": "reseaux-f7",
+    "enonce": "Qu'est-ce qu'un serveur, sur un réseau ?",
+    "choix": ["Un écran tactile", "Un ordinateur qui fournit des services à d'autres", "Un câble très long", "Une clé USB"],
+    "bonneReponse": 1,
+    "explication": "Un serveur est une machine qui répond aux demandes d'autres appareils, appelés clients : il leur sert des pages web, des fichiers ou des e-mails. C'est le modèle client-serveur."
+  },
+  {
+    "id": "reseaux-f8",
+    "enonce": "Que désigne un réseau local (LAN) ?",
+    "choix": ["Un réseau mondial", "Un réseau limité à un même lieu", "Un réseau téléphonique", "Un réseau électrique"],
+    "bonneReponse": 1,
+    "explication": "Un LAN (Local Area Network) couvre une zone restreinte : une maison, un bureau, une école. Par opposition, un WAN (Wide Area Network) relie des sites distants, comme Internet."
+  },
+  {
+    "id": "reseaux-f9",
+    "enonce": "Que tape-t-on dans un navigateur pour visiter un site web ?",
+    "choix": ["Une adresse web (URL)", "Un numéro de téléphone", "Un code postal", "Une adresse e-mail"],
+    "bonneReponse": 0,
+    "explication": "L'URL (par exemple https://exemple.fr) indique au navigateur quel site contacter et quelle page demander. C'est l'équivalent d'une adresse pour retrouver une ressource sur le web."
+  },
+  {
+    "id": "reseaux-f10",
+    "enonce": "Qu'exprime le débit d'une connexion, en mégabits par seconde ?",
+    "choix": ["La taille de l'écran", "La quantité de données transférée par seconde", "Le nombre d'appareils connectés", "La durée de la batterie"],
+    "bonneReponse": 1,
+    "explication": "Le débit mesure le volume de données échangé chaque seconde : plus il est élevé, plus les pages et fichiers arrivent vite. On l'exprime en mégabits par seconde (Mb/s)."
+  }
+]

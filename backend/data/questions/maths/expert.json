@@ -1,0 +1,72 @@
+[
+  {
+    "id": "maths-e1",
+    "enonce": "Quelle est la dérivée de la fonction f(x) = x² ?",
+    "choix": ["x", "2x", "x²/2", "2"],
+    "bonneReponse": 1,
+    "explication": "On applique la règle (xⁿ)' = n·xⁿ⁻¹ : la dérivée de x² est 2x. La dérivée mesure le taux de variation instantané de la fonction."
+  },
+  {
+    "id": "maths-e2",
+    "enonce": "Que vaut le nombre e (base du logarithme naturel) arrondi à deux décimales ?",
+    "choix": ["2,72", "2,68", "3,14", "1,62"],
+    "bonneReponse": 0,
+    "explication": "e ≈ 2,71828…, soit 2,72 arrondi. C'est la base de l'exponentielle, dont la dérivée est égale à elle-même."
+  },
+  {
+    "id": "maths-e3",
+    "enonce": "Que vaut la somme des n premiers entiers (1 + 2 + … + n) ?",
+    "choix": ["n(n+1)/2", "n²/2", "n(n−1)/2", "(n+1)²/2"],
+    "bonneReponse": 0,
+    "explication": "La formule est n(n+1)/2. La légende attribue cette astuce au jeune Gauss, qui appariait les termes (1+n), (2+n−1)… tous égaux à n+1."
+  },
+  {
+    "id": "maths-e4",
+    "enonce": "Qu'affirme le dernier théorème de Fermat ?",
+    "choix": ["aⁿ + bⁿ = cⁿ n'a pas de solution entière positive pour n > 2", "tout entier pair est la somme de deux nombres premiers", "il existe une infinité de nombres premiers jumeaux", "tout entier est la somme d'au plus quatre carrés"],
+    "bonneReponse": 0,
+    "explication": "Fermat affirmait qu'aucun triplet d'entiers positifs ne vérifie aⁿ + bⁿ = cⁿ dès que n > 2. Conjecturé en 1637, il ne fut démontré qu'en 1994 par Andrew Wiles."
+  },
+  {
+    "id": "maths-e5",
+    "enonce": "Quelle est une primitive de la fonction 1/x (pour x > 0) ?",
+    "choix": ["ln(x)", "−1/x²", "x·ln(x)", "1/x²"],
+    "bonneReponse": 0,
+    "explication": "La primitive de 1/x est ln(x) (à une constante près), car la dérivée du logarithme naturel est précisément 1/x."
+  },
+  {
+    "id": "maths-e6",
+    "enonce": "Dans l'ensemble des nombres complexes, que vaut i² ?",
+    "choix": ["1", "−1", "i", "−i"],
+    "bonneReponse": 1,
+    "explication": "L'unité imaginaire i est définie par i² = −1. Elle permet de résoudre des équations comme x² + 1 = 0, sans solution réelle."
+  },
+  {
+    "id": "maths-e7",
+    "enonce": "Quelle est la limite de sin(x)/x lorsque x tend vers 0 ?",
+    "choix": ["0", "1", "+∞", "elle n'existe pas"],
+    "bonneReponse": 1,
+    "explication": "Cette limite vaut 1. C'est un résultat fondamental de l'analyse, qui sert à établir que la dérivée de sin(x) est cos(x)."
+  },
+  {
+    "id": "maths-e8",
+    "enonce": "Combien existe-t-il de nombres premiers ?",
+    "choix": ["un nombre fini", "une infinité", "exactement un milliard", "un nombre encore inconnu"],
+    "bonneReponse": 1,
+    "explication": "Il en existe une infinité : Euclide l'a démontré il y a plus de 2000 ans par l'absurde, en construisant toujours un nouveau premier à partir d'une liste supposée complète."
+  },
+  {
+    "id": "maths-e9",
+    "enonce": "Que vaut 0 ! (factorielle de zéro) par convention ?",
+    "choix": ["0", "1", "une valeur indéfinie", "l'infini"],
+    "bonneReponse": 1,
+    "explication": "Par convention, 0 ! = 1. Cela rend cohérentes les formules de combinatoire : il existe exactement une façon d'ordonner un ensemble vide."
+  },
+  {
+    "id": "maths-e10",
+    "enonce": "Quelle est la valeur du nombre d'or (φ) arrondie à deux décimales ?",
+    "choix": ["1,41", "1,62", "2,72", "3,14"],
+    "bonneReponse": 1,
+    "explication": "φ ≈ 1,618, soit 1,62 arrondi. Il vaut exactement (1 + √5)/2 et apparaît dans la suite de Fibonacci, l'art et la nature."
+  }
+]

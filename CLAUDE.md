@@ -172,20 +172,32 @@ cd frontend && npm test -- --watch=false  # lancer les tests unitaires une fois
 > longueur et un niveau de détail comparables — voir le template pour les détails
 > et contre-exemples.
 
-## 🗂️ Thèmes actuels (17)
+## 🗂️ Thèmes actuels (58)
 
 État du **contenu** actuel (ce ne sont pas des contraintes du code, cf.
 `QUESTIONNAIRE_TEMPLATE.md`) : chaque thème a aujourd'hui trois fichiers
-(`facile.json`, `moyen.json`, `expert.json`) de 10 questions, soit 30 par thème.
+(`facile.json`, `moyen.json`, `expert.json`) de 10 questions, soit 30 par thème
+(plus le niveau synthétique **`tous`** = 30). Total : **1740 questions**.
 
-- **Programmation** : Go, Angular, Java, C++, Rust, Git, Lignes de commande Linux
+- **Programmation** : Go, Python, JavaScript, TypeScript, Angular, Java, Kotlin, C, C++, Rust, Git, Lignes de commande Linux, HTML, CSS, Architecture logicielle, Algorithmes & structures de données
 - **DevOps & Conteneurs** : Docker, Kubernetes
-- **Bases de données** : SQL
+- **Matériel informatique** : Processeurs (CPU), Cartes graphiques (GPU)
+- **Bases de données** : SQL, NoSQL
 - **Crypto & Web3** : Crypto
-- **Intelligence artificielle** : LLM (connaissances arrêtées à 2026)
-- **Culture geek** : Mangas, Animés, Jeux vidéo
+- **Intelligence artificielle** : IA (généralités), LLM (connaissances arrêtées à 2026)
+- **Cybersécurité** : Cybersécurité
+- **Réseaux & Internet** : Réseaux
+- **Culture geek** : Mangas, Animés, Jeux vidéo, Bande dessinée
 - **Jeux & stratégie** : Échecs
-- **Culture générale** : Pays
+- **Culture générale** : Pays, Géographie, Villes de France, Mythologie
+- **Cinéma** : Films des années 1980, 1990, 2000, 2010
+- **Littérature** : Science-fiction (littérature), Littérature d'aventure
+- **Histoire** : Histoire de France, Antiquité
+- **Sciences** : Mathématiques, Chimie, Biologie, Physique, Astronomie, Géologie, Écologie & climat
+- **Économie & Finance** : Finance
+- **Automobile** : Automobile
+- **Systèmes d'exploitation** : Windows, Android
+- **Langue française** : Grammaire, Conjugaison, Orthographe
 
 ## 📚 Concepts à retenir (pour apprendre)
 

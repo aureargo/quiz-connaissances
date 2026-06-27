@@ -1,0 +1,72 @@
+[
+  {
+    "id": "films-2010-f1",
+    "enonce": "Quel film de Christopher Nolan, sorti en 2010, explore des rêves imbriqués les uns dans les autres ?",
+    "choix": ["Interstellar", "Inception", "Le Prestige", "Tenet"],
+    "bonneReponse": 1,
+    "explication": "« Inception », avec Leonardo DiCaprio, suit des voleurs qui s'infiltrent dans les rêves. Sa toupie finale a fait couler beaucoup d'encre."
+  },
+  {
+    "id": "films-2010-f2",
+    "enonce": "Quelle chanson culte est interprétée par Elsa dans « La Reine des neiges » (2013) ?",
+    "choix": ["« Libérée, délivrée »", "« Sous l'océan »", "« Un jour mon prince viendra »", "« Ce rêve bleu »"],
+    "bonneReponse": 0,
+    "explication": "« Libérée, délivrée » (Let It Go) est devenue un phénomène mondial. Le film Disney met en scène les sœurs Elsa et Anna."
+  },
+  {
+    "id": "films-2010-f3",
+    "enonce": "Quel film Marvel de 2012 réunit pour la première fois Iron Man, Captain America, Thor et Hulk ?",
+    "choix": ["Iron Man 2", "Captain America", "Avengers", "Les Gardiens de la Galaxie"],
+    "bonneReponse": 2,
+    "explication": "« Avengers » de Joss Whedon rassemble les super-héros de Marvel face à Loki. Ce fut un énorme succès au box-office."
+  },
+  {
+    "id": "films-2010-f4",
+    "enonce": "Quel acteur incarne le rôle-titre dans « Joker » (2019) ?",
+    "choix": ["Jared Leto", "Heath Ledger", "Jared Harris", "Joaquin Phoenix"],
+    "bonneReponse": 3,
+    "explication": "Joaquin Phoenix remporte l'Oscar du meilleur acteur pour son interprétation d'Arthur Fleck dans le film de Todd Phillips."
+  },
+  {
+    "id": "films-2010-f5",
+    "enonce": "Dans « Interstellar » (2014) de Christopher Nolan, que part chercher l'humanité dans l'espace ?",
+    "choix": ["Une arme secrète", "Une planète habitable", "Une civilisation extraterrestre", "Une source d'énergie"],
+    "bonneReponse": 1,
+    "explication": "Face à une Terre mourante, Cooper (Matthew McConaughey) traverse un trou de ver pour trouver un monde où l'humanité pourrait survivre."
+  },
+  {
+    "id": "films-2010-f6",
+    "enonce": "Quel agent secret est le héros du film « Skyfall » (2012) ?",
+    "choix": ["Jason Bourne", "James Bond", "Ethan Hunt", "Jack Ryan"],
+    "bonneReponse": 1,
+    "explication": "« Skyfall » de Sam Mendes met en scène James Bond, incarné par Daniel Craig. Le film célèbre les cinquante ans de la saga 007."
+  },
+  {
+    "id": "films-2010-f7",
+    "enonce": "À quel genre appartient « La La Land » (2016), avec Emma Stone et Ryan Gosling ?",
+    "choix": ["Le film d'horreur", "La comédie musicale", "Le film de guerre", "Le documentaire"],
+    "bonneReponse": 1,
+    "explication": "« La La Land » de Damien Chazelle est une comédie musicale qui rend hommage à Hollywood. Il a remporté six Oscars."
+  },
+  {
+    "id": "films-2010-f8",
+    "enonce": "Dans quel univers se déroule « Mad Max: Fury Road » (2015) ?",
+    "choix": ["Un désert post-apocalyptique", "Une station spatiale", "Un royaume médiéval", "Une cité cyberpunk"],
+    "bonneReponse": 0,
+    "explication": "Le film de George Miller se déroule dans un désert post-apocalyptique où l'on se bat pour l'eau et l'essence. Il a remporté six Oscars techniques."
+  },
+  {
+    "id": "films-2010-f9",
+    "enonce": "Que représentent les personnages principaux du film d'animation Pixar « Vice-Versa » (2015) ?",
+    "choix": ["Des jouets", "Des émotions", "Des animaux", "Des planètes"],
+    "bonneReponse": 1,
+    "explication": "« Vice-Versa » (Inside Out) personnifie les émotions de la jeune Riley : Joie, Tristesse, Peur, Colère et Dégoût."
+  },
+  {
+    "id": "films-2010-f10",
+    "enonce": "Quel acteur tient le rôle principal du « Loup de Wall Street » (2013) de Martin Scorsese ?",
+    "choix": ["Brad Pitt", "Christian Bale", "Leonardo DiCaprio", "Matt Damon"],
+    "bonneReponse": 2,
+    "explication": "Leonardo DiCaprio incarne le courtier véreux Jordan Belfort dans ce film de Martin Scorsese inspiré d'une histoire vraie."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "antiquite-f1",
+    "enonce": "Quelle civilisation antique a construit les grandes pyramides de Gizeh ?",
+    "choix": ["les Romains", "les Grecs", "les Égyptiens", "les Perses"],
+    "bonneReponse": 2,
+    "explication": "Les pyramides de Gizeh furent bâties par les Égyptiens vers 2600-2500 av. J.-C., sous les pharaons Khéops, Khéphren et Mykérinos. Ce sont des tombeaux royaux monumentaux."
+  },
+  {
+    "id": "antiquite-f2",
+    "enonce": "Quel fleuve était au cœur de la civilisation de l'Égypte antique ?",
+    "choix": ["l'Euphrate", "le Nil", "le Tibre", "le Gange"],
+    "bonneReponse": 1,
+    "explication": "Le Nil, par ses crues annuelles, fertilisait les terres et permettait l'agriculture. L'historien Hérodote disait déjà que l'Égypte était « un don du Nil »."
+  },
+  {
+    "id": "antiquite-f3",
+    "enonce": "Quelle cité grecque était réputée pour son éducation militaire stricte ?",
+    "choix": ["Athènes", "Corinthe", "Thèbes", "Sparte"],
+    "bonneReponse": 3,
+    "explication": "Sparte formait ses citoyens dès l'enfance par l'agôgê, une éducation tournée vers la guerre. Sa puissance reposait sur une armée d'hoplites redoutée dans toute la Grèce."
+  },
+  {
+    "id": "antiquite-f4",
+    "enonce": "Quel conquérant macédonien a bâti un immense empire au IVe siècle av. J.-C. ?",
+    "choix": ["Jules César", "Alexandre le Grand", "Hannibal", "Périclès"],
+    "bonneReponse": 1,
+    "explication": "Alexandre le Grand (356-323 av. J.-C.) conquit en une décennie un empire allant de la Grèce à l'Inde, renversant l'Empire perse. Sa mort précoce le morcela aussitôt."
+  },
+  {
+    "id": "antiquite-f5",
+    "enonce": "Sur quelle péninsule la cité de Rome a-t-elle été fondée ?",
+    "choix": ["la péninsule Ibérique", "la péninsule italienne", "la péninsule balkanique", "la péninsule anatolienne"],
+    "bonneReponse": 1,
+    "explication": "Rome naît sur la péninsule italienne, le long du Tibre. La tradition fixe sa fondation à 753 av. J.-C., avant qu'elle ne domine peu à peu toute la Méditerranée."
+  },
+  {
+    "id": "antiquite-f6",
+    "enonce": "Comment appelait-on les combattants qui s'affrontaient dans les arènes romaines ?",
+    "choix": ["les centurions", "les gladiateurs", "les légionnaires", "les sénateurs"],
+    "bonneReponse": 1,
+    "explication": "Les gladiateurs, souvent esclaves ou prisonniers, combattaient pour divertir le public romain. Centurions et légionnaires étaient des soldats, les sénateurs des hommes politiques."
+  },
+  {
+    "id": "antiquite-f7",
+    "enonce": "Quelle reine d'Égypte est célèbre pour ses liens avec Jules César et Marc Antoine ?",
+    "choix": ["Néfertiti", "Hatchepsout", "Cléopâtre", "Théodora"],
+    "bonneReponse": 2,
+    "explication": "Cléopâtre VII, dernière souveraine de l'Égypte ptolémaïque, s'allia à César puis à Marc Antoine. Sa défaite face à Octave en 30 av. J.-C. fit de l'Égypte une province romaine."
+  },
+  {
+    "id": "antiquite-f8",
+    "enonce": "Quel grand amphithéâtre de Rome fut inauguré en l'an 80 ?",
+    "choix": ["le Colisée", "le Panthéon", "le Forum", "le Circus Maximus"],
+    "bonneReponse": 0,
+    "explication": "Le Colisée, ou amphithéâtre Flavien, pouvait accueillir près de 50 000 spectateurs pour des combats de gladiateurs. C'est le plus vaste amphithéâtre du monde romain."
+  },
+  {
+    "id": "antiquite-f9",
+    "enonce": "Quel système d'écriture, fait de petits signes dessinés, les Égyptiens utilisaient-ils ?",
+    "choix": ["les hiéroglyphes", "les runes", "le cunéiforme", "l'alphabet latin"],
+    "bonneReponse": 0,
+    "explication": "Les hiéroglyphes égyptiens mêlent signes figuratifs et phonétiques. Champollion les déchiffra en 1822 grâce à la pierre de Rosette. Le cunéiforme, lui, venait de Mésopotamie."
+  },
+  {
+    "id": "antiquite-f10",
+    "enonce": "Quel général carthaginois a traversé les Alpes avec des éléphants pour attaquer Rome ?",
+    "choix": ["Scipion", "Hannibal", "Vercingétorix", "Spartacus"],
+    "bonneReponse": 1,
+    "explication": "Hannibal franchit les Alpes en 218 av. J.-C. lors de la deuxième guerre punique. Scipion était son adversaire romain, qui le vaincra finalement à Zama en 202 av. J.-C."
+  }
+]

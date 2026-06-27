@@ -1,0 +1,72 @@
+[
+  {
+    "id": "litt-aventure-f1",
+    "enonce": "Qui a écrit le roman « L'Île au trésor » ?",
+    "choix": ["Jules Verne", "Robert Louis Stevenson", "Daniel Defoe", "Jack London"],
+    "bonneReponse": 1,
+    "explication": "Robert Louis Stevenson publie « L'Île au trésor » en 1883. C'est l'un des grands classiques du roman d'aventures et de pirates, avec sa carte au trésor et son fameux « X » qui marque l'emplacement."
+  },
+  {
+    "id": "litt-aventure-f2",
+    "enonce": "Quel roman d'Alexandre Dumas suit les aventures du jeune d'Artagnan ?",
+    "choix": ["Les Misérables", "Les Trois Mousquetaires", "Robinson Crusoé", "L'Île au trésor"],
+    "bonneReponse": 1,
+    "explication": "Dans « Les Trois Mousquetaires » (1844), d'Artagnan rejoint Athos, Porthos et Aramis. « Les Misérables », souvent confondu, est en réalité de Victor Hugo."
+  },
+  {
+    "id": "litt-aventure-f3",
+    "enonce": "Qui est l'auteur de « Robinson Crusoé », l'histoire d'un naufragé sur une île déserte ?",
+    "choix": ["Daniel Defoe", "Jonathan Swift", "Jules Verne", "Mark Twain"],
+    "bonneReponse": 0,
+    "explication": "Daniel Defoe publie « Robinson Crusoé » en 1719. Souvent considéré comme l'un des premiers romans en anglais, il s'inspire de l'histoire vraie du marin Alexandre Selkirk."
+  },
+  {
+    "id": "litt-aventure-f4",
+    "enonce": "Comment s'appelle le compagnon que Robinson Crusoé rencontre et sauve sur son île ?",
+    "choix": ["Lundi", "Vendredi", "Dimanche", "Samedi"],
+    "bonneReponse": 1,
+    "explication": "Robinson le baptise « Vendredi », car c'est le jour où il lui sauve la vie. Le personnage est devenu un symbole de la rencontre entre deux cultures."
+  },
+  {
+    "id": "litt-aventure-f5",
+    "enonce": "Quel auteur a écrit « Le Tour du monde en quatre-vingts jours » ?",
+    "choix": ["Jules Verne", "Alexandre Dumas", "Rudyard Kipling", "Herman Melville"],
+    "bonneReponse": 0,
+    "explication": "Jules Verne publie ce roman en 1872. Il fait partie de ses « Voyages extraordinaires » et raconte un pari fou : faire le tour de la planète en seulement quatre-vingts jours."
+  },
+  {
+    "id": "litt-aventure-f6",
+    "enonce": "Comment s'appelle le héros flegmatique du « Tour du monde en quatre-vingts jours » ?",
+    "choix": ["Phileas Fogg", "Edmond Dantès", "Long John Silver", "Allan Quatermain"],
+    "bonneReponse": 0,
+    "explication": "Phileas Fogg, gentleman anglais imperturbable, parie qu'il fera le tour du monde en quatre-vingts jours. Il est accompagné de son fidèle valet Passepartout."
+  },
+  {
+    "id": "litt-aventure-f7",
+    "enonce": "Quel roman de Jack London raconte l'histoire de Buck, un chien emmené dans le Grand Nord ?",
+    "choix": ["L'Appel de la forêt", "Croc-Blanc", "Le Livre de la jungle", "Moby Dick"],
+    "bonneReponse": 0,
+    "explication": "Dans « L'Appel de la forêt » (1903), le chien Buck redécouvre ses instincts sauvages dans le Yukon. « Croc-Blanc », autre roman de London, suit au contraire un animal sauvage qui s'apprivoise."
+  },
+  {
+    "id": "litt-aventure-f8",
+    "enonce": "Qui a écrit « Le Livre de la jungle », où grandit le petit Mowgli ?",
+    "choix": ["Rudyard Kipling", "Jack London", "Jules Verne", "Lewis Carroll"],
+    "bonneReponse": 0,
+    "explication": "Rudyard Kipling publie « Le Livre de la jungle » en 1894. Mowgli, l'enfant élevé par les loups, y croise l'ours Baloo, la panthère Bagheera et le tigre Shere Khan."
+  },
+  {
+    "id": "litt-aventure-f9",
+    "enonce": "Dans « Le Comte de Monte-Cristo », quel est le vrai nom du comte avant sa vengeance ?",
+    "choix": ["Edmond Dantès", "Jean Valjean", "Phileas Fogg", "David Balfour"],
+    "bonneReponse": 0,
+    "explication": "Edmond Dantès, marin injustement emprisonné, s'évade et revient sous l'identité du comte de Monte-Cristo pour se venger. Le roman est signé Alexandre Dumas (1844)."
+  },
+  {
+    "id": "litt-aventure-f10",
+    "enonce": "Dans le roman d'Herman Melville, quel animal le capitaine Achab poursuit-il sans relâche ?",
+    "choix": ["Un requin blanc", "Une baleine blanche", "Un calmar géant", "Un ours blanc"],
+    "bonneReponse": 1,
+    "explication": "Dans « Moby Dick » (1851), le capitaine Achab traque obsessionnellement une gigantesque baleine blanche, le cachalot Moby Dick, qui lui a autrefois arraché une jambe."
+  }
+]

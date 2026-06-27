@@ -1,0 +1,72 @@
+[
+  {
+    "id": "films-2000-m1",
+    "enonce": "Quel réalisateur français signe « Le Fabuleux Destin d'Amélie Poulain » (2001) ?",
+    "choix": ["Luc Besson", "Cédric Klapisch", "Jean-Pierre Jeunet", "Jacques Audiard"],
+    "bonneReponse": 2,
+    "explication": "Jean-Pierre Jeunet réalise ce conte parisien porté par Audrey Tautou. Tourné à Montmartre, le film est nommé cinq fois aux Oscars."
+  },
+  {
+    "id": "films-2000-m2",
+    "enonce": "Quelle actrice incarne « la Mariée » dans « Kill Bill » (2003) de Quentin Tarantino ?",
+    "choix": ["Uma Thurman", "Lucy Liu", "Scarlett Johansson", "Charlize Theron"],
+    "bonneReponse": 0,
+    "explication": "Uma Thurman incarne la Mariée assoiffée de vengeance. Tarantino a conçu le rôle spécialement pour elle après « Pulp Fiction »."
+  },
+  {
+    "id": "films-2000-m3",
+    "enonce": "Quel film d'animation japonais de 2001 a remporté l'Oscar du meilleur film d'animation ?",
+    "choix": ["Le Château ambulant", "Le Voyage de Chihiro", "Ponyo sur la falaise", "Paprika"],
+    "bonneReponse": 1,
+    "explication": "« Le Voyage de Chihiro » de Hayao Miyazaki (studio Ghibli) est le premier film d'animation non américain à remporter cet Oscar."
+  },
+  {
+    "id": "films-2000-m4",
+    "enonce": "Autour de quel sport tourne « Million Dollar Baby » (2004) de Clint Eastwood ?",
+    "choix": ["Le base-ball", "L'athlétisme", "Le catch", "La boxe"],
+    "bonneReponse": 3,
+    "explication": "Hilary Swank y incarne une boxeuse entraînée par Clint Eastwood. Le film remporte l'Oscar du meilleur film."
+  },
+  {
+    "id": "films-2000-m5",
+    "enonce": "Dans quelle ville se rencontrent les personnages de « Lost in Translation » (2003) de Sofia Coppola ?",
+    "choix": ["Séoul", "Tokyo", "Hong Kong", "Shanghai"],
+    "bonneReponse": 1,
+    "explication": "Bill Murray et Scarlett Johansson y incarnent deux Américains désœuvrés dans un hôtel de Tokyo. Sofia Coppola gagne l'Oscar du scénario."
+  },
+  {
+    "id": "films-2000-m6",
+    "enonce": "Quel film de Roman Polanski a remporté la Palme d'or en 2002 ?",
+    "choix": ["Le Pianiste", "La Chambre du fils", "L'Enfant", "Elephant"],
+    "bonneReponse": 0,
+    "explication": "« Le Pianiste », sur le survivant du ghetto de Varsovie Władysław Szpilman, vaut aussi l'Oscar du meilleur acteur à Adrien Brody."
+  },
+  {
+    "id": "films-2000-m7",
+    "enonce": "Quelle bataille antique le film « 300 » (2006) met-il en scène ?",
+    "choix": ["La bataille de Marathon", "La bataille de Cannes", "La bataille des Thermopyles", "La bataille de Gaugamèles"],
+    "bonneReponse": 2,
+    "explication": "« 300 » dépeint la résistance du roi Léonidas et de ses Spartiates aux Thermopyles. Le film de Zack Snyder adapte la BD de Frank Miller."
+  },
+  {
+    "id": "films-2000-m8",
+    "enonce": "Dans quel contexte historique se déroule « Le Labyrinthe de Pan » (2006) de Guillermo del Toro ?",
+    "choix": ["L'Italie mussolinienne", "L'Espagne franquiste", "L'Allemagne nazie", "Le Portugal de Salazar"],
+    "bonneReponse": 1,
+    "explication": "Ce conte sombre mêle une fillette, des créatures et la répression dans l'Espagne franquiste de 1944. Le film remporte trois Oscars techniques."
+  },
+  {
+    "id": "films-2000-m9",
+    "enonce": "De quel auteur de bande dessinée « Sin City » (2005) adapte-t-il l'univers en noir et blanc ?",
+    "choix": ["Alan Moore", "Stan Lee", "Robert Kirkman", "Frank Miller"],
+    "bonneReponse": 3,
+    "explication": "Frank Miller coréalise avec Robert Rodriguez l'adaptation de ses propres comics, au style très contrasté ponctué de touches de couleur."
+  },
+  {
+    "id": "films-2000-m10",
+    "enonce": "Dans quel pays se déroule « Slumdog Millionaire » (2008), sacré meilleur film aux Oscars ?",
+    "choix": ["Le Pakistan", "L'Inde", "Le Bangladesh", "Le Sri Lanka"],
+    "bonneReponse": 1,
+    "explication": "Le film de Danny Boyle suit un jeune des bidonvilles de Mumbai à un jeu télévisé. Il rafle huit Oscars, dont celui du meilleur film."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "astronomie-f1",
+    "enonce": "Quelle est l'étoile la plus proche de la Terre ?",
+    "choix": ["la Lune", "le Soleil", "Mars", "Vénus"],
+    "bonneReponse": 1,
+    "explication": "Le Soleil est l'étoile autour de laquelle gravite la Terre. Les autres étoiles sont bien plus lointaines : la plus proche après lui, Proxima du Centaure, est à plus de 4 années-lumière."
+  },
+  {
+    "id": "astronomie-f2",
+    "enonce": "Quelle planète est surnommée la « planète rouge » ?",
+    "choix": ["Mars", "Vénus", "Jupiter", "Mercure"],
+    "bonneReponse": 0,
+    "explication": "Mars doit sa couleur rougeâtre à l'oxyde de fer (la rouille) présent dans son sol. On la repère facilement à l'œil nu depuis la Terre."
+  },
+  {
+    "id": "astronomie-f3",
+    "enonce": "Quel est le satellite naturel de la Terre ?",
+    "choix": ["la Lune", "le Soleil", "Titan", "Phobos"],
+    "bonneReponse": 0,
+    "explication": "La Lune est le seul satellite naturel de la Terre. Titan tourne autour de Saturne et Phobos autour de Mars."
+  },
+  {
+    "id": "astronomie-f4",
+    "enonce": "Combien de planètes compte le système solaire ?",
+    "choix": ["six", "huit", "dix", "douze"],
+    "bonneReponse": 1,
+    "explication": "Le système solaire compte huit planètes depuis 2006, année où Pluton a été reclassée en planète naine."
+  },
+  {
+    "id": "astronomie-f5",
+    "enonce": "Quelle est la plus grande planète du système solaire ?",
+    "choix": ["la Terre", "Saturne", "Jupiter", "Neptune"],
+    "bonneReponse": 2,
+    "explication": "Jupiter est une géante gazeuse si vaste qu'elle pourrait contenir toutes les autres planètes réunies. Son diamètre vaut environ onze fois celui de la Terre."
+  },
+  {
+    "id": "astronomie-f6",
+    "enonce": "Quel astre est le principal responsable des marées sur Terre ?",
+    "choix": ["la Lune", "Mars", "Jupiter", "Vénus"],
+    "bonneReponse": 0,
+    "explication": "L'attraction de la Lune déforme les océans et provoque l'essentiel des marées. Le Soleil joue aussi un rôle, plus faible, qui amplifie les marées lors des pleines et nouvelles lunes."
+  },
+  {
+    "id": "astronomie-f7",
+    "enonce": "Comment appelle-t-on un fragment de roche venu de l'espace qui atteint le sol ?",
+    "choix": ["une comète", "une météorite", "un astéroïde", "une étoile"],
+    "bonneReponse": 1,
+    "explication": "Une météorite est un débris qui a traversé l'atmosphère sans se désintégrer et a touché le sol. Tant qu'il brûle dans le ciel, on parle de météore, l'« étoile filante »."
+  },
+  {
+    "id": "astronomie-f8",
+    "enonce": "Dans quelle galaxie se trouve le système solaire ?",
+    "choix": ["Andromède", "la Voie lactée", "le Grand Nuage de Magellan", "le Tourbillon"],
+    "bonneReponse": 1,
+    "explication": "Le Soleil et ses planètes font partie de la Voie lactée, une galaxie spirale de plus de cent milliards d'étoiles. Andromède est la grande galaxie la plus proche de la nôtre."
+  },
+  {
+    "id": "astronomie-f9",
+    "enonce": "Quelle planète est la plus proche du Soleil ?",
+    "choix": ["Vénus", "la Terre", "Mercure", "Mars"],
+    "bonneReponse": 2,
+    "explication": "Mercure est la première planète du système solaire. Malgré sa proximité avec le Soleil, ce n'est pas la plus chaude : ce record revient à Vénus, à cause de son épaisse atmosphère."
+  },
+  {
+    "id": "astronomie-f10",
+    "enonce": "Quel instrument sert à observer les astres lointains ?",
+    "choix": ["le microscope", "le télescope", "le baromètre", "le sismographe"],
+    "bonneReponse": 1,
+    "explication": "Le télescope collecte la lumière des astres lointains pour les grossir et les rendre visibles. Le microscope, lui, sert à observer l'infiniment petit."
+  }
+]

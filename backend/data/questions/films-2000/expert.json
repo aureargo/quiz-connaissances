@@ -1,0 +1,72 @@
+[
+  {
+    "id": "films-2000-e1",
+    "enonce": "Quel film de Lars von Trier, porté par la chanteuse Björk, a remporté la Palme d'or en 2000 ?",
+    "choix": ["Dancer in the Dark", "Breaking the Waves", "Dogville", "Les Idiots"],
+    "bonneReponse": 0,
+    "explication": "« Dancer in the Dark » mêle drame social et comédie musicale. Björk y reçoit aussi le prix d'interprétation féminine à Cannes."
+  },
+  {
+    "id": "films-2000-e2",
+    "enonce": "Quel film sud-coréen de Park Chan-wook (2003) suit un homme séquestré quinze ans sans explication ?",
+    "choix": ["Memories of Murder", "The Host", "J'ai rencontré le diable", "Old Boy"],
+    "bonneReponse": 3,
+    "explication": "« Old Boy », deuxième volet de la « trilogie de la vengeance », remporte le Grand Prix à Cannes en 2004 sous la présidence de Tarantino."
+  },
+  {
+    "id": "films-2000-e3",
+    "enonce": "Quel film de Wong Kar-wai (2000) dépeint l'amour retenu de deux voisins dans le Hong Kong des années 1960 ?",
+    "choix": ["2046", "Les Anges déchus", "In the Mood for Love", "Nos années sauvages"],
+    "bonneReponse": 2,
+    "explication": "« In the Mood for Love », célèbre pour sa photographie et ses robes qipao, vaut à Tony Leung le prix d'interprétation à Cannes."
+  },
+  {
+    "id": "films-2000-e4",
+    "enonce": "Quel film de Paul Thomas Anderson (2007) suit l'ascension d'un prospecteur de pétrole impitoyable ?",
+    "choix": ["No Country for Old Men", "There Will Be Blood", "Magnolia", "The Master"],
+    "bonneReponse": 1,
+    "explication": "Daniel Day-Lewis y remporte l'Oscar du meilleur acteur pour le rôle de Daniel Plainview, magnat du pétrole californien."
+  },
+  {
+    "id": "films-2000-e5",
+    "enonce": "Quel tueur, armé d'un pistolet à air comprimé, hante « No Country for Old Men » (2007) ?",
+    "choix": ["Anton Chigurh", "Hannibal Lecter", "John Doe", "Le Chiffre"],
+    "bonneReponse": 0,
+    "explication": "Javier Bardem remporte l'Oscar du second rôle pour Anton Chigurh. Le film des frères Coen gagne l'Oscar du meilleur film."
+  },
+  {
+    "id": "films-2000-e6",
+    "enonce": "Quel film de Pedro Almodóvar (2006) réunit Penélope Cruz autour des femmes d'une même famille ?",
+    "choix": ["Parle avec elle", "Tout sur ma mère", "Étreintes brisées", "Volver"],
+    "bonneReponse": 3,
+    "explication": "« Volver » vaut le prix d'interprétation collectif à ses actrices à Cannes. Le titre signifie « revenir » en espagnol."
+  },
+  {
+    "id": "films-2000-e7",
+    "enonce": "Quel film allemand de 2006 sur la surveillance par la Stasi a remporté l'Oscar du meilleur film étranger ?",
+    "choix": ["Good Bye, Lenin!", "La Vie des autres", "La Chute", "Le Ruban blanc"],
+    "bonneReponse": 1,
+    "explication": "« La Vie des autres » de Florian Henckel von Donnersmarck suit un agent de la Stasi qui espionne un dramaturge en RDA."
+  },
+  {
+    "id": "films-2000-e8",
+    "enonce": "Quel film de David Lynch (2001) plonge dans un Los Angeles onirique autour d'une actrice amnésique ?",
+    "choix": ["Lost Highway", "Inland Empire", "Mulholland Drive", "Blue Velvet"],
+    "bonneReponse": 2,
+    "explication": "« Mulholland Drive », d'abord conçu comme une série, vaut à Lynch le prix de la mise en scène à Cannes 2001, partagé avec Joel Coen."
+  },
+  {
+    "id": "films-2000-e9",
+    "enonce": "Quel film d'animation de 2007 adapte la bande dessinée autobiographique de Marjane Satrapi sur l'Iran ?",
+    "choix": ["Valse avec Bachir", "Persepolis", "Les Triplettes de Belleville", "Le Chat du rabbin"],
+    "bonneReponse": 1,
+    "explication": "« Persepolis », en noir et blanc, raconte l'enfance de l'autrice pendant la révolution islamique. Il remporte le prix du jury à Cannes 2007."
+  },
+  {
+    "id": "films-2000-e10",
+    "enonce": "Quel film roumain de Cristian Mungiu a remporté la Palme d'or en 2007 ?",
+    "choix": ["La Mort de Dante Lazarescu", "Au-delà des collines", "12h08 à l'est de Bucarest", "4 mois, 3 semaines, 2 jours"],
+    "bonneReponse": 3,
+    "explication": "« 4 mois, 3 semaines, 2 jours » suit un avortement clandestin dans la Roumanie de Ceaușescu, figure de la « nouvelle vague roumaine »."
+  }
+]

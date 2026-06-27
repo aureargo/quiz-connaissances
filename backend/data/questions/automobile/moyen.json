@@ -1,0 +1,72 @@
+[
+  {
+    "id": "automobile-m1",
+    "enonce": "Que mesure le compte-tours d'une voiture ?",
+    "choix": ["le nombre de tours du moteur par minute", "la vitesse du véhicule en km/h", "la température du moteur", "la pression d'huile"],
+    "bonneReponse": 0,
+    "explication": "Le compte-tours affiche le régime moteur en tours par minute (tr/min). Il aide à choisir le bon rapport de boîte pour ménager la mécanique."
+  },
+  {
+    "id": "automobile-m2",
+    "enonce": "À quoi sert l'embrayage dans une voiture à boîte manuelle ?",
+    "choix": ["freiner les roues arrière", "désaccoupler le moteur de la boîte pour changer de vitesse", "recharger la batterie", "filtrer l'air admis par le moteur"],
+    "bonneReponse": 1,
+    "explication": "L'embrayage interrompt momentanément la liaison entre le moteur et la boîte de vitesses, ce qui permet de passer un rapport sans à-coup ni casse."
+  },
+  {
+    "id": "automobile-m3",
+    "enonce": "Combien de temps (phases) compte le cycle d'un moteur thermique classique ?",
+    "choix": ["deux : aspiration puis rejet", "trois : départ, route, arrêt", "quatre : admission, compression, combustion, échappement", "six : un par cylindre"],
+    "bonneReponse": 2,
+    "explication": "Le moteur « quatre temps » enchaîne admission, compression, combustion-détente et échappement. Ce cycle, dit de Beau de Rochas (ou Otto), équipe la majorité des voitures."
+  },
+  {
+    "id": "automobile-m4",
+    "enonce": "Que désigne le sigle « ABS », système de sécurité au freinage ?",
+    "choix": ["amplificateur de boîte synchronisée", "assistance au braquage souple", "système antiblocage des roues", "alerte de basse stabilité"],
+    "bonneReponse": 2,
+    "explication": "L'ABS (de l'allemand Antiblockiersystem) empêche les roues de se bloquer lors d'un freinage d'urgence, ce qui permet de continuer à diriger la voiture."
+  },
+  {
+    "id": "automobile-m5",
+    "enonce": "Qu'est-ce qui caractérise une motorisation hybride ?",
+    "choix": ["l'association d'un moteur thermique et d'un moteur électrique", "deux moteurs thermiques montés en série", "un moteur fonctionnant à l'hydrogène pur", "un moteur dépourvu de boîte de vitesses"],
+    "bonneReponse": 0,
+    "explication": "Une voiture hybride combine un moteur thermique (essence le plus souvent) et un ou plusieurs moteurs électriques, pour réduire la consommation, surtout en ville."
+  },
+  {
+    "id": "automobile-m6",
+    "enonce": "Quel composant transforme les gaz d'échappement nocifs en gaz moins polluants ?",
+    "choix": ["le turbocompresseur", "le radiateur", "le pot catalytique", "l'alternateur"],
+    "bonneReponse": 2,
+    "explication": "Le pot (ou convertisseur) catalytique utilise des métaux précieux comme le platine et le rhodium pour transformer monoxyde de carbone, hydrocarbures et oxydes d'azote en gaz moins nocifs."
+  },
+  {
+    "id": "automobile-m7",
+    "enonce": "Qu'appelle-t-on une transmission « intégrale » ?",
+    "choix": ["seules les roues avant sont motrices", "les quatre roues sont motrices", "la boîte de vitesses est automatique", "le moteur est placé à l'arrière"],
+    "bonneReponse": 1,
+    "explication": "Une transmission intégrale (4x4 ou AWD) envoie la puissance aux quatre roues, ce qui améliore l'adhérence sur terrain glissant ou difficile."
+  },
+  {
+    "id": "automobile-m8",
+    "enonce": "Dans quel pays se court la célèbre course d'endurance des « 24 Heures du Mans » ?",
+    "choix": ["l'Italie", "la France", "l'Allemagne", "le Royaume-Uni"],
+    "bonneReponse": 1,
+    "explication": "Les 24 Heures du Mans se disputent depuis 1923 sur le circuit de la Sarthe, en France. C'est l'épreuve d'endurance automobile la plus prestigieuse du monde."
+  },
+  {
+    "id": "automobile-m9",
+    "enonce": "Que mesure la « cylindrée » d'un moteur ?",
+    "choix": ["la puissance maximale en chevaux", "le volume total balayé par les pistons", "le nombre de bougies d'allumage", "la vitesse de rotation maximale"],
+    "bonneReponse": 1,
+    "explication": "La cylindrée est le volume total déplacé par les pistons dans les cylindres, exprimé en litres ou en cm³. Elle influence la puissance et la consommation, sans les déterminer à elle seule."
+  },
+  {
+    "id": "automobile-m10",
+    "enonce": "À quoi sert l'alternateur d'une voiture thermique ?",
+    "choix": ["démarrer le moteur au premier tour de clé", "refroidir le liquide de refroidissement", "produire l'électricité et recharger la batterie quand le moteur tourne", "filtrer le carburant avant l'injection"],
+    "bonneReponse": 2,
+    "explication": "Entraîné par le moteur, l'alternateur génère le courant qui alimente les équipements et recharge la batterie. Le démarreur, lui, ne sert qu'au lancement du moteur."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "litt-aventure-m1",
+    "enonce": "Comment s'appelle le pirate à une jambe, cuisinier du navire, dans « L'Île au trésor » ?",
+    "choix": ["Long John Silver", "Capitaine Crochet", "Barbe Noire", "Capitaine Flint"],
+    "bonneReponse": 0,
+    "explication": "Long John Silver, le cuistot manchot d'une jambe et son perroquet, est l'âme noire du roman. Le capitaine Flint, lui, est le pirate mort dont on cherche le trésor."
+  },
+  {
+    "id": "litt-aventure-m2",
+    "enonce": "Quel roman de Jules Verne suit le capitaine Nemo à bord de son sous-marin, le Nautilus ?",
+    "choix": ["Vingt mille lieues sous les mers", "L'Île mystérieuse", "Michel Strogoff", "Cinq semaines en ballon"],
+    "bonneReponse": 0,
+    "explication": "« Vingt mille lieues sous les mers » (1870) plonge le lecteur dans les profondeurs aux côtés du capitaine Nemo. Sa devise est « Mobilis in mobili »."
+  },
+  {
+    "id": "litt-aventure-m3",
+    "enonce": "Quelle est la célèbre devise des mousquetaires dans le roman d'Alexandre Dumas ?",
+    "choix": ["Un pour tous, tous pour un", "Liberté, égalité, fraternité", "Le devoir avant tout", "À nous la victoire"],
+    "bonneReponse": 0,
+    "explication": "« Un pour tous, tous pour un » résume la fidélité indéfectible des mousquetaires. La formule est devenue un symbole d'amitié et de solidarité."
+  },
+  {
+    "id": "litt-aventure-m4",
+    "enonce": "Quel écrivain américain a créé les personnages de Tom Sawyer et Huckleberry Finn ?",
+    "choix": ["Mark Twain", "Jack London", "Herman Melville", "James Fenimore Cooper"],
+    "bonneReponse": 0,
+    "explication": "Mark Twain (pseudonyme de Samuel Clemens) situe les aventures de Tom Sawyer et Huck Finn au bord du Mississippi, fleuve qu'il connaissait comme ancien pilote de bateau à vapeur."
+  },
+  {
+    "id": "litt-aventure-m5",
+    "enonce": "Dans quel pays les explorateurs de « Voyage au centre de la Terre » entament-ils leur descente ?",
+    "choix": ["La Norvège", "L'Islande", "Le Groenland", "L'Écosse"],
+    "bonneReponse": 1,
+    "explication": "C'est par le cratère du volcan islandais Snæfellsjökull que le professeur Lidenbrock et ses compagnons s'enfoncent vers le centre de la Terre, dans ce roman de Jules Verne (1864)."
+  },
+  {
+    "id": "litt-aventure-m6",
+    "enonce": "Quel écrivain britannique a créé l'aventurier Allan Quatermain dans « Les Mines du roi Salomon » ?",
+    "choix": ["H. Rider Haggard", "Robert Louis Stevenson", "Rudyard Kipling", "Joseph Conrad"],
+    "bonneReponse": 0,
+    "explication": "H. Rider Haggard lance le chasseur Allan Quatermain en 1885. Ce roman de trésor perdu en Afrique a inspiré tout un genre d'aventures exotiques, jusqu'à Indiana Jones."
+  },
+  {
+    "id": "litt-aventure-m7",
+    "enonce": "Quel roman de Jules Verne raconte le périple d'un courrier du tsar à travers la Sibérie ?",
+    "choix": ["Michel Strogoff", "Les Enfants du capitaine Grant", "Deux ans de vacances", "Le Tour du monde en quatre-vingts jours"],
+    "bonneReponse": 0,
+    "explication": "Dans « Michel Strogoff » (1876), un courrier doit traverser la Sibérie pour porter un message capital au grand-duc, malgré une invasion et mille dangers."
+  },
+  {
+    "id": "litt-aventure-m8",
+    "enonce": "Qui a écrit « Croc-Blanc », l'histoire d'un animal sauvage peu à peu apprivoisé ?",
+    "choix": ["Jack London", "Rudyard Kipling", "James Fenimore Cooper", "Herman Melville"],
+    "bonneReponse": 0,
+    "explication": "Jack London publie « Croc-Blanc » en 1906. C'est en quelque sorte le miroir de « L'Appel de la forêt » : là où Buck retourne à l'état sauvage, Croc-Blanc se rapproche des hommes."
+  },
+  {
+    "id": "litt-aventure-m9",
+    "enonce": "Quel roman de Jules Verne met en scène cinq naufragés transformant une île grâce à leur ingéniosité ?",
+    "choix": ["L'Île mystérieuse", "Robinson Crusoé", "L'Île au trésor", "Sa Majesté des mouches"],
+    "bonneReponse": 0,
+    "explication": "Dans « L'Île mystérieuse » (1875), des naufragés rebâtissent une civilisation miniature. Le roman réserve une surprise : le capitaine Nemo, du Nautilus, y réapparaît."
+  },
+  {
+    "id": "litt-aventure-m10",
+    "enonce": "Quel écrivain américain est l'auteur du « Dernier des Mohicans » ?",
+    "choix": ["James Fenimore Cooper", "Mark Twain", "Jack London", "Walter Scott"],
+    "bonneReponse": 0,
+    "explication": "James Fenimore Cooper publie « Le Dernier des Mohicans » en 1826, au cœur de son cycle « Bas-de-Cuir » sur les pionniers et les Amérindiens d'Amérique du Nord."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "grammaire-e1",
+    "enonce": "Comment compléter « Les fleurs que j'ai (cueillir) sont fanées » ?",
+    "choix": ["cueilli", "cueillis", "cueillie", "cueillies"],
+    "bonneReponse": 3,
+    "explication": "Avec l'auxiliaire « avoir », le participe passé s'accorde avec le COD seulement s'il est placé avant le verbe. Ici le COD « que » (= les fleurs, féminin pluriel) précède : « cueillies »."
+  },
+  {
+    "id": "grammaire-e2",
+    "enonce": "Comment compléter « Il faut que tu (venir) demain » ?",
+    "choix": ["viens", "viennes", "viendras", "vienne"],
+    "bonneReponse": 1,
+    "explication": "« Il faut que » exprime la nécessité et impose le subjonctif. Au subjonctif présent, la 2e personne du singulier de « venir » est « (que) tu viennes »."
+  },
+  {
+    "id": "grammaire-e3",
+    "enonce": "Dans « Je pense qu'il viendra », quelle est la nature de la proposition « qu'il viendra » ?",
+    "choix": ["Subordonnée relative", "Subordonnée complétive", "Subordonnée circonstancielle", "Proposition indépendante"],
+    "bonneReponse": 1,
+    "explication": "Introduite par la conjonction « que » et complément d'objet du verbe « penser », c'est une subordonnée complétive (conjonctive). La relative, elle, serait introduite par un pronom relatif."
+  },
+  {
+    "id": "grammaire-e4",
+    "enonce": "Dans « la maison où je vis », quelle est la nature du mot « où » ?",
+    "choix": ["Adverbe interrogatif", "Pronom relatif", "Conjonction de subordination", "Préposition"],
+    "bonneReponse": 1,
+    "explication": "Ici « où » a un antécédent (« la maison ») et introduit une proposition relative : c'est un pronom relatif. Dans « Où vas-tu ? », au contraire, « où » est un adverbe interrogatif."
+  },
+  {
+    "id": "grammaire-e5",
+    "enonce": "À quelle voix est la phrase « La souris est mangée par le chat » ?",
+    "choix": ["Voix active", "Voix passive", "Voix pronominale", "Forme impersonnelle"],
+    "bonneReponse": 1,
+    "explication": "Le sujet « la souris » subit l'action au lieu de la faire, et l'agent réel est introduit par « par » : c'est la voix passive. À la voix active : « Le chat mange la souris »."
+  },
+  {
+    "id": "grammaire-e6",
+    "enonce": "Dans « Je crains qu'il ne pleuve », comment appelle-t-on le mot « ne » ?",
+    "choix": ["un ne de négation", "un ne explétif", "un ne adverbial", "un ne restrictif"],
+    "bonneReponse": 1,
+    "explication": "Ce « ne » n'exprime aucune négation (la phrase signifie « je crains qu'il pleuve ») : c'est un « ne » explétif, facultatif, employé après certains verbes de crainte ou d'empêchement."
+  },
+  {
+    "id": "grammaire-e7",
+    "enonce": "À quel mode et temps est « j'aurais aimé » dans « j'aurais aimé venir » ?",
+    "choix": ["Indicatif futur antérieur", "Conditionnel présent", "Conditionnel passé", "Subjonctif passé"],
+    "bonneReponse": 2,
+    "explication": "« J'aurais aimé » = auxiliaire au conditionnel présent (« aurais ») + participe passé : c'est le conditionnel passé, qui exprime un regret ou une action soumise à une condition non réalisée."
+  },
+  {
+    "id": "grammaire-e8",
+    "enonce": "Dans « Quand il arriva, nous partîmes », à quel temps est « partîmes » ?",
+    "choix": ["Imparfait", "Passé simple", "Passé antérieur", "Plus-que-parfait"],
+    "bonneReponse": 1,
+    "explication": "« Partîmes » est le passé simple de « partir » à la 1re personne du pluriel. Ce temps, surtout littéraire, raconte des actions ponctuelles et achevées du passé."
+  },
+  {
+    "id": "grammaire-e9",
+    "enonce": "Comment s'accorde « Elle s'est (laver) les mains » ?",
+    "choix": ["lavé", "lavée", "lavés", "lavées"],
+    "bonneReponse": 0,
+    "explication": "Le COD est « les mains », placé APRÈS le verbe : le participe ne s'accorde donc pas. On écrit « Elle s'est lavé les mains », mais « les mains qu'elle s'est lavées » (COD avant)."
+  },
+  {
+    "id": "grammaire-e10",
+    "enonce": "Dans « Je partirai dès que tu seras prêt », quelle est la nature de « dès que tu seras prêt » ?",
+    "choix": ["Subordonnée relative", "Subordonnée complétive", "Circonstancielle de temps", "Circonstancielle de cause"],
+    "bonneReponse": 2,
+    "explication": "La subordonnée, introduite par la locution « dès que », indique le moment de l'action principale : c'est une subordonnée circonstancielle de temps (elle répond à « quand ? »)."
+  }
+]

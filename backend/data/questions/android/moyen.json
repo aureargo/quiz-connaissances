@@ -1,0 +1,72 @@
+[
+  {
+    "id": "android-m1",
+    "enonce": "Quel environnement d'exécution lance les applications Android depuis la version 5.0 ?",
+    "choix": ["Dalvik", "ART", "HotSpot", "GraalVM"],
+    "bonneReponse": 1,
+    "explication": "ART (Android Runtime) a remplacé Dalvik à partir d'Android 5.0. Il compile le code à l'installation (AOT) pour de meilleures performances à l'exécution."
+  },
+  {
+    "id": "android-m2",
+    "enonce": "Quel composant Android représente un écran unique de l'interface utilisateur ?",
+    "choix": ["Activity", "Service", "Intent", "Manifest"],
+    "bonneReponse": 0,
+    "explication": "Une Activity correspond à un écran avec lequel l'utilisateur interagit. Un Service tourne en arrière-plan, et un Intent sert à déclencher des actions."
+  },
+  {
+    "id": "android-m3",
+    "enonce": "Quel objet sert à lancer une action ou à communiquer entre composants Android ?",
+    "choix": ["Intent", "Bundle", "Cursor", "Loader"],
+    "bonneReponse": 0,
+    "explication": "Un Intent (« intention ») permet de démarrer une Activity, un Service, ou de diffuser un message. Un Bundle, lui, ne fait que transporter des données."
+  },
+  {
+    "id": "android-m4",
+    "enonce": "Quel fichier déclare les composants, les permissions et les métadonnées d'une application ?",
+    "choix": ["build.gradle", "AndroidManifest.xml", "settings.json", "package.json"],
+    "bonneReponse": 1,
+    "explication": "Le fichier AndroidManifest.xml décrit l'application au système : ses Activities, ses permissions, son icône et son nom. Le build.gradle gère lui la compilation."
+  },
+  {
+    "id": "android-m5",
+    "enonce": "Quel composant s'exécute en arrière-plan, sans interface visible ?",
+    "choix": ["Service", "Activity", "Widget", "Layout"],
+    "bonneReponse": 0,
+    "explication": "Un Service effectue un travail de fond (lecture audio, synchronisation…) sans interface graphique. Une Activity, à l'inverse, présente toujours un écran."
+  },
+  {
+    "id": "android-m6",
+    "enonce": "Quel outil de construction (build) est utilisé par défaut pour les projets Android modernes ?",
+    "choix": ["Maven", "Gradle", "Make", "Webpack"],
+    "bonneReponse": 1,
+    "explication": "Gradle est l'outil de build officiel d'Android Studio : il gère les dépendances, les variantes et la compilation. Maven et Make sont d'autres systèmes de build."
+  },
+  {
+    "id": "android-m7",
+    "enonce": "Quel est l'environnement de développement (IDE) officiel pour Android ?",
+    "choix": ["Eclipse", "Android Studio", "Visual Studio", "Xcode"],
+    "bonneReponse": 1,
+    "explication": "Android Studio, basé sur IntelliJ IDEA, est l'IDE officiel depuis 2014. Eclipse fut l'outil officiel auparavant, et Xcode sert au développement Apple."
+  },
+  {
+    "id": "android-m8",
+    "enonce": "Dans quel dossier d'un projet Android range-t-on les ressources (images, chaînes, mises en page) ?",
+    "choix": ["res/", "lib/", "bin/", "obj/"],
+    "bonneReponse": 0,
+    "explication": "Le dossier res/ contient les ressources organisées par type (drawable, values, layout…). Le dossier assets/ existe aussi, mais pour des fichiers bruts non indexés."
+  },
+  {
+    "id": "android-m9",
+    "enonce": "Quelle société, rachetée par Google en 2005, est à l'origine d'Android ?",
+    "choix": ["Android Inc.", "Sun Microsystems", "Motorola", "Palm"],
+    "bonneReponse": 0,
+    "explication": "Android a d'abord été conçu par la start-up Android Inc., fondée par Andy Rubin, avant son rachat par Google en 2005. Sun Microsystems est, lui, le créateur de Java."
+  },
+  {
+    "id": "android-m10",
+    "enonce": "Sous quel format les mises en page (layouts) classiques d'Android sont-elles décrites ?",
+    "choix": ["XML", "JSON", "YAML", "HTML"],
+    "bonneReponse": 0,
+    "explication": "Les interfaces traditionnelles d'Android sont décrites dans des fichiers XML (dans res/layout). L'approche moderne Jetpack Compose, elle, décrit l'UI directement en Kotlin."
+  }
+]

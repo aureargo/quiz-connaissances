@@ -1,0 +1,72 @@
+[
+  {
+    "id": "js-m1",
+    "enonce": "Quelle est la principale différence entre `let` et `var` ?",
+    "choix": ["`let` a une portée de bloc, `var` une portée de fonction", "`let` est plus rapide à l'exécution", "`var` ne peut pas être réassigné", "`let` ne fonctionne que dans les boucles"],
+    "bonneReponse": 0,
+    "explication": "`let` est limité au bloc `{ ... }` où il est déclaré, alors que `var` « fuit » jusqu'au niveau de la fonction. On préfère aujourd'hui `let` et `const`."
+  },
+  {
+    "id": "js-m2",
+    "enonce": "Que renvoie l'expression `typeof null` ?",
+    "choix": ["\"null\"", "\"object\"", "\"undefined\"", "\"number\""],
+    "bonneReponse": 1,
+    "explication": "`typeof null` vaut `\"object\"` : c'est un bug historique conservé depuis les toutes premières versions de JavaScript, pour ne pas casser le code existant."
+  },
+  {
+    "id": "js-m3",
+    "enonce": "Que fait la méthode `map()` d'un tableau ?",
+    "choix": ["Elle modifie le tableau d'origine en place", "Elle renvoie un nouveau tableau transformé", "Elle filtre les éléments selon une condition", "Elle réduit le tableau à une seule valeur"],
+    "bonneReponse": 1,
+    "explication": "`map()` applique une fonction à chaque élément et renvoie un NOUVEAU tableau, sans toucher l'original. Filtrer se fait avec `filter()`, agréger avec `reduce()`."
+  },
+  {
+    "id": "js-m4",
+    "enonce": "Quelle syntaxe définit correctement une fonction fléchée ?",
+    "choix": ["(x) => x * 2", "function(x) -> x * 2", "(x) := x * 2", "x: x * 2"],
+    "bonneReponse": 0,
+    "explication": "La flèche `=>` sépare les paramètres du corps. Si le corps est une seule expression, sa valeur est renvoyée implicitement, sans `return`."
+  },
+  {
+    "id": "js-m5",
+    "enonce": "Que vaut `0.1 + 0.2 === 0.3` en JavaScript ?",
+    "choix": ["true", "false", "une erreur de syntaxe", "NaN"],
+    "bonneReponse": 1,
+    "explication": "Le résultat est `false` : `0.1 + 0.2` donne `0.30000000000000004`. C'est la conséquence du codage des nombres à virgule flottante (norme IEEE 754), commune à beaucoup de langages."
+  },
+  {
+    "id": "js-m6",
+    "enonce": "À quoi sert `JSON.parse()` ?",
+    "choix": ["Convertir un objet en chaîne JSON", "Convertir une chaîne JSON en objet", "Valider la syntaxe d'un objet", "Copier un objet en profondeur"],
+    "bonneReponse": 1,
+    "explication": "`JSON.parse()` transforme du texte JSON en objet JavaScript exploitable. L'opération inverse, objet vers texte, est `JSON.stringify()`."
+  },
+  {
+    "id": "js-m7",
+    "enonce": "Que renvoie l'appel d'une fonction déclarée `async` ?",
+    "choix": ["une promesse (Promise)", "la valeur directement", "un générateur", "la valeur undefined dans tous les cas"],
+    "bonneReponse": 0,
+    "explication": "Une fonction `async` renvoie toujours une `Promise`. La valeur retournée sert à résoudre cette promesse, qu'on attend ensuite avec `await` ou `.then()`."
+  },
+  {
+    "id": "js-m8",
+    "enonce": "Que fait l'opérateur de décomposition `...` (spread) appliqué à un tableau ?",
+    "choix": ["Il trie le tableau", "Il étale ses éléments un à un", "Il supprime les doublons", "Il inverse l'ordre des éléments"],
+    "bonneReponse": 1,
+    "explication": "`[...a, ...b]` étale les éléments de `a` et `b` dans un nouveau tableau. Le même opérateur sert à copier un tableau ou à passer ses éléments en arguments."
+  },
+  {
+    "id": "js-m9",
+    "enonce": "Laquelle de ces valeurs est considérée comme « falsy » (équivalente à faux) ?",
+    "choix": ["\"0\" (chaîne)", "[] (tableau vide)", "0 (nombre)", "{} (objet vide)"],
+    "bonneReponse": 2,
+    "explication": "Le nombre `0` est falsy, comme `\"\"`, `null`, `undefined`, `NaN` et `false`. En revanche `\"0\"`, `[]` et `{}` sont tous « truthy »."
+  },
+  {
+    "id": "js-m10",
+    "enonce": "Qu'est-ce que le « hoisting » (hissage) en JavaScript ?",
+    "choix": ["Le déplacement des déclarations en haut de leur portée", "L'optimisation automatique des boucles", "La conversion implicite des types", "La mise en cache des fonctions"],
+    "bonneReponse": 0,
+    "explication": "Les déclarations (`var`, `function`) sont traitées comme remontées en haut de leur portée. Avec `var` la variable existe mais vaut `undefined` avant son affectation ; `let` et `const`, eux, déclenchent une erreur tant qu'on n'a pas atteint la ligne de déclaration."
+  }
+]

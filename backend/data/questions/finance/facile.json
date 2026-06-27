@@ -1,0 +1,72 @@
+[
+  {
+    "id": "finance-f1",
+    "enonce": "Que représente une action en bourse ?",
+    "choix": ["Un prêt accordé à une entreprise", "Une part de propriété d'une entreprise", "Une assurance sur un bien", "Une reconnaissance de dette de l'État"],
+    "bonneReponse": 1,
+    "explication": "Détenir une action, c'est posséder une fraction du capital d'une société et de ses bénéfices. À l'inverse, une obligation est un simple prêt accordé à l'émetteur."
+  },
+  {
+    "id": "finance-f2",
+    "enonce": "Qu'est-ce que l'inflation ?",
+    "choix": ["La baisse du taux de chômage", "La hausse des seuls salaires", "La hausse générale des prix", "La création de monnaie par les banques"],
+    "bonneReponse": 2,
+    "explication": "L'inflation mesure l'augmentation générale et durable des prix. Elle réduit le pouvoir d'achat : avec la même somme, on achète moins de biens qu'avant."
+  },
+  {
+    "id": "finance-f3",
+    "enonce": "Comment appelle-t-on la part des bénéfices qu'une entreprise verse à ses actionnaires ?",
+    "choix": ["Un dividende", "Un coupon", "Une prime", "Un intérêt"],
+    "bonneReponse": 0,
+    "explication": "Le dividende est la fraction du bénéfice distribuée aux actionnaires. Le coupon, lui, désigne l'intérêt versé au détenteur d'une obligation."
+  },
+  {
+    "id": "finance-f4",
+    "enonce": "En France, quel placement est garanti par l'État et exonéré d'impôt ?",
+    "choix": ["Le compte courant", "Le plan d'épargne en actions", "L'assurance-vie", "Le Livret A"],
+    "bonneReponse": 3,
+    "explication": "Le Livret A est un livret réglementé : sans risque, défiscalisé, et dont le taux est fixé par l'État. Ses fonds restent disponibles à tout moment."
+  },
+  {
+    "id": "finance-f5",
+    "enonce": "Que signifie « emprunter » de l'argent à une banque ?",
+    "choix": ["Placer son argent pour le faire fructifier", "Recevoir une somme à rembourser avec intérêts", "Échanger une devise contre une autre", "Acheter des actions en bourse"],
+    "bonneReponse": 1,
+    "explication": "Emprunter, c'est recevoir une somme qu'on devra rendre, augmentée d'intérêts qui rémunèrent le prêteur pour le risque et le temps."
+  },
+  {
+    "id": "finance-f6",
+    "enonce": "Qu'est-ce qu'un budget ?",
+    "choix": ["Un type de compte bancaire", "Un impôt prélevé sur le revenu", "Une prévision des revenus et des dépenses", "Un crédit accordé à court terme"],
+    "bonneReponse": 2,
+    "explication": "Un budget anticipe ce que l'on va gagner et dépenser sur une période. Il aide à éviter de dépenser plus que ses ressources."
+  },
+  {
+    "id": "finance-f7",
+    "enonce": "Que désigne le « pouvoir d'achat » ?",
+    "choix": ["La quantité de biens qu'un revenu permet d'acheter", "Le montant total d'un salaire", "Le solde d'un compte en banque", "Le taux d'un crédit immobilier"],
+    "bonneReponse": 0,
+    "explication": "Le pouvoir d'achat dépend du revenu mais aussi des prix : si les prix montent plus vite que le salaire, le pouvoir d'achat baisse."
+  },
+  {
+    "id": "finance-f8",
+    "enonce": "Qu'est-ce qu'un taux d'intérêt ?",
+    "choix": ["Le montant total d'une dette", "La valeur d'une action en bourse", "Le prix d'une devise étrangère", "Le coût d'un emprunt ou la rémunération d'un placement"],
+    "bonneReponse": 3,
+    "explication": "Exprimé en pourcentage, le taux d'intérêt mesure ce que coûte un emprunt pour l'emprunteur, ou ce que rapporte un placement à l'épargnant."
+  },
+  {
+    "id": "finance-f9",
+    "enonce": "Que mesure le PIB d'un pays ?",
+    "choix": ["La dette publique totale", "La valeur des richesses produites", "Le nombre d'habitants du pays", "Le montant des impôts collectés"],
+    "bonneReponse": 1,
+    "explication": "Le produit intérieur brut (PIB) additionne la valeur de tous les biens et services produits dans un pays sur une année. C'est l'indicateur clé de l'activité économique."
+  },
+  {
+    "id": "finance-f10",
+    "enonce": "Qu'est-ce que l'épargne ?",
+    "choix": ["Un prêt à la consommation", "Un placement toujours risqué", "La part du revenu qui n'est pas dépensée", "Une taxe sur les placements"],
+    "bonneReponse": 2,
+    "explication": "Épargner, c'est mettre de côté la fraction du revenu non consommée. Cette épargne peut ensuite être placée pour la faire fructifier."
+  }
+]

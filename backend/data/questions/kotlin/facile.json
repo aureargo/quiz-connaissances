@@ -1,0 +1,72 @@
+[
+  {
+    "id": "kotlin-f1",
+    "enonce": "Quelle entreprise est à l'origine du langage Kotlin ?",
+    "choix": ["Google", "Oracle", "JetBrains", "Microsoft"],
+    "bonneReponse": 2,
+    "explication": "Kotlin a été conçu par JetBrains, l'éditeur de l'IDE IntelliJ IDEA, et sa première version stable est sortie en 2016. Google l'a ensuite adopté pour Android."
+  },
+  {
+    "id": "kotlin-f2",
+    "enonce": "Quel mot-clé déclare une variable en lecture seule (immuable) ?",
+    "choix": ["let", "const", "val", "final"],
+    "bonneReponse": 2,
+    "explication": "`val` (de « value ») crée une référence qu'on ne peut plus réaffecter après initialisation. Pour une variable modifiable, on utilise `var`."
+  },
+  {
+    "id": "kotlin-f3",
+    "enonce": "Quel mot-clé déclare une variable dont la valeur peut changer ?",
+    "choix": ["var", "mut", "dyn", "set"],
+    "bonneReponse": 0,
+    "explication": "`var` (de « variable ») autorise la réaffectation. La convention Kotlin est de préférer `val` partout où c'est possible, pour limiter les états mutables."
+  },
+  {
+    "id": "kotlin-f4",
+    "enonce": "Quelle est l'extension d'un fichier source Kotlin ?",
+    "choix": [".ko", ".ktn", ".kt", ".kl"],
+    "bonneReponse": 2,
+    "explication": "Un fichier Kotlin porte l'extension `.kt`. Les scripts Kotlin, eux, utilisent `.kts`."
+  },
+  {
+    "id": "kotlin-f5",
+    "enonce": "Quel mot-clé définit une fonction en Kotlin ?",
+    "choix": ["func", "def", "fun", "fn"],
+    "bonneReponse": 2,
+    "explication": "Une fonction se déclare avec `fun`, par exemple `fun saluer() { ... }`. Le type de retour s'écrit après les parenthèses, précédé de deux-points."
+  },
+  {
+    "id": "kotlin-f6",
+    "enonce": "Comment affiche-t-on une ligne de texte dans la console ?",
+    "choix": ["echo(\"texte\")", "println(\"texte\")", "console.log(\"texte\")", "print.line(\"texte\")"],
+    "bonneReponse": 1,
+    "explication": "`println()` affiche le texte suivi d'un retour à la ligne. `print()` existe aussi, mais sans le saut de ligne final."
+  },
+  {
+    "id": "kotlin-f7",
+    "enonce": "Sur quelle machine virtuelle Kotlin s'exécute-t-il historiquement ?",
+    "choix": ["la JVM (machine virtuelle Java)", "le moteur V8", "la CLR de .NET", "la machine virtuelle Python"],
+    "bonneReponse": 0,
+    "explication": "Kotlin compile par défaut vers du bytecode pour la JVM, ce qui le rend pleinement interopérable avec Java. Il peut aussi cibler JavaScript et le natif."
+  },
+  {
+    "id": "kotlin-f8",
+    "enonce": "Pour le développement de quel système Google recommande-t-il officiellement Kotlin ?",
+    "choix": ["iOS", "Windows", "Android", "Linux"],
+    "bonneReponse": 2,
+    "explication": "Depuis 2019, Google promeut une approche « Kotlin-first » pour Android : la documentation et les exemples privilégient Kotlin plutôt que Java."
+  },
+  {
+    "id": "kotlin-f9",
+    "enonce": "Le point-virgule en fin d'instruction est-il obligatoire en Kotlin ?",
+    "choix": ["oui, à chaque ligne", "non, il est optionnel", "oui, mais seulement dans les fonctions", "non, il est totalement interdit"],
+    "bonneReponse": 1,
+    "explication": "Kotlin déduit la fin d'une instruction du passage à la ligne : le point-virgule est facultatif. Il ne sert que pour séparer plusieurs instructions sur une même ligne."
+  },
+  {
+    "id": "kotlin-f10",
+    "enonce": "Comment écrit-on un commentaire sur une seule ligne ?",
+    "choix": ["# commentaire", "-- commentaire", "// commentaire", "; commentaire"],
+    "bonneReponse": 2,
+    "explication": "Une ligne commençant par `//` est ignorée par le compilateur. Pour un commentaire sur plusieurs lignes, on utilise `/* ... */`, comme en Java ou en C."
+  }
+]

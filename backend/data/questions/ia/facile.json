@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ia-f1",
+    "enonce": "Que signifie le sigle « IA » ?",
+    "choix": ["Intelligence artificielle", "Information automatisée", "Interface avancée", "Inférence algorithmique"],
+    "bonneReponse": 0,
+    "explication": "« IA » signifie intelligence artificielle : l'ensemble des techniques permettant à des machines de réaliser des tâches qui semblent demander de l'intelligence. En anglais, on dit « AI » (artificial intelligence)."
+  },
+  {
+    "id": "ia-f2",
+    "enonce": "Quel test célèbre cherche à savoir si une machine peut se faire passer pour un humain dans une conversation ?",
+    "choix": ["le test de Turing", "le test de Gödel", "le test de Pascal", "le test de Babbage"],
+    "bonneReponse": 0,
+    "explication": "Proposé par Alan Turing en 1950, ce test considère qu'une machine est « intelligente » si un humain ne parvient pas à la distinguer d'une personne lors d'un dialogue."
+  },
+  {
+    "id": "ia-f3",
+    "enonce": "En 1997, quel programme d'IBM a battu le champion du monde d'échecs Garry Kasparov ?",
+    "choix": ["Deep Blue", "Watson", "AlphaGo", "ENIAC"],
+    "bonneReponse": 0,
+    "explication": "Deep Blue, superordinateur d'IBM, a vaincu Kasparov en 1997 : une étape symbolique pour l'IA. Watson est un autre système d'IBM, AlphaGo vient de DeepMind et l'ENIAC est un ordinateur des années 1940."
+  },
+  {
+    "id": "ia-f4",
+    "enonce": "Comment nomme-t-on le domaine de l'IA où une machine apprend à partir de données plutôt que de règles écrites à la main ?",
+    "choix": ["l'apprentissage automatique", "le calcul formel", "la programmation linéaire", "la compilation"],
+    "bonneReponse": 0,
+    "explication": "L'apprentissage automatique (machine learning) laisse un programme déduire des règles à partir d'exemples, au lieu de les lui dicter explicitement."
+  },
+  {
+    "id": "ia-f5",
+    "enonce": "À quel jeu de plateau le programme AlphaGo a-t-il battu un champion de renommée mondiale en 2016 ?",
+    "choix": ["le go", "les échecs", "les dames", "le backgammon"],
+    "bonneReponse": 0,
+    "explication": "AlphaGo, développé par DeepMind, a battu Lee Sedol au go en 2016 — un exploit longtemps jugé hors de portée tant ce jeu offre de combinaisons possibles."
+  },
+  {
+    "id": "ia-f6",
+    "enonce": "De quoi s'inspirent les « réseaux de neurones artificiels » ?",
+    "choix": ["du fonctionnement du cerveau", "de la structure des cristaux", "du système solaire", "des circuits hydrauliques"],
+    "bonneReponse": 0,
+    "explication": "Les réseaux de neurones artificiels s'inspirent, de façon très simplifiée, des neurones du cerveau : de petites unités connectées qui s'échangent des signaux."
+  },
+  {
+    "id": "ia-f7",
+    "enonce": "Quelle technologie d'IA permet de transformer la parole en texte ?",
+    "choix": ["la reconnaissance vocale", "la compression de fichiers", "le chiffrement", "l'indexation"],
+    "bonneReponse": 0,
+    "explication": "La reconnaissance vocale convertit un signal audio de parole en texte écrit. C'est ce qui fait fonctionner la dictée et les assistants vocaux."
+  },
+  {
+    "id": "ia-f8",
+    "enonce": "Quel domaine de l'IA permet à une machine d'analyser et de « comprendre » le contenu d'images ?",
+    "choix": ["la vision par ordinateur", "la synthèse vocale", "la traduction automatique", "la planification"],
+    "bonneReponse": 0,
+    "explication": "La vision par ordinateur traite images et vidéos pour y détecter des objets, des visages ou du texte. Elle est par exemple utilisée dans la reconnaissance faciale."
+  },
+  {
+    "id": "ia-f9",
+    "enonce": "Comment qualifie-t-on une voiture capable de rouler sans conducteur grâce à l'IA ?",
+    "choix": ["autonome", "hybride", "décapotable", "électrique"],
+    "bonneReponse": 0,
+    "explication": "Une voiture autonome perçoit son environnement grâce à des caméras et des capteurs, et prend seule les décisions de conduite. « Hybride » ou « électrique » concernent la motorisation, pas la conduite."
+  },
+  {
+    "id": "ia-f10",
+    "enonce": "Quand un site propose « les articles que vous pourriez aimer », il s'appuie sur un système de quoi ?",
+    "choix": ["recommandation", "compilation", "sauvegarde", "ventilation"],
+    "bonneReponse": 0,
+    "explication": "Un système de recommandation analyse vos goûts et ceux d'utilisateurs similaires pour suggérer des contenus ou des produits. Netflix, YouTube ou les boutiques en ligne en font grand usage."
+  }
+]

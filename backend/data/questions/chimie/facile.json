@@ -1,0 +1,72 @@
+[
+  {
+    "id": "chimie-f1",
+    "enonce": "Quel est le symbole chimique de l'oxygène ?",
+    "choix": ["Og", "Ox", "O", "Oy"],
+    "bonneReponse": 2,
+    "explication": "L'oxygène a pour symbole O, du latin « oxygenium ». Le gaz que nous respirons est en réalité du dioxygène, noté O₂ (deux atomes liés)."
+  },
+  {
+    "id": "chimie-f2",
+    "enonce": "Quelle est la formule chimique de l'eau ?",
+    "choix": ["CO₂", "H₂O", "O₂", "HO₂"],
+    "bonneReponse": 1,
+    "explication": "Une molécule d'eau est formée de deux atomes d'hydrogène (H) et d'un atome d'oxygène (O), d'où la formule H₂O."
+  },
+  {
+    "id": "chimie-f3",
+    "enonce": "Quel est le symbole chimique de l'or ?",
+    "choix": ["Ag", "Al", "Cu", "Au"],
+    "bonneReponse": 3,
+    "explication": "L'or a pour symbole Au, du latin « aurum ». À ne pas confondre avec Ag (argent), Al (aluminium) ou Cu (cuivre)."
+  },
+  {
+    "id": "chimie-f4",
+    "enonce": "Quel gaz les êtres humains rejettent-ils principalement en expirant ?",
+    "choix": ["Le dioxyde de carbone", "Le dioxygène", "Le diazote", "L'hydrogène"],
+    "bonneReponse": 0,
+    "explication": "La respiration consomme du dioxygène (O₂) et rejette du dioxyde de carbone (CO₂), produit par les cellules pour libérer de l'énergie."
+  },
+  {
+    "id": "chimie-f5",
+    "enonce": "Quelle valeur du pH correspond à une solution neutre ?",
+    "choix": ["0", "1", "7", "14"],
+    "bonneReponse": 2,
+    "explication": "L'échelle de pH va de 0 à 14. La valeur 7 est neutre (comme l'eau pure) : en dessous c'est acide, au-dessus c'est basique."
+  },
+  {
+    "id": "chimie-f6",
+    "enonce": "Quel métal est liquide à température ambiante ?",
+    "choix": ["Le plomb", "Le mercure", "Le fer", "L'étain"],
+    "bonneReponse": 1,
+    "explication": "Le mercure est le seul métal liquide à température ambiante (il fond à −39 °C). On l'utilisait autrefois dans les thermomètres."
+  },
+  {
+    "id": "chimie-f7",
+    "enonce": "Quel gaz est le plus abondant dans l'air que nous respirons ?",
+    "choix": ["L'azote", "L'oxygène", "Le dioxyde de carbone", "L'hélium"],
+    "bonneReponse": 0,
+    "explication": "L'air est composé d'environ 78 % d'azote (diazote, N₂) et de seulement 21 % d'oxygène. Le reste est surtout de l'argon."
+  },
+  {
+    "id": "chimie-f8",
+    "enonce": "De quel élément chimique le diamant est-il entièrement composé ?",
+    "choix": ["Le silicium", "Le calcium", "Le soufre", "Le carbone"],
+    "bonneReponse": 3,
+    "explication": "Le diamant est du carbone pur, dont les atomes forment un réseau très rigide. Le graphite (mine de crayon) est aussi du carbone, mais arrangé autrement."
+  },
+  {
+    "id": "chimie-f9",
+    "enonce": "Quel est le symbole chimique du fer ?",
+    "choix": ["Fr", "F", "Fe", "Ir"],
+    "bonneReponse": 2,
+    "explication": "Le fer a pour symbole Fe, du latin « ferrum ». F désigne le fluor, Fr le francium et Ir l'iridium."
+  },
+  {
+    "id": "chimie-f10",
+    "enonce": "Le sel de table contient du chlore associé à quel autre élément ?",
+    "choix": ["Le potassium", "Le sodium", "Le calcium", "Le lithium"],
+    "bonneReponse": 1,
+    "explication": "Le sel de table est du chlorure de sodium, de formule NaCl : un atome de sodium (Na) pour un atome de chlore (Cl)."
+  }
+]

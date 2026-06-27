@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ecologie-e1",
+    "enonce": "Quel organisme rattaché à l'ONU fait la synthèse des connaissances scientifiques sur le changement climatique ?",
+    "choix": ["le GIEC", "l'OMS", "l'AIEA", "la FAO"],
+    "bonneReponse": 0,
+    "explication": "Le GIEC (Groupe d'experts intergouvernemental sur l'évolution du climat) compile et évalue les travaux scientifiques mondiaux. Ses rapports font référence pour les décideurs."
+  },
+  {
+    "id": "ecologie-e2",
+    "enonce": "Quel concept désigne les neuf seuils à ne pas franchir pour préserver l'habitabilité de la Terre ?",
+    "choix": ["les niches écologiques", "les cycles de Milankovitch", "les limites planétaires", "les zones de convergence"],
+    "bonneReponse": 2,
+    "explication": "Les limites planétaires, formalisées en 2009 par l'équipe de Johan Rockström, identifient neuf processus (climat, biodiversité, cycle de l'azote…) dont le dépassement met en péril les équilibres terrestres."
+  },
+  {
+    "id": "ecologie-e3",
+    "enonce": "Quel gaz à effet de serre fluoré possède l'un des plus forts pouvoirs de réchauffement et persiste des millénaires ?",
+    "choix": ["le dioxyde de carbone", "l'hexafluorure de soufre", "la vapeur d'eau", "le monoxyde de carbone"],
+    "bonneReponse": 1,
+    "explication": "L'hexafluorure de soufre (SF₆), utilisé dans l'appareillage électrique haute tension, a un pouvoir de réchauffement plusieurs milliers de fois supérieur au CO₂ et reste très longtemps dans l'atmosphère."
+  },
+  {
+    "id": "ecologie-e4",
+    "enonce": "Comment appelle-t-on la baisse du pH des océans causée par l'absorption du CO₂ atmosphérique ?",
+    "choix": ["l'acidification des océans", "l'eutrophisation", "la salinisation", "la stratification thermique"],
+    "bonneReponse": 0,
+    "explication": "En absorbant une partie du CO₂ de l'air, l'océan s'acidifie. Cette baisse de pH fragilise les coquilles et squelettes calcaires des coraux, mollusques et planctons."
+  },
+  {
+    "id": "ecologie-e5",
+    "enonce": "Quel indicateur compare le pouvoir de réchauffement d'un gaz à celui du CO₂ sur une durée donnée ?",
+    "choix": ["l'IDH", "le PIB vert", "le bilan radiatif", "le PRG"],
+    "bonneReponse": 3,
+    "explication": "Le PRG (pouvoir de réchauffement global) ramène l'effet d'un gaz à un équivalent CO₂. Sur 100 ans, le méthane vaut environ 28 fois le CO₂, ce qui permet d'additionner des émissions hétérogènes."
+  },
+  {
+    "id": "ecologie-e6",
+    "enonce": "Comment nomme-t-on un milieu qui absorbe plus de carbone qu'il n'en émet, comme les forêts ou les océans ?",
+    "choix": ["un puits de carbone", "un forçage radiatif", "une rétroaction positive", "un effet additionnel"],
+    "bonneReponse": 0,
+    "explication": "Un puits de carbone stocke durablement du carbone. Forêts, sols et océans absorbent ainsi une partie du CO₂ humain et freinent le réchauffement — tant qu'on les préserve."
+  },
+  {
+    "id": "ecologie-e7",
+    "enonce": "Quelle rétroaction accélère le réchauffement lorsque la fonte des glaces réduit la réflexion de la lumière solaire ?",
+    "choix": ["l'effet de foehn", "la rétroaction de l'albédo", "l'inversion thermique", "le cycle de Carnot"],
+    "bonneReponse": 1,
+    "explication": "La glace claire renvoie la lumière (fort albédo) ; en fondant, elle laisse place à l'océan sombre qui absorbe la chaleur, ce qui accélère encore la fonte. C'est une rétroaction positive."
+  },
+  {
+    "id": "ecologie-e8",
+    "enonce": "Quel protocole signé en 1987 a permis d'éliminer les substances détruisant la couche d'ozone ?",
+    "choix": ["le Protocole de Kyoto", "la Convention de Ramsar", "le Protocole de Montréal", "le Sommet de Rio"],
+    "bonneReponse": 2,
+    "explication": "Le Protocole de Montréal a organisé l'élimination des CFC. Souvent cité comme l'accord environnemental le plus efficace, il a enclenché la lente reconstitution de la couche d'ozone."
+  },
+  {
+    "id": "ecologie-e9",
+    "enonce": "Comment nomme-t-on l'enrichissement excessif d'un milieu aquatique en nutriments, provoquant la prolifération d'algues ?",
+    "choix": ["l'eutrophisation", "la désertification", "la bioturbation", "la photolyse"],
+    "bonneReponse": 0,
+    "explication": "L'eutrophisation, souvent due aux engrais agricoles (nitrates, phosphates), fait proliférer les algues. En se décomposant, celles-ci consomment l'oxygène et asphyxient la vie aquatique."
+  },
+  {
+    "id": "ecologie-e10",
+    "enonce": "Comment appelle-t-on un seuil au-delà duquel un système climatique bascule brutalement et de façon difficilement réversible ?",
+    "choix": ["un cycle solaire", "un point de bascule", "un gradient adiabatique", "un front polaire"],
+    "bonneReponse": 1,
+    "explication": "Un point de bascule (tipping point) est un seuil critique : une fois franchi, un système comme la calotte du Groenland ou la forêt amazonienne change d'état de manière brutale et durable."
+  }
+]

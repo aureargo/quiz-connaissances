@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ia-e1",
+    "enonce": "Quel algorithme entraîne un réseau de neurones en propageant l'erreur de la sortie vers les couches précédentes ?",
+    "choix": ["la rétropropagation", "la dichotomie", "le hachage", "la mémoïsation"],
+    "bonneReponse": 0,
+    "explication": "La rétropropagation (backpropagation) calcule, couche après couche en remontant, comment chaque poids contribue à l'erreur afin de l'ajuster. Popularisée en 1986, elle est au cœur de l'entraînement des réseaux."
+  },
+  {
+    "id": "ia-e2",
+    "enonce": "Comment s'appelle le modèle de neurone artificiel proposé par Frank Rosenblatt en 1958 ?",
+    "choix": ["le perceptron", "le transistor", "le qubit", "le thyristor"],
+    "bonneReponse": 0,
+    "explication": "Le perceptron est un classifieur linéaire, ancêtre des réseaux de neurones. Ses limites (incapacité à résoudre le XOR) ont été pointées en 1969 par Minsky et Papert."
+  },
+  {
+    "id": "ia-e3",
+    "enonce": "Quel type de réseau de neurones est particulièrement adapté au traitement des images ?",
+    "choix": ["le réseau convolutif", "le réseau récurrent", "le réseau de Hopfield", "la machine de Boltzmann"],
+    "bonneReponse": 0,
+    "explication": "Le réseau de neurones convolutif (CNN) applique des filtres qui balaient l'image pour y détecter des motifs locaux (bords, textures), couche après couche. Il domine la vision par ordinateur depuis 2012 (AlexNet)."
+  },
+  {
+    "id": "ia-e4",
+    "enonce": "Comment fonctionnent les « GAN » (réseaux antagonistes génératifs) ?",
+    "choix": ["deux réseaux s'affrontent : un générateur et un discriminateur", "un seul réseau s'entraîne sans aucune donnée", "des règles logiques remplacent les neurones", "plusieurs serveurs votent pour une réponse"],
+    "bonneReponse": 0,
+    "explication": "Dans un GAN, un générateur fabrique de fausses données et un discriminateur tente de les démasquer ; leur compétition pousse le générateur à produire des résultats de plus en plus réalistes. Introduits par Ian Goodfellow en 2014."
+  },
+  {
+    "id": "ia-e5",
+    "enonce": "Quels trois chercheurs, surnommés les « parrains du deep learning », ont reçu le prix Turing 2018 ?",
+    "choix": ["Hinton, Bengio et LeCun", "Turing, von Neumann et Shannon", "Page, Brin et Hassabis", "Minsky, McCarthy et Newell"],
+    "bonneReponse": 0,
+    "explication": "Geoffrey Hinton, Yoshua Bengio et Yann LeCun ont reçu le prix Turing 2018 pour leurs travaux sur les réseaux de neurones profonds, qui ont relancé l'IA moderne."
+  },
+  {
+    "id": "ia-e6",
+    "enonce": "Pourquoi le « problème du XOR » a-t-il freiné les réseaux de neurones à une seule couche ?",
+    "choix": ["la fonction XOR n'est pas linéairement séparable", "le XOR exige trop de mémoire", "le XOR n'a aucune solution mathématique", "le XOR mélange plusieurs langues"],
+    "bonneReponse": 0,
+    "explication": "Un perceptron simple ne peut séparer les données qu'avec une droite ; or les cas du XOR ne le sont pas. Il faut une couche cachée pour le résoudre, ce que Minsky et Papert avaient souligné en 1969."
+  },
+  {
+    "id": "ia-e7",
+    "enonce": "Quel type de réseau est conçu pour traiter des séquences en gardant une mémoire des éléments précédents ?",
+    "choix": ["le réseau récurrent", "le réseau convolutif", "l'autoencodeur", "le perceptron monocouche"],
+    "bonneReponse": 0,
+    "explication": "Le réseau de neurones récurrent (RNN) réinjecte sa sortie précédente en entrée, ce qui lui donne une « mémoire » utile pour le texte ou la parole. Les variantes LSTM atténuent son oubli sur les longues séquences."
+  },
+  {
+    "id": "ia-e8",
+    "enonce": "En théorie des jeux, quel algorithme permet à une IA de choisir un coup en minimisant sa perte maximale possible ?",
+    "choix": ["minimax", "quicksort", "Dijkstra", "k-means"],
+    "bonneReponse": 0,
+    "explication": "L'algorithme minimax explore l'arbre des coups d'un jeu à deux joueurs en supposant un adversaire optimal ; l'élagage alpha-bêta l'accélère en coupant les branches inutiles. Dijkstra cherche un plus court chemin et k-means regroupe des données."
+  },
+  {
+    "id": "ia-e9",
+    "enonce": "Qu'est-ce que la « descente de gradient » ?",
+    "choix": ["un algorithme d'optimisation qui minimise une fonction de coût", "une méthode de compression d'images", "un protocole de communication réseau", "une technique de chiffrement des poids"],
+    "bonneReponse": 0,
+    "explication": "La descente de gradient ajuste pas à pas les paramètres dans la direction qui réduit le plus l'erreur (le gradient). C'est l'outil d'optimisation de base pour entraîner un réseau de neurones."
+  },
+  {
+    "id": "ia-e10",
+    "enonce": "Que conteste l'expérience de pensée de la « chambre chinoise » proposée par John Searle ?",
+    "choix": ["qu'un programme manipulant des symboles « comprenne » vraiment", "que les ordinateurs puissent calculer vite", "que l'IA puisse battre un humain aux échecs", "que les réseaux de neurones existent"],
+    "bonneReponse": 0,
+    "explication": "Searle imagine une personne qui applique des règles pour répondre en chinois sans comprendre un mot. Il en conclut que manipuler des symboles, comme le fait un programme, ne suffit pas à produire une véritable compréhension."
+  }
+]

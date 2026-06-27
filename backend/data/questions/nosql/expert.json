@@ -1,0 +1,72 @@
+[
+  {
+    "id": "nosql-e1",
+    "enonce": "Dans le théorème CAP, que privilégie un système qualifié de « CP » ?",
+    "choix": ["la disponibilité au détriment de la cohérence", "la cohérence au détriment de la disponibilité", "la performance au détriment de la durabilité", "le partitionnement au détriment du stockage"],
+    "bonneReponse": 1,
+    "explication": "Un système CP (Consistency + Partition tolerance) préfère refuser de répondre plutôt que de renvoyer une donnée incohérente lors d'une partition réseau."
+  },
+  {
+    "id": "nosql-e2",
+    "enonce": "Quel algorithme de consensus etcd (le magasin clé-valeur de Kubernetes) utilise-t-il ?",
+    "choix": ["Paxos", "Raft", "Gossip", "Two-Phase Commit"],
+    "bonneReponse": 1,
+    "explication": "Raft a été conçu pour être plus compréhensible que Paxos : il élit un leader et réplique un journal d'opérations de façon cohérente."
+  },
+  {
+    "id": "nosql-e3",
+    "enonce": "Quel protocole Cassandra emploie-t-il pour propager l'état du cluster entre ses nœuds ?",
+    "choix": ["le protocole Gossip", "le protocole HTTP", "le protocole Raft", "le protocole SOAP"],
+    "bonneReponse": 0,
+    "explication": "Avec le protocole « gossip », chaque nœud échange périodiquement des informations avec quelques autres, diffusant l'état du cluster sans coordinateur central."
+  },
+  {
+    "id": "nosql-e4",
+    "enonce": "À quoi sert une horloge vectorielle (« vector clock ») dans un système distribué ?",
+    "choix": ["indexer les documents par date", "ordonner les événements et détecter les écritures concurrentes", "compresser les journaux de réplication", "sérialiser les objets en binaire"],
+    "bonneReponse": 1,
+    "explication": "Les horloges vectorielles versionnent les données pour repérer les écritures concurrentes : Dynamo et Riak s'en servent pour détecter et résoudre les conflits."
+  },
+  {
+    "id": "nosql-e5",
+    "enonce": "À quoi sert le pipeline d'agrégation de MongoDB ($match, $group, $project…) ?",
+    "choix": ["chiffrer les documents par étapes", "transformer et agréger les données en plusieurs étapes", "répliquer les collections vers d'autres nœuds", "imposer un schéma strict aux documents"],
+    "bonneReponse": 1,
+    "explication": "L'aggregation pipeline enchaîne des étapes ($match, $group, $project…) comme un tapis roulant pour filtrer, regrouper et transformer les documents, façon GROUP BY enrichi."
+  },
+  {
+    "id": "nosql-e6",
+    "enonce": "Que garantit un quorum tel que R + W > N (réplicas lus + écrits > total) ?",
+    "choix": ["une compression maximale des données", "une cohérence forte malgré la réplication", "une suppression automatique des doublons", "un chiffrement de bout en bout"],
+    "bonneReponse": 1,
+    "explication": "Si les réplicas lus (R) plus écrits (W) dépassent le total (N), au moins un nœud à jour est forcément lu : on obtient une cohérence forte. C'est le réglage de Dynamo/Cassandra."
+  },
+  {
+    "id": "nosql-e7",
+    "enonce": "Comment décrire le modèle « wide-column » de HBase ou Cassandra ?",
+    "choix": ["des lignes à colonnes dynamiques groupées en familles", "des nœuds reliés par des arêtes typées", "des paires clé-valeur strictement plates", "des documents JSON profondément imbriqués"],
+    "bonneReponse": 0,
+    "explication": "Ces bases stockent des lignes dont les colonnes varient, organisées en « column families », sur le modèle du Bigtable de Google."
+  },
+  {
+    "id": "nosql-e8",
+    "enonce": "Que garantit concrètement la « cohérence à terme » (eventual consistency) ?",
+    "choix": ["qu'aucune donnée n'est jamais perdue, en toutes circonstances", "qu'en l'absence de nouvelles écritures, les nœuds finissent par converger", "que tous les nœuds renvoient la même valeur instantanément", "que chaque opération respecte les propriétés ACID"],
+    "bonneReponse": 1,
+    "explication": "Elle promet seulement que, sans nouvelle mise à jour, les réplicas finiront par s'accorder. Entre-temps, une lecture peut renvoyer une valeur périmée."
+  },
+  {
+    "id": "nosql-e9",
+    "enonce": "Qu'est-ce qu'un CRDT dans le contexte des bases distribuées ?",
+    "choix": ["un algorithme de chiffrement symétrique", "une structure de données répliquée sans conflit", "un langage de requête distribué", "un format de compression de documents"],
+    "bonneReponse": 1,
+    "explication": "Un CRDT (Conflict-free Replicated Data Type) laisse plusieurs réplicas être modifiés indépendamment, puis fusionne automatiquement sans conflit : utile pour les bases AP comme Riak."
+  },
+  {
+    "id": "nosql-e10",
+    "enonce": "Pourquoi MongoDB a-t-il introduit les transactions multi-documents en version 4.0 ?",
+    "choix": ["pour supprimer le besoin de sharding", "pour offrir des garanties ACID sur plusieurs documents", "pour remplacer le format BSON", "pour interdire toute dénormalisation"],
+    "bonneReponse": 1,
+    "explication": "Historiquement atomique au niveau d'un seul document, MongoDB a ajouté en 4.0 des transactions ACID couvrant plusieurs documents, rapprochant NoSQL et garanties relationnelles."
+  }
+]

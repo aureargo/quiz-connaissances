@@ -1,0 +1,72 @@
+[
+  {
+    "id": "geologie-m1",
+    "enonce": "Comment appelle-t-on l'épaisse couche située entre la croûte et le noyau de la Terre ?",
+    "choix": ["le manteau", "la lithosphère", "la stratosphère", "la magnétosphère"],
+    "bonneReponse": 0,
+    "explication": "Le manteau représente l'essentiel du volume de la Terre. Composé de roches très chaudes et lentement déformables, c'est lui qui, par ses mouvements, déplace les plaques."
+  },
+  {
+    "id": "geologie-m2",
+    "enonce": "Comment nomme-t-on les roches formées par le refroidissement et la solidification du magma ?",
+    "choix": ["sédimentaires", "métamorphiques", "magmatiques", "organiques"],
+    "bonneReponse": 2,
+    "explication": "Les roches magmatiques (ou ignées), comme le granite ou le basalte, naissent du magma qui se fige. Les trois grandes familles sont magmatiques, sédimentaires et métamorphiques."
+  },
+  {
+    "id": "geologie-m3",
+    "enonce": "Quelle échelle a longtemps servi à mesurer la magnitude, c'est-à-dire l'énergie d'un séisme ?",
+    "choix": ["l'échelle de Beaufort", "l'échelle de Richter", "l'échelle de Mohs", "l'échelle de Celsius"],
+    "bonneReponse": 1,
+    "explication": "L'échelle de Richter quantifie l'énergie libérée par un séisme. L'échelle de Beaufort mesure la force du vent, celle de Mohs la dureté des minéraux."
+  },
+  {
+    "id": "geologie-m4",
+    "enonce": "Le marbre est une roche métamorphique issue de la transformation de quelle roche ?",
+    "choix": ["du calcaire", "du granite", "du grès", "du basalte"],
+    "bonneReponse": 0,
+    "explication": "Sous l'effet de la chaleur et de la pression, le calcaire se transforme en marbre. C'est un exemple typique de métamorphisme : une roche change de structure sans fondre."
+  },
+  {
+    "id": "geologie-m5",
+    "enonce": "Quel type de roche se forme par accumulation et compaction de débris comme le sable, la boue ou des coquilles ?",
+    "choix": ["magmatique", "sédimentaire", "métamorphique", "volcanique"],
+    "bonneReponse": 1,
+    "explication": "Les roches sédimentaires résultent de l'empilement puis du durcissement de dépôts. Le grès vient du sable, le calcaire de coquilles : on y trouve souvent des fossiles."
+  },
+  {
+    "id": "geologie-m6",
+    "enonce": "Comment appelle-t-on une cassure de l'écorce terrestre le long de laquelle des blocs de roche se déplacent ?",
+    "choix": ["une faille", "un cratère", "une moraine", "un geyser"],
+    "bonneReponse": 0,
+    "explication": "Une faille est une fracture où deux compartiments de roche glissent l'un par rapport à l'autre. Les grands séismes se produisent justement le long de failles, comme celle de San Andreas."
+  },
+  {
+    "id": "geologie-m7",
+    "enonce": "Quelle roche volcanique sombre forme l'essentiel des fonds océaniques ?",
+    "choix": ["le basalte", "le granite", "le calcaire", "le grès"],
+    "bonneReponse": 0,
+    "explication": "Le basalte, issu de magma refroidi rapidement, constitue le plancher des océans. Le granite, lui, domine plutôt les continents et refroidit lentement en profondeur."
+  },
+  {
+    "id": "geologie-m8",
+    "enonce": "Comment se nommait le supercontinent unique qui regroupait toutes les terres il y a environ 250 millions d'années ?",
+    "choix": ["la Pangée", "le Gondwana", "la Laurasie", "l'Atlantide"],
+    "bonneReponse": 0,
+    "explication": "La Pangée rassemblait alors tous les continents en un seul bloc. En se fragmentant, elle a donné naissance au Gondwana et à la Laurasie, puis aux continents actuels."
+  },
+  {
+    "id": "geologie-m9",
+    "enonce": "Quelle roche volcanique est si légère et poreuse qu'elle peut flotter sur l'eau ?",
+    "choix": ["la pierre ponce", "l'ardoise", "le marbre", "l'obsidienne"],
+    "bonneReponse": 0,
+    "explication": "La pierre ponce se forme quand une lave riche en gaz refroidit très vite : les bulles emprisonnées la rendent pleine de trous, donc légère. L'obsidienne, au contraire, est un verre volcanique dense."
+  },
+  {
+    "id": "geologie-m10",
+    "enonce": "Quelle théorie explique que les continents se déplacent lentement à la surface du globe ?",
+    "choix": ["la dérive des étoiles", "la tectonique des plaques", "la convection solaire", "la rotation des marées"],
+    "bonneReponse": 1,
+    "explication": "La tectonique des plaques décrit le déplacement des grandes plaques de la lithosphère, portées par les mouvements du manteau. Elle explique séismes, volcans et formation des montagnes."
+  }
+]

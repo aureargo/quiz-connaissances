@@ -1,0 +1,72 @@
+[
+  {
+    "id": "css-f1",
+    "enonce": "Que signifie l'acronyme CSS ?",
+    "choix": ["Computer Style Sheets", "Cascading Style Sheets", "Creative Style System", "Colorful Style Sheets"],
+    "bonneReponse": 1,
+    "explication": "CSS signifie « Cascading Style Sheets » (feuilles de style en cascade). Le mot « cascade » renvoie à la façon dont les règles se combinent et se priorisent."
+  },
+  {
+    "id": "css-f2",
+    "enonce": "Quelle propriété définit la couleur du texte ?",
+    "choix": ["text-color", "font-color", "color", "foreground"],
+    "bonneReponse": 2,
+    "explication": "`color` règle la couleur du texte d'un élément. Pour la couleur du fond, on utilise une propriété distincte : `background-color`."
+  },
+  {
+    "id": "css-f3",
+    "enonce": "Quelle propriété définit la couleur de fond d'un élément ?",
+    "choix": ["background-color", "bg-color", "color-background", "fill"],
+    "bonneReponse": 0,
+    "explication": "`background-color` colore le fond. Elle fait partie de la famille `background-*` (image, position, répétition…) regroupable dans le raccourci `background`."
+  },
+  {
+    "id": "css-f4",
+    "enonce": "Comment cible-t-on les éléments d'une classe `carte` ?",
+    "choix": [".carte", "#carte", "carte", "*carte"],
+    "bonneReponse": 0,
+    "explication": "Un point précède un sélecteur de classe : `.carte`. Le dièse `#`, lui, cible un identifiant unique (`id`)."
+  },
+  {
+    "id": "css-f5",
+    "enonce": "Comment cible-t-on l'élément dont l'`id` est `menu` ?",
+    "choix": [".menu", "#menu", "@menu", "id:menu"],
+    "bonneReponse": 1,
+    "explication": "Le dièse `#` précède un sélecteur d'identifiant : `#menu`. Un `id` doit être unique dans la page, contrairement à une classe."
+  },
+  {
+    "id": "css-f6",
+    "enonce": "Quelle propriété règle la taille du texte ?",
+    "choix": ["text-size", "font-size", "size", "font-height"],
+    "bonneReponse": 1,
+    "explication": "`font-size` fixe la taille des caractères, par exemple `font-size: 16px;`. On peut utiliser des unités absolues (px) ou relatives (em, rem…)."
+  },
+  {
+    "id": "css-f7",
+    "enonce": "Quelle déclaration met le texte en gras ?",
+    "choix": ["font-style: bold", "text-weight: bold", "font-weight: bold", "text-decoration: bold"],
+    "bonneReponse": 2,
+    "explication": "`font-weight: bold` épaissit le texte. `font-style`, lui, gère plutôt l'italique (`italic`), et `text-decoration` le soulignement ou le barré."
+  },
+  {
+    "id": "css-f8",
+    "enonce": "Comment lie-t-on une feuille de style externe à une page HTML ?",
+    "choix": ["<style src=\"style.css\">", "<css href=\"style.css\">", "<link rel=\"stylesheet\" href=\"style.css\">", "<script style=\"style.css\">"],
+    "bonneReponse": 2,
+    "explication": "On place `<link rel=\"stylesheet\" href=\"style.css\">` dans le `<head>`. La balise `<style>`, elle, sert à écrire du CSS directement dans le HTML."
+  },
+  {
+    "id": "css-f9",
+    "enonce": "Quelle propriété crée un espace intérieur, entre le contenu et la bordure ?",
+    "choix": ["margin", "padding", "border", "spacing"],
+    "bonneReponse": 1,
+    "explication": "`padding` est la marge intérieure : l'espace entre le contenu et la bordure. À ne pas confondre avec `margin`, qui agit à l'extérieur de la bordure."
+  },
+  {
+    "id": "css-f10",
+    "enonce": "Quelle propriété crée un espace extérieur, autour d'un élément ?",
+    "choix": ["padding", "margin", "gap", "outline"],
+    "bonneReponse": 1,
+    "explication": "`margin` est la marge extérieure : l'espace qui sépare un élément de ses voisins. Le `padding`, lui, agit à l'intérieur, vers le contenu."
+  }
+]

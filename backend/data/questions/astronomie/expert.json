@@ -1,0 +1,72 @@
+[
+  {
+    "id": "astronomie-e1",
+    "enonce": "Comment nomme-t-on la frontière d'un trou noir au-delà de laquelle rien ne peut s'échapper ?",
+    "choix": ["la singularité", "l'horizon des événements", "le disque d'accrétion", "la photosphère"],
+    "bonneReponse": 1,
+    "explication": "L'horizon des événements est la limite d'un trou noir : une fois franchie, même la lumière ne peut plus revenir. La singularité désigne le centre où la matière est infiniment concentrée."
+  },
+  {
+    "id": "astronomie-e2",
+    "enonce": "Quel télescope spatial, lancé en 2021, observe l'Univers principalement dans l'infrarouge ?",
+    "choix": ["Hubble", "James-Webb", "Kepler", "Spitzer"],
+    "bonneReponse": 1,
+    "explication": "Le télescope James-Webb, lancé fin 2021, scrute dans l'infrarouge les premières galaxies et les atmosphères d'exoplanètes. Il prend le relais de Hubble, en service depuis 1990."
+  },
+  {
+    "id": "astronomie-e3",
+    "enonce": "Comment appelle-t-on l'explosion cataclysmique d'une étoile massive en fin de vie ?",
+    "choix": ["une nova", "une supernova", "une géante rouge", "une nébuleuse"],
+    "bonneReponse": 1,
+    "explication": "Une supernova est l'explosion d'une étoile massive ayant épuisé son carburant. Elle peut briller autant qu'une galaxie entière et disperse dans l'espace les éléments lourds forgés par l'étoile."
+  },
+  {
+    "id": "astronomie-e4",
+    "enonce": "En quoi le Soleil se transformera-t-il à la toute fin de sa vie ?",
+    "choix": ["un trou noir", "une naine blanche", "une étoile à neutrons", "un pulsar"],
+    "bonneReponse": 1,
+    "explication": "Trop peu massif pour finir en trou noir ou en étoile à neutrons, le Soleil gonflera en géante rouge puis expulsera ses couches externes, laissant un cœur dense et chaud : une naine blanche."
+  },
+  {
+    "id": "astronomie-e5",
+    "enonce": "Qu'est-ce qu'une exoplanète ?",
+    "choix": ["une planète sans étoile", "une planète hors du système solaire", "une planète naine", "une ancienne planète"],
+    "bonneReponse": 1,
+    "explication": "Une exoplanète gravite autour d'une autre étoile que le Soleil. La première détectée autour d'une étoile semblable au Soleil, 51 Pegasi b, fut découverte en 1995."
+  },
+  {
+    "id": "astronomie-e6",
+    "enonce": "Quel astronome a formulé les lois décrivant les orbites elliptiques des planètes ?",
+    "choix": ["Galilée", "Johannes Kepler", "Nicolas Copernic", "Tycho Brahe"],
+    "bonneReponse": 1,
+    "explication": "Johannes Kepler établit au début du XVIIe siècle que les planètes décrivent des ellipses autour du Soleil. Il s'appuya sur les observations très précises de son maître Tycho Brahe."
+  },
+  {
+    "id": "astronomie-e7",
+    "enonce": "Comment appelle-t-on la couche externe du Soleil, visible en halo lors d'une éclipse totale ?",
+    "choix": ["la photosphère", "la couronne", "la chromosphère", "le noyau"],
+    "bonneReponse": 1,
+    "explication": "La couronne est l'atmosphère externe du Soleil, qui s'étend très loin dans l'espace. Habituellement noyée dans l'éclat du disque, elle n'apparaît qu'au moment d'une éclipse totale."
+  },
+  {
+    "id": "astronomie-e8",
+    "enonce": "Quel phénomène, observé par Edwin Hubble, prouve que l'Univers est en expansion ?",
+    "choix": ["le décalage vers le bleu des galaxies", "le décalage vers le rouge des galaxies", "le fond diffus cosmologique", "le mouvement des amas globulaires"],
+    "bonneReponse": 1,
+    "explication": "Hubble constata que la lumière des galaxies lointaines est décalée vers le rouge, signe qu'elles s'éloignent. Plus une galaxie est lointaine, plus elle fuit vite : l'Univers est en expansion."
+  },
+  {
+    "id": "astronomie-e9",
+    "enonce": "Comment nomme-t-on le vaste réservoir de comètes situé aux confins du système solaire ?",
+    "choix": ["la ceinture d'astéroïdes", "le nuage d'Oort", "la ceinture de Kuiper", "l'héliopause"],
+    "bonneReponse": 1,
+    "explication": "Le nuage d'Oort est une immense enveloppe sphérique de corps glacés entourant le système solaire, source des comètes à longue période. La ceinture de Kuiper, plus proche, abrite notamment Pluton."
+  },
+  {
+    "id": "astronomie-e10",
+    "enonce": "Quel reste d'étoile très dense émet un faisceau d'ondes radio à intervalles d'une grande régularité ?",
+    "choix": ["une naine brune", "un pulsar", "un quasar", "une géante rouge"],
+    "bonneReponse": 1,
+    "explication": "Un pulsar est une étoile à neutrons en rotation rapide qui balaie l'espace de faisceaux, perçus comme des impulsions régulières. Le premier fut détecté en 1967 par Jocelyn Bell."
+  }
+]

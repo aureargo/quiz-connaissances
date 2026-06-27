@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ecologie-f1",
+    "enonce": "Quel gaz, produit par les activités humaines, est le principal responsable du réchauffement climatique ?",
+    "choix": ["le dioxygène", "l'argon", "le dioxyde de carbone", "l'hélium"],
+    "bonneReponse": 2,
+    "explication": "Le dioxyde de carbone (CO₂), libéré surtout par la combustion des énergies fossiles, est le principal gaz à effet de serre d'origine humaine. Il retient la chaleur près de la surface de la Terre."
+  },
+  {
+    "id": "ecologie-f2",
+    "enonce": "Comment appelle-t-on le fait de transformer des déchets pour leur donner une seconde vie ?",
+    "choix": ["l'incinération", "le recyclage", "le compostage", "l'enfouissement"],
+    "bonneReponse": 1,
+    "explication": "Le recyclage transforme des déchets (verre, papier, plastique…) en nouvelles matières premières. Cela économise des ressources et réduit la quantité de déchets brûlés ou enfouis."
+  },
+  {
+    "id": "ecologie-f3",
+    "enonce": "Quelle énergie est produite à partir des rayons du Soleil ?",
+    "choix": ["l'énergie solaire", "l'énergie nucléaire", "l'énergie du charbon", "l'énergie pétrolière"],
+    "bonneReponse": 0,
+    "explication": "L'énergie solaire est captée par des panneaux photovoltaïques qui transforment la lumière en électricité. C'est une énergie renouvelable et peu polluante."
+  },
+  {
+    "id": "ecologie-f4",
+    "enonce": "Comment nomme-t-on l'ensemble des êtres vivants d'un milieu et leur environnement ?",
+    "choix": ["un continent", "une galaxie", "un minéral", "un écosystème"],
+    "bonneReponse": 3,
+    "explication": "Un écosystème regroupe les êtres vivants (animaux, plantes, micro-organismes) et leur milieu, qui interagissent ensemble. Une forêt ou un étang en sont des exemples."
+  },
+  {
+    "id": "ecologie-f5",
+    "enonce": "Parmi ces sources d'énergie, laquelle n'est PAS renouvelable ?",
+    "choix": ["le vent", "le pétrole", "le soleil", "l'eau des rivières"],
+    "bonneReponse": 1,
+    "explication": "Le pétrole est une énergie fossile : il s'est formé sur des millions d'années et finit par s'épuiser. Le vent, le soleil et l'eau, eux, se renouvellent en permanence."
+  },
+  {
+    "id": "ecologie-f6",
+    "enonce": "Quel moyen de transport ne rejette aucun gaz à effet de serre quand on l'utilise ?",
+    "choix": ["l'avion", "la voiture", "le vélo", "le camion"],
+    "bonneReponse": 2,
+    "explication": "Le vélo ne consomme aucun carburant et n'émet pas de gaz à effet de serre à l'usage. Marcher ou pédaler sont les déplacements les plus écologiques."
+  },
+  {
+    "id": "ecologie-f7",
+    "enonce": "Comment appelle-t-on la disparition définitive d'une espèce animale ou végétale ?",
+    "choix": ["l'extinction", "la migration", "l'hibernation", "la pollinisation"],
+    "bonneReponse": 0,
+    "explication": "Une espèce s'éteint quand son dernier individu disparaît : elle n'existe plus nulle part. Le dodo et le mammouth laineux sont des espèces éteintes."
+  },
+  {
+    "id": "ecologie-f8",
+    "enonce": "Quel phénomène naturel retient une partie de la chaleur autour de la Terre et rend la vie possible ?",
+    "choix": ["l'arc-en-ciel", "l'effet de serre", "la marée", "l'érosion"],
+    "bonneReponse": 1,
+    "explication": "L'effet de serre est naturel : certains gaz piègent une partie de la chaleur, ce qui maintient une température vivable. Le problème vient de son renforcement par les activités humaines."
+  },
+  {
+    "id": "ecologie-f9",
+    "enonce": "Que peut-on fabriquer en laissant pourrir épluchures et feuilles mortes ?",
+    "choix": ["du plastique", "de l'essence", "du verre", "du compost"],
+    "bonneReponse": 3,
+    "explication": "Le compost est un engrais naturel obtenu en laissant se décomposer les déchets organiques. Il enrichit la terre du jardin et évite de jeter ces déchets à la poubelle."
+  },
+  {
+    "id": "ecologie-f10",
+    "enonce": "Quelle est la principale cause de la fonte des glaciers et de la banquise ?",
+    "choix": ["les marées", "la rotation de la Terre", "le réchauffement climatique", "les éclipses"],
+    "bonneReponse": 2,
+    "explication": "La hausse des températures mondiales fait fondre glaciers et banquise. Cette fonte contribue à l'élévation du niveau des mers et menace des animaux comme l'ours polaire."
+  }
+]

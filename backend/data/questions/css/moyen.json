@@ -1,0 +1,72 @@
+[
+  {
+    "id": "css-m1",
+    "enonce": "Comment appelle-t-on le modèle décrivant contenu, padding, bordure et marge d'un élément ?",
+    "choix": ["le flux normal", "le modèle de boîte (box model)", "la cascade", "l'empilement"],
+    "bonneReponse": 1,
+    "explication": "Le « modèle de boîte » décrit chaque élément comme une boîte composée du contenu, du padding, de la bordure et de la marge. C'est central pour maîtriser les dimensions."
+  },
+  {
+    "id": "css-m2",
+    "enonce": "Que fait `box-sizing: border-box` ?",
+    "choix": ["Ajoute une bordure à toutes les boîtes", "Inclut le padding et la bordure dans la largeur/hauteur déclarée", "Supprime les marges par défaut", "Centre automatiquement la boîte"],
+    "bonneReponse": 1,
+    "explication": "Avec `border-box`, une `width: 200px` englobe padding et bordure : l'élément ne déborde donc pas. C'est pourquoi on l'applique souvent à tout le document."
+  },
+  {
+    "id": "css-m3",
+    "enonce": "Quelle valeur de `display` active un conteneur Flexbox ?",
+    "choix": ["block", "inline", "flex", "grid"],
+    "bonneReponse": 2,
+    "explication": "`display: flex` transforme l'élément en conteneur flexible : ses enfants s'alignent et se répartissent sur un axe. C'est l'outil de prédilection pour les mises en page en une dimension."
+  },
+  {
+    "id": "css-m4",
+    "enonce": "Dans Flexbox, quelle propriété aligne les éléments le long de l'axe principal ?",
+    "choix": ["align-items", "justify-content", "flex-wrap", "order"],
+    "bonneReponse": 1,
+    "explication": "`justify-content` répartit les éléments sur l'axe principal (horizontal par défaut). `align-items`, lui, gère l'alignement sur l'axe perpendiculaire."
+  },
+  {
+    "id": "css-m5",
+    "enonce": "À quoi est relative l'unité `rem` ?",
+    "choix": ["À la taille de police de l'élément parent", "À la taille de police de l'élément racine (`<html>`)", "À la largeur de la fenêtre", "À la hauteur de l'écran"],
+    "bonneReponse": 1,
+    "explication": "1 `rem` vaut la taille de police de la racine (`<html>`), souvent 16px. Contrairement à `em`, sa valeur ne dépend pas de l'imbrication des éléments."
+  },
+  {
+    "id": "css-m6",
+    "enonce": "Que représente l'unité `vw` ?",
+    "choix": ["1 % de la largeur de la fenêtre (viewport)", "1 pixel virtuel constant", "la largeur de l'élément parent", "1 % de la hauteur de la fenêtre"],
+    "bonneReponse": 0,
+    "explication": "`vw` (« viewport width ») vaut 1 % de la largeur de la fenêtre : `50vw` fait donc la moitié de l'écran. Son pendant vertical est l'unité `vh`."
+  },
+  {
+    "id": "css-m7",
+    "enonce": "Par rapport à quoi un élément en `position: absolute` est-il positionné ?",
+    "choix": ["Le coin haut-gauche de l'écran", "Son ancêtre positionné le plus proche", "Toujours son parent direct", "La position du curseur"],
+    "bonneReponse": 1,
+    "explication": "Un élément `absolute` se cale sur l'ancêtre le plus proche ayant une `position` autre que `static` (souvent `relative`). À défaut, il se réfère au bloc racine de la page."
+  },
+  {
+    "id": "css-m8",
+    "enonce": "Quelle pseudo-classe cible un élément survolé par la souris ?",
+    "choix": [":focus", ":hover", ":active", ":visited"],
+    "bonneReponse": 1,
+    "explication": "`:hover` s'applique au passage du curseur. `:focus` cible un élément sélectionné (clavier/clic) et `:active` l'instant où on appuie dessus."
+  },
+  {
+    "id": "css-m9",
+    "enonce": "Que cible le sélecteur `div > p` ?",
+    "choix": ["Tous les `<p>` descendants d'un `<div>`", "Les `<p>` enfants directs d'un `<div>`", "Le `<p>` placé juste après un `<div>`", "Les `<div>` contenus dans un `<p>`"],
+    "bonneReponse": 1,
+    "explication": "Le combinateur `>` ne vise que les enfants directs. Sans lui, `div p` (avec une espace) viserait tous les descendants, même imbriqués profondément."
+  },
+  {
+    "id": "css-m10",
+    "enonce": "À quoi sert la propriété `z-index` ?",
+    "choix": ["À définir une profondeur en 3D réelle", "À contrôler l'ordre d'empilement d'éléments superposés", "À régler la transparence", "À faire pivoter un élément"],
+    "bonneReponse": 1,
+    "explication": "`z-index` décide quel élément passe devant un autre lorsqu'ils se chevauchent (valeur plus élevée = au-dessus). Il n'agit que sur des éléments positionnés."
+  }
+]

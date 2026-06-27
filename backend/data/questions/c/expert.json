@@ -1,0 +1,72 @@
+[
+  {
+    "id": "c-e1",
+    "enonce": "Que prévoit le standard si on déréférence un pointeur nul ?",
+    "choix": ["Une exception est levée", "C'est un comportement indéfini", "La valeur 0 est renvoyée", "Le programme s'arrête proprement"],
+    "bonneReponse": 1,
+    "explication": "Déréférencer un pointeur nul est un comportement indéfini (undefined behavior) : crash probable, mais rien n'est garanti. Le compilateur peut même optimiser en supposant que ça n'arrive jamais."
+  },
+  {
+    "id": "c-e2",
+    "enonce": "Quelle est la différence entre la pile (stack) et le tas (heap) ?",
+    "choix": ["Ce sont des synonymes", "La pile gère les variables locales, le tas l'allocation dynamique", "Le tas est toujours plus rapide", "La pile ne sert qu'aux pointeurs"],
+    "bonneReponse": 1,
+    "explication": "Les variables locales et les appels de fonctions vivent sur la pile, gérée automatiquement. `malloc` réserve sur le tas, qu'il faut libérer manuellement avec `free`."
+  },
+  {
+    "id": "c-e3",
+    "enonce": "Que fait le mot-clé `static` devant une variable locale ?",
+    "choix": ["Il la rend constante", "Il conserve sa valeur entre les appels", "Il l'alloue sur le tas", "Il la rend visible partout"],
+    "bonneReponse": 1,
+    "explication": "Une variable locale `static` n'est initialisée qu'une seule fois et garde sa valeur d'un appel de fonction à l'autre. Sur une variable globale, `static` restreint au contraire sa visibilité au fichier."
+  },
+  {
+    "id": "c-e4",
+    "enonce": "Que déclare `int (*f)(int)` en C ?",
+    "choix": ["Une fonction renvoyant un pointeur", "Un pointeur vers une fonction", "Un tableau de fonctions", "Une fonction récursive"],
+    "bonneReponse": 1,
+    "explication": "C'est un pointeur vers une fonction prenant un `int` et renvoyant un `int`. Les pointeurs de fonction permettent les callbacks, par exemple le comparateur passé à `qsort`."
+  },
+  {
+    "id": "c-e5",
+    "enonce": "Qu'est-ce qu'une fuite mémoire (memory leak) ?",
+    "choix": ["Une lecture hors limites", "De la mémoire allouée jamais libérée", "Un pointeur nul déréférencé", "Une variable non initialisée"],
+    "bonneReponse": 1,
+    "explication": "Si on alloue avec `malloc` sans jamais appeler `free`, la mémoire reste réservée jusqu'à la fin du programme. Répété dans une boucle, cela épuise peu à peu la mémoire disponible."
+  },
+  {
+    "id": "c-e6",
+    "enonce": "Quand agit le préprocesseur (`#include`, `#define`) ?",
+    "choix": ["Pendant l'exécution", "Avant la compilation", "À l'édition de liens", "Au chargement du programme"],
+    "bonneReponse": 1,
+    "explication": "Le préprocesseur transforme le texte source AVANT la compilation : il insère les en-têtes inclus et remplace les macros. Le compilateur ne voit que le résultat de cette substitution."
+  },
+  {
+    "id": "c-e7",
+    "enonce": "À quoi sert le mot-clé `volatile` ?",
+    "choix": ["À accélérer les accès", "À empêcher le compilateur d'optimiser les accès à une variable", "À libérer la mémoire automatiquement", "À synchroniser des threads"],
+    "bonneReponse": 1,
+    "explication": "`volatile` indique que la valeur peut changer hors du flot normal du programme (registre matériel, interruption). Le compilateur relit donc la variable à chaque accès au lieu de la mettre en cache — ce n'est PAS une garantie de synchronisation entre threads."
+  },
+  {
+    "id": "c-e8",
+    "enonce": "Sur un `int *p` (int de 4 octets), de combien `p + 1` avance-t-il en mémoire ?",
+    "choix": ["1 octet", "4 octets", "8 octets", "Selon la valeur pointée"],
+    "bonneReponse": 1,
+    "explication": "L'arithmétique des pointeurs raisonne en éléments, pas en octets : `p + 1` avance de `sizeof(int)`, soit 4 octets ici. C'est ce qui rend `p[i]` équivalent à `*(p + i)`."
+  },
+  {
+    "id": "c-e9",
+    "enonce": "Que devient un tableau passé en argument à une fonction en C ?",
+    "choix": ["Une copie complète", "Un pointeur vers son premier élément", "Une référence constante", "Une erreur de compilation"],
+    "bonneReponse": 1,
+    "explication": "Le tableau « se dégrade » (decay) en un pointeur vers son premier élément : la fonction ne reçoit pas la taille. C'est pourquoi on passe souvent la longueur dans un paramètre séparé."
+  },
+  {
+    "id": "c-e10",
+    "enonce": "Pourquoi la fonction `gets` a-t-elle été retirée du standard C ?",
+    "choix": ["Elle était trop lente", "Elle ne vérifie pas la taille du tampon", "Elle n'existait que sous Unix", "Elle a été remplacée par `printf`"],
+    "bonneReponse": 1,
+    "explication": "`gets` écrit l'entrée sans connaître la taille du tampon de destination : une saisie trop longue déborde et corrompt la mémoire (faille de sécurité classique). On lui préfère `fgets`, qui prend une taille maximale."
+  }
+]

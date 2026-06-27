@@ -1,0 +1,72 @@
+[
+  {
+    "id": "android-f1",
+    "enonce": "Quelle entreprise développe le système d'exploitation Android ?",
+    "choix": ["Apple", "Microsoft", "Google", "Samsung"],
+    "bonneReponse": 2,
+    "explication": "Android est développé par Google, qui a racheté la société Android Inc. en 2005. Samsung en est un grand fabricant, mais ne crée pas le système lui-même."
+  },
+  {
+    "id": "android-f2",
+    "enonce": "Sur quel noyau (kernel) le système Android est-il fondé ?",
+    "choix": ["Linux", "Windows NT", "BSD", "Mach"],
+    "bonneReponse": 0,
+    "explication": "Android repose sur une version modifiée du noyau Linux, qui gère le matériel, la mémoire et les processus. Par-dessus, Google ajoute ses propres couches logicielles."
+  },
+  {
+    "id": "android-f3",
+    "enonce": "Comment s'appelle la boutique d'applications officielle d'Android ?",
+    "choix": ["App Store", "Play Store", "Microsoft Store", "Galaxy Store"],
+    "bonneReponse": 1,
+    "explication": "Le Play Store (Google Play) est la boutique officielle d'Android. L'App Store est celui d'Apple, et le Galaxy Store est la boutique propre à Samsung."
+  },
+  {
+    "id": "android-f4",
+    "enonce": "Quelle extension porte le fichier d'installation d'une application Android ?",
+    "choix": [".exe", ".apk", ".app", ".deb"],
+    "bonneReponse": 1,
+    "explication": "Une application Android est distribuée sous forme de fichier .apk (Android Package). Le .exe est propre à Windows et le .deb aux distributions Linux Debian."
+  },
+  {
+    "id": "android-f5",
+    "enonce": "Les versions d'Android ont longtemps porté des noms de quoi ?",
+    "choix": ["Animaux", "Desserts", "Fleurs", "Planètes"],
+    "bonneReponse": 1,
+    "explication": "Jusqu'à Android 9, chaque version portait un nom de dessert dans l'ordre alphabétique : Cupcake, Donut, Éclair, Froyo, KitKat, Lollipop, Marshmallow…"
+  },
+  {
+    "id": "android-f6",
+    "enonce": "Quel langage a historiquement été le principal pour développer des applications Android ?",
+    "choix": ["Swift", "Java", "C#", "Ruby"],
+    "bonneReponse": 1,
+    "explication": "Java a longtemps été le langage de référence des applications Android. Swift est utilisé chez Apple, et C# dans l'écosystème Microsoft."
+  },
+  {
+    "id": "android-f7",
+    "enonce": "Quel langage moderne Google recommande-t-il aujourd'hui pour Android ?",
+    "choix": ["Kotlin", "Rust", "Go", "Dart"],
+    "bonneReponse": 0,
+    "explication": "Depuis 2019, Kotlin est le langage privilégié (« Kotlin-first ») pour Android : plus concis et plus sûr que Java, tout en restant compatible avec lui."
+  },
+  {
+    "id": "android-f8",
+    "enonce": "Comment surnomme-t-on le petit robot vert qui sert de mascotte à Android ?",
+    "choix": ["Bugdroid", "Tux", "Clippy", "Gnou"],
+    "bonneReponse": 0,
+    "explication": "La mascotte verte d'Android est surnommée « Bugdroid ». Tux est le manchot de Linux et Clippy l'ancien assistant de Microsoft Office."
+  },
+  {
+    "id": "android-f9",
+    "enonce": "Quel geste affiche généralement le panneau des notifications ?",
+    "choix": ["Secouer l'appareil", "Glisser depuis le haut de l'écran", "Double-cliquer sur l'écran", "Glisser depuis la gauche"],
+    "bonneReponse": 1,
+    "explication": "Un glissement du doigt depuis le bord supérieur de l'écran déroule le panneau des notifications et les réglages rapides. Glisser depuis la gauche ouvre souvent un menu latéral."
+  },
+  {
+    "id": "android-f10",
+    "enonce": "Quel assistant vocal est intégré nativement à Android ?",
+    "choix": ["Siri", "Google Assistant", "Alexa", "Cortana"],
+    "bonneReponse": 1,
+    "explication": "Google Assistant est l'assistant vocal intégré à Android. Siri équipe les appareils Apple, Alexa est celui d'Amazon et Cortana celui de Microsoft."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cybersecurite-m1",
+    "enonce": "Que fait un rançongiciel une fois installé sur une machine ?",
+    "choix": ["Il chiffre les fichiers contre une rançon", "Il accélère le processeur", "Il répare les fichiers corrompus", "Il sauvegarde les données"],
+    "bonneReponse": 0,
+    "explication": "Un rançongiciel (« ransomware ») chiffre les fichiers de la victime puis réclame un paiement pour fournir la clé. Payer n'offre aucune garantie : la sauvegarde reste la meilleure défense."
+  },
+  {
+    "id": "cybersecurite-m2",
+    "enonce": "À quoi sert principalement un réseau privé virtuel (VPN) ?",
+    "choix": ["À bloquer les virus", "À chiffrer et masquer son trafic", "À accélérer le téléchargement", "À nettoyer le disque dur"],
+    "bonneReponse": 1,
+    "explication": "Un VPN crée un tunnel chiffré entre l'appareil et un serveur distant, dissimulant le trafic et l'adresse IP réelle. Il protège la confidentialité mais ne remplace pas un antivirus."
+  },
+  {
+    "id": "cybersecurite-m3",
+    "enonce": "En quoi consiste une attaque par force brute sur un mot de passe ?",
+    "choix": ["Voler le clavier de la cible", "Pirater le fournisseur d'accès", "Essayer un grand nombre de combinaisons", "Deviner la question secrète"],
+    "bonneReponse": 2,
+    "explication": "La force brute teste automatiquement d'innombrables combinaisons jusqu'à trouver la bonne. Plus un mot de passe est long et varié, plus le temps nécessaire devient gigantesque."
+  },
+  {
+    "id": "cybersecurite-m4",
+    "enonce": "Qu'est-ce que l'ingénierie sociale en cybersécurité ?",
+    "choix": ["Manipuler une personne pour obtenir un accès", "Souder des composants électroniques", "Programmer un réseau de neurones", "Organiser une équipe de développeurs"],
+    "bonneReponse": 0,
+    "explication": "L'ingénierie sociale exploite la psychologie humaine (confiance, peur, urgence) plutôt qu'une faille technique. L'hameçonnage et l'usurpation d'identité en sont des exemples courants."
+  },
+  {
+    "id": "cybersecurite-m5",
+    "enonce": "Que vise une attaque par déni de service distribué (DDoS) ?",
+    "choix": ["Voler des mots de passe", "Saturer un service pour le rendre indisponible", "Chiffrer une base de données", "Falsifier un certificat"],
+    "bonneReponse": 1,
+    "explication": "Un DDoS submerge un serveur de requêtes depuis des milliers de machines (souvent un botnet) jusqu'à le rendre inaccessible. Le but est la paralysie, pas le vol de données."
+  },
+  {
+    "id": "cybersecurite-m6",
+    "enonce": "Qu'est-ce qui caractérise un cheval de Troie ?",
+    "choix": ["Il se duplique tout seul sur le réseau", "Il se cache dans un logiciel d'apparence saine", "Il chiffre toujours les fichiers", "Il ne touche que les serveurs"],
+    "bonneReponse": 1,
+    "explication": "Un cheval de Troie se dissimule dans un programme apparemment légitime pour tromper l'utilisateur qui l'installe. Contrairement à un ver, il ne se propage pas par lui-même."
+  },
+  {
+    "id": "cybersecurite-m7",
+    "enonce": "Pourquoi un gestionnaire de mots de passe est-il recommandé ?",
+    "choix": ["Il rend l'ordinateur plus rapide", "Il supprime les publicités", "Il stocke des mots de passe uniques et forts", "Il bloque les pirates au routeur"],
+    "bonneReponse": 2,
+    "explication": "Un gestionnaire génère et retient un mot de passe unique et complexe par site, protégé par un seul mot de passe maître. Plus besoin de réutiliser le même partout."
+  },
+  {
+    "id": "cybersecurite-m8",
+    "enonce": "Que désigne une faille de type « jour zéro » (zero-day) ?",
+    "choix": ["Une faille connue depuis longtemps", "Une faille inconnue de l'éditeur et sans correctif", "Un virus inoffensif", "Une panne matérielle"],
+    "bonneReponse": 1,
+    "explication": "Une faille « jour zéro » est exploitée avant que l'éditeur ne la connaisse ou ne publie un correctif. L'éditeur dispose donc de « zéro jour » pour réagir, d'où le nom."
+  },
+  {
+    "id": "cybersecurite-m9",
+    "enonce": "Qu'est-ce que l'hameçonnage ciblé, dit « spear phishing » ?",
+    "choix": ["Un envoi massif et aléatoire", "Une attaque visant une personne précise", "Une publicité intrusive", "Un test de vitesse réseau"],
+    "bonneReponse": 1,
+    "explication": "Le spear phishing personnalise le piège avec des informations propres à la victime (nom, employeur, contacts) pour le rendre crédible. Il est bien plus efficace qu'un envoi de masse."
+  },
+  {
+    "id": "cybersecurite-m10",
+    "enonce": "Pourquoi ne faut-il jamais stocker les mots de passe en clair dans une base de données ?",
+    "choix": ["Cela ralentit le serveur", "Une fuite les exposerait directement", "Cela occupe trop d'espace", "Cela empêche la connexion"],
+    "bonneReponse": 1,
+    "explication": "En cas de fuite de la base, des mots de passe en clair sont immédiatement utilisables. On stocke à la place leur empreinte (hachage), pensée pour être irréversible."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "html-f1",
+    "enonce": "Que signifie l'acronyme HTML ?",
+    "choix": ["HyperText Markup Language", "HighText Machine Language", "Hyperlink Text Marking Language", "Home Tool Markup Language"],
+    "bonneReponse": 0,
+    "explication": "HTML signifie « HyperText Markup Language » : un langage de balisage qui structure le contenu d'une page web (et non un langage de programmation)."
+  },
+  {
+    "id": "html-f2",
+    "enonce": "Quelle balise définit un paragraphe ?",
+    "choix": ["<par>", "<p>", "<text>", "<paragraph>"],
+    "bonneReponse": 1,
+    "explication": "La balise `<p>` (pour « paragraph ») délimite un paragraphe de texte. Le navigateur ajoute par défaut un espacement avant et après."
+  },
+  {
+    "id": "html-f3",
+    "enonce": "Quelle balise correspond au titre de plus haut niveau ?",
+    "choix": ["<h6>", "<head>", "<h1>", "<title>"],
+    "bonneReponse": 2,
+    "explication": "`<h1>` est le titre le plus important. Les niveaux vont de `<h1>` (le plus grand) à `<h6>` (le plus petit) et structurent la hiérarchie du document."
+  },
+  {
+    "id": "html-f4",
+    "enonce": "Quelle balise insère une image ?",
+    "choix": ["<picture>", "<image>", "<media>", "<img>"],
+    "bonneReponse": 3,
+    "explication": "`<img>` affiche une image, via son attribut `src`. C'est une balise auto-fermante : elle n'a pas de balise de fermeture."
+  },
+  {
+    "id": "html-f5",
+    "enonce": "Quelle balise crée un lien hypertexte ?",
+    "choix": ["<link>", "<a>", "<href>", "<nav>"],
+    "bonneReponse": 1,
+    "explication": "`<a>` (pour « anchor ») crée un lien cliquable. Attention : la balise `<link>` existe aussi mais sert à lier des ressources externes dans le `<head>`."
+  },
+  {
+    "id": "html-f6",
+    "enonce": "Quel attribut indique l'adresse de destination d'un lien ?",
+    "choix": ["src", "url", "href", "link"],
+    "bonneReponse": 2,
+    "explication": "`href` (« hypertext reference ») contient l'URL vers laquelle pointe le lien : `<a href=\"https://...\">`. L'attribut `src` sert plutôt aux images et scripts."
+  },
+  {
+    "id": "html-f7",
+    "enonce": "Comment écrit-on un commentaire en HTML ?",
+    "choix": ["// commentaire", "/* commentaire */", "<!-- commentaire -->", "# commentaire"],
+    "bonneReponse": 2,
+    "explication": "Un commentaire HTML s'écrit `<!-- ... -->`. Il n'est pas affiché par le navigateur mais reste visible dans le code source."
+  },
+  {
+    "id": "html-f8",
+    "enonce": "Quelle balise crée une liste à puces (non ordonnée) ?",
+    "choix": ["<ul>", "<ol>", "<li>", "<list>"],
+    "bonneReponse": 0,
+    "explication": "`<ul>` (« unordered list ») crée une liste à puces. Chaque élément de la liste est ensuite placé dans une balise `<li>`."
+  },
+  {
+    "id": "html-f9",
+    "enonce": "Quel élément contient les métadonnées du document (titre, encodage…) ?",
+    "choix": ["<body>", "<meta>", "<header>", "<head>"],
+    "bonneReponse": 3,
+    "explication": "`<head>` regroupe les informations sur la page (non affichées dans le contenu). La balise `<meta>`, elle, est une métadonnée individuelle placée à l'intérieur du `<head>`."
+  },
+  {
+    "id": "html-f10",
+    "enonce": "Quelle ligne déclare un document HTML5 en tête de fichier ?",
+    "choix": ["<html5>", "<!DOCTYPE html>", "<doctype html5>", "<meta html>"],
+    "bonneReponse": 1,
+    "explication": "`<!DOCTYPE html>` doit être la toute première ligne. Elle indique au navigateur d'interpréter la page selon le standard HTML5."
+  }
+]

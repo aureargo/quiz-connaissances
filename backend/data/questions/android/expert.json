@@ -1,0 +1,72 @@
+[
+  {
+    "id": "android-e1",
+    "enonce": "Quel toolkit moderne et déclaratif de Google sert à construire des interfaces Android en Kotlin ?",
+    "choix": ["Jetpack Compose", "Flutter", "SwiftUI", "React Native"],
+    "bonneReponse": 0,
+    "explication": "Jetpack Compose décrit l'interface directement en code Kotlin, sans XML. Flutter et React Native sont des frameworks multiplateformes tiers, et SwiftUI l'équivalent d'Apple."
+  },
+  {
+    "id": "android-e2",
+    "enonce": "Quel composant d'architecture conserve les données de l'UI et survit aux rotations de l'écran ?",
+    "choix": ["ViewModel", "Activity", "Service", "BroadcastReceiver"],
+    "bonneReponse": 0,
+    "explication": "Le ViewModel survit aux changements de configuration (comme la rotation) qui recréent l'Activity. Il évite ainsi de perdre les données affichées et de relancer les requêtes."
+  },
+  {
+    "id": "android-e3",
+    "enonce": "Quel composant réagit aux messages diffusés par le système, comme le démarrage ou une batterie faible ?",
+    "choix": ["BroadcastReceiver", "ContentProvider", "Service", "Activity"],
+    "bonneReponse": 0,
+    "explication": "Un BroadcastReceiver écoute les diffusions (broadcasts) du système ou d'autres applications et y réagit. C'est l'un des quatre composants fondamentaux d'Android."
+  },
+  {
+    "id": "android-e4",
+    "enonce": "Quel composant permet de partager des données structurées entre différentes applications ?",
+    "choix": ["ContentProvider", "SharedPreferences", "Bundle", "Intent"],
+    "bonneReponse": 0,
+    "explication": "Un ContentProvider expose des données (contacts, photos…) via une interface commune, accessible par d'autres applications. SharedPreferences ne stocke, lui, que des réglages locaux."
+  },
+  {
+    "id": "android-e5",
+    "enonce": "Quelle bibliothèque Jetpack fournit une couche d'abstraction orientée objet au-dessus de SQLite ?",
+    "choix": ["Room", "Realm", "Hibernate", "Retrofit"],
+    "bonneReponse": 0,
+    "explication": "Room est l'ORM officiel d'Android : il génère le code d'accès à SQLite et vérifie les requêtes à la compilation. Retrofit, lui, sert aux appels réseau HTTP."
+  },
+  {
+    "id": "android-e6",
+    "enonce": "À partir de quelle version Android demande-t-il les permissions sensibles à l'exécution plutôt qu'à l'installation ?",
+    "choix": ["Android 4.4 KitKat", "Android 5.0 Lollipop", "Android 6.0 Marshmallow", "Android 9 Pie"],
+    "bonneReponse": 2,
+    "explication": "Android 6.0 Marshmallow (2015) a introduit les permissions à l'exécution : l'utilisateur accorde l'accès (caméra, position…) au moment de l'usage, et non plus en bloc à l'installation."
+  },
+  {
+    "id": "android-e7",
+    "enonce": "Que contiennent les fichiers .dex présents dans une application Android ?",
+    "choix": ["Du bytecode Dalvik", "Du bytecode Java", "Du code machine ARM", "Du WebAssembly"],
+    "bonneReponse": 0,
+    "explication": "Un fichier .dex (Dalvik Executable) contient le bytecode optimisé exécuté par ART. Le compilateur transforme le bytecode Java (.class) en ce format compact propre à Android."
+  },
+  {
+    "id": "android-e8",
+    "enonce": "Quel mécanisme Kotlin est aujourd'hui recommandé pour gérer les tâches asynchrones, en remplacement d'AsyncTask ?",
+    "choix": ["Les coroutines", "Les threads bruts", "Les minuteurs", "Les rappels JNI"],
+    "bonneReponse": 0,
+    "explication": "Les coroutines Kotlin permettent d'écrire du code asynchrone de façon séquentielle et lisible. L'ancienne classe AsyncTask est dépréciée depuis Android 11."
+  },
+  {
+    "id": "android-e9",
+    "enonce": "Quel format de publication a remplacé l'APK sur le Play Store pour générer des livraisons optimisées par appareil ?",
+    "choix": ["L'Android App Bundle", "L'APK universel", "L'application instantanée", "Le fichier d'extension OBB"],
+    "bonneReponse": 0,
+    "explication": "L'Android App Bundle (.aab) est requis sur le Play Store depuis 2021 : Google y génère des APK sur mesure (langue, densité, architecture), réduisant la taille téléchargée."
+  },
+  {
+    "id": "android-e10",
+    "enonce": "Comment Android isole-t-il les applications les unes des autres au niveau du système ?",
+    "choix": ["En attribuant un identifiant utilisateur Linux distinct par application", "En les exécutant toutes dans une JVM partagée", "En chiffrant le code de chaque application", "En les lançant en tant qu'administrateur (root)"],
+    "bonneReponse": 0,
+    "explication": "Chaque application reçoit son propre UID Linux et tourne dans un « bac à sable » (sandbox) isolé. Le noyau empêche ainsi une application d'accéder aux données d'une autre."
+  }
+]

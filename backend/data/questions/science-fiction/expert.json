@@ -1,0 +1,72 @@
+[
+  {
+    "id": "sf-e1",
+    "enonce": "Quel prix de science-fiction, décerné depuis 1953, est voté par les fans lors de la Worldcon ?",
+    "choix": ["Le prix Nebula", "Le prix Hugo", "Le prix Locus", "Le prix Philip K. Dick"],
+    "bonneReponse": 1,
+    "explication": "Le prix Hugo, du nom de Hugo Gernsback, est voté par les membres de la convention mondiale (Worldcon). Le Nebula, lui, est décerné par les auteurs professionnels (la SFWA)."
+  },
+  {
+    "id": "sf-e2",
+    "enonce": "Quelle autrice afro-américaine, première de la SF à recevoir une bourse MacArthur, a écrit « Liens de sang » ?",
+    "choix": ["Octavia E. Butler", "N. K. Jemisin", "Nnedi Okorafor", "Nalo Hopkinson"],
+    "bonneReponse": 0,
+    "explication": "Octavia E. Butler, figure de l'afrofuturisme, reçoit la « bourse des génies » MacArthur en 1995. « Liens de sang » envoie une femme noire des années 1970 dans le Sud esclavagiste."
+  },
+  {
+    "id": "sf-e3",
+    "enonce": "Quel écrivain et informaticien a popularisé en 1993 le concept de « Singularité technologique » ?",
+    "choix": ["Greg Egan", "Charles Stross", "Vernor Vinge", "Rudy Rucker"],
+    "bonneReponse": 2,
+    "explication": "Dans un essai de 1993, Vernor Vinge théorise la Singularité : un point où une intelligence artificielle surhumaine rendrait l'avenir imprévisible. Il l'explore aussi dans ses romans."
+  },
+  {
+    "id": "sf-e4",
+    "enonce": "Quel auteur écossais a créé le cycle de « La Culture », une utopie galactique post-pénurie gérée par des IA ?",
+    "choix": ["Alastair Reynolds", "Ken MacLeod", "Charles Stross", "Iain M. Banks"],
+    "bonneReponse": 3,
+    "explication": "Iain M. Banks dépeint dans « La Culture » une civilisation d'abondance pilotée par des « Mentes » (IA surpuissantes). « L'Homme des jeux » et « L'Usage des armes » en sont des volets connus."
+  },
+  {
+    "id": "sf-e5",
+    "enonce": "Quel roman de l'auteur chinois Liu Cixin a remporté le prix Hugo du meilleur roman en 2015 ?",
+    "choix": ["Le Problème à trois corps", "La Forêt sombre", "La Mort immortelle", "Les Migrants du temps"],
+    "bonneReponse": 0,
+    "explication": "« Le Problème à trois corps » ouvre la trilogie « Le Souvenir de la Terre ». C'est le premier roman traduit (du chinois) à recevoir le Hugo du meilleur roman."
+  },
+  {
+    "id": "sf-e6",
+    "enonce": "Quel auteur polonais a écrit « Solaris », sur un océan-planète intelligent et insondable ?",
+    "choix": ["Andrzej Sapkowski", "Stanisław Lem", "Janusz Zajdel", "Jacek Dukaj"],
+    "bonneReponse": 1,
+    "explication": "Dans « Solaris » (1961), Stanisław Lem imagine une planète-océan douée de conscience, avec laquelle toute communication humaine échoue. Le roman a été porté deux fois à l'écran."
+  },
+  {
+    "id": "sf-e7",
+    "enonce": "Dans « Dune », comment appelle-t-on les vers des sables géants d'Arrakis ?",
+    "choix": ["Les Sandkings", "Les Tleilaxu", "Shai-Hulud", "Les Sardaukar"],
+    "bonneReponse": 2,
+    "explication": "Les vers des sables, ou « Shai-Hulud », produisent l'épice et sont vénérés par les Fremen. Les Sardaukar sont les soldats de l'Empereur, les Tleilaxu une faction de manipulateurs génétiques."
+  },
+  {
+    "id": "sf-e8",
+    "enonce": "Quel roman de Neal Stephenson (1992) a popularisé le terme « métavers » ?",
+    "choix": ["Cryptonomicon", "L'Âge de diamant", "Anatèm", "Le Samouraï virtuel"],
+    "bonneReponse": 3,
+    "explication": "« Le Samouraï virtuel » (Snow Crash) met en scène un univers virtuel, le « Metaverse », où les humains se connectent via des avatars. Le terme a depuis essaimé dans la tech."
+  },
+  {
+    "id": "sf-e9",
+    "enonce": "Qui est l'auteur de la tétralogie « Le Livre du Nouveau Soleil », récit d'un bourreau nommé Sévérian ?",
+    "choix": ["Gene Wolfe", "Jack Vance", "Michael Moorcock", "Roger Zelazny"],
+    "bonneReponse": 0,
+    "explication": "« Le Livre du Nouveau Soleil » de Gene Wolfe, situé dans un lointain futur crépusculaire, est célèbre pour son narrateur ambigu à la mémoire parfaite et son vocabulaire archaïsant."
+  },
+  {
+    "id": "sf-e10",
+    "enonce": "Quel roman de Robert A. Heinlein (1961) a popularisé le verbe « grok », emprunté à une langue martienne ?",
+    "choix": ["Étoiles, garde-à-vous !", "En terre étrangère", "Une porte sur l'été", "Révolte sur la Lune"],
+    "bonneReponse": 1,
+    "explication": "Dans « En terre étrangère » (Stranger in a Strange Land), « grok » signifie comprendre une chose si pleinement qu'on fusionne avec elle. Le mot est passé dans le jargon hacker."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "physique-f1",
+    "enonce": "Quelle force attire les objets vers le sol ?",
+    "choix": ["la gravité", "le magnétisme", "le frottement", "l'électricité"],
+    "bonneReponse": 0,
+    "explication": "La gravité (ou pesanteur) attire toute masse vers le centre de la Terre. C'est elle qui fait retomber une pomme ou retient l'atmosphère autour de la planète."
+  },
+  {
+    "id": "physique-f2",
+    "enonce": "À quelle température l'eau bout-elle au niveau de la mer ?",
+    "choix": ["50 °C", "90 °C", "100 °C", "120 °C"],
+    "bonneReponse": 2,
+    "explication": "Sous la pression atmosphérique normale, l'eau bout à 100 °C. En altitude, la pression baisse et l'eau bout à une température plus basse."
+  },
+  {
+    "id": "physique-f3",
+    "enonce": "Comment appelle-t-on l'état de l'eau lorsqu'elle est gelée ?",
+    "choix": ["solide", "liquide", "gazeux", "plasma"],
+    "bonneReponse": 0,
+    "explication": "La glace est l'état solide de l'eau. Les trois états usuels de la matière sont solide, liquide et gazeux ; le plasma est un quatrième état, plus rare sur Terre."
+  },
+  {
+    "id": "physique-f4",
+    "enonce": "Dans le Système international, quelle est l'unité de longueur ?",
+    "choix": ["le litre", "le mètre", "le gramme", "la seconde"],
+    "bonneReponse": 1,
+    "explication": "Le mètre est l'unité de base de la longueur. Le litre mesure un volume, le gramme une masse et la seconde une durée."
+  },
+  {
+    "id": "physique-f5",
+    "enonce": "Que se passe-t-il quand on approche les deux pôles identiques de deux aimants ?",
+    "choix": ["ils s'attirent", "ils se repoussent", "il ne se passe rien", "ils se neutralisent"],
+    "bonneReponse": 1,
+    "explication": "Deux pôles identiques (nord-nord ou sud-sud) se repoussent, alors que deux pôles opposés s'attirent. C'est une règle de base du magnétisme."
+  },
+  {
+    "id": "physique-f6",
+    "enonce": "Quel astre est la principale source de lumière et de chaleur sur Terre ?",
+    "choix": ["la Lune", "Mars", "le Soleil", "Vénus"],
+    "bonneReponse": 2,
+    "explication": "Le Soleil, une étoile, fournit la quasi-totalité de l'énergie qui éclaire et réchauffe la Terre. La Lune ne fait que renvoyer la lumière du Soleil."
+  },
+  {
+    "id": "physique-f7",
+    "enonce": "Dans quel milieu le son ne peut-il PAS se propager ?",
+    "choix": ["le vide", "l'air", "l'eau", "le métal"],
+    "bonneReponse": 0,
+    "explication": "Le son est une vibration qui a besoin de matière pour avancer. Dans le vide, sans particules à faire vibrer, il ne se propage pas — d'où le silence dans l'espace."
+  },
+  {
+    "id": "physique-f8",
+    "enonce": "Quel phénomène explique les couleurs de l'arc-en-ciel ?",
+    "choix": ["la condensation de l'air", "la décomposition de la lumière", "la réflexion du son", "l'attraction terrestre"],
+    "bonneReponse": 1,
+    "explication": "Les gouttes de pluie décomposent la lumière blanche du Soleil en ses différentes couleurs, comme le fait un prisme. C'est la dispersion de la lumière."
+  },
+  {
+    "id": "physique-f9",
+    "enonce": "Quelle grandeur physique mesure un thermomètre ?",
+    "choix": ["la pression", "la masse", "la température", "la vitesse"],
+    "bonneReponse": 2,
+    "explication": "Un thermomètre mesure la température, c'est-à-dire le degré d'agitation des particules d'un corps. On l'exprime souvent en degrés Celsius."
+  },
+  {
+    "id": "physique-f10",
+    "enonce": "Quelle est la vitesse approximative de la lumière dans le vide ?",
+    "choix": ["300 km/s", "30 000 km/s", "300 000 km/s", "3 000 000 km/s"],
+    "bonneReponse": 2,
+    "explication": "La lumière parcourt environ 300 000 kilomètres par seconde dans le vide. C'est la vitesse la plus élevée possible dans l'Univers."
+  }
+]

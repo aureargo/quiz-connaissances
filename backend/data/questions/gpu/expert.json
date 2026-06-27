@@ -1,0 +1,72 @@
+[
+  {
+    "id": "gpu-e1",
+    "enonce": "Que désigne le modèle d'exécution « SIMT » des GPU Nvidia ?",
+    "choix": ["Single Instruction, Multiple Threads", "Serial Internal Memory Transfer", "System Integrated Multi-Tasking", "Shared Instruction Memory Table"],
+    "bonneReponse": 0,
+    "explication": "En SIMT, un même flot d'instructions est exécuté par de nombreux threads, chacun sur ses propres données. C'est la variante GPU du SIMD, mais avec une gestion souple des threads."
+  },
+  {
+    "id": "gpu-e2",
+    "enonce": "Qu'est-ce qu'un « warp » chez Nvidia (ou « wavefront » chez AMD) ?",
+    "choix": ["un groupe de threads exécutés ensemble, en lock-step", "un module de mémoire empilée", "un câble d'alimentation renforcé", "un mode d'overclocking automatique"],
+    "bonneReponse": 0,
+    "explication": "Un warp regroupe 32 threads (64 pour un wavefront AMD) qui avancent ensemble en exécutant la même instruction. Une divergence de branche au sein du warp sérialise les chemins et coûte des performances."
+  },
+  {
+    "id": "gpu-e3",
+    "enonce": "Quelle plateforme de calcul généraliste sur GPU (GPGPU) Nvidia a-t-il créée ?",
+    "choix": ["CUDA", "OpenGL", "OpenMP", "MPI"],
+    "bonneReponse": 0,
+    "explication": "CUDA est l'écosystème propriétaire de Nvidia pour programmer le GPU à des fins de calcul généraliste. OpenGL est une API graphique, et OpenMP/MPI visent le parallélisme CPU."
+  },
+  {
+    "id": "gpu-e4",
+    "enonce": "En quoi consiste la « rastérisation » (rasterization) dans le pipeline graphique ?",
+    "choix": ["convertir des primitives géométriques en fragments/pixels", "compresser les textures en mémoire", "trier les objets par distance à la caméra", "appliquer le son spatial à la scène"],
+    "bonneReponse": 0,
+    "explication": "La rastérisation transforme les triangles projetés à l'écran en fragments (futurs pixels) à colorier. C'est l'approche classique du rendu temps réel, par opposition au ray tracing."
+  },
+  {
+    "id": "gpu-e5",
+    "enonce": "À quoi servent les « Tensor Cores » des GPU Nvidia récents ?",
+    "choix": ["accélérer les multiplications de matrices pour l'IA", "gérer le branchement des écrans", "contrôler la vitesse des ventilateurs", "stocker le microcode du GPU"],
+    "bonneReponse": 0,
+    "explication": "Les Tensor Cores sont des unités spécialisées dans les opérations de multiplication-accumulation de matrices, au cœur de l'apprentissage profond. Ils accélèrent aussi des techniques comme le DLSS."
+  },
+  {
+    "id": "gpu-e6",
+    "enonce": "Quelle API graphique bas niveau du groupe Khronos succède à OpenGL ?",
+    "choix": ["Vulkan", "DirectX", "Metal", "WebGL"],
+    "bonneReponse": 0,
+    "explication": "Vulkan est l'API multiplateforme et bas niveau du Khronos Group, donnant un contrôle fin du GPU et un faible surcoût (overhead). DirectX est à Microsoft et Metal à Apple."
+  },
+  {
+    "id": "gpu-e7",
+    "enonce": "Qu'est-ce qui caractérise la mémoire « HBM » (High Bandwidth Memory) ?",
+    "choix": ["des puces empilées en 3D offrant une très large bande passante", "une mémoire stockée sur le disque dur", "une mémoire non volatile remplaçant le SSD", "une mémoire partagée avec le processeur central"],
+    "bonneReponse": 0,
+    "explication": "La HBM empile verticalement les puces mémoire au plus près du GPU, reliées par un bus très large. Elle offre une bande passante énorme et équipe surtout les cartes de calcul et l'IA."
+  },
+  {
+    "id": "gpu-e8",
+    "enonce": "Dans le pipeline graphique, quelle étape calcule la couleur finale de chaque pixel ?",
+    "choix": ["le fragment (pixel) shader", "le vertex shader", "l'assemblage des primitives", "le clipping"],
+    "bonneReponse": 0,
+    "explication": "Le fragment shader (ou pixel shader) s'exécute par fragment et détermine sa couleur : éclairage, textures, effets. Le vertex shader, lui, opère en amont sur les sommets de la géométrie."
+  },
+  {
+    "id": "gpu-e9",
+    "enonce": "Quel est le principe du rendu « tile-based » (par tuiles) des GPU mobiles ?",
+    "choix": ["découper l'image en petites tuiles traitées en mémoire rapide", "calculer deux images d'avance pour anticiper", "n'afficher qu'une tuile sur deux pour économiser", "répartir le rendu entre plusieurs cartes"],
+    "bonneReponse": 0,
+    "explication": "Le rendu par tuiles segmente l'écran en zones traitées dans une mémoire locale très rapide, ce qui réduit drastiquement les accès à la mémoire externe. C'est crucial sur mobile, où l'énergie est limitée."
+  },
+  {
+    "id": "gpu-e10",
+    "enonce": "Que désigne le « VRR » (Variable Refresh Rate), à la base de G-Sync et FreeSync ?",
+    "choix": ["synchroniser le rafraîchissement de l'écran sur la cadence du GPU", "doubler la résolution affichée", "fixer le taux d'images à 60 par seconde", "comprimer le signal vidéo transmis"],
+    "bonneReponse": 0,
+    "explication": "Le VRR laisse l'écran adapter dynamiquement son taux de rafraîchissement au rythme réel des images produites par le GPU. Cela élimine le tearing et les saccades sans la latence de la synchronisation verticale classique."
+  }
+]

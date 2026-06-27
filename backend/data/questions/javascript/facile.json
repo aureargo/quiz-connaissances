@@ -1,0 +1,72 @@
+[
+  {
+    "id": "js-f1",
+    "enonce": "Quel mot-clé déclare une variable dont la valeur ne peut pas être réassignée ?",
+    "choix": ["var", "let", "const", "final"],
+    "bonneReponse": 2,
+    "explication": "`const` crée une liaison non réassignable. Attention : le contenu d'un objet ou d'un tableau déclaré avec `const` reste, lui, modifiable."
+  },
+  {
+    "id": "js-f2",
+    "enonce": "Comment affiche-t-on un message dans la console du navigateur ?",
+    "choix": ["print(\"texte\")", "echo(\"texte\")", "console.log(\"texte\")", "write(\"texte\")"],
+    "bonneReponse": 2,
+    "explication": "`console.log()` écrit dans la console de développement. C'est l'outil de débogage de base en JavaScript."
+  },
+  {
+    "id": "js-f3",
+    "enonce": "Quel symbole introduit un commentaire sur une seule ligne ?",
+    "choix": ["#", "//", "--", "%"],
+    "bonneReponse": 1,
+    "explication": "`//` commente jusqu'à la fin de la ligne. Pour un commentaire sur plusieurs lignes, on utilise `/* ... */`."
+  },
+  {
+    "id": "js-f4",
+    "enonce": "Quelle paire de symboles délimite un tableau littéral ?",
+    "choix": ["des accolades", "des crochets", "des parenthèses", "des chevrons"],
+    "bonneReponse": 1,
+    "explication": "Un tableau s'écrit entre crochets : `[1, 2, 3]`. Les accolades servent aux objets : `{ cle: valeur }`."
+  },
+  {
+    "id": "js-f5",
+    "enonce": "Quel opérateur teste l'égalité stricte, sans conversion de type ?",
+    "choix": ["==", "===", "=", "!="],
+    "bonneReponse": 1,
+    "explication": "`===` compare valeur ET type sans conversion. `==` convertit d'abord les types, ce qui réserve des surprises (`0 == \"\"` vaut `true`)."
+  },
+  {
+    "id": "js-f6",
+    "enonce": "Comment écrit-on la valeur booléenne « vrai » en JavaScript ?",
+    "choix": ["True", "Vrai", "true", "TRUE"],
+    "bonneReponse": 2,
+    "explication": "Les booléens s'écrivent `true` et `false`, en minuscules. JavaScript est sensible à la casse : `True` n'est pas reconnu."
+  },
+  {
+    "id": "js-f7",
+    "enonce": "Quel mot-clé démarre une condition en JavaScript ?",
+    "choix": ["when", "if", "case", "cond"],
+    "bonneReponse": 1,
+    "explication": "`if` teste une condition, suivi éventuellement de `else if` et `else`. Le bloc concerné est délimité par des accolades."
+  },
+  {
+    "id": "js-f8",
+    "enonce": "Quelle propriété renvoie le nombre d'éléments d'un tableau ?",
+    "choix": ["size", "count", "length", "len"],
+    "bonneReponse": 2,
+    "explication": "`monTableau.length` renvoie sa taille. C'est une propriété, pas une méthode : on l'écrit sans parenthèses."
+  },
+  {
+    "id": "js-f9",
+    "enonce": "Quel opérateur permet de concaténer deux chaînes de caractères ?",
+    "choix": ["&", "+", ".", ","],
+    "bonneReponse": 1,
+    "explication": "`\"bon\" + \"jour\"` donne `\"bonjour\"`. Les gabarits (template literals) avec des accents graves offrent une alternative plus lisible : `` `bon${variable}` ``."
+  },
+  {
+    "id": "js-f10",
+    "enonce": "Comment déclare-t-on une fonction classique en JavaScript ?",
+    "choix": ["def maFonction()", "func maFonction()", "function maFonction()", "fn maFonction()"],
+    "bonneReponse": 2,
+    "explication": "Le mot-clé `function` introduit une fonction classique. Il existe aussi les fonctions fléchées : `const maFonction = () => { ... }`."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "kotlin-m1",
+    "enonce": "Comment déclare-t-on un type pouvant valoir `null` en Kotlin ?",
+    "choix": ["en préfixant le type d'un `@`", "en ajoutant un `?` après le type", "en l'entourant de `Nullable<...>`", "en ajoutant le mot-clé `null` devant"],
+    "bonneReponse": 1,
+    "explication": "`String` ne peut jamais être null, alors que `String?` l'autorise. Cette distinction au niveau du type est le cœur de la sûreté face au null en Kotlin."
+  },
+  {
+    "id": "kotlin-m2",
+    "enonce": "Que fait l'opérateur Elvis `?:` ?",
+    "choix": ["il fournit une valeur de repli quand l'expression de gauche est null", "il compare deux objets pour l'égalité", "il concatène deux chaînes", "il teste si une variable est mutable"],
+    "bonneReponse": 0,
+    "explication": "Dans `val n = texte?.length ?: 0`, si la partie gauche vaut null, c'est la valeur de droite (`0`) qui est retenue. Son nom vient de la ressemblance avec la houppette d'Elvis : `?:`."
+  },
+  {
+    "id": "kotlin-m3",
+    "enonce": "Qu'apporte une `data class` ?",
+    "choix": ["elle interdit toute mutation de ses champs", "elle génère automatiquement equals, hashCode, toString et copy", "elle se connecte directement à une base de données", "elle rend la classe abstraite par défaut"],
+    "bonneReponse": 1,
+    "explication": "Déclarée `data class Point(val x: Int, val y: Int)`, elle produit pour vous les méthodes utiles et un `copy()` pratique pour créer une copie modifiée. Idéale pour transporter des données."
+  },
+  {
+    "id": "kotlin-m4",
+    "enonce": "Que fait l'appel sécurisé `?.` (safe call) ?",
+    "choix": ["il accède au membre seulement si l'objet n'est pas null, sinon renvoie null", "il lève une exception si l'objet est null", "il convertit l'objet en chaîne", "il verrouille l'objet contre les modifications"],
+    "bonneReponse": 0,
+    "explication": "`utilisateur?.nom` renvoie le nom si `utilisateur` existe, et `null` sinon, sans plantage. C'est l'alternative sûre au point classique sur une référence nullable."
+  },
+  {
+    "id": "kotlin-m5",
+    "enonce": "Quel mot-clé déclare directement un singleton (une instance unique) ?",
+    "choix": ["static", "single", "object", "module"],
+    "bonneReponse": 2,
+    "explication": "Une déclaration `object Config { ... }` crée une seule et unique instance, initialisée paresseusement. C'est la façon idiomatique d'écrire un singleton en Kotlin."
+  },
+  {
+    "id": "kotlin-m6",
+    "enonce": "Que sont les fonctions d'extension (extension functions) ?",
+    "choix": ["des fonctions ajoutées à un type existant sans en modifier le code source", "des fonctions exécutées dans un autre thread", "des fonctions importées depuis Java uniquement", "des fonctions générées par le compilateur"],
+    "bonneReponse": 0,
+    "explication": "`fun String.crier() = this.uppercase()` ajoute une méthode `crier()` à `String`. On enrichit ainsi des classes qu'on ne possède pas, sans héritage ni modification."
+  },
+  {
+    "id": "kotlin-m7",
+    "enonce": "À quoi sert l'expression `when` en Kotlin ?",
+    "choix": ["à déclarer une boucle conditionnelle", "à choisir un comportement selon une valeur, comme un switch enrichi", "à gérer les exceptions", "à planifier une tâche dans le temps"],
+    "bonneReponse": 1,
+    "explication": "`when` remplace le `switch` mais accepte des plages, des conditions, des types et peut renvoyer une valeur. Utilisé comme expression, le compilateur peut exiger qu'il soit exhaustif."
+  },
+  {
+    "id": "kotlin-m8",
+    "enonce": "Comment Kotlin se comporte-t-il vis-à-vis de Java ?",
+    "choix": ["il remplace la JVM par son propre runtime", "il est totalement interopérable : on peut mélanger Kotlin et Java", "il ne peut appeler du code Java qu'en passant par un pont réseau", "il convertit obligatoirement tout le Java en Kotlin avant compilation"],
+    "bonneReponse": 1,
+    "explication": "Du code Kotlin peut appeler des classes Java et inversement, dans un même projet. Cette interopérabilité a permis aux projets Android existants d'adopter Kotlin progressivement."
+  },
+  {
+    "id": "kotlin-m9",
+    "enonce": "À quoi sert un `companion object` dans une classe ?",
+    "choix": ["à créer une classe interne dépendante d'une instance", "à regrouper des membres « statiques » liés à la classe elle-même", "à copier automatiquement la classe", "à définir les paramètres du constructeur"],
+    "bonneReponse": 1,
+    "explication": "Kotlin n'a pas de mot-clé `static` : on place les membres liés à la classe (et non à une instance) dans un `companion object`, par exemple une fabrique `fun creer()` ou des constantes."
+  },
+  {
+    "id": "kotlin-m10",
+    "enonce": "Comment écrit-on une boucle parcourant les entiers de 1 à 5 inclus ?",
+    "choix": ["for (i = 1 to 5)", "for (i in 1..5)", "foreach (i: 1->5)", "loop i from 1 to 5"],
+    "bonneReponse": 1,
+    "explication": "`1..5` crée une plage (range) que `for (i in 1..5)` parcourt, bornes comprises. Pour exclure la borne haute, on utilise `1 until 5` ; pour décroître, `5 downTo 1`."
+  }
+]

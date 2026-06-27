@@ -1,0 +1,72 @@
+[
+  {
+    "id": "villes-france-e1",
+    "enonce": "Quelle est la troisième commune la plus peuplée de France, après Paris et Marseille ?",
+    "choix": ["Lyon", "Toulouse", "Nice", "Nantes"],
+    "bonneReponse": 0,
+    "explication": "Lyon est la troisième commune française par la population ; son agglomération est la deuxième aire urbaine du pays."
+  },
+  {
+    "id": "villes-france-e2",
+    "enonce": "Quelle ville de la pointe du Finistère abrite un important arsenal de la Marine ?",
+    "choix": ["Brest", "Quimper", "Lorient", "Vannes"],
+    "bonneReponse": 0,
+    "explication": "Brest possède un arsenal et une rade militaire majeurs depuis Richelieu et Colbert, sur la façade atlantique."
+  },
+  {
+    "id": "villes-france-e3",
+    "enonce": "Quelle ville portuaire accueille chaque été le festival des Francofolies ?",
+    "choix": ["La Rochelle", "Bordeaux", "Nantes", "Les Sables-d'Olonne"],
+    "bonneReponse": 0,
+    "explication": "Les Francofolies, festival de chanson francophone, se tiennent à La Rochelle depuis 1985, près de son Vieux-Port."
+  },
+  {
+    "id": "villes-france-e4",
+    "enonce": "Quelle ville est souvent considérée comme la capitale du Pays basque français ?",
+    "choix": ["Biarritz", "Bayonne", "Pau", "Anglet"],
+    "bonneReponse": 1,
+    "explication": "Bayonne, au confluent de la Nive et de l'Adour, est le cœur historique du Pays basque français et célèbre pour son jambon."
+  },
+  {
+    "id": "villes-france-e5",
+    "enonce": "Quelle ville est la préfecture de la Corse-du-Sud et le lieu de naissance de Napoléon ?",
+    "choix": ["Bastia", "Ajaccio", "Porto-Vecchio", "Calvi"],
+    "bonneReponse": 1,
+    "explication": "Ajaccio, sur la côte ouest de la Corse, est la préfecture de la Corse-du-Sud et la ville natale de Napoléon Bonaparte (1769)."
+  },
+  {
+    "id": "villes-france-e6",
+    "enonce": "Quelle ville de l'Hérault est connue pour sa place de la Comédie et sa très ancienne faculté de médecine ?",
+    "choix": ["Nîmes", "Montpellier", "Béziers", "Sète"],
+    "bonneReponse": 1,
+    "explication": "Montpellier abrite la plus ancienne faculté de médecine encore en activité au monde, fondée au XIIIᵉ siècle."
+  },
+  {
+    "id": "villes-france-e7",
+    "enonce": "Quelle ville des Alpes a accueilli les Jeux olympiques d'hiver de 1968 ?",
+    "choix": ["Chamonix", "Grenoble", "Albertville", "Annecy"],
+    "bonneReponse": 1,
+    "explication": "Grenoble organisa les Jeux olympiques d'hiver de 1968. Chamonix avait accueilli les premiers Jeux d'hiver en 1924, et Albertville ceux de 1992."
+  },
+  {
+    "id": "villes-france-e8",
+    "enonce": "Quelle ville de Bourgogne est célèbre pour ses Hospices et leur vente de vins aux enchères ?",
+    "choix": ["Beaune", "Mâcon", "Chalon-sur-Saône", "Nuits-Saint-Georges"],
+    "bonneReponse": 0,
+    "explication": "Les Hospices de Beaune, ancien hôtel-Dieu du XVᵉ siècle, organisent chaque automne une célèbre vente de vins aux enchères au profit d'œuvres caritatives."
+  },
+  {
+    "id": "villes-france-e9",
+    "enonce": "Dans quelle ville Jeanne d'Arc a-t-elle fait lever un siège anglais décisif en 1429 ?",
+    "choix": ["Orléans", "Reims", "Chinon", "Tours"],
+    "bonneReponse": 0,
+    "explication": "La levée du siège d'Orléans en mai 1429 fut le premier grand succès de Jeanne d'Arc et un tournant de la guerre de Cent Ans."
+  },
+  {
+    "id": "villes-france-e10",
+    "enonce": "Quelle ville du Gard est célèbre pour ses arènes romaines et sa Maison carrée ?",
+    "choix": ["Arles", "Nîmes", "Orange", "Avignon"],
+    "bonneReponse": 1,
+    "explication": "Nîmes conserve un exceptionnel patrimoine antique : ses arènes (un amphithéâtre romain) et la Maison carrée, un temple remarquablement préservé."
+  }
+]

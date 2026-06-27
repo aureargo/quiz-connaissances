@@ -1,0 +1,72 @@
+[
+  {
+    "id": "films-80-e1",
+    "enonce": "Quel film a remporté l'Oscar du meilleur film pour l'année 1982 ?",
+    "choix": ["Gandhi", "E.T.", "Tootsie", "Le Verdict"],
+    "bonneReponse": 0,
+    "explication": "« Gandhi » de Richard Attenborough a remporté huit Oscars, dont celui du meilleur film, devançant notamment « E.T. »."
+  },
+  {
+    "id": "films-80-e2",
+    "enonce": "Qui a composé la musique de « Blade Runner » (1982) ?",
+    "choix": ["John Williams", "Vangelis", "Hans Zimmer", "Ennio Morricone"],
+    "bonneReponse": 1,
+    "explication": "Le Grec Vangelis a signé une bande-son électronique devenue mythique, en parfaite cohérence avec l'univers futuriste du film."
+  },
+  {
+    "id": "films-80-e3",
+    "enonce": "Dans « Brazil » (1985) de Terry Gilliam, quel objet provoque l'erreur administrative initiale ?",
+    "choix": ["Une machine à écrire", "Un insecte écrasé", "Un téléphone défectueux", "Un formulaire déchiré"],
+    "bonneReponse": 1,
+    "explication": "Un cafard écrasé dans une imprimante transforme le nom « Tuttle » en « Buttle », déclenchant toute la cascade bureaucratique du film."
+  },
+  {
+    "id": "films-80-e4",
+    "enonce": "Quel acteur joue le rôle principal de « Witness » (1985) de Peter Weir, dans la communauté amish ?",
+    "choix": ["Harrison Ford", "Mel Gibson", "Richard Gere", "Kevin Costner"],
+    "bonneReponse": 0,
+    "explication": "Harrison Ford y incarne un policier qui se cache chez les Amish. Le rôle lui vaut sa seule nomination à l'Oscar du meilleur acteur."
+  },
+  {
+    "id": "films-80-e5",
+    "enonce": "Quel film de François Truffaut, sorti en 1980, réunit Gérard Depardieu et Catherine Deneuve dans un théâtre sous l'Occupation ?",
+    "choix": ["Le Dernier Métro", "La Femme d'à côté", "Loulou", "Mon oncle d'Amérique"],
+    "bonneReponse": 0,
+    "explication": "« Le Dernier Métro » de François Truffaut a raflé dix Césars en 1981, un record longtemps inégalé."
+  },
+  {
+    "id": "films-80-e6",
+    "enonce": "Dans « Le Nom de la rose » (1986) de Jean-Jacques Annaud, quel acteur incarne le moine enquêteur Guillaume de Baskerville ?",
+    "choix": ["Sean Connery", "Michael Caine", "Christopher Lee", "Max von Sydow"],
+    "bonneReponse": 0,
+    "explication": "Sean Connery joue le franciscain qui enquête sur une série de morts dans une abbaye, aux côtés d'un jeune Christian Slater."
+  },
+  {
+    "id": "films-80-e7",
+    "enonce": "Quel réalisateur japonais a signé « Ran » (1985), relecture du « Roi Lear » de Shakespeare ?",
+    "choix": ["Akira Kurosawa", "Yasujiro Ozu", "Takeshi Kitano", "Nagisa Oshima"],
+    "bonneReponse": 0,
+    "explication": "« Ran » est l'une des dernières grandes fresques d'Akira Kurosawa, transposant « Le Roi Lear » dans le Japon féodal."
+  },
+  {
+    "id": "films-80-e8",
+    "enonce": "Quel film de 1988 mêle acteurs réels et personnages de dessins animés autour d'un détective ?",
+    "choix": ["Cool World", "Qui veut la peau de Roger Rabbit ?", "Mary Poppins", "Space Jam"],
+    "bonneReponse": 1,
+    "explication": "« Qui veut la peau de Roger Rabbit ? » de Robert Zemeckis fut une prouesse technique mêlant prises de vue réelles et animation."
+  },
+  {
+    "id": "films-80-e9",
+    "enonce": "Dans « Wall Street » (1987) d'Oliver Stone, quelle célèbre maxime résume le personnage de Gordon Gekko ?",
+    "choix": ["« L'argent ne dort jamais »", "« La cupidité, c'est bien »", "« Le temps, c'est de l'argent »", "« Tout a un prix »"],
+    "bonneReponse": 1,
+    "explication": "« Greed is good » (« La cupidité, c'est bien ») est prononcée par Michael Douglas, oscarisé pour ce rôle d'homme d'affaires sans scrupules."
+  },
+  {
+    "id": "films-80-e10",
+    "enonce": "Quel film d'animation japonais de 1988 de Katsuhiro Otomo se déroule dans la mégapole de Neo-Tokyo ?",
+    "choix": ["Akira", "Ghost in the Shell", "Le Tombeau des lucioles", "Patlabor"],
+    "bonneReponse": 0,
+    "explication": "« Akira » a profondément marqué l'animation et fait découvrir le cyberpunk japonais à un large public occidental."
+  }
+]

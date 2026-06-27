@@ -1,0 +1,72 @@
+[
+  {
+    "id": "windows-e1",
+    "enonce": "Sur quel noyau repose Windows depuis Windows 2000 et XP ?",
+    "choix": ["MS-DOS", "Windows NT", "Linux", "BSD"],
+    "bonneReponse": 1,
+    "explication": "Les Windows modernes reposent sur le noyau Windows NT, conçu pour la stabilité et le multi-utilisateur. Les versions 95, 98 et Me s'appuyaient encore sur MS-DOS."
+  },
+  {
+    "id": "windows-e2",
+    "enonce": "En quelle année Microsoft a-t-il lancé la toute première version, Windows 1.0 ?",
+    "choix": ["1981", "1985", "1990", "1995"],
+    "bonneReponse": 1,
+    "explication": "Windows 1.0 est sorti en 1985 comme surcouche graphique de MS-DOS. Le grand succès grand public viendra dix ans plus tard, avec Windows 95."
+  },
+  {
+    "id": "windows-e3",
+    "enonce": "Quelle extension portent les bibliothèques de liens dynamiques sous Windows ?",
+    "choix": [".so", ".dll", ".lib", ".sys"],
+    "bonneReponse": 1,
+    "explication": "Une DLL (« Dynamic Link Library », .dll) regroupe du code partagé par plusieurs programmes. L'équivalent sous Linux porte l'extension .so."
+  },
+  {
+    "id": "windows-e4",
+    "enonce": "Sur un Windows 64 bits, quel dossier système héberge les composants 32 bits ?",
+    "choix": ["System32", "SysWOW64", "Program Files (x86)", "AppData"],
+    "bonneReponse": 1,
+    "explication": "Contre toute intuition, « System32 » contient le code 64 bits et « SysWOW64 » le code 32 bits. Ces noms trompeurs sont conservés pour la compatibilité ascendante."
+  },
+  {
+    "id": "windows-e5",
+    "enonce": "Quelle commande, lancée en administrateur, vérifie et répare les fichiers système protégés ?",
+    "choix": ["chkdsk", "sfc /scannow", "defrag", "diskpart"],
+    "bonneReponse": 1,
+    "explication": "« sfc /scannow » (System File Checker) analyse les fichiers système et restaure ceux qui sont corrompus. chkdsk, lui, vérifie l'intégrité du disque."
+  },
+  {
+    "id": "windows-e6",
+    "enonce": "Quelle commande affiche la configuration réseau (adresse IP) d'un PC Windows ?",
+    "choix": ["ifconfig", "ipconfig", "netstat", "traceroute"],
+    "bonneReponse": 1,
+    "explication": "« ipconfig » liste les adresses IP des interfaces réseau sous Windows. « ifconfig » est son équivalent historique sous Unix et Linux."
+  },
+  {
+    "id": "windows-e7",
+    "enonce": "Comment s'appelle la couche qui exécute nativement des binaires Linux sous Windows 10 et 11 ?",
+    "choix": ["Wine", "WSL", "Cygwin", "Mono"],
+    "bonneReponse": 1,
+    "explication": "WSL (« Windows Subsystem for Linux ») fait tourner un véritable noyau Linux au sein de Windows. Wine fait l'inverse : exécuter des programmes Windows sous Linux."
+  },
+  {
+    "id": "windows-e8",
+    "enonce": "Quel utilitaire ouvre l'éditeur du Registre de Windows ?",
+    "choix": ["msconfig", "regedit", "gpedit", "diskmgmt"],
+    "bonneReponse": 1,
+    "explication": "« regedit » ouvre l'Éditeur du Registre, où sont stockés les réglages du système. Une mauvaise manipulation peut déstabiliser Windows : à utiliser avec prudence."
+  },
+  {
+    "id": "windows-e9",
+    "enonce": "Quel hyperviseur de virtualisation est intégré aux éditions Pro et Entreprise de Windows ?",
+    "choix": ["VirtualBox", "Hyper-V", "VMware", "QEMU"],
+    "bonneReponse": 1,
+    "explication": "Hyper-V est l'hyperviseur natif de Microsoft, livré avec les éditions Pro et Entreprise. Les autres solutions citées sont des produits tiers à installer séparément."
+  },
+  {
+    "id": "windows-e10",
+    "enonce": "Quelle technologie de micrologiciel a remplacé le BIOS traditionnel sur les PC modernes ?",
+    "choix": ["UEFI", "GRUB", "ACPI", "POST"],
+    "bonneReponse": 0,
+    "explication": "L'UEFI a succédé au BIOS hérité : démarrage plus rapide, disques de plus de 2 To (via GPT) et Secure Boot. GRUB, lui, est un chargeur d'amorçage surtout utilisé sous Linux."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "geologie-e1",
+    "enonce": "Comment appelle-t-on la couche rigide qui regroupe la croûte et le sommet du manteau, découpée en plaques ?",
+    "choix": ["l'asthénosphère", "la lithosphère", "la mésosphère", "la barysphère"],
+    "bonneReponse": 1,
+    "explication": "La lithosphère est l'enveloppe externe rigide, fragmentée en plaques tectoniques. Elle repose sur l'asthénosphère, plus chaude et ductile, qui permet leur glissement."
+  },
+  {
+    "id": "geologie-e2",
+    "enonce": "Comment nomme-t-on le phénomène par lequel une plaque océanique plonge sous une autre plaque ?",
+    "choix": ["la subduction", "l'obduction", "l'accrétion", "la diagenèse"],
+    "bonneReponse": 0,
+    "explication": "Lors d'une subduction, la plaque la plus dense s'enfonce dans le manteau, formant fosses océaniques, volcans et séismes profonds. C'est le moteur du recyclage de la croûte océanique."
+  },
+  {
+    "id": "geologie-e3",
+    "enonce": "Quelle extinction de masse, il y a environ 252 millions d'années, fut la plus dévastatrice de l'histoire de la vie ?",
+    "choix": ["l'extinction Permien-Trias", "l'extinction Crétacé-Paléogène", "l'extinction de l'Ordovicien", "l'extinction du Dévonien"],
+    "bonneReponse": 0,
+    "explication": "La crise Permien-Trias, surnommée « la Grande Mort », a fait disparaître près de 90 % des espèces marines. L'extinction Crétacé-Paléogène, plus tardive, est celle des dinosaures non-aviens."
+  },
+  {
+    "id": "geologie-e4",
+    "enonce": "Dans quelle ère géologique vivons-nous actuellement ?",
+    "choix": ["le Mésozoïque", "le Paléozoïque", "le Cénozoïque", "le Précambrien"],
+    "bonneReponse": 2,
+    "explication": "Le Cénozoïque, ouvert il y a 66 millions d'années après la disparition des dinosaures, est l'ère des mammifères. Le Mésozoïque le précédait, avec l'âge des dinosaures."
+  },
+  {
+    "id": "geologie-e5",
+    "enonce": "Quelle méthode permet de dater les roches très anciennes en mesurant la désintégration d'éléments radioactifs ?",
+    "choix": ["la datation radiométrique", "la stratigraphie", "la dendrochronologie", "la datation relative"],
+    "bonneReponse": 0,
+    "explication": "La datation radiométrique exploite la décroissance régulière d'isotopes (uranium, potassium…) comme une horloge. La dendrochronologie compte les cernes des arbres et ne remonte qu'à quelques millénaires."
+  },
+  {
+    "id": "geologie-e6",
+    "enonce": "Comment nomme-t-on la surface de transition entre la croûte et le manteau terrestre ?",
+    "choix": ["la discontinuité de Mohorovičić", "la discontinuité de Gutenberg", "la discontinuité de Lehmann", "la discontinuité de Conrad"],
+    "bonneReponse": 0,
+    "explication": "La discontinuité de Mohorovičić, ou « Moho », marque le passage croûte-manteau, repéré grâce aux ondes sismiques. Celle de Gutenberg sépare le manteau du noyau."
+  },
+  {
+    "id": "geologie-e7",
+    "enonce": "Comment appelle-t-on l'ensemble des processus qui forment les chaînes de montagnes par collision de plaques ?",
+    "choix": ["l'orogenèse", "la diagenèse", "l'altération", "la sédimentation"],
+    "bonneReponse": 0,
+    "explication": "L'orogenèse désigne la naissance des reliefs lors de la collision de plaques : l'Himalaya résulte ainsi de la rencontre des plaques indienne et eurasiatique."
+  },
+  {
+    "id": "geologie-e8",
+    "enonce": "Comment nomme-t-on l'étude de la succession et de l'ordre des couches de roches sédimentaires ?",
+    "choix": ["la stratigraphie", "la pétrologie", "la minéralogie", "la sismologie"],
+    "bonneReponse": 0,
+    "explication": "La stratigraphie analyse l'empilement des strates pour reconstituer l'histoire de la Terre. En principe, dans une série non bouleversée, les couches du bas sont les plus anciennes."
+  },
+  {
+    "id": "geologie-e9",
+    "enonce": "Quelle composition de magma produit en général les éruptions volcaniques les plus explosives ?",
+    "choix": ["riche en silice", "pauvre en silice", "riche en magnésium", "riche en fer"],
+    "bonneReponse": 0,
+    "explication": "Un magma riche en silice est très visqueux : les gaz s'en échappent mal et s'accumulent jusqu'à une explosion violente. Les magmas pauvres en silice, plus fluides, donnent des coulées tranquilles."
+  },
+  {
+    "id": "geologie-e10",
+    "enonce": "Comment nomme-t-on le panache de manteau quasi fixe à l'origine d'archipels volcaniques comme Hawaï ?",
+    "choix": ["un point chaud", "une dorsale océanique", "une faille transformante", "une fosse de subduction"],
+    "bonneReponse": 0,
+    "explication": "Un point chaud est une remontée de matériel chaud du manteau, fixe sous la plaque qui défile au-dessus. La plaque se déplaçant, il laisse un alignement d'îles, comme la chaîne d'Hawaï."
+  }
+]

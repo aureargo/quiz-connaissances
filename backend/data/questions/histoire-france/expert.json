@@ -1,0 +1,72 @@
+[
+  {
+    "id": "hf-e1",
+    "enonce": "Quelle dynastie Hugues Capet a-t-il fondée en 987 ?",
+    "choix": ["les Capétiens", "les Mérovingiens", "les Carolingiens", "les Plantagenêts"],
+    "bonneReponse": 0,
+    "explication": "Élu roi des Francs en 987, Hugues Capet inaugure la dynastie capétienne, qui régnera en ligne directe puis par ses branches (Valois, Bourbons) durant plus de huit siècles."
+  },
+  {
+    "id": "hf-e2",
+    "enonce": "Quel ensemble de traités de 1648 met fin à la guerre de Trente Ans ?",
+    "choix": ["les traités de Westphalie", "le traité des Pyrénées", "la paix d'Augsbourg", "le traité de Cateau-Cambrésis"],
+    "bonneReponse": 0,
+    "explication": "Les traités de Westphalie (1648) closent la guerre de Trente Ans et redessinent l'Europe. La France de Mazarin en sort agrandie et renforcée face aux Habsbourg."
+  },
+  {
+    "id": "hf-e3",
+    "enonce": "Quel ministre de Louis XIV a donné son nom à une politique mercantiliste ?",
+    "choix": ["Colbert", "Fouquet", "Louvois", "Vauban"],
+    "bonneReponse": 0,
+    "explication": "Jean-Baptiste Colbert, contrôleur général des finances, développa manufactures, commerce et marine. Le « colbertisme » désigne sa politique d'intervention de l'État dans l'économie."
+  },
+  {
+    "id": "hf-e4",
+    "enonce": "En quelle année Napoléon III a-t-il proclamé le Second Empire ?",
+    "choix": ["1852", "1848", "1870", "1804"],
+    "bonneReponse": 0,
+    "explication": "Élu président de la IIe République en 1848, Louis-Napoléon Bonaparte rétablit l'Empire le 2 décembre 1852 sous le nom de Napoléon III. Le Second Empire s'effondrera en 1870."
+  },
+  {
+    "id": "hf-e5",
+    "enonce": "Quelle victoire le roi François Ier a-t-il remportée en Italie en 1515 ?",
+    "choix": ["Marignan", "Pavie", "Bouvines", "Crécy"],
+    "bonneReponse": 0,
+    "explication": "La bataille de Marignan (1515) est une victoire éclatante de François Ier sur les Suisses. Dix ans plus tard, il sera au contraire capturé à Pavie."
+  },
+  {
+    "id": "hf-e6",
+    "enonce": "Quel édit de 1685 a révoqué l'édit de Nantes ?",
+    "choix": ["l'édit de Fontainebleau", "l'édit de Villers-Cotterêts", "la paix d'Alès", "la Pragmatique Sanction"],
+    "bonneReponse": 0,
+    "explication": "Par l'édit de Fontainebleau (1685), Louis XIV révoque la liberté de culte accordée aux protestants. Des centaines de milliers de huguenots s'exilent alors hors du royaume."
+  },
+  {
+    "id": "hf-e7",
+    "enonce": "Quel président français a conclu les accords d'Évian mettant fin à la guerre d'Algérie en 1962 ?",
+    "choix": ["Charles de Gaulle", "Georges Pompidou", "René Coty", "Pierre Mendès France"],
+    "bonneReponse": 0,
+    "explication": "Les accords d'Évian (mars 1962), signés sous la présidence de Charles de Gaulle, mènent à l'indépendance de l'Algérie, approuvée par référendum la même année."
+  },
+  {
+    "id": "hf-e8",
+    "enonce": "Quelle République fut instaurée en 1870 après la chute du Second Empire ?",
+    "choix": ["la Troisième République", "la Deuxième République", "la Quatrième République", "la Cinquième République"],
+    "bonneReponse": 0,
+    "explication": "La défaite de Sedan face à la Prusse entraîne la chute de Napoléon III. La Troisième République est proclamée le 4 septembre 1870 et durera jusqu'en 1940."
+  },
+  {
+    "id": "hf-e9",
+    "enonce": "Quelle grande loi française de 1905 a instauré la séparation des Églises et de l'État ?",
+    "choix": ["la loi de séparation des Églises et de l'État", "la loi Jules Ferry", "la loi Le Chapelier", "la loi Veil"],
+    "bonneReponse": 0,
+    "explication": "La loi du 9 décembre 1905 fonde la laïcité française : l'État ne reconnaît ni ne salarie aucun culte, tout en garantissant la liberté de conscience."
+  },
+  {
+    "id": "hf-e10",
+    "enonce": "En quelle année eut lieu la bataille d'Azincourt, lourde défaite française face aux Anglais ?",
+    "choix": ["1415", "1346", "1515", "1453"],
+    "bonneReponse": 0,
+    "explication": "À Azincourt, en 1415, l'armée d'Henri V d'Angleterre écrase la chevalerie française pendant la guerre de Cent Ans. Les archers anglais y firent des ravages."
+  }
+]

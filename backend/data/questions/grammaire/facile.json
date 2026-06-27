@@ -1,0 +1,72 @@
+[
+  {
+    "id": "grammaire-f1",
+    "enonce": "Quelle est la nature (classe grammaticale) du mot « rapidement » ?",
+    "choix": ["Un adjectif", "Un adverbe", "Un nom", "Un verbe"],
+    "bonneReponse": 1,
+    "explication": "« Rapidement » est un adverbe : il modifie le sens d'un verbe (« courir rapidement ») et reste invariable. Beaucoup d'adverbes de manière se terminent par « -ment »."
+  },
+  {
+    "id": "grammaire-f2",
+    "enonce": "Dans « le chat noir », quelle est la nature du mot « noir » ?",
+    "choix": ["Un nom", "Un adverbe", "Un adjectif", "Un déterminant"],
+    "bonneReponse": 2,
+    "explication": "« Noir » est un adjectif qualificatif : il précise une qualité du nom « chat » et s'accorde avec lui en genre et en nombre (une chatte noire, des chats noirs)."
+  },
+  {
+    "id": "grammaire-f3",
+    "enonce": "Parmi ces mots, lequel est un déterminant ?",
+    "choix": ["manger", "cette", "joli", "souvent"],
+    "bonneReponse": 1,
+    "explication": "« Cette » est un déterminant (démonstratif) : il introduit un nom et s'accorde avec lui (cette table, ce livre, ces maisons). Les autres sont un verbe, un adjectif et un adverbe."
+  },
+  {
+    "id": "grammaire-f4",
+    "enonce": "Dans « il court », quelle est la nature du mot « il » ?",
+    "choix": ["Un nom", "Un pronom", "Un déterminant", "Un adverbe"],
+    "bonneReponse": 1,
+    "explication": "« Il » est un pronom personnel : il remplace un nom (ou un groupe nominal) et joue ici le rôle de sujet du verbe « court »."
+  },
+  {
+    "id": "grammaire-f5",
+    "enonce": "Comment appelle-t-on le mot ou le groupe qui fait l'action exprimée par le verbe ?",
+    "choix": ["Le sujet", "Le complément", "L'attribut", "L'épithète"],
+    "bonneReponse": 0,
+    "explication": "Le sujet désigne qui fait l'action. On le trouve en posant « Qui est-ce qui... ? » devant le verbe : dans « Léa chante », « Qui est-ce qui chante ? » → Léa, le sujet."
+  },
+  {
+    "id": "grammaire-f6",
+    "enonce": "À quel temps est conjugué le verbe dans « je mangeais » ?",
+    "choix": ["Présent", "Imparfait", "Futur", "Passé composé"],
+    "bonneReponse": 1,
+    "explication": "« Je mangeais » est à l'imparfait de l'indicatif, le temps des actions passées qui durent ou se répètent. Ses terminaisons sont -ais, -ais, -ait, -ions, -iez, -aient."
+  },
+  {
+    "id": "grammaire-f7",
+    "enonce": "Quel est le pluriel du nom « cheval » ?",
+    "choix": ["chevals", "chevaux", "chevales", "cheveaux"],
+    "bonneReponse": 1,
+    "explication": "La plupart des noms en « -al » font leur pluriel en « -aux » : cheval → chevaux, journal → journaux. Quelques exceptions prennent un « -s » (bals, carnavals)."
+  },
+  {
+    "id": "grammaire-f8",
+    "enonce": "Comment appelle-t-on une phrase qui pose une question ?",
+    "choix": ["Déclarative", "Interrogative", "Impérative", "Exclamative"],
+    "bonneReponse": 1,
+    "explication": "Une phrase interrogative pose une question et se termine par un point d'interrogation. La déclarative affirme, l'impérative donne un ordre, l'exclamative exprime une émotion."
+  },
+  {
+    "id": "grammaire-f9",
+    "enonce": "Comment s'écrit correctement « une fleur (blanc) » ?",
+    "choix": ["une fleur blanc", "une fleur blanche", "une fleur blancs", "une fleur blanches"],
+    "bonneReponse": 1,
+    "explication": "L'adjectif s'accorde en genre et en nombre avec le nom qu'il qualifie. « Fleur » étant féminin singulier, « blanc » devient « blanche »."
+  },
+  {
+    "id": "grammaire-f10",
+    "enonce": "Combien de groupes de verbes distingue-t-on traditionnellement en français ?",
+    "choix": ["Un", "Deux", "Trois", "Quatre"],
+    "bonneReponse": 2,
+    "explication": "On distingue trois groupes : le 1er en « -er » (chanter), le 2e en « -ir » faisant « -issons » (finir), et le 3e qui regroupe les verbes irréguliers (aller, prendre, voir...)."
+  }
+]

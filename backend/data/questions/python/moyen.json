@@ -1,0 +1,72 @@
+[
+  {
+    "id": "python-m1",
+    "enonce": "Que produit l'expression `[x * 2 for x in range(3)]` ?",
+    "choix": ["[0, 2, 4]", "[2, 4, 6]", "[0, 1, 2]", "[1, 2, 3]"],
+    "bonneReponse": 0,
+    "explication": "C'est une compréhension de liste. `range(3)` produit 0, 1, 2 ; chacun est multiplié par 2, d'où `[0, 2, 4]`."
+  },
+  {
+    "id": "python-m2",
+    "enonce": "Quelle structure de données associe des clés à des valeurs ?",
+    "choix": ["la liste", "le tuple", "le dictionnaire", "l'ensemble"],
+    "bonneReponse": 2,
+    "explication": "Le dictionnaire (`dict`) stocke des paires clé/valeur : `{\"nom\": \"Ada\"}`. L'accès se fait par la clé et non par un indice numérique."
+  },
+  {
+    "id": "python-m3",
+    "enonce": "Quelle est la principale différence d'un tuple par rapport à une liste ?",
+    "choix": ["Il est immuable", "Il est trié", "Il est plus lent", "Il refuse les doublons"],
+    "bonneReponse": 0,
+    "explication": "Un tuple ne peut pas être modifié après sa création (il est immuable). C'est ce qui lui permet, par exemple, de servir de clé dans un dictionnaire."
+  },
+  {
+    "id": "python-m4",
+    "enonce": "Que renvoie `list(range(2, 8, 2))` ?",
+    "choix": ["[2, 4, 6, 8]", "[2, 4, 6]", "[2, 3, 4, 5]", "[0, 2, 4, 6]"],
+    "bonneReponse": 1,
+    "explication": "`range(début, fin, pas)` s'arrête avant `fin`. De 2 à 8 par pas de 2, on obtient 2, 4, 6 — 8 étant exclu."
+  },
+  {
+    "id": "python-m5",
+    "enonce": "Que fait l'opérateur `is` entre deux variables ?",
+    "choix": ["Il compare les valeurs", "Il compare les types", "Il compare l'identité des objets", "Il teste l'appartenance"],
+    "bonneReponse": 2,
+    "explication": "`is` vérifie que deux variables désignent le même objet en mémoire, alors que `==` compare les valeurs. Deux listes égales peuvent ne pas être identiques."
+  },
+  {
+    "id": "python-m6",
+    "enonce": "Que renvoie le découpage `\"python\"[1:4]` ?",
+    "choix": ["\"yth\"", "\"pyth\"", "\"ytho\"", "\"pyt\"" ],
+    "bonneReponse": 0,
+    "explication": "Le slicing `[début:fin]` prend les caractères de l'indice 1 inclus à 4 exclu, soit `y`, `t`, `h`. Les indices commencent à 0."
+  },
+  {
+    "id": "python-m7",
+    "enonce": "Comment insère-t-on une variable `nom` dans une chaîne formatée (f-string) ?",
+    "choix": ["f\"Bonjour {nom}\"", "\"Bonjour ${nom}\"", "\"Bonjour %nom\"", "\"Bonjour \" + {nom}"],
+    "bonneReponse": 0,
+    "explication": "Une f-string est préfixée par `f` et évalue ce qui est entre accolades : `f\"Bonjour {nom}\"`. C'est la méthode recommandée depuis Python 3.6."
+  },
+  {
+    "id": "python-m8",
+    "enonce": "Quel bloc capture une exception pour éviter que le programme ne plante ?",
+    "choix": ["check / catch", "try / except", "begin / rescue", "guard / fail"],
+    "bonneReponse": 1,
+    "explication": "Le code risqué va dans `try`, et `except` capture l'erreur s'il y en a une. On peut ajouter `finally` pour un nettoyage exécuté dans tous les cas."
+  },
+  {
+    "id": "python-m9",
+    "enonce": "Quelle méthode joue le rôle de constructeur dans une classe Python ?",
+    "choix": ["__new__", "__init__", "__main__", "__call__"],
+    "bonneReponse": 1,
+    "explication": "`__init__` est appelée automatiquement à la création d'une instance pour initialiser ses attributs. Son premier paramètre est toujours `self`."
+  },
+  {
+    "id": "python-m10",
+    "enonce": "Quelle valeur représente « l'absence de valeur » en Python ?",
+    "choix": ["null", "None", "nil", "undefined"],
+    "bonneReponse": 1,
+    "explication": "`None` est l'objet unique qui signifie « rien ». Une fonction sans `return` explicite renvoie d'ailleurs `None`."
+  }
+]

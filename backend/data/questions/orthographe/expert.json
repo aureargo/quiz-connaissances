@@ -1,0 +1,72 @@
+[
+  {
+    "id": "orthographe-e1",
+    "enonce": "Comment compléter « ___ tu fasses, je te soutiendrai » ?",
+    "choix": ["Quoique", "Quoi que", "Quoi-que", "Quoique que"],
+    "bonneReponse": 1,
+    "explication": "« quoi que » en deux mots signifie « quelle que soit la chose que ». En un seul mot, « quoique » signifie « bien que » (« quoique fatigué, il continue »)."
+  },
+  {
+    "id": "orthographe-e2",
+    "enonce": "Comment compléter « Il est arrivé ___ que prévu » ?",
+    "choix": ["plutôt", "plus tôt", "plustôt", "plus-tôt"],
+    "bonneReponse": 1,
+    "explication": "« plus tôt » (contraire de « plus tard ») exprime un moment. « plutôt » en un mot signifie « de préférence » (« prends plutôt celui-ci »)."
+  },
+  {
+    "id": "orthographe-e3",
+    "enonce": "Comment compléter « Je voudrais en savoir ___ sur le sujet » ?",
+    "choix": ["davantage", "d'avantage", "daventage", "d'avantages"],
+    "bonneReponse": 0,
+    "explication": "« davantage » en un mot est un adverbe signifiant « plus ». « d'avantage(s) » désigne un bénéfice (« il n'y a pas d'avantage à attendre »)."
+  },
+  {
+    "id": "orthographe-e4",
+    "enonce": "Comment écrit-on « Il est trois heures et ___ » ?",
+    "choix": ["demi", "demie", "demis", "demies"],
+    "bonneReponse": 1,
+    "explication": "Placé après le nom, « demi » s'accorde en genre seulement : « heures » étant féminin, on écrit « trois heures et demie ». Avant le nom et relié par un trait d'union, il reste invariable : « une demi-heure »."
+  },
+  {
+    "id": "orthographe-e5",
+    "enonce": "Comment compléter « Tu es ___ connaître le règlement » ?",
+    "choix": ["censé", "sensé", "sensée", "censée"],
+    "bonneReponse": 0,
+    "explication": "« censé » signifie « supposé, réputé » (« il est censé venir »). « sensé » signifie « qui a du bon sens » (« une décision sensée »). Deux mots à ne pas confondre."
+  },
+  {
+    "id": "orthographe-e6",
+    "enonce": "Comment écrit-on le nombre 80 en toutes lettres ?",
+    "choix": ["quatre-vingt", "quatre-vingts", "quatre vingt", "quatre-vingt-s"],
+    "bonneReponse": 1,
+    "explication": "« vingt » et « cent » prennent un « s » quand ils sont multipliés et terminent le nombre : « quatre-vingts ». Mais ils restent invariables s'ils sont suivis d'un autre nombre : « quatre-vingt-deux »."
+  },
+  {
+    "id": "orthographe-e7",
+    "enonce": "Comment écrit-on l'adjectif dans « un travail très ___ » ?",
+    "choix": ["fatigant", "fatiguant", "fatigeant", "fatiguent"],
+    "bonneReponse": 0,
+    "explication": "L'adjectif s'écrit « fatigant » (sans « u »). Le participe présent, lui, garde le « u » : « en fatiguant ses lecteurs ». Même règle pour « fabricant » (nom) et « fabriquant » (participe)."
+  },
+  {
+    "id": "orthographe-e8",
+    "enonce": "Quel est le pluriel recommandé de « un porte-monnaie » ?",
+    "choix": ["des porte-monnaie", "des portes-monnaies", "des porte-monnaies", "des portes-monnaie"],
+    "bonneReponse": 0,
+    "explication": "Dans ce nom composé verbe + nom, « porte » est un verbe (invariable) et « monnaie » reste au singulier par le sens (chaque objet porte la monnaie) : « des porte-monnaie »."
+  },
+  {
+    "id": "orthographe-e9",
+    "enonce": "Comment compléter « Nous avons fait une longue ___ en forêt » ?",
+    "choix": ["balade", "ballade", "ballades", "baladde"],
+    "bonneReponse": 0,
+    "explication": "Une « balade » (un seul « l ») est une promenade. Une « ballade » (deux « l ») est un poème ou une chanson. Le doublement du « l » change complètement le sens."
+  },
+  {
+    "id": "orthographe-e10",
+    "enonce": "Comment compléter « ___ soit la difficulté, persévère » ?",
+    "choix": ["Quelle que", "Quel que", "Quelque", "Quels que"],
+    "bonneReponse": 0,
+    "explication": "En deux mots, « quel que » s'accorde avec le sujet du verbe être qui suit : « difficulté » étant féminin, on écrit « quelle que soit la difficulté ». En un mot, « quelque » signifie « environ » ou « quelques »."
+  }
+]

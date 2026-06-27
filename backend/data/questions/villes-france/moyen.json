@@ -1,0 +1,72 @@
+[
+  {
+    "id": "villes-france-m1",
+    "enonce": "Quel fleuve traverse la ville de Bordeaux ?",
+    "choix": ["la Loire", "la Garonne", "la Dordogne", "l'Adour"],
+    "bonneReponse": 1,
+    "explication": "La Garonne traverse Bordeaux en formant un large croissant, d'où le surnom de « port de la Lune »."
+  },
+  {
+    "id": "villes-france-m2",
+    "enonce": "Quelle ville est la préfecture de la région Bretagne ?",
+    "choix": ["Brest", "Rennes", "Vannes", "Saint-Malo"],
+    "bonneReponse": 1,
+    "explication": "Rennes est la préfecture de la région Bretagne ; Brest est plus connue pour son port, mais reste une sous-préfecture."
+  },
+  {
+    "id": "villes-france-m3",
+    "enonce": "Quelle ville accueille le Festival international de la bande dessinée ?",
+    "choix": ["Angoulême", "Poitiers", "Limoges", "Niort"],
+    "bonneReponse": 0,
+    "explication": "Angoulême accueille depuis 1974 le plus grand festival de bande dessinée d'Europe, chaque mois de janvier."
+  },
+  {
+    "id": "villes-france-m4",
+    "enonce": "Quelle ville de Bourgogne est célèbre pour sa moutarde ?",
+    "choix": ["Dijon", "Reims", "Troyes", "Auxerre"],
+    "bonneReponse": 0,
+    "explication": "Dijon, ancienne capitale des ducs de Bourgogne, a donné son nom à une moutarde réputée dans le monde entier."
+  },
+  {
+    "id": "villes-france-m5",
+    "enonce": "Quelle ville de Normandie abrite un grand mémorial dédié au Débarquement de 1944 ?",
+    "choix": ["Rouen", "Caen", "Le Havre", "Bayeux"],
+    "bonneReponse": 1,
+    "explication": "Le Mémorial de Caen est un musée majeur consacré à la Seconde Guerre mondiale et au Débarquement de Normandie."
+  },
+  {
+    "id": "villes-france-m6",
+    "enonce": "Dans quelle ville se trouve la cathédrale où étaient traditionnellement sacrés les rois de France ?",
+    "choix": ["Reims", "Laon", "Amiens", "Beauvais"],
+    "bonneReponse": 0,
+    "explication": "La cathédrale Notre-Dame de Reims fut le lieu du sacre de la plupart des rois de France, dont Charles VII en 1429."
+  },
+  {
+    "id": "villes-france-m7",
+    "enonce": "Quelle ville d'Auvergne, entourée de volcans, abrite le siège du groupe Michelin ?",
+    "choix": ["Clermont-Ferrand", "Limoges", "Saint-Étienne", "Le Puy-en-Velay"],
+    "bonneReponse": 0,
+    "explication": "Clermont-Ferrand, au pied de la chaîne des Puys, est le berceau et le siège mondial du fabricant de pneus Michelin."
+  },
+  {
+    "id": "villes-france-m8",
+    "enonce": "Quelle ville méditerranéenne abrite la principale base navale de la Marine nationale ?",
+    "choix": ["Toulon", "Sète", "Hyères", "Fréjus"],
+    "bonneReponse": 0,
+    "explication": "Toulon, dans le Var, accueille la principale base de la flotte française de Méditerranée, dont le porte-avions Charles de Gaulle."
+  },
+  {
+    "id": "villes-france-m9",
+    "enonce": "Quelle ville de Lorraine est connue pour sa place Stanislas, classée à l'UNESCO ?",
+    "choix": ["Metz", "Nancy", "Épinal", "Verdun"],
+    "bonneReponse": 1,
+    "explication": "La place Stanislas de Nancy, ancienne capitale du duché de Lorraine, est un chef-d'œuvre d'urbanisme du XVIIIᵉ siècle."
+  },
+  {
+    "id": "villes-france-m10",
+    "enonce": "Quel est le premier port de commerce français par le tonnage de marchandises ?",
+    "choix": ["Marseille", "Le Havre", "Dunkerque", "Nantes-Saint-Nazaire"],
+    "bonneReponse": 0,
+    "explication": "Le grand port maritime de Marseille-Fos est le premier port français par le tonnage total de marchandises traitées."
+  }
+]

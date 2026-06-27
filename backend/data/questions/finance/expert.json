@@ -1,0 +1,72 @@
+[
+  {
+    "id": "finance-e1",
+    "enonce": "Que mesure le ratio cours/bénéfice (PER, price-earnings ratio) ?",
+    "choix": ["Le rapport entre le cours d'une action et le bénéfice par action", "Le rapport entre la dette et les capitaux propres", "Le rendement annuel du dividende", "La volatilité historique du titre"],
+    "bonneReponse": 0,
+    "explication": "Le PER indique combien d'années de bénéfices on « paie » au cours actuel. Un PER élevé traduit souvent de fortes attentes de croissance, mais aussi une valorisation chère."
+  },
+  {
+    "id": "finance-e2",
+    "enonce": "En quoi consiste la vente à découvert (short selling) ?",
+    "choix": ["Acheter un titre à crédit", "Vendre un actif avant son émission", "Vendre un titre emprunté en pariant sur sa baisse", "Échanger deux actifs sans argent"],
+    "bonneReponse": 2,
+    "explication": "Le vendeur à découvert emprunte un titre, le vend, puis espère le racheter moins cher pour le rendre et empocher la différence. Si le cours monte, la perte peut être très élevée."
+  },
+  {
+    "id": "finance-e3",
+    "enonce": "Que se passe-t-il quand la courbe des taux s'inverse ?",
+    "choix": ["Les taux deviennent tous négatifs", "Les taux courts deviennent supérieurs aux taux longs", "Les taux longs grimpent fortement", "Les actions surperforment les obligations"],
+    "bonneReponse": 1,
+    "explication": "Normalement, prêter à long terme rapporte plus qu'à court terme. Une courbe inversée (taux courts > taux longs) est souvent vue comme un signal annonciateur de récession."
+  },
+  {
+    "id": "finance-e4",
+    "enonce": "Que représente le « bêta » d'une action ?",
+    "choix": ["Son rendement garanti chaque année", "Son ratio d'endettement net", "Le montant de son dividende", "Sa sensibilité aux mouvements du marché"],
+    "bonneReponse": 3,
+    "explication": "Un bêta de 1 signifie que l'action varie comme le marché. Au-dessus de 1, elle amplifie ses mouvements (plus risquée) ; en dessous, elle les atténue."
+  },
+  {
+    "id": "finance-e5",
+    "enonce": "Qu'est-ce qu'un produit dérivé ?",
+    "choix": ["Un contrat dont la valeur dépend d'un actif sous-jacent", "Une action versant un dividende fixe", "Une obligation d'État à long terme", "Un dépôt bancaire rémunéré"],
+    "bonneReponse": 0,
+    "explication": "Options, contrats à terme (futures) et swaps sont des dérivés : leur valeur découle d'un sous-jacent (action, indice, devise, matière première). Ils servent à se couvrir ou à spéculer."
+  },
+  {
+    "id": "finance-e6",
+    "enonce": "Que mesure la volatilité d'un actif financier ?",
+    "choix": ["Son rendement moyen annuel", "Son niveau d'endettement total", "L'ampleur des variations de son prix", "Sa valeur comptable au bilan"],
+    "bonneReponse": 2,
+    "explication": "La volatilité quantifie la dispersion des variations de prix. Plus elle est élevée, plus le prix bouge fortement, et plus l'actif est considéré comme risqué."
+  },
+  {
+    "id": "finance-e7",
+    "enonce": "Qu'appelle-t-on les intérêts composés ?",
+    "choix": ["Des intérêts versés une seule fois", "Les intérêts qui produisent eux-mêmes des intérêts", "Des intérêts payés par avance", "Un intérêt plafonné par l'État"],
+    "bonneReponse": 1,
+    "explication": "Avec les intérêts composés, les gains s'ajoutent au capital et génèrent à leur tour des intérêts. Sur le long terme, la croissance devient exponentielle."
+  },
+  {
+    "id": "finance-e8",
+    "enonce": "Que désigne la liquidité d'un actif ?",
+    "choix": ["Sa rentabilité sur le long terme", "Son niveau de risque global", "Sa part dans un indice boursier", "La facilité à le vendre rapidement sans perte de valeur"],
+    "bonneReponse": 3,
+    "explication": "Un actif liquide, comme une action très échangée, se vend vite à un prix proche du marché. Un actif illiquide, comme un immeuble, est plus long et coûteux à céder."
+  },
+  {
+    "id": "finance-e9",
+    "enonce": "Qu'est-ce qu'une bulle spéculative ?",
+    "choix": ["Une hausse des prix déconnectée de la valeur réelle", "Une baisse durable et générale des prix", "Une période de croissance économique stable", "Un blocage temporaire des échanges en bourse"],
+    "bonneReponse": 0,
+    "explication": "Dans une bulle, les prix s'envolent par excès d'optimisme et de spéculation, jusqu'à un éclatement brutal — comme la bulle Internet qui a éclaté en 2000."
+  },
+  {
+    "id": "finance-e10",
+    "enonce": "Que désigne le sigle ETF (exchange-traded fund) ?",
+    "choix": ["Un compte d'épargne à terme", "Une obligation indexée sur l'inflation", "Un fonds indiciel coté en bourse", "Un contrat d'assurance-vie en euros"],
+    "bonneReponse": 2,
+    "explication": "Un ETF (ou tracker) réplique un indice comme le CAC 40 et se négocie en bourse comme une action. Ses frais de gestion sont généralement très faibles."
+  }
+]

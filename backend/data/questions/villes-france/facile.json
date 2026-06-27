@@ -1,0 +1,72 @@
+[
+  {
+    "id": "villes-france-f1",
+    "enonce": "Quelle est la capitale de la France ?",
+    "choix": ["Lyon", "Marseille", "Paris", "Bordeaux"],
+    "bonneReponse": 2,
+    "explication": "Paris est la capitale de la France depuis le Moyen Âge et de loin sa ville la plus peuplée."
+  },
+  {
+    "id": "villes-france-f2",
+    "enonce": "Quelle est la deuxième ville de France par sa population ?",
+    "choix": ["Lyon", "Marseille", "Toulouse", "Nice"],
+    "bonneReponse": 1,
+    "explication": "Marseille, sur la côte méditerranéenne, est la deuxième commune la plus peuplée de France après Paris."
+  },
+  {
+    "id": "villes-france-f3",
+    "enonce": "Quelle ville accueille chaque année un célèbre festival de cinéma sur la Croisette ?",
+    "choix": ["Nice", "Cannes", "Deauville", "Saint-Tropez"],
+    "bonneReponse": 1,
+    "explication": "Le Festival de Cannes, sur la Côte d'Azur, est l'un des événements de cinéma les plus prestigieux au monde."
+  },
+  {
+    "id": "villes-france-f4",
+    "enonce": "Quelle ville, traversée par le Rhône et la Saône, est réputée pour sa gastronomie ?",
+    "choix": ["Grenoble", "Lyon", "Dijon", "Annecy"],
+    "bonneReponse": 1,
+    "explication": "Lyon, à la confluence du Rhône et de la Saône, est souvent surnommée la capitale de la gastronomie française."
+  },
+  {
+    "id": "villes-france-f5",
+    "enonce": "Quelle ville est la capitale de l'Alsace et accueille le Parlement européen ?",
+    "choix": ["Metz", "Nancy", "Strasbourg", "Colmar"],
+    "bonneReponse": 2,
+    "explication": "Strasbourg, à la frontière allemande, abrite le Parlement européen et possède une magnifique cathédrale gothique."
+  },
+  {
+    "id": "villes-france-f6",
+    "enonce": "Quelle grande ville du Sud-Ouest est mondialement connue pour son vin ?",
+    "choix": ["Nantes", "Bordeaux", "La Rochelle", "Bayonne"],
+    "bonneReponse": 1,
+    "explication": "Bordeaux, sur la Garonne, donne son nom à l'un des vignobles les plus prestigieux du monde."
+  },
+  {
+    "id": "villes-france-f7",
+    "enonce": "Quelle ville de la Côte d'Azur est connue pour sa Promenade des Anglais ?",
+    "choix": ["Cannes", "Nice", "Menton", "Antibes"],
+    "bonneReponse": 1,
+    "explication": "Nice, sur la Méditerranée, est célèbre pour sa Promenade des Anglais le long de la baie des Anges et pour son carnaval."
+  },
+  {
+    "id": "villes-france-f8",
+    "enonce": "Quelle ville rose du Sud-Ouest est le berceau de l'avionneur Airbus ?",
+    "choix": ["Bordeaux", "Toulouse", "Montpellier", "Pau"],
+    "bonneReponse": 1,
+    "explication": "Toulouse, surnommée la « ville rose » pour ses briques de terre cuite, abrite le siège d'Airbus et l'industrie aéronautique."
+  },
+  {
+    "id": "villes-france-f9",
+    "enonce": "Dans quelle ville de Provence se trouve le palais des Papes ?",
+    "choix": ["Orange", "Avignon", "Nîmes", "Arles"],
+    "bonneReponse": 1,
+    "explication": "Avignon fut la résidence des papes au XIVᵉ siècle ; son palais des Papes est l'un des plus grands édifices gothiques d'Europe."
+  },
+  {
+    "id": "villes-france-f10",
+    "enonce": "Quelle ville du Nord est connue pour sa Grand-Place et sa grande braderie ?",
+    "choix": ["Amiens", "Lille", "Roubaix", "Arras"],
+    "bonneReponse": 1,
+    "explication": "Lille, capitale des Hauts-de-France, est réputée pour sa Grand-Place et sa braderie, l'un des plus grands marchés aux puces d'Europe."
+  }
+]

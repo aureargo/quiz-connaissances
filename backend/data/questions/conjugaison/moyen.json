@@ -1,0 +1,72 @@
+[
+  {
+    "id": "conjugaison-m1",
+    "enonce": "Comment conjugue-t-on « prendre » avec « je » au passé composé ?",
+    "choix": ["j'ai prit", "j'ai prendu", "j'ai pris", "j'ai prends"],
+    "bonneReponse": 2,
+    "explication": "Le participe passé de « prendre » est « pris ». Au passé composé : j'ai pris, tu as pris... Beaucoup de verbes du 3e groupe ont un participe passé en « -is » (pris, mis, appris)."
+  },
+  {
+    "id": "conjugaison-m2",
+    "enonce": "Comment conjugue-t-on « finir » avec « nous » à l'imparfait ?",
+    "choix": ["nous finissions", "nous finissons", "nous finisions", "nous finîmes"],
+    "bonneReponse": 0,
+    "explication": "À l'imparfait, les verbes du 2e groupe gardent le « -iss- » et prennent « -ions » : nous finissions. « Nous finissons » est le présent, et « nous finîmes » le passé simple."
+  },
+  {
+    "id": "conjugaison-m3",
+    "enonce": "Quel auxiliaire utilise « tomber » au passé composé (« elle est tombée ») ?",
+    "choix": ["L'auxiliaire avoir", "L'auxiliaire être", "Les deux au choix", "Aucun auxiliaire"],
+    "bonneReponse": 1,
+    "explication": "« Tomber » se conjugue avec l'auxiliaire « être », comme la plupart des verbes de mouvement ou de changement d'état (aller, venir, naître, mourir). Le participe s'accorde alors avec le sujet."
+  },
+  {
+    "id": "conjugaison-m4",
+    "enonce": "À quel mode appartient la forme « je voudrais » ?",
+    "choix": ["L'indicatif", "Le subjonctif", "L'impératif", "Le conditionnel"],
+    "bonneReponse": 3,
+    "explication": "« Je voudrais » est au conditionnel présent : il exprime ici une demande polie ou un souhait. Ses terminaisons (-rais, -rais, -rait...) mêlent le radical du futur et celui de l'imparfait."
+  },
+  {
+    "id": "conjugaison-m5",
+    "enonce": "Comment conjugue-t-on « faire » avec « vous » au futur simple ?",
+    "choix": ["vous fairez", "vous ferez", "vous férez", "vous faisez"],
+    "bonneReponse": 1,
+    "explication": "Le futur de « faire » est irrégulier : il se construit sur le radical « fer- » et non sur l'infinitif. On écrit donc « vous ferez », et surtout pas « vous fairez »."
+  },
+  {
+    "id": "conjugaison-m6",
+    "enonce": "Comment compléter « la lettre que j'ai (écrire) » au passé composé ?",
+    "choix": ["écrit", "écrits", "écrite", "écrites"],
+    "bonneReponse": 2,
+    "explication": "Avec l'auxiliaire « avoir », le participe s'accorde avec le COD s'il est placé avant. Ici « que » remplace « la lettre » (féminin singulier), placé avant : on écrit « écrite »."
+  },
+  {
+    "id": "conjugaison-m7",
+    "enonce": "À quel temps est conjugué « j'avais mangé » ?",
+    "choix": ["Le passé composé", "Le passé antérieur", "L'imparfait", "Le plus-que-parfait"],
+    "bonneReponse": 3,
+    "explication": "« J'avais mangé » est au plus-que-parfait : auxiliaire à l'imparfait (« avais ») + participe passé. Il exprime une action passée antérieure à une autre action passée."
+  },
+  {
+    "id": "conjugaison-m8",
+    "enonce": "Comment conjugue-t-on « venir » avec « ils » au passé composé ?",
+    "choix": ["ils sont venus", "ils ont venu", "ils sont venu", "ils ont venus"],
+    "bonneReponse": 0,
+    "explication": "« Venir » se conjugue avec « être », et le participe s'accorde avec le sujet : « ils sont venus » (masculin pluriel). On n'écrit jamais « ils ont venu »."
+  },
+  {
+    "id": "conjugaison-m9",
+    "enonce": "Comment conjugue-t-on « voir » avec « je » au futur simple ?",
+    "choix": ["je voirai", "je verai", "je verrai", "je voirais"],
+    "bonneReponse": 2,
+    "explication": "Le futur de « voir » s'écrit avec deux « r » : je verrai, tu verras, il verra. Cette double consonne se retrouve aussi pour « envoyer » (j'enverrai) et « pouvoir » (je pourrai)."
+  },
+  {
+    "id": "conjugaison-m10",
+    "enonce": "Comment conjugue-t-on « pouvoir » avec « je » au présent ?",
+    "choix": ["je peut", "je peux", "je peus", "je pouve"],
+    "bonneReponse": 1,
+    "explication": "« Je peux » s'écrit avec un « x », tout comme « je veux ». Ces deux verbes (pouvoir, vouloir) ont une terminaison en « -x » aux deux premières personnes du singulier : je peux, tu peux."
+  }
+]

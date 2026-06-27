@@ -7,6 +7,27 @@
     "description": "Le langage de Google : simple, compilé et conçu pour la concurrence."
   },
   {
+    "id": "python",
+    "nom": "Python",
+    "emoji": "🐍",
+    "categorie": "Programmation",
+    "description": "Le langage polyvalent à la syntaxe lisible, roi du scripting et de l'IA."
+  },
+  {
+    "id": "javascript",
+    "nom": "JavaScript",
+    "emoji": "🟨",
+    "categorie": "Programmation",
+    "description": "Le langage du web : dynamique, asynchrone et omniprésent dans le navigateur."
+  },
+  {
+    "id": "typescript",
+    "nom": "TypeScript",
+    "emoji": "🔷",
+    "categorie": "Programmation",
+    "description": "JavaScript typé : la sûreté du typage statique compilée vers du JavaScript."
+  },
+  {
     "id": "angular",
     "nom": "Angular",
     "emoji": "🅰️",
@@ -19,6 +40,20 @@
     "emoji": "☕",
     "categorie": "Programmation",
     "description": "Le grand classique de la POO, multiplateforme grâce à la JVM."
+  },
+  {
+    "id": "kotlin",
+    "nom": "Kotlin",
+    "emoji": "🟪",
+    "categorie": "Programmation",
+    "description": "Le langage moderne de JetBrains sur la JVM, « Kotlin-first » pour Android."
+  },
+  {
+    "id": "c",
+    "nom": "C",
+    "emoji": "©️",
+    "categorie": "Programmation",
+    "description": "Le langage système historique : proche de la machine, pointeurs et gestion manuelle de la mémoire."
   },
   {
     "id": "cpp",
@@ -49,6 +84,34 @@
     "description": "Le shell Unix : naviguer, manipuler des fichiers et piloter le système."
   },
   {
+    "id": "html",
+    "nom": "HTML",
+    "emoji": "📄",
+    "categorie": "Programmation",
+    "description": "Le langage de balisage qui structure le contenu des pages web."
+  },
+  {
+    "id": "css",
+    "nom": "CSS",
+    "emoji": "🎨",
+    "categorie": "Programmation",
+    "description": "Les feuilles de style : mise en page, couleurs et responsive design."
+  },
+  {
+    "id": "architecture",
+    "nom": "Architecture logicielle",
+    "emoji": "🏗️",
+    "categorie": "Programmation",
+    "description": "Structurer une application : motifs, couches, microservices et grands principes."
+  },
+  {
+    "id": "algorithmes",
+    "nom": "Algorithmes & structures de données",
+    "emoji": "🧮",
+    "categorie": "Programmation",
+    "description": "Tris, complexité (grand O), arbres, piles et files : les fondamentaux de l'algorithmique."
+  },
+  {
     "id": "docker",
     "nom": "Docker",
     "emoji": "🐳",
@@ -63,6 +126,20 @@
     "description": "L'orchestration de conteneurs à grande échelle (« K8s »)."
   },
   {
+    "id": "cpu",
+    "nom": "Processeurs (CPU)",
+    "emoji": "⚙️",
+    "categorie": "Matériel informatique",
+    "description": "Architecture, fonctionnement et histoire des processeurs."
+  },
+  {
+    "id": "gpu",
+    "nom": "Cartes graphiques (GPU)",
+    "emoji": "🖼️",
+    "categorie": "Matériel informatique",
+    "description": "Processeurs graphiques : rendu 3D, calcul parallèle et IA."
+  },
+  {
     "id": "sql",
     "nom": "SQL",
     "emoji": "🗃️",
@@ -70,11 +147,25 @@
     "description": "Le langage universel des bases de données relationnelles."
   },
   {
+    "id": "nosql",
+    "nom": "NoSQL",
+    "emoji": "🍃",
+    "categorie": "Bases de données",
+    "description": "Bases non relationnelles : documents, clé-valeur, colonnes et graphes pour passer à l'échelle."
+  },
+  {
     "id": "crypto",
     "nom": "Crypto",
     "emoji": "🪙",
     "categorie": "Crypto & Web3",
     "description": "Bitcoin, blockchain, smart contracts et compagnie."
+  },
+  {
+    "id": "ia",
+    "nom": "IA (généralités)",
+    "emoji": "🧠",
+    "categorie": "Intelligence artificielle",
+    "description": "Histoire, concepts et grandes figures de l'intelligence artificielle."
   },
   {
     "id": "llm",
@@ -117,5 +208,201 @@
     "emoji": "🌍",
     "categorie": "Culture générale",
     "description": "Capitales, géographie et records du monde."
+  },
+  {
+    "id": "geographie",
+    "nom": "Géographie",
+    "emoji": "🗺️",
+    "categorie": "Culture générale",
+    "description": "Reliefs, fleuves, océans, déserts et plaques de la planète."
+  },
+  {
+    "id": "villes-france",
+    "nom": "Villes de France",
+    "emoji": "⚜️",
+    "categorie": "Culture générale",
+    "description": "Géographie, histoire et particularités des grandes villes françaises."
+  },
+  {
+    "id": "mythologie",
+    "nom": "Mythologie",
+    "emoji": "🏛️",
+    "categorie": "Culture générale",
+    "description": "Dieux et héros de la Grèce, de Rome, du Nord et de l'Égypte."
+  },
+  {
+    "id": "films-80",
+    "nom": "Films des années 1980",
+    "emoji": "🎬",
+    "categorie": "Cinéma",
+    "description": "Les blockbusters et cultes de la décennie 1980-1989."
+  },
+  {
+    "id": "films-90",
+    "nom": "Films des années 1990",
+    "emoji": "🎞️",
+    "categorie": "Cinéma",
+    "description": "Les grands films de la décennie 1990-1999."
+  },
+  {
+    "id": "films-2000",
+    "nom": "Films des années 2000",
+    "emoji": "🎥",
+    "categorie": "Cinéma",
+    "description": "Les grands films de la décennie 2000-2009."
+  },
+  {
+    "id": "films-2010",
+    "nom": "Films des années 2010",
+    "emoji": "🍿",
+    "categorie": "Cinéma",
+    "description": "Les grands films de la décennie 2010-2019."
+  },
+  {
+    "id": "histoire-france",
+    "nom": "Histoire de France",
+    "emoji": "⚜️",
+    "categorie": "Histoire",
+    "description": "Des rois francs à la République : grandes dates et figures."
+  },
+  {
+    "id": "maths",
+    "nom": "Mathématiques",
+    "emoji": "➗",
+    "categorie": "Sciences",
+    "description": "Arithmétique, géométrie, algèbre et analyse : du calcul mental aux grands théorèmes."
+  },
+  {
+    "id": "chimie",
+    "nom": "Chimie",
+    "emoji": "🧪",
+    "categorie": "Sciences",
+    "description": "Atomes, molécules, réactions et tableau périodique : de l'eau aux gaz nobles."
+  },
+  {
+    "id": "biologie",
+    "nom": "Biologie",
+    "emoji": "🧬",
+    "categorie": "Sciences",
+    "description": "Cellules, ADN, corps humain et monde vivant : des bases à la génétique."
+  },
+  {
+    "id": "physique",
+    "nom": "Physique",
+    "emoji": "⚛️",
+    "categorie": "Sciences",
+    "description": "Forces, énergie, électricité, lumière et physique quantique : des lois de Newton à Einstein."
+  },
+  {
+    "id": "astronomie",
+    "nom": "Astronomie",
+    "emoji": "🔭",
+    "categorie": "Sciences",
+    "description": "Planètes, étoiles, galaxies et conquête spatiale : du système solaire aux trous noirs."
+  },
+  {
+    "id": "geologie",
+    "nom": "Géologie",
+    "emoji": "🪨",
+    "categorie": "Sciences",
+    "description": "Roches, minéraux, volcans, séismes et tectonique des plaques : la structure et l'histoire de la Terre."
+  },
+  {
+    "id": "ecologie",
+    "nom": "Écologie & climat",
+    "emoji": "🌱",
+    "categorie": "Sciences",
+    "description": "Climat, biodiversité, énergies renouvelables et pollution : comprendre l'environnement et le défi du réchauffement."
+  },
+  {
+    "id": "antiquite",
+    "nom": "Antiquité",
+    "emoji": "🏛️",
+    "categorie": "Histoire",
+    "description": "Égypte, Grèce, Rome et Perse : civilisations, batailles et grands personnages."
+  },
+  {
+    "id": "automobile",
+    "nom": "Automobile",
+    "emoji": "🚗",
+    "categorie": "Automobile",
+    "description": "Marques, mécanique et histoire de la voiture : du moteur à l'électrique."
+  },
+  {
+    "id": "windows",
+    "nom": "Windows",
+    "emoji": "🪟",
+    "categorie": "Systèmes d'exploitation",
+    "description": "Le système d'exploitation de Microsoft : interface, raccourcis et coulisses."
+  },
+  {
+    "id": "android",
+    "nom": "Android",
+    "emoji": "📱",
+    "categorie": "Systèmes d'exploitation",
+    "description": "Le système mobile de Google fondé sur Linux : composants, développement et écosystème."
+  },
+  {
+    "id": "grammaire",
+    "nom": "Grammaire",
+    "emoji": "✏️",
+    "categorie": "Langue française",
+    "description": "Natures et fonctions, accords, conjugaison et analyse de la phrase, comme en cours de français."
+  },
+  {
+    "id": "conjugaison",
+    "nom": "Conjugaison",
+    "emoji": "🕰️",
+    "categorie": "Langue française",
+    "description": "Temps, modes et groupes : conjuguer les verbes du présent au subjonctif, accords du participe passé inclus."
+  },
+  {
+    "id": "orthographe",
+    "nom": "Orthographe",
+    "emoji": "✒️",
+    "categorie": "Langue française",
+    "description": "Homophones, accents, consonnes doubles et pluriels difficiles : écrire les mots sans faute."
+  },
+  {
+    "id": "bande-dessinee",
+    "nom": "Bande dessinée",
+    "emoji": "💬",
+    "categorie": "Culture geek",
+    "description": "Le 9e art : héros franco-belges, comics américains et grands auteurs."
+  },
+  {
+    "id": "cybersecurite",
+    "nom": "Cybersécurité",
+    "emoji": "🔒",
+    "categorie": "Cybersécurité",
+    "description": "Mots de passe, hameçonnage, chiffrement et menaces : protéger ses données et ses systèmes."
+  },
+  {
+    "id": "reseaux",
+    "nom": "Réseaux",
+    "emoji": "🌐",
+    "categorie": "Réseaux & Internet",
+    "description": "Adresses IP, DNS, TCP/IP, Wi-Fi et routage : comment les machines communiquent."
+  },
+  {
+    "id": "science-fiction",
+    "nom": "Science-fiction (littérature)",
+    "emoji": "🚀",
+    "categorie": "Littérature",
+    "description": "Romans, auteurs et univers de la SF : d'Asimov à Dune, des classiques au cyberpunk."
+  },
+  {
+    "id": "litterature-aventure",
+    "nom": "Littérature d'aventure",
+    "emoji": "🧭",
+    "categorie": "Littérature",
+    "description": "Pirates, explorations et héros : de Robinson Crusoé aux mousquetaires, les grands romans d'aventures."
+  },
+  {
+    "id": "finance",
+    "nom": "Finance",
+    "emoji": "💰",
+    "categorie": "Économie & Finance",
+    "description": "Bourse, épargne, crédit et marchés : actions, obligations, taux et placements expliqués simplement."
   }
 ]

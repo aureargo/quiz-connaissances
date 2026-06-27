@@ -1,0 +1,72 @@
+[
+  {
+    "id": "geologie-f1",
+    "enonce": "Qu'étudie principalement la géologie ?",
+    "choix": ["les étoiles et les planètes", "la Terre et les roches", "les plantes et les animaux", "le climat et les nuages"],
+    "bonneReponse": 1,
+    "explication": "La géologie est la science qui étudie la Terre : sa structure, ses roches, ses minéraux et leur formation. L'étude des astres relève de l'astronomie, celle du vivant de la biologie."
+  },
+  {
+    "id": "geologie-f2",
+    "enonce": "Comment appelle-t-on la roche en fusion lorsqu'elle se trouve encore sous la surface ?",
+    "choix": ["le magma", "la lave", "le sable", "le charbon"],
+    "bonneReponse": 0,
+    "explication": "Sous terre, la roche fondue s'appelle le magma. Une fois qu'elle sort d'un volcan et coule à l'air libre, on lui donne le nom de lave."
+  },
+  {
+    "id": "geologie-f3",
+    "enonce": "Quelle est la matière naturelle la plus dure que l'on connaisse ?",
+    "choix": ["le diamant", "le quartz", "le fer", "le granite"],
+    "bonneReponse": 0,
+    "explication": "Le diamant, formé de carbone sous très haute pression, est le minéral naturel le plus dur : il raye tous les autres et n'est rayé par aucun. C'est le sommet de l'échelle de dureté."
+  },
+  {
+    "id": "geologie-f4",
+    "enonce": "Qu'est-ce qui provoque la plupart des tremblements de terre ?",
+    "choix": ["les marées de l'océan", "le mouvement des plaques tectoniques", "le vent dans les montagnes", "la rotation de la Lune"],
+    "bonneReponse": 1,
+    "explication": "La surface de la Terre est découpée en grandes plaques qui se déplacent lentement. Quand elles frottent ou se bloquent l'une contre l'autre, l'énergie libérée provoque un séisme."
+  },
+  {
+    "id": "geologie-f5",
+    "enonce": "Comment nomme-t-on l'ouverture au sommet d'un volcan par laquelle sort la lave ?",
+    "choix": ["le cratère", "la faille", "la dune", "la grotte"],
+    "bonneReponse": 0,
+    "explication": "Le cratère est la dépression au sommet du volcan d'où jaillissent lave, cendres et gaz. Une faille est une cassure dans la roche, sans rapport direct avec le sommet du volcan."
+  },
+  {
+    "id": "geologie-f6",
+    "enonce": "Quelle est la couche la plus externe de la Terre, celle sur laquelle nous vivons ?",
+    "choix": ["le noyau", "le manteau", "la croûte", "le magma"],
+    "bonneReponse": 2,
+    "explication": "La croûte est la fine couche solide de surface, sous nos pieds. En dessous se trouvent le manteau, puis le noyau, de plus en plus chauds à mesure que l'on s'enfonce."
+  },
+  {
+    "id": "geologie-f7",
+    "enonce": "Quel métal compose en grande partie le noyau de la Terre ?",
+    "choix": ["le cuivre", "l'or", "le fer", "l'aluminium"],
+    "bonneReponse": 2,
+    "explication": "Le noyau terrestre est surtout fait de fer, avec un peu de nickel. Ce fer en mouvement engendre le champ magnétique qui protège la planète et oriente les boussoles."
+  },
+  {
+    "id": "geologie-f8",
+    "enonce": "Comment appelle-t-on l'usure lente des roches et des sols par l'eau, le vent ou la glace ?",
+    "choix": ["l'érosion", "l'éruption", "la condensation", "la fusion"],
+    "bonneReponse": 0,
+    "explication": "L'érosion est le grignotage progressif des reliefs par les éléments naturels. C'est elle qui creuse les vallées, arrondit les galets et sculpte les côtes au fil du temps."
+  },
+  {
+    "id": "geologie-f9",
+    "enonce": "Quel appareil enregistre les vibrations d'un tremblement de terre ?",
+    "choix": ["le baromètre", "le sismographe", "le thermomètre", "le télescope"],
+    "bonneReponse": 1,
+    "explication": "Le sismographe détecte et trace les ondes qui parcourent le sol lors d'un séisme. Le baromètre mesure la pression de l'air, le thermomètre la température."
+  },
+  {
+    "id": "geologie-f10",
+    "enonce": "Le charbon, le pétrole et le gaz naturel sont des combustibles dits...",
+    "choix": ["fossiles", "nucléaires", "solaires", "synthétiques"],
+    "bonneReponse": 0,
+    "explication": "On les appelle combustibles fossiles car ils proviennent de restes d'êtres vivants enfouis et transformés pendant des millions d'années dans le sous-sol."
+  }
+]

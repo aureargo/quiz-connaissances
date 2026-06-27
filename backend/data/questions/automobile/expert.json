@@ -1,0 +1,72 @@
+[
+  {
+    "id": "automobile-e1",
+    "enonce": "Qui a breveté en 1886 ce qui est considéré comme la première automobile à moteur à combustion ?",
+    "choix": ["Karl Benz", "Henry Ford", "Rudolf Diesel", "Armand Peugeot"],
+    "bonneReponse": 0,
+    "explication": "Karl Benz dépose en 1886 le brevet de sa Patent-Motorwagen, un tricycle à moteur à essence, généralement considéré comme la première automobile moderne."
+  },
+  {
+    "id": "automobile-e2",
+    "enonce": "Quel ingénieur a donné son nom au moteur à allumage par compression ?",
+    "choix": ["Nikolaus Otto", "Rudolf Diesel", "Felix Wankel", "Ettore Bugatti"],
+    "bonneReponse": 1,
+    "explication": "Rudolf Diesel brevète en 1892 son moteur à allumage par compression, au meilleur rendement énergétique. Nikolaus Otto, lui, a perfectionné le moteur à essence à quatre temps."
+  },
+  {
+    "id": "automobile-e3",
+    "enonce": "Quelle particularité distingue le moteur conçu par Felix Wankel ?",
+    "choix": ["un rotor triangulaire en rotation", "l'absence totale de cylindres", "deux vilebrequins contrarotatifs", "une combustion sans carburant"],
+    "bonneReponse": 0,
+    "explication": "Le moteur Wankel utilise un rotor triangulaire tournant dans une chambre en forme d'épitrochoïde, au lieu de pistons alternatifs. Mazda l'a popularisé sur les RX-7 et RX-8."
+  },
+  {
+    "id": "automobile-e4",
+    "enonce": "Que désigne le « couple » moteur, exprimé en newtons-mètres ?",
+    "choix": ["la vitesse de pointe du véhicule", "la force de rotation disponible sur l'arbre moteur", "la consommation aux 100 km", "le poids total du moteur"],
+    "bonneReponse": 1,
+    "explication": "Le couple mesure l'effort de rotation transmis par le moteur ; c'est lui qui donne la sensation de reprise. La puissance est le produit du couple par le régime de rotation."
+  },
+  {
+    "id": "automobile-e5",
+    "enonce": "Dans une boîte de vitesses manuelle, à quoi servent les synchroniseurs ?",
+    "choix": ["bloquer le différentiel en virage", "égaliser la vitesse des pignons avant l'engagement du rapport", "augmenter le rapport final de transmission", "couper l'injection lors du rétrogradage"],
+    "bonneReponse": 1,
+    "explication": "Les synchros alignent la vitesse de rotation du pignon et de l'arbre avant le crabotage, ce qui évite les craquements lors du passage des vitesses."
+  },
+  {
+    "id": "automobile-e6",
+    "enonce": "Quel rôle joue le différentiel sur un essieu moteur ?",
+    "choix": ["permettre aux roues de tourner à des vitesses différentes en virage", "transformer le mouvement alternatif en rotation", "réguler la pression des pneus", "synchroniser l'allumage des bougies"],
+    "bonneReponse": 0,
+    "explication": "En courbe, la roue extérieure parcourt plus de distance que la roue intérieure. Le différentiel répartit le couple tout en autorisant cette différence de vitesse, évitant usure et à-coups."
+  },
+  {
+    "id": "automobile-e7",
+    "enonce": "Que désigne un rapport air/carburant « stœchiométrique » (environ 14,7:1) pour un moteur à essence ?",
+    "choix": ["la proportion idéale pour une combustion complète", "le rapport de compression maximal admissible", "le ratio entre couple et puissance", "la part de gaz recyclés à l'admission"],
+    "bonneReponse": 0,
+    "explication": "À environ 14,7 grammes d'air pour 1 gramme d'essence, tout le carburant brûle théoriquement sans excès d'air. La sonde lambda surveille ce rapport pour optimiser dépollution et rendement."
+  },
+  {
+    "id": "automobile-e8",
+    "enonce": "Quel dispositif suralimente le moteur en exploitant l'énergie des gaz d'échappement ?",
+    "choix": ["le compresseur volumétrique", "le turbocompresseur", "le collecteur d'admission", "la vanne EGR"],
+    "bonneReponse": 1,
+    "explication": "Le turbocompresseur entraîne une turbine grâce aux gaz d'échappement, laquelle comprime l'air d'admission. Le compresseur volumétrique, lui, est entraîné mécaniquement par le moteur."
+  },
+  {
+    "id": "automobile-e9",
+    "enonce": "Quelle norme européenne fixe les limites d'émissions polluantes des véhicules neufs ?",
+    "choix": ["la norme ISO 9001", "la norme Euro", "la norme NCAP", "la norme RoHS"],
+    "bonneReponse": 1,
+    "explication": "Les normes Euro (d'Euro 1 à Euro 7) plafonnent les émissions de CO, d'oxydes d'azote, d'hydrocarbures et de particules. L'Euro NCAP, à ne pas confondre, évalue elle la sécurité aux chocs."
+  },
+  {
+    "id": "automobile-e10",
+    "enonce": "Sur une voiture électrique, que désigne le freinage « régénératif » ?",
+    "choix": ["freiner uniquement avec les disques avant", "récupérer l'énergie de décélération pour recharger la batterie", "couper le moteur sous une certaine vitesse", "augmenter la pression hydraulique des étriers"],
+    "bonneReponse": 1,
+    "explication": "En décélération, le moteur électrique fonctionne en génératrice : il transforme l'énergie cinétique en électricité renvoyée à la batterie, tout en ralentissant la voiture."
+  }
+]

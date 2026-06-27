@@ -1,0 +1,72 @@
+[
+  {
+    "id": "bd-e1",
+    "enonce": "Quel auteur américain a popularisé le terme « roman graphique » avec « Un contrat avec Dieu » (1978) ?",
+    "choix": ["Will Eisner", "Alan Moore", "Robert Crumb", "Art Spiegelman"],
+    "bonneReponse": 0,
+    "explication": "Will Eisner a imposé l'expression « graphic novel » pour faire reconnaître la BD comme une œuvre adulte et littéraire. Le prix BD le plus prestigieux des États-Unis porte d'ailleurs son nom."
+  },
+  {
+    "id": "bd-e2",
+    "enonce": "Quelle bande dessinée d'Art Spiegelman sur la Shoah a reçu le prix Pulitzer en 1992 ?",
+    "choix": ["Maus", "Persepolis", "Watchmen", "Blacksad"],
+    "bonneReponse": 0,
+    "explication": "Dans « Maus », Spiegelman raconte la déportation de son père en représentant les Juifs en souris et les nazis en chats. C'est la seule BD à avoir reçu un prix Pulitzer."
+  },
+  {
+    "id": "bd-e3",
+    "enonce": "Qui a écrit le scénario de « Watchmen » (1986), dessiné par Dave Gibbons ?",
+    "choix": ["Alan Moore", "Frank Miller", "Neil Gaiman", "Grant Morrison"],
+    "bonneReponse": 0,
+    "explication": "Le scénariste britannique Alan Moore a déconstruit le mythe du super-héros dans « Watchmen ». L'œuvre est régulièrement citée comme l'un des sommets du comic book moderne."
+  },
+  {
+    "id": "bd-e4",
+    "enonce": "Quel auteur genevois du XIXe siècle est souvent considéré comme un pionnier de la bande dessinée ?",
+    "choix": ["Rodolphe Töpffer", "Gustave Doré", "Christophe", "Caran d'Ache"],
+    "bonneReponse": 0,
+    "explication": "Dès les années 1830, Rodolphe Töpffer publie des « histoires en estampes » mêlant dessins et texte en séquence, comme « M. Vieux Bois ». On le tient pour un ancêtre de la BD."
+  },
+  {
+    "id": "bd-e5",
+    "enonce": "Sous quel pseudonyme Jean Giraud signait-il ses œuvres de science-fiction comme « Arzach » et « L'Incal » ?",
+    "choix": ["Mœbius", "Druillet", "Bilal", "Caza"],
+    "bonneReponse": 0,
+    "explication": "Jean Giraud signait « Gir » ses westerns (Blueberry) et « Mœbius » sa SF onirique. Son influence sur la BD et le cinéma (Alien, Tron, Le Cinquième Élément) est immense."
+  },
+  {
+    "id": "bd-e6",
+    "enonce": "Qui a scénarisé « L'Incal », chef-d'œuvre de science-fiction dessiné par Mœbius ?",
+    "choix": ["Alejandro Jodorowsky", "Jean Van Hamme", "Pierre Christin", "Enki Bilal"],
+    "bonneReponse": 0,
+    "explication": "Le cinéaste et scénariste Alejandro Jodorowsky a imaginé l'univers foisonnant de « L'Incal », né en partie de son projet avorté d'adaptation de « Dune ». Mœbius en a assuré le dessin."
+  },
+  {
+    "id": "bd-e7",
+    "enonce": "Quel personnage de la presse américaine (1895) est souvent cité parmi les toutes premières bandes dessinées ?",
+    "choix": ["The Yellow Kid", "Little Nemo", "Krazy Kat", "Popeye"],
+    "bonneReponse": 0,
+    "explication": "« The Yellow Kid » de Richard Outcault, gamin en chemise jaune des bas-fonds de New York, est un jalon des débuts de la BD de presse, en pleine guerre des journaux Pulitzer-Hearst."
+  },
+  {
+    "id": "bd-e8",
+    "enonce": "Quel auteur italien a créé le marin aventurier « Corto Maltese » ?",
+    "choix": ["Hugo Pratt", "Milo Manara", "Guido Crepax", "Sergio Toppi"],
+    "bonneReponse": 0,
+    "explication": "Hugo Pratt a créé en 1967 Corto Maltese, marin romantique et libre parcourant le monde au début du XXe siècle. Son trait élégant a profondément marqué la BD d'auteur européenne."
+  },
+  {
+    "id": "bd-e9",
+    "enonce": "Quel scénariste belge est l'auteur de « Thorgal », « XIII » et « Largo Winch » ?",
+    "choix": ["Jean Van Hamme", "Pierre Christin", "Jean Dufaux", "Yves Sente"],
+    "bonneReponse": 0,
+    "explication": "Jean Van Hamme est l'un des scénaristes les plus populaires de la BD franco-belge. Il a notamment lancé « Thorgal » (avec Rosiński), « XIII » (avec Vance) et « Largo Winch » (avec Francq)."
+  },
+  {
+    "id": "bd-e10",
+    "enonce": "Quel magazine fondé en 1959, où débuta Astérix, a révolutionné la BD française ?",
+    "choix": ["Pilote", "Tintin", "Spirou", "Métal Hurlant"],
+    "bonneReponse": 0,
+    "explication": "Le magazine « Pilote », lancé en 1959, publie dès son premier numéro la première aventure d'Astérix. Sous l'impulsion de Goscinny, il a modernisé la BD et lancé de nombreux auteurs."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "films-2010-m1",
+    "enonce": "Quel film français en noir et blanc, et quasi muet, a remporté l'Oscar du meilleur film en 2012 ?",
+    "choix": ["The Artist", "Intouchables", "De rouille et d'os", "Polisse"],
+    "bonneReponse": 0,
+    "explication": "« The Artist » de Michel Hazanavicius, avec Jean Dujardin, a remporté cinq Oscars dont celui du meilleur acteur."
+  },
+  {
+    "id": "films-2010-m2",
+    "enonce": "La création de quel réseau social est racontée dans « The Social Network » (2010) ?",
+    "choix": ["Twitter", "Facebook", "MySpace", "LinkedIn"],
+    "bonneReponse": 1,
+    "explication": "Le film de David Fincher retrace la fondation de Facebook par Mark Zuckerberg. Le scénario est signé Aaron Sorkin."
+  },
+  {
+    "id": "films-2010-m3",
+    "enonce": "Quelle actrice se retrouve seule à la dérive dans l'espace dans « Gravity » (2013) ?",
+    "choix": ["Jessica Chastain", "Anne Hathaway", "Sandra Bullock", "Amy Adams"],
+    "bonneReponse": 2,
+    "explication": "Sandra Bullock incarne le Dr Ryan Stone. Le film d'Alfonso Cuarón a remporté sept Oscars, dont celui de la meilleure réalisation."
+  },
+  {
+    "id": "films-2010-m4",
+    "enonce": "Quel réalisateur a signé le western « Django Unchained » (2012) ?",
+    "choix": ["Clint Eastwood", "Robert Rodriguez", "Paul Thomas Anderson", "Quentin Tarantino"],
+    "bonneReponse": 3,
+    "explication": "Quentin Tarantino réalise ce western sur l'esclavage. Christoph Waltz y remporte son deuxième Oscar du meilleur second rôle."
+  },
+  {
+    "id": "films-2010-m5",
+    "enonce": "Quel instrument le jeune héros de « Whiplash » (2014) cherche-t-il à maîtriser ?",
+    "choix": ["Le piano", "La batterie", "Le saxophone", "La trompette"],
+    "bonneReponse": 1,
+    "explication": "Andrew rêve de devenir un grand batteur de jazz, sous la férule d'un professeur tyrannique joué par J.K. Simmons, oscarisé pour ce rôle."
+  },
+  {
+    "id": "films-2010-m6",
+    "enonce": "Quelle particularité technique caractérise le film « Birdman » (2014) ?",
+    "choix": ["Il est entièrement muet", "Il paraît filmé d'un seul plan", "Il est en noir et blanc", "Il est filmé à l'envers"],
+    "bonneReponse": 1,
+    "explication": "Le film d'Alejandro González Iñárritu donne l'illusion d'un unique plan-séquence. Michael Keaton y joue un acteur sur le déclin."
+  },
+  {
+    "id": "films-2010-m7",
+    "enonce": "Quel réalisateur, au style très symétrique et coloré, a signé « The Grand Budapest Hotel » (2014) ?",
+    "choix": ["Tim Burton", "Spike Jonze", "Sofia Coppola", "Wes Anderson"],
+    "bonneReponse": 3,
+    "explication": "Wes Anderson est connu pour ses cadrages symétriques et ses palettes pastel. Ralph Fiennes y incarne le concierge Gustave H."
+  },
+  {
+    "id": "films-2010-m8",
+    "enonce": "« Get Out » (2017), film d'horreur sur le racisme, marque les débuts de quel réalisateur ?",
+    "choix": ["Ari Aster", "Robert Eggers", "Jordan Peele", "M. Night Shyamalan"],
+    "bonneReponse": 2,
+    "explication": "Jordan Peele, ancien humoriste, signe avec « Get Out » son premier film et remporte l'Oscar du meilleur scénario original."
+  },
+  {
+    "id": "films-2010-m9",
+    "enonce": "La vie de quel chanteur est au cœur du film « Bohemian Rhapsody » (2018) ?",
+    "choix": ["Elton John", "David Bowie", "Freddie Mercury", "Mick Jagger"],
+    "bonneReponse": 2,
+    "explication": "Le film retrace la carrière de Freddie Mercury, chanteur du groupe Queen. Rami Malek remporte l'Oscar du meilleur acteur pour ce rôle."
+  },
+  {
+    "id": "films-2010-m10",
+    "enonce": "Dans « Premier Contact » (Arrival, 2016) de Denis Villeneuve, quelle est la spécialité de l'héroïne ?",
+    "choix": ["L'astrophysique", "La médecine", "La linguistique", "L'informatique"],
+    "bonneReponse": 2,
+    "explication": "Louise Banks (Amy Adams) est linguiste, chargée de déchiffrer le langage d'extraterrestres venus sur Terre."
+  }
+]

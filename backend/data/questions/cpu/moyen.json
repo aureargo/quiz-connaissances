@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cpu-m1",
+    "enonce": "Quelle architecture de processeurs équipe la majorité des smartphones et les puces Apple Silicon ?",
+    "choix": ["ARM", "x86", "MIPS", "SPARC"],
+    "bonneReponse": 0,
+    "explication": "L'architecture ARM, sobre en énergie, domine le mobile et équipe les puces Apple M. Les PC traditionnels utilisent plutôt l'architecture x86 d'Intel et AMD."
+  },
+  {
+    "id": "cpu-m2",
+    "enonce": "Quelles sont les trois étapes du cycle fondamental d'exécution d'une instruction ?",
+    "choix": ["charger, décoder, exécuter", "compiler, lier, lancer", "lire, trier, afficher", "ouvrir, modifier, enregistrer"],
+    "bonneReponse": 0,
+    "explication": "Le cycle d'instruction enchaîne le chargement (fetch), le décodage (decode) puis l'exécution (execute) de chaque instruction, en boucle."
+  },
+  {
+    "id": "cpu-m3",
+    "enonce": "Qu'est-ce que le « pipeline » d'un processeur ?",
+    "choix": ["traiter plusieurs instructions en parallèle à des étapes différentes", "relier le CPU à la carte graphique", "stocker les résultats sur le disque", "augmenter la tension d'alimentation"],
+    "bonneReponse": 0,
+    "explication": "Le pipeline découpe l'exécution en étapes : pendant qu'une instruction est exécutée, la suivante est décodée et une autre chargée. Cela augmente le débit, comme une chaîne de montage."
+  },
+  {
+    "id": "cpu-m4",
+    "enonce": "Que permet la technologie « Hyper-Threading » (SMT) ?",
+    "choix": ["exécuter deux threads par cœur physique", "doubler la fréquence d'horloge", "ajouter de la mémoire vive", "refroidir le processeur plus vite"],
+    "bonneReponse": 0,
+    "explication": "Le SMT (Simultaneous Multithreading) fait apparaître chaque cœur physique comme deux cœurs logiques, ce qui exploite mieux les unités de calcul quand un thread est en attente."
+  },
+  {
+    "id": "cpu-m5",
+    "enonce": "Que mesure le « TDP » d'un processeur ?",
+    "choix": ["la chaleur à dissiper, en watts", "la quantité de mémoire cache", "le nombre de cœurs", "la vitesse du bus mémoire"],
+    "bonneReponse": 0,
+    "explication": "Le TDP (Thermal Design Power) indique la puissance thermique, en watts, que le refroidissement doit pouvoir évacuer. Il donne aussi un ordre d'idée de la consommation."
+  },
+  {
+    "id": "cpu-m6",
+    "enonce": "Quel avantage principal un processeur 64 bits offre-t-il par rapport à un 32 bits ?",
+    "choix": ["adresser beaucoup plus de mémoire vive", "consommer deux fois moins d'énergie", "afficher deux fois plus de couleurs", "se passer de système de refroidissement"],
+    "bonneReponse": 0,
+    "explication": "Un CPU 32 bits ne peut adresser qu'environ 4 Go de RAM, là où un 64 bits en gère théoriquement des quantités énormes. Ses registres manipulent aussi des nombres plus grands."
+  },
+  {
+    "id": "cpu-m7",
+    "enonce": "Que signifie l'acronyme « RISC » ?",
+    "choix": ["Reduced Instruction Set Computer", "Random Internal Signal Controller", "Rapid Integrated System Cache", "Remote Instruction Sequence Code"],
+    "bonneReponse": 0,
+    "explication": "Un processeur RISC (jeu d'instructions réduit) privilégie des instructions simples et rapides, à l'inverse du CISC qui en propose de plus nombreuses et complexes. ARM est de type RISC."
+  },
+  {
+    "id": "cpu-m8",
+    "enonce": "À quoi sert le « socket » sur une carte mère ?",
+    "choix": ["accueillir et connecter le processeur", "brancher l'écran", "stocker le système d'exploitation", "filtrer le courant électrique"],
+    "bonneReponse": 0,
+    "explication": "Le socket est le connecteur dans lequel s'insère le CPU. Chaque famille de processeurs exige un type de socket précis, d'où l'importance de la compatibilité avec la carte mère."
+  },
+  {
+    "id": "cpu-m9",
+    "enonce": "Qu'est-ce que l'« overclocking » d'un processeur ?",
+    "choix": ["augmenter sa fréquence au-delà de la valeur d'usine", "réduire le nombre de cœurs actifs", "réinstaller son pilote", "vider sa mémoire cache"],
+    "bonneReponse": 0,
+    "explication": "L'overclocking pousse la fréquence du CPU au-delà des réglages d'origine pour gagner en performances, au prix d'une chaleur et d'une consommation accrues — et d'un risque d'instabilité."
+  },
+  {
+    "id": "cpu-m10",
+    "enonce": "Parmi les caches L1, L2 et L3, lequel est le plus rapide et le plus proche du cœur ?",
+    "choix": ["le cache L1", "le cache L2", "le cache L3", "ils ont tous la même vitesse"],
+    "bonneReponse": 0,
+    "explication": "Le cache L1 est le plus petit, le plus rapide et le plus proche du cœur ; L2 est intermédiaire ; L3 est plus grand, plus lent, et souvent partagé entre les cœurs."
+  }
+]

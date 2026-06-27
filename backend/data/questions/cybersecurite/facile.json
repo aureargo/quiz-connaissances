@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cybersecurite-f1",
+    "enonce": "Parmi ces mots de passe, lequel est le plus difficile à deviner ?",
+    "choix": ["123456", "azerty", "motdepasse", "Tr7%kLm9$Qp"],
+    "bonneReponse": 3,
+    "explication": "Un bon mot de passe est long et mélange majuscules, minuscules, chiffres et symboles. Les suites évidentes comme « 123456 » ou « azerty » figurent en tête des mots de passe les plus piratés au monde."
+  },
+  {
+    "id": "cybersecurite-f2",
+    "enonce": "Vous recevez un e-mail urgent vous réclamant votre mot de passe bancaire. De quoi s'agit-il probablement ?",
+    "choix": ["D'un hameçonnage", "D'une sauvegarde", "D'une mise à jour", "D'un pare-feu"],
+    "bonneReponse": 0,
+    "explication": "L'hameçonnage (« phishing ») consiste à se faire passer pour un organisme de confiance afin de soutirer des informations. Aucune banque sérieuse ne demande jamais votre mot de passe par e-mail."
+  },
+  {
+    "id": "cybersecurite-f3",
+    "enonce": "À quoi sert principalement un logiciel antivirus ?",
+    "choix": ["À accélérer Internet", "À détecter les logiciels malveillants", "À sauvegarder les fichiers", "À ranger les dossiers"],
+    "bonneReponse": 1,
+    "explication": "Un antivirus surveille le système pour repérer, bloquer et supprimer les programmes malveillants. Il ne remplace ni les sauvegardes ni la prudence de l'utilisateur."
+  },
+  {
+    "id": "cybersecurite-f4",
+    "enonce": "Que symbolise le petit cadenas affiché à gauche de l'adresse d'un site web ?",
+    "choix": ["Le site est gratuit", "Le site est officiel", "La connexion est chiffrée", "Le site est rapide"],
+    "bonneReponse": 2,
+    "explication": "Le cadenas indique une connexion HTTPS chiffrée entre votre navigateur et le site, illisible pour un tiers. Attention : il garantit la confidentialité, pas l'honnêteté du site."
+  },
+  {
+    "id": "cybersecurite-f5",
+    "enonce": "Que fait la double authentification (2FA) en plus du mot de passe ?",
+    "choix": ["Elle demande une seconde preuve", "Elle change le mot de passe", "Elle chiffre le disque dur", "Elle bloque la publicité"],
+    "bonneReponse": 0,
+    "explication": "La double authentification exige une seconde preuve d'identité, par exemple un code reçu par SMS ou via une application. Même volé, le mot de passe seul ne suffit alors plus à se connecter."
+  },
+  {
+    "id": "cybersecurite-f6",
+    "enonce": "Pourquoi est-il important d'installer les mises à jour de ses logiciels ?",
+    "choix": ["Pour changer les couleurs", "Pour corriger des failles de sécurité", "Pour libérer de la mémoire", "Pour augmenter le son"],
+    "bonneReponse": 1,
+    "explication": "Les mises à jour comblent souvent des failles de sécurité découvertes après la sortie du logiciel. Repousser une mise à jour, c'est laisser une porte ouverte aux attaquants."
+  },
+  {
+    "id": "cybersecurite-f7",
+    "enonce": "Comment appelle-t-on un programme conçu pour nuire à un ordinateur ?",
+    "choix": ["Un pilote", "Un navigateur", "Un maliciel", "Un éditeur"],
+    "bonneReponse": 2,
+    "explication": "Un maliciel (« malware ») désigne tout logiciel malveillant : virus, ver, cheval de Troie, espiogiciel… Son but est de nuire, espionner ou prendre le contrôle de la machine."
+  },
+  {
+    "id": "cybersecurite-f8",
+    "enonce": "Quelle est la meilleure protection contre la perte de ses fichiers ?",
+    "choix": ["Faire des sauvegardes régulières", "Éteindre l'ordinateur la nuit", "Vider la corbeille souvent", "Changer de fond d'écran"],
+    "bonneReponse": 0,
+    "explication": "Une sauvegarde régulière sur un support séparé permet de récupérer ses données après une panne, un vol ou une attaque. C'est la meilleure parade, notamment face aux rançongiciels."
+  },
+  {
+    "id": "cybersecurite-f9",
+    "enonce": "Quel comportement est le plus risqué sur un réseau Wi-Fi public et gratuit ?",
+    "choix": ["Lire les actualités", "Consulter la météo", "Se connecter à sa banque", "Écouter de la musique"],
+    "bonneReponse": 2,
+    "explication": "Sur un Wi-Fi public, un tiers peut tenter d'intercepter le trafic. Mieux vaut éviter les sites sensibles comme la banque, ou passer par un VPN qui chiffre la connexion."
+  },
+  {
+    "id": "cybersecurite-f10",
+    "enonce": "Que faut-il faire d'un mot de passe une fois qu'on l'a créé ?",
+    "choix": ["Le coller sur l'écran", "L'utiliser sur tous ses comptes", "Le garder secret", "Le partager par e-mail"],
+    "bonneReponse": 2,
+    "explication": "Un mot de passe doit rester secret et propre à chaque compte. Le réutiliser partout permet, s'il fuite d'un site, d'ouvrir tous les autres : c'est le « bourrage d'identifiants »."
+  }
+]

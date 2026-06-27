@@ -1,0 +1,72 @@
+[
+  {
+    "id": "html-e1",
+    "enonce": "Que fait l'attribut `defer` sur une balise `<script>` ?",
+    "choix": ["Il empêche le script de s'exécuter", "Il télécharge le script en parallèle et l'exécute après l'analyse du HTML", "Il exécute le script avant tout le reste de la page", "Il met le script en cache de façon permanente"],
+    "bonneReponse": 1,
+    "explication": "Avec `defer`, le script se télécharge sans bloquer l'analyse de la page, puis s'exécute juste avant `DOMContentLoaded`, dans l'ordre de déclaration. Contrairement à `async`, l'ordre est garanti."
+  },
+  {
+    "id": "html-e2",
+    "enonce": "À quoi sert l'élément `<template>` ?",
+    "choix": ["À créer un gabarit de page côté serveur", "À définir un thème CSS", "À déclarer un fragment inerte, non rendu, cloné ensuite en JavaScript", "À importer un autre fichier HTML"],
+    "bonneReponse": 2,
+    "explication": "Le contenu d'un `<template>` n'est ni affiché ni exécuté tant qu'on ne le clone pas via JavaScript (`content.cloneNode`). Idéal pour répéter une structure dynamiquement."
+  },
+  {
+    "id": "html-e3",
+    "enonce": "Que permet l'attribut `loading=\"lazy\"` sur une `<img>` ?",
+    "choix": ["Compresser l'image automatiquement", "Différer le chargement de l'image jusqu'à ce qu'elle approche de la zone visible", "Charger l'image en priorité absolue", "Afficher une version floue en attendant"],
+    "bonneReponse": 1,
+    "explication": "Le chargement paresseux (« lazy loading ») retarde le téléchargement des images hors écran jusqu'à ce que l'utilisateur s'en approche. Cela accélère le chargement initial de la page."
+  },
+  {
+    "id": "html-e4",
+    "enonce": "À quoi servent les attributs personnalisés `data-*` (ex. `data-id`) ?",
+    "choix": ["Stocker des données sur mesure, lisibles en JavaScript via `dataset`", "Importer des données depuis un serveur", "Valider automatiquement un formulaire", "Déclarer une feuille de style"],
+    "bonneReponse": 0,
+    "explication": "Les attributs `data-*` attachent des informations arbitraires à un élément sans casser le HTML valide. En JS, on les lit via `element.dataset.id`."
+  },
+  {
+    "id": "html-e5",
+    "enonce": "Quel couple d'éléments crée un bloc dépliable natif, sans JavaScript ?",
+    "choix": ["`<dialog>` et `<menu>`", "`<details>` et `<summary>`", "`<fieldset>` et `<legend>`", "`<figure>` et `<figcaption>`"],
+    "bonneReponse": 1,
+    "explication": "`<details>` crée une zone repliable et `<summary>` en donne le titre cliquable. Le navigateur gère l'ouverture/fermeture tout seul, sans une ligne de script."
+  },
+  {
+    "id": "html-e6",
+    "enonce": "À quoi sert l'attribut `aria-label` ?",
+    "choix": ["À styliser un élément", "À fournir une étiquette accessible aux lecteurs d'écran", "À traduire automatiquement le texte", "À masquer visuellement un élément"],
+    "bonneReponse": 1,
+    "explication": "`aria-label` donne un nom accessible à un élément dépourvu de texte visible (ex. un bouton avec une seule icône), pour les technologies d'assistance."
+  },
+  {
+    "id": "html-e7",
+    "enonce": "Quelle est la vocation de l'élément `<article>` ?",
+    "choix": ["Regrouper du contenu autonome, qui aurait du sens seul", "Créer systématiquement une colonne latérale", "Définir l'en-tête global du site", "Mettre du texte en italique"],
+    "bonneReponse": 0,
+    "explication": "Un `<article>` désigne un contenu indépendant et redistribuable (billet de blog, commentaire, fiche produit). Une `<section>`, elle, regroupe plutôt une partie thématique d'un tout."
+  },
+  {
+    "id": "html-e8",
+    "enonce": "Que fait l'attribut `contenteditable=\"true\"` ?",
+    "choix": ["Rend le contenu d'un élément modifiable directement par l'utilisateur", "Active uniquement la correction orthographique", "Verrouille un champ de formulaire", "Rend l'élément simplement cliquable"],
+    "bonneReponse": 0,
+    "explication": "`contenteditable` transforme n'importe quel élément (un `<div>`, par exemple) en zone éditable. C'est la base des éditeurs de texte enrichi dans le navigateur."
+  },
+  {
+    "id": "html-e9",
+    "enonce": "À quoi sert l'élément `<picture>` ?",
+    "choix": ["À recadrer une image", "À proposer plusieurs sources d'image selon le contexte (taille d'écran, format)", "À créer une galerie défilante", "À afficher une image en plein écran"],
+    "bonneReponse": 1,
+    "explication": "`<picture>` contient plusieurs `<source>` et un `<img>` de repli. Le navigateur choisit la meilleure image selon l'écran ou les formats supportés (WebP, AVIF…)."
+  },
+  {
+    "id": "html-e10",
+    "enonce": "Pourquoi ajouter `rel=\"noopener\"` à un lien ouvert avec `target=\"_blank\"` ?",
+    "choix": ["Pour ouvrir le lien plus rapidement", "Pour empêcher la page ouverte d'accéder à `window.opener` (sécurité)", "Pour mémoriser le lien dans l'historique", "Pour précharger la page de destination"],
+    "bonneReponse": 1,
+    "explication": "Sans `noopener`, la page cible peut manipuler la page d'origine via `window.opener` (risque de « tabnabbing »). Les navigateurs récents l'appliquent souvent par défaut, mais l'expliciter reste prudent."
+  }
+]

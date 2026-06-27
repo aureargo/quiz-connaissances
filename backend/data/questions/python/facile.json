@@ -1,0 +1,72 @@
+[
+  {
+    "id": "python-f1",
+    "enonce": "Quel mot-clé définit une fonction en Python ?",
+    "choix": ["func", "function", "def", "fn"],
+    "bonneReponse": 2,
+    "explication": "`def` introduit la définition d'une fonction : `def ma_fonction():`. C'est l'un des mots-clés réservés du langage."
+  },
+  {
+    "id": "python-f2",
+    "enonce": "Comment affiche-t-on du texte dans la console en Python 3 ?",
+    "choix": ["echo(\"texte\")", "console.log(\"texte\")", "println(\"texte\")", "print(\"texte\")"],
+    "bonneReponse": 3,
+    "explication": "`print()` est une fonction intégrée de Python 3. En Python 2, `print` était une instruction sans parenthèses."
+  },
+  {
+    "id": "python-f3",
+    "enonce": "Quel caractère introduit un commentaire sur une ligne en Python ?",
+    "choix": ["//", "#", "--", "/*"],
+    "bonneReponse": 1,
+    "explication": "Tout ce qui suit un `#` jusqu'à la fin de la ligne est ignoré par l'interpréteur. Python n'a pas de syntaxe dédiée au commentaire multiligne."
+  },
+  {
+    "id": "python-f4",
+    "enonce": "Quelle paire de symboles délimite une liste littérale ?",
+    "choix": ["des accolades", "des crochets", "des parenthèses", "des chevrons"],
+    "bonneReponse": 1,
+    "explication": "Une liste s'écrit entre crochets : `[1, 2, 3]`. Les accolades servent aux dictionnaires et ensembles, les parenthèses aux tuples."
+  },
+  {
+    "id": "python-f5",
+    "enonce": "Quelle est l'extension de fichier habituelle d'un script Python ?",
+    "choix": [".pt", ".pyt", ".py", ".pn"],
+    "bonneReponse": 2,
+    "explication": "Un module Python porte l'extension `.py`. Le bytecode compilé, lui, est stocké dans des fichiers `.pyc`."
+  },
+  {
+    "id": "python-f6",
+    "enonce": "Comment écrit-on la valeur booléenne « vrai » en Python ?",
+    "choix": ["true", "True", "TRUE", "Vrai"],
+    "bonneReponse": 1,
+    "explication": "Les booléens s'écrivent `True` et `False`, avec une majuscule initiale. Python est sensible à la casse : `true` n'est pas reconnu."
+  },
+  {
+    "id": "python-f7",
+    "enonce": "Quel mot-clé démarre une condition en Python ?",
+    "choix": ["when", "if", "case", "cond"],
+    "bonneReponse": 1,
+    "explication": "`if` teste une condition, suivi éventuellement de `elif` et `else`. Le bloc concerné est délimité par l'indentation, pas par des accolades."
+  },
+  {
+    "id": "python-f8",
+    "enonce": "Quelle fonction intégrée renvoie le nombre d'éléments d'une liste ?",
+    "choix": ["size()", "count()", "len()", "length()"],
+    "bonneReponse": 2,
+    "explication": "`len(ma_liste)` renvoie sa taille. La même fonction marche aussi sur les chaînes, les tuples et les dictionnaires."
+  },
+  {
+    "id": "python-f9",
+    "enonce": "Comment Python délimite-t-il les blocs de code (corps d'une fonction, d'une boucle…) ?",
+    "choix": ["par des accolades", "par l'indentation", "par des points-virgules", "par des balises begin/end"],
+    "bonneReponse": 1,
+    "explication": "L'indentation est syntaxiquement significative en Python : c'est elle qui définit les blocs. Une indentation incohérente provoque une erreur."
+  },
+  {
+    "id": "python-f10",
+    "enonce": "Quelle fonction lit une ligne saisie au clavier par l'utilisateur ?",
+    "choix": ["read()", "scan()", "input()", "gets()"],
+    "bonneReponse": 2,
+    "explication": "`input()` met le programme en pause et renvoie le texte saisi sous forme de chaîne. Il faut le convertir (avec `int()` par exemple) pour obtenir un nombre."
+  }
+]

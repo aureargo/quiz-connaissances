@@ -1,0 +1,72 @@
+[
+  {
+    "id": "films-90-m1",
+    "enonce": "Quel film de Quentin Tarantino (1994) entremêle les histoires de gangsters autour d'une mystérieuse mallette ?",
+    "choix": ["Reservoir Dogs", "Pulp Fiction", "Jackie Brown", "True Romance"],
+    "bonneReponse": 1,
+    "explication": "« Pulp Fiction » a remporté la Palme d'or à Cannes et relancé la carrière de John Travolta. Sa narration non linéaire a fait école."
+  },
+  {
+    "id": "films-90-m2",
+    "enonce": "Dans « Le Silence des agneaux » (1991), quel acteur incarne Hannibal Lecter ?",
+    "choix": ["Gary Oldman", "Anthony Hopkins", "Ralph Fiennes", "Christopher Walken"],
+    "bonneReponse": 1,
+    "explication": "Anthony Hopkins remporte l'Oscar du meilleur acteur en n'apparaissant que seize minutes à l'écran. Le film rafle les cinq Oscars majeurs."
+  },
+  {
+    "id": "films-90-m3",
+    "enonce": "Quel film de 1999 a pour règle première : « On ne parle pas du… » lui-même ?",
+    "choix": ["Seven", "Fight Club", "American History X", "Le Sixième Sens"],
+    "bonneReponse": 1,
+    "explication": "« La première règle du Fight Club est : il est interdit de parler du Fight Club. » Le film de David Fincher réunit Brad Pitt et Edward Norton."
+  },
+  {
+    "id": "films-90-m4",
+    "enonce": "Dans « Le Sixième Sens » (1999), quelle phrase culte le jeune Cole prononce-t-il ?",
+    "choix": ["« Je vois des gens morts »", "« Ils sont déjà là »", "« Rien n'est réel »", "« N'aie pas peur »"],
+    "bonneReponse": 0,
+    "explication": "« I see dead people » résume le don de l'enfant. Le film de M. Night Shyamalan est célèbre pour son retournement final."
+  },
+  {
+    "id": "films-90-m5",
+    "enonce": "Quel film de 1994 réunit deux détenus dans le pénitencier de Shawshank ?",
+    "choix": ["La Ligne verte", "Les Évadés", "Midnight Express", "Le Prisonnier d'Alcatraz"],
+    "bonneReponse": 1,
+    "explication": "« Les Évadés » (The Shawshank Redemption), avec Tim Robbins et Morgan Freeman, est tiré d'une nouvelle de Stephen King."
+  },
+  {
+    "id": "films-90-m6",
+    "enonce": "Dans « Seven » (1995), autour de quel thème le tueur organise-t-il ses meurtres ?",
+    "choix": ["Les dix commandements", "Les sept péchés capitaux", "Les signes du zodiaque", "Les quatre cavaliers"],
+    "bonneReponse": 1,
+    "explication": "Le tueur John Doe met en scène les sept péchés capitaux. Le film de David Fincher est connu pour sa fin glaçante."
+  },
+  {
+    "id": "films-90-m7",
+    "enonce": "Quel film français de 1997 de Luc Besson suit Korben Dallas et l'être parfait Leeloo ?",
+    "choix": ["Nikita", "Le Cinquième Élément", "Léon", "Subway"],
+    "bonneReponse": 1,
+    "explication": "« Le Cinquième Élément », avec Bruce Willis et Milla Jovovich, fut l'un des plus gros budgets du cinéma français de l'époque."
+  },
+  {
+    "id": "films-90-m8",
+    "enonce": "Quel film de 1993 de Steven Spielberg sur la Shoah a remporté l'Oscar du meilleur film ?",
+    "choix": ["Le Pianiste", "La Liste de Schindler", "La Vie est belle", "Le Choix de Sophie"],
+    "bonneReponse": 1,
+    "explication": "« La Liste de Schindler », tourné en noir et blanc, raconte le sauvetage de Juifs par l'industriel Oskar Schindler."
+  },
+  {
+    "id": "films-90-m9",
+    "enonce": "Quel film de 1995 met en scène le combat de l'Écossais William Wallace contre l'occupant anglais ?",
+    "choix": ["Rob Roy", "Braveheart", "Le Dernier des Mohicans", "Highlander"],
+    "bonneReponse": 1,
+    "explication": "« Braveheart », réalisé et interprété par Mel Gibson, a remporté l'Oscar du meilleur film. « Rob Roy » se déroule aussi en Écosse, mais un siècle plus tard."
+  },
+  {
+    "id": "films-90-m10",
+    "enonce": "Quel film d'animation de 1997 du studio Ghibli met en scène la princesse Mononoké ?",
+    "choix": ["Princesse Mononoké", "Le Voyage de Chihiro", "Le Château ambulant", "Pompoko"],
+    "bonneReponse": 0,
+    "explication": "« Princesse Mononoké » de Hayao Miyazaki aborde le conflit entre l'homme et la nature, et fut un immense succès au Japon."
+  }
+]

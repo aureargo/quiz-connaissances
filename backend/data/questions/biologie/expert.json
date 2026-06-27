@@ -1,0 +1,72 @@
+[
+  {
+    "id": "biologie-e1",
+    "enonce": "Quelle enzyme synthétise l'ARN messager à partir de l'ADN ?",
+    "choix": ["l'ADN polymérase", "l'ARN polymérase", "la ligase", "l'hélicase"],
+    "bonneReponse": 1,
+    "explication": "L'ARN polymérase lit un brin d'ADN et fabrique l'ARN messager : c'est l'étape de transcription. L'ADN polymérase, elle, copie l'ADN lors de la réplication."
+  },
+  {
+    "id": "biologie-e2",
+    "enonce": "Dans quelle phase de la mitose les chromosomes s'alignent-ils au centre de la cellule ?",
+    "choix": ["la prophase", "la métaphase", "l'anaphase", "la télophase"],
+    "bonneReponse": 1,
+    "explication": "En métaphase, les chromosomes se rangent sur la plaque équatoriale, au milieu de la cellule. Ils sont ensuite séparés vers les deux pôles pendant l'anaphase."
+  },
+  {
+    "id": "biologie-e3",
+    "enonce": "Quel processus convertit le glucose en pyruvate dans le cytoplasme ?",
+    "choix": ["le cycle de Krebs", "la glycolyse", "la photosynthèse", "la traduction"],
+    "bonneReponse": 1,
+    "explication": "La glycolyse découpe une molécule de glucose en deux pyruvates et fournit un peu d'ATP, sans oxygène. Le pyruvate alimente ensuite le cycle de Krebs dans la mitochondrie."
+  },
+  {
+    "id": "biologie-e4",
+    "enonce": "Combien de nucléotides composent un codon ?",
+    "choix": ["1", "2", "3", "4"],
+    "bonneReponse": 2,
+    "explication": "Un codon est un groupe de trois nucléotides qui code un acide aminé lors de la traduction. Avec quatre bases possibles, cela donne 4³ = 64 codons différents."
+  },
+  {
+    "id": "biologie-e5",
+    "enonce": "Quel organite possède son propre ADN, vestige d'une ancienne bactérie ?",
+    "choix": ["le lysosome", "la mitochondrie", "le ribosome", "le peroxysome"],
+    "bonneReponse": 1,
+    "explication": "Selon la théorie endosymbiotique, la mitochondrie descend d'une bactérie absorbée par une cellule ancestrale. Elle a gardé un petit ADN circulaire qui lui est propre."
+  },
+  {
+    "id": "biologie-e6",
+    "enonce": "Quelle molécule est la principale « monnaie énergétique » de la cellule ?",
+    "choix": ["le NADH", "l'ATP", "le glucose", "le GTP"],
+    "bonneReponse": 1,
+    "explication": "L'ATP stocke l'énergie dans ses liaisons phosphate et la libère à la demande pour alimenter les réactions cellulaires. C'est l'énergie « prête à l'emploi » de la cellule."
+  },
+  {
+    "id": "biologie-e7",
+    "enonce": "Quel scientifique a fondé la génétique en étudiant des plants de pois ?",
+    "choix": ["Charles Darwin", "Gregor Mendel", "Louis Pasteur", "Carl von Linné"],
+    "bonneReponse": 1,
+    "explication": "Gregor Mendel a découvert les lois de l'hérédité en croisant des pois au XIXᵉ siècle. Ses travaux, longtemps ignorés, sont la base de la génétique moderne."
+  },
+  {
+    "id": "biologie-e8",
+    "enonce": "Comment appelle-t-on l'ensemble des réactions chimiques d'un organisme ?",
+    "choix": ["l'homéostasie", "le métabolisme", "la photosynthèse", "l'osmose"],
+    "bonneReponse": 1,
+    "explication": "Le métabolisme regroupe toutes les réactions qui construisent (anabolisme) ou dégradent (catabolisme) les molécules. L'homéostasie, elle, désigne le maintien d'un équilibre interne stable."
+  },
+  {
+    "id": "biologie-e9",
+    "enonce": "Quelle forme de l'ADN Watson et Crick ont-ils décrite en 1953 ?",
+    "choix": ["la simple hélice", "la double hélice", "le feuillet plissé", "la triple hélice"],
+    "bonneReponse": 1,
+    "explication": "Watson et Crick ont montré que l'ADN est une double hélice, deux brins enroulés et appariés par leurs bases. Les clichés de Rosalind Franklin ont été déterminants pour ce modèle."
+  },
+  {
+    "id": "biologie-e10",
+    "enonce": "Quel type de cellule ne possède pas de noyau délimité par une membrane ?",
+    "choix": ["la cellule eucaryote", "la cellule procaryote", "la cellule végétale", "la cellule animale"],
+    "bonneReponse": 1,
+    "explication": "Les cellules procaryotes, comme les bactéries, n'ont pas de noyau : leur ADN flotte librement dans le cytoplasme. Les eucaryotes (plantes, animaux) enferment l'ADN dans un noyau."
+  }
+]

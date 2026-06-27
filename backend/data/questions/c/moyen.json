@@ -1,0 +1,72 @@
+[
+  {
+    "id": "c-m1",
+    "enonce": "Quelle est la différence entre `=` et `==` en C ?",
+    "choix": ["Il n'y en a aucune", "`=` affecte une valeur, `==` compare", "`=` compare, `==` affecte", "`==` n'existe pas en C"],
+    "bonneReponse": 1,
+    "explication": "`x = 5` affecte la valeur 5 à x ; `x == 5` teste l'égalité et renvoie vrai ou faux. Confondre les deux dans un `if` est un bug classique que C ne signale pas toujours."
+  },
+  {
+    "id": "c-m2",
+    "enonce": "À quel indice se trouve le premier élément d'un tableau en C ?",
+    "choix": ["0", "1", "-1", "Selon la déclaration"],
+    "bonneReponse": 0,
+    "explication": "`t[0]` est le premier élément. Un tableau de taille n va donc de `t[0]` à `t[n-1]` ; accéder à `t[n]` déborde du tableau."
+  },
+  {
+    "id": "c-m3",
+    "enonce": "Que renvoie l'opérateur `sizeof` ?",
+    "choix": ["La valeur d'une variable", "La taille en octets", "Le nombre d'éléments d'une liste", "L'adresse mémoire"],
+    "bonneReponse": 1,
+    "explication": "`sizeof(int)` donne la taille en octets du type (souvent 4). Le résultat est calculé à la compilation pour la plupart des types."
+  },
+  {
+    "id": "c-m4",
+    "enonce": "Quel opérateur accède à un membre d'une structure via un pointeur ?",
+    "choix": ["le point `.`", "la flèche `->`", "les crochets `[]`", "l'étoile `*`"],
+    "bonneReponse": 1,
+    "explication": "`p->champ` est un raccourci pour `(*p).champ` : on déréférence le pointeur, puis on lit le membre. Le point `.` s'utilise sur une structure directe, pas sur un pointeur."
+  },
+  {
+    "id": "c-m5",
+    "enonce": "Que représente l'expression `&x` en C ?",
+    "choix": ["La valeur de x", "L'adresse mémoire de x", "Un ET logique", "Une référence constante"],
+    "bonneReponse": 1,
+    "explication": "L'opérateur `&` renvoie l'adresse de la variable. On le passe par exemple à `scanf(\"%d\", &x)` pour que la fonction écrive directement dans x."
+  },
+  {
+    "id": "c-m6",
+    "enonce": "À quoi sert le mot-clé `const` ?",
+    "choix": ["À accélérer le code", "À empêcher la modification d'une variable", "À allouer sur le tas", "À définir une macro"],
+    "bonneReponse": 1,
+    "explication": "`const int max = 100;` interdit toute réaffectation : le compilateur signale une erreur si on tente de modifier `max`. Cela documente l'intention et évite des bugs."
+  },
+  {
+    "id": "c-m7",
+    "enonce": "Que désigne `NULL` en C ?",
+    "choix": ["Le chiffre zéro affiché", "Un pointeur qui ne pointe sur rien", "Une chaîne vide", "Une erreur de compilation"],
+    "bonneReponse": 1,
+    "explication": "`NULL` est un pointeur « nul », qui ne référence aucune adresse valide. On l'utilise pour signaler l'absence de valeur ; le déréférencer plante le programme."
+  },
+  {
+    "id": "c-m8",
+    "enonce": "Quel mot-clé regroupe plusieurs variables dans un même type composite ?",
+    "choix": ["class", "struct", "record", "object"],
+    "bonneReponse": 1,
+    "explication": "`struct Point { int x; int y; };` crée un type qui regroupe plusieurs champs. C n'a pas de `class` : la `struct` est le principal moyen de structurer des données."
+  },
+  {
+    "id": "c-m9",
+    "enonce": "Que calcule l'opérateur `%` entre deux entiers ?",
+    "choix": ["Un pourcentage", "Le reste de la division entière", "Une puissance", "Une division flottante"],
+    "bonneReponse": 1,
+    "explication": "`7 % 3` vaut 1 (le reste de 7 ÷ 3). C'est pratique pour tester la parité (`n % 2 == 0`) ou rester dans un intervalle."
+  },
+  {
+    "id": "c-m10",
+    "enonce": "Qui a conçu le langage C au début des années 1970 ?",
+    "choix": ["Bjarne Stroustrup", "Dennis Ritchie", "Linus Torvalds", "Guido van Rossum"],
+    "bonneReponse": 1,
+    "explication": "Dennis Ritchie a créé C aux Bell Labs, en lien étroit avec le développement d'Unix. Bjarne Stroustrup en dérivera le C++ une décennie plus tard."
+  }
+]

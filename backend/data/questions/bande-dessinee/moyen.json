@@ -1,0 +1,72 @@
+[
+  {
+    "id": "bd-m1",
+    "enonce": "Quel est le vrai nom de Hergé, l'auteur de Tintin ?",
+    "choix": ["Georges Remi", "Albert Uderzo", "Maurice de Bévère", "André Franquin"],
+    "bonneReponse": 0,
+    "explication": "Le pseudonyme « Hergé » vient de ses initiales inversées : R.G., soit Remi Georges, prononcées à la française. Son vrai nom complet était Georges Prosper Remi."
+  },
+  {
+    "id": "bd-m2",
+    "enonce": "Qui écrivait les scénarios des aventures d'Astérix, dessinées par Albert Uderzo ?",
+    "choix": ["René Goscinny", "Albert Uderzo", "Jacques Martin", "Jean Van Hamme"],
+    "bonneReponse": 0,
+    "explication": "René Goscinny imaginait les histoires et les jeux de mots d'Astérix, tandis qu'Uderzo dessinait. À la mort de Goscinny en 1977, Uderzo a repris seul scénario et dessin."
+  },
+  {
+    "id": "bd-m3",
+    "enonce": "Qui est le créateur du cow-boy Lucky Luke ?",
+    "choix": ["Morris", "Goscinny", "Jijé", "Greg"],
+    "bonneReponse": 0,
+    "explication": "Morris, de son vrai nom Maurice de Bévère, a créé Lucky Luke en 1946. René Goscinny est devenu son scénariste à partir de 1955, donnant à la série son ton humoristique."
+  },
+  {
+    "id": "bd-m4",
+    "enonce": "Quel groom de l'hôtel Moustic vit ses aventures avec son ami Fantasio ?",
+    "choix": ["Spirou", "Gaston", "Boule", "Tif"],
+    "bonneReponse": 0,
+    "explication": "Spirou, d'abord groom d'hôtel en uniforme rouge, est le héros emblématique du journal qui porte son nom. Il forme un duo avec le journaliste Fantasio et l'écureuil Spip."
+  },
+  {
+    "id": "bd-m5",
+    "enonce": "Quel animal jaune à taches noires et à très longue queue a été créé par Franquin ?",
+    "choix": ["le Marsupilami", "Rantanplan", "Bill", "Cubitus"],
+    "bonneReponse": 0,
+    "explication": "Le Marsupilami, animal imaginaire de la jungle, est apparu en 1952 dans une aventure de Spirou. Sa queue préhensile démesurée et son cri « Houba ! » sont devenus célèbres."
+  },
+  {
+    "id": "bd-m6",
+    "enonce": "Quelle série d'Edgar P. Jacobs met en scène un physicien et un agent des services secrets britanniques ?",
+    "choix": ["Blake et Mortimer", "Spirou et Fantasio", "Tif et Tondu", "Bob et Bobette"],
+    "bonneReponse": 0,
+    "explication": "« Blake et Mortimer » réunit le professeur Mortimer, physicien, et le capitaine Blake du MI5. Créée en 1946, la série est réputée pour ses récits de science-fiction très documentés."
+  },
+  {
+    "id": "bd-m7",
+    "enonce": "Dans quel pays sont nés les magazines Spirou et Tintin, berceaux de la BD franco-belge ?",
+    "choix": ["la France", "la Belgique", "la Suisse", "les Pays-Bas"],
+    "bonneReponse": 1,
+    "explication": "Le journal Spirou (1938) et le Journal de Tintin (1946) sont tous deux nés en Belgique. Ce pays a vu éclore l'« école de Bruxelles » et l'« école de Marcinelle », piliers de la BD franco-belge."
+  },
+  {
+    "id": "bd-m8",
+    "enonce": "Quelle maison d'édition américaine a créé Batman et Superman ?",
+    "choix": ["Marvel Comics", "DC Comics", "Image Comics", "Dark Horse"],
+    "bonneReponse": 1,
+    "explication": "DC Comics publie Superman (1938) et Batman (1939), ainsi que Wonder Woman et la Justice League. Sa grande rivale, Marvel, est l'éditeur de Spider-Man et des X-Men."
+  },
+  {
+    "id": "bd-m9",
+    "enonce": "Quel chat philosophe et bedonnant a été créé par le dessinateur belge Philippe Geluck ?",
+    "choix": ["Le Chat", "Garfield", "Cubitus", "Bill"],
+    "bonneReponse": 0,
+    "explication": "« Le Chat » de Geluck, paru d'abord dans le journal Le Soir en 1983, enchaîne aphorismes absurdes et jeux de mots. Son humour pince-sans-rire en a fait une figure de la BD belge."
+  },
+  {
+    "id": "bd-m10",
+    "enonce": "Quelle autrice a raconté son enfance à Téhéran dans la bande dessinée « Persepolis » ?",
+    "choix": ["Marjane Satrapi", "Pénélope Bagieu", "Claire Bretécher", "Florence Cestac"],
+    "bonneReponse": 0,
+    "explication": "Marjane Satrapi raconte en noir et blanc son enfance en Iran pendant la révolution islamique. « Persepolis » (2000-2003) a été adapté en film d'animation primé à Cannes en 2007."
+  }
+]

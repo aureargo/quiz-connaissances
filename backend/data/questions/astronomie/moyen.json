@@ -1,0 +1,72 @@
+[
+  {
+    "id": "astronomie-m1",
+    "enonce": "Quelle planète est entourée des anneaux les plus spectaculaires ?",
+    "choix": ["Jupiter", "Uranus", "Saturne", "Neptune"],
+    "bonneReponse": 2,
+    "explication": "Saturne est célèbre pour ses anneaux brillants, composés de milliards de blocs de glace et de roche. Les autres géantes gazeuses ont aussi des anneaux, mais bien plus discrets."
+  },
+  {
+    "id": "astronomie-m2",
+    "enonce": "Combien de temps met la lumière du Soleil pour parvenir jusqu'à la Terre ?",
+    "choix": ["environ 8 secondes", "environ 8 minutes", "environ 8 heures", "environ 8 jours"],
+    "bonneReponse": 1,
+    "explication": "La lumière met environ huit minutes à parcourir les 150 millions de kilomètres qui nous séparent du Soleil. On le voit donc tel qu'il était huit minutes plus tôt."
+  },
+  {
+    "id": "astronomie-m3",
+    "enonce": "Quelle est la planète la plus chaude du système solaire ?",
+    "choix": ["Mercure", "Vénus", "Mars", "Jupiter"],
+    "bonneReponse": 1,
+    "explication": "Vénus dépasse les 460 °C en surface à cause d'un effet de serre extrême dû à son atmosphère de dioxyde de carbone. Elle est plus chaude que Mercure, pourtant plus proche du Soleil."
+  },
+  {
+    "id": "astronomie-m4",
+    "enonce": "Qui fut le premier être humain à marcher sur la Lune, en 1969 ?",
+    "choix": ["Iouri Gagarine", "Neil Armstrong", "Buzz Aldrin", "Michael Collins"],
+    "bonneReponse": 1,
+    "explication": "Neil Armstrong posa le pied sur la Lune le 21 juillet 1969 lors de la mission Apollo 11. Buzz Aldrin le suivit, tandis que Michael Collins restait en orbite."
+  },
+  {
+    "id": "astronomie-m5",
+    "enonce": "Comment appelle-t-on un groupe d'étoiles dessinant une figure dans le ciel ?",
+    "choix": ["une galaxie", "une constellation", "une nébuleuse", "un amas"],
+    "bonneReponse": 1,
+    "explication": "Une constellation est un regroupement apparent d'étoiles, comme la Grande Ourse ou Orion. Les étoiles d'une même constellation ne sont pas forcément proches dans l'espace."
+  },
+  {
+    "id": "astronomie-m6",
+    "enonce": "Quel corps céleste a perdu son statut de planète en 2006 ?",
+    "choix": ["Pluton", "Cérès", "Charon", "Éris"],
+    "bonneReponse": 0,
+    "explication": "En 2006, l'Union astronomique internationale a reclassé Pluton en « planète naine ». Trop petite et partageant son orbite avec d'autres corps, elle ne remplissait plus la définition d'une planète."
+  },
+  {
+    "id": "astronomie-m7",
+    "enonce": "Quelle unité mesure les très grandes distances entre les étoiles ?",
+    "choix": ["le kilomètre", "l'année-lumière", "le mille marin", "le nœud"],
+    "bonneReponse": 1,
+    "explication": "Une année-lumière est la distance parcourue par la lumière en un an, soit près de 9 500 milliards de kilomètres. C'est bien une distance, et non une durée, malgré son nom."
+  },
+  {
+    "id": "astronomie-m8",
+    "enonce": "Quel phénomène se produit lorsque la Lune passe exactement devant le Soleil ?",
+    "choix": ["une éclipse de Lune", "une éclipse de Soleil", "un équinoxe", "une aurore polaire"],
+    "bonneReponse": 1,
+    "explication": "Lors d'une éclipse de Soleil, la Lune s'interpose entre le Soleil et la Terre et masque le disque solaire. L'éclipse de Lune, elle, survient quand la Terre projette son ombre sur la Lune."
+  },
+  {
+    "id": "astronomie-m9",
+    "enonce": "Quelle étoile indique approximativement le nord dans l'hémisphère nord ?",
+    "choix": ["Sirius", "l'étoile Polaire", "Bételgeuse", "Véga"],
+    "bonneReponse": 1,
+    "explication": "L'étoile Polaire se situe presque dans l'axe de rotation de la Terre : elle paraît fixe et indique le nord. Sirius est l'étoile la plus brillante du ciel, mais elle se déplace au fil de la nuit."
+  },
+  {
+    "id": "astronomie-m10",
+    "enonce": "Quel élément chimique constitue l'essentiel d'une étoile comme le Soleil ?",
+    "choix": ["l'oxygène", "l'hydrogène", "le carbone", "le fer"],
+    "bonneReponse": 1,
+    "explication": "Le Soleil est composé surtout d'hydrogène, qu'il transforme en hélium par fusion nucléaire. Cette réaction au cœur de l'étoile libère l'énergie qui nous éclaire et nous réchauffe."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "nosql-m1",
+    "enonce": "Que désignent les trois lettres du théorème CAP ?",
+    "choix": ["Cohérence, Disponibilité, Partitionnement", "Cache, Authentification, Protocole", "Création, Agrégation, Purge", "Colonnes, Agrégats, Partitions"],
+    "bonneReponse": 0,
+    "explication": "CAP (Consistency, Availability, Partition tolerance) énonce qu'en cas de coupure réseau, un système distribué doit sacrifier soit la cohérence, soit la disponibilité."
+  },
+  {
+    "id": "nosql-m2",
+    "enonce": "Par opposition à ACID, l'approche « BASE » met surtout l'accent sur…",
+    "choix": ["la cohérence immédiate", "la cohérence à terme", "les verrous stricts", "le schéma rigide"],
+    "bonneReponse": 1,
+    "explication": "BASE (Basically Available, Soft state, Eventually consistent) privilégie la disponibilité : les données convergent « à terme » plutôt qu'instantanément."
+  },
+  {
+    "id": "nosql-m3",
+    "enonce": "Quel modèle de données Cassandra utilise-t-il ?",
+    "choix": ["orienté documents", "orienté colonnes larges", "orienté graphe", "clé-valeur pur"],
+    "bonneReponse": 1,
+    "explication": "Cassandra est une base « wide-column » : les données sont organisées en familles de colonnes, optimisées pour des écritures massives et distribuées."
+  },
+  {
+    "id": "nosql-m4",
+    "enonce": "Qu'est-ce que le « sharding » dans une base distribuée ?",
+    "choix": ["chiffrer les données stockées", "répartir les données sur plusieurs serveurs", "compresser les index volumineux", "sauvegarder la base entière"],
+    "bonneReponse": 1,
+    "explication": "Le sharding partitionne horizontalement les données : chaque nœud ne stocke qu'une partie. C'est la clé du passage à l'échelle des bases NoSQL."
+  },
+  {
+    "id": "nosql-m5",
+    "enonce": "Quelle méthode lit des documents d'une collection MongoDB ?",
+    "choix": ["db.col.select()", "db.col.find()", "db.col.read()", "db.col.query()"],
+    "bonneReponse": 1,
+    "explication": "`db.collection.find({ champ: valeur })` récupère des documents : c'est l'équivalent du SELECT en SQL."
+  },
+  {
+    "id": "nosql-m6",
+    "enonce": "Que signifie « dénormaliser » des données en NoSQL ?",
+    "choix": ["corrompre volontairement un document", "imbriquer les données liées au lieu de les séparer", "supprimer tous les identifiants", "chiffrer les champs sensibles"],
+    "bonneReponse": 1,
+    "explication": "On duplique ou imbrique souvent les données liées pour éviter les jointures coûteuses, au prix d'une certaine redondance assumée."
+  },
+  {
+    "id": "nosql-m7",
+    "enonce": "Quel type de base NoSQL convient le mieux pour un réseau social (amis d'amis) ?",
+    "choix": ["clé-valeur", "orientée graphe", "orientée colonnes", "document pur"],
+    "bonneReponse": 1,
+    "explication": "Les bases graphe (comme Neo4j) parcourent très efficacement les relations entre entités : idéales pour « les amis de mes amis » ou les recommandations."
+  },
+  {
+    "id": "nosql-m8",
+    "enonce": "À quoi sert un index dans MongoDB ?",
+    "choix": ["chiffrer toute la collection", "accélérer les recherches sur un champ", "déclencher les sauvegardes", "limiter la taille des documents"],
+    "bonneReponse": 1,
+    "explication": "Comme en SQL, un index accélère les requêtes sur un champ donné, au prix d'un peu d'espace disque et d'écritures un peu plus lentes."
+  },
+  {
+    "id": "nosql-m9",
+    "enonce": "Qu'est-ce que la réplication dans une base NoSQL distribuée ?",
+    "choix": ["supprimer les doublons stockés", "copier les données sur plusieurs nœuds", "réécrire les requêtes lentes", "compresser les anciennes sauvegardes"],
+    "bonneReponse": 1,
+    "explication": "La réplication maintient des copies des données sur plusieurs serveurs : elle assure la disponibilité et la tolérance aux pannes."
+  },
+  {
+    "id": "nosql-m10",
+    "enonce": "Au-delà du simple clé-valeur, quelles structures Redis gère-t-il nativement ?",
+    "choix": ["les vues matérialisées", "les listes, ensembles et hachages", "les déclencheurs automatiques", "les procédures stockées"],
+    "bonneReponse": 1,
+    "explication": "Redis va plus loin que le clé-valeur basique : il manipule en mémoire des listes, des ensembles (sets), des hachages et d'autres structures évoluées."
+  }
+]

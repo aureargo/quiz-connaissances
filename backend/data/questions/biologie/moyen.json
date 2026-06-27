@@ -1,0 +1,72 @@
+[
+  {
+    "id": "biologie-m1",
+    "enonce": "Quel organite est le siège de la respiration cellulaire qui fournit l'énergie ?",
+    "choix": ["le noyau", "la mitochondrie", "le ribosome", "la vacuole"],
+    "bonneReponse": 1,
+    "explication": "La mitochondrie est la « centrale énergétique » de la cellule : elle transforme les nutriments et l'oxygène en énergie utilisable (ATP). On la surnomme la centrale électrique cellulaire."
+  },
+  {
+    "id": "biologie-m2",
+    "enonce": "Quelle molécule porte l'information génétique dans nos cellules ?",
+    "choix": ["l'ARN", "l'ADN", "l'ATP", "le glucose"],
+    "bonneReponse": 1,
+    "explication": "L'ADN contient le « plan » de l'organisme sous forme de gènes. Il est rangé dans le noyau et se transmet d'une cellule à l'autre lors des divisions."
+  },
+  {
+    "id": "biologie-m3",
+    "enonce": "Quel pigment vert permet aux plantes de capter la lumière ?",
+    "choix": ["la mélanine", "la chlorophylle", "l'hémoglobine", "la kératine"],
+    "bonneReponse": 1,
+    "explication": "La chlorophylle, présente dans les chloroplastes, absorbe la lumière du Soleil pour la photosynthèse. C'est elle qui donne sa couleur verte aux feuilles."
+  },
+  {
+    "id": "biologie-m4",
+    "enonce": "Combien de chromosomes contient une cellule humaine normale ?",
+    "choix": ["23", "46", "48", "64"],
+    "bonneReponse": 1,
+    "explication": "Une cellule humaine possède 46 chromosomes, soit 23 paires. On reçoit 23 chromosomes de chaque parent via les cellules reproductrices."
+  },
+  {
+    "id": "biologie-m5",
+    "enonce": "Quels sont les constituants de base des protéines ?",
+    "choix": ["les acides gras", "les acides aminés", "les nucléotides", "les glucides"],
+    "bonneReponse": 1,
+    "explication": "Les protéines sont des chaînes d'acides aminés, dont il existe vingt principaux chez l'humain. Leur ordre détermine la forme et le rôle de chaque protéine."
+  },
+  {
+    "id": "biologie-m6",
+    "enonce": "Comment s'appelle la division cellulaire produisant deux cellules identiques ?",
+    "choix": ["la méiose", "la mitose", "la fécondation", "la digestion"],
+    "bonneReponse": 1,
+    "explication": "La mitose copie l'ADN puis partage la cellule en deux cellules filles identiques. Elle assure la croissance et le renouvellement des tissus."
+  },
+  {
+    "id": "biologie-m7",
+    "enonce": "Quel organe produit l'insuline qui régule le taux de sucre dans le sang ?",
+    "choix": ["le foie", "le pancréas", "la rate", "l'estomac"],
+    "bonneReponse": 1,
+    "explication": "Le pancréas sécrète l'insuline, l'hormone qui fait baisser la glycémie. Son dysfonctionnement est à l'origine du diabète."
+  },
+  {
+    "id": "biologie-m8",
+    "enonce": "Comment appelle-t-on les vaisseaux qui ramènent le sang vers le cœur ?",
+    "choix": ["les artères", "les veines", "les capillaires", "les nerfs"],
+    "bonneReponse": 1,
+    "explication": "Les veines ramènent le sang vers le cœur, tandis que les artères l'en éloignent. Les veines sont équipées de valvules qui empêchent le sang de refluer."
+  },
+  {
+    "id": "biologie-m9",
+    "enonce": "Quel organite contrôle la cellule et renferme l'ADN ?",
+    "choix": ["la vacuole", "le noyau", "le lysosome", "le cytoplasme"],
+    "bonneReponse": 1,
+    "explication": "Le noyau est le centre de commande de la cellule : il abrite les chromosomes et pilote la fabrication des protéines. Les cellules sans noyau sont dites procaryotes."
+  },
+  {
+    "id": "biologie-m10",
+    "enonce": "Quel processus permet aux espèces de se transformer au fil des générations ?",
+    "choix": ["la digestion", "l'évolution", "la respiration", "la fermentation"],
+    "bonneReponse": 1,
+    "explication": "L'évolution est la transformation des espèces au fil du temps, sous l'effet notamment de la sélection naturelle décrite par Charles Darwin."
+  }
+]

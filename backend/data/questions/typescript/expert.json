@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ts-e1",
+    "enonce": "Que fait l'option `strict` du `tsconfig.json` ?",
+    "choix": ["Elle active un ensemble de vérifications de type rigoureuses", "Elle interdit l'usage des classes", "Elle force la compilation vers ES5", "Elle désactive les génériques"],
+    "bonneReponse": 0,
+    "explication": "`strict: true` regroupe plusieurs contrôles (`strictNullChecks`, `noImplicitAny`…). C'est le réglage recommandé pour profiter pleinement de la sécurité de typage."
+  },
+  {
+    "id": "ts-e2",
+    "enonce": "Que produit le type utilitaire `Partial<T>` ?",
+    "choix": ["un type où toutes les propriétés de `T` deviennent optionnelles", "un type où toutes les propriétés deviennent obligatoires", "un type privé de certaines propriétés de `T`", "un type où toutes les propriétés sont en lecture seule"],
+    "bonneReponse": 0,
+    "explication": "`Partial<T>` rend chaque propriété facultative, idéal pour une fonction de mise à jour qui ne reçoit qu'une partie d'un objet. Son opposé, `Required<T>`, les rend toutes obligatoires."
+  },
+  {
+    "id": "ts-e3",
+    "enonce": "Que produit l'opérateur `keyof` appliqué à un type objet ?",
+    "choix": ["l'union des noms de clés de ce type", "une copie du type", "la liste des valeurs du type", "un tableau d'objets"],
+    "bonneReponse": 0,
+    "explication": "Pour `type P = { nom: string; age: number }`, `keyof P` vaut `'nom' | 'age'`. Combiné aux génériques, il permet d'écrire des accès aux propriétés sûrs au niveau des types."
+  },
+  {
+    "id": "ts-e4",
+    "enonce": "Qu'exprime un type conditionnel de la forme `T extends U ? X : Y` ?",
+    "choix": ["un type choisi selon qu'une condition sur d'autres types est vraie", "une condition évaluée à l'exécution du programme", "une boucle parcourant les propriétés d'un type", "une assertion de type forcée par le développeur"],
+    "bonneReponse": 0,
+    "explication": "Le compilateur choisit `X` si `T` est assignable à `U`, sinon `Y`. C'est un branchement au niveau des types, brique des bibliothèques de typage avancé."
+  },
+  {
+    "id": "ts-e5",
+    "enonce": "Que déclare une fonction dont le type de retour est `valeur is Chat` ?",
+    "choix": ["une garde de type (type guard) personnalisée", "une conversion de la valeur en type Chat", "un simple test d'égalité stricte", "la création d'une nouvelle instance de Chat"],
+    "bonneReponse": 0,
+    "explication": "Ce « prédicat de type » indique au compilateur que, si la fonction renvoie `true`, l'argument est un `Chat`. Dans le bloc qui suit, le type est alors réduit (« narrowing ») automatiquement."
+  },
+  {
+    "id": "ts-e6",
+    "enonce": "Que construit le type utilitaire `Pick<T, K>` ?",
+    "choix": ["un type ne gardant que les propriétés `K` de `T`", "un type privé des propriétés `K` de `T`", "un type où `K` devient optionnelle", "la fusion des types `T` et `K`"],
+    "bonneReponse": 0,
+    "explication": "`Pick<T, K>` extrait un sous-ensemble de propriétés choisies. Son opposé, `Omit<T, K>`, construit le type en RETIRANT les clés indiquées."
+  },
+  {
+    "id": "ts-e7",
+    "enonce": "Que sont les « mapped types » (types mappés) ?",
+    "choix": ["des types générés en parcourant les clés d'un autre type", "des types stockés dans une structure Map", "des conversions automatiques depuis du JSON", "des types liés à un schéma de base de données"],
+    "bonneReponse": 0,
+    "explication": "La syntaxe `{ [K in keyof T]: ... }` reconstruit un type en itérant sur les clés d'un autre. C'est exactement ainsi que sont définis `Partial`, `Readonly` ou `Record`."
+  },
+  {
+    "id": "ts-e8",
+    "enonce": "Que fait l'opérateur d'assertion non-nulle `!`, comme dans `valeur!` ?",
+    "choix": ["il affirme au compilateur que la valeur n'est ni `null` ni `undefined`", "il inverse la valeur d'un booléen", "il rend la propriété optionnelle", "il efface la valeur de la variable"],
+    "bonneReponse": 0,
+    "explication": "`!` lève l'avertissement du compilateur sur une valeur potentiellement nulle, sans le moindre contrôle à l'exécution. À manier avec prudence : une affirmation fausse provoque une erreur au runtime."
+  },
+  {
+    "id": "ts-e9",
+    "enonce": "Que sont les « décorateurs » (decorators) en TypeScript ?",
+    "choix": ["des fonctions annotant classes, méthodes ou propriétés pour modifier leur comportement", "des commentaires de documentation typés", "des alias de types génériques", "des fichiers de configuration du projet"],
+    "bonneReponse": 0,
+    "explication": "Un décorateur, noté `@nom`, s'applique à une classe ou un de ses membres pour en enrichir le comportement. Angular et NestJS s'appuient massivement dessus (`@Component`, `@Injectable`…)."
+  },
+  {
+    "id": "ts-e10",
+    "enonce": "Que construit le type utilitaire `Record<K, V>` ?",
+    "choix": ["un type objet dont les clés sont `K` et les valeurs `V`", "un enregistrement des modifications d'un objet", "un type rendu totalement immuable", "la conversion d'un type en tuple"],
+    "bonneReponse": 0,
+    "explication": "`Record<string, number>` décrit un objet à clés `string` et valeurs `number`. C'est la façon idiomatique de typer un dictionnaire ou une table de correspondance."
+  }
+]

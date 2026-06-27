@@ -1,0 +1,72 @@
+[
+  {
+    "id": "hf-f1",
+    "enonce": "En quelle année a eu lieu la prise de la Bastille ?",
+    "choix": ["1789", "1799", "1715", "1804"],
+    "bonneReponse": 0,
+    "explication": "Le 14 juillet 1789, le peuple parisien prend la Bastille, prison royale symbole de l'absolutisme. C'est l'événement fondateur de la Révolution française, devenu fête nationale."
+  },
+  {
+    "id": "hf-f2",
+    "enonce": "Quel roi de France était surnommé le « Roi-Soleil » ?",
+    "choix": ["Louis XIV", "Louis XVI", "Henri IV", "François Ier"],
+    "bonneReponse": 0,
+    "explication": "Louis XIV régna 72 ans (1643-1715) et choisit le soleil comme emblème. Il installa la cour à Versailles et incarna la monarchie absolue."
+  },
+  {
+    "id": "hf-f3",
+    "enonce": "Quel empereur français fut vaincu à la bataille de Waterloo en 1815 ?",
+    "choix": ["Napoléon Ier", "Louis XIV", "Charles X", "Napoléon III"],
+    "bonneReponse": 0,
+    "explication": "Napoléon Ier est défait à Waterloo le 18 juin 1815 face aux Britanniques et aux Prussiens. Cette défaite met fin à son retour au pouvoir, les Cent-Jours."
+  },
+  {
+    "id": "hf-f4",
+    "enonce": "Quelle héroïne a mené les troupes françaises lors du siège d'Orléans ?",
+    "choix": ["Jeanne d'Arc", "Marie Curie", "Olympe de Gouges", "Aliénor d'Aquitaine"],
+    "bonneReponse": 0,
+    "explication": "En 1429, pendant la guerre de Cent Ans, Jeanne d'Arc libère Orléans des Anglais. Capturée puis brûlée en 1431, elle deviendra une figure nationale et une sainte."
+  },
+  {
+    "id": "hf-f5",
+    "enonce": "Quel monument parisien a été construit pour l'Exposition universelle de 1889 ?",
+    "choix": ["la tour Eiffel", "l'arc de Triomphe", "le Sacré-Cœur", "le Panthéon"],
+    "bonneReponse": 0,
+    "explication": "La tour Eiffel fut érigée par Gustave Eiffel pour l'Exposition universelle de 1889, célébrant le centenaire de la Révolution. Provisoire à l'origine, elle est restée."
+  },
+  {
+    "id": "hf-f6",
+    "enonce": "Quel général a dirigé la France libre durant la Seconde Guerre mondiale et fondé la Ve République ?",
+    "choix": ["Charles de Gaulle", "Philippe Pétain", "Georges Clemenceau", "Léon Blum"],
+    "bonneReponse": 0,
+    "explication": "Charles de Gaulle lance l'appel du 18 juin 1940 depuis Londres, puis fonde la Ve République en 1958, dont il devient le premier président."
+  },
+  {
+    "id": "hf-f7",
+    "enonce": "Quel château fut la résidence des rois de France à partir du règne de Louis XIV ?",
+    "choix": ["Versailles", "Chambord", "Chenonceau", "Fontainebleau"],
+    "bonneReponse": 0,
+    "explication": "Louis XIV installe définitivement la cour à Versailles en 1682. Le château devient le centre du pouvoir et le symbole du faste de la monarchie française."
+  },
+  {
+    "id": "hf-f8",
+    "enonce": "Quel roi a signé l'édit de Nantes en 1598, accordant des droits aux protestants ?",
+    "choix": ["Henri IV", "Louis XIII", "François Ier", "Louis IX"],
+    "bonneReponse": 0,
+    "explication": "Henri IV met fin aux guerres de Religion avec l'édit de Nantes, qui garantit la liberté de culte aux protestants. Ancien protestant, il s'était converti au catholicisme."
+  },
+  {
+    "id": "hf-f9",
+    "enonce": "En quelle année la Première République française a-t-elle été proclamée ?",
+    "choix": ["1792", "1789", "1804", "1848"],
+    "bonneReponse": 0,
+    "explication": "Le 21 septembre 1792, la Convention abolit la monarchie et proclame la République. Louis XVI sera jugé puis guillotiné quelques mois plus tard, en janvier 1793."
+  },
+  {
+    "id": "hf-f10",
+    "enonce": "À quelle dynastie royale appartenait Louis XIV ?",
+    "choix": ["les Bourbons", "les Valois", "les Carolingiens", "les Mérovingiens"],
+    "bonneReponse": 0,
+    "explication": "Louis XIV était un Bourbon, branche issue des Capétiens montée sur le trône avec Henri IV en 1589. Les Valois les avaient précédés, les Carolingiens et Mérovingiens bien avant."
+  }
+]

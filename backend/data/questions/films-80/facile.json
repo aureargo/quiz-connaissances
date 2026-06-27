@@ -1,0 +1,72 @@
+[
+  {
+    "id": "films-80-f1",
+    "enonce": "Dans « E.T. l'extra-terrestre » (1982), quel aliment le héros utilise-t-il pour attirer E.T. ?",
+    "choix": ["Des frites", "Des bonbons", "Du pop-corn", "Des biscuits"],
+    "bonneReponse": 1,
+    "explication": "Elliott attire E.T. avec une traînée de bonbons Reese's Pieces. Ce placement de produit a fait exploser les ventes de la friandise."
+  },
+  {
+    "id": "films-80-f2",
+    "enonce": "Quel réalisateur a signé « Retour vers le futur » (1985) ?",
+    "choix": ["Steven Spielberg", "Robert Zemeckis", "James Cameron", "Ridley Scott"],
+    "bonneReponse": 1,
+    "explication": "Robert Zemeckis a réalisé la trilogie. Steven Spielberg en était le producteur exécutif."
+  },
+  {
+    "id": "films-80-f3",
+    "enonce": "Dans « Karaté Kid » (1984), quel maître enseigne le karaté au jeune Daniel ?",
+    "choix": ["Maître Kreese", "Maître Miyagi", "Maître Sato", "Maître Han"],
+    "bonneReponse": 1,
+    "explication": "Le bienveillant M. Miyagi forme Daniel à coups d'exercices déguisés (« la cire, on étale, on lustre »). Kreese est au contraire le sensei du dojo rival."
+  },
+  {
+    "id": "films-80-f4",
+    "enonce": "Dans « Star Wars : L'Empire contre-attaque » (1980), quel lien Dark Vador révèle-t-il à Luke ?",
+    "choix": ["Il est son oncle", "Il est son père", "Il est son maître", "Il est son frère"],
+    "bonneReponse": 1,
+    "explication": "« Je suis ton père » est l'une des révélations les plus célèbres du cinéma, même si la réplique exacte est souvent mal citée."
+  },
+  {
+    "id": "films-80-f5",
+    "enonce": "Quel acteur incarne le boxeur Rocky Balboa dans la saga « Rocky » ?",
+    "choix": ["Arnold Schwarzenegger", "Sylvester Stallone", "Bruce Willis", "Mel Gibson"],
+    "bonneReponse": 1,
+    "explication": "Sylvester Stallone joue Rocky et a aussi écrit le scénario du premier film. La saga s'est poursuivie tout au long des années 1980."
+  },
+  {
+    "id": "films-80-f6",
+    "enonce": "Dans « Ghostbusters » (1984), quel personnage géant en guimauve menace New York ?",
+    "choix": ["Le Stay Puft", "Slimer", "Gozer", "Zuul"],
+    "bonneReponse": 0,
+    "explication": "Le Bibendum Chamallow (Stay Puft Marshmallow Man) est la forme choisie par le dieu Gozer pour se manifester."
+  },
+  {
+    "id": "films-80-f7",
+    "enonce": "Quel acteur joue le rôle-titre dans « Indiana Jones » durant les années 1980 ?",
+    "choix": ["Harrison Ford", "Mel Gibson", "Kurt Russell", "Tom Selleck"],
+    "bonneReponse": 0,
+    "explication": "Harrison Ford incarne l'archéologue aventurier dès « Les Aventuriers de l'arche perdue » (1981)."
+  },
+  {
+    "id": "films-80-f8",
+    "enonce": "Dans « Gremlins » (1984), que ne faut-il jamais donner à Gizmo après minuit ?",
+    "choix": ["De l'eau", "De la nourriture", "Du sucre", "De la viande"],
+    "bonneReponse": 1,
+    "explication": "Les trois règles : pas de lumière vive, ne pas le mouiller, et surtout ne pas le nourrir après minuit, sous peine de le voir se transformer."
+  },
+  {
+    "id": "films-80-f9",
+    "enonce": "Quel film de 1986 met en scène des pilotes de chasse de l'US Navy, avec Tom Cruise ?",
+    "choix": ["Top Gun", "Iron Eagle", "Les Ailes de l'enfer", "Hot Shots"],
+    "bonneReponse": 0,
+    "explication": "« Top Gun » de Tony Scott révèle Tom Cruise dans le rôle de « Maverick » et devient un énorme succès, porté par sa bande-son."
+  },
+  {
+    "id": "films-80-f10",
+    "enonce": "Dans « Dirty Dancing » (1987), quelle réplique culte prononce Johnny ?",
+    "choix": ["« On ne laisse pas Bébé dans un coin »", "« Que la Force soit avec toi »", "« Je reviendrai »", "« Voici venir Johnny »"],
+    "bonneReponse": 0,
+    "explication": "« Nobody puts Baby in a corner » est prononcée par Patrick Swayze dans ce film de danse devenu culte."
+  }
+]

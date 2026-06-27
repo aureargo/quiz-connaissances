@@ -1,0 +1,72 @@
+[
+  {
+    "id": "algorithmes-f1",
+    "enonce": "Qu'est-ce qu'un algorithme ?",
+    "choix": ["Un composant électronique", "Une suite finie d'instructions pour résoudre un problème", "Un langage de programmation", "Un type de base de données"],
+    "bonneReponse": 1,
+    "explication": "Un algorithme est une suite ordonnée et finie d'étapes qui transforme des données d'entrée en un résultat. Une recette de cuisine en est une analogie courante."
+  },
+  {
+    "id": "algorithmes-f2",
+    "enonce": "Selon quel principe une pile (stack) gère-t-elle ses éléments ?",
+    "choix": ["Premier entré, premier sorti", "Dernier entré, premier sorti", "Ordre alphabétique", "Ordre aléatoire"],
+    "bonneReponse": 1,
+    "explication": "Une pile fonctionne en LIFO (Last In, First Out) : le dernier élément empilé est le premier retiré, comme une pile d'assiettes que l'on prend par le haut."
+  },
+  {
+    "id": "algorithmes-f3",
+    "enonce": "Selon quel principe une file (queue) gère-t-elle ses éléments ?",
+    "choix": ["Premier entré, premier sorti", "Dernier entré, premier sorti", "Du plus grand au plus petit", "Selon le hasard"],
+    "bonneReponse": 0,
+    "explication": "Une file suit le principe FIFO (First In, First Out) : le premier arrivé est le premier servi, exactement comme une file d'attente à la caisse."
+  },
+  {
+    "id": "algorithmes-f4",
+    "enonce": "Dans un tableau (array), comment accède-t-on directement à un élément ?",
+    "choix": ["Par son indice (sa position)", "Par sa couleur", "En parcourant tous les précédents", "Par son adresse réseau"],
+    "bonneReponse": 0,
+    "explication": "Un tableau range ses éléments à des positions contiguës en mémoire ; on atteint n'importe lequel directement par son indice, en temps constant O(1)."
+  },
+  {
+    "id": "algorithmes-f5",
+    "enonce": "Que fait un algorithme de tri ?",
+    "choix": ["Il supprime les doublons", "Il ordonne les éléments selon un critère", "Il chiffre les données", "Il compresse un fichier"],
+    "bonneReponse": 1,
+    "explication": "Un algorithme de tri réarrange les éléments d'une collection dans un ordre défini (croissant, alphabétique…). Le tri à bulles et le tri rapide en sont des exemples."
+  },
+  {
+    "id": "algorithmes-f6",
+    "enonce": "Que représente la notation « O(1) » ?",
+    "choix": ["Un temps qui augmente avec la taille des données", "Un temps constant, indépendant de la taille des données", "Une seule ligne de code", "Une erreur de calcul"],
+    "bonneReponse": 1,
+    "explication": "O(1) désigne une complexité constante : le temps d'exécution ne dépend pas du nombre d'éléments. Accéder à une case de tableau par son indice en est l'exemple type."
+  },
+  {
+    "id": "algorithmes-f7",
+    "enonce": "Qu'est-ce qu'une liste chaînée (linked list) ?",
+    "choix": ["Une suite d'éléments reliés chacun au suivant", "Un tableau de taille fixe", "Un type de boucle", "Un dossier de fichiers"],
+    "bonneReponse": 0,
+    "explication": "Dans une liste chaînée, chaque élément (nœud) contient une valeur et un lien vers le suivant. Insérer ou retirer est facile, mais l'accès direct par indice est impossible."
+  },
+  {
+    "id": "algorithmes-f8",
+    "enonce": "En quoi consiste une recherche linéaire (séquentielle) dans une liste ?",
+    "choix": ["Couper la liste en deux à chaque étape", "Parcourir les éléments un par un jusqu'à trouver", "Trier la liste puis s'arrêter", "Calculer la moyenne des valeurs"],
+    "bonneReponse": 1,
+    "explication": "La recherche linéaire examine chaque élément l'un après l'autre. Simple mais lente sur de grandes listes : sa complexité est O(n) dans le pire des cas."
+  },
+  {
+    "id": "algorithmes-f9",
+    "enonce": "Dans un arbre, comment appelle-t-on l'élément situé tout en haut ?",
+    "choix": ["La feuille", "La racine", "La branche", "Le tronc"],
+    "bonneReponse": 1,
+    "explication": "La racine est le nœud de départ d'un arbre, le seul sans parent. À l'opposé, les nœuds sans enfant sont appelés les feuilles."
+  },
+  {
+    "id": "algorithmes-f10",
+    "enonce": "Que signifie la complexité « O(n) » ?",
+    "choix": ["Le temps reste constant", "Le temps croît proportionnellement au nombre d'éléments", "Le temps double à chaque élément ajouté", "Le calcul devient impossible"],
+    "bonneReponse": 1,
+    "explication": "O(n) décrit une complexité linéaire : doubler la taille des données double environ le temps de calcul. Parcourir une liste entière une fois en est l'exemple classique."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cpu-e1",
+    "enonce": "Que prédit la « loi de Moore » énoncée en 1965 ?",
+    "choix": ["le doublement du nombre de transistors environ tous les deux ans", "le doublement de la fréquence d'horloge chaque année", "la division par deux du prix des CPU chaque année", "le doublement de la taille des puces tous les cinq ans"],
+    "bonneReponse": 0,
+    "explication": "Gordon Moore a observé que le nombre de transistors par puce double à peu près tous les deux ans. Longtemps vérifiée, cette tendance ralentit à mesure qu'on approche des limites physiques."
+  },
+  {
+    "id": "cpu-e2",
+    "enonce": "Qu'est-ce qui caractérise l'architecture de von Neumann ?",
+    "choix": ["instructions et données partagent la même mémoire", "chaque cœur possède sa propre horloge", "le CPU n'a aucune mémoire cache", "les calculs sont uniquement analogiques"],
+    "bonneReponse": 0,
+    "explication": "Dans l'architecture de von Neumann, programme et données cohabitent dans une mémoire unique reliée au CPU par un bus commun. L'architecture Harvard, elle, sépare les deux."
+  },
+  {
+    "id": "cpu-e3",
+    "enonce": "Que permet l'« exécution dans le désordre » (out-of-order execution) ?",
+    "choix": ["réordonner les instructions pour ne pas attendre inutilement", "exécuter les programmes sans les charger en mémoire", "désactiver le cache pour gagner de la place", "démarrer le CPU sans système d'exploitation"],
+    "bonneReponse": 0,
+    "explication": "Plutôt que de bloquer sur une instruction en attente (par exemple d'une donnée en mémoire), le CPU exécute dans l'intervalle des instructions ultérieures déjà prêtes, puis remet les résultats dans l'ordre."
+  },
+  {
+    "id": "cpu-e4",
+    "enonce": "À quoi sert la « prédiction de branchement » (branch prediction) ?",
+    "choix": ["deviner l'issue d'un saut conditionnel pour garder le pipeline rempli", "choisir le cœur le moins chargé", "anticiper la panne d'un ventilateur", "estimer la durée de vie de la puce"],
+    "bonneReponse": 0,
+    "explication": "Face à un « si… alors… », le CPU parie sur la branche la plus probable et continue sans attendre. Une mauvaise prédiction oblige à vider le pipeline, ce qui coûte des cycles."
+  },
+  {
+    "id": "cpu-e5",
+    "enonce": "Quelle technique des CPU modernes les failles Spectre et Meltdown (2018) exploitent-elles ?",
+    "choix": ["l'exécution spéculative", "la mémoire cache L3", "le refroidissement liquide", "la gravure en sept nanomètres"],
+    "bonneReponse": 0,
+    "explication": "Ces vulnérabilités détournent l'exécution spéculative : le CPU exécute par avance des instructions « au cas où », laissant dans le cache des traces qui permettent de lire des données censées être protégées."
+  },
+  {
+    "id": "cpu-e6",
+    "enonce": "Que désigne le « SIMD », présent dans les jeux d'instructions comme SSE ou AVX ?",
+    "choix": ["Single Instruction, Multiple Data", "Sequential Internal Memory Driver", "System Integrated Microcode Design", "Shared Instruction Multi-Display"],
+    "bonneReponse": 0,
+    "explication": "Le SIMD applique une même instruction à plusieurs données simultanément (par exemple plusieurs pixels ou nombres d'un coup). C'est précieux pour le multimédia et le calcul scientifique."
+  },
+  {
+    "id": "cpu-e7",
+    "enonce": "Que mesure-t-on en nanomètres lorsqu'on parle de « finesse de gravure » d'un processeur ?",
+    "choix": ["la taille des composants gravés sur la puce", "la longueur des broches du socket", "l'épaisseur du dissipateur thermique", "le diamètre des ventilateurs"],
+    "bonneReponse": 0,
+    "explication": "La finesse de gravure (le procédé de fabrication) reflète la taille des transistors. Plus elle est fine, plus on en case sur une puce, en général avec un meilleur rendement énergétique."
+  },
+  {
+    "id": "cpu-e8",
+    "enonce": "Quel est le rôle de la MMU (Memory Management Unit) d'un processeur ?",
+    "choix": ["traduire les adresses virtuelles en adresses physiques", "ventiler la chaleur du processeur", "gérer le branchement des périphériques USB", "stocker le microcode de démarrage"],
+    "bonneReponse": 0,
+    "explication": "La MMU convertit les adresses mémoire virtuelles vues par les programmes en adresses physiques réelles. Elle s'appuie sur un cache d'adresses, la TLB, pour accélérer cette traduction."
+  },
+  {
+    "id": "cpu-e9",
+    "enonce": "Que distingue le « boutisme » (endianness) d'un processeur ?",
+    "choix": ["l'ordre des octets d'un nombre en mémoire", "le sens de rotation du ventilateur", "l'ordre d'allumage des cœurs", "le format d'affichage de la date"],
+    "bonneReponse": 0,
+    "explication": "Un processeur gros-boutiste (big-endian) range l'octet de poids fort en premier, un petit-boutiste (little-endian) l'octet de poids faible. x86 est little-endian ; cela compte lors des échanges de données binaires."
+  },
+  {
+    "id": "cpu-e10",
+    "enonce": "Qu'appelle-t-on un processeur « superscalaire » ?",
+    "choix": ["un CPU capable d'exécuter plusieurs instructions par cycle d'horloge", "un CPU cadencé au-delà de cinq gigahertz", "un CPU dépourvu de mémoire cache", "un CPU doté d'un seul cœur très puissant"],
+    "bonneReponse": 0,
+    "explication": "Un processeur superscalaire possède plusieurs unités d'exécution et peut lancer plusieurs instructions dans le même cycle d'horloge, à condition qu'elles soient indépendantes."
+  }
+]

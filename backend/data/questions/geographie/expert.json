@@ -1,0 +1,72 @@
+[
+  {
+    "id": "geo-e1",
+    "enonce": "Quel rivage constitue le point de terre ferme le plus bas du monde ?",
+    "choix": ["la mer Morte", "la vallée de la Mort", "la dépression de l'Afar", "la mer Caspienne"],
+    "bonneReponse": 0,
+    "explication": "Les rives de la mer Morte, entre Israël, la Jordanie et la Cisjordanie, se situent à environ 430 m sous le niveau de la mer, le plus bas point émergé du globe."
+  },
+  {
+    "id": "geo-e2",
+    "enonce": "Quel détroit sépare l'Asie de l'Amérique du Nord ?",
+    "choix": ["le détroit de Béring", "le détroit de Malacca", "le détroit d'Ormuz", "le détroit de Magellan"],
+    "bonneReponse": 0,
+    "explication": "Le détroit de Béring, large d'environ 85 km, sépare la Sibérie de l'Alaska et relie l'océan Pacifique à l'océan Arctique."
+  },
+  {
+    "id": "geo-e3",
+    "enonce": "Quel lac contient le plus grand volume d'eau douce du monde ?",
+    "choix": ["le lac Supérieur", "le lac Baïkal", "le lac Victoria", "le lac Tanganyika"],
+    "bonneReponse": 1,
+    "explication": "Le lac Baïkal, en Sibérie, est le lac le plus profond du monde (plus de 1 600 m) et renferme à lui seul environ un cinquième de l'eau douce liquide de la planète."
+  },
+  {
+    "id": "geo-e4",
+    "enonce": "Quelle chaîne de montagnes sert de frontière traditionnelle entre l'Europe et l'Asie ?",
+    "choix": ["le Caucase", "les monts Oural", "les Carpates", "l'Altaï"],
+    "bonneReponse": 1,
+    "explication": "Les monts Oural, qui traversent la Russie du nord au sud, marquent par convention la limite entre le continent européen et le continent asiatique."
+  },
+  {
+    "id": "geo-e5",
+    "enonce": "Quel vaste plateau d'Asie centrale est surnommé le « toit du monde » ?",
+    "choix": ["le plateau du Tibet", "l'Altiplano", "le plateau du Deccan", "le haut plateau éthiopien"],
+    "bonneReponse": 0,
+    "explication": "Le plateau du Tibet, perché à plus de 4 500 m d'altitude moyenne, est le plus haut et le plus vaste plateau du monde, d'où son surnom de « toit du monde »."
+  },
+  {
+    "id": "geo-e6",
+    "enonce": "Quelle est la deuxième plus haute montagne du monde ?",
+    "choix": ["le Kangchenjunga", "le K2", "le Lhotse", "le Makalu"],
+    "bonneReponse": 1,
+    "explication": "Le K2, à la frontière du Pakistan et de la Chine, culmine à 8 611 m. Réputé bien plus difficile que l'Everest, il est surnommé la « montagne sauvage »."
+  },
+  {
+    "id": "geo-e7",
+    "enonce": "Quel fleuve possède le plus grand débit d'eau du monde ?",
+    "choix": ["le Congo", "l'Amazone", "le Yangzi", "l'Orénoque"],
+    "bonneReponse": 1,
+    "explication": "L'Amazone déverse à lui seul environ un cinquième de toute l'eau douce que les fleuves rejettent dans les océans, loin devant tout autre cours d'eau."
+  },
+  {
+    "id": "geo-e8",
+    "enonce": "Quelle est la plus grande baie du monde par superficie ?",
+    "choix": ["la baie d'Hudson", "la baie du Bengale", "le golfe du Mexique", "la baie de Baffin"],
+    "bonneReponse": 1,
+    "explication": "La baie du Bengale, bordée par l'Inde, le Bangladesh et la Birmanie, couvre plus de 2 millions de km², ce qui en fait la plus grande baie du monde."
+  },
+  {
+    "id": "geo-e9",
+    "enonce": "Quel désert est considéré comme le plus aride du monde ?",
+    "choix": ["le désert de Gobi", "le désert d'Atacama", "le désert du Namib", "le Sahara"],
+    "bonneReponse": 1,
+    "explication": "Le désert d'Atacama, au Chili, abrite des stations où aucune pluie n'a jamais été mesurée. Certaines zones n'auraient pas connu de précipitations notables depuis des siècles."
+  },
+  {
+    "id": "geo-e10",
+    "enonce": "Comment nomme-t-on la grande fracture où la plaque africaine se déchire en Afrique de l'Est ?",
+    "choix": ["le Grand Rift est-africain", "la faille de San Andreas", "la dorsale médio-atlantique", "le rift islandais"],
+    "bonneReponse": 0,
+    "explication": "Le Grand Rift est-africain est une zone de divergence où la plaque africaine se sépare lentement, créant volcans, lacs profonds et, à terme, un futur océan."
+  }
+]

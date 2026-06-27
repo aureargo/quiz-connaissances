@@ -1,0 +1,72 @@
+[
+  {
+    "id": "films-90-f1",
+    "enonce": "Dans « Titanic » (1997), quel acteur incarne Jack Dawson ?",
+    "choix": ["Brad Pitt", "Leonardo DiCaprio", "Matt Damon", "Johnny Depp"],
+    "bonneReponse": 1,
+    "explication": "Leonardo DiCaprio joue Jack aux côtés de Kate Winslet (Rose). Le film de James Cameron a battu des records au box-office."
+  },
+  {
+    "id": "films-90-f2",
+    "enonce": "Quel film d'animation Disney de 1994 raconte l'histoire du lionceau Simba ?",
+    "choix": ["Aladdin", "Le Roi lion", "Tarzan", "Mulan"],
+    "bonneReponse": 1,
+    "explication": "« Le Roi lion » suit Simba qui doit reconquérir son trône après la mort de son père Mufasa. C'est un des plus grands succès de Disney."
+  },
+  {
+    "id": "films-90-f3",
+    "enonce": "Dans « Forrest Gump » (1994), quelle phrase Forrest répète-t-il à propos de la vie ?",
+    "choix": ["« La vie est belle »", "« La vie, c'est comme une boîte de chocolats »", "« Carpe diem »", "« Cours, Forrest, cours »"],
+    "bonneReponse": 1,
+    "explication": "« La vie, c'est comme une boîte de chocolats : on ne sait jamais sur quoi on va tomber », une citation attribuée à sa mère."
+  },
+  {
+    "id": "films-90-f4",
+    "enonce": "Quel film de 1993 de Steven Spielberg met en scène un parc rempli de dinosaures ressuscités ?",
+    "choix": ["Godzilla", "Jurassic Park", "King Kong", "Le Monde perdu"],
+    "bonneReponse": 1,
+    "explication": "« Jurassic Park » a marqué l'histoire des effets spéciaux en mêlant animatronique et images de synthèse pour ses dinosaures."
+  },
+  {
+    "id": "films-90-f5",
+    "enonce": "Dans « Matrix » (1999), quelle couleur de pilule Neo doit-il choisir pour connaître la vérité ?",
+    "choix": ["La verte", "La rouge", "La bleue", "La jaune"],
+    "bonneReponse": 1,
+    "explication": "Morpheus propose la pilule rouge (la vérité) ou la bleue (l'oubli). Neo choisit la rouge et découvre la réalité de la Matrice."
+  },
+  {
+    "id": "films-90-f6",
+    "enonce": "Quel film d'animation Pixar de 1995 donne vie aux jouets quand les humains ont le dos tourné ?",
+    "choix": ["Shrek", "Toy Story", "Fourmiz", "1001 Pattes"],
+    "bonneReponse": 1,
+    "explication": "« Toy Story » est le premier long-métrage entièrement en images de synthèse, avec le cow-boy Woody et l'astronaute Buzz l'Éclair."
+  },
+  {
+    "id": "films-90-f7",
+    "enonce": "Dans « Maman, j'ai raté l'avion » (1990), où la famille oublie-t-elle le jeune Kevin ?",
+    "choix": ["À l'aéroport", "À la maison", "Au supermarché", "Chez sa grand-mère"],
+    "bonneReponse": 1,
+    "explication": "La famille part en vacances à Paris en oubliant Kevin à la maison, qu'il devra défendre seul contre deux cambrioleurs."
+  },
+  {
+    "id": "films-90-f8",
+    "enonce": "Dans le dessin animé « Aladdin » (1992), quel personnage bleu exauce les vœux d'Aladdin ?",
+    "choix": ["Le Génie", "Jafar", "Iago", "Abu"],
+    "bonneReponse": 0,
+    "explication": "Le Génie de la lampe, à la peau bleue, accorde trois vœux. Dans la version originale, il est doublé par Robin Williams."
+  },
+  {
+    "id": "films-90-f9",
+    "enonce": "Dans « Men in Black » (1997), que surveillent les agents en noir ?",
+    "choix": ["Les espions", "Les extraterrestres", "Les criminels", "Les fantômes"],
+    "bonneReponse": 1,
+    "explication": "Les Men in Black, joués par Will Smith et Tommy Lee Jones, contrôlent en secret l'immigration extraterrestre sur Terre."
+  },
+  {
+    "id": "films-90-f10",
+    "enonce": "Quel acteur incarne le personnage au visage vert et déjanté dans « The Mask » (1994) ?",
+    "choix": ["Jim Carrey", "Robin Williams", "Mike Myers", "Adam Sandler"],
+    "bonneReponse": 0,
+    "explication": "Jim Carrey, métamorphosé par un masque magique, multiplie les pitreries cartoonesques dans cette comédie qui l'a fait connaître."
+  }
+]

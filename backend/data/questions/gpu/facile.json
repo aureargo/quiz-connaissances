@@ -1,0 +1,72 @@
+[
+  {
+    "id": "gpu-f1",
+    "enonce": "Que signifie le sigle « GPU » ?",
+    "choix": ["Graphics Processing Unit", "General Purpose Unit", "Graphic Power Utility", "Global Pixel Unit"],
+    "bonneReponse": 0,
+    "explication": "« GPU » signifie Graphics Processing Unit, soit processeur graphique : un composant spécialisé dans le calcul et l'affichage des images."
+  },
+  {
+    "id": "gpu-f2",
+    "enonce": "Quel est le rôle principal d'un GPU ?",
+    "choix": ["calculer et afficher les images à l'écran", "stocker les fichiers durablement", "gérer la connexion réseau", "alimenter la carte mère en courant"],
+    "bonneReponse": 0,
+    "explication": "Le GPU est spécialisé dans le traitement des images : géométrie 3D, textures, pixels. Le stockage relève du disque et le réseau de la carte réseau."
+  },
+  {
+    "id": "gpu-f3",
+    "enonce": "Quels sont les deux principaux fabricants de cartes graphiques grand public ?",
+    "choix": ["Nvidia et AMD", "Intel et IBM", "Sony et Nintendo", "Samsung et Toshiba"],
+    "bonneReponse": 0,
+    "explication": "Nvidia et AMD dominent le marché des cartes graphiques dédiées. Intel propose surtout des GPU intégrés, et est arrivé plus récemment sur les cartes dédiées."
+  },
+  {
+    "id": "gpu-f4",
+    "enonce": "Comment appelle-t-on la mémoire vive dédiée d'une carte graphique ?",
+    "choix": ["la VRAM", "le BIOS", "le cache disque", "la ROM"],
+    "bonneReponse": 0,
+    "explication": "La VRAM (Video RAM) est la mémoire propre à la carte graphique, où sont stockés textures, images et données 3D pour un accès très rapide par le GPU."
+  },
+  {
+    "id": "gpu-f5",
+    "enonce": "Pour quel usage les cartes graphiques sont-elles le plus connues du grand public ?",
+    "choix": ["les jeux vidéo", "la sauvegarde des fichiers", "l'impression de documents", "la connexion à Internet"],
+    "bonneReponse": 0,
+    "explication": "Le grand public associe surtout le GPU au jeu vidéo, car il calcule en temps réel les images 3D. Mais il sert aussi au montage vidéo, à la 3D et à l'IA."
+  },
+  {
+    "id": "gpu-f6",
+    "enonce": "Quelle gamme de cartes graphiques pour joueurs Nvidia commercialise-t-il ?",
+    "choix": ["GeForce", "Radeon", "Ryzen", "Pentium"],
+    "bonneReponse": 0,
+    "explication": "GeForce est la gamme grand public de Nvidia (RTX, GTX). Radeon est la gamme concurrente d'AMD ; Ryzen et Pentium sont des processeurs."
+  },
+  {
+    "id": "gpu-f7",
+    "enonce": "Quelle gamme de cartes graphiques pour joueurs AMD commercialise-t-il ?",
+    "choix": ["Radeon", "GeForce", "Core", "Snapdragon"],
+    "bonneReponse": 0,
+    "explication": "Radeon est la gamme de cartes graphiques d'AMD. GeForce appartient à Nvidia, Core à Intel, et Snapdragon à Qualcomm."
+  },
+  {
+    "id": "gpu-f8",
+    "enonce": "Que mesure le nombre d'« images par seconde » (FPS) dans un jeu ?",
+    "choix": ["la fluidité de l'animation", "la qualité du son", "la taille du fichier de jeu", "la vitesse de la connexion"],
+    "bonneReponse": 0,
+    "explication": "Le FPS (frames per second) indique combien d'images la carte graphique affiche chaque seconde. Plus il est élevé, plus l'animation paraît fluide."
+  },
+  {
+    "id": "gpu-f9",
+    "enonce": "Dans quel type de calcul un GPU excelle-t-il par rapport à un CPU ?",
+    "choix": ["faire de très nombreux calculs simples en parallèle", "exécuter une longue tâche unique très complexe", "gérer le système de fichiers", "lancer le système d'exploitation"],
+    "bonneReponse": 0,
+    "explication": "Le GPU possède des milliers de petites unités de calcul, idéales pour traiter beaucoup d'opérations simples en même temps. Le CPU, lui, est plus polyvalent et meilleur sur les tâches séquentielles."
+  },
+  {
+    "id": "gpu-f10",
+    "enonce": "Qu'est-ce qu'un GPU « intégré » (ou IGP) ?",
+    "choix": ["un GPU inclus dans le processeur, sans carte séparée", "une carte graphique haut de gamme", "un GPU réservé aux serveurs", "un GPU dédié au minage de cryptomonnaies"],
+    "bonneReponse": 0,
+    "explication": "Un GPU intégré est fondu dans la même puce que le CPU et partage la mémoire vive du système. Économique et peu gourmand, il est moins puissant qu'une carte graphique dédiée."
+  }
+]

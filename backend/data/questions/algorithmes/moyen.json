@@ -1,0 +1,72 @@
+[
+  {
+    "id": "algorithmes-m1",
+    "enonce": "Quelle est la complexité en temps du tri à bulles dans le pire des cas ?",
+    "choix": ["O(1)", "O(log n)", "O(n)", "O(n²)"],
+    "bonneReponse": 3,
+    "explication": "Le tri à bulles compare des paires voisines et les échange, en plusieurs passes : il effectue de l'ordre de n² comparaisons. On lui préfère donc des tris plus efficaces sur de grandes données."
+  },
+  {
+    "id": "algorithmes-m2",
+    "enonce": "Pour fonctionner, la recherche dichotomique (binaire) suppose que la liste soit…",
+    "choix": ["déjà triée", "complètement vide", "de taille paire", "remplie de doublons"],
+    "bonneReponse": 0,
+    "explication": "La recherche dichotomique élimine la moitié des candidats à chaque étape en comparant à l'élément central, ce qui n'a de sens que sur une liste triée. Sa complexité est O(log n)."
+  },
+  {
+    "id": "algorithmes-m3",
+    "enonce": "Sur quel principe repose le tri fusion (merge sort) ?",
+    "choix": ["Échanger les éléments adjacents jusqu'à l'ordre", "Diviser pour régner : couper, trier, puis fusionner", "Choisir le minimum à chaque tour", "Mélanger au hasard jusqu'à tomber juste"],
+    "bonneReponse": 1,
+    "explication": "Le tri fusion découpe la liste en deux, trie récursivement chaque moitié puis les fusionne. Cette stratégie « diviser pour régner » lui donne une complexité garantie de O(n log n)."
+  },
+  {
+    "id": "algorithmes-m4",
+    "enonce": "Qu'est-ce qu'un arbre binaire ?",
+    "choix": ["Un arbre où chaque nœud a au plus deux enfants", "Un arbre dont les valeurs sont codées en binaire", "Un arbre possédant exactement deux racines", "Un arbre dépourvu de feuilles"],
+    "bonneReponse": 0,
+    "explication": "Dans un arbre binaire, chaque nœud possède au maximum deux enfants, souvent appelés gauche et droit. C'est la base des arbres binaires de recherche et des tas."
+  },
+  {
+    "id": "algorithmes-m5",
+    "enonce": "Quelle structure de données gère naturellement les appels de fonctions imbriqués (et la récursion) ?",
+    "choix": ["La file", "La pile", "Le tableau trié", "La table de hachage"],
+    "bonneReponse": 1,
+    "explication": "Les appels de fonctions s'empilent sur la « pile d'exécution » : le dernier appelé est le premier à se terminer (LIFO). Une récursion trop profonde provoque d'ailleurs un débordement de pile."
+  },
+  {
+    "id": "algorithmes-m6",
+    "enonce": "Que décrit une complexité « O(n²) » ?",
+    "choix": ["Le temps reste constant", "Le temps croît comme le carré du nombre d'éléments", "Le temps croît comme le logarithme du nombre d'éléments", "Le temps diminue quand les données grossissent"],
+    "bonneReponse": 1,
+    "explication": "En O(n²), doubler les données quadruple environ le temps de calcul. Les algorithmes à deux boucles imbriquées sur la même collection, comme le tri à bulles, en sont typiques."
+  },
+  {
+    "id": "algorithmes-m7",
+    "enonce": "Quelle est la complexité de l'accès au n-ième élément d'une liste chaînée ?",
+    "choix": ["O(1), un accès direct", "O(n), il faut parcourir depuis le début", "O(log n), par dichotomie", "O(n²), avec deux parcours"],
+    "bonneReponse": 1,
+    "explication": "Contrairement à un tableau, une liste chaînée n'offre pas d'accès direct : pour atteindre le n-ième élément, il faut suivre les liens un à un depuis la tête, d'où une complexité O(n)."
+  },
+  {
+    "id": "algorithmes-m8",
+    "enonce": "À quoi sert principalement une table de hachage (hash table) ?",
+    "choix": ["À trier automatiquement les données", "À retrouver une valeur par sa clé très rapidement", "À chiffrer un mot de passe", "À compresser des images"],
+    "bonneReponse": 1,
+    "explication": "Une table de hachage associe des clés à des valeurs via une fonction de hachage, offrant un accès en temps moyen O(1). C'est la structure derrière les dictionnaires de nombreux langages."
+  },
+  {
+    "id": "algorithmes-m9",
+    "enonce": "Quelle structure utilise-t-on pour un parcours en largeur (BFS) d'un arbre ou d'un graphe ?",
+    "choix": ["Une pile", "Une file", "Un tas", "Un tableau trié"],
+    "bonneReponse": 1,
+    "explication": "Le parcours en largeur visite les nœuds niveau par niveau ; on mémorise les voisins à explorer dans une file (FIFO). Le parcours en profondeur (DFS), lui, s'appuie sur une pile."
+  },
+  {
+    "id": "algorithmes-m10",
+    "enonce": "Qu'est-ce qu'une fonction récursive ?",
+    "choix": ["Une fonction qui s'appelle elle-même", "Une fonction sans aucun paramètre", "Une fonction lancée en boucle infinie", "Une fonction qui ne renvoie rien"],
+    "bonneReponse": 0,
+    "explication": "Une fonction récursive résout un problème en s'appelant sur un sous-problème plus petit, jusqu'à un cas de base qui arrête la descente. Sans cas de base, elle boucle et fait déborder la pile."
+  }
+]

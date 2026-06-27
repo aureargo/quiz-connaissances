@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ts-m1",
+    "enonce": "Que définit un type union comme `string | number` ?",
+    "choix": ["une valeur à la fois string et number", "une valeur qui peut être soit string soit number", "un tableau mêlant strings et numbers", "une conversion automatique de number vers string"],
+    "bonneReponse": 1,
+    "explication": "La barre verticale `|` exprime un choix : la valeur est de l'un OU l'autre type. Avant de l'utiliser, on « réduit » souvent le type avec un test (`typeof`)."
+  },
+  {
+    "id": "ts-m2",
+    "enonce": "Quelle est une différence notable entre `interface` et `type` ?",
+    "choix": ["`interface` accepte la fusion de déclarations, pas `type`", "`type` ne peut pas décrire un objet", "`interface` ne peut pas être étendue", "`type` est interdit dans les classes"],
+    "bonneReponse": 0,
+    "explication": "Deux `interface` de même nom fusionnent automatiquement leurs membres, ce que `type` ne permet pas. À l'inverse, `type` sait exprimer des unions et des types calculés que `interface` ne gère pas."
+  },
+  {
+    "id": "ts-m3",
+    "enonce": "Quelle différence majeure entre les types `unknown` et `any` ?",
+    "choix": ["`unknown` impose une vérification avant utilisation, pas `any`", "`unknown` est un simple alias de `any`", "`any` est plus sûr que `unknown`", "`unknown` n'accepte que les objets"],
+    "bonneReponse": 0,
+    "explication": "`unknown` accepte toute valeur mais interdit de l'utiliser tant qu'on n'a pas vérifié son type ; c'est le pendant sûr d'`any`, qui lui autorise tout sans contrôle."
+  },
+  {
+    "id": "ts-m4",
+    "enonce": "Que permet de déclarer le mot-clé `enum` ?",
+    "choix": ["un ensemble nommé de constantes", "une fonction générique", "une propriété en lecture seule", "une classe abstraite"],
+    "bonneReponse": 0,
+    "explication": "Une énumération regroupe des constantes liées sous un nom : `enum Couleur { Rouge, Vert, Bleu }`. Pratique pour remplacer des « nombres magiques » par des libellés lisibles."
+  },
+  {
+    "id": "ts-m5",
+    "enonce": "À quoi servent les génériques, comme dans `Array<T>` ?",
+    "choix": ["À écrire du code réutilisable paramétré par un type", "À convertir automatiquement les types entre eux", "À rendre une fonction asynchrone", "À masquer une propriété privée"],
+    "bonneReponse": 0,
+    "explication": "Le paramètre de type `T` est un trou à remplir : `Array<string>`, `Array<number>`… La même fonction ou classe marche pour plusieurs types tout en gardant un typage précis."
+  },
+  {
+    "id": "ts-m6",
+    "enonce": "Que fait l'assertion de type `valeur as string` ?",
+    "choix": ["Elle convertit la valeur en string à l'exécution", "Elle dit au compilateur de traiter la valeur comme un string", "Elle vérifie au runtime que la valeur est bien un string", "Elle déclare une nouvelle variable de type string"],
+    "bonneReponse": 1,
+    "explication": "`as` est une promesse faite au compilateur, sans aucun effet à l'exécution : aucune conversion ni vérification n'a lieu. Une assertion erronée peut donc masquer un vrai bug."
+  },
+  {
+    "id": "ts-m7",
+    "enonce": "Que signifie le modificateur `readonly` sur une propriété ?",
+    "choix": ["La propriété ne peut plus être modifiée après initialisation", "La propriété est privée à la classe", "La propriété est optionnelle", "La propriété est recalculée à chaque accès"],
+    "bonneReponse": 0,
+    "explication": "`readonly` interdit la réaffectation après l'initialisation, à la compilation. C'est un contrôle purement statique : il disparaît dans le JavaScript généré."
+  },
+  {
+    "id": "ts-m8",
+    "enonce": "Que représente le type `'rouge' | 'vert' | 'bleu'` ?",
+    "choix": ["un type limité à ces trois chaînes précises", "n'importe quelle chaîne de caractères", "un tableau de trois chaînes", "une énumération numérique"],
+    "bonneReponse": 0,
+    "explication": "Ce sont des types littéraux combinés en union : la valeur ne peut être QUE l'une de ces trois chaînes exactes. C'est une alternative légère à un `enum`."
+  },
+  {
+    "id": "ts-m9",
+    "enonce": "À quoi sert le fichier `tsconfig.json` ?",
+    "choix": ["À configurer les options du compilateur TypeScript", "À lister les dépendances npm du projet", "À déclarer les variables d'environnement", "À stocker les données de l'application"],
+    "bonneReponse": 0,
+    "explication": "`tsconfig.json` pilote la compilation : version de JavaScript ciblée, dossier de sortie, niveau de rigueur des types… Les dépendances, elles, vivent dans `package.json`."
+  },
+  {
+    "id": "ts-m10",
+    "enonce": "Que se passe-t-il avec les annotations de type à l'exécution du programme ?",
+    "choix": ["Elles sont effacées : il ne reste que du JavaScript", "Elles sont vérifiées à chaque appel", "Elles sont converties en commentaires", "Elles ralentissent légèrement le code"],
+    "bonneReponse": 0,
+    "explication": "Les types sont gommés (« type erasure ») lors de la transpilation : ils ne servent qu'à la vérification statique et n'existent plus au runtime. D'où le besoin de tests `typeof` pour vérifier un type pendant l'exécution."
+  }
+]

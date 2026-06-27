@@ -1,0 +1,72 @@
+[
+  {
+    "id": "sf-f1",
+    "enonce": "Quel auteur a imaginé les célèbres « Trois Lois de la robotique » dans ses nouvelles ?",
+    "choix": ["Arthur C. Clarke", "Ray Bradbury", "Isaac Asimov", "Philip K. Dick"],
+    "bonneReponse": 2,
+    "explication": "Isaac Asimov formule les Trois Lois de la robotique dès 1942, notamment dans le recueil « Les Robots » (I, Robot). Elles encadrent le comportement des robots dans une grande partie de son œuvre."
+  },
+  {
+    "id": "sf-f2",
+    "enonce": "Sur quelle planète désertique se déroule le roman « Dune » de Frank Herbert ?",
+    "choix": ["Mars", "Arrakis", "Trantor", "Pandora"],
+    "bonneReponse": 1,
+    "explication": "Arrakis, surnommée « Dune », est une planète aride balayée par les sables, seul lieu de production de la précieuse épice. Trantor, elle, appartient au cycle de Fondation d'Asimov."
+  },
+  {
+    "id": "sf-f3",
+    "enonce": "Quel écrivain français du XIXᵉ siècle est l'auteur de « Vingt mille lieues sous les mers » ?",
+    "choix": ["Victor Hugo", "Alexandre Dumas", "H.G. Wells", "Jules Verne"],
+    "bonneReponse": 3,
+    "explication": "Jules Verne, pionnier de la science-fiction, signe les « Voyages extraordinaires », dont « Vingt mille lieues sous les mers » et « De la Terre à la Lune »."
+  },
+  {
+    "id": "sf-f4",
+    "enonce": "Quel roman de George Orwell décrit une société surveillée par « Big Brother » ?",
+    "choix": ["1984", "Le Meilleur des mondes", "Fahrenheit 451", "Nous autres"],
+    "bonneReponse": 0,
+    "explication": "Publié en 1949, « 1984 » dépeint un régime totalitaire où « Big Brother » voit tout. Le roman a imposé des termes comme « novlangue » et « Big Brother »."
+  },
+  {
+    "id": "sf-f5",
+    "enonce": "Quel roman de H.G. Wells raconte une invasion de la Terre par les Martiens ?",
+    "choix": ["La Machine à explorer le temps", "La Guerre des mondes", "L'Homme invisible", "L'Île du docteur Moreau"],
+    "bonneReponse": 1,
+    "explication": "« La Guerre des mondes » (1898) décrit l'invasion de l'Angleterre par des Martiens. Tous ces titres sont d'ailleurs de H.G. Wells, autre grand pionnier du genre."
+  },
+  {
+    "id": "sf-f6",
+    "enonce": "Quel écrivain a imaginé la dystopie « Le Meilleur des mondes » ?",
+    "choix": ["George Orwell", "Yevgeni Zamiatine", "Aldous Huxley", "Ray Bradbury"],
+    "bonneReponse": 2,
+    "explication": "Aldous Huxley publie « Le Meilleur des mondes » en 1932 : une société d'apparence parfaite où les humains sont produits en usine et conditionnés au bonheur."
+  },
+  {
+    "id": "sf-f7",
+    "enonce": "Quel roman de Ray Bradbury décrit une société où les pompiers brûlent les livres ?",
+    "choix": ["Chroniques martiennes", "L'Homme illustré", "Je chante le corps électrique", "Fahrenheit 451"],
+    "bonneReponse": 3,
+    "explication": "Dans « Fahrenheit 451 » (1953), les pompiers ne combattent plus le feu mais brûlent les livres interdits. Le titre renvoie à la température d'auto-inflammation du papier."
+  },
+  {
+    "id": "sf-f8",
+    "enonce": "Le film « La Planète des singes » est adapté d'un roman de quel auteur français ?",
+    "choix": ["Pierre Boulle", "René Barjavel", "Bernard Werber", "Jules Verne"],
+    "bonneReponse": 0,
+    "explication": "Pierre Boulle publie « La Planète des singes » en 1963. Il est aussi l'auteur du « Pont de la rivière Kwaï »."
+  },
+  {
+    "id": "sf-f9",
+    "enonce": "Qui a écrit le roman « 2001 : l'Odyssée de l'espace » ?",
+    "choix": ["Stanley Kubrick", "Arthur C. Clarke", "Isaac Asimov", "Frank Herbert"],
+    "bonneReponse": 1,
+    "explication": "Arthur C. Clarke écrit le roman en parallèle du film de Stanley Kubrick (1968), à partir de sa nouvelle « La Sentinelle ». Roman et film ont été conçus ensemble."
+  },
+  {
+    "id": "sf-f10",
+    "enonce": "Quel roman de Mary Shelley, publié en 1818, est souvent vu comme un précurseur de la science-fiction ?",
+    "choix": ["Dracula", "Le Dernier Homme", "Frankenstein", "L'Île du docteur Moreau"],
+    "bonneReponse": 2,
+    "explication": "« Frankenstein ou le Prométhée moderne » met en scène une créature assemblée et ramenée à la vie par la science : beaucoup y voient le premier vrai roman de SF."
+  }
+]

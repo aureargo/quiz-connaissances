@@ -1,0 +1,72 @@
+[
+  {
+    "id": "biologie-f1",
+    "enonce": "Quel organe pompe le sang dans tout le corps humain ?",
+    "choix": ["le foie", "le cœur", "les poumons", "l'estomac"],
+    "bonneReponse": 1,
+    "explication": "Le cœur est un muscle qui se contracte en continu pour faire circuler le sang dans les artères et les veines. Un adulte au repos bat environ 60 à 80 fois par minute."
+  },
+  {
+    "id": "biologie-f2",
+    "enonce": "Combien de poumons possède un être humain ?",
+    "choix": ["1", "2", "3", "4"],
+    "bonneReponse": 1,
+    "explication": "Nous avons deux poumons, un de chaque côté du thorax. Le poumon gauche est un peu plus petit pour laisser de la place au cœur."
+  },
+  {
+    "id": "biologie-f3",
+    "enonce": "Quel gaz les plantes rejettent-elles le jour grâce à la photosynthèse ?",
+    "choix": ["le dioxygène", "le dioxyde de carbone", "le méthane", "le diazote"],
+    "bonneReponse": 0,
+    "explication": "En photosynthèse, la plante absorbe le dioxyde de carbone et libère du dioxygène (O₂), celui que nous respirons. C'est l'inverse de notre respiration."
+  },
+  {
+    "id": "biologie-f4",
+    "enonce": "Quel est le plus grand organe du corps humain ?",
+    "choix": ["le foie", "la peau", "le cerveau", "l'intestin"],
+    "bonneReponse": 1,
+    "explication": "La peau est bien un organe : c'est le plus grand et le plus lourd du corps. Elle protège l'organisme, régule la température et perçoit le toucher."
+  },
+  {
+    "id": "biologie-f5",
+    "enonce": "Quelle partie de la plante absorbe l'eau du sol ?",
+    "choix": ["les feuilles", "les racines", "les fleurs", "la tige"],
+    "bonneReponse": 1,
+    "explication": "Les racines puisent l'eau et les sels minéraux dans le sol, puis les font monter jusqu'aux feuilles par la tige. Elles ancrent aussi la plante."
+  },
+  {
+    "id": "biologie-f6",
+    "enonce": "Combien de pattes possède un insecte ?",
+    "choix": ["4", "6", "8", "10"],
+    "bonneReponse": 1,
+    "explication": "Tous les insectes ont six pattes (trois paires). C'est ce qui les distingue des araignées, qui en ont huit et ne sont donc pas des insectes."
+  },
+  {
+    "id": "biologie-f7",
+    "enonce": "Comment appelle-t-on un animal qui ne mange que des plantes ?",
+    "choix": ["carnivore", "herbivore", "omnivore", "insectivore"],
+    "bonneReponse": 1,
+    "explication": "Un herbivore se nourrit exclusivement de végétaux, comme la vache ou le lapin. Le carnivore mange de la viande, l'omnivore les deux."
+  },
+  {
+    "id": "biologie-f8",
+    "enonce": "Quel organe filtre le sang et produit l'urine ?",
+    "choix": ["le foie", "les reins", "la rate", "le pancréas"],
+    "bonneReponse": 1,
+    "explication": "Les deux reins filtrent en permanence le sang pour en retirer les déchets, évacués sous forme d'urine. Ils règlent aussi la quantité d'eau du corps."
+  },
+  {
+    "id": "biologie-f9",
+    "enonce": "De quoi un têtard se transforme-t-il en grandissant ?",
+    "choix": ["en poisson", "en grenouille", "en lézard", "en serpent"],
+    "bonneReponse": 1,
+    "explication": "Le têtard est la larve de la grenouille. Au cours de la métamorphose, il perd sa queue, développe des pattes et passe de la respiration par branchies aux poumons."
+  },
+  {
+    "id": "biologie-f10",
+    "enonce": "Quel est l'élément le plus petit composant les êtres vivants ?",
+    "choix": ["l'organe", "la cellule", "le muscle", "le squelette"],
+    "bonneReponse": 1,
+    "explication": "La cellule est la plus petite unité du vivant. Certains êtres n'ont qu'une seule cellule (bactéries), tandis que le corps humain en compte des milliers de milliards."
+  }
+]

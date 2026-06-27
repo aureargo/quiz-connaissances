@@ -1,0 +1,72 @@
+[
+  {
+    "id": "antiquite-e1",
+    "enonce": "Quel empereur promulgua l'édit de Milan en 313, accordant la tolérance au christianisme ?",
+    "choix": ["Dioclétien", "Théodose Ier", "Constantin", "Hadrien"],
+    "bonneReponse": 2,
+    "explication": "Par l'édit de Milan, Constantin met fin aux persécutions des chrétiens. Il convoque aussi le concile de Nicée en 325 et fonde Constantinople, future capitale impériale."
+  },
+  {
+    "id": "antiquite-e2",
+    "enonce": "En quelle année les Wisigoths d'Alaric ont-ils pillé la ville de Rome ?",
+    "choix": ["410", "476", "313", "395"],
+    "bonneReponse": 0,
+    "explication": "Le sac de Rome de 410 traumatisa l'Empire, qui n'avait pas vu d'ennemi dans ses murs depuis huit siècles. La chute de l'Empire d'Occident, elle, est datée de 476."
+  },
+  {
+    "id": "antiquite-e3",
+    "enonce": "Quelle bataille de 331 av. J.-C. scella la défaite de Darius III face à Alexandre ?",
+    "choix": ["Issos", "Gaugamèles", "le Granique", "Chéronée"],
+    "bonneReponse": 1,
+    "explication": "À Gaugamèles, Alexandre écrasa la grande armée perse malgré son infériorité numérique. Cette victoire lui ouvrit Babylone et tout l'Empire achéménide."
+  },
+  {
+    "id": "antiquite-e4",
+    "enonce": "Quel homme d'État athénien est considéré comme le fondateur de la démocratie, avec ses réformes de 508 av. J.-C. ?",
+    "choix": ["Solon", "Périclès", "Clisthène", "Dracon"],
+    "bonneReponse": 2,
+    "explication": "Clisthène réorganisa la cité en dèmes et tribus pour briser le pouvoir des grandes familles. Solon l'avait préparé, Périclès portera la démocratie à son apogée."
+  },
+  {
+    "id": "antiquite-e5",
+    "enonce": "Quel empereur réorganisa l'Empire romain en instaurant la Tétrarchie en 293 ?",
+    "choix": ["Dioclétien", "Aurélien", "Septime Sévère", "Commode"],
+    "bonneReponse": 0,
+    "explication": "Dioclétien partagea le pouvoir entre quatre chefs (deux Augustes et deux Césars) pour mieux administrer et défendre un empire devenu trop vaste. Le système ne lui survécut guère."
+  },
+  {
+    "id": "antiquite-e6",
+    "enonce": "Quelle dynastie unifia la Chine en 221 av. J.-C. et lui donna son premier empereur ?",
+    "choix": ["les Han", "les Zhou", "les Qin", "les Tang"],
+    "bonneReponse": 2,
+    "explication": "Qin Shi Huang fonda l'empire et la dynastie Qin, à l'origine de la Grande Muraille et de l'armée de terre cuite. Les Han lui succédèrent, les Zhou l'avaient précédé."
+  },
+  {
+    "id": "antiquite-e7",
+    "enonce": "Quel roi perse mena l'invasion de la Grèce stoppée à Salamine en 480 av. J.-C. ?",
+    "choix": ["Cyrus II", "Darius Ier", "Xerxès Ier", "Cambyse II"],
+    "bonneReponse": 2,
+    "explication": "Xerxès Ier força le passage des Thermopyles puis prit Athènes, mais sa flotte fut détruite à Salamine. Son père Darius Ier avait été battu à Marathon dix ans plus tôt."
+  },
+  {
+    "id": "antiquite-e8",
+    "enonce": "Quel terme désigne la longue période de paix de l'Empire romain inaugurée par Auguste ?",
+    "choix": ["la Pax Romana", "le Principat", "le Cursus honorum", "l'Imperium"],
+    "bonneReponse": 0,
+    "explication": "La Pax Romana s'étend sur environ deux siècles (27 av. J.-C. à 180 apr. J.-C.). Le cursus honorum désignait la carrière politique, l'imperium le pouvoir de commandement."
+  },
+  {
+    "id": "antiquite-e9",
+    "enonce": "Quelle bataille de 216 av. J.-C. fut un désastre pour Rome face à Hannibal ?",
+    "choix": ["Zama", "Cannes", "le lac Trasimène", "la Trébie"],
+    "bonneReponse": 1,
+    "explication": "À Cannes, Hannibal encercla et anéantit une armée romaine bien supérieure en nombre. Sa manœuvre d'enveloppement reste un modèle étudié dans les écoles militaires."
+  },
+  {
+    "id": "antiquite-e10",
+    "enonce": "Quel empereur fit du christianisme la religion officielle de l'Empire par l'édit de Thessalonique en 380 ?",
+    "choix": ["Constantin", "Théodose Ier", "Julien", "Valentinien Ier"],
+    "bonneReponse": 1,
+    "explication": "Théodose Ier imposa le christianisme nicéen comme religion d'État et interdit les cultes païens. Il fut aussi le dernier à régner sur un Empire encore uni, avant son partage en 395."
+  }
+]

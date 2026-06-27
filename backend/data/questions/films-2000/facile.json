@@ -1,0 +1,72 @@
+[
+  {
+    "id": "films-2000-f1",
+    "enonce": "Dans « Le Seigneur des anneaux » (2001), quel acteur incarne le hobbit Frodon ?",
+    "choix": ["Orlando Bloom", "Sean Astin", "Elijah Wood", "Tobey Maguire"],
+    "bonneReponse": 2,
+    "explication": "Elijah Wood joue Frodon Sacquet, porteur de l'Anneau unique. La trilogie de Peter Jackson a été entièrement tournée en Nouvelle-Zélande."
+  },
+  {
+    "id": "films-2000-f2",
+    "enonce": "Quel film de 2001 fait découvrir l'école de sorcellerie de Poudlard à un jeune garçon à lunettes ?",
+    "choix": ["Harry Potter à l'école des sorciers", "Le Monde de Narnia", "Percy Jackson", "À la croisée des mondes"],
+    "bonneReponse": 0,
+    "explication": "« Harry Potter à l'école des sorciers » lance la saga adaptée des romans de J.K. Rowling, avec Daniel Radcliffe dans le rôle-titre."
+  },
+  {
+    "id": "films-2000-f3",
+    "enonce": "Dans « Gladiator » (2000), quel acteur incarne le général romain Maximus ?",
+    "choix": ["Brad Pitt", "Russell Crowe", "Gerard Butler", "Colin Farrell"],
+    "bonneReponse": 1,
+    "explication": "Russell Crowe remporte l'Oscar du meilleur acteur pour Maximus, général déchu devenu gladiateur. Le film de Ridley Scott gagne aussi l'Oscar du meilleur film."
+  },
+  {
+    "id": "films-2000-f4",
+    "enonce": "Sur quelle planète se déroule « Avatar » (2009), réalisé par James Cameron ?",
+    "choix": ["Pandora", "Tatooine", "Krypton", "Arrakis"],
+    "bonneReponse": 0,
+    "explication": "« Avatar » se déroule sur Pandora, peuplée par les Na'vi. Le film a longtemps détenu le record du plus gros box-office mondial."
+  },
+  {
+    "id": "films-2000-f5",
+    "enonce": "Quel personnage Johnny Depp incarne-t-il dans « Pirates des Caraïbes » (2003) ?",
+    "choix": ["Will Turner", "Davy Jones", "Jack Sparrow", "Barbossa"],
+    "bonneReponse": 2,
+    "explication": "Johnny Depp campe le capitaine Jack Sparrow, dont la démarche et l'élocution s'inspirent du guitariste Keith Richards."
+  },
+  {
+    "id": "films-2000-f6",
+    "enonce": "De quelle couleur est l'ogre héros du film d'animation « Shrek » (2001) ?",
+    "choix": ["Bleu", "Vert", "Violet", "Marron"],
+    "bonneReponse": 1,
+    "explication": "Shrek est un ogre vert au grand cœur, accompagné d'un âne bavard. Le film des studios DreamWorks parodie les contes de fées de Disney."
+  },
+  {
+    "id": "films-2000-f7",
+    "enonce": "Quelle espèce de poisson est Nemo dans le film Pixar « Le Monde de Nemo » (2003) ?",
+    "choix": ["Un poisson rouge", "Un poisson-chirurgien", "Un hippocampe", "Un poisson-clown"],
+    "bonneReponse": 3,
+    "explication": "Nemo est un poisson-clown recherché par son père Marin à travers l'océan. Dory, qui les aide, est un poisson-chirurgien bleu."
+  },
+  {
+    "id": "films-2000-f8",
+    "enonce": "Dans « Spider-Man » (2002), comment Peter Parker acquiert-il ses pouvoirs ?",
+    "choix": ["Une expérience militaire ratée", "La morsure d'une araignée", "Un héritage venu d'une autre planète", "Une exposition à des radiations"],
+    "bonneReponse": 1,
+    "explication": "Peter Parker, joué par Tobey Maguire, est mordu par une araignée génétiquement modifiée. Le film de Sam Raimi relance les adaptations de super-héros."
+  },
+  {
+    "id": "films-2000-f9",
+    "enonce": "Quel personnage Heath Ledger incarne-t-il dans « The Dark Knight, le Chevalier noir » (2008) ?",
+    "choix": ["Le Pingouin", "Bane", "L'Épouvantail", "Le Joker"],
+    "bonneReponse": 3,
+    "explication": "Heath Ledger reçoit l'Oscar du meilleur second rôle, à titre posthume, pour son interprétation du Joker face au Batman de Christian Bale."
+  },
+  {
+    "id": "films-2000-f10",
+    "enonce": "Dans le film Pixar « Là-haut » (2009), comment le vieux Carl fait-il voler sa maison ?",
+    "choix": ["Avec un moteur d'avion", "Avec des fusées", "Avec des milliers de ballons", "Avec des ailes mécaniques"],
+    "bonneReponse": 2,
+    "explication": "Carl accroche des milliers de ballons d'hélium à sa maison pour rejoindre l'Amérique du Sud. Le film a fait l'ouverture du Festival de Cannes 2009."
+  }
+]

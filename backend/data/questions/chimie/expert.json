@@ -1,0 +1,72 @@
+[
+  {
+    "id": "chimie-e1",
+    "enonce": "Dans l'équation des gaz parfaits PV = nRT, que représente la lettre R ?",
+    "choix": ["Le rendement de la réaction", "La constante des gaz parfaits", "La résistance du gaz", "Le rayon moléculaire"],
+    "bonneReponse": 1,
+    "explication": "R est la constante des gaz parfaits (≈ 8,314 J·mol⁻¹·K⁻¹). Elle relie pression, volume, quantité de matière et température absolue."
+  },
+  {
+    "id": "chimie-e2",
+    "enonce": "Selon le principe de Le Chatelier, comment un équilibre réagit-il à une hausse de pression à température constante ?",
+    "choix": ["Vers le côté ayant le plus de moles de gaz", "Il ne se déplace jamais", "Vers le côté ayant le moins de moles de gaz", "Vers le côté le plus endothermique"],
+    "bonneReponse": 2,
+    "explication": "Le système contre la perturbation : augmenter la pression déplace l'équilibre vers le côté comptant le moins de moles de gaz, ce qui réduit la pression totale."
+  },
+  {
+    "id": "chimie-e3",
+    "enonce": "Quelle échelle quantifie l'électronégativité des éléments chimiques ?",
+    "choix": ["L'échelle de Mohs", "L'échelle de Pauling", "L'échelle de Kelvin", "L'échelle de Richter"],
+    "bonneReponse": 1,
+    "explication": "L'échelle de Pauling mesure la tendance d'un atome à attirer les électrons d'une liaison. Le fluor y est le plus électronégatif (3,98)."
+  },
+  {
+    "id": "chimie-e4",
+    "enonce": "En réaction d'oxydoréduction, un oxydant est une espèce qui :",
+    "choix": ["perd des électrons", "perd des protons", "gagne des électrons", "gagne des protons"],
+    "bonneReponse": 2,
+    "explication": "L'oxydant capte des électrons (il est lui-même réduit), tandis que le réducteur en cède (il est oxydé). Moyen mnémotechnique : « l'oxydant oxyde l'autre en se réduisant »."
+  },
+  {
+    "id": "chimie-e5",
+    "enonce": "Quelle est la valeur approximative de la constante d'Avogadro ?",
+    "choix": ["6,022 × 10²³", "3,14 × 10²³", "1,602 × 10⁻¹⁹", "9,81 × 10²³"],
+    "bonneReponse": 0,
+    "explication": "La constante d'Avogadro vaut environ 6,022 × 10²³ entités par mole. La valeur 1,602 × 10⁻¹⁹ est, elle, la charge élémentaire en coulombs."
+  },
+  {
+    "id": "chimie-e6",
+    "enonce": "L'énergie de première ionisation est l'énergie nécessaire pour :",
+    "choix": ["ajouter un électron à un atome", "arracher un électron à un atome", "briser une liaison covalente", "fondre un cristal ionique"],
+    "bonneReponse": 1,
+    "explication": "L'énergie d'ionisation est celle requise pour arracher l'électron le moins lié d'un atome en phase gazeuse. Elle augmente de gauche à droite sur une période."
+  },
+  {
+    "id": "chimie-e7",
+    "enonce": "Quel type d'interaction explique le point d'ébullition anormalement élevé de l'eau ?",
+    "choix": ["Les liaisons ioniques", "Les forces de Van der Waals", "Les liaisons métalliques", "Les liaisons hydrogène"],
+    "bonneReponse": 3,
+    "explication": "Les liaisons hydrogène, entre l'oxygène d'une molécule et l'hydrogène d'une autre, sont nombreuses et fortes : il faut beaucoup d'énergie pour les rompre, d'où une ébullition à 100 °C."
+  },
+  {
+    "id": "chimie-e8",
+    "enonce": "Comment varie l'électronégativité quand on parcourt une période de gauche à droite ?",
+    "choix": ["Elle augmente", "Elle diminue", "Elle reste constante", "Elle devient nulle"],
+    "bonneReponse": 0,
+    "explication": "Sur une même période, la charge du noyau augmente sans ajout de couche : les électrons sont plus attirés, donc l'électronégativité croît jusqu'aux halogènes."
+  },
+  {
+    "id": "chimie-e9",
+    "enonce": "Un acide fort est un acide qui, en solution aqueuse :",
+    "choix": ["se dissocie partiellement", "ne se dissocie pas", "se dissocie totalement", "précipite entièrement"],
+    "bonneReponse": 2,
+    "explication": "Un acide fort (comme HCl) cède la totalité de ses protons à l'eau : il est totalement dissocié. Un acide faible (comme l'acide acétique) ne l'est que partiellement."
+  },
+  {
+    "id": "chimie-e10",
+    "enonce": "Quelle est la configuration électronique de l'atome de carbone (Z = 6) à l'état fondamental ?",
+    "choix": ["1s² 2s² 2p⁴", "1s² 2p⁶", "1s² 2s⁴", "1s² 2s² 2p²"],
+    "bonneReponse": 3,
+    "explication": "Le carbone possède 6 électrons : 2 sur la sous-couche 1s, 2 sur 2s et 2 sur 2p, soit 1s² 2s² 2p². Ces quatre électrons de valence expliquent sa tétravalence."
+  }
+]

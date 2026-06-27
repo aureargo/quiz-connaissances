@@ -1,0 +1,72 @@
+[
+  {
+    "id": "chimie-m1",
+    "enonce": "Combien d'atomes compte une molécule d'eau (H₂O) ?",
+    "choix": ["4", "3", "2", "6"],
+    "bonneReponse": 1,
+    "explication": "H₂O contient 3 atomes : deux d'hydrogène et un d'oxygène. L'indice « 2 » indique le nombre d'atomes d'hydrogène."
+  },
+  {
+    "id": "chimie-m2",
+    "enonce": "Qui a publié en 1869 la première version du tableau périodique des éléments ?",
+    "choix": ["Antoine Lavoisier", "Marie Curie", "Dmitri Mendeleïev", "Niels Bohr"],
+    "bonneReponse": 2,
+    "explication": "Le chimiste russe Dmitri Mendeleïev classa les éléments par masse croissante et osa laisser des cases vides pour des éléments non encore découverts."
+  },
+  {
+    "id": "chimie-m3",
+    "enonce": "Que représente le numéro atomique d'un élément ?",
+    "choix": ["Le nombre de neutrons dans le noyau", "Le nombre de protons dans le noyau", "Le nombre de couches électroniques", "La masse moyenne de l'atome"],
+    "bonneReponse": 1,
+    "explication": "Le numéro atomique (Z) est le nombre de protons du noyau. C'est lui qui définit l'identité de l'élément : 1 = hydrogène, 6 = carbone, etc."
+  },
+  {
+    "id": "chimie-m4",
+    "enonce": "Dans une liaison covalente, que partagent les atomes ?",
+    "choix": ["Des protons", "Des neutrons", "Des ions", "Des électrons"],
+    "bonneReponse": 3,
+    "explication": "Une liaison covalente résulte de la mise en commun d'électrons entre deux atomes, par opposition à la liaison ionique où un atome cède un électron à l'autre."
+  },
+  {
+    "id": "chimie-m5",
+    "enonce": "Quel terme décrit une solution dont le pH est inférieur à 7 ?",
+    "choix": ["Acide", "Basique", "Neutre", "Tampon"],
+    "bonneReponse": 0,
+    "explication": "Un pH inférieur à 7 caractérise une solution acide (comme le jus de citron). Au-dessus de 7, la solution est basique ; à 7 exactement, elle est neutre."
+  },
+  {
+    "id": "chimie-m6",
+    "enonce": "Quelle est la formule chimique du sel de table (chlorure de sodium) ?",
+    "choix": ["KCl", "NaOH", "NaCl", "Na₂CO₃"],
+    "bonneReponse": 2,
+    "explication": "Le chlorure de sodium s'écrit NaCl. KCl est le chlorure de potassium, NaOH la soude, et Na₂CO₃ le carbonate de sodium."
+  },
+  {
+    "id": "chimie-m7",
+    "enonce": "Lequel de ces éléments est un gaz noble ?",
+    "choix": ["Le chlore", "L'azote", "L'oxygène", "L'argon"],
+    "bonneReponse": 3,
+    "explication": "L'argon est un gaz noble : sa couche électronique externe est saturée, ce qui le rend chimiquement très peu réactif. Hélium, néon et krypton sont aussi des gaz nobles."
+  },
+  {
+    "id": "chimie-m8",
+    "enonce": "Que dénombre la constante d'Avogadro (≈ 6,02 × 10²³) ?",
+    "choix": ["Le nombre d'atomes dans un gramme de matière", "Le nombre d'entités dans une mole de matière", "La masse exacte d'un atome de carbone", "Le volume occupé par un gaz parfait"],
+    "bonneReponse": 1,
+    "explication": "Une mole contient environ 6,02 × 10²³ entités (atomes, molécules…). C'est l'unité qui relie le monde microscopique aux masses que l'on pèse."
+  },
+  {
+    "id": "chimie-m9",
+    "enonce": "Comment appelle-t-on une substance qui accélère une réaction sans être consommée ?",
+    "choix": ["Un réactif", "Un catalyseur", "Un solvant", "Un soluté"],
+    "bonneReponse": 1,
+    "explication": "Un catalyseur abaisse l'énergie nécessaire à la réaction et se retrouve intact à la fin. Les enzymes sont les catalyseurs du vivant."
+  },
+  {
+    "id": "chimie-m10",
+    "enonce": "Deux isotopes d'un même élément diffèrent par leur nombre de :",
+    "choix": ["Protons", "Électrons", "Neutrons", "Charges"],
+    "bonneReponse": 2,
+    "explication": "Des isotopes ont le même nombre de protons (donc le même élément) mais un nombre de neutrons différent, d'où des masses différentes : par exemple le carbone 12 et le carbone 14."
+  }
+]

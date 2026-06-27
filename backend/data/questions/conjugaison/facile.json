@@ -1,0 +1,72 @@
+[
+  {
+    "id": "conjugaison-f1",
+    "enonce": "Comment conjugue-t-on le verbe « chanter » avec « je » au présent ?",
+    "choix": ["je chantes", "je chante", "je chantent", "je chant"],
+    "bonneReponse": 1,
+    "explication": "Au présent, les verbes du 1er groupe (en -er) prennent la terminaison « -e » à la 1re personne du singulier : je chante, je mange, je parle."
+  },
+  {
+    "id": "conjugaison-f2",
+    "enonce": "Comment conjugue-t-on le verbe « être » avec « tu » au présent ?",
+    "choix": ["tu es", "tu est", "tu ai", "tu a"],
+    "bonneReponse": 0,
+    "explication": "Le verbe « être » est irrégulier : je suis, tu es, il est. « Tu es » s'écrit avec un « s », tandis que « il est » prend un « t »."
+  },
+  {
+    "id": "conjugaison-f3",
+    "enonce": "À quel groupe appartient le verbe « finir » ?",
+    "choix": ["1er groupe", "2e groupe", "3e groupe", "Verbe irrégulier"],
+    "bonneReponse": 1,
+    "explication": "« Finir » est un verbe du 2e groupe : son infinitif est en « -ir » et il fait « -issons » à la 1re personne du pluriel (nous finissons). C'est ce « -iss- » qui caractérise le 2e groupe."
+  },
+  {
+    "id": "conjugaison-f4",
+    "enonce": "Comment conjugue-t-on le verbe « avoir » avec « nous » au présent ?",
+    "choix": ["nous avez", "nous ont", "nous as", "nous avons"],
+    "bonneReponse": 3,
+    "explication": "Le verbe « avoir » est irrégulier : j'ai, tu as, il a, nous avons, vous avez, ils ont. La terminaison « -ons » revient à « nous » pour la quasi-totalité des verbes."
+  },
+  {
+    "id": "conjugaison-f5",
+    "enonce": "Quel est l'infinitif du verbe dans « il mangeait » ?",
+    "choix": ["mangeant", "mangeait", "manger", "mangé"],
+    "bonneReponse": 2,
+    "explication": "L'infinitif est la forme non conjuguée du verbe, celle du dictionnaire. « Il mangeait » est une forme conjuguée (imparfait) du verbe « manger »."
+  },
+  {
+    "id": "conjugaison-f6",
+    "enonce": "À quel temps est conjugué le verbe dans « je chanterai » ?",
+    "choix": ["Le présent", "L'imparfait", "Le futur simple", "Le passé composé"],
+    "bonneReponse": 2,
+    "explication": "« Je chanterai » est au futur simple : il exprime une action à venir. Ses terminaisons sont -ai, -as, -a, -ons, -ez, -ont, ajoutées à l'infinitif."
+  },
+  {
+    "id": "conjugaison-f7",
+    "enonce": "Comment conjugue-t-on le verbe « aller » avec « je » au présent ?",
+    "choix": ["je vais", "je va", "je vas", "j'alle"],
+    "bonneReponse": 0,
+    "explication": "« Aller » est un verbe très irrégulier du 3e groupe : je vais, tu vas, il va, nous allons, vous allez, ils vont. La forme « je vais » ne ressemble pas du tout à l'infinitif."
+  },
+  {
+    "id": "conjugaison-f8",
+    "enonce": "Quelle terminaison prend un verbe du 1er groupe avec « tu » au présent ?",
+    "choix": ["-e", "-es", "-ent", "-ons"],
+    "bonneReponse": 1,
+    "explication": "À la 2e personne du singulier, les verbes du 1er groupe prennent « -es » : tu chantes, tu manges, tu joues. Le « s » final ne se prononce pas mais doit être écrit."
+  },
+  {
+    "id": "conjugaison-f9",
+    "enonce": "Comment conjugue-t-on le verbe « être » avec « ils » au présent ?",
+    "choix": ["ils sont", "ils ont", "ils es", "ils est"],
+    "bonneReponse": 0,
+    "explication": "« Ils sont » vient du verbe « être ». Attention à ne pas le confondre avec « ils ont » (verbe avoir) : « sont » exprime un état, « ont » une possession."
+  },
+  {
+    "id": "conjugaison-f10",
+    "enonce": "Quel est le participe passé du verbe « manger » ?",
+    "choix": ["mangeant", "mangeais", "mangé", "manger"],
+    "bonneReponse": 2,
+    "explication": "Le participe passé des verbes du 1er groupe se termine par « -é » : mangé, chanté, parlé. On l'utilise notamment pour former le passé composé (j'ai mangé)."
+  }
+]

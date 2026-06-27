@@ -1,0 +1,72 @@
+[
+  {
+    "id": "myth-e1",
+    "enonce": "Comment s'appelle l'arbre-monde de la mythologie nordique ?",
+    "choix": ["Asgard", "Mjöllnir", "Yggdrasil", "Bifröst"],
+    "bonneReponse": 2,
+    "explication": "Yggdrasil, frêne immense, relie les neuf mondes de la cosmologie nordique. Ses racines et ses branches structurent l'univers, d'Asgard aux royaumes souterrains."
+  },
+  {
+    "id": "myth-e2",
+    "enonce": "Quel Titan fut condamné à porter la voûte céleste sur ses épaules ?",
+    "choix": ["Cronos", "Atlas", "Prométhée", "Hypérion"],
+    "bonneReponse": 1,
+    "explication": "Pour avoir combattu les dieux, Atlas dut soutenir le ciel pour l'éternité. Son nom désigne aujourd'hui un recueil de cartes géographiques."
+  },
+  {
+    "id": "myth-e3",
+    "enonce": "Quel Titan déroba le feu aux dieux pour l'offrir aux hommes ?",
+    "choix": ["Prométhée", "Épiméthée", "Atlas", "Cronos"],
+    "bonneReponse": 0,
+    "explication": "Prométhée vola le feu de l'Olympe pour les humains. Zeus le punit en l'enchaînant à un rocher où un aigle dévorait son foie, sans cesse régénéré."
+  },
+  {
+    "id": "myth-e4",
+    "enonce": "Quelle déesse de la chasse est la sœur jumelle d'Apollon ?",
+    "choix": ["Athéna", "Artémis", "Hestia", "Héra"],
+    "bonneReponse": 1,
+    "explication": "Artémis, fille de Zeus et de Léto, est la déesse de la chasse et de la Lune. Apollon, son jumeau, est lié au Soleil ; les Romains la nommaient Diane."
+  },
+  {
+    "id": "myth-e5",
+    "enonce": "Quel fleuve des Enfers fait perdre la mémoire à qui en boit l'eau ?",
+    "choix": ["le Styx", "l'Achéron", "le Léthé", "le Cocyte"],
+    "bonneReponse": 2,
+    "explication": "Le Léthé est le fleuve de l'oubli : les âmes y buvaient pour effacer le souvenir de leur vie passée avant une éventuelle réincarnation."
+  },
+  {
+    "id": "myth-e6",
+    "enonce": "Quel dieu égyptien, tué par son frère Seth, règne sur le royaume des morts ?",
+    "choix": ["Horus", "Osiris", "Rê", "Ptah"],
+    "bonneReponse": 1,
+    "explication": "Osiris, assassiné et démembré par Seth, fut ressuscité par Isis. Devenu juge et roi du monde souterrain, il accueille les morts dans l'au-delà."
+  },
+  {
+    "id": "myth-e7",
+    "enonce": "Comment se nomme le pont arc-en-ciel reliant Asgard au monde des hommes ?",
+    "choix": ["le Bifröst", "le Ginnungagap", "l'Yggdrasil", "le Valhalla"],
+    "bonneReponse": 0,
+    "explication": "Le Bifröst, pont flamboyant aux couleurs de l'arc-en-ciel, relie Asgard (le monde des dieux) à Midgard (celui des hommes). Le dieu Heimdall en garde l'accès."
+  },
+  {
+    "id": "myth-e8",
+    "enonce": "Quel héros décapita Méduse en se servant de son bouclier comme d'un miroir ?",
+    "choix": ["Thésée", "Persée", "Bellérophon", "Cadmos"],
+    "bonneReponse": 1,
+    "explication": "Persée évita le regard pétrifiant de Méduse en visant son reflet dans son bouclier poli. De son sang naquit le cheval ailé Pégase."
+  },
+  {
+    "id": "myth-e9",
+    "enonce": "Quelle magicienne transforme les compagnons d'Ulysse en pourceaux ?",
+    "choix": ["Calypso", "Circé", "Médée", "Pasiphaé"],
+    "bonneReponse": 1,
+    "explication": "Sur son île, la magicienne Circé change l'équipage d'Ulysse en porcs. Protégé par une herbe magique offerte par Hermès, Ulysse l'oblige à les délivrer."
+  },
+  {
+    "id": "myth-e10",
+    "enonce": "Dans la mythologie nordique, quel loup géant doit dévorer Odin lors du Ragnarök ?",
+    "choix": ["Sleipnir", "Fenrir", "Jörmungand", "Garm"],
+    "bonneReponse": 1,
+    "explication": "Fenrir, loup monstrueux fils de Loki, brisera ses chaînes au Ragnarök et engloutira Odin. Il sera ensuite tué par Vidar, fils du dieu."
+  }
+]

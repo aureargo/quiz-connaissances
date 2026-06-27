@@ -1,0 +1,72 @@
+[
+  {
+    "id": "films-80-m1",
+    "enonce": "Dans « Le Cercle des poètes disparus » (1989), quelle locution latine le professeur Keating enseigne-t-il à ses élèves ?",
+    "choix": ["Carpe diem", "Alea jacta est", "Cogito ergo sum", "Memento mori"],
+    "bonneReponse": 0,
+    "explication": "« Carpe diem » (« cueille le jour ») résume la leçon de Keating, joué par Robin Williams : profiter de l'instant présent."
+  },
+  {
+    "id": "films-80-m2",
+    "enonce": "Dans « Shining » (1980) de Stanley Kubrick, quelle phrase Jack tape-t-il en boucle à la machine ?",
+    "choix": ["« Tout travail et aucun jeu… »", "« Me voilà ! »", "« La fin est proche »", "« Rien ne va plus »"],
+    "bonneReponse": 0,
+    "explication": "« All work and no play makes Jack a dull boy » remplit des pages entières, signe de la folie du personnage joué par Jack Nicholson."
+  },
+  {
+    "id": "films-80-m3",
+    "enonce": "Quel film des studios Ghibli est sorti en 1988 en double programme au cinéma avec « Le Tombeau des lucioles » ?",
+    "choix": ["Le Château dans le ciel", "Mon voisin Totoro", "Kiki la petite sorcière", "Nausicaä"],
+    "bonneReponse": 1,
+    "explication": "« Mon voisin Totoro » de Hayao Miyazaki et « Le Tombeau des lucioles » d'Isao Takahata sont sortis ensemble en 1988. Les autres titres datent de 1984 (Nausicaä), 1986 (Le Château dans le ciel) et 1989 (Kiki)."
+  },
+  {
+    "id": "films-80-m4",
+    "enonce": "Quel acteur incarne le cyborg dans « Terminator » (1984) de James Cameron ?",
+    "choix": ["Dolph Lundgren", "Arnold Schwarzenegger", "Jean-Claude Van Damme", "Sylvester Stallone"],
+    "bonneReponse": 1,
+    "explication": "Arnold Schwarzenegger joue le T-800 venu du futur. Sa réplique « I'll be back » est restée célèbre."
+  },
+  {
+    "id": "films-80-m5",
+    "enonce": "Dans « Les Goonies » (1985), que cherchent les enfants pour sauver leur quartier ?",
+    "choix": ["Une météorite", "Le trésor d'un pirate", "Une mine d'or perdue", "Un coffre de banque"],
+    "bonneReponse": 1,
+    "explication": "Les Goonies partent à la recherche du trésor du pirate Willy le Borgne pour éviter l'expulsion de leurs familles."
+  },
+  {
+    "id": "films-80-m6",
+    "enonce": "Quel film de 1980 de Martin Scorsese retrace la carrière du boxeur Jake LaMotta ?",
+    "choix": ["Raging Bull", "Rocky II", "Million Dollar Baby", "The Fighter"],
+    "bonneReponse": 0,
+    "explication": "« Raging Bull », tourné en noir et blanc, vaut à Robert De Niro l'Oscar du meilleur acteur pour son rôle de Jake LaMotta."
+  },
+  {
+    "id": "films-80-m7",
+    "enonce": "Quel acteur incarne Raymond, l'homme autiste savant, dans « Rain Man » (1988) ?",
+    "choix": ["Dustin Hoffman", "Jack Nicholson", "Robert De Niro", "Al Pacino"],
+    "bonneReponse": 0,
+    "explication": "Dustin Hoffman remporte l'Oscar du meilleur acteur pour ce rôle, face à Tom Cruise qui joue son frère Charlie."
+  },
+  {
+    "id": "films-80-m8",
+    "enonce": "Quel film de 1986 de David Lynch s'ouvre sur la découverte d'une oreille humaine dans l'herbe ?",
+    "choix": ["Elephant Man", "Blue Velvet", "Eraserhead", "Sailor et Lula"],
+    "bonneReponse": 1,
+    "explication": "« Blue Velvet » plonge sous la surface tranquille d'une petite ville américaine. La découverte de l'oreille lance l'intrigue."
+  },
+  {
+    "id": "films-80-m9",
+    "enonce": "Dans « Le Grand Bleu » (1988) de Luc Besson, quel sport extrême pratiquent les héros ?",
+    "choix": ["L'alpinisme", "L'apnée", "Le surf", "Le parachutisme"],
+    "bonneReponse": 1,
+    "explication": "Le film suit la rivalité de deux plongeurs en apnée, Jacques Mayol et Enzo Molinari, inspirés de personnages réels."
+  },
+  {
+    "id": "films-80-m10",
+    "enonce": "Quel film de 1987 met en scène un policier transformé en cyborg à Détroit ?",
+    "choix": ["Robocop", "Demolition Man", "Judge Dredd", "Universal Soldier"],
+    "bonneReponse": 0,
+    "explication": "« Robocop » de Paul Verhoeven, sorti en 1987, est une satire violente où un policier mourant est transformé en cyborg."
+  }
+]

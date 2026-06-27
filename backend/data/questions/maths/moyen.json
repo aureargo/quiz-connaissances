@@ -1,0 +1,72 @@
+[
+  {
+    "id": "maths-m1",
+    "enonce": "D'après le théorème de Pythagore, dans un triangle rectangle le carré de l'hypoténuse est égal à…",
+    "choix": ["la somme des carrés des deux autres côtés", "le produit des deux autres côtés", "la somme des deux autres côtés", "la moitié du carré du plus grand côté"],
+    "bonneReponse": 0,
+    "explication": "Le théorème s'écrit a² + b² = c², où c est l'hypoténuse (le côté opposé à l'angle droit). Il permet de calculer un côté quand on connaît les deux autres."
+  },
+  {
+    "id": "maths-m2",
+    "enonce": "Quelle est la valeur de π (pi) arrondie à deux décimales ?",
+    "choix": ["3,14", "3,16", "3,12", "3,18"],
+    "bonneReponse": 0,
+    "explication": "π ≈ 3,14159… On l'arrondit couramment à 3,14. C'est le rapport entre la circonférence d'un cercle et son diamètre."
+  },
+  {
+    "id": "maths-m3",
+    "enonce": "Combien vaut 5 ! (factorielle de 5) ?",
+    "choix": ["120", "25", "60", "720"],
+    "bonneReponse": 0,
+    "explication": "La factorielle multiplie tous les entiers de 1 à n : 5 ! = 1 × 2 × 3 × 4 × 5 = 120. C'est le nombre de façons d'ordonner 5 objets."
+  },
+  {
+    "id": "maths-m4",
+    "enonce": "Quelle est l'aire d'un rectangle de longueur 8 et de largeur 5 ?",
+    "choix": ["13", "26", "40", "45"],
+    "bonneReponse": 2,
+    "explication": "L'aire d'un rectangle est longueur × largeur = 8 × 5 = 40. Le résultat 26 correspondrait à son périmètre : 2 × (8 + 5)."
+  },
+  {
+    "id": "maths-m5",
+    "enonce": "Quel est le plus petit nombre premier ?",
+    "choix": ["0", "1", "2", "3"],
+    "bonneReponse": 2,
+    "explication": "2 est le plus petit nombre premier, et le seul qui soit pair. Par définition, 1 n'est pas premier car il n'a qu'un seul diviseur."
+  },
+  {
+    "id": "maths-m6",
+    "enonce": "Combien font 2 puissance 5 (2⁵) ?",
+    "choix": ["10", "16", "25", "32"],
+    "bonneReponse": 3,
+    "explication": "2⁵ = 2 × 2 × 2 × 2 × 2 = 32. Élever à la puissance 5 revient à multiplier le nombre par lui-même cinq fois."
+  },
+  {
+    "id": "maths-m7",
+    "enonce": "Quelle est la valeur de x dans l'équation 2x + 3 = 11 ?",
+    "choix": ["3", "4", "5", "7"],
+    "bonneReponse": 1,
+    "explication": "On retire 3 des deux côtés : 2x = 8, puis on divise par 2 : x = 4. On vérifie : 2 × 4 + 3 = 11."
+  },
+  {
+    "id": "maths-m8",
+    "enonce": "Combien vaut la somme des angles d'un triangle ?",
+    "choix": ["90°", "180°", "270°", "360°"],
+    "bonneReponse": 1,
+    "explication": "Les trois angles d'un triangle totalisent toujours 180°, quelle que soit sa forme. C'est 360° pour un quadrilatère."
+  },
+  {
+    "id": "maths-m9",
+    "enonce": "Quel est le PGCD (plus grand commun diviseur) de 12 et 18 ?",
+    "choix": ["2", "3", "6", "9"],
+    "bonneReponse": 2,
+    "explication": "Les diviseurs communs de 12 et 18 sont 1, 2, 3 et 6 ; le plus grand est 6. Le PGCD sert notamment à simplifier les fractions."
+  },
+  {
+    "id": "maths-m10",
+    "enonce": "Quelle est la racine carrée de 169 ?",
+    "choix": ["11", "12", "13", "14"],
+    "bonneReponse": 2,
+    "explication": "La racine carrée de 169 est 13, car 13 × 13 = 169. On cherche le nombre positif qui, multiplié par lui-même, donne 169."
+  }
+]

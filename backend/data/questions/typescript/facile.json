@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ts-f1",
+    "enonce": "TypeScript est un sur-ensemble (superset) de quel langage ?",
+    "choix": ["Java", "Python", "JavaScript", "C#"],
+    "bonneReponse": 2,
+    "explication": "TypeScript ajoute le typage statique à JavaScript : tout code JavaScript valide est aussi du TypeScript valide. Il a été créé par Microsoft."
+  },
+  {
+    "id": "ts-f2",
+    "enonce": "Quelle est l'extension habituelle d'un fichier TypeScript ?",
+    "choix": [".typescript", ".tsp", ".ts", ".tjs"],
+    "bonneReponse": 2,
+    "explication": "Un fichier TypeScript porte l'extension `.ts`. La variante `.tsx` est réservée aux fichiers contenant de la syntaxe JSX (souvent avec React)."
+  },
+  {
+    "id": "ts-f3",
+    "enonce": "Comment annote-t-on le type d'une variable en TypeScript ?",
+    "choix": ["let age: number = 30", "let age = number(30)", "let number age = 30", "let age <number> = 30"],
+    "bonneReponse": 0,
+    "explication": "Le type s'écrit après le nom, précédé de deux-points : `let age: number`. Souvent, TypeScript le devine tout seul (inférence) et l'annotation devient facultative."
+  },
+  {
+    "id": "ts-f4",
+    "enonce": "Quel type représente une chaîne de caractères ?",
+    "choix": ["str", "string", "char", "text"],
+    "bonneReponse": 1,
+    "explication": "Le type est `string`, en minuscule. On évite `String` (avec une majuscule), qui désigne l'objet enveloppe et non le type primitif."
+  },
+  {
+    "id": "ts-f5",
+    "enonce": "Que produit la compilation d'un fichier TypeScript ?",
+    "choix": ["du code machine", "du JavaScript", "du bytecode", "du WebAssembly"],
+    "bonneReponse": 1,
+    "explication": "TypeScript se « transpile » en JavaScript, le seul langage que les navigateurs et Node.js exécutent. Les types disparaissent à cette étape : ils n'existent qu'à la compilation."
+  },
+  {
+    "id": "ts-f6",
+    "enonce": "Quel type accepte n'importe quelle valeur en désactivant la vérification ?",
+    "choix": ["unknown", "any", "void", "auto"],
+    "bonneReponse": 1,
+    "explication": "`any` débraye le contrôle de type : la valeur peut tout faire. C'est pratique en dépannage mais à éviter, car on perd les garanties qu'apporte TypeScript."
+  },
+  {
+    "id": "ts-f7",
+    "enonce": "Quel outil compile le TypeScript en ligne de commande ?",
+    "choix": ["tsc", "tsx", "tcc", "npm"],
+    "bonneReponse": 0,
+    "explication": "`tsc` est le compilateur officiel (TypeScript Compiler). Il lit les fichiers `.ts`, vérifie les types et génère les fichiers `.js` correspondants."
+  },
+  {
+    "id": "ts-f8",
+    "enonce": "Comment marque-t-on une propriété comme optionnelle dans un type ?",
+    "choix": ["avec un `!`", "avec un `?`", "avec un `*`", "avec un `&`"],
+    "bonneReponse": 1,
+    "explication": "On ajoute `?` après le nom : `{ nom: string; age?: number }`. La propriété `age` peut alors être absente ou valoir `undefined`."
+  },
+  {
+    "id": "ts-f9",
+    "enonce": "Quel type utilise-t-on pour une fonction qui ne renvoie aucune valeur ?",
+    "choix": ["null", "empty", "void", "none"],
+    "bonneReponse": 2,
+    "explication": "`void` indique l'absence de valeur de retour : `function log(msg: string): void`. C'est le type de retour des fonctions qui se contentent d'agir."
+  },
+  {
+    "id": "ts-f10",
+    "enonce": "Quel type représente un nombre, qu'il soit entier ou décimal ?",
+    "choix": ["int", "float", "number", "double"],
+    "bonneReponse": 2,
+    "explication": "TypeScript n'a qu'un seul type numérique, `number`, qui couvre entiers et décimaux. Pour les très grands entiers, il existe à part le type `bigint`."
+  }
+]

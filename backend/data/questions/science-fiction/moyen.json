@@ -1,0 +1,72 @@
+[
+  {
+    "id": "sf-m1",
+    "enonce": "Quel auteur américain, adapté au cinéma sous le titre « Blade Runner », a écrit « Ubik » et « Le Maître du Haut Château » ?",
+    "choix": ["Robert Heinlein", "Alfred Bester", "Clifford Simak", "Philip K. Dick"],
+    "bonneReponse": 3,
+    "explication": "Philip K. Dick explore la réalité et la paranoïa. « Blade Runner » adapte son roman « Les androïdes rêvent-ils de moutons électriques ? »."
+  },
+  {
+    "id": "sf-m2",
+    "enonce": "Dans « Le Guide du voyageur galactique » de Douglas Adams, quelle est la réponse à « la grande question sur la vie, l'univers et le reste » ?",
+    "choix": ["0", "42", "1000", "L'infini"],
+    "bonneReponse": 1,
+    "explication": "L'ordinateur Pensées Profondes calcule pendant 7,5 millions d'années pour livrer « 42 »… sans qu'on connaisse la question exacte. Le nombre est devenu un clin d'œil culte."
+  },
+  {
+    "id": "sf-m3",
+    "enonce": "Quel auteur a inventé la « psychohistoire » dans son cycle de « Fondation » ?",
+    "choix": ["Isaac Asimov", "A. E. van Vogt", "Frank Herbert", "Poul Anderson"],
+    "bonneReponse": 0,
+    "explication": "Dans « Fondation », Hari Seldon développe la psychohistoire, une science qui prédit statistiquement l'avenir des grandes populations pour raccourcir un âge de ténèbres galactique."
+  },
+  {
+    "id": "sf-m4",
+    "enonce": "Quel roman de William Gibson (1984) est considéré comme l'acte de naissance du cyberpunk ?",
+    "choix": ["Snow Crash", "Câblé", "Neuromancien", "L'Âge de diamant"],
+    "bonneReponse": 2,
+    "explication": "« Neuromancien » popularise le « cyberespace » et les hackers branchés sur la matrice. Il a raflé les prix Hugo, Nebula et Philip K. Dick la même année."
+  },
+  {
+    "id": "sf-m5",
+    "enonce": "Quelle autrice américaine a écrit « La Main gauche de la nuit », sur une planète aux habitants sans sexe fixe ?",
+    "choix": ["Octavia Butler", "Connie Willis", "Joanna Russ", "Ursula K. Le Guin"],
+    "bonneReponse": 3,
+    "explication": "Ursula K. Le Guin imagine dans « La Main gauche de la nuit » (1969) les Géthéniens, androgynes qui ne se définissent sexuellement que par cycles. Une œuvre majeure sur le genre."
+  },
+  {
+    "id": "sf-m6",
+    "enonce": "Dans « La Stratégie Ender » d'Orson Scott Card, comment les enfants surdoués sont-ils entraînés à la guerre ?",
+    "choix": ["Par hypnose", "Par des jeux et des simulations", "Par la seule lecture", "Par clonage"],
+    "bonneReponse": 1,
+    "explication": "Ender Wiggin et les autres enfants prodiges s'entraînent à l'École de guerre via des simulations et des jeux, en vue d'affronter une espèce extraterrestre, les Doryphores."
+  },
+  {
+    "id": "sf-m7",
+    "enonce": "Quel auteur a écrit le cycle « Hypérion », dont la structure s'inspire des « Contes de Canterbury » ?",
+    "choix": ["Dan Simmons", "Peter F. Hamilton", "Kim Stanley Robinson", "Greg Bear"],
+    "bonneReponse": 0,
+    "explication": "Dans « Hypérion » (1989), Dan Simmons fait raconter à sept pèlerins leur histoire en route vers les Tombeaux du Temps et la créature Gritche (le Shrike)."
+  },
+  {
+    "id": "sf-m8",
+    "enonce": "De quel pays venaient les frères Strougatski, auteurs de « Pique-nique au bord du chemin » ?",
+    "choix": ["L'Allemagne", "La Pologne", "L'Union soviétique", "Le Royaume-Uni"],
+    "bonneReponse": 2,
+    "explication": "Arcadi et Boris Strougatski sont les maîtres soviétiques de la SF. Leur roman « Pique-nique au bord du chemin » a inspiré le film « Stalker » d'Andreï Tarkovski."
+  },
+  {
+    "id": "sf-m9",
+    "enonce": "Le mot « robot » est apparu dans une pièce de 1920. De quel pays venait son auteur, Karel Čapek ?",
+    "choix": ["La Hongrie", "La Tchécoslovaquie", "L'Autriche", "La Russie"],
+    "bonneReponse": 1,
+    "explication": "Dans « R.U.R. » (1920), le Tchèque Karel Čapek baptise « roboti » (du tchèque « robota », corvée) des travailleurs artificiels. Le mot a depuis fait le tour du monde."
+  },
+  {
+    "id": "sf-m10",
+    "enonce": "Quel roman de Daniel Keyes suit Charlie Gordon, dont l'intelligence est décuplée par une opération ?",
+    "choix": ["Des fleurs pour Algernon", "L'Homme démoli", "Le Cerveau de Donovan", "Le Joueur d'échecs"],
+    "bonneReponse": 0,
+    "explication": "« Des fleurs pour Algernon » raconte, sous forme de journal, l'ascension puis le déclin intellectuel de Charlie, après l'expérience déjà menée sur la souris Algernon."
+  }
+]

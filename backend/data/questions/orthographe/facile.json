@@ -1,0 +1,72 @@
+[
+  {
+    "id": "orthographe-f1",
+    "enonce": "Comment compléter « Marie ___ deux chiens » ?",
+    "choix": ["a", "à", "as", "ha"],
+    "bonneReponse": 0,
+    "explication": "« a » est le verbe avoir à la 3e personne : on peut le remplacer par « avait » (« Marie avait deux chiens »). « à » avec accent est une préposition."
+  },
+  {
+    "id": "orthographe-f2",
+    "enonce": "Comment compléter « Le café ___ chaud » ?",
+    "choix": ["et", "est", "ait", "ai"],
+    "bonneReponse": 1,
+    "explication": "« est » est le verbe être : on peut le remplacer par « était » (« le café était chaud »). « et » sert seulement à relier, comme « et puis »."
+  },
+  {
+    "id": "orthographe-f3",
+    "enonce": "Comment compléter « Les gâteaux ___ délicieux » ?",
+    "choix": ["son", "sont", "sons", "s'ont"],
+    "bonneReponse": 1,
+    "explication": "« sont » est le verbe être au pluriel : on peut le remplacer par « étaient ». « son » est un déterminant possessif (« son chien »)."
+  },
+  {
+    "id": "orthographe-f4",
+    "enonce": "Comment compléter « Tu préfères le thé ___ le café ? » ?",
+    "choix": ["ou", "où", "oux", "houx"],
+    "bonneReponse": 0,
+    "explication": "« ou » sans accent propose un choix : on peut le remplacer par « ou bien ». « où » avec accent indique un lieu (« la ville où je vis »)."
+  },
+  {
+    "id": "orthographe-f5",
+    "enonce": "Comment écrit-on le petit mot dans « il ___ promène » (verbe pronominal) ?",
+    "choix": ["se", "ce", "çe", "sse"],
+    "bonneReponse": 0,
+    "explication": "Devant un verbe, on écrit « se », pronom du verbe pronominal (« il se promène, je me promène »). « ce » est un déterminant ou pronom démonstratif (« ce livre »)."
+  },
+  {
+    "id": "orthographe-f6",
+    "enonce": "Comment compléter « J'ai rangé ___ affaires » ?",
+    "choix": ["mes", "mais", "mets", "met"],
+    "bonneReponse": 0,
+    "explication": "« mes » est un déterminant possessif pluriel : on peut le remplacer par « les miens/miennes ». « mais » relie deux idées, « mets/met » vient du verbe mettre."
+  },
+  {
+    "id": "orthographe-f7",
+    "enonce": "Comment compléter « Demain, ___ ira à la plage » ?",
+    "choix": ["on", "ont", "ons", "hont"],
+    "bonneReponse": 0,
+    "explication": "« on » est un pronom sujet : on peut le remplacer par « il » (« il ira à la plage »). « ont » est le verbe avoir au pluriel (« ils ont »), remplaçable par « avaient »."
+  },
+  {
+    "id": "orthographe-f8",
+    "enonce": "Comment compléter « Range tes jouets ___ » ?",
+    "choix": ["la", "là", "l'a", "las"],
+    "bonneReponse": 1,
+    "explication": "« là » avec accent indique le lieu (« mets-les là »). « la » sans accent est un déterminant ou un pronom (« la maison, je la vois »), et « l'a » signifie « l'avait »."
+  },
+  {
+    "id": "orthographe-f9",
+    "enonce": "Comment écrit-on le verbe qui signifie « téléphoner à quelqu'un » ?",
+    "choix": ["apeler", "appeler", "appeller", "apeller"],
+    "bonneReponse": 1,
+    "explication": "À l'infinitif, « appeler » prend deux « p » et un seul « l ». Le deuxième « l » double seulement quand on l'entend [è] : « j'appelle », mais « nous appelons »."
+  },
+  {
+    "id": "orthographe-f10",
+    "enonce": "Quel est le pluriel du nom « bijou » ?",
+    "choix": ["bijous", "bijoux", "bijoues", "bijouz"],
+    "bonneReponse": 1,
+    "explication": "Sept noms en « -ou » prennent un « -x » au pluriel : bijou, caillou, chou, genou, hibou, joujou, pou. Tous les autres noms en « -ou » prennent un « -s » (des trous, des clous)."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "litt-aventure-e1",
+    "enonce": "Quel romancier d'origine polonaise a écrit « Au cœur des ténèbres » et « Lord Jim » ?",
+    "choix": ["Joseph Conrad", "Rudyard Kipling", "Robert Louis Stevenson", "Herman Melville"],
+    "bonneReponse": 0,
+    "explication": "Joseph Conrad, né Józef Korzeniowski, n'apprit l'anglais qu'à l'âge adulte mais en devint un maître. « Au cœur des ténèbres » inspira plus tard le film « Apocalypse Now »."
+  },
+  {
+    "id": "litt-aventure-e2",
+    "enonce": "Quel écrivain italien est célèbre pour ses romans de pirates de Malaisie mettant en scène Sandokan ?",
+    "choix": ["Emilio Salgari", "Italo Calvino", "Alessandro Manzoni", "Carlo Collodi"],
+    "bonneReponse": 0,
+    "explication": "Emilio Salgari a créé Sandokan, le « Tigre de Malaisie », sans jamais voyager hors d'Europe. Très populaire, il fut une grande influence du roman d'aventures exotique."
+  },
+  {
+    "id": "litt-aventure-e3",
+    "enonce": "Quel auteur allemand a créé les personnages de Winnetou et Old Shatterhand dans ses romans de l'Ouest ?",
+    "choix": ["Karl May", "Hermann Hesse", "Thomas Mann", "Theodor Fontane"],
+    "bonneReponse": 0,
+    "explication": "Karl May a écrit des dizaines de romans sur le Far West, dont le célèbre cycle de Winnetou, alors qu'il n'avait jamais mis les pieds en Amérique au moment de les écrire."
+  },
+  {
+    "id": "litt-aventure-e4",
+    "enonce": "« L'Appel de la forêt » et « Croc-Blanc » se déroulent en grande partie pendant quel événement ?",
+    "choix": ["La ruée vers l'or du Klondike", "La conquête de l'Ouest", "La ruée vers l'or de Californie", "La guerre de Sécession"],
+    "bonneReponse": 0,
+    "explication": "Jack London situe ces deux romans dans le Grand Nord à l'époque de la ruée vers l'or du Klondike (vers 1897), au Yukon, ruée qu'il avait lui-même vécue."
+  },
+  {
+    "id": "litt-aventure-e5",
+    "enonce": "Que signifie « Mobilis in mobili », la devise du capitaine Nemo dans « Vingt mille lieues sous les mers » ?",
+    "choix": ["Mobile dans l'élément mobile", "Libre parmi les hommes libres", "Maître des profondeurs", "Fort par la mer"],
+    "bonneReponse": 0,
+    "explication": "Cette formule latine, « mobile dans l'élément mobile », résume l'idéal de Nemo : se mouvoir librement à travers l'océan, lui-même en perpétuel mouvement, loin des nations."
+  },
+  {
+    "id": "litt-aventure-e6",
+    "enonce": "Quel roman de Robert Louis Stevenson suit le jeune David Balfour, enlevé puis errant dans les Highlands ?",
+    "choix": ["Enlevé !", "La Flèche noire", "Le Maître de Ballantrae", "Le Creux de la vague"],
+    "bonneReponse": 0,
+    "explication": "« Enlevé ! » (Kidnapped, 1886) raconte les mésaventures de David Balfour en Écosse. Les autres titres proposés sont eux aussi de Stevenson, grand maître du roman d'aventures."
+  },
+  {
+    "id": "litt-aventure-e7",
+    "enonce": "Quel romancier écossais, auteur d'« Ivanhoé », est vu comme l'inventeur du roman historique d'aventures ?",
+    "choix": ["Walter Scott", "Robert Louis Stevenson", "Daniel Defoe", "Charles Dickens"],
+    "bonneReponse": 0,
+    "explication": "Walter Scott impose au début du XIXᵉ siècle le roman historique avec « Ivanhoé » (1819) et « Rob Roy ». Son influence sur Dumas et le genre d'aventures fut immense."
+  },
+  {
+    "id": "litt-aventure-e8",
+    "enonce": "Dans « Le Comte de Monte-Cristo », dans quelle forteresse Edmond Dantès est-il emprisonné ?",
+    "choix": ["Le château d'If", "La Bastille", "Le château de Vincennes", "Le fort Boyard"],
+    "bonneReponse": 0,
+    "explication": "Edmond Dantès croupit au château d'If, îlot au large de Marseille, où il rencontre l'abbé Faria. C'est là qu'il prépare son évasion et apprend l'existence du trésor."
+  },
+  {
+    "id": "litt-aventure-e9",
+    "enonce": "Comment s'appelle le baleinier sur lequel embarque le narrateur Ismaël dans « Moby Dick » ?",
+    "choix": ["Le Pequod", "L'Hispaniola", "Le Duncan", "Le Nautilus"],
+    "bonneReponse": 0,
+    "explication": "Le Pequod est le navire du capitaine Achab. L'Hispaniola vient de « L'Île au trésor », le Duncan des « Enfants du capitaine Grant », et le Nautilus est le sous-marin de Nemo."
+  },
+  {
+    "id": "litt-aventure-e10",
+    "enonce": "Quel écrivain français est l'auteur du roman de cape et d'épée « Le Capitaine Fracasse » ?",
+    "choix": ["Théophile Gautier", "Paul Féval", "Michel Zévaco", "Alexandre Dumas"],
+    "bonneReponse": 0,
+    "explication": "Théophile Gautier publie « Le Capitaine Fracasse » en 1863, hommage au roman de cape et d'épée. Paul Féval (« Le Bossu ») et Michel Zévaco (« Les Pardaillan ») en sont d'autres maîtres."
+  }
+]
