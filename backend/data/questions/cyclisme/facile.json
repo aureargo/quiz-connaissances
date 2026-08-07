@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cyclisme-f1",
+    "enonce": "Quelle est la couleur du maillot porté par le leader du classement général du Tour de France ?",
+    "choix": ["jaune", "vert", "rouge", "bleu"],
+    "bonneReponse": 0,
+    "explication": "Le maillot jaune reprend la couleur du papier du journal L'Auto, organisateur du Tour à ses débuts. Il est porté chaque jour par le coureur ayant le temps cumulé le plus faible."
+  },
+  {
+    "id": "cyclisme-f2",
+    "enonce": "Que récompense le maillot à pois rouges sur le Tour de France ?",
+    "choix": ["le meilleur sprinteur", "le meilleur grimpeur", "le coureur le plus combatif", "le meilleur rouleur"],
+    "bonneReponse": 1,
+    "explication": "C'est le maillot du Grand Prix de la montagne : des points sont attribués au sommet des cols, d'autant plus nombreux que l'ascension est difficile."
+  },
+  {
+    "id": "cyclisme-f3",
+    "enonce": "Quel classement du Tour de France le maillot vert distingue-t-il ?",
+    "choix": ["le classement par points", "le classement de la montagne", "le classement par équipes", "le classement des jeunes"],
+    "bonneReponse": 0,
+    "explication": "Les points se gagnent aux arrivées d'étape et lors des sprints intermédiaires. Ce maillot revient donc le plus souvent aux sprinteurs, réguliers sur les étapes de plaine."
+  },
+  {
+    "id": "cyclisme-f4",
+    "enonce": "Dans quel pays se dispute le Giro ?",
+    "choix": ["en Espagne", "en Suisse", "en Italie", "en Belgique"],
+    "bonneReponse": 2,
+    "explication": "Le Giro d'Italia est le grand tour italien, couru au mois de mai. Son leader porte un maillot rose, couleur du quotidien sportif qui l'a créé."
+  },
+  {
+    "id": "cyclisme-f5",
+    "enonce": "Dans quel pays se dispute la Vuelta ?",
+    "choix": ["au Portugal", "en Espagne", "en Italie", "aux Pays-Bas"],
+    "bonneReponse": 1,
+    "explication": "La Vuelta a España est le grand tour espagnol, disputé fin août et en septembre. Son leader porte le maillot rouge depuis 2010."
+  },
+  {
+    "id": "cyclisme-f6",
+    "enonce": "Combien de « grands tours » compte le calendrier cycliste professionnel ?",
+    "choix": ["deux", "trois", "quatre", "six"],
+    "bonneReponse": 1,
+    "explication": "Le Giro, le Tour de France et la Vuelta forment les trois grands tours : ce sont les seules courses par étapes qui durent trois semaines."
+  },
+  {
+    "id": "cyclisme-f7",
+    "enonce": "À quelle période de l'année se dispute traditionnellement le Tour de France ?",
+    "choix": ["en avril", "en juillet", "en septembre", "en novembre"],
+    "bonneReponse": 1,
+    "explication": "Le Tour occupe trois semaines de juillet depuis ses premières éditions, ce qui lui vaut son surnom de « Grande Boucle » de l'été."
+  },
+  {
+    "id": "cyclisme-f8",
+    "enonce": "Sur quelle avenue parisienne le Tour de France arrive-t-il traditionnellement ?",
+    "choix": ["les Champs-Élysées", "le boulevard Saint-Germain", "l'avenue de l'Opéra", "le boulevard Haussmann"],
+    "bonneReponse": 0,
+    "explication": "L'arrivée sur les Champs-Élysées est une tradition installée depuis 1975. Elle a exceptionnellement été délocalisée à Nice en 2024, à cause des Jeux olympiques de Paris."
+  },
+  {
+    "id": "cyclisme-f9",
+    "enonce": "Quel coureur du Tour de France porte le maillot blanc ?",
+    "choix": ["le vainqueur de l'étape de la veille", "le champion national en titre", "le meilleur jeune du classement général", "le dernier du classement général"],
+    "bonneReponse": 2,
+    "explication": "Le maillot blanc distingue le meilleur jeune, c'est-à-dire le coureur de moins de 26 ans le mieux placé au classement général."
+  },
+  {
+    "id": "cyclisme-f10",
+    "enonce": "Comment appelle-t-on le groupe principal des coureurs pendant une course ?",
+    "choix": ["l'échappée", "le peloton", "la caravane", "la grappe"],
+    "bonneReponse": 1,
+    "explication": "Rouler dans le peloton permet de s'abriter du vent et d'économiser beaucoup d'énergie. Les coureurs partis devant forment, eux, l'échappée."
+  }
+]

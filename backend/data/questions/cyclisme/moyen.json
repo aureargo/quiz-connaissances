@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cyclisme-m1",
+    "enonce": "Combien de Tours de France Eddy Merckx a-t-il remportés ?",
+    "choix": ["trois", "quatre", "cinq", "sept"],
+    "bonneReponse": 2,
+    "explication": "Merckx s'impose en 1969, 1970, 1971, 1972 et 1974. Il partage ce record avec Jacques Anquetil, Bernard Hinault et Miguel Indurain."
+  },
+  {
+    "id": "cyclisme-m2",
+    "enonce": "Combien de courses d'un jour portent le titre de « Monument » du cyclisme ?",
+    "choix": ["trois", "cinq", "sept", "dix"],
+    "bonneReponse": 1,
+    "explication": "Les cinq Monuments sont Milan-San Remo, le Tour des Flandres, Paris-Roubaix, Liège-Bastogne-Liège et le Tour de Lombardie : les classiques les plus anciennes et les plus prestigieuses."
+  },
+  {
+    "id": "cyclisme-m3",
+    "enonce": "Quelle course est surnommée « l'Enfer du Nord » ?",
+    "choix": ["Paris-Roubaix", "le Tour des Flandres", "Gand-Wevelgem", "l'Amstel Gold Race"],
+    "bonneReponse": 0,
+    "explication": "Le surnom vient des paysages dévastés du nord de la France retrouvés après la Première Guerre mondiale. Il colle aujourd'hui aux secteurs pavés qui martyrisent les coureurs."
+  },
+  {
+    "id": "cyclisme-m4",
+    "enonce": "De quelle couleur est le maillot du leader du Giro ?",
+    "choix": ["orange", "rose", "or", "blanc"],
+    "bonneReponse": 1,
+    "explication": "La maglia rosa reprend la couleur du papier de La Gazzetta dello Sport, le journal qui organise la course depuis 1909."
+  },
+  {
+    "id": "cyclisme-m5",
+    "enonce": "Comment appelle-t-on le maillot porté par le champion du monde sur route ?",
+    "choix": ["le maillot doré", "le maillot étoilé", "le maillot arc-en-ciel", "le maillot tricolore"],
+    "bonneReponse": 2,
+    "explication": "Blanc, il est barré de cinq bandes de couleur reprenant celles des anneaux olympiques. Son porteur l'arbore pendant un an, jusqu'au championnat suivant."
+  },
+  {
+    "id": "cyclisme-m6",
+    "enonce": "Quelle célèbre montée du Tour de France compte 21 virages numérotés ?",
+    "choix": ["le col du Tourmalet", "l'Alpe d'Huez", "le col du Galibier", "la Planche des Belles Filles"],
+    "bonneReponse": 1,
+    "explication": "Chaque lacet de l'Alpe d'Huez porte un numéro décroissant et le nom d'un vainqueur d'étape au sommet. La montée fait environ 13,8 km à 8 % de moyenne."
+  },
+  {
+    "id": "cyclisme-m7",
+    "enonce": "Quel sommet du Tour de France est surnommé « le Géant de Provence » ?",
+    "choix": ["le mont Ventoux", "le col d'Izoard", "le mont Aigoual", "le col de la Croix-de-Fer"],
+    "bonneReponse": 0,
+    "explication": "Le Ventoux culmine à 1 909 m et se termine par un désert de pierres calcaires, exposé au vent et à la chaleur, sans aucune végétation pour abriter les coureurs."
+  },
+  {
+    "id": "cyclisme-m8",
+    "enonce": "Que signale la « flamme rouge » déployée au-dessus de la route ?",
+    "choix": ["le dernier kilomètre avant l'arrivée", "un sprint intermédiaire", "le sommet d'un col", "une chute dans le peloton"],
+    "bonneReponse": 0,
+    "explication": "C'est une arche triangulaire rouge placée à 1 000 mètres de la ligne. Elle sert aussi de repère réglementaire, notamment pour le calcul des temps en cas de chute."
+  },
+  {
+    "id": "cyclisme-m9",
+    "enonce": "Que désigne le sigle UCI dans le monde du cyclisme ?",
+    "choix": ["Union Cycliste Internationale", "Union des Coureurs Indépendants", "Union du Cyclisme Italien", "Union des Circuits Internationaux"],
+    "bonneReponse": 0,
+    "explication": "Fondée en 1900 et installée en Suisse, l'Union Cycliste Internationale édicte le règlement sportif, homologue les records et organise les championnats du monde."
+  },
+  {
+    "id": "cyclisme-m10",
+    "enonce": "Quel objet le vainqueur de Paris-Roubaix reçoit-il comme trophée ?",
+    "choix": ["une roue de vélo", "une pierre pavée", "une cloche en bronze", "un fer à cheval"],
+    "bonneReponse": 1,
+    "explication": "Le trophée est un pavé monté sur socle, en référence aux nombreux secteurs pavés qui font la difficulté de la course."
+  }
+]

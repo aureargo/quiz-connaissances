@@ -404,5 +404,12 @@
     "emoji": "💰",
     "categorie": "Économie & Finance",
     "description": "Bourse, épargne, crédit et marchés : actions, obligations, taux et placements expliqués simplement."
+  },
+  {
+    "id": "cyclisme",
+    "nom": "Cyclisme",
+    "emoji": "🚴",
+    "categorie": "Sport",
+    "description": "Grands tours, maillots, cols mythiques et Monuments : les classiques et les légendes de la petite reine."
   }
 ]
