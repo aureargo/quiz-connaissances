@@ -216,6 +216,68 @@ func TestTrierNiveaux(t *testing.T) {
 	}
 }
 
+// --- Ordre des catégories --------------------------------------------------
+
+func TestCategoriesOrdonnentLesThemes(t *testing.T) {
+	racine := creerDonnees(t,
+		// Ordre d'apparition dans themes.json : Zèbre, Alpha, Zèbre.
+		[]Theme{
+			{ID: "t1", Nom: "T1", Categorie: "Zèbre"},
+			{ID: "t2", Nom: "T2", Categorie: "Alpha"},
+			{ID: "t3", Nom: "T3", Categorie: "Zèbre"},
+		},
+		map[string]map[string][]Question{
+			"t1": {"facile": {question("t1-f1")}},
+			"t2": {"facile": {question("t2-f1")}},
+			"t3": {"facile": {question("t3-f1")}},
+		},
+	)
+	// …mais categories.json impose Alpha avant Zèbre.
+	ecrireJSON(t, filepath.Join(racine, "categories.json"), []string{"Alpha", "Zèbre"})
+
+	store, err := NewStore(racine)
+	if err != nil {
+		t.Fatalf("NewStore : %v", err)
+	}
+
+	var ids []string
+	for _, theme := range store.Themes() {
+		ids = append(ids, theme.ID)
+	}
+	// t2 (Alpha) passe devant, et t1/t3 gardent leur ordre relatif (tri STABLE).
+	if attendu := []string{"t2", "t1", "t3"}; !slices.Equal(ids, attendu) {
+		t.Errorf("ordre = %v, attendu %v", ids, attendu)
+	}
+}
+
+func TestCategorieNonDeclareeEchoue(t *testing.T) {
+	// C'est le filet anti-faute-de-frappe : "Programation" au lieu de
+	// "Programmation" doit faire échouer le démarrage, pas créer en silence une
+	// catégorie fantôme à un seul thème.
+	racine := creerDonnees(t,
+		[]Theme{{ID: "t1", Nom: "T1", Categorie: "Programation"}},
+		map[string]map[string][]Question{"t1": {"facile": {question("t1-f1")}}},
+	)
+	ecrireJSON(t, filepath.Join(racine, "categories.json"), []string{"Programmation"})
+
+	if _, err := NewStore(racine); err == nil {
+		t.Fatal("NewStore aurait dû refuser une catégorie absente de categories.json")
+	}
+}
+
+func TestCategoriesEstOptionnel(t *testing.T) {
+	// Sans categories.json, on garde l'ordre d'apparition dans themes.json.
+	store, _ := storeDeTest(t) // ce jeu de données n'a pas de categories.json
+
+	var ids []string
+	for _, theme := range store.Themes() {
+		ids = append(ids, theme.ID)
+	}
+	if attendu := []string{"go", "solo"}; !slices.Equal(ids, attendu) {
+		t.Errorf("ordre = %v, attendu %v", ids, attendu)
+	}
+}
+
 // --- Lecture des questions ------------------------------------------------
 
 func TestQuestionsDUnNiveauReel(t *testing.T) {

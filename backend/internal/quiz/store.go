@@ -2,7 +2,9 @@ package quiz
 
 import (
 	"encoding/json" // encodage/décodage JSON
+	"errors"        // errors.Is : comparer une erreur à un cas connu
 	"fmt"           // formatage de chaînes (ici pour des messages d'erreur)
+	"io/fs"         // fs.ErrNotExist : "le fichier n'existe pas"
 	"log"           // journalisation (erreurs de lecture à la demande)
 	"os"            // accès au système de fichiers
 	"path/filepath" // construction de chemins (portable Windows/Linux/Mac)
@@ -99,7 +101,12 @@ func NewStore(dataDir string) (*Store, error) {
 		return nil, fmt.Errorf("chargement des thèmes : %w", err)
 	}
 
-	// 2) Pour chaque thème, déterminer ses niveaux disponibles à partir des
+	// 2) Appliquer l'ordre des catégories (fichier optionnel, voir ordonnerParCategorie).
+	if err := s.ordonnerParCategorie(dataDir); err != nil {
+		return nil, err
+	}
+
+	// 3) Pour chaque thème, déterminer ses niveaux disponibles à partir des
 	//    seuls NOMS de fichiers dans <dataDir>/questions/<id>/ (aucune lecture
 	//    de contenu). On itère avec l'index `i` pour MODIFIER l'élément réel du
 	//    slice (une boucle `for _, t := range` n'en donnerait qu'une copie).
@@ -131,6 +138,51 @@ func NewStore(dataDir string) (*Store, error) {
 	}
 
 	return s, nil
+}
+
+// ordonnerParCategorie trie les thèmes selon l'ordre déclaré dans
+// <dataDir>/categories.json, et refuse une catégorie non déclarée.
+//
+// Pourquoi ce fichier ? La `categorie` d'un thème est une chaîne libre, répétée
+// dans chaque entrée de themes.json. Sans liste de référence :
+//   - l'ordre d'affichage des catégories dépendait de l'ordre d'apparition des
+//     thèmes dans le fichier, donc du hasard des ajouts ;
+//   - une faute de frappe ("Programation") créait silencieusement une catégorie
+//     fantôme contenant un seul thème, sans que rien ne le signale.
+//
+// Le fichier est OPTIONNEL : sans lui, on garde l'ancien comportement (ordre
+// d'apparition). Mais s'il existe, il fait autorité et toute catégorie absente
+// de la liste fait échouer le démarrage — c'est là qu'on attrape les fautes de
+// frappe (même logique de fail-fast qu'un thème sans questions).
+func (s *Store) ordonnerParCategorie(dataDir string) error {
+	var ordre []string
+
+	chemin := filepath.Join(dataDir, "categories.json")
+	if err := lireJSON(chemin, &ordre); err != nil {
+		// errors.Is déballe la chaîne d'erreurs pour retrouver la cause
+		// profonde. Fichier absent = cas normal, on ne trie simplement pas.
+		if errors.Is(err, fs.ErrNotExist) {
+			return nil
+		}
+		return fmt.Errorf("chargement des catégories : %w", err)
+	}
+
+	// Vérification AVANT tri : toute catégorie utilisée doit être déclarée.
+	for _, theme := range s.themes {
+		if !slices.Contains(ordre, theme.Categorie) {
+			return fmt.Errorf(
+				"le thème %q utilise la catégorie %q, absente de %s (faute de frappe ?)",
+				theme.ID, theme.Categorie, chemin,
+			)
+		}
+	}
+
+	// SortStableFunc : les thèmes d'une même catégorie gardent leur ordre
+	// d'origine dans themes.json. Seules les catégories sont réordonnées.
+	slices.SortStableFunc(s.themes, func(a, b Theme) int {
+		return slices.Index(ordre, a.Categorie) - slices.Index(ordre, b.Categorie)
+	})
+	return nil
 }
 
 // niveauxReels scanne <dataDir>/questions/<id>/ et renvoie les niveaux RÉELS

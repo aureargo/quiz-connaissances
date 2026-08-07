@@ -99,8 +99,17 @@ func repondreErreur(w http.ResponseWriter, code int, message string) {
 }
 
 // cors est un "middleware" : une fonction qui enveloppe un handler pour ajouter
-// un comportement commun. Ici, on ajoute les en-têtes CORS autorisant le
-// frontend Angular (servi sur un autre port, 4200) à appeler cette API.
+// un comportement commun. Ici, les en-têtes CORS, sans lesquels le navigateur
+// refuserait que le frontend (servi sur le port 4200) appelle cette API (port
+// 8080) : deux ports différents = deux "origines" différentes.
+//
+// ⚠️ On autorise TOUTES les origines ("*"), pas seulement localhost:4200. C'est
+// assumé : l'API est publique et en LECTURE SEULE, elle ne sert que des
+// questions de quiz et n'expose aucune donnée personnelle ni aucune écriture.
+// Restreindre l'origine n'apporterait ici aucune sécurité réelle, et obligerait
+// à reconfigurer le serveur dès qu'on sert le frontend depuis un autre port.
+// Dès qu'une route modifierait quelque chose (score, compte joueur…), il
+// faudrait au contraire lister les origines autorisées explicitement.
 func cors(suivant http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Access-Control-Allow-Origin", "*")
