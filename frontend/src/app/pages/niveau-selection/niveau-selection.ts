@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 
 import { QuizApi } from '../../services/quiz-api';
 import { Theme } from '../../models/quiz.models';
+import { messageErreur } from '../../utils/erreurs';
 
 /* =========================================================================
    NiveauSelection — l'étage intermédiaire entre l'accueil et le quiz.
@@ -38,9 +39,9 @@ export class NiveauSelection implements OnInit {
         this.theme.set(theme);
         this.chargement.set(false);
       },
-      error: () => {
+      error: (err) => {
         this.erreur.set(
-          "Impossible de charger ce thème. Le serveur Go est-il bien démarré sur le port 8080 ?"
+          messageErreur(err, `Le thème « ${this.themeId()} » n'existe pas.`)
         );
         this.chargement.set(false);
       }

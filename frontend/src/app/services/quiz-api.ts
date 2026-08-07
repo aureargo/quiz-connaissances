@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { Theme, Question } from '../models/quiz.models';
+import { environment } from '../../environments/environment';
 
 /* =========================================================================
    QuizApi — service qui dialogue avec l'API REST en Go.
@@ -20,10 +21,14 @@ export class QuizApi {
   // sans passer par le constructeur.
   private readonly http = inject(HttpClient);
 
-  // URL de base de notre backend Go. Le serveur autorise le CORS, donc le
-  // navigateur (port 4200) peut appeler le backend (port 8080) sans souci.
-  // 💡 Alternative : configurer un "proxy" Angular pour appeler simplement /api.
-  private readonly baseUrl = 'http://localhost:8080/api';
+  // URL de base de notre backend Go. Elle vient du fichier d'environnement, PAS
+  // du code : en dev c'est http://localhost:8080/api, en production c'est /api
+  // (même domaine, derrière un reverse proxy). Angular échange le fichier au
+  // moment de compiler — voir src/environments/environment.ts.
+  //
+  // Coder cette URL en dur, comme c'était le cas, rendait le build de
+  // production inutilisable ailleurs que sur la machine du développeur.
+  private readonly baseUrl = environment.apiUrl;
 
   // Récupère la liste des thèmes en version LÉGÈRE (sans les niveaux) : juste de
   // quoi afficher les tuiles de l'accueil. HttpClient.get<T>() renvoie un

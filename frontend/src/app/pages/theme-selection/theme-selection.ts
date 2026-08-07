@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 
 import { QuizApi } from '../../services/quiz-api';
 import { Theme } from '../../models/quiz.models';
+import { messageErreur } from '../../utils/erreurs';
 
 /* =========================================================================
    ThemeSelection — la page d'accueil : choix du thème de quiz.
@@ -51,9 +52,9 @@ export class ThemeSelection {
         this.themes.set(themes);
         this.chargement.set(false);
       },
-      error: () => {
+      error: (err) => {
         this.erreur.set(
-          "Impossible de charger les thèmes. Le serveur Go est-il bien démarré sur le port 8080 ?"
+          messageErreur(err, "La liste des thèmes est introuvable sur le serveur.")
         );
         this.chargement.set(false);
       }
