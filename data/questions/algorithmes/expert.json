@@ -58,7 +58,7 @@
   {
     "id": "algorithmes-e9",
     "enonce": "Pourquoi dit-on que l'ajout en fin d'un tableau dynamique est en temps « amorti » O(1) ?",
-    "choix": ["Parce qu'il est toujours strictement instantané", "Parce que les rares réallocations coûteuses sont réparties sur tous les ajouts", "Parce qu'il ne consomme aucune mémoire", "Parce qu'il retrie le tableau à chaque ajout"],
+    "choix": ["Parce que chaque ajout prend rigoureusement le même temps, sans exception", "Parce que les rares réallocations coûteuses sont réparties sur tous les ajouts", "Parce que le tableau réserve dès sa création toute la mémoire nécessaire", "Parce que le tableau est retrié après chaque insertion, ce qui l'équilibre"],
     "bonneReponse": 1,
     "explication": "Quand le tableau est plein, il double sa capacité — une opération en O(n). Mais ces doublements sont si espacés que, moyenné sur l'ensemble des ajouts, le coût par insertion reste constant : c'est la complexité amortie."
   },

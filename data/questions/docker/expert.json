@@ -2,14 +2,14 @@
   {
     "id": "docker-e1",
     "enonce": "Quel est le principal avantage d'un build « multi-stage » (multi-étapes) ?",
-    "choix": ["Construire plusieurs images en parallèle", "Obtenir une image finale légère en n'y gardant que l'artefact, pas les outils de build", "Autoriser plusieurs FROM pour augmenter la mémoire", "Compiler pour plusieurs architectures à la fois"],
+    "choix": ["Construire plusieurs images en parallèle depuis un seul fichier", "N'embarquer dans l'image finale que l'artefact, pas les outils de build", "Autoriser plusieurs FROM afin d'augmenter la mémoire disponible", "Compiler simultanément pour plusieurs architectures processeur"],
     "bonneReponse": 1,
     "explication": "Un build multi-stage compile dans une première étape (avec le SDK, les dépendances…) puis copie seulement le binaire produit dans une image finale minimale, sans traîner les outils de compilation."
   },
   {
     "id": "docker-e2",
     "enonce": "Quelle est la différence clé entre les formes « exec » et « shell » de CMD ?",
-    "choix": ["La forme exec passe par /bin/sh -c, la forme shell non", "La forme exec (tableau JSON) lance le processus en PID 1, la forme shell l'enveloppe dans /bin/sh", "Il n'y en a aucune, c'est purement stylistique", "La forme shell démarre toujours plus vite"],
+    "choix": ["La forme exec passe par /bin/sh -c, alors que la forme shell non", "La forme exec lance le processus en PID 1, la forme shell passe par /bin/sh", "Il n'y en a aucune : le choix est purement une affaire de style", "La forme shell démarre toujours nettement plus vite que l'autre"],
     "bonneReponse": 1,
     "explication": "`CMD [\"app\"]` (exec) lance le binaire en PID 1, qui reçoit donc les signaux comme SIGTERM. `CMD app` (shell) l'enveloppe dans `/bin/sh -c` : le shell devient PID 1, ce qui peut empêcher un arrêt propre."
   },
@@ -37,14 +37,14 @@
   {
     "id": "docker-e6",
     "enonce": "Pourquoi copier `package.json` AVANT le reste du code dans un Dockerfile Node ?",
-    "choix": ["Pour réduire la taille de l'image finale", "Pour profiter du cache : tant que les dépendances ne changent pas, l'install n'est pas refaite", "Parce que l'ordre des COPY est imposé par Docker", "Pour chiffrer les dépendances séparément du code"],
+    "choix": ["Pour réduire nettement la taille de l'image finale produite", "Pour garder l'installation en cache tant que les dépendances sont stables", "Parce que Docker impose cet ordre pour les instructions COPY", "Pour chiffrer les dépendances indépendamment du code source"],
     "bonneReponse": 1,
     "explication": "Le cache d'une couche s'invalide dès qu'un fichier copié change. En copiant d'abord `package.json` puis en lançant `npm install`, cette couche reste en cache tant que les dépendances sont stables, même quand le code applicatif évolue."
   },
   {
     "id": "docker-e7",
     "enonce": "Quel est le rôle particulier du processus en PID 1 dans un conteneur ?",
-    "choix": ["Il sert de pare-feu interne au conteneur", "Il joue le rôle d'init : il reçoit les signaux et doit récupérer les processus zombies", "Il gère l'allocation mémoire du conteneur", "Il synchronise les couches de l'image au démarrage"],
+    "choix": ["Il sert de pare-feu interne, filtrant le trafic du conteneur", "Il joue le rôle d'init : il reçoit les signaux et récupère les zombies", "Il gère l'allocation de la mémoire à l'intérieur du conteneur", "Il synchronise les couches de l'image au moment du démarrage"],
     "bonneReponse": 1,
     "explication": "Le PID 1 joue le rôle d'`init`. S'il ne gère pas correctement les signaux et les processus orphelins (zombies), l'arrêt peut traîner. D'où l'usage d'init légers comme `tini` (option `--init`)."
   },
@@ -58,14 +58,14 @@
   {
     "id": "docker-e9",
     "enonce": "Quelle est la différence entre un volume nommé et un « bind mount » ?",
-    "choix": ["Le bind mount monte un dossier précis de l'hôte, le volume est géré par Docker dans un espace dédié", "Le volume est temporaire, le bind mount est persistant", "Le bind mount ne fonctionne que sous Windows", "Il n'y en a aucune, ce sont des synonymes"],
+    "choix": ["Le bind mount monte un dossier de l'hôte, le volume est géré par Docker", "Le volume est temporaire alors que le bind mount est persistant", "Le bind mount ne fonctionne que sur les hôtes Windows récents", "Il n'y en a aucune : ce sont deux noms d'un même mécanisme"],
     "bonneReponse": 0,
     "explication": "Un bind mount lie un chemin exact de l'hôte au conteneur (pratique en dev). Un volume nommé est stocké et géré par Docker (souvent sous `/var/lib/docker/volumes`), plus portable et recommandé en production."
   },
   {
     "id": "docker-e10",
     "enonce": "Pourquoi `apt-get update` et `apt-get install` sont-ils souvent réunis dans un même RUN ?",
-    "choix": ["Pour gagner du temps de frappe", "Pour éviter qu'un `update` mis en cache serve un index périmé à un `install` ultérieur", "Parce que apt l'exige techniquement", "Pour réduire le nombre de variables d'environnement"],
+    "choix": ["Pour gagner du temps de frappe au moment d'écrire le Dockerfile", "Pour éviter qu'un `update` en cache ne serve un index de paquets périmé", "Parce que apt refuse techniquement de les séparer en deux RUN", "Pour réduire le nombre de variables d'environnement définies"],
     "bonneReponse": 1,
     "explication": "Séparés, le `RUN apt-get update` peut rester en cache alors que la ligne `install` change : on installerait alors avec un index de paquets obsolète. Les réunir dans un même `RUN` garantit un index à jour."
   }

@@ -9,7 +9,7 @@
   {
     "id": "css-e2",
     "enonce": "Comment se comporte un élément en `position: sticky` ?",
-    "choix": ["Il reste toujours fixe à l'écran", "Il est relatif puis se fige une fois un seuil de défilement atteint", "Il est retiré du flux comme `absolute`", "Il se comporte exactement comme `static`"],
+    "choix": ["Il reste fixé à l'écran en permanence, quel que soit le défilement", "Il est relatif puis se fige une fois un seuil de défilement atteint", "Il est retiré du flux comme un élément en `position: absolute`", "Il se comporte exactement comme un élément en `position: static`"],
     "bonneReponse": 1,
     "explication": "Un élément `sticky` défile normalement, puis « colle » à une position (ex. `top: 0`) une fois ce seuil franchi. Parfait pour un en-tête qui reste visible au défilement."
   },
@@ -23,7 +23,7 @@
   {
     "id": "css-e4",
     "enonce": "Que représente l'unité `fr` dans une grille CSS ?",
-    "choix": ["un pixel fractionnaire", "une fraction de l'espace disponible dans la grille", "la taille de la police courante", "un pourcentage de la fenêtre"],
+    "choix": ["un pixel fractionnaire, plus fin que le pixel", "une fraction de l'espace disponible dans la grille", "la taille de la police de l'élément courant", "un pourcentage de la largeur de la fenêtre"],
     "bonneReponse": 1,
     "explication": "`1fr` prend une part de l'espace restant. Avec `grid-template-columns: 1fr 2fr`, la seconde colonne est deux fois plus large que la première."
   },
@@ -37,14 +37,14 @@
   {
     "id": "css-e6",
     "enonce": "À quoi sert une règle `@media` ?",
-    "choix": ["À importer une police", "À appliquer des styles selon des conditions (largeur d'écran, type d'appareil…)", "À lire un fichier audio", "À déclencher une animation"],
+    "choix": ["À importer une police hébergée sur un autre serveur", "À appliquer des styles selon des conditions d'affichage", "À déclencher la lecture d'un fichier audio ou vidéo", "À lancer une animation dès le chargement de la page"],
     "bonneReponse": 1,
     "explication": "Les « media queries » (`@media (max-width: 600px) { ... }`) adaptent la mise en page au contexte. C'est le socle du responsive design."
   },
   {
     "id": "css-e7",
     "enonce": "Que permet la fonction `calc()` ?",
-    "choix": ["Arrondir un nombre", "Effectuer des calculs mêlant différentes unités (ex. `100% - 20px`)", "Générer une couleur aléatoire", "Compter les éléments enfants"],
+    "choix": ["Arrondir un nombre à l'entier le plus proche", "Effectuer des calculs mêlant différentes unités", "Générer une couleur aléatoire à chaque rendu", "Compter les éléments enfants d'un conteneur"],
     "bonneReponse": 1,
     "explication": "`calc()` combine des unités incompatibles autrement : `width: calc(100% - 20px)`. Très utile pour des dimensions mi-relatives, mi-absolues."
   },
@@ -65,7 +65,7 @@
   {
     "id": "css-e10",
     "enonce": "Quelle est la différence entre `transition` et `animation` en CSS ?",
-    "choix": ["Aucune, ce sont des synonymes", "`transition` interpole entre deux états déclenchés ; `animation` suit des `@keyframes` et peut tourner seule, en boucle", "`animation` est simplement plus rapide", "`transition` ne fonctionne qu'au survol"],
+    "choix": ["Aucune différence réelle : ce sont deux syntaxes équivalentes", "`transition` réagit à un changement d'état, `animation` suit des `@keyframes`", "`animation` est simplement une version plus rapide de `transition`", "`transition` ne fonctionne qu'au survol, `animation` partout"],
     "bonneReponse": 1,
     "explication": "Une `transition` anime le passage d'un état à un autre suite à un changement (survol, classe ajoutée…). Une `animation` suit une suite d'étapes (`@keyframes`) et peut démarrer seule et boucler."
   }

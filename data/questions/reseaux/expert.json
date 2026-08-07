@@ -16,7 +16,7 @@
   {
     "id": "reseaux-e3",
     "enonce": "Que fait le mécanisme NAT sur un routeur ?",
-    "choix": ["Il traduit les adresses privées en une adresse publique", "Il chiffre tout le trafic sortant", "Il ferme automatiquement les ports", "Il duplique chaque paquet reçu"],
+    "choix": ["Il traduit les adresses privées en une adresse publique", "Il chiffre l'intégralité du trafic sortant du réseau", "Il ferme automatiquement tous les ports non utilisés", "Il duplique chaque paquet reçu pour plus de fiabilité"],
     "bonneReponse": 0,
     "explication": "Le NAT (Network Address Translation) permet à plusieurs machines d'un réseau local de partager une seule adresse IP publique. C'est ce qui a longtemps repoussé l'épuisement des adresses IPv4."
   },

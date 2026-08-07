@@ -44,7 +44,7 @@
   {
     "id": "films-90-m7",
     "enonce": "Quel film français de 1997 de Luc Besson suit Korben Dallas et l'être parfait Leeloo ?",
-    "choix": ["Nikita", "Le Cinquième Élément", "Léon", "Subway"],
+    "choix": ["Le Grand Bleu", "Le Cinquième Élément", "Le Dernier Combat", "Léon, le professionnel"],
     "bonneReponse": 1,
     "explication": "« Le Cinquième Élément », avec Bruce Willis et Milla Jovovich, fut l'un des plus gros budgets du cinéma français de l'époque."
   },

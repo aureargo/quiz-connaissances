@@ -51,7 +51,7 @@
   {
     "id": "films-80-e8",
     "enonce": "Quel film de 1988 mêle acteurs réels et personnages de dessins animés autour d'un détective ?",
-    "choix": ["Cool World", "Qui veut la peau de Roger Rabbit ?", "Mary Poppins", "Space Jam"],
+    "choix": ["Cool World", "Roger Rabbit", "Mary Poppins", "Space Jam"],
     "bonneReponse": 1,
     "explication": "« Qui veut la peau de Roger Rabbit ? » de Robert Zemeckis fut une prouesse technique mêlant prises de vue réelles et animation."
   },

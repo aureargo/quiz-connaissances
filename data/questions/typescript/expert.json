@@ -2,7 +2,7 @@
   {
     "id": "ts-e1",
     "enonce": "Que fait l'option `strict` du `tsconfig.json` ?",
-    "choix": ["Elle active un ensemble de vérifications de type rigoureuses", "Elle interdit l'usage des classes", "Elle force la compilation vers ES5", "Elle désactive les génériques"],
+    "choix": ["Elle active un ensemble de vérifications de type rigoureuses", "Elle interdit purement et simplement l'usage des classes", "Elle force la compilation du projet vers la cible ES5", "Elle désactive totalement l'usage des types génériques"],
     "bonneReponse": 0,
     "explication": "`strict: true` regroupe plusieurs contrôles (`strictNullChecks`, `noImplicitAny`…). C'est le réglage recommandé pour profiter pleinement de la sécurité de typage."
   },
@@ -51,14 +51,14 @@
   {
     "id": "ts-e8",
     "enonce": "Que fait l'opérateur d'assertion non-nulle `!`, comme dans `valeur!` ?",
-    "choix": ["il affirme au compilateur que la valeur n'est ni `null` ni `undefined`", "il inverse la valeur d'un booléen", "il rend la propriété optionnelle", "il efface la valeur de la variable"],
+    "choix": ["il affirme que la valeur n'est ni `null` ni `undefined`", "il inverse la valeur d'un booléen, comme en JavaScript", "il rend la propriété facultative au sein du type", "il efface la valeur actuellement stockée dans la variable"],
     "bonneReponse": 0,
     "explication": "`!` lève l'avertissement du compilateur sur une valeur potentiellement nulle, sans le moindre contrôle à l'exécution. À manier avec prudence : une affirmation fausse provoque une erreur au runtime."
   },
   {
     "id": "ts-e9",
     "enonce": "Que sont les « décorateurs » (decorators) en TypeScript ?",
-    "choix": ["des fonctions annotant classes, méthodes ou propriétés pour modifier leur comportement", "des commentaires de documentation typés", "des alias de types génériques", "des fichiers de configuration du projet"],
+    "choix": ["des fonctions qui annotent une classe ou un membre pour l'enrichir", "des commentaires de documentation enrichis d'informations de type", "des alias qui donnent un nom court à des types génériques", "des fichiers décrivant la configuration du projet TypeScript"],
     "bonneReponse": 0,
     "explication": "Un décorateur, noté `@nom`, s'applique à une classe ou un de ses membres pour en enrichir le comportement. Angular et NestJS s'appuient massivement dessus (`@Component`, `@Injectable`…)."
   },

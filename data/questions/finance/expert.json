@@ -51,7 +51,7 @@
   {
     "id": "finance-e8",
     "enonce": "Que désigne la liquidité d'un actif ?",
-    "choix": ["Sa rentabilité sur le long terme", "Son niveau de risque global", "Sa part dans un indice boursier", "La facilité à le vendre rapidement sans perte de valeur"],
+    "choix": ["Sa rentabilité moyenne attendue sur le long terme", "Son niveau de risque global pour l'investisseur", "Sa part dans la composition d'un indice boursier", "La facilité à le vendre rapidement sans perte de valeur"],
     "bonneReponse": 3,
     "explication": "Un actif liquide, comme une action très échangée, se vend vite à un prix proche du marché. Un actif illiquide, comme un immeuble, est plus long et coûteux à céder."
   },

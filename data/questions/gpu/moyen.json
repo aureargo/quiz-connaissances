@@ -2,7 +2,7 @@
   {
     "id": "gpu-m1",
     "enonce": "Que sont les « cœurs CUDA » d'une carte graphique Nvidia ?",
-    "choix": ["de petites unités de calcul exécutées en parallèle", "des connecteurs d'alimentation", "des ventilateurs internes", "des emplacements mémoire"],
+    "choix": ["de petites unités de calcul exécutées en parallèle", "des connecteurs qui alimentent la carte en courant", "des ventilateurs placés à l'intérieur du boîtier", "des emplacements mémoire réservés aux textures"],
     "bonneReponse": 0,
     "explication": "Les cœurs CUDA sont les unités de calcul élémentaires d'un GPU Nvidia. Une carte en compte des milliers, ce qui lui donne sa puissance massivement parallèle."
   },
@@ -30,7 +30,7 @@
   {
     "id": "gpu-m5",
     "enonce": "Qu'est-ce qu'un « shader » ?",
-    "choix": ["un petit programme exécuté par le GPU", "un câble vidéo", "un type de ventilateur", "un format d'image"],
+    "choix": ["un petit programme exécuté par le GPU", "un câble vidéo relié à l'écran", "un type de ventilateur silencieux", "un format d'image très compressé"],
     "bonneReponse": 0,
     "explication": "Un shader est un programme qui tourne sur le GPU pour calculer l'apparence des pixels et des sommets : couleurs, lumières, effets. Vertex et fragment shaders sont les plus courants."
   },
@@ -44,7 +44,7 @@
   {
     "id": "gpu-m7",
     "enonce": "Que permettent les technologies d'« upscaling » comme DLSS ou FSR ?",
-    "choix": ["calculer une image en basse résolution puis l'agrandir intelligemment", "augmenter la mémoire de la carte", "refroidir le GPU en charge", "réduire le bruit des ventilateurs"],
+    "choix": ["calculer une image en basse résolution puis l'agrandir intelligemment", "augmenter la quantité de mémoire vidéo disponible sur la carte", "refroidir plus efficacement le GPU lorsqu'il est très sollicité", "réduire le bruit produit par les ventilateurs de la carte"],
     "bonneReponse": 0,
     "explication": "Ces techniques rendent l'image dans une résolution plus basse, puis la reconstruisent vers une résolution supérieure (parfois via l'IA). On gagne en performances sans trop perdre en qualité visuelle."
   },
@@ -58,7 +58,7 @@
   {
     "id": "gpu-m9",
     "enonce": "Pourquoi les GPU sont-ils prisés pour entraîner des réseaux de neurones ?",
-    "choix": ["ils effectuent en masse les multiplications de matrices nécessaires", "ils possèdent un très gros disque dur", "ils consomment très peu d'électricité", "ils gèrent mieux les fichiers texte"],
+    "choix": ["ils effectuent en masse les multiplications de matrices nécessaires", "ils embarquent un disque dur bien plus rapide que celui du PC", "ils consomment beaucoup moins d'électricité qu'un processeur", "ils traitent les fichiers texte plus efficacement qu'un CPU"],
     "bonneReponse": 0,
     "explication": "L'apprentissage profond repose sur d'énormes calculs matriciels, hautement parallélisables. Le GPU, avec ses milliers d'unités, y est bien plus rapide qu'un CPU."
   },

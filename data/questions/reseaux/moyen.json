@@ -9,21 +9,21 @@
   {
     "id": "reseaux-m2",
     "enonce": "Quelle est la principale différence entre TCP et UDP ?",
-    "choix": ["TCP est sans fil, UDP est filaire", "TCP garantit la livraison, UDP privilégie la rapidité", "TCP est gratuit, UDP est payant", "TCP ne fonctionne que sur mobile"],
+    "choix": ["TCP fonctionne sans fil quand UDP passe par un câble", "TCP garantit la livraison, UDP privilégie la rapidité", "TCP est un protocole gratuit alors qu'UDP est payant", "TCP ne fonctionne que sur les appareils mobiles récents"],
     "bonneReponse": 1,
     "explication": "TCP vérifie que chaque paquet arrive et les remet dans l'ordre, idéal pour le web ou les e-mails. UDP n'offre aucune garantie mais reste léger et rapide, utile pour la voix ou le jeu en ligne."
   },
   {
     "id": "reseaux-m3",
     "enonce": "Que fait le protocole DHCP sur un réseau ?",
-    "choix": ["Il attribue automatiquement les adresses IP", "Il chiffre les pages web", "Il bloque les publicités", "Il compresse les vidéos"],
+    "choix": ["Il attribue automatiquement les adresses IP", "Il chiffre les pages web que l'on consulte", "Il bloque les publicités affichées par les sites", "Il compresse les vidéos avant diffusion"],
     "bonneReponse": 0,
     "explication": "Le DHCP distribue automatiquement une adresse IP (et d'autres paramètres) à chaque appareil qui rejoint le réseau, évitant de tout configurer à la main. C'est la box qui assure souvent ce rôle."
   },
   {
     "id": "reseaux-m4",
     "enonce": "Qu'identifie un numéro de port, comme le 80 ou le 443 ?",
-    "choix": ["Un appareil physique", "Un service ou une application sur la machine", "Une marque de routeur", "Un pays d'origine"],
+    "choix": ["Un appareil physique branché au réseau", "Un service ou une application sur la machine", "Une marque précise de routeur domestique", "Le pays d'origine de la connexion entrante"],
     "bonneReponse": 1,
     "explication": "Sur une même machine, le port distingue les services : 80 pour le web HTTP, 443 pour HTTPS, 25 pour le courrier. L'adresse IP désigne la machine, le port désigne l'application visée."
   },
@@ -44,7 +44,7 @@
   {
     "id": "reseaux-m7",
     "enonce": "Quel est le rôle d'un commutateur (switch) dans un réseau local ?",
-    "choix": ["Relier les appareils et diriger les données vers le bon destinataire", "Fournir l'électricité aux appareils", "Stocker les fichiers du réseau", "Afficher les pages web"],
+    "choix": ["Relier les appareils et diriger les données au bon destinataire", "Fournir l'électricité à tous les appareils du réseau local", "Stocker l'ensemble des fichiers partagés du réseau local", "Afficher les pages web demandées par les utilisateurs"],
     "bonneReponse": 0,
     "explication": "Un switch interconnecte les appareils d'un réseau local et n'envoie chaque trame qu'au port concerné, grâce aux adresses MAC. C'est plus efficace que l'ancien concentrateur (hub) qui diffusait à tous."
   },
@@ -58,14 +58,14 @@
   {
     "id": "reseaux-m9",
     "enonce": "Que permet de vérifier la commande « ping » ?",
-    "choix": ["La présence et le temps de réponse d'une machine", "La taille du disque dur", "La version de Windows", "Le niveau de batterie"],
+    "choix": ["La présence et le temps de réponse d'une machine", "La taille du disque dur de la machine visée", "La version de Windows installée sur le poste", "Le niveau de batterie restant sur l'appareil"],
     "bonneReponse": 0,
     "explication": "Ping envoie de petits messages (ICMP) à une machine et mesure le temps de réponse. C'est l'outil de base pour vérifier qu'un hôte est joignable et estimer la latence du réseau."
   },
   {
     "id": "reseaux-m10",
     "enonce": "Qu'est-ce que la passerelle par défaut d'un appareil ?",
-    "choix": ["Son antivirus principal", "L'appareil par lequel il sort vers les autres réseaux", "Son adresse e-mail", "Son mot de passe Wi-Fi"],
+    "choix": ["Le logiciel antivirus principal de l'appareil", "L'appareil par lequel il sort vers les autres réseaux", "L'adresse e-mail associée à son propriétaire", "Le mot de passe du réseau Wi-Fi auquel il se connecte"],
     "bonneReponse": 1,
     "explication": "La passerelle par défaut est la porte de sortie du réseau local : tout trafic destiné à l'extérieur (Internet) lui est confié. Dans une maison, c'est généralement la box."
   }

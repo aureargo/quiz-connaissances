@@ -65,7 +65,7 @@
   {
     "id": "cpu-f10",
     "enonce": "Que désigne un « cœur » (core) dans un processeur ?",
-    "choix": ["une unité capable d'exécuter des instructions", "un connecteur d'alimentation", "un type de mémoire externe", "un logiciel de pilotage"],
+    "choix": ["une unité capable d'exécuter des instructions", "un connecteur qui alimente la carte mère", "un type de mémoire installée hors du processeur", "un logiciel qui pilote le matériel installé"],
     "bonneReponse": 0,
     "explication": "Un cœur est une unité de traitement complète qui exécute des instructions. Un processeur quadricœur possède quatre cœurs pouvant travailler simultanément."
   }

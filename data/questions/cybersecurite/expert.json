@@ -37,7 +37,7 @@
   {
     "id": "cybersecurite-e6",
     "enonce": "En quoi consiste une attaque de l'homme du milieu (man-in-the-middle) ?",
-    "choix": ["Deviner un mot de passe par essais", "S'intercaler entre deux parties pour intercepter les échanges", "Effacer les journaux d'un serveur", "Surcharger un réseau de paquets"],
+    "choix": ["Deviner un mot de passe en multipliant les essais automatisés", "S'intercaler entre deux parties pour intercepter les échanges", "Effacer les journaux d'un serveur pour masquer une intrusion", "Surcharger un réseau de paquets jusqu'à le rendre inutilisable"],
     "bonneReponse": 1,
     "explication": "Dans une attaque de l'homme du milieu, l'assaillant se place entre deux interlocuteurs pour lire ou modifier leurs échanges à leur insu. Le chiffrement TLS bien validé est la principale parade."
   },
@@ -51,7 +51,7 @@
   {
     "id": "cybersecurite-e8",
     "enonce": "Qu'est-ce qu'une autorité de certification (CA) garantit dans une connexion HTTPS ?",
-    "choix": ["La rapidité du serveur", "L'authenticité de la clé publique d'un site", "L'absence totale de virus", "La gratuité du site"],
+    "choix": ["La rapidité de réponse du serveur visité", "L'authenticité de la clé publique d'un site", "L'absence totale de virus sur les pages", "La gratuité des services proposés par le site"],
     "bonneReponse": 1,
     "explication": "Une autorité de certification signe le certificat d'un site, attestant que sa clé publique lui appartient bien. Le navigateur fait confiance à la chaîne de certificats jusqu'à une racine reconnue."
   },

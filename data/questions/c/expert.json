@@ -9,7 +9,7 @@
   {
     "id": "c-e2",
     "enonce": "Quelle est la différence entre la pile (stack) et le tas (heap) ?",
-    "choix": ["Ce sont des synonymes", "La pile gère les variables locales, le tas l'allocation dynamique", "Le tas est toujours plus rapide", "La pile ne sert qu'aux pointeurs"],
+    "choix": ["Ce sont deux noms différents d'une seule et même zone mémoire", "La pile gère les variables locales, le tas l'allocation dynamique", "Le tas est toujours plus rapide d'accès que la pile, sans exception", "La pile ne sert qu'à stocker les pointeurs du programme"],
     "bonneReponse": 1,
     "explication": "Les variables locales et les appels de fonctions vivent sur la pile, gérée automatiquement. `malloc` réserve sur le tas, qu'il faut libérer manuellement avec `free`."
   },
@@ -44,7 +44,7 @@
   {
     "id": "c-e7",
     "enonce": "À quoi sert le mot-clé `volatile` ?",
-    "choix": ["À accélérer les accès", "À empêcher le compilateur d'optimiser les accès à une variable", "À libérer la mémoire automatiquement", "À synchroniser des threads"],
+    "choix": ["À accélérer les accès en gardant la variable en registre", "À empêcher le compilateur d'optimiser les accès à une variable", "À libérer automatiquement la mémoire allouée dynamiquement", "À synchroniser l'accès d'une variable entre plusieurs threads"],
     "bonneReponse": 1,
     "explication": "`volatile` indique que la valeur peut changer hors du flot normal du programme (registre matériel, interruption). Le compilateur relit donc la variable à chaque accès au lieu de la mettre en cache — ce n'est PAS une garantie de synchronisation entre threads."
   },

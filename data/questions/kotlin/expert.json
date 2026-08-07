@@ -2,14 +2,14 @@
   {
     "id": "kotlin-e1",
     "enonce": "À quoi servent principalement les coroutines en Kotlin ?",
-    "choix": ["à écrire du code asynchrone et concurrent de façon légère et lisible", "à chiffrer les communications réseau", "à compiler le code plus rapidement", "à générer automatiquement des tests"],
+    "choix": ["à écrire du code asynchrone de façon légère et lisible", "à chiffrer les communications réseau de l'application", "à compiler le code source de l'application plus rapidement", "à générer automatiquement les tests unitaires du projet"],
     "bonneReponse": 0,
     "explication": "Les coroutines permettent de suspendre et reprendre des tâches sans bloquer de thread, pour un code asynchrone qui se lit séquentiellement. Elles sont bien plus légères que des threads classiques."
   },
   {
     "id": "kotlin-e2",
     "enonce": "Que signifie le mot-clé `suspend` devant une fonction ?",
-    "choix": ["elle peut suspendre son exécution puis reprendre, sans bloquer le thread", "elle s'exécute une seule fois au démarrage", "elle est mise en cache automatiquement", "elle ne peut être appelée que depuis Java"],
+    "choix": ["elle peut suspendre puis reprendre son exécution sans bloquer", "elle ne s'exécute qu'une seule fois, au démarrage du programme", "elle est automatiquement mise en cache après le premier appel", "elle ne peut être appelée que depuis du code Java existant"],
     "bonneReponse": 0,
     "explication": "Une fonction `suspend` ne peut être appelée que depuis une coroutine ou une autre fonction `suspend`. Aux points de suspension, le thread est libéré pour d'autres tâches."
   },
@@ -23,7 +23,7 @@
   {
     "id": "kotlin-e4",
     "enonce": "Que permet la délégation `by lazy { ... }` sur une propriété ?",
-    "choix": ["une initialisation différée au premier accès, dont le résultat est mis en cache", "un rechargement de la valeur à chaque lecture", "une copie automatique de la propriété", "une exécution dans un thread dédié à chaque appel"],
+    "choix": ["une initialisation différée au premier accès, puis mise en cache", "un rechargement de la valeur à chaque lecture de la propriété", "une copie automatique de la propriété à chaque affectation", "une exécution dans un thread dédié à chaque appel effectué"],
     "bonneReponse": 0,
     "explication": "Le bloc passé à `lazy` n'est exécuté qu'au premier accès à la propriété ; la valeur calculée est ensuite réutilisée. Pratique pour des objets coûteux dont on n'est pas sûr d'avoir besoin."
   },
@@ -37,7 +37,7 @@
   {
     "id": "kotlin-e6",
     "enonce": "Que permet un paramètre de type marqué `reified`, dans une fonction `inline` ?",
-    "choix": ["accéder au type générique réel à l'exécution (par ex. faire `T::class`)", "rendre le type générique nullable", "convertir le type en interface", "limiter le type aux nombres uniquement"],
+    "choix": ["accéder au type générique réel pendant l'exécution", "rendre le type générique nullable par défaut", "convertir automatiquement le type en interface", "limiter le type générique aux seuls nombres"],
     "bonneReponse": 0,
     "explication": "Normalement, l'effacement de type (type erasure) de la JVM empêche de connaître `T` à l'exécution. Grâce à l'inlining, `reified` conserve cette information, autorisant `is T` ou `T::class`."
   },
@@ -58,7 +58,7 @@
   {
     "id": "kotlin-e9",
     "enonce": "Qu'est-ce que le « smart cast » (transtypage intelligent) ?",
-    "choix": ["la conversion automatique d'une variable vers un type après l'avoir vérifié avec `is`", "un cast forcé qui ignore les erreurs de type", "la conversion d'un objet Kotlin en JSON", "le choix automatique du type le plus court"],
+    "choix": ["la conversion automatique d'une variable après un test avec `is`", "un cast forcé qui ignore délibérément les erreurs de type", "la conversion d'un objet Kotlin vers du texte au format JSON", "le choix automatique du type le plus court parmi les possibles"],
     "bonneReponse": 0,
     "explication": "Après `if (x is String)`, le compilateur traite `x` comme un `String` dans le bloc, sans cast explicite. Cela ne marche que s'il peut garantir que la valeur n'a pas changé entre-temps."
   },

@@ -23,7 +23,7 @@
   {
     "id": "nosql-e4",
     "enonce": "À quoi sert une horloge vectorielle (« vector clock ») dans un système distribué ?",
-    "choix": ["indexer les documents par date", "ordonner les événements et détecter les écritures concurrentes", "compresser les journaux de réplication", "sérialiser les objets en binaire"],
+    "choix": ["indexer les documents stockés selon leur date de création", "ordonner les événements et détecter les écritures concurrentes", "compresser les journaux produits lors de la réplication", "sérialiser les objets en binaire avant leur stockage"],
     "bonneReponse": 1,
     "explication": "Les horloges vectorielles versionnent les données pour repérer les écritures concurrentes : Dynamo et Riak s'en servent pour détecter et résoudre les conflits."
   },

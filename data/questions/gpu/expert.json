@@ -65,7 +65,7 @@
   {
     "id": "gpu-e10",
     "enonce": "Que désigne le « VRR » (Variable Refresh Rate), à la base de G-Sync et FreeSync ?",
-    "choix": ["synchroniser le rafraîchissement de l'écran sur la cadence du GPU", "doubler la résolution affichée", "fixer le taux d'images à 60 par seconde", "comprimer le signal vidéo transmis"],
+    "choix": ["synchroniser le rafraîchissement de l'écran sur la cadence du GPU", "doubler la résolution que l'écran affiche réellement, sans perte", "verrouiller le taux d'images à soixante par seconde en permanence", "comprimer le signal vidéo transmis dans le câble jusqu'à l'écran"],
     "bonneReponse": 0,
     "explication": "Le VRR laisse l'écran adapter dynamiquement son taux de rafraîchissement au rythme réel des images produites par le GPU. Cela élimine le tearing et les saccades sans la latence de la synchronisation verticale classique."
   }

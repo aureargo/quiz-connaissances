@@ -2,7 +2,7 @@
   {
     "id": "js-e1",
     "enonce": "Qu'est-ce qu'une fermeture (closure) en JavaScript ?",
-    "choix": ["Une fonction qui capture les variables de sa portée englobante", "Une fonction dépourvue de nom", "Une méthode privée d'une classe", "Une fonction exécutée immédiatement"],
+    "choix": ["Une fonction qui capture les variables de sa portée englobante", "Une fonction dépourvue de nom, déclarée directement à la volée", "Une méthode privée accessible seulement dans sa classe", "Une fonction exécutée immédiatement après sa définition"],
     "bonneReponse": 0,
     "explication": "Une fermeture est une fonction qui « se souvient » des variables de l'environnement où elle a été créée, même après que cet environnement a cessé d'exister. C'est la base de l'encapsulation en JavaScript."
   },
@@ -30,7 +30,7 @@
   {
     "id": "js-e5",
     "enonce": "Quelle est la différence entre `null` et `undefined` ?",
-    "choix": ["`undefined` est une valeur jamais assignée, `null` une absence volontaire", "ils sont strictement identiques", "`null` est un nombre et `undefined` un objet", "`undefined` ne peut pas être comparé"],
+    "choix": ["`undefined` est une valeur jamais assignée, `null` une absence volontaire", "Ils sont strictement identiques et interchangeables en toute situation", "`null` est de type nombre alors qu'`undefined` est un objet", "`undefined` ne peut être comparé à aucune autre valeur du langage"],
     "bonneReponse": 0,
     "explication": "`undefined` signifie qu'aucune valeur n'a été attribuée (variable déclarée non initialisée). `null` est une valeur assignée délibérément pour signaler « vide ». `null == undefined` vaut `true`, mais `null === undefined` vaut `false`."
   },
@@ -44,7 +44,7 @@
   {
     "id": "js-e7",
     "enonce": "Que garantit l'activation du mode strict (`\"use strict\"`) ?",
-    "choix": ["Il interdit certaines syntaxes risquées et transforme des erreurs silencieuses en exceptions", "Il accélère l'exécution d'environ 50 %", "Il active le typage statique des variables", "Il empêche l'usage des fonctions fléchées"],
+    "choix": ["Il interdit des syntaxes risquées et transforme des erreurs en exceptions", "Il accélère l'exécution du code d'environ cinquante pour cent", "Il active le typage statique de toutes les variables déclarées", "Il interdit purement et simplement les fonctions fléchées"],
     "bonneReponse": 0,
     "explication": "Le mode strict interdit par exemple l'usage d'une variable non déclarée et fait échouer des affectations qui échouaient silencieusement. Les modules ES et les classes sont en mode strict d'office."
   },
@@ -58,7 +58,7 @@
   {
     "id": "js-e9",
     "enonce": "Que désigne le terme « event loop » (boucle d'événements) ?",
-    "choix": ["Le mécanisme qui orchestre l'exécution du code asynchrone sur un seul thread", "Le ramasse-miettes qui libère la mémoire", "Le compilateur à la volée (JIT)", "La boucle de rendu graphique du navigateur"],
+    "choix": ["Le mécanisme qui orchestre le code asynchrone sur un seul thread", "Le ramasse-miettes chargé de libérer la mémoire inutilisée", "Le compilateur à la volée qui optimise le code exécuté souvent", "La boucle de rendu graphique propre au moteur du navigateur"],
     "bonneReponse": 0,
     "explication": "JavaScript exécute le code sur un seul fil. La boucle d'événements retire les tâches de leurs files (callbacks, promesses) et les exécute une fois la pile d'appels vide, donnant l'illusion du parallélisme."
   },

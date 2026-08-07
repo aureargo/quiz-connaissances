@@ -2,7 +2,7 @@
   {
     "id": "algorithmes-f1",
     "enonce": "Qu'est-ce qu'un algorithme ?",
-    "choix": ["Un composant électronique", "Une suite finie d'instructions pour résoudre un problème", "Un langage de programmation", "Un type de base de données"],
+    "choix": ["Un composant électronique qui équipe les ordinateurs", "Une suite finie d'instructions pour résoudre un problème", "Un langage de programmation destiné aux calculs", "Un type de base de données utilisé par les serveurs"],
     "bonneReponse": 1,
     "explication": "Un algorithme est une suite ordonnée et finie d'étapes qui transforme des données d'entrée en un résultat. Une recette de cuisine en est une analogie courante."
   },
@@ -30,7 +30,7 @@
   {
     "id": "algorithmes-f5",
     "enonce": "Que fait un algorithme de tri ?",
-    "choix": ["Il supprime les doublons", "Il ordonne les éléments selon un critère", "Il chiffre les données", "Il compresse un fichier"],
+    "choix": ["Il supprime les doublons d'une collection", "Il ordonne les éléments selon un critère", "Il chiffre les données avant leur envoi", "Il compresse un fichier volumineux"],
     "bonneReponse": 1,
     "explication": "Un algorithme de tri réarrange les éléments d'une collection dans un ordre défini (croissant, alphabétique…). Le tri à bulles et le tri rapide en sont des exemples."
   },
@@ -44,7 +44,7 @@
   {
     "id": "algorithmes-f7",
     "enonce": "Qu'est-ce qu'une liste chaînée (linked list) ?",
-    "choix": ["Une suite d'éléments reliés chacun au suivant", "Un tableau de taille fixe", "Un type de boucle", "Un dossier de fichiers"],
+    "choix": ["Une suite d'éléments reliés chacun au suivant", "Un tableau de taille fixe définie à l'avance", "Une boucle qui répète un bloc d'instructions", "Un dossier contenant des fichiers ordonnés"],
     "bonneReponse": 0,
     "explication": "Dans une liste chaînée, chaque élément (nœud) contient une valeur et un lien vers le suivant. Insérer ou retirer est facile, mais l'accès direct par indice est impossible."
   },

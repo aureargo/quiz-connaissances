@@ -58,7 +58,7 @@
   {
     "id": "kubernetes-e9",
     "enonce": "Quel est le rôle du `kube-proxy` présent sur chaque node ?",
-    "choix": ["Mettre en cache les images de conteneurs", "Programmer les règles réseau qui routent le trafic des Services vers les pods", "Planifier les pods sur les nodes", "Conserver l'état global du cluster"],
+    "choix": ["Mettre en cache localement les images de conteneurs du node", "Programmer les règles réseau qui routent le trafic vers les pods", "Planifier le placement des pods sur les différents nodes", "Conserver l'état global du cluster de manière persistante"],
     "bonneReponse": 1,
     "explication": "`kube-proxy` installe les règles (iptables ou IPVS) qui redirigent l'IP virtuelle d'un Service vers l'un des pods cibles. C'est lui qui rend l'IP de Service fonctionnelle au niveau réseau."
   },

@@ -44,7 +44,7 @@
   {
     "id": "docker-m7",
     "enonce": "Que représente une « couche » (layer) dans une image Docker ?",
-    "choix": ["Un conteneur mis en pause", "Le résultat d'une instruction du Dockerfile, mis en cache", "Une copie de sauvegarde de l'image", "Un réseau virtuel entre conteneurs"],
+    "choix": ["Un conteneur mis en pause et sauvegardé sur le disque", "Le résultat d'une instruction du Dockerfile, mis en cache", "Une copie de sauvegarde complète de l'image d'origine", "Un réseau virtuel reliant plusieurs conteneurs entre eux"],
     "bonneReponse": 1,
     "explication": "Chaque instruction (`FROM`, `RUN`, `COPY`…) crée une couche empilée et mise en cache. Si une couche ne change pas, Docker la réutilise, ce qui accélère les builds suivants."
   },

@@ -2,7 +2,7 @@
   {
     "id": "architecture-m1",
     "enonce": "Que caractérise une architecture en microservices ?",
-    "choix": ["Un unique programme contenant tout", "Un découpage en petits services indépendants et déployables séparément", "L'absence totale de base de données", "Du code écrit uniquement en assembleur"],
+    "choix": ["Un unique programme contenant toutes les fonctionnalités de l'application", "Un découpage en petits services indépendants et déployables séparément", "Une base de données unique partagée par toutes les équipes du projet", "Un code écrit en assembleur pour maximiser les performances brutes"],
     "bonneReponse": 1,
     "explication": "Les microservices répartissent l'application en services autonomes, chacun responsable d'un domaine et déployable seul. Cela améliore l'évolutivité au prix d'une complexité réseau accrue."
   },

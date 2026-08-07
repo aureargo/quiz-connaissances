@@ -9,21 +9,21 @@
   {
     "id": "html-e2",
     "enonce": "À quoi sert l'élément `<template>` ?",
-    "choix": ["À créer un gabarit de page côté serveur", "À définir un thème CSS", "À déclarer un fragment inerte, non rendu, cloné ensuite en JavaScript", "À importer un autre fichier HTML"],
+    "choix": ["À créer un gabarit de page assemblé par le serveur avant envoi", "À définir un thème CSS appliqué à l'ensemble de la page", "À déclarer un fragment inerte, non rendu, cloné ensuite en JavaScript", "À importer automatiquement le contenu d'un autre fichier HTML"],
     "bonneReponse": 2,
     "explication": "Le contenu d'un `<template>` n'est ni affiché ni exécuté tant qu'on ne le clone pas via JavaScript (`content.cloneNode`). Idéal pour répéter une structure dynamiquement."
   },
   {
     "id": "html-e3",
     "enonce": "Que permet l'attribut `loading=\"lazy\"` sur une `<img>` ?",
-    "choix": ["Compresser l'image automatiquement", "Différer le chargement de l'image jusqu'à ce qu'elle approche de la zone visible", "Charger l'image en priorité absolue", "Afficher une version floue en attendant"],
+    "choix": ["Compresser l'image automatiquement avant de l'envoyer au navigateur", "Différer le chargement de l'image jusqu'à ce qu'elle approche de l'écran", "Charger l'image en priorité absolue, avant tout le reste de la page", "Afficher une version floue de l'image pendant son téléchargement"],
     "bonneReponse": 1,
     "explication": "Le chargement paresseux (« lazy loading ») retarde le téléchargement des images hors écran jusqu'à ce que l'utilisateur s'en approche. Cela accélère le chargement initial de la page."
   },
   {
     "id": "html-e4",
     "enonce": "À quoi servent les attributs personnalisés `data-*` (ex. `data-id`) ?",
-    "choix": ["Stocker des données sur mesure, lisibles en JavaScript via `dataset`", "Importer des données depuis un serveur", "Valider automatiquement un formulaire", "Déclarer une feuille de style"],
+    "choix": ["Stocker des données sur mesure, lisibles en JavaScript", "Importer des données depuis un serveur distant", "Valider automatiquement les champs d'un formulaire", "Déclarer une feuille de style propre à l'élément"],
     "bonneReponse": 0,
     "explication": "Les attributs `data-*` attachent des informations arbitraires à un élément sans casser le HTML valide. En JS, on les lit via `element.dataset.id`."
   },
@@ -58,14 +58,14 @@
   {
     "id": "html-e9",
     "enonce": "À quoi sert l'élément `<picture>` ?",
-    "choix": ["À recadrer une image", "À proposer plusieurs sources d'image selon le contexte (taille d'écran, format)", "À créer une galerie défilante", "À afficher une image en plein écran"],
+    "choix": ["À recadrer automatiquement une image dans la page", "À proposer plusieurs sources d'image selon le contexte", "À créer une galerie d'images qui défile toute seule", "À afficher une image en plein écran lors d'un clic"],
     "bonneReponse": 1,
     "explication": "`<picture>` contient plusieurs `<source>` et un `<img>` de repli. Le navigateur choisit la meilleure image selon l'écran ou les formats supportés (WebP, AVIF…)."
   },
   {
     "id": "html-e10",
     "enonce": "Pourquoi ajouter `rel=\"noopener\"` à un lien ouvert avec `target=\"_blank\"` ?",
-    "choix": ["Pour ouvrir le lien plus rapidement", "Pour empêcher la page ouverte d'accéder à `window.opener` (sécurité)", "Pour mémoriser le lien dans l'historique", "Pour précharger la page de destination"],
+    "choix": ["Pour que le lien s'ouvre nettement plus rapidement", "Pour empêcher la page ouverte d'accéder à `window.opener`", "Pour mémoriser le lien dans l'historique du navigateur", "Pour précharger la page de destination en arrière-plan"],
     "bonneReponse": 1,
     "explication": "Sans `noopener`, la page cible peut manipuler la page d'origine via `window.opener` (risque de « tabnabbing »). Les navigateurs récents l'appliquent souvent par défaut, mais l'expliciter reste prudent."
   }

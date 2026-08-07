@@ -23,7 +23,7 @@
   {
     "id": "cpu-e4",
     "enonce": "À quoi sert la « prédiction de branchement » (branch prediction) ?",
-    "choix": ["deviner l'issue d'un saut conditionnel pour garder le pipeline rempli", "choisir le cœur le moins chargé", "anticiper la panne d'un ventilateur", "estimer la durée de vie de la puce"],
+    "choix": ["deviner l'issue d'un saut conditionnel pour garder le pipeline rempli", "répartir les tâches sur le cœur le moins chargé du processeur", "anticiper la panne d'un ventilateur avant que la puce ne chauffe", "estimer la durée de vie restante de la puce à partir de son usure"],
     "bonneReponse": 0,
     "explication": "Face à un « si… alors… », le CPU parie sur la branche la plus probable et continue sans attendre. Une mauvaise prédiction oblige à vider le pipeline, ce qui coûte des cycles."
   },
@@ -65,7 +65,7 @@
   {
     "id": "cpu-e10",
     "enonce": "Qu'appelle-t-on un processeur « superscalaire » ?",
-    "choix": ["un CPU capable d'exécuter plusieurs instructions par cycle d'horloge", "un CPU cadencé au-delà de cinq gigahertz", "un CPU dépourvu de mémoire cache", "un CPU doté d'un seul cœur très puissant"],
+    "choix": ["un CPU capable d'exécuter plusieurs instructions par cycle d'horloge", "un CPU cadencé au-delà de cinq gigahertz en fonctionnement normal", "un CPU dépourvu de mémoire cache, qui lit directement la RAM", "un CPU doté d'un seul cœur, mais bien plus puissant que la moyenne"],
     "bonneReponse": 0,
     "explication": "Un processeur superscalaire possède plusieurs unités d'exécution et peut lancer plusieurs instructions dans le même cycle d'horloge, à condition qu'elles soient indépendantes."
   }

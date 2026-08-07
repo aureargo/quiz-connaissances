@@ -9,7 +9,7 @@
   {
     "id": "python-e2",
     "enonce": "À quoi sert la syntaxe `@decorateur` placée au-dessus d'une fonction ?",
-    "choix": ["À l'annoter pour la documentation", "À envelopper la fonction pour modifier son comportement", "À déclarer une méthode privée", "À forcer son type de retour"],
+    "choix": ["À l'annoter en vue de la documentation générée", "À envelopper la fonction pour modifier son comportement", "À déclarer une méthode privée à l'intérieur d'une classe", "À forcer le type de la valeur retournée par la fonction"],
     "bonneReponse": 1,
     "explication": "Un décorateur est une fonction qui en reçoit une autre et renvoie une version enrichie. `@deco` au-dessus de `f` équivaut à `f = deco(f)`."
   },

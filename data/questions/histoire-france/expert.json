@@ -57,9 +57,9 @@
   },
   {
     "id": "hf-e9",
-    "enonce": "Quelle grande loi française de 1905 a instauré la séparation des Églises et de l'État ?",
-    "choix": ["la loi de séparation des Églises et de l'État", "la loi Jules Ferry", "la loi Le Chapelier", "la loi Veil"],
-    "bonneReponse": 0,
+    "enonce": "Quelle loi française de 1905 a fondé la laïcité de l'État ?",
+    "choix": ["la loi Jules Ferry sur l'école gratuite", "la loi de séparation des Églises et de l'État", "la loi Le Chapelier sur les corporations", "la loi Waldeck-Rousseau sur les associations"],
+    "bonneReponse": 1,
     "explication": "La loi du 9 décembre 1905 fonde la laïcité française : l'État ne reconnaît ni ne salarie aucun culte, tout en garantissant la liberté de conscience."
   },
   {

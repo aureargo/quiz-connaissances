@@ -2,7 +2,7 @@
   {
     "id": "kubernetes-m1",
     "enonce": "À quoi sert un objet `Namespace` ?",
-    "choix": ["À isoler logiquement des ressources au sein d'un même cluster", "À donner une adresse IP fixe à un pod", "À stocker des données persistantes", "À chiffrer le trafic entre les pods"],
+    "choix": ["À isoler logiquement des ressources au sein d'un même cluster", "À attribuer une adresse IP fixe et permanente à un pod", "À stocker des données persistantes hors des conteneurs", "À chiffrer le trafic échangé entre les pods du cluster"],
     "bonneReponse": 0,
     "explication": "Un `Namespace` partitionne le cluster en environnements virtuels (ex. `dev`, `prod`). Cela évite les collisions de noms et permet d'appliquer des quotas et des droits séparés."
   },
@@ -58,7 +58,7 @@
   {
     "id": "kubernetes-m9",
     "enonce": "Que vérifie une « liveness probe » sur un conteneur ?",
-    "choix": ["S'il est prêt à recevoir du trafic", "S'il est toujours vivant, faute de quoi Kubernetes le redémarre", "Sa consommation de mémoire", "La validité de son image"],
+    "choix": ["S'il est prêt à recevoir du trafic venant des utilisateurs", "S'il est toujours vivant, faute de quoi Kubernetes le redémarre", "Sa consommation de mémoire tout au long de son exécution", "La validité de l'image à partir de laquelle il est lancé"],
     "bonneReponse": 1,
     "explication": "La `liveness probe` détecte un conteneur bloqué : si la sonde échoue, Kubernetes le redémarre. La `readiness probe`, elle, décide quand l'envoyer dans la rotation du Service."
   },

@@ -37,7 +37,7 @@
   {
     "id": "architecture-e6",
     "enonce": "À quoi sert un « disjoncteur » (circuit breaker) dans un système distribué ?",
-    "choix": ["À chiffrer les communications réseau", "À couper les appels vers un service défaillant pour éviter l'effondrement", "À équilibrer la consommation électrique", "À accélérer la compilation du projet"],
+    "choix": ["À chiffrer les communications échangées entre les différents services", "À couper les appels vers un service défaillant pour éviter l'effondrement", "À répartir la consommation électrique des machines du cluster", "À accélérer la compilation du projet avant chaque déploiement"],
     "bonneReponse": 1,
     "explication": "Le circuit breaker surveille les appels vers un service : après trop d'échecs, il « s'ouvre » et rejette les appels un moment. Cela empêche qu'une panne ne se propage en cascade."
   },

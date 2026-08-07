@@ -37,7 +37,7 @@
   {
     "id": "c-m6",
     "enonce": "À quoi sert le mot-clé `const` ?",
-    "choix": ["À accélérer le code", "À empêcher la modification d'une variable", "À allouer sur le tas", "À définir une macro"],
+    "choix": ["À accélérer l'exécution du code compilé", "À empêcher la modification d'une variable", "À allouer la variable directement sur le tas", "À définir une macro de préprocesseur"],
     "bonneReponse": 1,
     "explication": "`const int max = 100;` interdit toute réaffectation : le compilateur signale une erreur si on tente de modifier `max`. Cela documente l'intention et évite des bugs."
   },

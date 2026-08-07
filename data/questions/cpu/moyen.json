@@ -16,7 +16,7 @@
   {
     "id": "cpu-m3",
     "enonce": "Qu'est-ce que le « pipeline » d'un processeur ?",
-    "choix": ["traiter plusieurs instructions en parallèle à des étapes différentes", "relier le CPU à la carte graphique", "stocker les résultats sur le disque", "augmenter la tension d'alimentation"],
+    "choix": ["traiter plusieurs instructions en parallèle à des étapes différentes", "relier le processeur à la carte graphique par un bus à haut débit", "stocker les résultats intermédiaires directement sur le disque", "augmenter la tension d'alimentation pour gagner en fréquence"],
     "bonneReponse": 0,
     "explication": "Le pipeline découpe l'exécution en étapes : pendant qu'une instruction est exécutée, la suivante est décodée et une autre chargée. Cela augmente le débit, comme une chaîne de montage."
   },

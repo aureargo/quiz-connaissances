@@ -9,7 +9,7 @@
   {
     "id": "kotlin-m2",
     "enonce": "Que fait l'opérateur Elvis `?:` ?",
-    "choix": ["il fournit une valeur de repli quand l'expression de gauche est null", "il compare deux objets pour l'égalité", "il concatène deux chaînes", "il teste si une variable est mutable"],
+    "choix": ["il fournit une valeur de repli si la partie gauche vaut null", "il compare deux objets afin de vérifier leur égalité stricte", "il concatène deux chaînes de caractères en une seule", "il teste si une variable déclarée est mutable ou non"],
     "bonneReponse": 0,
     "explication": "Dans `val n = texte?.length ?: 0`, si la partie gauche vaut null, c'est la valeur de droite (`0`) qui est retenue. Son nom vient de la ressemblance avec la houppette d'Elvis : `?:`."
   },
@@ -23,7 +23,7 @@
   {
     "id": "kotlin-m4",
     "enonce": "Que fait l'appel sécurisé `?.` (safe call) ?",
-    "choix": ["il accède au membre seulement si l'objet n'est pas null, sinon renvoie null", "il lève une exception si l'objet est null", "il convertit l'objet en chaîne", "il verrouille l'objet contre les modifications"],
+    "choix": ["il accède au membre si l'objet n'est pas null, sinon renvoie null", "il lève immédiatement une exception lorsque l'objet vaut null", "il convertit l'objet en une chaîne de caractères lisible", "il verrouille l'objet contre toute modification ultérieure"],
     "bonneReponse": 0,
     "explication": "`utilisateur?.nom` renvoie le nom si `utilisateur` existe, et `null` sinon, sans plantage. C'est l'alternative sûre au point classique sur une référence nullable."
   },
@@ -44,7 +44,7 @@
   {
     "id": "kotlin-m7",
     "enonce": "À quoi sert l'expression `when` en Kotlin ?",
-    "choix": ["à déclarer une boucle conditionnelle", "à choisir un comportement selon une valeur, comme un switch enrichi", "à gérer les exceptions", "à planifier une tâche dans le temps"],
+    "choix": ["à déclarer une boucle conditionnelle sur une collection", "à choisir un comportement selon une valeur, tel un switch", "à gérer les exceptions levées à l'intérieur d'un bloc", "à planifier l'exécution différée d'une tâche donnée"],
     "bonneReponse": 1,
     "explication": "`when` remplace le `switch` mais accepte des plages, des conditions, des types et peut renvoyer une valeur. Utilisé comme expression, le compilateur peut exiger qu'il soit exhaustif."
   },

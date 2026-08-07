@@ -16,7 +16,7 @@
   {
     "id": "ts-m3",
     "enonce": "Quelle différence majeure entre les types `unknown` et `any` ?",
-    "choix": ["`unknown` impose une vérification avant utilisation, pas `any`", "`unknown` est un simple alias de `any`", "`any` est plus sûr que `unknown`", "`unknown` n'accepte que les objets"],
+    "choix": ["`unknown` impose une vérification avant utilisation, pas `any`", "`unknown` n'est qu'un simple alias du type `any` en TypeScript", "`any` est nettement plus sûr à l'usage qu'`unknown`", "`unknown` n'accepte que des valeurs de type objet"],
     "bonneReponse": 0,
     "explication": "`unknown` accepte toute valeur mais interdit de l'utiliser tant qu'on n'a pas vérifié son type ; c'est le pendant sûr d'`any`, qui lui autorise tout sans contrôle."
   },

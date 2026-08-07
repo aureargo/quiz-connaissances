@@ -2,14 +2,14 @@
   {
     "id": "css-m1",
     "enonce": "Comment appelle-t-on le modèle décrivant contenu, padding, bordure et marge d'un élément ?",
-    "choix": ["le flux normal", "le modèle de boîte (box model)", "la cascade", "l'empilement"],
+    "choix": ["le flux de rendu", "le modèle de boîte", "la cascade des styles", "l'ordre d'empilement"],
     "bonneReponse": 1,
     "explication": "Le « modèle de boîte » décrit chaque élément comme une boîte composée du contenu, du padding, de la bordure et de la marge. C'est central pour maîtriser les dimensions."
   },
   {
     "id": "css-m2",
     "enonce": "Que fait `box-sizing: border-box` ?",
-    "choix": ["Ajoute une bordure à toutes les boîtes", "Inclut le padding et la bordure dans la largeur/hauteur déclarée", "Supprime les marges par défaut", "Centre automatiquement la boîte"],
+    "choix": ["Ajoute une bordure visible à toutes les boîtes du document", "Inclut le padding et la bordure dans la largeur/hauteur déclarée", "Supprime les marges par défaut appliquées par le navigateur", "Centre automatiquement la boîte dans son conteneur parent"],
     "bonneReponse": 1,
     "explication": "Avec `border-box`, une `width: 200px` englobe padding et bordure : l'élément ne déborde donc pas. C'est pourquoi on l'applique souvent à tout le document."
   },

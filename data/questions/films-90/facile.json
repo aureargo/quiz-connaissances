@@ -16,7 +16,7 @@
   {
     "id": "films-90-f3",
     "enonce": "Dans « Forrest Gump » (1994), quelle phrase Forrest répète-t-il à propos de la vie ?",
-    "choix": ["« La vie est belle »", "« La vie, c'est comme une boîte de chocolats »", "« Carpe diem »", "« Cours, Forrest, cours »"],
+    "choix": ["« La vie est belle et pleine de surprises »", "« La vie, c'est comme une boîte de chocolats »", "« Carpe diem : cueille le jour présent »", "« Cours, Forrest, cours, ne t'arrête pas »"],
     "bonneReponse": 1,
     "explication": "« La vie, c'est comme une boîte de chocolats : on ne sait jamais sur quoi on va tomber », une citation attribuée à sa mère."
   },

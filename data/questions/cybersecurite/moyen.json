@@ -30,7 +30,7 @@
   {
     "id": "cybersecurite-m5",
     "enonce": "Que vise une attaque par déni de service distribué (DDoS) ?",
-    "choix": ["Voler des mots de passe", "Saturer un service pour le rendre indisponible", "Chiffrer une base de données", "Falsifier un certificat"],
+    "choix": ["Voler les mots de passe des utilisateurs", "Saturer un service pour le rendre indisponible", "Chiffrer une base de données contre rançon", "Falsifier le certificat de sécurité d'un site"],
     "bonneReponse": 1,
     "explication": "Un DDoS submerge un serveur de requêtes depuis des milliers de machines (souvent un botnet) jusqu'à le rendre inaccessible. Le but est la paralysie, pas le vol de données."
   },

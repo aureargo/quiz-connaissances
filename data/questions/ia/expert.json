@@ -58,7 +58,7 @@
   {
     "id": "ia-e9",
     "enonce": "Qu'est-ce que la « descente de gradient » ?",
-    "choix": ["un algorithme d'optimisation qui minimise une fonction de coût", "une méthode de compression d'images", "un protocole de communication réseau", "une technique de chiffrement des poids"],
+    "choix": ["un algorithme d'optimisation qui minimise une fonction de coût", "une méthode de compression appliquée aux images d'un jeu", "un protocole de communication entre serveurs distants", "une technique de chiffrement des poids d'un réseau entraîné"],
     "bonneReponse": 0,
     "explication": "La descente de gradient ajuste pas à pas les paramètres dans la direction qui réduit le plus l'erreur (le gradient). C'est l'outil d'optimisation de base pour entraîner un réseau de neurones."
   },

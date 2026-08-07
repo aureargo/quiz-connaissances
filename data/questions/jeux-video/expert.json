@@ -9,7 +9,7 @@
   {
     "id": "jeux-video-e2",
     "enonce": "Quel jeu Atari est resté tristement associé au krach du jeu vidéo de 1983 ?",
-    "choix": ["Pac-Man", "E.T. the Extra-Terrestrial", "Pitfall", "Adventure"],
+    "choix": ["Pac-Man", "E.T.", "Pitfall", "Adventure"],
     "bonneReponse": 1,
     "explication": "Bâclé en quelques semaines, « E.T. » sur Atari 2600 symbolise le krach de 1983. Des cartouches invendues furent même enfouies dans un désert du Nouveau-Mexique, exhumées en 2014."
   },
