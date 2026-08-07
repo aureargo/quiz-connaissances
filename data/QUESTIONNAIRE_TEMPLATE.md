@@ -21,8 +21,9 @@ Un **niveau** = un fichier `<nom>.json` déposé dans le dossier d'un thème.
 Un fichier = un **tableau JSON** d'objets question.
 
 ```
-backend/data/
+data/                                ← à la RACINE du dépôt, hors backend/ et frontend/
   themes.json                        ← métadonnées des thèmes
+  categories.json                    ← ordre d'affichage des catégories
   questions/
     <id-du-theme>/
       <niveau>.json                  ← un fichier = un niveau (nom libre)
@@ -55,7 +56,7 @@ backend/data/
 Chacune correspond à un comportement réel du backend Go ou du frontend Angular.
 
 ### 2.1 — Emplacement et nom de fichier
-- Le fichier doit être dans `backend/data/questions/<id-du-theme>/`, et `<id-du-theme>`
+- Le fichier doit être dans `data/questions/<id-du-theme>/`, et `<id-du-theme>`
   doit correspondre exactement à un `id` présent dans `themes.json`.
 - Le **nom du niveau est libre** : `facile.json`, `debutant.json`, `histoire.json`,
   `saison-1.json`… Le backend découvre **tous** les fichiers `.json` du dossier.
@@ -175,7 +176,7 @@ Catégories existantes : `Programmation`, `Bases de données`, `Crypto & Web3`,
 
 ---
 
-## 5. Exemple complet — `backend/data/questions/python/facile.json`
+## 5. Exemple complet — `data/questions/python/facile.json`
 
 ```json
 [

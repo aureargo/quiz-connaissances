@@ -18,13 +18,34 @@ Tout le code et les commentaires sont **en français**.
 
 ## 🏗️ Architecture générale
 
-Deux applications indépendantes qui communiquent par une API REST HTTP :
+Deux applications indépendantes qui communiquent par une API REST HTTP, plus un
+dossier de **contenu** qui n'appartient à aucune des deux :
 
-- **`backend/`** — serveur **Go**. Charge les questions depuis des fichiers JSON
-  (`backend/data/`) et les expose via une API REST. Volontairement **sans état**
-  (stateless) : il ne mémorise pas la progression d'un joueur.
+- **`data/`** — le **contenu** du quiz (thèmes + questions), en JSON. C'est la
+  « base de données » du projet : elle vit **à la racine**, hors de `backend/` et
+  de `frontend/`. Voir « Pourquoi `data/` est à part ? » ci-dessous.
+- **`backend/`** — serveur **Go**. Charge les questions depuis `data/` et les
+  expose via une API REST. Volontairement **sans état** (stateless) : il ne
+  mémorise pas la progression d'un joueur.
 - **`frontend/`** — application **Angular**. Affiche l'interface et contient toute la
   **logique de session de quiz** (mélange, file des erreurs, progression).
+
+### Pourquoi `data/` est à part ?
+
+Le contenu et le code évoluent à des **rythmes différents** : ajouter 40 thèmes ne
+change pas une ligne de Go. Les garder mélangés donnait un `backend/` composé à
+95 % de JSON, et des commits « +1230 questions » qui touchaient le dossier du
+serveur sans rien y modifier.
+
+Séparés, chacun a son rôle : `backend/` est un **moteur de quiz générique** (il
+sert n'importe quel jeu de questions bien formé), `data/` est **un** jeu de
+questions, avec ses règles propres — documentées dans
+[`QUESTIONNAIRE_TEMPLATE.md`](data/QUESTIONNAIRE_TEMPLATE.md) et **vérifiées
+automatiquement** par le validateur (`go test ./internal/quiz -run TestDonnees`).
+
+> Le chemin du dossier n'est plus codé en dur : il se règle avec l'option
+> `-data <dossier>` ou la variable d'environnement `QUIZ_DATA_DIR`
+> (défaut : `../data`, puisqu'on lance le serveur depuis `backend/`).
 
 ### Pourquoi ce découpage ?
 La logique « une question ratée revient plus tard » est propre à *une partie en cours*
@@ -60,16 +81,26 @@ Le joueur traverse **trois pages**, et les données sont chargées **progressive
 
 ## 📁 Structure des fichiers
 
+### Données (`data/`, à la racine)
+```
+data/
+  themes.json                        → liste des thèmes (métadonnées)
+  categories.json                    → ordre d'affichage des catégories
+  questions/<id>/<niveau>.json       → un fichier par thème ET par niveau
+  QUESTIONNAIRE_TEMPLATE.md          → le format + les règles de contenu
+```
+
 ### Backend (Go)
 ```
 backend/
   go.mod                      → module Go + version
-  main.go                     → point d'entrée : configure et démarre le serveur
+  main.go                     → point d'entrée : options (-data, -addr) et démarrage
   internal/quiz/models.go     → types de données (Theme, Question)
   internal/quiz/store.go      → scan des niveaux au boot + lecture paresseuse (cache) des questions
+  internal/quiz/store_test.go → tests unitaires du store (données synthétiques)
+  internal/quiz/donnees_test.go → VALIDATEUR : vérifie le vrai contenu de data/
   internal/api/handlers.go    → handlers HTTP, routeur, middleware CORS
-  data/themes.json            → liste des thèmes (métadonnées)
-  data/questions/<id>/<niveau>.json → un fichier par thème ET par niveau
+  internal/api/handlers_test.go → tests des routes HTTP
 ```
 
 ### Frontend (Angular)
@@ -128,9 +159,11 @@ le frontend répond. Un lanceur par famille d'OS :
 
 ```bash
 # Backend
-cd backend && go run .                  # lancer le serveur de dev
+cd backend && go run .                  # lancer le serveur de dev (data = ../data)
+cd backend && go run . -data ../data -addr :8080   # idem, options explicites
 cd backend && go build -o quiz-server.exe .   # compiler un binaire
 cd backend && go vet ./...              # analyse statique
+cd backend && go test ./...             # tests unitaires + VALIDATION du contenu
 
 # Frontend
 cd frontend && npm install              # installer les dépendances (1re fois)
@@ -139,24 +172,33 @@ cd frontend && npm run build            # build de production
 cd frontend && npm test -- --watch=false  # lancer les tests unitaires une fois
 ```
 
+> 🔧 **Options du backend** : `-data <dossier>` (défaut `../data`) et `-addr <hôte:port>`
+> (défaut `:8080`). Équivalents en variables d'environnement : `QUIZ_DATA_DIR` et
+> `QUIZ_ADDR`. Priorité : option de ligne de commande > variable d'env > défaut.
+> Utile pour lancer le serveur depuis un autre répertoire, ou pour tester un jeu
+> de données alternatif sans toucher au code.
+
 > ⚠️ Il faut **lancer les DEUX** serveurs (Go puis Angular) pour utiliser l'app.
 
 ## ➕ Ajouter un questionnaire
 
-> 📄 **Référence complète** : [`backend/data/QUESTIONNAIRE_TEMPLATE.md`](backend/data/QUESTIONNAIRE_TEMPLATE.md)
+> 📄 **Référence complète** : [`data/QUESTIONNAIRE_TEMPLATE.md`](data/QUESTIONNAIRE_TEMPLATE.md)
 > — format JSON, convention des IDs, règle anti-déduction, checklist. **Lire ce
 > fichier avant de générer ou modifier des questions.**
 
 Étapes résumées :
 
-1. Créer un dossier `backend/data/questions/<id>/` puis y déposer **un fichier `.json`
+1. Créer un dossier `data/questions/<id>/` puis y déposer **un fichier `.json`
    par niveau**. Le **nom du fichier = le nom du niveau**, et il est **libre** :
    `facile.json`, `debutant.json`, `histoire.json`… (le nom `tous` est réservé).
    Le **nombre de niveaux est libre** lui aussi. Format d'un fichier : tableau d'objets
    `{ id, enonce, choix, bonneReponse, explication }`.
-2. Ajouter l'entrée correspondante dans `backend/data/themes.json`
-   (`id`, `nom`, `emoji`, `categorie`, `description`).
-3. Redémarrer le backend. Aucune recompilation de code nécessaire.
+2. Ajouter l'entrée correspondante dans `data/themes.json`
+   (`id`, `nom`, `emoji`, `categorie`, `description`). Si la `categorie` est
+   nouvelle, l'ajouter aussi à `data/categories.json` (qui fixe l'ordre d'affichage).
+3. **Vérifier** : `cd backend && go test ./internal/quiz -run TestDonnees`. Le
+   validateur contrôle les règles dures ET les règles de qualité (§3 du template).
+4. Redémarrer le backend. Aucune recompilation de code nécessaire.
 
 > ⚠️ Chaque thème listé dans `themes.json` DOIT avoir au moins un fichier de
 > questions (`data/questions/<id>/<niveau>.json`), sinon le backend refuse de

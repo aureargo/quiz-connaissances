@@ -19,14 +19,20 @@ Projet pédagogique pour apprendre **Go** (backend) et **Angular** (frontend).
 
 ```
 quiz-connaissances/
+├── data/         → LE CONTENU : thèmes et questions en JSON (la « base de données »)
 ├── backend/      → API REST en Go (sert les thèmes et les questions)
 ├── frontend/     → Application Angular (interface + logique de quiz)
 └── CLAUDE.md     → Documentation technique détaillée
 ```
 
-Le **backend Go** charge les questions depuis des fichiers JSON et les expose via une
-API REST. Le **frontend Angular** gère la session de quiz (mélange, file d'attente
-des erreurs, progression).
+Le **backend Go** charge les questions depuis `data/` et les expose via une API REST.
+Le **frontend Angular** gère la session de quiz (mélange, file d'attente des erreurs,
+progression).
+
+Le dossier `data/` est **volontairement à part** : le contenu évolue à un rythme
+différent du code, et le backend est un moteur générique qui sait servir n'importe
+quel jeu de questions bien formé. Voir [`data/QUESTIONNAIRE_TEMPLATE.md`](data/QUESTIONNAIRE_TEMPLATE.md)
+pour en ajouter.
 
 ## 🚀 Démarrage rapide
 
@@ -34,8 +40,12 @@ des erreurs, progression).
 ```bash
 cd backend
 go run .
-# → écoute sur http://localhost:8080
+# → écoute sur http://localhost:8080, données lues dans ../data
 ```
+
+> Options : `-data <dossier>` et `-addr <hôte:port>` (ou les variables
+> d'environnement `QUIZ_DATA_DIR` / `QUIZ_ADDR`) pour changer le dossier de
+> données ou le port sans toucher au code.
 
 ### Frontend (Angular)
 ```bash
