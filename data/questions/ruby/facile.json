@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ruby-f1",
+    "enonce": "Qui a créé le langage Ruby ?",
+    "choix": ["Guido van Rossum", "James Gosling", "Rasmus Lerdorf", "Yukihiro Matsumoto"],
+    "bonneReponse": 3,
+    "explication": "« Matz » a publié Ruby au Japon en 1995, avec un objectif revendiqué : rendre les programmeurs heureux. Guido van Rossum a créé Python, Rasmus Lerdorf PHP et James Gosling Java."
+  },
+  {
+    "id": "ruby-f2",
+    "enonce": "Quelles sont les seules valeurs considérées comme fausses en Ruby ?",
+    "choix": ["nil et false", "false, 0 et \"\"", "uniquement false", "nil, false et 0"],
+    "bonneReponse": 0,
+    "explication": "Tout le reste est « vrai », y compris `0` et la chaîne vide `\"\"`. C'est un piège classique pour qui vient de JavaScript, de Python ou de PHP."
+  },
+  {
+    "id": "ruby-f3",
+    "enonce": "Comment écrit-on un symbole en Ruby ?",
+    "choix": ["#nom", "$nom", ":nom", "@nom"],
+    "bonneReponse": 2,
+    "explication": "Un symbole est un identifiant immuable et unique : deux `:nom` désignent le même objet en mémoire. On l'utilise beaucoup comme clé de hash. `@nom` est une variable d'instance, `$nom` une variable globale."
+  },
+  {
+    "id": "ruby-f4",
+    "enonce": "Quel mot-clé ferme un bloc `if`, `def` ou `class` en Ruby ?",
+    "choix": ["done", "end", "}", "fi"],
+    "bonneReponse": 1,
+    "explication": "Ruby n'utilise ni accolades ni indentation significative pour ces structures : chacune se termine par `end`. `fi` et `done` ferment les `if` et les boucles en Bash."
+  },
+  {
+    "id": "ruby-f5",
+    "enonce": "Quel framework web a rendu Ruby célèbre ?",
+    "choix": ["Express", "Laravel", "Ruby on Rails", "Django"],
+    "bonneReponse": 2,
+    "explication": "Rails a été extrait de Basecamp par David Heinemeier Hansson en 2004. Ses principes « convention plutôt que configuration » et « ne pas se répéter » (DRY) ont inspiré de nombreux frameworks. GitHub et Shopify sont bâtis dessus."
+  },
+  {
+    "id": "ruby-f6",
+    "enonce": "Que désigne le signe `@` devant un nom de variable en Ruby ?",
+    "choix": ["une variable d'instance", "une variable globale", "une constante de classe", "un paramètre optionnel"],
+    "bonneReponse": 0,
+    "explication": "`@nom` appartient à l'objet courant. Les autres préfixes ont aussi un sens : `@@nom` pour une variable de classe, `$nom` pour une globale, et une majuscule initiale pour une constante."
+  },
+  {
+    "id": "ruby-f7",
+    "enonce": "Par convention, que signale un nom de méthode terminé par `?`, comme `empty?` ?",
+    "choix": ["qu'elle modifie l'objet courant", "qu'elle est privée à la classe", "qu'elle peut lever une exception", "qu'elle renvoie un booléen"],
+    "bonneReponse": 3,
+    "explication": "`[].empty?` ou `4.even?` répondent par vrai ou faux. Le point d'exclamation signale à l'inverse une version « dangereuse », souvent qui modifie l'objet en place : `nom.upcase!`."
+  },
+  {
+    "id": "ruby-f8",
+    "enonce": "Que fait `3.times { puts \"Salut\" }` ?",
+    "choix": ["Il attend trois secondes avant d'afficher", "Il affiche « Salut » trois fois", "Il répète « Salut » trois fois dans une chaîne", "Il crée un tableau de trois « Salut »"],
+    "bonneReponse": 1,
+    "explication": "En Ruby, tout est objet, même un entier : `times` est une méthode de la classe `Integer` qui exécute le bloc entre accolades autant de fois que sa valeur."
+  },
+  {
+    "id": "ruby-f9",
+    "enonce": "Comment s'appelle le système de paquets de Ruby ?",
+    "choix": ["Cargo", "RubyGems", "Composer", "NuGet"],
+    "bonneReponse": 1,
+    "explication": "Une bibliothèque Ruby s'appelle une « gem » et s'installe avec `gem install`. Dans un projet, Bundler lit le `Gemfile` pour installer les bonnes versions. Composer est l'équivalent PHP, Cargo Rust, NuGet .NET."
+  },
+  {
+    "id": "ruby-f10",
+    "enonce": "Quel est le nom de la console interactive fournie avec Ruby ?",
+    "choix": ["irb", "rpl", "rubysh", "rsh"],
+    "bonneReponse": 0,
+    "explication": "`irb` (Interactive Ruby) permet de tester du code ligne par ligne. Dans un projet Rails, `rails console` ouvre la même console avec toute l'application chargée."
+  }
+]

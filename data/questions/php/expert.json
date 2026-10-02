@@ -1,0 +1,72 @@
+[
+  {
+    "id": "php-e1",
+    "enonce": "Que fait la promotion de propriétés dans `public function __construct(private int $id) {}` ?",
+    "choix": ["Elle déclare et remplit la propriété `$id` d'un coup", "Elle génère un accesseur public `getId()`", "Elle rend le constructeur privé, appelable seulement en interne", "Elle convertit automatiquement `$id` en entier"],
+    "bonneReponse": 0,
+    "explication": "Introduite en PHP 8, la promotion de propriétés évite de répéter trois fois le même nom (déclaration, paramètre, affectation `$this->id = $id`). La visibilité placée devant le paramètre suffit."
+  },
+  {
+    "id": "php-e2",
+    "enonce": "Quelle est la particularité d'une propriété `readonly` (PHP 8.1) ?",
+    "choix": ["Elle n'accepte que des types scalaires, jamais d'objet", "Elle n'est lisible que depuis les classes filles", "Elle est recalculée automatiquement à chaque lecture", "Elle n'est affectable qu'une fois, depuis la classe"],
+    "bonneReponse": 3,
+    "explication": "Une seconde affectation lève une `Error`. Une propriété `readonly` doit être typée. PHP 8.2 a ajouté les classes `readonly`, dont toutes les propriétés le sont : idéal pour des objets-valeurs immuables."
+  },
+  {
+    "id": "php-e3",
+    "enonce": "Qu'est-ce qu'une « backed enum » en PHP 8.1 ?",
+    "choix": ["Une enum enregistrée automatiquement en base de données", "Une enum dont les cas changent à l'exécution", "Une enum qui hérite de tous les cas d'une autre enum", "Une enum dont chaque cas porte une valeur scalaire"],
+    "bonneReponse": 3,
+    "explication": "`enum Statut: string { case Actif = 'actif'; }` : chaque cas a une valeur `string` ou `int`. `Statut::from('actif')` retrouve le cas (exception si inconnu), `tryFrom()` renvoie `null`. Une enum « pure » n'a pas de valeur associée."
+  },
+  {
+    "id": "php-e4",
+    "enonce": "Comment PHP transmet-il un tableau passé à une fonction sans `&` ?",
+    "choix": ["par référence, exactement comme les objets", "par valeur, copié seulement en cas de modification", "par pointeur explicite vers la mémoire", "par valeur, avec une copie immédiate et complète"],
+    "bonneReponse": 1,
+    "explication": "C'est le « copy-on-write » : la copie n'est réellement faite que si la fonction modifie le tableau. Les objets, eux, sont manipulés via un identifiant : modifier l'objet dans la fonction se voit à l'extérieur."
+  },
+  {
+    "id": "php-e5",
+    "enonce": "Qu'apporte `static::` par rapport à `self::` dans une méthode ?",
+    "choix": ["Il désigne la classe réellement appelée, à l'exécution", "Il désigne toujours la classe parente de la classe courante", "Il n'accède qu'aux propriétés déclarées statiques", "Il désigne toujours la classe où le code est écrit"],
+    "bonneReponse": 0,
+    "explication": "C'est le « late static binding » (PHP 5.3). `self::` est figé sur la classe où la méthode est définie ; `static::` suit la classe utilisée à l'appel. Indispensable pour une fabrique `static::create()` héritée par des sous-classes."
+  },
+  {
+    "id": "php-e6",
+    "enonce": "Que sont les Fibers introduites en PHP 8.1 ?",
+    "choix": ["Des processus enfants lancés par PHP-FPM", "Des tâches planifiées exécutées régulièrement par cron", "Des fonctions qu'on peut suspendre puis reprendre", "Des threads système exécutés en parallèle sur plusieurs cœurs"],
+    "bonneReponse": 2,
+    "explication": "Une Fiber peut se suspendre (`Fiber::suspend()`) puis être reprise plus tard en conservant sa pile d'appels. Il n'y a pas de parallélisme : une seule s'exécute à la fois. Elles servent de socle à des bibliothèques asynchrones comme AMPHP."
+  },
+  {
+    "id": "php-e7",
+    "enonce": "Qu'est-ce qu'OPcache ?",
+    "choix": ["Un cache des sessions utilisateur sur disque", "Un cache HTTP placé devant le serveur web, comme Varnish", "Un cache des résultats de requêtes SQL", "Un cache en mémoire du bytecode compilé des scripts"],
+    "bonneReponse": 3,
+    "explication": "Sans lui, chaque requête relit et recompile tous les scripts. OPcache garde les opcodes en mémoire partagée entre les processus. Le compilateur JIT de PHP 8 est d'ailleurs intégré à OPcache."
+  },
+  {
+    "id": "php-e8",
+    "enonce": "Pourquoi `array_map` et `array_filter` sont-ils cités comme exemple d'incohérence de PHP ?",
+    "choix": ["L'une renvoie un tableau, l'autre un générateur", "L'une modifie le tableau d'origine, l'autre en crée un neuf", "Elles n'existent qu'en style orienté objet", "Elles prennent tableau et callback en ordre inverse"],
+    "bonneReponse": 3,
+    "explication": "On écrit `array_map($callback, $tableau)` mais `array_filter($tableau, $callback)`. C'est l'héritage de fonctions ajoutées au fil des versions, comme le nommage irrégulier `str_replace` / `strpos`."
+  },
+  {
+    "id": "php-e9",
+    "enonce": "Que renvoie l'appel d'une fonction qui contient le mot-clé `yield` ?",
+    "choix": ["une promesse à résoudre", "un objet Generator", "la première valeur produite", "un tableau des valeurs"],
+    "bonneReponse": 1,
+    "explication": "L'appel n'exécute rien tout de suite : il renvoie un `Generator`, parcourable avec `foreach`, qui produit les valeurs à la demande. Idéal pour traiter un très gros fichier ligne par ligne sans tout charger en mémoire."
+  },
+  {
+    "id": "php-e10",
+    "enonce": "Dans le modèle classique de PHP (PHP-FPM), que devient l'état de l'application entre deux requêtes ?",
+    "choix": ["Il est perdu : chaque requête repart de zéro", "Il est sérialisé automatiquement en base", "Il est partagé entre tous les visiteurs", "Il est conservé en mémoire par le processus PHP"],
+    "bonneReponse": 0,
+    "explication": "C'est l'architecture « share-nothing » : chaque requête reconstruit ses objets et ses connexions, puis tout est libéré. Simple et robuste (une fuite mémoire ne survit pas), mais coûteux au démarrage. Des serveurs persistants comme FrankenPHP, RoadRunner ou Swoole gardent l'application chargée."
+  }
+]

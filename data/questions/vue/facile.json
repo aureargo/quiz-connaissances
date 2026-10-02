@@ -1,0 +1,72 @@
+[
+  {
+    "id": "vue-f1",
+    "enonce": "Qui a créé Vue.js ?",
+    "choix": ["Evan You", "Miško Hevery", "Rich Harris", "Dan Abramov"],
+    "bonneReponse": 0,
+    "explication": "Ancien de Google, où il utilisait AngularJS, Evan You a publié Vue en 2014 pour en garder les bonnes idées dans un outil plus léger. Dan Abramov est connu pour Redux et React, Rich Harris pour Svelte, Miško Hevery pour AngularJS."
+  },
+  {
+    "id": "vue-f2",
+    "enonce": "Quelle syntaxe affiche une variable dans un template Vue ?",
+    "choix": ["{{ message }}", "#{ message }", "<%= message %>", "${ message }"],
+    "bonneReponse": 0,
+    "explication": "Les doubles accolades, dites « moustaches », insèrent la valeur sous forme de texte échappé, ce qui protège des injections HTML. Pour insérer du HTML brut, il existe `v-html`, à manier avec prudence."
+  },
+  {
+    "id": "vue-f3",
+    "enonce": "Quelle directive n'affiche un élément que si une condition est vraie ?",
+    "choix": ["v-only", "v-cond", "v-if", "v-when"],
+    "bonneReponse": 2,
+    "explication": "`<p v-if=\"connecte\">Bienvenue</p>`, complété au besoin par `v-else-if` et `v-else`. Il existe aussi `v-show`, qui se contente de masquer l'élément."
+  },
+  {
+    "id": "vue-f4",
+    "enonce": "Quelle directive répète un élément pour chaque entrée d'une liste ?",
+    "choix": ["v-each", "v-for", "v-repeat", "v-loop"],
+    "bonneReponse": 1,
+    "explication": "`<li v-for=\"t in taches\" :key=\"t.id\">{{ t.titre }}</li>`. La `key` aide Vue à suivre chaque élément d'un rendu à l'autre. `ng-repeat` était l'équivalent dans AngularJS."
+  },
+  {
+    "id": "vue-f5",
+    "enonce": "Que signifie le raccourci `@click` dans un template ?",
+    "choix": ["v-model:click", "v-bind:click", "v-slot:click", "v-on:click"],
+    "bonneReponse": 3,
+    "explication": "`@` abrège `v-on` (écouter un événement), `:` abrège `v-bind` (lier un attribut) et `#` abrège `v-slot`. On écrit donc `<button @click=\"valider\">`."
+  },
+  {
+    "id": "vue-f6",
+    "enonce": "Que fait `v-model` sur un champ `<input>` ?",
+    "choix": ["une validation automatique du contenu saisi par l'utilisateur", "un affichage du champ en lecture seule", "une liaison bidirectionnelle entre le champ et une donnée", "une sauvegarde automatique du champ dans le navigateur"],
+    "bonneReponse": 2,
+    "explication": "La donnée remplit le champ, et chaque saisie met à jour la donnée. C'est un raccourci pour `:value` combiné à un écouteur `@input`."
+  },
+  {
+    "id": "vue-f7",
+    "enonce": "Quelle extension de fichier utilisent les composants monofichiers de Vue ?",
+    "choix": [".vx", ".vue", ".comp", ".vjs"],
+    "bonneReponse": 1,
+    "explication": "Un « Single-File Component » réunit dans un même fichier le `<template>`, le `<script>` et le `<style>` du composant. L'outil de build (Vite en général) le compile en JavaScript."
+  },
+  {
+    "id": "vue-f8",
+    "enonce": "Quelle bibliothèque de gestion d'état est officiellement recommandée pour Vue 3 ?",
+    "choix": ["NgRx", "Pinia", "MobX", "Redux"],
+    "bonneReponse": 1,
+    "explication": "Pinia a succédé à Vuex : des stores simples, bien typés avec TypeScript et intégrés aux outils de développement. Redux est surtout associé à React, NgRx à Angular."
+  },
+  {
+    "id": "vue-f9",
+    "enonce": "Quel framework basé sur Vue facilite le rendu côté serveur (SSR) ?",
+    "choix": ["Gatsby", "Remix", "Next.js", "Nuxt"],
+    "bonneReponse": 3,
+    "explication": "Nuxt est à Vue ce que Next.js est à React : routage basé sur les fichiers, rendu serveur, génération de sites statiques. Next.js, Remix et Gatsby reposent sur React."
+  },
+  {
+    "id": "vue-f10",
+    "enonce": "Que fait l'attribut `scoped` dans `<style scoped>` ?",
+    "choix": ["il applique les styles à toute l'application", "il ne charge les styles qu'au premier clic", "il convertit le CSS en objets JavaScript", "il limite les styles au composant courant"],
+    "bonneReponse": 3,
+    "explication": "Vue ajoute un attribut unique (du type `data-v-1a2b3c`) aux éléments du composant et réécrit les sélecteurs CSS pour ne cibler qu'eux. Les styles ne « fuient » pas vers le reste de la page."
+  }
+]

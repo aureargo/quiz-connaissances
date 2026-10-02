@@ -1,0 +1,72 @@
+[
+  {
+    "id": "mongodb-m1",
+    "enonce": "Que contiennent les 4 premiers octets d'un ObjectId ?",
+    "choix": ["un horodatage de création", "le numéro de la collection", "l'adresse IP du serveur", "un hachage du contenu"],
+    "bonneReponse": 0,
+    "explication": "Un ObjectId fait 12 octets : 4 pour l'horodatage en secondes, 5 de valeur aléatoire propre au processus, 3 pour un compteur. Les identifiants sont donc à peu près triés par date de création, et `getTimestamp()` permet d'en extraire la date."
+  },
+  {
+    "id": "mongodb-m2",
+    "enonce": "Quelle est la taille maximale d'un document BSON ?",
+    "choix": ["64 Mo", "16 Mo", "1 Mo", "2 Go"],
+    "bonneReponse": 1,
+    "explication": "La limite de 16 Mo empêche un document de monopoliser la mémoire et la bande passante. Pour stocker de gros fichiers, on utilise GridFS, qui les découpe en morceaux de 255 Ko répartis dans plusieurs documents."
+  },
+  {
+    "id": "mongodb-m3",
+    "enonce": "Quand vaut-il mieux référencer des données liées plutôt que les imbriquer dans le document ?",
+    "choix": ["quand la liste liée peut grossir sans limite", "quand le sous-document a peu de champs", "quand on veut éviter toute requête en plus", "quand les données sont toujours lues ensemble"],
+    "bonneReponse": 0,
+    "explication": "Imbriquer est idéal pour une relation « un à quelques-uns » lue d'un bloc (les adresses d'un client). Un tableau qui grandit sans fin (les commentaires d'un article populaire) alourdit chaque lecture et finit par buter sur la limite de 16 Mo : on stocke alors les éléments à part avec une référence."
+  },
+  {
+    "id": "mongodb-m4",
+    "enonce": "Quelle étape du pipeline d'agrégation réalise une jointure avec une autre collection ?",
+    "choix": ["$merge", "$join", "$lookup", "$unwind"],
+    "bonneReponse": 2,
+    "explication": "`$lookup` (depuis la version 3.2) effectue l'équivalent d'une jointure externe gauche et ajoute les documents trouvés dans un tableau. `$merge` écrit le résultat du pipeline dans une collection, et `$unwind` déplie un tableau."
+  },
+  {
+    "id": "mongodb-m5",
+    "enonce": "Que fait l'étape $unwind dans un pipeline d'agrégation ?",
+    "choix": ["elle annule l'étape précédente du pipeline", "elle supprime les champs vides des documents", "elle fusionne plusieurs documents en un seul", "elle produit un document par élément d'un tableau"],
+    "bonneReponse": 3,
+    "explication": "Un document `{ tags: [\"a\", \"b\"] }` devient deux documents, `{ tags: \"a\" }` et `{ tags: \"b\" }`. On l'emploie souvent juste avant un `$group` pour compter ou regrouper par élément de tableau."
+  },
+  {
+    "id": "mongodb-m6",
+    "enonce": "Dans un replica set, quel nœud accepte les écritures ?",
+    "choix": ["le nœud arbitre", "le nœud le moins chargé", "un nœud secondaire", "le nœud primaire"],
+    "bonneReponse": 3,
+    "explication": "Toutes les écritures passent par l'unique primaire, puis les secondaires les rejouent. Si le primaire tombe, les membres élisent un nouveau primaire parmi les secondaires. L'arbitre vote lors des élections mais ne stocke aucune donnée."
+  },
+  {
+    "id": "mongodb-m7",
+    "enonce": "Que permet un index TTL ?",
+    "choix": ["limiter le nombre de documents stockés", "accélérer les tris sur les champs date", "chiffrer automatiquement les dates", "supprimer les documents après un délai"],
+    "bonneReponse": 3,
+    "explication": "Un index TTL (Time To Live) porte sur un champ date : `createIndex({ creeLe: 1 }, { expireAfterSeconds: 3600 })`. Une tâche de fond supprime les documents expirés environ toutes les 60 secondes. Idéal pour les sessions ou les journaux temporaires. Limiter le nombre de documents est le rôle des collections plafonnées (capped)."
+  },
+  {
+    "id": "mongodb-m8",
+    "enonce": "Que renvoie la méthode find() ?",
+    "choix": ["un seul document", "un tableau complet", "un curseur", "un nombre de résultats"],
+    "bonneReponse": 2,
+    "explication": "`find()` renvoie un curseur qui récupère les documents par lots, au fil de la lecture : on évite ainsi de charger des millions de documents d'un coup. mongosh en affiche 20 puis attend la commande `it`. Pour un seul document, il existe `findOne()`."
+  },
+  {
+    "id": "mongodb-m9",
+    "enonce": "Dans `db.users.find({}, { nom: 1, _id: 0 })`, à quoi sert le second argument ?",
+    "choix": ["à choisir les champs renvoyés", "à créer un index sur nom", "à limiter à un seul résultat", "à trier les résultats par nom"],
+    "bonneReponse": 0,
+    "explication": "C'est la projection : 1 inclut un champ, 0 l'exclut. `_id` est renvoyé par défaut, d'où le `_id: 0`. Réduire les champs renvoyés allège le trafic réseau, comme lister les colonnes au lieu d'écrire `SELECT *`."
+  },
+  {
+    "id": "mongodb-m10",
+    "enonce": "Dans une étape $group, que représente le champ `_id` ?",
+    "choix": ["le nombre de documents", "la clé de regroupement", "l'identifiant du pipeline", "le premier document trouvé"],
+    "bonneReponse": 1,
+    "explication": "`{ $group: { _id: \"$ville\", total: { $sum: 1 } } }` produit un document par ville avec le nombre d'occurrences : c'est l'équivalent d'un GROUP BY. Avec `_id: null`, tous les documents forment un seul groupe."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ruby-m1",
+    "enonce": "Quelle différence entre les intervalles `1..5` et `1...5` ?",
+    "choix": ["aucune, les deux notations sont équivalentes", "`1...5` inclut 5, `1..5` l'exclut", "`1..5` inclut 5, `1...5` l'exclut", "`1...5` compte à rebours de 5 à 1"],
+    "bonneReponse": 2,
+    "explication": "Deux points : borne de fin incluse ; trois points : exclue. `(1...5).to_a` donne `[1, 2, 3, 4]`. Les intervalles marchent aussi avec des lettres : `('a'..'e')`."
+  },
+  {
+    "id": "ruby-m2",
+    "enonce": "Que fait `yield` dans une méthode Ruby ?",
+    "choix": ["il passe la main au thread suivant", "il renvoie une valeur et quitte la méthode", "il exécute le bloc passé à la méthode", "il suspend la méthode comme un générateur"],
+    "bonneReponse": 2,
+    "explication": "`def deux_fois; yield; yield; end` puis `deux_fois { puts \"Hop\" }` affiche deux fois « Hop ». `block_given?` permet de vérifier qu'un bloc a bien été fourni. Rien à voir avec le `yield` des générateurs Python ou JavaScript."
+  },
+  {
+    "id": "ruby-m3",
+    "enonce": "Pour un module, quelle différence entre `include` et `extend` ?",
+    "choix": ["`extend` ajoute des méthodes d'instance, `include` des méthodes de classe", "`extend` charge un fichier, `include` un module déjà chargé", "`include` ajoute des méthodes d'instance, `extend` des méthodes de classe", "`include` copie le module, `extend` crée seulement un lien vers lui"],
+    "bonneReponse": 2,
+    "explication": "Les modules servent de « mixins » et remplacent l'héritage multiple. `include Comparable` donne ses méthodes aux instances ; `extend` les ajoute à l'objet receveur, souvent la classe elle-même, d'où des méthodes de classe."
+  },
+  {
+    "id": "ruby-m4",
+    "enonce": "Que génère `attr_accessor :nom` dans une classe ?",
+    "choix": ["une constante `NOM` en lecture seule", "une variable de classe `@@nom`", "un lecteur `nom` et rien d'autre", "un lecteur `nom` et un écrivain `nom=`"],
+    "bonneReponse": 3,
+    "explication": "C'est de la métaprogrammation : une méthode qui écrit des méthodes. `attr_reader` ne crée que le lecteur, `attr_writer` que l'écrivain. Les deux manipulent la variable d'instance `@nom`."
+  },
+  {
+    "id": "ruby-m5",
+    "enonce": "Que renvoie une méthode Ruby qui n'a pas d'instruction `return` ?",
+    "choix": ["la valeur de la dernière expression évaluée", "toujours nil, faute de return explicite", "le premier argument passé à la méthode", "l'objet courant, c'est-à-dire self"],
+    "bonneReponse": 0,
+    "explication": "Le retour implicite est la norme : `def carre(x) = x * x` renvoie le produit. `return` sert surtout à sortir plus tôt d'une méthode."
+  },
+  {
+    "id": "ruby-m6",
+    "enonce": "Que fait `noms.map(&:upcase)` ?",
+    "choix": ["il met en majuscules le tableau d'origine, en place", "il met chaque nom en majuscules dans un nouveau tableau", "il renvoie le premier nom écrit en majuscules", "il vérifie que tous les noms sont en majuscules"],
+    "bonneReponse": 1,
+    "explication": "`&:upcase` convertit le symbole en bloc (via `Symbol#to_proc`) : c'est l'équivalent de `noms.map { |n| n.upcase }`. Pour modifier le tableau d'origine, on utiliserait `map!`."
+  },
+  {
+    "id": "ruby-m7",
+    "enonce": "Quelle différence entre une `lambda` et un `Proc` classique ?",
+    "choix": ["un Proc vérifie son nombre d'arguments, pas une lambda", "une lambda vérifie son nombre d'arguments, pas un Proc", "un Proc ne peut pas être stocké dans une variable", "une lambda ne peut capturer aucune variable extérieure"],
+    "bonneReponse": 1,
+    "explication": "Une lambda se comporte comme une méthode : mauvais nombre d'arguments = erreur, et `return` ne quitte que la lambda. Dans un Proc, les arguments manquants valent `nil` et `return` quitte la méthode englobante."
+  },
+  {
+    "id": "ruby-m8",
+    "enonce": "Avec `h = { nom: \"Alice\" }`, comment obtient-on « Alice » ?",
+    "choix": ["h->nom", "h.nom", "h[\"nom\"]", "h[:nom]"],
+    "bonneReponse": 3,
+    "explication": "`nom:` est un raccourci pour la clé symbole `:nom`. `h[\"nom\"]` renvoie `nil`, car une chaîne et un symbole sont des clés différentes. Rails propose un hash « indifférent » qui accepte les deux."
+  },
+  {
+    "id": "ruby-m9",
+    "enonce": "Que signifie `puts \"Majeur\" unless age < 18` ?",
+    "choix": ["afficher « Majeur » seulement si age < 18", "afficher « Majeur » sauf si age < 18", "afficher « Majeur » tant que age < 18", "afficher « Majeur » puis tester age < 18"],
+    "bonneReponse": 1,
+    "explication": "`unless` est l'inverse de `if`. Placé en fin de ligne (forme « modificateur »), il donne une condition qui se lit presque comme une phrase. Ruby a aussi `until`, l'inverse de `while`."
+  },
+  {
+    "id": "ruby-m10",
+    "enonce": "À quoi sert le fichier `Gemfile.lock` ?",
+    "choix": ["À lister les gems qu'il faut désinstaller", "À stocker les identifiants d'accès à RubyGems", "À figer les versions exactes des gems installées", "À empêcher l'installation de toute nouvelle gem"],
+    "bonneReponse": 2,
+    "explication": "Bundler résout les dépendances du `Gemfile` et note les versions exactes retenues. Versionné avec le projet, il garantit que développeurs et production utilisent les mêmes, comme `package-lock.json` en Node.js."
+  }
+]

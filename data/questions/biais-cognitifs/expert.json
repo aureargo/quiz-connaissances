@@ -1,0 +1,72 @@
+[
+  {
+    "id": "biais-cognitifs-e1",
+    "enonce": "Dans « Thinking, Fast and Slow » (2011), Daniel Kahneman décrit deux modes de pensée. Lequel caractérise le Système 1 ?",
+    "choix": ["lent, délibéré et coûteux en effort", "logique, verbal et contrôlé", "analytique, conscient et séquentiel", "rapide, intuitif et automatique"],
+    "bonneReponse": 3,
+    "explication": "Le Système 1 travaille sans effort : reconnaître un visage, compléter « pain au… ». Le Système 2 exige attention et concentration : calculer 17 × 24. Selon Kahneman (« Système 1 / Système 2 » en français), la plupart des biais naissent des réponses rapides du Système 1, que le Système 2, « paresseux », ne prend pas la peine de vérifier. Les termes viennent des psychologues Keith Stanovich et Richard West (2000)."
+  },
+  {
+    "id": "biais-cognitifs-e2",
+    "enonce": "Quel psychologue a reçu en 2002 le prix Nobel d'économie pour ses travaux sur le jugement et la décision en situation d'incertitude ?",
+    "choix": ["Richard Thaler", "Daniel Kahneman", "Amos Tversky", "Herbert Simon"],
+    "bonneReponse": 1,
+    "explication": "Daniel Kahneman, psychologue de formation, a partagé le prix 2002 avec Vernon Smith pour avoir intégré la psychologie à la science économique. Son complice de toujours, Amos Tversky, était mort en 1996 : le prix ne se décerne pas à titre posthume. Herbert Simon l'avait reçu dès 1978 pour sa « rationalité limitée », Richard Thaler l'a obtenu en 2017. Kahneman est mort en 2024."
+  },
+  {
+    "id": "biais-cognitifs-e3",
+    "enonce": "« Linda, 31 ans, diplômée de philosophie, militante contre les discriminations… » On la juge plus probablement « employée de banque et féministe » que « employée de banque ». Quelle erreur est-ce ?",
+    "choix": ["l'erreur de conjonction", "l'erreur du joueur", "l'illusion des séries", "l'erreur de planification"],
+    "bonneReponse": 0,
+    "explication": "Tversky et Kahneman (1983) : la probabilité de deux conditions réunies ne peut jamais dépasser celle de l'une d'elles seule — toute employée de banque féministe est d'abord une employée de banque. Mais « féministe » colle si bien au portrait qu'on juge la ressemblance au lieu de la probabilité : c'est l'heuristique de représentativité. Environ 85 % des participants se trompaient."
+  },
+  {
+    "id": "biais-cognitifs-e4",
+    "enonce": "Une maladie touche 1 personne sur 1 000. Un test qui ne se trompe qu'une fois sur 100 revient positif. Quelle est alors la probabilité d'être réellement malade ?",
+    "choix": ["environ 99 %", "environ 90 %", "environ 50 %", "environ 9 %"],
+    "bonneReponse": 3,
+    "explication": "Sur 100 000 personnes, 100 sont malades (dont 99 testées positives) et 99 900 sont saines, dont 1 %, soit 999, reçoivent un faux positif. Seuls 99 positifs sur 1 098 sont donc malades : environ 9 %. Répondre 99 %, c'est l'« oubli de la fréquence de base » : on ignore la rareté de la maladie. Même des médecins s'y trompent, d'où l'intérêt de raisonner en effectifs plutôt qu'en pourcentages."
+  },
+  {
+    "id": "biais-cognitifs-e5",
+    "enonce": "Selon la théorie des perspectives de Kahneman et Tversky (1979), comment se comporte-t-on typiquement face au risque ?",
+    "choix": ["joueur pour les gains, prudent pour les pertes", "prudent pour les gains, joueur pour les pertes", "prudent pour les gains comme pour les pertes", "joueur pour les gains comme pour les pertes"],
+    "bonneReponse": 1,
+    "explication": "Entre 500 € garantis et une chance sur deux de gagner 1 000 €, la plupart prennent le gain sûr. Mais entre perdre 500 € à coup sûr et une chance sur deux de perdre 1 000 €, la plupart tentent leur chance : c'est l'« effet de réflexion ». L'aversion à la perte pousse à prendre des risques pour l'éviter — ce qui explique qu'un joueur en perte « s'acharne » pour se refaire."
+  },
+  {
+    "id": "biais-cognitifs-e6",
+    "enonce": "En 1996, John Bargh affirmait que lire des mots liés à la vieillesse faisait ensuite marcher plus lentement. Qu'est-il advenu de ce résultat ?",
+    "choix": ["il a valu un prix Nobel à son auteur", "il a été confirmé par l'imagerie cérébrale", "il a été étendu à la mémoire des seniors", "il n'a pas été répliqué de façon convaincante"],
+    "bonneReponse": 3,
+    "explication": "En 2012, une équipe belge (Doyen et al.) n'a retrouvé l'effet que lorsque les expérimentateurs savaient quel groupe était censé ralentir. Cette étude d'« amorçage » est devenue un symbole de la crise de la réplication en psychologie. Kahneman, qui l'avait mise en avant, a reconnu en 2017 avoir trop fait confiance à des études de faible puissance statistique : les chercheurs aussi ont un biais de confirmation."
+  },
+  {
+    "id": "biais-cognitifs-e7",
+    "enonce": "Quel chercheur défend l'idée que les heuristiques sont souvent des outils efficaces (« rapides et frugales »), plutôt que des sources d'erreurs ?",
+    "choix": ["Gerd Gigerenzer", "Daniel Kahneman", "Dan Ariely", "Richard Thaler"],
+    "bonneReponse": 0,
+    "explication": "Gerd Gigerenzer, de l'Institut Max-Planck de Berlin, critique le programme « heuristiques et biais » : dans un monde incertain, une règle simple — parier sur le joueur de tennis dont on a déjà entendu parler — peut rivaliser avec des calculs complexes. Il montre aussi que beaucoup de « biais » de laboratoire s'atténuent quand on présente les problèmes en effectifs (« 10 sur 1 000 ») plutôt qu'en pourcentages."
+  },
+  {
+    "id": "biais-cognitifs-e8",
+    "enonce": "En 1954, la fin du monde annoncée par une secte n'a pas lieu. Selon Leon Festinger, qui l'avait infiltrée avec des collègues, comment réagirent les adeptes les plus engagés ?",
+    "choix": ["ils quittèrent aussitôt le groupe", "ils portèrent plainte contre la voyante", "ils redoublèrent de prosélytisme", "ils reconnurent publiquement leur erreur"],
+    "bonneReponse": 2,
+    "explication": "Dans « L'Échec d'une prophétie » (1956), Festinger, Riecken et Schachter racontent que, le déluge n'étant pas venu, la « messagère » Dorothy Martin annonça que la foi du groupe avait sauvé la Terre. Les plus investis, jusque-là discrets, se mirent à chercher des adeptes. Festinger y voit la dissonance cognitive (1957) : quand faits et croyance se contredisent, on réinterprète plus volontiers les faits qu'on n'abandonne la croyance."
+  },
+  {
+    "id": "biais-cognitifs-e9",
+    "enonce": "En 1990, des étudiants à qui l'on vient d'offrir une tasse en exigent plus du double de ce que d'autres sont prêts à payer pour l'acheter. Quel effet est-ce ?",
+    "choix": ["l'effet de rareté", "l'effet de dotation", "l'effet Veblen", "l'effet de récence"],
+    "bonneReponse": 1,
+    "explication": "Kahneman, Knetsch et Thaler ont distribué des tasses de l'université Cornell : leurs nouveaux « propriétaires » en demandaient environ 7 $, quand les acheteurs n'offraient qu'environ 3 $. Le simple fait de posséder un objet en augmente la valeur à nos yeux, car s'en séparer est vécu comme une perte : une conséquence directe de l'aversion à la perte."
+  },
+  {
+    "id": "biais-cognitifs-e10",
+    "enonce": "Un hebdomadaire propose : web 59 $, papier 125 $, papier + web 125 $. Presque personne ne choisit « papier seul ». À quoi sert cette offre ?",
+    "choix": ["à satisfaire une obligation légale", "à écouler un stock de journaux papier", "à mesurer la fidélité des abonnés", "à rendre l'offre combinée plus attractive"],
+    "bonneReponse": 3,
+    "explication": "C'est l'effet de leurre, ou de dominance asymétrique (Huber, Payne et Puto, 1982) : une option nettement moins bonne qu'une autre rend cette dernière plus séduisante par comparaison. Dan Ariely raconte qu'avec cette grille de The Economist, 84 % de ses étudiants choisissaient la formule combinée ; sans l'offre « papier seul », 68 % prenaient la formule web à 59 $."
+  }
+]

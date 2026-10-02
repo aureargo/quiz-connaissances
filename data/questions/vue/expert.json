@@ -1,0 +1,72 @@
+[
+  {
+    "id": "vue-e1",
+    "enonce": "Pourquoi Vue 3 s'appuie-t-il sur les `Proxy` JavaScript pour sa réactivité ?",
+    "choix": ["pour détecter aussi les propriétés ajoutées après coup", "pour exécuter la réactivité dans un Web Worker", "pour rester compatible avec les vieux navigateurs comme IE11", "pour rendre immuables tous les objets réactifs par défaut"],
+    "bonneReponse": 0,
+    "explication": "Vue 2 utilisait `Object.defineProperty`, aveugle aux propriétés ajoutées après coup (d'où l'obligation de `Vue.set`). Un `Proxy` intercepte toute opération sur l'objet. Contrepartie : Vue 3 ne fonctionne plus sur IE11."
+  },
+  {
+    "id": "vue-e2",
+    "enonce": "Dans Vue 3, si `v-if` et `v-for` sont sur le même élément, lequel est évalué en premier ?",
+    "choix": ["v-if, qui n'a donc pas accès à la variable de boucle", "aucun : le compilateur refuse cette combinaison", "v-for, si bien que v-if filtre chaque élément", "celui des deux écrit en premier dans la balise"],
+    "bonneReponse": 0,
+    "explication": "C'est l'inverse de Vue 2. La recommandation officielle est de ne jamais les combiner : filtrer la liste dans une computed, ou placer le `v-for` sur un `<template>` englobant."
+  },
+  {
+    "id": "vue-e3",
+    "enonce": "Pourquoi le DOM n'est-il pas encore à jour juste après la modification d'une donnée réactive ?",
+    "choix": ["le navigateur bloque toute modification du DOM pendant un script", "Vue attend une action de l'utilisateur pour rafraîchir le DOM", "Vue regroupe les mises à jour et les applique de façon asynchrone", "les données réactives ne sont propagées qu'au rechargement"],
+    "bonneReponse": 2,
+    "explication": "Vue met les changements en file d'attente et met à jour le DOM une seule fois, même après plusieurs modifications. Pour lire le DOM à jour, on attend la fin de ce cycle : `await nextTick()`."
+  },
+  {
+    "id": "vue-e4",
+    "enonce": "Quelle est la différence principale entre `ref()` et `shallowRef()` ?",
+    "choix": ["`shallowRef` ne peut contenir que des valeurs primitives", "`shallowRef` n'est réactif que lors du rendu côté serveur", "`shallowRef` ne suit que le remplacement de `.value`", "`shallowRef` copie entièrement la valeur à chaque lecture"],
+    "bonneReponse": 2,
+    "explication": "Une ref classique rend tout l'objet profondément réactif. `shallowRef` évite ce coût pour de grosses structures ou des objets externes (instance de carte, éditeur de texte). `triggerRef` force une mise à jour si besoin."
+  },
+  {
+    "id": "vue-e5",
+    "enonce": "À quoi sert le composant `<KeepAlive>` ?",
+    "choix": ["à garder en cache l'état des composants retirés", "à maintenir ouverte une connexion WebSocket", "à empêcher la mise en veille de l'onglet", "à relancer un composant après une erreur"],
+    "bonneReponse": 0,
+    "explication": "Autour d'onglets ou de vues dynamiques, il conserve les composants masqués au lieu de les détruire : formulaires et défilement sont préservés. Les hooks `onActivated` et `onDeactivated` signalent ces passages."
+  },
+  {
+    "id": "vue-e6",
+    "enonce": "Que fait `<Teleport to=\"body\">` ?",
+    "choix": ["il ouvre le contenu du composant dans un nouvel onglet", "il charge le composant depuis un autre serveur à la demande", "il rend son contenu ailleurs dans le DOM, hors du composant", "il déplace le composant vers une autre route de l'application"],
+    "bonneReponse": 2,
+    "explication": "Idéal pour les modales et notifications : le contenu échappe aux `overflow: hidden` et `z-index` des parents, tout en gardant sa logique dans le composant. C'est l'équivalent des portails de React."
+  },
+  {
+    "id": "vue-e7",
+    "enonce": "Quelle optimisation le compilateur de templates de Vue 3 réalise-t-il ?",
+    "choix": ["il marque les nœuds dynamiques pour ne comparer qu'eux au rendu", "il remplace le JavaScript du composant par du CSS pur", "il convertit le template en WebAssembly pour le navigateur", "il transforme chaque template en composant Web standard du navigateur"],
+    "bonneReponse": 0,
+    "explication": "Grâce aux « patch flags », Vue sait quelles parties d'un template peuvent changer (texte, classe, attribut…) et ignore le reste lors de la comparaison. Les nœuds purement statiques ne sont créés qu'une fois puis réutilisés."
+  },
+  {
+    "id": "vue-e8",
+    "enonce": "Que simplifie la macro `defineModel()` (Vue 3.4) ?",
+    "choix": ["la prise en charge de `v-model` sur un composant personnalisé", "la définition d'un modèle de données côté serveur avec Nuxt", "la création et l'enregistrement d'un nouveau store Pinia", "la déclaration des routes d'une application avec Vue Router"],
+    "bonneReponse": 0,
+    "explication": "Avant, il fallait déclarer une prop `modelValue` et émettre `update:modelValue`. Désormais, `const modele = defineModel()` renvoie une ref directement synchronisée avec le parent."
+  },
+  {
+    "id": "vue-e9",
+    "enonce": "Que sont les « slots à portée » (scoped slots) ?",
+    "choix": ["des slots visibles uniquement à l'intérieur du composant parent", "des slots dont le contenu est chargé de manière paresseuse", "des slots où l'enfant transmet des données au contenu du parent", "des slots dont le style est isolé grâce à l'attribut `scoped`"],
+    "bonneReponse": 2,
+    "explication": "Côté enfant `<slot :item=\"item\" />`, côté parent `<template #default=\"{ item }\">` : l'enfant gère la logique (parcours, pagination) et le parent décide de l'affichage de chaque élément."
+  },
+  {
+    "id": "vue-e10",
+    "enonce": "Que fait Vue avec un `v-for` sans attribut `key` quand l'ordre de la liste change ?",
+    "choix": ["il trie les éléments par ordre alphabétique", "il détruit puis recrée tous les éléments à chaque fois", "il refuse le rendu et lève une erreur bloquante", "il réutilise les éléments en place, sans les déplacer"],
+    "bonneReponse": 3,
+    "explication": "Cette stratégie « in-place patch » est rapide, mais l'état propre à chaque élément (champ de saisie, composant enfant) peut rester attaché à la mauvaise ligne. Une `:key` stable permet à Vue de déplacer les bons éléments."
+  }
+]

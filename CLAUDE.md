@@ -18,13 +18,34 @@ Tout le code et les commentaires sont **en français**.
 
 ## 🏗️ Architecture générale
 
-Deux applications indépendantes qui communiquent par une API REST HTTP :
+Deux applications indépendantes qui communiquent par une API REST HTTP, plus un
+dossier de **contenu** qui n'appartient à aucune des deux :
 
-- **`backend/`** — serveur **Go**. Charge les questions depuis des fichiers JSON
-  (`backend/data/`) et les expose via une API REST. Volontairement **sans état**
-  (stateless) : il ne mémorise pas la progression d'un joueur.
+- **`data/`** — le **contenu** du quiz (thèmes + questions), en JSON. C'est la
+  « base de données » du projet : elle vit **à la racine**, hors de `backend/` et
+  de `frontend/`. Voir « Pourquoi `data/` est à part ? » ci-dessous.
+- **`backend/`** — serveur **Go**. Charge les questions depuis `data/` et les
+  expose via une API REST. Volontairement **sans état** (stateless) : il ne
+  mémorise pas la progression d'un joueur.
 - **`frontend/`** — application **Angular**. Affiche l'interface et contient toute la
   **logique de session de quiz** (mélange, file des erreurs, progression).
+
+### Pourquoi `data/` est à part ?
+
+Le contenu et le code évoluent à des **rythmes différents** : ajouter 40 thèmes ne
+change pas une ligne de Go. Les garder mélangés donnait un `backend/` composé à
+95 % de JSON, et des commits « +1230 questions » qui touchaient le dossier du
+serveur sans rien y modifier.
+
+Séparés, chacun a son rôle : `backend/` est un **moteur de quiz générique** (il
+sert n'importe quel jeu de questions bien formé), `data/` est **un** jeu de
+questions, avec ses règles propres — documentées dans
+[`QUESTIONNAIRE_TEMPLATE.md`](data/QUESTIONNAIRE_TEMPLATE.md) et **vérifiées
+automatiquement** par le validateur (`go test ./internal/quiz -run TestDonnees`).
+
+> Le chemin du dossier n'est plus codé en dur : il se règle avec l'option
+> `-data <dossier>` ou la variable d'environnement `QUIZ_DATA_DIR`
+> (défaut : `../data`, puisqu'on lance le serveur depuis `backend/`).
 
 ### Pourquoi ce découpage ?
 La logique « une question ratée revient plus tard » est propre à *une partie en cours*
@@ -41,6 +62,10 @@ Le joueur traverse **trois pages**, et les données sont chargées **progressive
 
 1. **Accueil** (`/`, `theme-selection`) — uniquement les **tuiles de thèmes**, chacune
    étant un lien. Appelle `GET /api/themes` (liste **légère**, sans les niveaux).
+   Un **champ de recherche** filtre les tuiles à chaque frappe (côté client, sans
+   appel API) : seuls les thèmes correspondants s'affichent, en haut, classés par
+   pertinence (nom exact > début du nom > mot du nom > inclusion > catégorie).
+   Entrée ouvre le premier résultat, Échap vide le champ.
 2. **Sélection du niveau** (`/themes/:id`, `niveau-selection`) — atteinte au clic sur
    une tuile. C'est **seulement ici** qu'on demande les niveaux de **ce** thème via
    `GET /api/themes/{id}`, puis qu'on affiche les boutons facile/moyen/expert/tous.
@@ -60,16 +85,26 @@ Le joueur traverse **trois pages**, et les données sont chargées **progressive
 
 ## 📁 Structure des fichiers
 
+### Données (`data/`, à la racine)
+```
+data/
+  themes.json                        → liste des thèmes (métadonnées)
+  categories.json                    → ordre d'affichage des catégories
+  questions/<id>/<niveau>.json       → un fichier par thème ET par niveau
+  QUESTIONNAIRE_TEMPLATE.md          → le format + les règles de contenu
+```
+
 ### Backend (Go)
 ```
 backend/
   go.mod                      → module Go + version
-  main.go                     → point d'entrée : configure et démarre le serveur
+  main.go                     → point d'entrée : options (-data, -addr) et démarrage
   internal/quiz/models.go     → types de données (Theme, Question)
   internal/quiz/store.go      → scan des niveaux au boot + lecture paresseuse (cache) des questions
+  internal/quiz/store_test.go → tests unitaires du store (données synthétiques)
+  internal/quiz/donnees_test.go → VALIDATEUR : vérifie le vrai contenu de data/
   internal/api/handlers.go    → handlers HTTP, routeur, middleware CORS
-  data/themes.json            → liste des thèmes (métadonnées)
-  data/questions/<id>/<niveau>.json → un fichier par thème ET par niveau
+  internal/api/handlers_test.go → tests des routes HTTP
 ```
 
 ### Frontend (Angular)
@@ -83,7 +118,8 @@ frontend/src/app/
   services/moteur-quiz.ts           → CŒUR : logique de partie (file, mélange…)
   services/moteur-quiz.spec.ts      → tests unitaires du moteur (vitest)
   utils/aleatoire.ts                → mélange Fisher-Yates
-  pages/theme-selection/            → page d'accueil : tuiles de thèmes (lien)
+  utils/recherche.ts (+ .spec.ts)   → filtrage/classement des thèmes (champ de recherche)
+  pages/theme-selection/            → page d'accueil : recherche + tuiles de thèmes (lien)
   pages/niveau-selection/           → sous-page : choix du niveau d'un thème
   pages/quiz/                       → page de jeu (pilote le MoteurQuiz)
 ```
@@ -128,9 +164,11 @@ le frontend répond. Un lanceur par famille d'OS :
 
 ```bash
 # Backend
-cd backend && go run .                  # lancer le serveur de dev
+cd backend && go run .                  # lancer le serveur de dev (data = ../data)
+cd backend && go run . -data ../data -addr :8080   # idem, options explicites
 cd backend && go build -o quiz-server.exe .   # compiler un binaire
 cd backend && go vet ./...              # analyse statique
+cd backend && go test ./...             # tests unitaires + VALIDATION du contenu
 
 # Frontend
 cd frontend && npm install              # installer les dépendances (1re fois)
@@ -139,24 +177,33 @@ cd frontend && npm run build            # build de production
 cd frontend && npm test -- --watch=false  # lancer les tests unitaires une fois
 ```
 
+> 🔧 **Options du backend** : `-data <dossier>` (défaut `../data`) et `-addr <hôte:port>`
+> (défaut `:8080`). Équivalents en variables d'environnement : `QUIZ_DATA_DIR` et
+> `QUIZ_ADDR`. Priorité : option de ligne de commande > variable d'env > défaut.
+> Utile pour lancer le serveur depuis un autre répertoire, ou pour tester un jeu
+> de données alternatif sans toucher au code.
+
 > ⚠️ Il faut **lancer les DEUX** serveurs (Go puis Angular) pour utiliser l'app.
 
 ## ➕ Ajouter un questionnaire
 
-> 📄 **Référence complète** : [`backend/data/QUESTIONNAIRE_TEMPLATE.md`](backend/data/QUESTIONNAIRE_TEMPLATE.md)
+> 📄 **Référence complète** : [`data/QUESTIONNAIRE_TEMPLATE.md`](data/QUESTIONNAIRE_TEMPLATE.md)
 > — format JSON, convention des IDs, règle anti-déduction, checklist. **Lire ce
 > fichier avant de générer ou modifier des questions.**
 
 Étapes résumées :
 
-1. Créer un dossier `backend/data/questions/<id>/` puis y déposer **un fichier `.json`
+1. Créer un dossier `data/questions/<id>/` puis y déposer **un fichier `.json`
    par niveau**. Le **nom du fichier = le nom du niveau**, et il est **libre** :
    `facile.json`, `debutant.json`, `histoire.json`… (le nom `tous` est réservé).
    Le **nombre de niveaux est libre** lui aussi. Format d'un fichier : tableau d'objets
    `{ id, enonce, choix, bonneReponse, explication }`.
-2. Ajouter l'entrée correspondante dans `backend/data/themes.json`
-   (`id`, `nom`, `emoji`, `categorie`, `description`).
-3. Redémarrer le backend. Aucune recompilation de code nécessaire.
+2. Ajouter l'entrée correspondante dans `data/themes.json`
+   (`id`, `nom`, `emoji`, `categorie`, `description`). Si la `categorie` est
+   nouvelle, l'ajouter aussi à `data/categories.json` (qui fixe l'ordre d'affichage).
+3. **Vérifier** : `cd backend && go test ./internal/quiz -run TestDonnees`. Le
+   validateur contrôle les règles dures ET les règles de qualité (§3 du template).
+4. Redémarrer le backend. Aucune recompilation de code nécessaire.
 
 > ⚠️ Chaque thème listé dans `themes.json` DOIT avoir au moins un fichier de
 > questions (`data/questions/<id>/<niveau>.json`), sinon le backend refuse de
@@ -172,28 +219,29 @@ cd frontend && npm test -- --watch=false  # lancer les tests unitaires une fois
 > longueur et un niveau de détail comparables — voir le template pour les détails
 > et contre-exemples.
 
-## 🗂️ Thèmes actuels (58)
+## 🗂️ Thèmes actuels (75)
 
 État du **contenu** actuel (ce ne sont pas des contraintes du code, cf.
 `QUESTIONNAIRE_TEMPLATE.md`) : chaque thème a aujourd'hui trois fichiers
 (`facile.json`, `moyen.json`, `expert.json`) de 10 questions, soit 30 par thème
-(plus le niveau synthétique **`tous`** = 30). Total : **1740 questions**.
+(plus le niveau synthétique **`tous`** = 30). Total : **2250 questions**.
 
-- **Programmation** : Go, Python, JavaScript, TypeScript, Angular, Java, Kotlin, C, C++, Rust, Git, Lignes de commande Linux, HTML, CSS, Architecture logicielle, Algorithmes & structures de données
+- **Programmation** : Go, Python, JavaScript, TypeScript, Node.js, Angular, React, Vue.js, Java, Kotlin, C#, C, C++, Rust, PHP, Ruby, Git, Lignes de commande Linux, HTML, CSS, Architecture logicielle, Algorithmes & structures de données
 - **DevOps & Conteneurs** : Docker, Kubernetes
-- **Matériel informatique** : Processeurs (CPU), Cartes graphiques (GPU)
-- **Bases de données** : SQL, NoSQL
+- **Matériel informatique** : Processeurs (CPU), Cartes graphiques (GPU), Stockage (SSD, HDD), Mémoire vive (RAM), Cartes mères & connectique, Monter son PC
+- **Bases de données** : SQL, NoSQL, PostgreSQL, MongoDB, Redis, Modélisation de données, Data engineering
 - **Crypto & Web3** : Crypto
 - **Intelligence artificielle** : IA (généralités), LLM (connaissances arrêtées à 2026)
 - **Cybersécurité** : Cybersécurité
 - **Réseaux & Internet** : Réseaux
 - **Culture geek** : Mangas, Animés, Jeux vidéo, Bande dessinée
 - **Jeux & stratégie** : Échecs
+- **Sport** : Cyclisme
 - **Culture générale** : Pays, Géographie, Villes de France, Mythologie
 - **Cinéma** : Films des années 1980, 1990, 2000, 2010
 - **Littérature** : Science-fiction (littérature), Littérature d'aventure
 - **Histoire** : Histoire de France, Antiquité
-- **Sciences** : Mathématiques, Chimie, Biologie, Physique, Astronomie, Géologie, Écologie & climat
+- **Sciences** : Mathématiques, Chimie, Biologie, Physique, Astronomie, Géologie, Écologie & climat, Biais cognitifs
 - **Économie & Finance** : Finance
 - **Automobile** : Automobile
 - **Systèmes d'exploitation** : Windows, Android

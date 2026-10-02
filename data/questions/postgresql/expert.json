@@ -1,0 +1,72 @@
+[
+  {
+    "id": "postgresql-e1",
+    "enonce": "Sur quel mécanisme PostgreSQL s'appuie-t-il pour que les lectures ne bloquent jamais les écritures ?",
+    "choix": ["LSM", "2PC", "Paxos", "MVCC"],
+    "bonneReponse": 3,
+    "explication": "Avec le MultiVersion Concurrency Control, chaque transaction lit un instantané cohérent ; un UPDATE crée une nouvelle version de la ligne au lieu d'écraser l'ancienne. Lecteurs et écrivains ne s'attendent donc pas. Le 2PC est la validation en deux phases, le LSM-tree une structure de stockage et Paxos un algorithme de consensus."
+  },
+  {
+    "id": "postgresql-e2",
+    "enonce": "Quel danger l'autovacuum prévient-il en « gelant » (freeze) les lignes anciennes ?",
+    "choix": ["le rebouclage des identifiants de transaction", "l'expiration des mots de passe des rôles", "la saturation du journal WAL sur le disque", "la fragmentation des index B-tree"],
+    "bonneReponse": 0,
+    "explication": "Les identifiants de transaction (XID) tiennent sur 32 bits et sont comparés de façon circulaire : environ 2 milliards de transactions dans le passé, autant dans le futur. Sans gel, de vieilles lignes finiraient par sembler « venir du futur » et deviendraient invisibles. Pour l'éviter, PostgreSQL finit par refuser les écritures si le gel prend trop de retard."
+  },
+  {
+    "id": "postgresql-e3",
+    "enonce": "Quel type d'index convient aux colonnes contenant plusieurs valeurs, comme un `jsonb`, un tableau ou un `tsvector` ?",
+    "choix": ["B-tree", "Hash", "BRIN", "GIN"],
+    "bonneReponse": 3,
+    "explication": "GIN (Generalized Inverted Index) est un index inversé : pour chaque élément (clé JSON, mot, valeur de tableau), il liste les lignes qui le contiennent. C'est lui qui accélère `@>` sur du jsonb ou la recherche plein texte. Il est plus lent à mettre à jour qu'un B-tree."
+  },
+  {
+    "id": "postgresql-e4",
+    "enonce": "Quel est le niveau d'isolation par défaut d'une transaction PostgreSQL ?",
+    "choix": ["READ COMMITTED", "READ UNCOMMITTED", "REPEATABLE READ", "SERIALIZABLE"],
+    "bonneReponse": 0,
+    "explication": "Chaque requête voit les données validées au moment où elle démarre. Si l'on demande READ UNCOMMITTED, PostgreSQL applique en fait READ COMMITTED : il n'autorise jamais les lectures sales. Son niveau SERIALIZABLE repose sur la technique SSI (Serializable Snapshot Isolation), introduite en 9.1."
+  },
+  {
+    "id": "postgresql-e5",
+    "enonce": "Qu'est-ce qu'une mise à jour HOT (Heap-Only Tuple) ?",
+    "choix": ["une mise à jour appliquée seulement en mémoire", "une mise à jour exécutée sans écrire de WAL", "une mise à jour qui verrouille toute la table", "une mise à jour qui n'a pas à modifier les index"],
+    "bonneReponse": 3,
+    "explication": "Si aucune colonne indexée ne change et qu'il reste de la place dans la même page, la nouvelle version de la ligne y est chaînée à l'ancienne : les index n'ont pas besoin d'être touchés. C'est pourquoi on règle parfois le `fillfactor` d'une table très mise à jour en dessous de 100 %."
+  },
+  {
+    "id": "postgresql-e6",
+    "enonce": "Que fait le mécanisme TOAST de PostgreSQL ?",
+    "choix": ["met en cache les résultats des requêtes", "réchauffe le cache après un redémarrage", "stocke à part et compresse les grandes valeurs", "chiffre les colonnes sensibles sur disque"],
+    "bonneReponse": 2,
+    "explication": "The Oversized-Attribute Storage Technique : une page faisant 8 Ko, une valeur dépassant environ 2 Ko est compressée puis, si besoin, découpée et rangée dans une table annexe. C'est transparent pour l'utilisateur et permet des champs allant jusqu'à 1 Go."
+  },
+  {
+    "id": "postgresql-e7",
+    "enonce": "Qu'est-ce qui distingue la réplication logique de la réplication physique (en flux) ?",
+    "choix": ["la logique transmet des changements de lignes, table par table", "la physique fonctionne entre deux versions majeures", "la physique exige d'arrêter le serveur principal", "la logique recopie les fichiers de données bloc par bloc"],
+    "bonneReponse": 0,
+    "explication": "La réplication physique rejoue le WAL octet par octet : le réplica est une copie exacte de tout le cluster, dans la même version majeure. La réplication logique (PUBLICATION / SUBSCRIPTION, depuis la version 10) décode les changements ligne par ligne : on choisit les tables, et l'on peut répliquer vers une autre version majeure, ce qui sert aux migrations quasi sans coupure."
+  },
+  {
+    "id": "postgresql-e8",
+    "enonce": "Pourquoi le planificateur peut-il choisir un parcours séquentiel (Seq Scan) alors qu'un index existe ?",
+    "choix": ["les index sont ignorés en dehors des transactions", "les statistiques sont désactivées par défaut", "une grande partie de la table devra être lue", "un index ne sert qu'aux requêtes avec ORDER BY"],
+    "bonneReponse": 2,
+    "explication": "Passer par l'index implique des accès aléatoires aux pages de la table. Dès que la requête doit lire une part importante des lignes, lire la table d'un bout à l'autre coûte moins cher. Le planificateur estime ce coût grâce aux statistiques collectées par ANALYZE."
+  },
+  {
+    "id": "postgresql-e9",
+    "enonce": "Qu'est-ce qu'un index partiel ?",
+    "choix": ["un index portant sur le début de chaque chaîne", "un index limité aux lignes vérifiant un WHERE", "un index réparti sur plusieurs tablespaces", "un index construit uniquement en mémoire vive"],
+    "bonneReponse": 1,
+    "explication": "`CREATE INDEX … WHERE statut = 'en_attente'` n'indexe que les lignes concernées : l'index est plus petit et plus rapide à maintenir. C'est idéal quand les requêtes visent toujours un petit sous-ensemble. Avec UNIQUE, il permet aussi des contraintes d'unicité conditionnelles."
+  },
+  {
+    "id": "postgresql-e10",
+    "enonce": "Pourquoi utiliser CREATE INDEX CONCURRENTLY sur une base en production ?",
+    "choix": ["pour obtenir un index plus compact", "pour ne pas bloquer les écritures sur la table", "pour construire l'index sur plusieurs cœurs", "pour créer l'index sur tous les réplicas"],
+    "bonneReponse": 1,
+    "explication": "Un CREATE INDEX classique bloque les INSERT, UPDATE et DELETE pendant toute la construction. CONCURRENTLY les laisse passer, au prix d'une construction plus longue (deux parcours de la table). La commande ne peut pas s'exécuter dans une transaction et, en cas d'échec, laisse un index marqué INVALID qu'il faut supprimer."
+  }
+]

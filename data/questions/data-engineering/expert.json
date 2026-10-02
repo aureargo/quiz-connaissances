@@ -1,0 +1,72 @@
+[
+  {
+    "id": "data-engineering-e1",
+    "enonce": "Sur quoi s'appuie un outil de Change Data Capture comme Debezium pour suivre les modifications d'une base ?",
+    "choix": ["des requêtes SELECT répétées chaque minute", "des déclencheurs ajoutés sur chaque table", "des exports CSV produits chaque nuit", "le journal de transactions de la base"],
+    "bonneReponse": 3,
+    "explication": "Debezium lit le WAL de PostgreSQL, le binlog de MySQL ou l'oplog de MongoDB, puis publie chaque insertion, mise à jour ou suppression dans Kafka. Lire le journal ne surcharge pas la base et ne rate aucun changement, contrairement à des interrogations périodiques."
+  },
+  {
+    "id": "data-engineering-e2",
+    "enonce": "Dans une dimension à évolution lente de type 2 (SCD2), que fait-on quand un client déménage ?",
+    "choix": ["on supprime le client puis on le recrée", "on ajoute une ligne avec des dates de validité", "on ajoute une colonne « adresse précédente »", "on écrase l'ancienne adresse par la nouvelle"],
+    "bonneReponse": 1,
+    "explication": "Le type 2 conserve tout l'historique : l'ancienne ligne est close (date de fin, indicateur « courant » à faux) et une nouvelle ligne commence, avec sa propre clé de substitution. Les ventes passées restent ainsi rattachées à l'ancienne adresse. Écraser correspond au type 1, ajouter une colonne au type 3."
+  },
+  {
+    "id": "data-engineering-e3",
+    "enonce": "Dans Spark, pourquoi une agrégation par clé ou une jointure entre deux grosses tables coûte-t-elle cher ?",
+    "choix": ["elle relance le job depuis le début", "elle désactive l'évaluation paresseuse", "elle impose un shuffle des données entre nœuds", "elle rapatrie toutes les données sur le driver"],
+    "bonneReponse": 2,
+    "explication": "Pour regrouper les lignes d'une même clé, Spark doit les redistribuer à travers le cluster : écriture sur disque, transfert réseau, relecture. On limite le shuffle en filtrant tôt ou en diffusant (broadcast) une petite table à tous les nœuds. Rapatrier tout sur le driver, c'est ce que fait collect()."
+  },
+  {
+    "id": "data-engineering-e4",
+    "enonce": "Dans Spark, quand une transformation comme filter ou map est-elle réellement exécutée ?",
+    "choix": ["au démarrage de la session Spark", "lors d'une action comme count ou write", "immédiatement, ligne après ligne", "à la fin de chaque minute écoulée"],
+    "bonneReponse": 1,
+    "explication": "Spark est paresseux : les transformations ne font que construire un plan. Rien ne s'exécute avant une action (count, collect, write…). Spark peut alors optimiser l'ensemble du plan, par exemple en ne lisant que les colonnes utiles et en appliquant les filtres dès la lecture."
+  },
+  {
+    "id": "data-engineering-e5",
+    "enonce": "Quelle garantie de livraison des messages est la plus difficile à obtenir dans un système de flux ?",
+    "choix": ["au moins une fois", "au mieux, sans garantie", "au plus une fois", "exactement une fois"],
+    "bonneReponse": 3,
+    "explication": "« Au plus une fois » peut perdre des messages, « au moins une fois » peut en dupliquer après une relance. « Exactement une fois » exige de coordonner la lecture, le traitement et l'écriture : Kafka y parvient avec des producteurs idempotents et des transactions, mais seulement de bout en bout dans son écosystème."
+  },
+  {
+    "id": "data-engineering-e6",
+    "enonce": "En traitement de flux, à quoi sert un « watermark » ?",
+    "choix": ["à décider quand clore une fenêtre malgré les retards", "à repérer les données personnelles à masquer", "à signer les messages pour prouver leur origine", "à freiner un producteur qui envoie trop vite"],
+    "bonneReponse": 0,
+    "explication": "Les événements arrivent parfois en retard (réseau, téléphone hors ligne). Le watermark estime jusqu'où le « temps des événements » a progressé : une fenêtre de 10 h à 11 h est clôturée quand il dépasse 11 h plus une marge. Les retardataires au-delà sont ignorés ou traités à part."
+  },
+  {
+    "id": "data-engineering-e7",
+    "enonce": "Pourquoi une multitude de petits fichiers pénalise-t-elle un data lake ?",
+    "choix": ["chaque fichier impose une table distincte", "les petits fichiers ne se compressent pas", "trop de métadonnées et d'ouvertures de fichiers", "les moteurs refusent les fichiers sous 1 Mo"],
+    "bonneReponse": 2,
+    "explication": "Lister, ouvrir et lire l'en-tête de chaque fichier coûte cher : dix mille fichiers de 100 Ko se lisent bien plus lentement que quelques fichiers de 256 Mo. Sous Hadoop, chaque fichier occupait aussi de la mémoire sur le NameNode. On y remédie par des tâches de compaction."
+  },
+  {
+    "id": "data-engineering-e8",
+    "enonce": "Avec Delta Lake ou Apache Iceberg, que permet le « time travel » ?",
+    "choix": ["rejouer un flux Kafka en temps réel", "corriger les fuseaux horaires des dates", "planifier une requête dans le futur", "interroger la table dans un état passé"],
+    "bonneReponse": 3,
+    "explication": "Chaque écriture crée une nouvelle version de la table (un instantané) sans effacer immédiatement les anciens fichiers. On peut donc lire la table telle qu'elle était hier, pour un audit ou pour annuler une erreur, jusqu'au nettoyage des anciennes versions."
+  },
+  {
+    "id": "data-engineering-e9",
+    "enonce": "Qu'est-ce que le « data skew » dans un traitement distribué ?",
+    "choix": ["une clé surreprésentée qui surcharge une tâche", "une perte de données lors d'une panne", "une colonne qui change de type d'un fichier à l'autre", "un décalage d'horloge entre les nœuds"],
+    "bonneReponse": 0,
+    "explication": "Si 40 % des ventes concernent un seul client, la tâche qui traite cette clé travaille bien plus longtemps que les autres, et tout le job l'attend. Parades : « saler » la clé (y ajouter un suffixe aléatoire), diffuser la petite table, ou laisser l'exécution adaptative de Spark découper les partitions trop grosses."
+  },
+  {
+    "id": "data-engineering-e10",
+    "enonce": "Qu'est-ce qui distingue l'architecture Kappa de l'architecture Lambda ?",
+    "choix": ["elle double chaque traitement par sécurité", "elle supprime la couche batch : tout passe par le flux", "elle supprime le flux : tout passe par des lots", "elle stocke tout dans une base relationnelle"],
+    "bonneReponse": 1,
+    "explication": "Lambda fait tourner deux chaînes en parallèle : un batch exact mais lent, et un flux rapide mais approximatif, ce qui oblige à écrire deux fois la même logique. Kappa, proposée par Jay Kreps (cocréateur de Kafka), n'utilise que le flux et rejoue le journal quand il faut tout recalculer."
+  }
+]

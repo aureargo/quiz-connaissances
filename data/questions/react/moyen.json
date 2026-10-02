@@ -1,0 +1,72 @@
+[
+  {
+    "id": "react-m1",
+    "enonce": "Pourquoi `setCompteur(compteur + 1)` appelé deux fois de suite n'ajoute-t-il qu'une unité ?",
+    "choix": ["le setter ne peut être appelé qu'une fois par rendu", "le second appel annule le premier, par sécurité", "React ignore le second appel pour éviter une boucle infinie", "les deux appels lisent la même valeur, figée pour ce rendu"],
+    "bonneReponse": 3,
+    "explication": "Dans un rendu donné, `compteur` est une constante : les deux appels demandent « 0 + 1 ». La forme fonctionnelle `setCompteur(c => c + 1)` part de la valeur la plus récente, et donne bien 2."
+  },
+  {
+    "id": "react-m2",
+    "enonce": "Que signifie un tableau de dépendances vide dans `useEffect(fn, [])` ?",
+    "choix": ["l'effet s'exécute une fois, juste avant le premier rendu", "l'effet s'exécute après chaque rendu", "l'effet ne s'exécute qu'après le premier rendu", "l'effet ne s'exécute jamais"],
+    "bonneReponse": 2,
+    "explication": "Sans tableau, l'effet suit chaque rendu ; avec `[a, b]`, il se relance quand `a` ou `b` change. En mode strict de développement, React monte, démonte puis remonte le composant pour vérifier le nettoyage : l'effet s'exécute alors deux fois."
+  },
+  {
+    "id": "react-m3",
+    "enonce": "À quoi sert la fonction renvoyée par un `useEffect` ?",
+    "choix": ["à nettoyer l'effet, par exemple annuler un abonnement", "à relancer l'effet si une erreur survient", "à annuler le rendu en cours du composant", "à fournir la valeur initiale de l'état du composant"],
+    "bonneReponse": 0,
+    "explication": "Elle est appelée avant chaque nouvelle exécution de l'effet et au démontage du composant : `return () => clearInterval(id);`. Sans elle, timers et abonnements s'accumulent."
+  },
+  {
+    "id": "react-m4",
+    "enonce": "Que fait le hook `useMemo` ?",
+    "choix": ["il stocke une valeur persistante sans provoquer de nouveau rendu", "il garde un résultat calculé tant que ses dépendances sont stables", "il sauvegarde l'état du composant dans le navigateur", "il garde une fonction pour conserver la même référence"],
+    "bonneReponse": 1,
+    "explication": "`useMemo(() => trier(liste), [liste])` évite de refaire un calcul coûteux à chaque rendu. `useCallback` fait la même chose pour une fonction, `useRef` stocke une valeur sans rendu. Le React Compiler peut ajouter ces mémorisations automatiquement."
+  },
+  {
+    "id": "react-m5",
+    "enonce": "Quelle différence entre `useRef` et `useState` ?",
+    "choix": ["`useRef` ne peut stocker que des nombres", "`useRef` est réservé aux composants écrits sous forme de classe", "modifier `ref.current` ne déclenche pas de nouveau rendu", "la valeur de `useState` est réinitialisée à chaque rendu"],
+    "bonneReponse": 2,
+    "explication": "Une ref est une « boîte » qui survit aux rendus sans en provoquer : pratique pour un identifiant de timer ou une valeur précédente. Elle sert aussi à accéder au DOM : `<input ref={champ} />` puis `champ.current.focus()`."
+  },
+  {
+    "id": "react-m6",
+    "enonce": "Pourquoi ne faut-il pas appeler un hook à l'intérieur d'un `if` ?",
+    "choix": ["les hooks sont interdits ailleurs qu'en tout début de fichier", "React repère les hooks à leur ordre d'appel, qui doit rester stable", "une condition empêche le compilateur de transformer le JSX", "un hook placé dans une condition s'exécute deux fois à chaque rendu"],
+    "bonneReponse": 1,
+    "explication": "React associe chaque `useState` ou `useEffect` à sa position dans la séquence d'appels. Si un hook est sauté une fois, tous les suivants sont décalés. Le plugin `eslint-plugin-react-hooks` vérifie cette règle."
+  },
+  {
+    "id": "react-m7",
+    "enonce": "Quel problème le Context (`createContext` + `useContext`) résout-il ?",
+    "choix": ["intercepter les erreurs levées pendant le rendu des composants enfants", "accélérer le rendu des listes de plusieurs milliers d'éléments", "éviter de passer une prop de parent en enfant sur de nombreux niveaux", "charger les composants à la demande pour alléger le bundle"],
+    "bonneReponse": 2,
+    "explication": "Ce problème s'appelle le « prop drilling ». Le Context rend une valeur (thème, utilisateur connecté, langue) accessible à tous les descendants. Attention : chaque consommateur se re-rend quand la valeur change."
+  },
+  {
+    "id": "react-m8",
+    "enonce": "Qu'est-ce qu'un champ de formulaire « contrôlé » ?",
+    "choix": ["un champ dont la valeur est lue via une ref à l'envoi", "un champ validé automatiquement par le navigateur", "un champ dont la valeur est pilotée par l'état React", "un champ en lecture seule tant qu'il n'a pas le focus"],
+    "bonneReponse": 2,
+    "explication": "Avec `value={texte}` et `onChange={e => setTexte(e.target.value)}`, l'état React est la seule source de vérité. Lire la valeur au dernier moment via une ref, c'est au contraire un champ « non contrôlé »."
+  },
+  {
+    "id": "react-m9",
+    "enonce": "Pourquoi `liste.push(x); setListe(liste);` ne provoque-t-il pas de nouveau rendu ?",
+    "choix": ["même référence de tableau : React n'y voit aucun changement", "`push` est interdit sur les tableaux issus de `useState`", "React ne surveille que les variables de type primitif", "le setter n'accepte que des tableaux nouvellement vides"],
+    "bonneReponse": 0,
+    "explication": "React compare l'ancien et le nouvel état avec `Object.is` : le tableau muté est le même objet. Il faut créer une copie, par exemple `setListe([...liste, x])`. L'état se traite comme immuable."
+  },
+  {
+    "id": "react-m10",
+    "enonce": "Que fait `React.memo(MonComposant)` ?",
+    "choix": ["il charge le composant seulement lorsqu'il devient visible à l'écran", "il conserve l'état du composant d'une session à l'autre", "il évite de re-rendre le composant si ses props n'ont pas changé", "il met en cache les données récupérées par le composant"],
+    "bonneReponse": 2,
+    "explication": "React compare les props une à une (comparaison superficielle). L'optimisation tombe à l'eau si le parent passe un nouvel objet ou une nouvelle fonction à chaque rendu, d'où le recours à `useMemo` et `useCallback`."
+  }
+]

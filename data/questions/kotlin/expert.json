@@ -1,0 +1,72 @@
+[
+  {
+    "id": "kotlin-e1",
+    "enonce": "À quoi servent principalement les coroutines en Kotlin ?",
+    "choix": ["à écrire du code asynchrone de façon légère et lisible", "à chiffrer les communications réseau de l'application", "à compiler le code source de l'application plus rapidement", "à générer automatiquement les tests unitaires du projet"],
+    "bonneReponse": 0,
+    "explication": "Les coroutines permettent de suspendre et reprendre des tâches sans bloquer de thread, pour un code asynchrone qui se lit séquentiellement. Elles sont bien plus légères que des threads classiques."
+  },
+  {
+    "id": "kotlin-e2",
+    "enonce": "Que signifie le mot-clé `suspend` devant une fonction ?",
+    "choix": ["elle peut suspendre puis reprendre son exécution sans bloquer", "elle ne s'exécute qu'une seule fois, au démarrage du programme", "elle est automatiquement mise en cache après le premier appel", "elle ne peut être appelée que depuis du code Java existant"],
+    "bonneReponse": 0,
+    "explication": "Une fonction `suspend` ne peut être appelée que depuis une coroutine ou une autre fonction `suspend`. Aux points de suspension, le thread est libéré pour d'autres tâches."
+  },
+  {
+    "id": "kotlin-e3",
+    "enonce": "Qu'est-ce qu'une `sealed class` (classe scellée) ?",
+    "choix": ["une classe dont toutes les sous-classes directes sont connues à la compilation", "une classe qu'on ne peut jamais instancier ni hériter", "une classe dont les champs sont chiffrés", "une classe limitée à un seul fichier de moins de 100 lignes"],
+    "bonneReponse": 0,
+    "explication": "La hiérarchie d'une `sealed class` est fermée : le compilateur connaît tous les sous-types. Dans un `when` sur ce type, il sait alors vérifier l'exhaustivité, sans branche `else`."
+  },
+  {
+    "id": "kotlin-e4",
+    "enonce": "Que permet la délégation `by lazy { ... }` sur une propriété ?",
+    "choix": ["une initialisation différée au premier accès, puis mise en cache", "un rechargement de la valeur à chaque lecture de la propriété", "une copie automatique de la propriété à chaque affectation", "une exécution dans un thread dédié à chaque appel effectué"],
+    "bonneReponse": 0,
+    "explication": "Le bloc passé à `lazy` n'est exécuté qu'au premier accès à la propriété ; la valeur calculée est ensuite réutilisée. Pratique pour des objets coûteux dont on n'est pas sûr d'avoir besoin."
+  },
+  {
+    "id": "kotlin-e5",
+    "enonce": "Que fait le compilateur face à une fonction `inline` ?",
+    "choix": ["il copie le corps de la fonction directement au site d'appel", "il l'exécute sur un serveur distant", "il interdit qu'elle prenne des paramètres", "il la convertit en classe abstraite"],
+    "bonneReponse": 0,
+    "explication": "En insérant le corps à l'appel, `inline` évite la création d'objets pour les lambdas passées en argument, réduisant le coût des fonctions d'ordre supérieur. À réserver aux petites fonctions."
+  },
+  {
+    "id": "kotlin-e6",
+    "enonce": "Que permet un paramètre de type marqué `reified`, dans une fonction `inline` ?",
+    "choix": ["accéder au type générique réel pendant l'exécution", "rendre le type générique nullable par défaut", "convertir automatiquement le type en interface", "limiter le type générique aux seuls nombres"],
+    "bonneReponse": 0,
+    "explication": "Normalement, l'effacement de type (type erasure) de la JVM empêche de connaître `T` à l'exécution. Grâce à l'inlining, `reified` conserve cette information, autorisant `is T` ou `T::class`."
+  },
+  {
+    "id": "kotlin-e7",
+    "enonce": "Que renvoie la fonction de portée (scope function) `apply` ?",
+    "choix": ["l'objet receveur lui-même", "le résultat de la dernière expression du bloc", "toujours la valeur null", "un booléen indiquant le succès"],
+    "bonneReponse": 0,
+    "explication": "`apply` exécute le bloc avec `this` lié au receveur et renvoie ce receveur : idéal pour configurer un objet en chaîne. À l'inverse, `let` et `run` renvoient le résultat du bloc."
+  },
+  {
+    "id": "kotlin-e8",
+    "enonce": "Que représente le type `Nothing` en Kotlin ?",
+    "choix": ["un type sans aucune valeur, pour une fonction qui ne retourne jamais", "un alias du type `null`", "le type de retour par défaut de toute fonction", "un type ne contenant que la valeur zéro"],
+    "bonneReponse": 0,
+    "explication": "Une fonction renvoyant `Nothing` ne se termine jamais normalement (elle lève une exception ou boucle indéfiniment). Comme il est sous-type de tous les types, il s'intègre partout, par exemple après l'Elvis `?:`."
+  },
+  {
+    "id": "kotlin-e9",
+    "enonce": "Qu'est-ce que le « smart cast » (transtypage intelligent) ?",
+    "choix": ["la conversion automatique d'une variable après un test avec `is`", "un cast forcé qui ignore délibérément les erreurs de type", "la conversion d'un objet Kotlin vers du texte au format JSON", "le choix automatique du type le plus court parmi les possibles"],
+    "bonneReponse": 0,
+    "explication": "Après `if (x is String)`, le compilateur traite `x` comme un `String` dans le bloc, sans cast explicite. Cela ne marche que s'il peut garantir que la valeur n'a pas changé entre-temps."
+  },
+  {
+    "id": "kotlin-e10",
+    "enonce": "Que permet Kotlin Multiplatform (KMP) ?",
+    "choix": ["partager une base de code commune entre plusieurs plateformes (JVM, JS, natif, iOS)", "exécuter du Kotlin uniquement dans le navigateur", "traduire automatiquement le code en plusieurs langues humaines", "compiler n'importe quel langage vers Kotlin"],
+    "bonneReponse": 0,
+    "explication": "KMP factorise la logique métier dans un module commun, tout en laissant chaque plateforme fournir son code spécifique (UI, API natives). Le mécanisme `expect`/`actual` relie le code commun aux implémentations propres à chaque cible."
+  }
+]

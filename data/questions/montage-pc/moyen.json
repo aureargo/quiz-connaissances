@@ -1,0 +1,72 @@
+[
+  {
+    "id": "montage-pc-m1",
+    "enonce": "Que garantit la certification « 80 PLUS » d'une alimentation ?",
+    "choix": ["une puissance d'au moins 80 watts", "une garantie d'au moins 80 mois", "un rendement d'au moins 80 %", "un bruit inférieur à 80 décibels"],
+    "bonneReponse": 2,
+    "explication": "Une alimentation 80 PLUS convertit en énergie utile au moins 80 % de l'électricité prélevée, le reste partant en chaleur, à 20, 50 et 100 % de sa charge. Les niveaux Bronze, Silver, Gold, Platinum et Titanium relèvent ce seuil jusqu'à plus de 90 %. Meilleur rendement = moins de chaleur, moins de bruit et une facture un peu plus légère."
+  },
+  {
+    "id": "montage-pc-m2",
+    "enonce": "Sur la plupart des cartes mères à quatre emplacements, où les fabricants conseillent-ils de placer deux barrettes de RAM ?",
+    "choix": ["en A2 et B2", "en A1 et A2", "en B1 et B2", "en A1 et B1"],
+    "bonneReponse": 0,
+    "explication": "Il faut d'abord une barrette par canal (A et B) pour profiter du double canal, ce qui écarte A1+A2 et B1+B2. Ensuite, A2 et B2 (en général le 2ᵉ et le 4ᵉ emplacement en partant du processeur) sont placés en bout de ligne de leur canal : le signal y est plus propre, ce qui aide à tenir les hautes fréquences. L'étiquetage peut varier : le manuel de la carte mère fait foi."
+  },
+  {
+    "id": "montage-pc-m3",
+    "enonce": "Quel connecteur alimente spécifiquement le processeur, en haut à gauche de la carte mère ?",
+    "choix": ["l'ATX 24 broches", "le SATA 15 broches", "le Molex 4 broches", "l'EPS 8 broches"],
+    "bonneReponse": 3,
+    "explication": "Le connecteur EPS 12 V à 8 broches (souvent sécable en 4+4) alimente le processeur via les VRM ; les cartes haut de gamme en ont parfois deux. Le gros 24 broches, sur le bord droit, alimente le reste de la carte mère. Attention : le câble PCIe 8 broches de la carte graphique lui ressemble, mais ses broches sont câblées autrement — ne jamais forcer."
+  },
+  {
+    "id": "montage-pc-m4",
+    "enonce": "Quel connecteur, capable de fournir jusqu'à 600 W, alimente de nombreuses cartes graphiques haut de gamme récentes ?",
+    "choix": ["le PCIe 8 broches", "le 12VHPWR", "l'EPS 8 broches", "le Molex 4 broches"],
+    "bonneReponse": 1,
+    "explication": "Le 12VHPWR (12 broches de puissance et 4 de détection) s'est généralisé en 2022 avec les GeForce RTX 4090. Des cas de connecteurs fondus, souvent mal enfoncés, ont conduit à une révision, le 12V-2x6, aux broches de détection raccourcies. Il doit être enfoncé jusqu'au déclic, sans pliure serrée près de la prise. Un PCIe 8 broches classique n'est prévu que pour 150 W."
+  },
+  {
+    "id": "montage-pc-m5",
+    "enonce": "Comment choisir la puissance de son alimentation ?",
+    "choix": ["prendre la puissance de la carte graphique seule", "choisir celle dont le ventilateur est le plus gros", "additionner les consommations et garder une marge", "prendre le double de la puissance de l'écran"],
+    "bonneReponse": 2,
+    "explication": "On additionne la consommation du processeur et de la carte graphique (les deux plus gourmands), une centaine de watts pour le reste, puis on garde une marge de sécurité : les cartes graphiques récentes connaissent des pics très brefs bien au-delà de leur consommation moyenne. Le fabricant de la carte graphique indique d'ailleurs une puissance d'alimentation recommandée."
+  },
+  {
+    "id": "montage-pc-m6",
+    "enonce": "Dans un montage classique, comment orienter les ventilateurs du boîtier ?",
+    "choix": ["entrée à l'avant, sortie à l'arrière et en haut", "entrée à l'arrière, sortie à l'avant et en bas", "tous en entrée pour maximiser l'air frais", "tous en sortie pour chasser l'air chaud du boîtier"],
+    "bonneReponse": 0,
+    "explication": "L'air chaud monte : on aspire l'air frais par l'avant (et parfois le bas), et on l'évacue par l'arrière et le dessus. Deux petites flèches moulées sur le cadre du ventilateur indiquent le sens du flux et celui de rotation. En règle générale, l'air sort du côté où l'on voit les bras qui maintiennent le moteur."
+  },
+  {
+    "id": "montage-pc-m7",
+    "enonce": "À quoi correspondent les fins connecteurs « F_PANEL » d'une carte mère ?",
+    "choix": ["aux capteurs de température du processeur", "aux sondes de vitesse des ventilateurs", "aux haut-parleurs de la carte son", "aux boutons et voyants de la façade"],
+    "bonneReponse": 3,
+    "explication": "Le connecteur F_PANEL (ou JFP1) reçoit les petits fils du boîtier : bouton d'allumage (Power SW), bouton reset, voyants d'alimentation et d'activité du disque. Leur ordre est indiqué dans le manuel et souvent sérigraphié sur la carte. Seules les LED ont une polarité (+/−) ; un bouton branché à l'envers fonctionne quand même. Sans le Power SW, le PC ne peut tout simplement pas s'allumer."
+  },
+  {
+    "id": "montage-pc-m8",
+    "enonce": "Quel oubli classique fait grimper un processeur à plus de 90 °C juste après le montage ?",
+    "choix": ["brancher la RAM sur les mauvais emplacements", "laisser le film plastique sous le refroidisseur", "installer Windows sur un disque dur", "ne pas activer le profil XMP de la RAM"],
+    "bonneReponse": 1,
+    "explication": "La base des ventirads et des watercoolings est protégée par un film plastique, parfois transparent et donc facile à oublier. Laissé en place, il isole thermiquement le processeur, qui chauffe au point de ralentir, voire de s'éteindre. Autre suspect à vérifier : le ventilateur du processeur doit être branché sur le connecteur CPU_FAN de la carte mère."
+  },
+  {
+    "id": "montage-pc-m9",
+    "enonce": "Que signifie une alimentation « modulaire » ?",
+    "choix": ["elle se fixe à plusieurs endroits du boîtier", "elle s'empile en plusieurs blocs", "ses câbles se détachent selon les besoins", "elle fonctionne aussi sur batterie"],
+    "bonneReponse": 2,
+    "explication": "Sur une alimentation modulaire, les câbles se branchent et se débranchent côté alimentation : on n'installe que ceux dont on a besoin, ce qui facilite le rangement et améliore le flux d'air. Les modèles semi-modulaires gardent le 24 broches et l'EPS fixés à demeure. Une alimentation non modulaire laisse pendre tous ses câbles, utilisés ou non."
+  },
+  {
+    "id": "montage-pc-m10",
+    "enonce": "À quoi servent les entretoises (« standoffs ») vissées dans le boîtier sous la carte mère ?",
+    "choix": ["à éviter que la carte touche le châssis métallique", "à absorber les vibrations des ventilateurs", "à faire circuler l'air froid sous la carte", "à isoler la carte des ondes du Wi-Fi"],
+    "bonneReponse": 0,
+    "explication": "Les entretoises surélèvent la carte mère de quelques millimètres : sans elles, les soudures de sa face arrière toucheraient le châssis métallique et provoqueraient un court-circuit. Elles doivent correspondre exactement aux trous de la carte : une entretoise de trop, sous une zone sans trou, peut elle aussi créer un court-circuit. La plupart des boîtiers les ont préinstallées au format ATX."
+  }
+]

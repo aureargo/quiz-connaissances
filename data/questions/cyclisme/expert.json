@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cyclisme-e1",
+    "enonce": "Quel coureur a établi un record de l'heure resté mythique à Mexico en 1972 ?",
+    "choix": ["Jacques Anquetil", "Eddy Merckx", "Francesco Moser", "Fausto Coppi"],
+    "bonneReponse": 1,
+    "explication": "Merckx couvre 49,431 km en une heure, sur une piste en altitude où l'air est moins dense. Il décrira cet effort comme le plus dur de sa carrière."
+  },
+  {
+    "id": "cyclisme-e2",
+    "enonce": "En quelle année s'est courue la première édition du Tour de France ?",
+    "choix": ["1891", "1903", "1919", "1930"],
+    "bonneReponse": 1,
+    "explication": "Le journal L'Auto lance l'épreuve pour doper ses ventes : six étapes gigantesques, remportées au général par Maurice Garin."
+  },
+  {
+    "id": "cyclisme-e3",
+    "enonce": "Qui détient le record du nombre de victoires d'étapes sur le Tour de France ?",
+    "choix": ["Bernard Hinault", "André Darrigade", "Mark Cavendish", "Peter Sagan"],
+    "bonneReponse": 2,
+    "explication": "Le sprinteur britannique porte le record à 35 succès en 2024, dépassant les 34 victoires d'Eddy Merckx qui tenaient depuis 1975."
+  },
+  {
+    "id": "cyclisme-e4",
+    "enonce": "Quel coureur français était surnommé « le Blaireau » ?",
+    "choix": ["Bernard Hinault", "Laurent Fignon", "Raymond Poulidor", "Louison Bobet"],
+    "bonneReponse": 0,
+    "explication": "Le surnom salue son caractère combatif et teigneux. Hinault reste, en 1985, le dernier vainqueur français du Tour de France."
+  },
+  {
+    "id": "cyclisme-e5",
+    "enonce": "Sur quelle course les coureurs affrontent-ils la « trouée d'Arenberg » ?",
+    "choix": ["le Tour des Flandres", "Paris-Roubaix", "Liège-Bastogne-Liège", "le Tour de Lombardie"],
+    "bonneReponse": 1,
+    "explication": "Cette ligne droite pavée d'environ 2,3 km traverse une forêt du Nord et compte parmi les secteurs les plus redoutés, classés cinq étoiles."
+  },
+  {
+    "id": "cyclisme-e6",
+    "enonce": "Le Poggio constitue la dernière difficulté de quelle classique ?",
+    "choix": ["Milan-San Remo", "l'Amstel Gold Race", "la Flèche wallonne", "Gand-Wevelgem"],
+    "bonneReponse": 0,
+    "explication": "Cette petite bosse placée à quelques kilomètres de l'arrivée sert de rampe de lancement aux attaquants qui veulent éviter un sprint massif après près de 300 km de course."
+  },
+  {
+    "id": "cyclisme-e7",
+    "enonce": "Combien de coureurs ont remporté les cinq Monuments au cours de leur carrière ?",
+    "choix": ["un", "trois", "six", "onze"],
+    "bonneReponse": 1,
+    "explication": "Seuls Rik Van Looy, Eddy Merckx et Roger De Vlaeminck y sont parvenus, tous trois belges et actifs entre les années 1950 et 1970."
+  },
+  {
+    "id": "cyclisme-e8",
+    "enonce": "Quelle est la route la plus haute jamais empruntée par le Tour de France ?",
+    "choix": ["le col du Galibier", "la cime de la Bonette", "le col de l'Iseran", "le col d'Agnel"],
+    "bonneReponse": 1,
+    "explication": "La boucle sommitale de la Bonette culmine à 2 802 m. Ce n'est toutefois pas un col au sens strict : le plus haut col franchi par le Tour reste l'Iseran, à 2 770 m."
+  },
+  {
+    "id": "cyclisme-e9",
+    "enonce": "Qu'est-ce qui caractérise le début d'une course de keirin sur piste ?",
+    "choix": ["un départ arrêté sans aucun échauffement", "un départ lancé derrière un engin motorisé", "un départ décalé toutes les trente secondes", "un départ donné par équipes de quatre"],
+    "bonneReponse": 1,
+    "explication": "Les coureurs suivent d'abord un meneur d'allure motorisé qui accélère progressivement, puis s'écarte à environ 600 m de la fin pour laisser place au sprint."
+  },
+  {
+    "id": "cyclisme-e10",
+    "enonce": "Quelle classique porte le surnom de « la Doyenne » ?",
+    "choix": ["le Tour de Lombardie", "Paris-Tours", "Liège-Bastogne-Liège", "le Tour des Flandres"],
+    "bonneReponse": 2,
+    "explication": "Créée en 1892, elle est la plus ancienne des classiques encore disputées. Ses côtes ardennaises en font une course de puncheurs et de grimpeurs."
+  }
+]

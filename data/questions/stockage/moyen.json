@@ -1,0 +1,72 @@
+[
+  {
+    "id": "stockage-m1",
+    "enonce": "Pourquoi un disque vendu « 1 To » n'affiche-t-il qu'environ 931 Go sous Windows ?",
+    "choix": ["le fabricant compte en base 10, Windows en base 2", "le système de fichiers occupe 7 % du disque", "une partie est réservée aux secteurs défectueux", "Windows cache l'espace réservé à la corbeille"],
+    "bonneReponse": 0,
+    "explication": "Pour le fabricant, 1 To = 10¹² octets. Windows, lui, divise par 2³⁰ = 1 073 741 824 octets pour obtenir ses « Go » : 10¹² ÷ 2³⁰ ≈ 931. Rien ne manque ! Il s'agit en réalité de gibioctets (Gio), une unité binaire normalisée. Depuis 2009, macOS compte lui aussi en base 10 et affiche bien 1 To."
+  },
+  {
+    "id": "stockage-m2",
+    "enonce": "Quel protocole, conçu pour la mémoire flash, fait passer les SSD rapides par le bus PCI Express ?",
+    "choix": ["AHCI", "IDE", "NVMe", "SCSI"],
+    "bonneReponse": 2,
+    "explication": "NVMe (Non-Volatile Memory Express, 2011) remplace l'AHCI, pensé pour les disques durs : l'AHCI ne gère qu'une file de 32 commandes, NVMe jusqu'à 65 535 files de 65 536 commandes chacune. Cette parallélisation, combinée au PCIe, permet aux SSD NVMe de dépasser les 7 000 Mo/s, contre environ 550 Mo/s en SATA."
+  },
+  {
+    "id": "stockage-m3",
+    "enonce": "Quel est le débit maximal théorique d'une interface SATA III ?",
+    "choix": ["1,5 Gbit/s", "6 Gbit/s", "40 Gbit/s", "480 Mbit/s"],
+    "bonneReponse": 1,
+    "explication": "Le SATA III (2009) plafonne à 6 Gbit/s, soit environ 600 Mo/s utiles après encodage — et autour de 550 Mo/s en pratique. Les SATA I et II offraient 1,5 et 3 Gbit/s. Ce plafond est devenu un goulot d'étranglement pour les SSD, d'où le passage au NVMe sur PCIe."
+  },
+  {
+    "id": "stockage-m4",
+    "enonce": "À quoi sert la commande « TRIM » sur un SSD ?",
+    "choix": ["à réduire la vitesse du SSD pour limiter la chauffe", "à découper le disque en partitions de taille égale", "à compresser les fichiers rarement ouverts", "à signaler au SSD les blocs qu'il peut effacer"],
+    "bonneReponse": 3,
+    "explication": "Quand on supprime un fichier, le système se contente de le marquer comme libre : sans TRIM, le SSD croit ces données toujours valides et continue de les recopier. TRIM lui indique quelles zones sont devenues inutiles, pour qu'il les efface à l'avance, au calme. Résultat : des écritures plus rapides et moins d'usure. Windows l'utilise automatiquement depuis Windows 7."
+  },
+  {
+    "id": "stockage-m5",
+    "enonce": "Pourquoi est-il inutile, voire déconseillé, de défragmenter un SSD ?",
+    "choix": ["il accède aussi vite à toutes ses cellules", "ses fichiers ne peuvent jamais être fragmentés", "Windows le lui interdit purement et simplement", "il se défragmente seul à chaque démarrage"],
+    "bonneReponse": 0,
+    "explication": "La défragmentation regroupe les morceaux d'un fichier pour limiter les déplacements de la tête d'un disque dur. Un SSD n'a pas de tête : il lit n'importe quelle cellule aussi vite. Défragmenter n'apporterait rien et userait la mémoire flash par des écritures superflues. L'outil « Optimiser les lecteurs » de Windows se contente d'ailleurs d'envoyer un TRIM aux SSD."
+  },
+  {
+    "id": "stockage-m6",
+    "enonce": "Que fait une grappe de disques en « RAID 1 » ?",
+    "choix": ["elle répartit les données sur deux disques pour aller plus vite", "elle compresse les données avant de les écrire", "elle copie les données à l'identique sur deux disques", "elle réserve un disque entier aux sauvegardes"],
+    "bonneReponse": 2,
+    "explication": "Le RAID 1, ou « miroir », écrit chaque donnée sur deux disques à la fois : si l'un tombe en panne, l'autre prend le relais sans perte. La répartition pour la vitesse, c'est le RAID 0, qui perd tout le volume si un seul disque lâche. Attention : un RAID n'est pas une sauvegarde, car une suppression accidentelle ou un rançongiciel sont recopiés instantanément sur le miroir."
+  },
+  {
+    "id": "stockage-m7",
+    "enonce": "Que désigne l'endurance « TBW » indiquée sur la fiche technique d'un SSD ?",
+    "choix": ["sa vitesse maximale en écriture continue", "le volume total garanti en écriture", "le temps moyen avant une panne mécanique", "la taille de son cache d'écriture rapide"],
+    "bonneReponse": 1,
+    "explication": "TBW signifie Terabytes Written : la quantité totale de données que le fabricant garantit de pouvoir écrire avant usure. Un SSD de 1 To affiche souvent 600 TBW, soit plus de 160 Go écrits chaque jour pendant dix ans — bien au-delà d'un usage domestique. Le « temps moyen avant panne » est une autre donnée, le MTBF."
+  },
+  {
+    "id": "stockage-m8",
+    "enonce": "Combien de bits une cellule de mémoire flash de type TLC stocke-t-elle ?",
+    "choix": ["1", "2", "3", "4"],
+    "bonneReponse": 2,
+    "explication": "SLC = 1 bit par cellule, MLC = 2, TLC (Triple-Level Cell) = 3, QLC = 4. Plus on stocke de bits par cellule, plus il faut distinguer de niveaux de charge électrique (8 pour un TLC) : la densité augmente et le prix baisse, mais l'endurance et la vitesse diminuent. Le TLC est aujourd'hui le standard des SSD grand public."
+  },
+  {
+    "id": "stockage-m9",
+    "enonce": "Qu'est-ce qu'un « NAS » ?",
+    "choix": ["un disque externe branché en USB", "un format de partition pour gros disques", "un SSD réservé aux serveurs d'entreprise", "un boîtier de stockage partagé sur le réseau"],
+    "bonneReponse": 3,
+    "explication": "Un NAS (Network Attached Storage) est un petit serveur rempli de disques, branché au réseau local : tous les appareils de la maison ou du bureau peuvent y lire et écrire. Il sert de stockage commun, de serveur multimédia ou de cible de sauvegarde, et combine souvent ses disques en RAID. Synology et QNAP en sont des marques connues."
+  },
+  {
+    "id": "stockage-m10",
+    "enonce": "Pourquoi une clé USB formatée en FAT32 refuse-t-elle un fichier vidéo de 5 Go ?",
+    "choix": ["FAT32 limite chaque fichier à 4 Go", "FAT32 n'accepte pas les fichiers vidéo", "la clé doit d'abord être défragmentée", "FAT32 limite la clé entière à 4 Go"],
+    "bonneReponse": 0,
+    "explication": "FAT32 code la taille de chaque fichier sur 32 bits : impossible de dépasser 4 Gio moins un octet, quelle que soit la place libre. Le volume, lui, peut être bien plus grand. La solution : formater en exFAT (lisible par Windows, macOS et Linux) ou en NTFS. FAT32 reste apprécié pour sa compatibilité universelle (consoles, autoradios, téléviseurs)."
+  }
+]

@@ -2,13 +2,16 @@ package quiz
 
 import (
 	"encoding/json" // encodage/décodage JSON
+	"errors"        // errors.Is : comparer une erreur à un cas connu
 	"fmt"           // formatage de chaînes (ici pour des messages d'erreur)
+	"io/fs"         // fs.ErrNotExist : "le fichier n'existe pas"
 	"log"           // journalisation (erreurs de lecture à la demande)
 	"os"            // accès au système de fichiers
 	"path/filepath" // construction de chemins (portable Windows/Linux/Mac)
 	"slices"        // slices.Contains, slices.Index, slices.SortStableFunc
 	"strings"       // manipulation de chaînes (suffixe ".json")
-	"sync"          // sync.Mutex : protège le cache des accès concurrents
+	"sync"          // sync.RWMutex : protège le cache des accès concurrents
+	"time"          // time.Time : date de modification d'un fichier
 )
 
 // Un "niveau" est tout simplement un fichier `<niveau>.json` déposé dans le
@@ -29,6 +32,18 @@ var ordrePrefere = []string{"facile", "moyen", "expert"}
 // Ce nom est RÉSERVÉ : un éventuel fichier `tous.json` serait ignoré.
 const NiveauTous = "tous"
 
+// entreeCache est ce qu'on garde en mémoire pour UN fichier de niveau : ses
+// questions, et la date de modification du fichier AU MOMENT DE LA LECTURE.
+//
+// Pourquoi mémoriser cette date ? Pour détecter qu'on a édité le fichier depuis.
+// Sans elle, le cache ne s'invaliderait jamais et le serveur donnerait un
+// comportement incohérent : un niveau déjà joué garderait l'ancien contenu,
+// tandis qu'un niveau pas encore joué servirait le nouveau.
+type entreeCache struct {
+	questions []Question
+	modifie   time.Time
+}
+
 // Store contient les données du quiz. Au démarrage, on ne charge QUE les
 // métadonnées : la liste des thèmes (themes.json) et, pour chacun, la liste de
 // ses niveaux DISPONIBLES — déduite des seuls NOMS de fichiers, SANS lire leur
@@ -38,19 +53,33 @@ const NiveauTous = "tous"
 // Pourquoi ? On évite de charger en mémoire des centaines de questions dont le
 // joueur ne jouera qu'une petite partie. C'est un compromis : on perd la
 // validation du contenu au démarrage (un JSON mal formé n'est détecté qu'à
-// l'ouverture du quiz concerné), au profit d'un boot plus léger.
+// l'ouverture du quiz concerné) au profit d'un boot plus léger. Le validateur
+// (donnees_test.go) comble ce trou hors exécution.
+//
+// 🔥 Rechargement à chaud, et sa limite : MODIFIER un fichier de questions est
+// pris en compte sans redémarrer (voir entreeCache). En revanche, AJOUTER ou
+// SUPPRIMER un fichier de niveau — ou un thème — demande un redémarrage, car la
+// liste des niveaux est figée au boot. Frontière assumée : relire le contenu
+// d'un fichier coûte un os.Stat, re-scanner tous les dossiers à chaque requête
+// coûterait bien plus.
 type Store struct {
 	dataDir string  // racine des données : sert à relire les fichiers à la demande
 	themes  []Theme // la liste des thèmes, dans l'ordre du fichier
 
 	// mu protège `cache`. Les handlers HTTP s'exécutent EN PARALLÈLE (une
 	// goroutine par requête) : lire et écrire la map sans verrou provoquerait
-	// une "data race". sync.Mutex garantit qu'un seul accès à la fois.
-	mu sync.Mutex
+	// une "data race".
+	//
+	// RWMutex plutôt que Mutex : il distingue les LECTEURS (RLock, plusieurs à
+	// la fois) des ÉCRIVAINS (Lock, un seul, exclusif). Or ici on lit le cache
+	// beaucoup plus souvent qu'on ne l'écrit — une fois le fichier chargé, tous
+	// les accès suivants sont des lectures.
+	mu sync.RWMutex
 
-	// cache des questions DÉJÀ lues : themeID -> niveau -> questions.
-	// Rempli paresseusement (au 1er accès), pas au démarrage.
-	cache map[string]map[string][]Question
+	// cache des questions DÉJÀ lues : themeID -> niveau -> entrée.
+	// Rempli paresseusement (au 1er accès), pas au démarrage. Ne contient que
+	// des niveaux RÉELS : "tous" est recomposé à la volée (cf. Questions).
+	cache map[string]map[string]entreeCache
 }
 
 // NewStore lit le dossier `dataDir` et construit un Store prêt à l'emploi.
@@ -61,10 +90,10 @@ type Store struct {
 func NewStore(dataDir string) (*Store, error) {
 	s := &Store{
 		dataDir: dataDir,
-		cache:   make(map[string]map[string][]Question),
+		cache:   make(map[string]map[string]entreeCache),
 	}
 
-	// 1) Charger la liste des thèmes depuis data/themes.json.
+	// 1) Charger la liste des thèmes depuis <dataDir>/themes.json.
 	themesPath := filepath.Join(dataDir, "themes.json")
 	if err := lireJSON(themesPath, &s.themes); err != nil {
 		// fmt.Errorf avec %w "emballe" l'erreur d'origine : on garde le détail
@@ -72,9 +101,14 @@ func NewStore(dataDir string) (*Store, error) {
 		return nil, fmt.Errorf("chargement des thèmes : %w", err)
 	}
 
-	// 2) Pour chaque thème, déterminer ses niveaux disponibles à partir des
-	//    seuls NOMS de fichiers dans data/questions/<id>/ (aucune lecture de
-	//    contenu). On itère avec l'index `i` pour MODIFIER l'élément réel du
+	// 2) Appliquer l'ordre des catégories (fichier optionnel, voir ordonnerParCategorie).
+	if err := s.ordonnerParCategorie(dataDir); err != nil {
+		return nil, err
+	}
+
+	// 3) Pour chaque thème, déterminer ses niveaux disponibles à partir des
+	//    seuls NOMS de fichiers dans <dataDir>/questions/<id>/ (aucune lecture
+	//    de contenu). On itère avec l'index `i` pour MODIFIER l'élément réel du
 	//    slice (une boucle `for _, t := range` n'en donnerait qu'une copie).
 	for i := range s.themes {
 		theme := &s.themes[i]
@@ -89,8 +123,8 @@ func NewStore(dataDir string) (*Store, error) {
 		// démarrer pour la rendre visible tout de suite (cf. CLAUDE.md).
 		if len(reels) == 0 {
 			return nil, fmt.Errorf(
-				"le thème %q n'a aucun fichier de questions (attendu : data/questions/%s/<niveau>.json)",
-				theme.ID, theme.ID,
+				"le thème %q n'a aucun fichier de questions (attendu : %s/questions/%s/<niveau>.json)",
+				theme.ID, dataDir, theme.ID,
 			)
 		}
 
@@ -106,10 +140,55 @@ func NewStore(dataDir string) (*Store, error) {
 	return s, nil
 }
 
-// niveauxReels scanne data/questions/<id>/ et renvoie les niveaux RÉELS présents :
-// CHAQUE fichier `<niveau>.json` devient un niveau, quel que soit son nom. On NE
-// LIT PAS le contenu des fichiers : seuls leurs noms nous intéressent ici. Le
-// résultat est trié pour un affichage stable (voir trierNiveaux).
+// ordonnerParCategorie trie les thèmes selon l'ordre déclaré dans
+// <dataDir>/categories.json, et refuse une catégorie non déclarée.
+//
+// Pourquoi ce fichier ? La `categorie` d'un thème est une chaîne libre, répétée
+// dans chaque entrée de themes.json. Sans liste de référence :
+//   - l'ordre d'affichage des catégories dépendait de l'ordre d'apparition des
+//     thèmes dans le fichier, donc du hasard des ajouts ;
+//   - une faute de frappe ("Programation") créait silencieusement une catégorie
+//     fantôme contenant un seul thème, sans que rien ne le signale.
+//
+// Le fichier est OPTIONNEL : sans lui, on garde l'ancien comportement (ordre
+// d'apparition). Mais s'il existe, il fait autorité et toute catégorie absente
+// de la liste fait échouer le démarrage — c'est là qu'on attrape les fautes de
+// frappe (même logique de fail-fast qu'un thème sans questions).
+func (s *Store) ordonnerParCategorie(dataDir string) error {
+	var ordre []string
+
+	chemin := filepath.Join(dataDir, "categories.json")
+	if err := lireJSON(chemin, &ordre); err != nil {
+		// errors.Is déballe la chaîne d'erreurs pour retrouver la cause
+		// profonde. Fichier absent = cas normal, on ne trie simplement pas.
+		if errors.Is(err, fs.ErrNotExist) {
+			return nil
+		}
+		return fmt.Errorf("chargement des catégories : %w", err)
+	}
+
+	// Vérification AVANT tri : toute catégorie utilisée doit être déclarée.
+	for _, theme := range s.themes {
+		if !slices.Contains(ordre, theme.Categorie) {
+			return fmt.Errorf(
+				"le thème %q utilise la catégorie %q, absente de %s (faute de frappe ?)",
+				theme.ID, theme.Categorie, chemin,
+			)
+		}
+	}
+
+	// SortStableFunc : les thèmes d'une même catégorie gardent leur ordre
+	// d'origine dans themes.json. Seules les catégories sont réordonnées.
+	slices.SortStableFunc(s.themes, func(a, b Theme) int {
+		return slices.Index(ordre, a.Categorie) - slices.Index(ordre, b.Categorie)
+	})
+	return nil
+}
+
+// niveauxReels scanne <dataDir>/questions/<id>/ et renvoie les niveaux RÉELS
+// présents : CHAQUE fichier `<niveau>.json` devient un niveau, quel que soit son
+// nom. On NE LIT PAS le contenu des fichiers : seuls leurs noms nous intéressent
+// ici. Le résultat est trié pour un affichage stable (voir trierNiveaux).
 func niveauxReels(dataDir, themeID string) ([]string, error) {
 	dossier := filepath.Join(dataDir, "questions", themeID)
 
@@ -162,9 +241,18 @@ func rangNiveau(nom string) int {
 }
 
 // Themes renvoie la liste de tous les thèmes.
-// (Méthode "getter" : permet de lire un champ privé depuis l'extérieur.)
+//
+// On renvoie une COPIE PROFONDE (le slice de thèmes ET, pour chacun, son slice
+// de niveaux). Renvoyer directement `s.themes` laisserait l'appelant modifier
+// les données internes du store depuis l'extérieur — un `themes[0].Nom = "…"`
+// suffirait. Un getter ne doit pas ouvrir une porte dérobée en écriture.
 func (s *Store) Themes() []Theme {
-	return s.themes
+	copies := make([]Theme, len(s.themes))
+	for i, theme := range s.themes {
+		theme.Niveaux = slices.Clone(theme.Niveaux)
+		copies[i] = theme
+	}
+	return copies
 }
 
 // ResumesThemes renvoie la liste des thèmes en version LÉGÈRE : chaque thème
@@ -188,6 +276,7 @@ func (s *Store) ResumesThemes() []Theme {
 func (s *Store) Theme(id string) (Theme, bool) {
 	for _, theme := range s.themes {
 		if theme.ID == id {
+			theme.Niveaux = slices.Clone(theme.Niveaux) // même précaution que Themes()
 			return theme, true
 		}
 	}
@@ -206,63 +295,99 @@ func (s *Store) Questions(themeID, niveau string) ([]Question, bool) {
 		return nil, false
 	}
 
-	// Verrou : on s'apprête à lire/écrire le cache, partagé entre goroutines.
-	// defer s.mu.Unlock() garantit le déverrouillage quel que soit le chemin de
-	// sortie de la fonction.
-	s.mu.Lock()
-	defer s.mu.Unlock()
-
-	// Déjà en cache ? On renvoie directement.
-	if questions, ok := s.cache[themeID][niveau]; ok {
+	// Cas simple : un niveau réel = un fichier.
+	if niveau != NiveauTous {
+		questions, err := s.niveauReel(themeID, niveau)
+		if err != nil {
+			// Fichier illisible ou JSON mal formé : on log côté serveur et on
+			// signale "pas de questions" au handler (qui renverra un 404).
+			log.Printf("lecture des questions %q/%s : %v", themeID, niveau, err)
+			return nil, false
+		}
 		return questions, true
 	}
 
-	// Sinon, on lit le(s) fichier(s) MAINTENANT (lecture paresseuse).
-	questions, err := s.lireNiveau(themeID, niveau)
-	if err != nil {
-		// Fichier illisible ou JSON mal formé : on log côté serveur et on
-		// signale "pas de questions" au handler (qui renverra une erreur HTTP).
-		log.Printf("lecture des questions %q/%s : %v", themeID, niveau, err)
-		return nil, false
-	}
-
-	// Mémorisation pour ne pas relire le disque aux prochaines parties.
-	if s.cache[themeID] == nil {
-		s.cache[themeID] = make(map[string][]Question)
-	}
-	s.cache[themeID][niveau] = questions
-	return questions, true
-}
-
-// lireNiveau lit les questions d'un niveau DEPUIS LE DISQUE. Pour le niveau
-// synthétique "tous", il lit et concatène tous les niveaux réels du thème, dans
-// l'ordre renvoyé par niveauxReels. (Le mélange final est fait côté frontend.)
-func (s *Store) lireNiveau(themeID, niveau string) ([]Question, error) {
-	if niveau != NiveauTous {
-		chemin := filepath.Join(s.dataDir, "questions", themeID, niveau+".json")
-		var questions []Question
-		if err := lireJSON(chemin, &questions); err != nil {
-			return nil, err
-		}
-		return questions, nil
-	}
-
-	// "tous" : on relit la liste des niveaux réels (ceux qui existent vraiment
-	// sur le disque) puis on concatène leurs questions.
-	reels, err := niveauxReels(s.dataDir, themeID)
-	if err != nil {
-		return nil, err
-	}
+	// Niveau synthétique "tous" : on concatène les niveaux RÉELS du thème, en
+	// passant par niveauReel — donc en RÉUTILISANT le cache de chacun.
+	//
+	// Deux choses à noter :
+	//  1. on s'appuie sur theme.Niveaux (connu depuis le boot) au lieu de
+	//     re-scanner le dossier : une seule source de vérité ;
+	//  2. on ne met PAS "tous" en cache. Le recomposer ne fait que recopier des
+	//     en-têtes de struct (le TEXTE des questions, lui, reste partagé avec
+	//     le cache des niveaux réels) : c'est négligeable, alors que le mettre
+	//     en cache dupliquerait vraiment tout le contenu en mémoire.
 	var toutes []Question
-	for _, n := range reels {
-		chemin := filepath.Join(s.dataDir, "questions", themeID, n+".json")
-		var questions []Question
-		if err := lireJSON(chemin, &questions); err != nil {
-			return nil, err
+	for _, n := range theme.Niveaux {
+		if n == NiveauTous {
+			continue // on n'agrège pas le niveau synthétique dans lui-même
+		}
+		questions, err := s.niveauReel(themeID, n)
+		if err != nil {
+			log.Printf("lecture des questions %q/%s (pour %q) : %v", themeID, n, NiveauTous, err)
+			return nil, false
 		}
 		toutes = append(toutes, questions...)
 	}
-	return toutes, nil
+	return toutes, true
+}
+
+// niveauReel renvoie les questions d'UN niveau réel, depuis le cache s'il est à
+// jour, sinon depuis le disque.
+//
+// ⚠️ Point important : la lecture du fichier se fait EN DEHORS du verrou. Tenir
+// le mutex pendant un os.ReadFile + json.Unmarshal sérialiserait toutes les
+// requêtes du serveur, même celles portant sur d'autres thèmes. On ne verrouille
+// donc que les accès à la map (depuisCache / versCache), qui durent quelques
+// nanosecondes.
+//
+// Contrepartie assumée : deux goroutines demandant le même niveau au même
+// instant peuvent lire le fichier chacune de leur côté. C'est sans danger — la
+// lecture est idempotente, elles écrivent la même chose — et ça reste bien plus
+// rare que le gain obtenu.
+func (s *Store) niveauReel(themeID, niveau string) ([]Question, error) {
+	chemin := filepath.Join(s.dataDir, "questions", themeID, niveau+".json")
+
+	// os.Stat lit les MÉTADONNÉES du fichier (dont sa date de modification)
+	// sans en lire le contenu : c'est très peu coûteux comparé à une lecture.
+	infos, err := os.Stat(chemin)
+	if err != nil {
+		return nil, err
+	}
+
+	// Cache valide = présent ET pas plus vieux que le fichier sur le disque.
+	if entree, ok := s.depuisCache(themeID, niveau); ok && entree.modifie.Equal(infos.ModTime()) {
+		return entree.questions, nil
+	}
+
+	var questions []Question
+	if err := lireJSON(chemin, &questions); err != nil {
+		return nil, err
+	}
+
+	s.versCache(themeID, niveau, entreeCache{questions: questions, modifie: infos.ModTime()})
+	return questions, nil
+}
+
+// depuisCache lit une entrée du cache sous verrou PARTAGÉ (RLock) : plusieurs
+// goroutines peuvent le faire en même temps sans se bloquer.
+func (s *Store) depuisCache(themeID, niveau string) (entreeCache, bool) {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+
+	entree, ok := s.cache[themeID][niveau]
+	return entree, ok
+}
+
+// versCache écrit une entrée dans le cache sous verrou EXCLUSIF (Lock).
+func (s *Store) versCache(themeID, niveau string, entree entreeCache) {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+	if s.cache[themeID] == nil {
+		s.cache[themeID] = make(map[string]entreeCache)
+	}
+	s.cache[themeID][niveau] = entree
 }
 
 // lireJSON est une petite fonction utilitaire (privée) : elle lit un fichier

@@ -27,3 +27,7 @@ Thumbs.db
 .vscode/*
 !.vscode/extensions.json
 .idea/
+
+# === Notes personnelles ===
+# Liste d'idées de thèmes (brouillon de travail, non versionné)
+IDEES_THEMES.md

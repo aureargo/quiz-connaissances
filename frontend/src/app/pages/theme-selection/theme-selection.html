@@ -25,29 +25,79 @@
     <p class="accueil__info accueil__info--erreur">⚠️ {{ erreur() }}</p>
   }
 
-  <!-- État : données chargées → on affiche les thèmes par catégorie -->
+  <!-- État : données chargées -->
   @else {
-    @for (groupe of themesParCategorie(); track groupe.categorie) {
-      <div class="categorie">
-        <h2 class="categorie__titre">{{ groupe.categorie }}</h2>
+    <!-- Champ de recherche. (input) se déclenche à CHAQUE lettre ajoutée ou
+         effacée : on recopie la valeur dans le signal `recherche`, et tout le
+         reste (filtrage, classement, affichage) en découle automatiquement. -->
+    <div class="recherche">
+      <span class="recherche__icone" aria-hidden="true">🔍</span>
+      <input
+        #champ
+        class="recherche__champ"
+        type="search"
+        placeholder="Rechercher un thème… (ex : python, échecs, sciences)"
+        aria-label="Rechercher un thème"
+        autocomplete="off"
+        [value]="recherche()"
+        (input)="recherche.set(champ.value)"
+        (keydown.enter)="ouvrirPremierResultat()"
+        (keydown.escape)="effacerRecherche()" />
+    </div>
 
-        <div class="grille-themes">
-          @for (theme of groupe.themes; track theme.id) {
-            <!-- Toute la carte est un LIEN vers la sous-page du thème
-                 (/themes/<id>). C'est là qu'on choisira le niveau et qu'on
-                 chargera ses questionnaires — pas dès l'accueil. -->
-            <a
-              class="carte-theme"
-              [routerLink]="['/themes', theme.id]"
-              [attr.aria-label]="'Ouvrir le thème ' + theme.nom">
-              <span class="carte-theme__emoji">{{ theme.emoji }}</span>
-              <span class="carte-theme__nom">{{ theme.nom }}</span>
-              <span class="carte-theme__desc">{{ theme.description }}</span>
-              <span class="carte-theme__cta">Choisir un niveau →</span>
-            </a>
+    @if (rechercheActive()) {
+      <!-- Recherche en cours → UNIQUEMENT les thèmes correspondants, en haut,
+           du plus pertinent au moins pertinent (sans regroupement). -->
+      <div class="categorie">
+        <h2 class="categorie__titre" aria-live="polite">
+          {{ resultats().length }} résultat{{ resultats().length > 1 ? 's' : '' }}
+          @if (resultats().length > 0) {
+            <span class="categorie__astuce">— Entrée pour ouvrir le premier</span>
           }
-        </div>
+        </h2>
+
+        @if (resultats().length > 0) {
+          <div class="grille-themes">
+            @for (theme of resultats(); track theme.id) {
+              <ng-container *ngTemplateOutlet="carte; context: { $implicit: theme }" />
+            }
+          </div>
+        } @else {
+          <p class="accueil__info">Aucun thème ne correspond à « {{ recherche().trim() }} ».</p>
+        }
       </div>
+    } @else {
+      <!-- Pas de recherche → tous les thèmes, regroupés par catégorie. -->
+      @for (groupe of themesParCategorie(); track groupe.categorie) {
+        <div class="categorie">
+          <h2 class="categorie__titre">{{ groupe.categorie }}</h2>
+
+          <div class="grille-themes">
+            @for (theme of groupe.themes; track theme.id) {
+              <ng-container *ngTemplateOutlet="carte; context: { $implicit: theme }" />
+            }
+          </div>
+        </div>
+      }
     }
   }
 </section>
+
+<!-- Modèle d'UNE carte de thème, réutilisé par les deux vues ci-dessus
+     (résultats de recherche et catégories) grâce à ngTemplateOutlet.
+     `let-theme` récupère la valeur passée en `$implicit` dans le contexte.
+
+     Toute la carte est un LIEN vers la sous-page du thème (/themes/<id>).
+     C'est là qu'on choisira le niveau et qu'on chargera ses questionnaires —
+     pas dès l'accueil. -->
+<ng-template #carte let-theme>
+  <a
+    class="carte-theme"
+    [routerLink]="['/themes', theme.id]"
+    [attr.aria-label]="'Ouvrir le thème ' + theme.nom">
+    <span class="carte-theme__emoji">{{ theme.emoji }}</span>
+    <span class="carte-theme__nom">{{ theme.nom }}</span>
+    <span class="carte-theme__desc">{{ theme.description }}</span>
+    <span class="carte-theme__cta">Choisir un niveau →</span>
+  </a>
+</ng-template>

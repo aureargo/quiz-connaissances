@@ -1,0 +1,72 @@
+[
+  {
+    "id": "node-m1",
+    "enonce": "Que signifie la contrainte de version `^1.4.2` dans `package.json` ?",
+    "choix": ["toute version 1.4.x supérieure ou égale à 1.4.2", "exactement la version 1.4.2, sans exception", "toute version 1.x.x supérieure ou égale à 1.4.2", "la toute dernière version publiée du paquet"],
+    "bonneReponse": 2,
+    "explication": "Le versionnement sémantique s'écrit majeure.mineure.correctif. Le `^` accepte les nouvelles versions mineures et correctives (jusqu'à 2.0.0 exclu), le `~` seulement les correctifs (1.4.x)."
+  },
+  {
+    "id": "node-m2",
+    "enonce": "Quelle différence entre `dependencies` et `devDependencies` ?",
+    "choix": ["les dependencies ne sont installées que sur le serveur de production", "les devDependencies ne servent qu'au développement, comme les outils de test", "les devDependencies sont téléchargées depuis un autre registre", "les devDependencies sont les versions bêta des dépendances du projet"],
+    "bonneReponse": 1,
+    "explication": "`npm install --save-dev vitest` ajoute un outil utile pour développer, tester ou compiler, mais pas pour faire tourner l'application. En production, `npm install --omit=dev` les ignore."
+  },
+  {
+    "id": "node-m3",
+    "enonce": "Comment active-t-on les modules ES (`import`/`export`) dans un projet Node.js ?",
+    "choix": ["en plaçant le code dans un dossier `esm/`", "avec `\"type\": \"module\"` dans package.json", "en installant le paquet npm `es-modules`", "avec l'option `--es6` à chaque lancement"],
+    "bonneReponse": 1,
+    "explication": "Avec ce champ, les fichiers `.js` du projet sont traités comme des modules ES. On peut aussi forcer le format fichier par fichier : extension `.mjs` pour un module ES, `.cjs` pour du CommonJS."
+  },
+  {
+    "id": "node-m4",
+    "enonce": "À quoi sert le fichier `package-lock.json` ?",
+    "choix": ["à empêcher la publication du paquet sur npm", "à lister les paquets à ne jamais mettre à jour", "à figer l'arbre exact des versions installées", "à verrouiller le fichier contre les modifications"],
+    "bonneReponse": 2,
+    "explication": "Il fixe la version précise de chaque dépendance, y compris indirecte. Versionné, il garantit des installations identiques partout ; `npm ci` s'en sert strictement, ce qui est idéal en intégration continue."
+  },
+  {
+    "id": "node-m5",
+    "enonce": "Que se passe-t-il si un `EventEmitter` émet `'error'` sans qu'aucun écouteur ne soit enregistré ?",
+    "choix": ["l'erreur est levée et fait planter le processus", "l'événement est remis en file pour plus tard", "l'erreur est écrite dans un fichier de log", "l'événement est ignoré en silence"],
+    "bonneReponse": 0,
+    "explication": "L'événement `'error'` est traité à part : sans écouteur, Node.js lève l'erreur. Il faut donc toujours écouter `'error'` sur les flux, sockets et autres émetteurs."
+  },
+  {
+    "id": "node-m6",
+    "enonce": "Quel module permet d'exécuter du JavaScript gourmand en calcul en parallèle, dans le même processus ?",
+    "choix": ["worker_threads", "events", "cluster", "child_process"],
+    "bonneReponse": 0,
+    "explication": "Chaque worker a sa propre instance de V8 et sa propre boucle d'événements ; les échanges passent par des messages ou de la mémoire partagée. `child_process` et `cluster` créent, eux, des processus séparés."
+  },
+  {
+    "id": "node-m7",
+    "enonce": "Pourquoi un long calcul synchrone est-il dangereux dans un serveur Node.js ?",
+    "choix": ["il est interrompu automatiquement par Node.js après une seconde", "il consomme toute la mémoire allouée au processus", "il bloque la boucle d'événements, donc toutes les requêtes", "il désactive le ramasse-miettes jusqu'à sa fin"],
+    "bonneReponse": 2,
+    "explication": "Tout le JavaScript s'exécute sur un seul thread : pendant le calcul, aucune autre requête n'est traitée. On découpe le travail, on le confie à un worker, ou on préfère les versions asynchrones des fonctions (`fs.readFile` plutôt que `fs.readFileSync`)."
+  },
+  {
+    "id": "node-m8",
+    "enonce": "Qu'est-ce que la convention « error-first callback » ?",
+    "choix": ["le callback est appelé en priorité absolue dès qu'une erreur survient", "l'erreur est toujours transmise sous forme d'exception", "le premier argument du callback est l'erreur, ou null si tout va bien", "le callback d'erreur est passé avant celui de succès"],
+    "bonneReponse": 2,
+    "explication": "`fs.readFile('a.txt', (err, data) => { if (err) ... })`. Cette convention historique se convertit en promesse avec `util.promisify`, et la plupart des modules ont aujourd'hui une version à promesses, comme `fs/promises`."
+  },
+  {
+    "id": "node-m9",
+    "enonce": "Quel est l'intérêt des streams (flux) pour lire un gros fichier ?",
+    "choix": ["compresser automatiquement le fichier pendant sa lecture", "verrouiller le fichier pour éviter les écritures concurrentes", "lire le fichier plus vite en répartissant le travail sur plusieurs cœurs", "traiter les données morceau par morceau sans tout charger en mémoire"],
+    "bonneReponse": 3,
+    "explication": "`fs.createReadStream()` lit par blocs : on peut traiter un fichier de plusieurs gigaoctets avec quelques mégaoctets de mémoire. `stream.pipeline()` enchaîne lecture, transformation et écriture en gérant les erreurs."
+  },
+  {
+    "id": "node-m10",
+    "enonce": "Que fait la commande `npx` ?",
+    "choix": ["elle exécute l'outil d'un paquet sans l'installer globalement", "elle met à jour npm vers sa toute dernière version", "elle compile un projet TypeScript en JavaScript exécutable", "elle publie le paquet courant sur le registre public de npm"],
+    "bonneReponse": 0,
+    "explication": "`npx create-vite mon-app` lance l'outil, en le cherchant d'abord dans `node_modules/.bin`, puis en le téléchargeant temporairement si besoin. Plus besoin de polluer le système avec des installations globales."
+  }
+]

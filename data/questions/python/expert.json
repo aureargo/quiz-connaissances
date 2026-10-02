@@ -1,0 +1,72 @@
+[
+  {
+    "id": "python-e1",
+    "enonce": "Que limite le GIL (Global Interpreter Lock) de CPython ?",
+    "choix": ["L'exécution de bytecode Python à un seul thread à la fois", "La taille maximale de la mémoire allouable", "Le nombre de modules importables", "La profondeur de récursion autorisée"],
+    "bonneReponse": 0,
+    "explication": "Le GIL n'autorise qu'un thread à exécuter du bytecode Python à la fois, ce qui bride le multithreading sur du calcul pur. Le multiprocessing contourne cette limite."
+  },
+  {
+    "id": "python-e2",
+    "enonce": "À quoi sert la syntaxe `@decorateur` placée au-dessus d'une fonction ?",
+    "choix": ["À l'annoter en vue de la documentation générée", "À envelopper la fonction pour modifier son comportement", "À déclarer une méthode privée à l'intérieur d'une classe", "À forcer le type de la valeur retournée par la fonction"],
+    "bonneReponse": 1,
+    "explication": "Un décorateur est une fonction qui en reçoit une autre et renvoie une version enrichie. `@deco` au-dessus de `f` équivaut à `f = deco(f)`."
+  },
+  {
+    "id": "python-e3",
+    "enonce": "Que renvoie une fonction qui contient le mot-clé `yield` ?",
+    "choix": ["un générateur", "une liste", "une coroutine", "un tuple"],
+    "bonneReponse": 0,
+    "explication": "Dès qu'une fonction utilise `yield`, l'appeler renvoie un générateur qui produit ses valeurs à la demande, sans tout garder en mémoire (évaluation paresseuse)."
+  },
+  {
+    "id": "python-e4",
+    "enonce": "Dans une signature, à quoi sert le paramètre `**kwargs` ?",
+    "choix": ["À recevoir les arguments positionnels", "À recevoir les arguments nommés dans un dictionnaire", "À rendre les arguments obligatoires", "À imposer le type des arguments"],
+    "bonneReponse": 1,
+    "explication": "`**kwargs` collecte tous les arguments passés par mot-clé dans un dictionnaire. Son pendant `*args` collecte les arguments positionnels dans un tuple."
+  },
+  {
+    "id": "python-e5",
+    "enonce": "Pourquoi `def f(x, liste=[])` est-il un piège classique ?",
+    "choix": ["La liste par défaut est partagée entre tous les appels", "La syntaxe est invalide", "`liste` devient une variable globale", "Le second paramètre est ignoré"],
+    "bonneReponse": 0,
+    "explication": "La valeur par défaut n'est évaluée qu'une fois, à la définition. La même liste persiste donc d'un appel à l'autre. On écrit plutôt `liste=None` puis on l'initialise dans le corps."
+  },
+  {
+    "id": "python-e6",
+    "enonce": "Quelle différence entre une méthode `@staticmethod` et une `@classmethod` ?",
+    "choix": ["La classmethod reçoit la classe en premier argument", "La staticmethod reçoit l'instance en premier argument", "La classmethod ne peut rien renvoyer", "La staticmethod est appelable sans importer la classe"],
+    "bonneReponse": 0,
+    "explication": "Une `@classmethod` reçoit la classe (`cls`) comme premier argument, utile pour des constructeurs alternatifs. Une `@staticmethod` ne reçoit ni `self` ni `cls`."
+  },
+  {
+    "id": "python-e7",
+    "enonce": "Que permet de définir l'attribut spécial `__slots__` dans une classe ?",
+    "choix": ["La liste figée des attributs autorisés", "L'ordre d'affichage des méthodes", "Les arguments du constructeur", "Les classes parentes héritées"],
+    "bonneReponse": 0,
+    "explication": "`__slots__` fixe l'ensemble des attributs d'instance permis et supprime le `__dict__` par instance, ce qui réduit la mémoire mais empêche d'ajouter des attributs imprévus."
+  },
+  {
+    "id": "python-e8",
+    "enonce": "Quelle méthode spéciale est appelée à l'entrée d'un bloc `with` ?",
+    "choix": ["__open__", "__enter__", "__start__", "__begin__"],
+    "bonneReponse": 1,
+    "explication": "Un gestionnaire de contexte implémente `__enter__` (à l'entrée) et `__exit__` (à la sortie, même en cas d'erreur). C'est ce qui garantit, par exemple, la fermeture d'un fichier."
+  },
+  {
+    "id": "python-e9",
+    "enonce": "Quelle est la différence entre `copy.copy` et `copy.deepcopy` ?",
+    "choix": ["deepcopy duplique aussi les objets imbriqués", "copy est réservée aux listes", "deepcopy ne fonctionne que sur les dictionnaires", "copy renvoie toujours le même objet"],
+    "bonneReponse": 0,
+    "explication": "Une copie superficielle (`copy`) recopie le conteneur mais partage les objets internes. Une copie profonde (`deepcopy`) duplique récursivement toute l'arborescence."
+  },
+  {
+    "id": "python-e10",
+    "enonce": "Quelle est la métaclasse par défaut dont héritent toutes les classes Python ?",
+    "choix": ["object", "type", "class", "meta"],
+    "bonneReponse": 1,
+    "explication": "Les classes sont elles-mêmes des objets, instances de la métaclasse `type`. C'est `type` qui fabrique les classes ; `object`, lui, est la classe de base dont tout hérite."
+  }
+]

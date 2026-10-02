@@ -5,6 +5,7 @@ import { forkJoin } from 'rxjs';
 import { QuizApi } from '../../services/quiz-api';
 import { MoteurQuiz } from '../../services/moteur-quiz';
 import { Theme } from '../../models/quiz.models';
+import { messageErreur } from '../../utils/erreurs';
 
 /* =========================================================================
    Quiz — la page de jeu. Elle :
@@ -58,9 +59,9 @@ export class Quiz implements OnInit {
         }
         this.chargement.set(false);
       },
-      error: () => {
+      error: (err) => {
         this.erreur.set(
-          "Impossible de charger le quiz. Le serveur Go est-il démarré sur le port 8080 ?"
+          messageErreur(err, `Ce quiz n'existe pas : aucun thème « ${id} » au niveau « ${niveau} ».`)
         );
         this.chargement.set(false);
       }

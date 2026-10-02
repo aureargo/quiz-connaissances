@@ -1,0 +1,72 @@
+[
+  {
+    "id": "vue-m1",
+    "enonce": "Quelle différence entre `v-if` et `v-show` ?",
+    "choix": ["`v-show` ne fonctionne que sur les composants", "aucune, `v-show` est un simple alias de `v-if`", "`v-show` crée ou détruit l'élément, `v-if` le masque en CSS", "`v-if` crée ou détruit l'élément, `v-show` le masque en CSS"],
+    "bonneReponse": 3,
+    "explication": "`v-show` bascule `display: none` : l'élément reste dans le DOM, idéal pour des basculements fréquents. `v-if` ne rend rien tant que la condition est fausse, ce qui coûte moins au départ si elle change rarement."
+  },
+  {
+    "id": "vue-m2",
+    "enonce": "Quelle différence entre une propriété `computed` et une méthode ?",
+    "choix": ["une computed ne peut pas être utilisée dans le template", "une méthode n'est évaluée qu'une seule fois, au montage", "une computed est mise en cache selon ses dépendances réactives", "une méthode est mise en cache selon ses dépendances réactives"],
+    "bonneReponse": 2,
+    "explication": "Une computed n'est recalculée que si l'une des données réactives qu'elle lit change. Une méthode appelée dans le template est réexécutée à chaque rendu."
+  },
+  {
+    "id": "vue-m3",
+    "enonce": "Avec la Composition API, comment lit-on dans le script la valeur de `const compteur = ref(0)` ?",
+    "choix": ["compteur()", "compteur.value", "this.compteur", "compteur.get()"],
+    "bonneReponse": 1,
+    "explication": "Une ref enveloppe la valeur dans un objet réactif, d'où `.value` dans le script. Dans le template, Vue la « déballe » automatiquement : `{{ compteur }}`. `this.compteur` relève de l'Options API."
+  },
+  {
+    "id": "vue-m4",
+    "enonce": "Que propose `<script setup>` dans un composant monofichier ?",
+    "choix": ["un mode de compatibilité avec l'Options API", "du sucre syntaxique pour la Composition API", "un script exécuté avant le montage de l'application", "un fichier de configuration global du projet"],
+    "bonneReponse": 1,
+    "explication": "Tout ce qui est déclaré ou importé (variables, fonctions, composants) devient utilisable directement dans le template. `defineProps` et `defineEmits` y sont des macros du compilateur. C'est l'écriture recommandée avec Vue 3."
+  },
+  {
+    "id": "vue-m5",
+    "enonce": "Comment un composant enfant prévient-il son parent qu'un événement s'est produit ?",
+    "choix": ["en écrivant dans le localStorage", "en modifiant directement ses props", "en appelant une fonction globale `notify`", "en émettant un événement avec `emit`"],
+    "bonneReponse": 3,
+    "explication": "C'est la règle « props down, events up » : les props descendent en lecture seule, les événements remontent. `emit('valider', donnees)` côté enfant, `@valider=\"traiter\"` côté parent."
+  },
+  {
+    "id": "vue-m6",
+    "enonce": "Pourquoi déstructurer un objet `reactive()` est-il piégeux ?",
+    "choix": ["cela crée une copie profonde très coûteuse", "c'est interdit par le compilateur de Vue", "les variables obtenues perdent leur réactivité", "cela déclenche une boucle de rendus infinie"],
+    "bonneReponse": 2,
+    "explication": "`const { x } = etat` copie la valeur du moment, qui n'est plus reliée à l'objet. On utilise `toRefs(etat)` pour obtenir des refs, ou l'on préfère tout simplement `ref()`."
+  },
+  {
+    "id": "vue-m7",
+    "enonce": "Que fait `watch(source, callback)` ?",
+    "choix": ["il exécute le callback quand la source réactive change", "il recalcule une valeur dérivée et la met en cache", "il surveille les erreurs levées dans le composant", "il observe la taille de la fenêtre du navigateur"],
+    "bonneReponse": 0,
+    "explication": "Il sert aux effets de bord, comme relancer un appel API quand un filtre change. Les options `immediate` et `deep` ajustent son comportement ; `watchEffect` suit, lui, automatiquement tout ce qu'il lit."
+  },
+  {
+    "id": "vue-m8",
+    "enonce": "Avec la Composition API, quel hook s'exécute quand le composant a été inséré dans le DOM ?",
+    "choix": ["onMounted", "onCreated", "onInserted", "onRendered"],
+    "bonneReponse": 0,
+    "explication": "`onMounted(() => { ... })` est l'endroit pour accéder au DOM ou initialiser une bibliothèque externe. `onCreated` n'existe pas : le code de `setup` joue ce rôle. En Options API, l'équivalent est `mounted()`."
+  },
+  {
+    "id": "vue-m9",
+    "enonce": "Que permettent `provide` et `inject` ?",
+    "choix": ["injecter un script externe dans le composant", "fournir des styles globaux à tous les composants", "déclarer les dépendances npm d'un composant", "partager une donnée avec des descendants lointains"],
+    "bonneReponse": 3,
+    "explication": "Un ancêtre fournit une valeur (`provide('theme', theme)`) et n'importe quel descendant la récupère (`inject('theme')`), sans la passer de props en props. C'est l'équivalent du Context de React."
+  },
+  {
+    "id": "vue-m10",
+    "enonce": "Que sont les slots dans un composant Vue ?",
+    "choix": ["des zones mémoire réservées pour le DOM virtuel", "des emplacements où le parent insère son propre contenu", "des routes imbriquées déclarées dans Vue Router", "des variables réactives partagées entre composants"],
+    "bonneReponse": 1,
+    "explication": "L'enfant place un `<slot />` dans son template et le parent y insère ce qu'il veut. Un composant peut avoir plusieurs slots nommés (`<template #entete>`). C'est l'équivalent de `children` en React ou de `<ng-content>` en Angular."
+  }
+]

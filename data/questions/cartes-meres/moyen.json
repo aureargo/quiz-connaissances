@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cartes-meres-m1",
+    "enonce": "Que désigne la mention « x16 » d'un emplacement PCI Express ?",
+    "choix": ["sa génération dans la norme", "son nombre de lignes de données", "la puissance électrique fournie", "la longueur maximale de la carte"],
+    "bonneReponse": 1,
+    "explication": "Le PCIe relie les composants par des « lignes » (lanes), chacune formée d'une paire de fils pour émettre et d'une autre pour recevoir. Un emplacement x16 en offre 16 (carte graphique), un x4 en offre 4 (SSD NVMe), un x1 une seule. Piège classique : un emplacement de taille x16 peut n'être câblé qu'en x4 ; le manuel de la carte mère le précise."
+  },
+  {
+    "id": "cartes-meres-m2",
+    "enonce": "Comment évolue le débit par ligne d'une génération PCIe à la suivante (3.0, 4.0, 5.0…) ?",
+    "choix": ["il augmente d'environ 10 %", "il reste identique, seul le nombre de lignes change", "il triple à chaque génération", "il double à chaque génération"],
+    "bonneReponse": 3,
+    "explication": "Chaque génération double le débit : environ 1 Go/s par ligne et par sens en PCIe 3.0 (2010), 2 Go/s en 4.0, 4 Go/s en 5.0, et la cadence se poursuit avec le 6.0 (2022) puis le 7.0 (2025). Un SSD PCIe 5.0 x4 dépasse ainsi les 14 Go/s. Les générations restent compatibles entre elles : le lien fonctionne à la vitesse du plus lent des deux."
+  },
+  {
+    "id": "cartes-meres-m3",
+    "enonce": "Qu'est-ce que le « chipset » d'une carte mère ?",
+    "choix": ["un circuit qui gère une partie des entrées-sorties", "un processeur de secours en cas de panne", "la puce qui conserve les réglages de l'heure", "un ensemble de puces de mémoire vive"],
+    "bonneReponse": 0,
+    "explication": "Le chipset gère des périphériques que le processeur ne prend pas en charge directement : ports USB et SATA, lignes PCIe supplémentaires, réseau, audio. Il comptait autrefois deux puces, le northbridge et le southbridge ; le premier (mémoire, PCIe principal) a été absorbé par le processeur. Son nom (Z890, B850, X870…) indique la gamme et les fonctions de la carte mère."
+  },
+  {
+    "id": "cartes-meres-m4",
+    "enonce": "Quelle lettre désigne les chipsets Intel qui autorisent l'overclocking du processeur ?",
+    "choix": ["B", "H", "Z", "Q"],
+    "bonneReponse": 2,
+    "explication": "Chez Intel, seuls les chipsets Z (Z790, Z890…) permettent d'overclocker le processeur, à condition d'avoir un modèle débloqué, suffixé « K ». Les B et H visent le milieu et l'entrée de gamme, les Q les entreprises. Chez AMD, les chipsets X et B autorisent l'overclocking, contrairement aux A d'entrée de gamme."
+  },
+  {
+    "id": "cartes-meres-m5",
+    "enonce": "Qu'est-ce que l'UEFI par rapport au BIOS traditionnel ?",
+    "choix": ["une puce de secours du BIOS", "son successeur moderne", "une version du BIOS pour serveurs", "un pilote de démarrage pour le Wi-Fi"],
+    "bonneReponse": 1,
+    "explication": "L'UEFI (Unified Extensible Firmware Interface), généralisé au début des années 2010, remplace le vieux BIOS hérité de l'IBM PC de 1981. Il apporte une interface graphique utilisable à la souris, le démarrage sur des disques de plus de 2 To (partitions GPT) et le Secure Boot, qui refuse de lancer un chargeur de démarrage non signé. Par habitude, on continue souvent de l'appeler « BIOS »."
+  },
+  {
+    "id": "cartes-meres-m6",
+    "enonce": "Quelle exigence matérielle de Windows 11 a fait couler beaucoup d'encre à sa sortie, en 2021 ?",
+    "choix": ["une puce TPM 2.0", "un port Thunderbolt", "un slot PCIe 5.0", "une carte Wi-Fi 6"],
+    "bonneReponse": 0,
+    "explication": "Le TPM (Trusted Platform Module) est un coffre-fort cryptographique qui protège des clés, par exemple pour le chiffrement BitLocker ou Windows Hello. Beaucoup de PC pourtant récents semblaient incompatibles alors que leur processeur intégrait un TPM logiciel (fTPM chez AMD, PTT chez Intel), simplement désactivé dans l'UEFI. Windows 11 exige aussi un démarrage UEFI compatible Secure Boot et un processeur récent."
+  },
+  {
+    "id": "cartes-meres-m7",
+    "enonce": "Quelle forme de connecteur utilisent Thunderbolt 3, 4 et 5 ?",
+    "choix": ["Mini DisplayPort", "USB-A", "RJ45", "USB-C"],
+    "bonneReponse": 3,
+    "explication": "Thunderbolt, créé par Intel avec Apple, utilisait le Mini DisplayPort dans ses versions 1 et 2. Depuis Thunderbolt 3 (2015), il emprunte la prise USB-C : 40 Gbit/s en Thunderbolt 3 et 4, 80 Gbit/s en Thunderbolt 5. Le protocole Thunderbolt 3 a d'ailleurs servi de base à l'USB4."
+  },
+  {
+    "id": "cartes-meres-m8",
+    "enonce": "Quel est le débit maximal théorique de l'USB 2.0 ?",
+    "choix": ["12 Mbit/s", "5 Gbit/s", "480 Mbit/s", "40 Gbit/s"],
+    "bonneReponse": 2,
+    "explication": "L'USB 2.0 « High Speed » (2000) plafonne à 480 Mbit/s, soit une quarantaine de Mo/s en pratique. L'USB 1.1 se limitait à 12 Mbit/s, l'USB 3.0 (2008) est passé à 5 Gbit/s et l'USB4 atteint 40, voire 80 Gbit/s. L'USB 2.0 reste omniprésent pour les claviers, souris et autres périphériques peu gourmands."
+  },
+  {
+    "id": "cartes-meres-m9",
+    "enonce": "Un emplacement M.2 garantit-il qu'un SSD M.2 y fonctionnera ?",
+    "choix": ["oui, tous les ports M.2 sont identiques", "non, il peut ne gérer que SATA ou que NVMe", "non, le M.2 est réservé aux cartes Wi-Fi", "oui, tant que le SSD fait moins de 1 To"],
+    "bonneReponse": 1,
+    "explication": "M.2 désigne un format physique, pas un protocole : un emplacement peut transporter du SATA, du PCIe (NVMe), ou les deux. Les encoches (« clés » M, B ou E) et la longueur (2242, 2280…) varient aussi ; la clé E sert justement aux cartes Wi-Fi. Certains emplacements partagent en outre leurs lignes avec des ports SATA, désactivés dès qu'un SSD y est installé. Le manuel fait foi."
+  },
+  {
+    "id": "cartes-meres-m10",
+    "enonce": "Que sont les « VRM » d'une carte mère ?",
+    "choix": ["les étages qui alimentent le processeur", "les emplacements pour la mémoire vive", "les connecteurs des ventilateurs", "les puces du son intégré"],
+    "bonneReponse": 0,
+    "explication": "Les VRM (Voltage Regulator Modules) convertissent le 12 V de l'alimentation en la tension d'environ 1 à 1,4 V dont le processeur a besoin, sous des dizaines, voire des centaines d'ampères. On les repère aux bobines et aux dissipateurs qui entourent le socket. Des VRM robustes (nombreuses « phases ») sont indispensables pour un processeur gourmand ou overclocké."
+  }
+]

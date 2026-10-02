@@ -1,0 +1,72 @@
+[
+  {
+    "id": "data-engineering-m1",
+    "enonce": "Qu'est-ce qui distingue l'ELT de l'ETL ?",
+    "choix": ["on transforme dans l'entrepôt, après le chargement", "on transforme avant même d'extraire les données", "on remplace la transformation par un export", "on ne charge jamais rien dans un entrepôt"],
+    "bonneReponse": 0,
+    "explication": "Les entrepôts cloud (BigQuery, Snowflake…) sont devenus si puissants qu'on y charge d'abord les données brutes, puis qu'on les transforme sur place en SQL. On garde ainsi les données d'origine et l'on peut rejouer les transformations."
+  },
+  {
+    "id": "data-engineering-m2",
+    "enonce": "Pourquoi un format en colonnes comme Parquet accélère-t-il les requêtes analytiques ?",
+    "choix": ["chaque fichier est chargé en entier en mémoire", "les données y sont systématiquement chiffrées", "on ne lit que les colonnes utiles à la requête", "les lignes sont triées par ordre d'insertion"],
+    "bonneReponse": 2,
+    "explication": "Une requête analytique lit souvent 3 colonnes sur 200 : en stockage colonne, on saute le reste. Des valeurs semblables rangées côte à côte se compressent aussi très bien, et des statistiques par bloc (min, max) permettent d'en ignorer des parties entières."
+  },
+  {
+    "id": "data-engineering-m3",
+    "enonce": "Dans un schéma en étoile, comment appelle-t-on la table centrale qui contient les mesures (montants, quantités) ?",
+    "choix": ["la table de faits", "la table pivot", "la table de dimension", "la table de jointure"],
+    "bonneReponse": 0,
+    "explication": "La table de faits contient une ligne par événement (une vente) avec ses mesures et des clés vers les tables de dimension (client, produit, date, magasin) qui l'entourent, comme les branches d'une étoile. C'est le modèle popularisé par Ralph Kimball."
+  },
+  {
+    "id": "data-engineering-m4",
+    "enonce": "Que permet principalement l'outil dbt ?",
+    "choix": ["répliquer une base de production en direct", "écrire les transformations en SQL versionné et testé", "extraire les données des API vers l'entrepôt", "dessiner des tableaux de bord interactifs"],
+    "bonneReponse": 1,
+    "explication": "dbt (data build tool) gère le « T » de l'ELT : chaque modèle est un SELECT, dbt en déduit l'ordre d'exécution, ajoute des tests (unicité, non-nullité…) et génère la documentation. Il a introduit les pratiques du génie logiciel (Git, revues, tests) dans le SQL analytique."
+  },
+  {
+    "id": "data-engineering-m5",
+    "enonce": "Pourquoi rendre une tâche de pipeline idempotente ?",
+    "choix": ["pour se passer de tests automatiques", "pour la relancer sans dupliquer les données", "pour réduire sa consommation de mémoire", "pour l'exécuter sur plusieurs machines"],
+    "bonneReponse": 1,
+    "explication": "Une tâche idempotente donne le même résultat qu'on l'exécute une ou dix fois : par exemple, elle remplace la partition du jour au lieu d'y ajouter des lignes. Après une panne, on peut donc la relancer sans crainte de doublons."
+  },
+  {
+    "id": "data-engineering-m6",
+    "enonce": "Pourquoi partitionner une table par date dans un data lake ?",
+    "choix": ["pour interdire toute modification du passé", "pour répartir la charge entre utilisateurs", "pour chiffrer chaque jour avec une autre clé", "pour ne lire que les partitions utiles à la requête"],
+    "bonneReponse": 3,
+    "explication": "Avec un dossier par jour (`date=2026-10-01/`), une requête filtrée sur une semaine ne lit que sept dossiers : c'est l'élagage de partitions (partition pruning). Attention à ne pas trop découper, sous peine d'avoir une multitude de petits fichiers."
+  },
+  {
+    "id": "data-engineering-m7",
+    "enonce": "Qu'est-ce qu'un « lakehouse » ?",
+    "choix": ["une copie de sauvegarde d'un data lake", "un entrepôt installé dans les locaux de l'entreprise", "un data lake réservé aux données personnelles", "un data lake doté de transactions et de schémas"],
+    "bonneReponse": 3,
+    "explication": "Le lakehouse garde le stockage ouvert et bon marché du data lake (fichiers Parquet) et y ajoute ce qui faisait la force des entrepôts : transactions ACID, schémas, mises à jour. C'est le rôle de formats de table comme Delta Lake, Apache Iceberg ou Apache Hudi."
+  },
+  {
+    "id": "data-engineering-m8",
+    "enonce": "Dans Kafka, à quel niveau l'ordre des messages est-il garanti ?",
+    "choix": ["à aucun niveau, jamais", "entre tous les topics du cluster", "sur l'ensemble d'un topic", "au sein d'une même partition"],
+    "bonneReponse": 3,
+    "explication": "Un topic est découpé en partitions, et chacune est un journal ordonné. Pour que tous les événements d'un même client restent dans l'ordre, on leur donne la même clé de message : ils iront tous dans la même partition."
+  },
+  {
+    "id": "data-engineering-m9",
+    "enonce": "Quelle est la différence entre OLTP et OLAP ?",
+    "choix": ["OLTP traite des flux, OLAP des fichiers", "OLTP est libre, OLAP est propriétaire", "OLTP sert l'activité courante, OLAP l'analyse", "OLTP stocke en colonnes, OLAP en lignes"],
+    "bonneReponse": 2,
+    "explication": "OLTP (transactionnel) : beaucoup de petites lectures et écritures, comme passer une commande, sur des bases orientées lignes. OLAP (analytique) : peu de requêtes, mais qui balaient des millions de lignes, sur des moteurs souvent orientés colonnes. Dire « OLTP en colonnes, OLAP en lignes » inverse donc la réalité."
+  },
+  {
+    "id": "data-engineering-m10",
+    "enonce": "Dans l'architecture « médaillon » (bronze, argent, or), que contient la couche bronze ?",
+    "choix": ["les données archivées depuis plus de dix ans", "les données nettoyées et dédupliquées", "les données brutes, telles qu'ingérées", "les agrégats prêts pour les tableaux de bord"],
+    "bonneReponse": 2,
+    "explication": "Bronze conserve les données brutes, ce qui permet de tout retraiter en cas d'erreur. Argent contient les données nettoyées, typées et dédupliquées. Or contient les tables agrégées, orientées métier, que lisent les tableaux de bord. Ce découpage a été popularisé par Databricks."
+  }
+]

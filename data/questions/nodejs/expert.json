@@ -1,0 +1,72 @@
+[
+  {
+    "id": "node-e1",
+    "enonce": "Dans un script CommonJS, dans quel ordre s'exécutent `process.nextTick`, une promesse déjà résolue et `setTimeout(…, 0)` ?",
+    "choix": ["nextTick, puis la promesse, puis setTimeout", "dans l'ordre où ils apparaissent dans le code", "la promesse, puis nextTick, puis setTimeout", "setTimeout, puis nextTick, puis la promesse"],
+    "bonneReponse": 0,
+    "explication": "La file `nextTick` est vidée avant celle des microtâches (promesses), elles-mêmes traitées avant la phase des timers. Dans un module ES, l'évaluation se fait déjà dans une microtâche, ce qui peut inverser nextTick et la promesse."
+  },
+  {
+    "id": "node-e2",
+    "enonce": "Quelle bibliothèque fournit à Node.js sa boucle d'événements et ses entrées/sorties asynchrones ?",
+    "choix": ["llhttp", "OpenSSL", "libuv", "V8"],
+    "bonneReponse": 2,
+    "explication": "libuv, écrite en C, s'appuie sur les mécanismes de chaque système (epoll, kqueue, IOCP) et ajoute un pool de threads pour ce qui ne peut pas être asynchrone nativement. V8 se contente d'exécuter le JavaScript, llhttp analyse le protocole HTTP."
+  },
+  {
+    "id": "node-e3",
+    "enonce": "Quelle est la taille par défaut du pool de threads de libuv ?",
+    "choix": ["1 par cœur", "4 threads", "16 threads", "1 thread"],
+    "bonneReponse": 1,
+    "explication": "Il sert aux opérations sur les fichiers, à `dns.lookup`, à une partie de `crypto` et à `zlib`. Sa taille se règle avec `UV_THREADPOOL_SIZE`. Saturer le pool avec des hachages lents ralentit donc aussi les lectures de fichiers."
+  },
+  {
+    "id": "node-e4",
+    "enonce": "À l'intérieur d'un callback d'E/S, lequel s'exécute en premier entre `setImmediate` et `setTimeout(…, 0)` ?",
+    "choix": ["les deux en même temps", "l'ordre est imprévisible", "toujours setTimeout", "toujours setImmediate"],
+    "bonneReponse": 3,
+    "explication": "Après la phase « poll » (les E/S), la boucle passe par la phase « check », celle de `setImmediate`, avant de revenir aux timers. Depuis le script principal en revanche, l'ordre entre les deux n'est pas garanti."
+  },
+  {
+    "id": "node-e5",
+    "enonce": "Que signale `writable.write()` lorsqu'il renvoie `false` ?",
+    "choix": ["le flux est déjà fermé et n'accepte plus aucune donnée", "les données ont été écrites de façon synchrone sur le disque", "l'écriture a échoué et les données transmises sont perdues", "le tampon interne est plein : il faut attendre l'événement drain"],
+    "bonneReponse": 3,
+    "explication": "C'est la contre-pression (backpressure) : la destination est plus lente que la source. Continuer d'écrire ferait gonfler la mémoire. `stream.pipeline()` gère ce mécanisme automatiquement."
+  },
+  {
+    "id": "node-e6",
+    "enonce": "Quelle différence entre le module `cluster` et `worker_threads` ?",
+    "choix": ["cluster lance des threads, worker_threads des processus entièrement séparés", "cluster ne fonctionne que sous Linux, worker_threads partout", "aucune, worker_threads est le nouveau nom du module cluster", "cluster lance des processus qui partagent un port, worker_threads des threads"],
+    "bonneReponse": 3,
+    "explication": "`cluster` répartit un serveur HTTP sur plusieurs cœurs avec des processus à la mémoire isolée. `worker_threads` cible les calculs lourds, avec des échanges par messages ou via un `SharedArrayBuffer`."
+  },
+  {
+    "id": "node-e7",
+    "enonce": "Depuis Node.js 15, que se passe-t-il par défaut en cas de rejet de promesse non géré ?",
+    "choix": ["un simple avertissement est affiché", "la promesse est relancée automatiquement", "le processus s'arrête avec une erreur", "le rejet est ignoré en silence"],
+    "bonneReponse": 2,
+    "explication": "Avant, Node.js n'affichait qu'un avertissement de dépréciation. Désormais, un rejet sans `.catch()` ni `try/catch` autour du `await` arrête le processus, ce qui évite des erreurs passées inaperçues."
+  },
+  {
+    "id": "node-e8",
+    "enonce": "À quoi sert `AsyncLocalStorage` (module `node:async_hooks`) ?",
+    "choix": ["propager un contexte à travers les appels asynchrones d'une requête", "partager des variables entre les processus d'un cluster", "mettre en cache les réponses HTTP en mémoire partagée", "stocker des données persistantes sur le disque du serveur Node.js"],
+    "bonneReponse": 0,
+    "explication": "C'est l'équivalent d'une variable « locale au thread » pour du code asynchrone : identifiant de requête pour les logs, utilisateur, transaction… sans devoir le passer en paramètre à chaque fonction."
+  },
+  {
+    "id": "node-e9",
+    "enonce": "Dans un module ES, comment obtient-on l'équivalent de `__dirname` ?",
+    "choix": ["import.meta.dirname", "require.main.dirname", "module.dirname", "process.dirname"],
+    "bonneReponse": 0,
+    "explication": "`__dirname` et `__filename` n'existent qu'en CommonJS. Les versions récentes de Node.js (20.11 et suivantes) fournissent `import.meta.dirname` et `import.meta.filename` ; avant, on écrivait `path.dirname(fileURLToPath(import.meta.url))`."
+  },
+  {
+    "id": "node-e10",
+    "enonce": "Quel fork de Node.js, créé en 2014, a fini par fusionner avec le projet d'origine ?",
+    "choix": ["Deno", "Node-ChakraCore", "io.js", "Bun"],
+    "bonneReponse": 2,
+    "explication": "io.js est né de désaccords sur la gouvernance du projet, alors piloté par l'entreprise Joyent, et sur la lenteur des mises à jour. La fusion de 2015, sous l'égide de la Node.js Foundation, explique le saut de la version 0.12 à la version 4.0."
+  }
+]

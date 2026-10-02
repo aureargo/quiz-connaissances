@@ -1,0 +1,72 @@
+[
+  {
+    "id": "react-e1",
+    "enonce": "Quelle est une caractéristique des React Server Components ?",
+    "choix": ["Ils tournent sur le serveur et n'envoient pas leur code au client", "Ils sont rendus dans un Web Worker du navigateur", "Ils peuvent utiliser `useState` et `useEffect` comme les autres", "Ils remplacent obligatoirement tous les composants clients"],
+    "bonneReponse": 0,
+    "explication": "Un Server Component peut être `async` et lire directement une base de données, mais n'a ni état ni effets. La directive `\"use client\"` marque la frontière vers les composants interactifs. Stables depuis React 19, ils sont au cœur de l'App Router de Next.js."
+  },
+  {
+    "id": "react-e2",
+    "enonce": "Que se passe-t-il quand la `key` d'un composant change entre deux rendus ?",
+    "choix": ["React conserve son état et met simplement à jour ses props", "React déplace le composant à la fin de la liste parente", "React affiche un avertissement et ignore le changement", "React le démonte et en monte un nouveau, état réinitialisé"],
+    "bonneReponse": 3,
+    "explication": "Pour React, une autre clé signifie un autre composant. C'est une technique utile pour réinitialiser un formulaire quand l'élément affiché change : `<Profil key={idUtilisateur} />`."
+  },
+  {
+    "id": "react-e3",
+    "enonce": "Quelle différence entre `useLayoutEffect` et `useEffect` ?",
+    "choix": ["`useLayoutEffect` s'exécute avant que le navigateur ne peigne l'écran", "`useLayoutEffect` s'exécute côté serveur, `useEffect` côté client", "`useLayoutEffect` ne s'exécute qu'au démontage du composant", "`useLayoutEffect` est la version asynchrone de `useEffect`"],
+    "bonneReponse": 0,
+    "explication": "Il s'exécute de façon synchrone juste après la mise à jour du DOM : on peut mesurer un élément et corriger sa position sans scintillement. Comme il bloque l'affichage, on le réserve à ces cas précis."
+  },
+  {
+    "id": "react-e4",
+    "enonce": "Comment écrit-on un « error boundary », qui intercepte les erreurs de rendu de ses enfants ?",
+    "choix": ["en entourant le JSX renvoyé d'un bloc `try`/`catch`", "avec un attribut `onError` placé sur le composant racine", "avec le hook `useCatch` fourni directement par la bibliothèque React", "avec un composant classe implémentant `getDerivedStateFromError`"],
+    "bonneReponse": 3,
+    "explication": "React ne propose toujours pas de hook pour cela : il faut une classe (ou la bibliothèque `react-error-boundary`). Les erreurs levées dans les gestionnaires d'événements ou le code asynchrone ne sont pas interceptées."
+  },
+  {
+    "id": "react-e5",
+    "enonce": "Avec `useEffect(() => { setInterval(() => console.log(compteur), 1000) }, [])`, qu'affiche la console quand `compteur` change ?",
+    "choix": ["rien, l'intervalle étant interdit dans un effet", "la valeur à jour, chaque seconde", "toujours la valeur initiale de compteur", "undefined, la variable étant hors de portée"],
+    "bonneReponse": 2,
+    "explication": "C'est une « closure périmée » (stale closure) : la fonction a capturé `compteur` lors du premier rendu et ne voit jamais les suivants. Solutions : ajouter `compteur` aux dépendances (et nettoyer l'intervalle), passer par une ref, ou utiliser un setter fonctionnel."
+  },
+  {
+    "id": "react-e6",
+    "enonce": "À quoi sert `useTransition` (React 18) ?",
+    "choix": ["à passer d'une route à une autre sans recharger", "à animer l'apparition et la disparition d'un composant en CSS", "à migrer un composant classe vers un composant fonction", "à marquer une mise à jour comme non urgente et interruptible"],
+    "bonneReponse": 3,
+    "explication": "Grâce au rendu concurrent, une saisie reste fluide pendant qu'une longue liste filtrée se recalcule : React peut interrompre le rendu « transition » pour traiter l'urgent. `isPending` permet d'afficher un indicateur."
+  },
+  {
+    "id": "react-e7",
+    "enonce": "Qu'est-ce que l'hydratation (hydration) ?",
+    "choix": ["recharger les données d'un composant à intervalle régulier", "convertir automatiquement les composants classe en composants fonction", "injecter les styles CSS dans les composants pendant le build", "brancher l'interactivité de React sur du HTML rendu par le serveur"],
+    "bonneReponse": 3,
+    "explication": "Le serveur envoie du HTML prêt à afficher, puis React, côté client, parcourt ce DOM existant et y attache les gestionnaires d'événements (`hydrateRoot`). Si le rendu client diffère du HTML reçu, React signale une « hydration mismatch »."
+  },
+  {
+    "id": "react-e8",
+    "enonce": "Depuis React 18, que se passe-t-il pour plusieurs mises à jour d'état dans un même `setTimeout` ?",
+    "choix": ["elles sont ignorées hors d'un événement", "chacune déclenche son propre rendu", "seule la dernière est prise en compte", "elles sont regroupées en un seul rendu"],
+    "bonneReponse": 3,
+    "explication": "C'est le « batching » automatique. Avant React 18, le regroupement ne se faisait que dans les gestionnaires d'événements React ; `createRoot` l'étend aux promesses, timeouts et événements natifs. `flushSync` force un rendu immédiat si besoin."
+  },
+  {
+    "id": "react-e9",
+    "enonce": "Qu'a changé React 19 pour transmettre une `ref` à un composant fonction ?",
+    "choix": ["`ref` n'est plus transmise qu'aux composants classe", "`ref` doit passer par le nouveau hook `useForwardRef`", "`ref` est désormais interdite sur les composants fonction", "`ref` se reçoit comme une prop ordinaire, sans `forwardRef`"],
+    "bonneReponse": 3,
+    "explication": "Auparavant, il fallait envelopper le composant dans `forwardRef`. Désormais, `function Champ({ ref }) { return <input ref={ref} /> }` suffit, et `forwardRef` est appelé à disparaître."
+  },
+  {
+    "id": "react-e10",
+    "enonce": "Qu'affiche `{articles.length && <Liste />}` quand le tableau est vide ?",
+    "choix": ["le texte false", "le chiffre 0", "une erreur de rendu", "rien du tout"],
+    "bonneReponse": 1,
+    "explication": "`0 && ...` vaut `0`, et React affiche les nombres (contrairement à `false`, `null` ou `undefined`). On écrit plutôt `articles.length > 0 && <Liste />`, ou un ternaire."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ram-e1",
+    "enonce": "Quelle bande passante théorique offre une barrette DDR4-3200 seule ?",
+    "choix": ["3,2 Go/s", "320 Mo/s", "400 Go/s", "25,6 Go/s"],
+    "bonneReponse": 3,
+    "explication": "Une barrette transfère 64 bits, soit 8 octets, à chaque transfert : 3 200 millions × 8 octets = 25 600 Mo/s, soit 25,6 Go/s. En double canal, on double ce chiffre (51,2 Go/s). C'est pourquoi cette barrette porte aussi le nom de « PC4-25600 »."
+  },
+  {
+    "id": "ram-e2",
+    "enonce": "Une barrette DDR4-3200 CL16 et une DDR5-6000 CL30 : laquelle a la latence CAS réelle la plus faible ?",
+    "choix": ["aucune, environ 10 ns dans les deux cas", "la DDR4, deux fois plus réactive", "la DDR5, deux fois plus réactive", "impossible à comparer entre générations"],
+    "bonneReponse": 0,
+    "explication": "Latence (ns) = CL × 2 000 ÷ débit en MT/s. DDR4 : 16 × 2 000 ÷ 3 200 = 10 ns. DDR5 : 30 × 2 000 ÷ 6 000 = 10 ns. Le CL double, mais le cycle est deux fois plus court : la latence réelle stagne depuis des générations, autour de 10 à 15 ns, tandis que le débit, lui, explose."
+  },
+  {
+    "id": "ram-e3",
+    "enonce": "Quel composant, nouveau avec la DDR5, gère l'alimentation directement sur la barrette ?",
+    "choix": ["le SPD", "le DIMM", "le PMIC", "le XMP"],
+    "bonneReponse": 2,
+    "explication": "Avec la DDR5, la régulation de tension quitte la carte mère : chaque barrette embarque un PMIC (Power Management Integrated Circuit) qui reçoit du 5 V et produit lui-même ses tensions de travail (1,1 V…). L'alimentation est plus propre et plus précise, au plus près des puces. Le SPD stocke les caractéristiques de la barrette, et le XMP est un profil de réglages qu'il contient."
+  },
+  {
+    "id": "ram-e4",
+    "enonce": "Que contient la petite puce SPD présente sur chaque barrette de RAM ?",
+    "choix": ["une copie de secours du BIOS", "les caractéristiques et timings de la barrette", "un cache supplémentaire pour le processeur", "la clé de chiffrement de la mémoire"],
+    "bonneReponse": 1,
+    "explication": "Le SPD (Serial Presence Detect) est une petite mémoire lue par le BIOS au démarrage : capacité, fréquences et timings JEDEC, fabricant, et profils XMP ou EXPO. C'est grâce à elle que la carte mère configure la RAM sans intervention. Sur la DDR5, un « SPD hub » y ajoute un capteur de température."
+  },
+  {
+    "id": "ram-e5",
+    "enonce": "En quoi consiste l'attaque « Rowhammer » ?",
+    "choix": ["faire basculer des bits en martelant une ligne voisine", "lire la RAM d'un PC éteint après l'avoir refroidie", "saturer la RAM pour provoquer un écran bleu", "injecter du code malveillant via le profil XMP"],
+    "bonneReponse": 0,
+    "explication": "Publiée en 2014 par des chercheurs de Carnegie Mellon et d'Intel, l'attaque accède des millions de fois à une même ligne de DRAM : les perturbations électriques finissent par faire basculer des bits dans les lignes voisines, auxquelles l'attaquant n'a pourtant pas accès. Google Project Zero l'a exploitée dès 2015 pour obtenir des droits administrateur. Lire une RAM refroidie après extinction, c'est une autre attaque : la « cold boot attack »."
+  },
+  {
+    "id": "ram-e6",
+    "enonce": "Sur une fiche technique, que désigne le « rank » (rang) d'une barrette mémoire ?",
+    "choix": ["le classement de la barrette selon sa vitesse", "le numéro de l'emplacement sur la carte mère", "une rangée de broches du connecteur", "un groupe de puces couvrant toute la largeur du bus"],
+    "bonneReponse": 3,
+    "explication": "Un rang est un ensemble de puces qui fournit à lui seul les 64 bits du bus (72 avec l'ECC). Une barrette « 2R » en possède deux, que le contrôleur sollicite à tour de rôle : ce rank interleaving apporte un léger gain de performances. En contrepartie, chaque rang ajoute une charge électrique sur le canal, ce qui limite la fréquence atteignable."
+  },
+  {
+    "id": "ram-e7",
+    "enonce": "Pourquoi installer quatre barrettes DDR5 oblige-t-il souvent à baisser leur fréquence par rapport à deux ?",
+    "choix": ["le BIOS ne sait gérer que deux profils XMP", "deux barrettes par canal dégradent le signal électrique", "le processeur n'a que deux cœurs dédiés à la mémoire", "l'alimentation ne fournit plus assez de watts"],
+    "bonneReponse": 1,
+    "explication": "Avec quatre barrettes, chaque canal en porte deux : plus de charge électrique, de réflexions et de bruit sur les pistes, donc un signal moins propre aux hautes fréquences. AMD annonce par exemple pour ses Ryzen 7000 de la DDR5-5200 avec deux barrettes, mais seulement 3 600 MT/s avec quatre. Pour avoir à la fois beaucoup de RAM et de la vitesse, mieux vaut deux grosses barrettes que quatre petites."
+  },
+  {
+    "id": "ram-e8",
+    "enonce": "Comment une barrette DDR5 organise-t-elle son bus de données de 64 bits ?",
+    "choix": ["en un seul canal partagé avec le GPU", "en quatre canaux synchronisés de 16 bits", "en deux sous-canaux indépendants de 32 bits", "en huit voies série comme le PCI Express"],
+    "bonneReponse": 2,
+    "explication": "Chaque barrette DDR5 contient deux sous-canaux de 32 bits (40 avec l'ECC) qui travaillent indépendamment, là où une DDR4 n'offre qu'un canal de 64 bits. Avec des rafales de 16 transferts, chaque sous-canal livre tout de même 64 octets, une ligne de cache complète. Davantage d'accès simultanés, donc une meilleure efficacité quand de nombreux cœurs réclament la mémoire."
+  },
+  {
+    "id": "ram-e9",
+    "enonce": "Chez Intel, que signifie le mode mémoire « Gear 2 » (ratio 1:2 chez AMD) ?",
+    "choix": ["le contrôleur tourne à mi-fréquence de la RAM", "la RAM passe en mode économie d'énergie", "le processeur double sa fréquence mémoire", "la seconde barrette prend le relais de la première"],
+    "bonneReponse": 0,
+    "explication": "En Gear 1, le contrôleur mémoire du processeur tourne à la même fréquence que la RAM ; en Gear 2, à la moitié. Cela permet d'atteindre de très hautes fréquences mémoire que le contrôleur ne suivrait pas, au prix d'une latence accrue. Le mode est apparu chez Intel avec les Core de 11ᵉ génération et c'est la règle en DDR5 ; AMD, lui, privilégie le 1:1 jusque vers la DDR5-6000."
+  },
+  {
+    "id": "ram-e10",
+    "enonce": "Pourquoi les caches des processeurs utilisent-ils de la SRAM plutôt que de la DRAM ?",
+    "choix": ["elle est moins chère et plus dense", "elle conserve ses données hors tension", "elle se programme une fois pour toutes", "elle est plus rapide et sans rafraîchissement"],
+    "bonneReponse": 3,
+    "explication": "La SRAM (Static RAM) stocke chaque bit dans une bascule d'environ six transistors : pas de condensateur qui fuit, donc pas de rafraîchissement, et des accès en une poignée de cycles. Mais elle prend beaucoup plus de place et coûte bien plus cher que la DRAM (un transistor et un condensateur par bit). D'où quelques dizaines de Mo de cache face à des dizaines de Go de RAM."
+  }
+]
