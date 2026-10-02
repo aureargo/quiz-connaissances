@@ -1,0 +1,72 @@
+[
+  {
+    "id": "montage-pc-e1",
+    "enonce": "Avec un watercooling tout-en-un (AIO), quel élément ne doit jamais se trouver au point le plus haut du circuit ?",
+    "choix": ["le radiateur", "la pompe", "l'orifice de remplissage", "les ventilateurs"],
+    "bonneReponse": 1,
+    "explication": "Un peu d'air finit toujours par se former dans le circuit, et il remonte au point le plus haut. S'il s'accumule dans la pompe, généralement intégrée au bloc posé sur le processeur, elle gargouille, s'use plus vite et refroidit moins bien. Le radiateur se monte donc idéalement au plafond du boîtier, ou en façade avec les tuyaux en bas."
+  },
+  {
+    "id": "montage-pc-e2",
+    "enonce": "Pourquoi ne faut-il jamais réutiliser les câbles modulaires d'une autre alimentation ?",
+    "choix": ["leurs connecteurs ne s'emboîtent jamais", "ils annulent la certification 80 PLUS", "ils sont trop courts pour les boîtiers récents", "le brochage côté alimentation n'est pas normalisé"],
+    "bonneReponse": 3,
+    "explication": "Côté composants, les prises sont normalisées (24 broches, EPS, PCIe…), mais côté alimentation, chaque fabricant, voire chaque gamme, câble ses prises à sa façon. Un câble d'un autre modèle peut s'emboîter parfaitement tout en envoyant du 12 V là où la carte attend une masse ou du 3,3 V — et griller disques, carte mère ou carte graphique. C'est une cause classique de pannes lors d'un changement d'alimentation."
+  },
+  {
+    "id": "montage-pc-e3",
+    "enonce": "Que signale une des LED de diagnostic (CPU, DRAM, VGA, BOOT) d'une carte mère qui reste allumée au démarrage ?",
+    "choix": ["l'étape du démarrage qui bloque", "la température trop élevée d'un composant", "l'activité du disque en cours d'accès", "la charge de chaque phase d'alimentation"],
+    "bonneReponse": 0,
+    "explication": "Pendant le POST, la carte mère vérifie tour à tour le processeur, la mémoire, la carte graphique puis le périphérique de démarrage, en allumant la LED de l'étape en cours. Si l'une reste figée, c'est là que ça coince : une LED DRAM fixe oriente vers une barrette mal enfoncée ou incompatible. Certaines cartes vont plus loin avec un afficheur de codes hexadécimaux (« Q-Code »)."
+  },
+  {
+    "id": "montage-pc-e4",
+    "enonce": "Pourquoi le tout premier démarrage d'un PC en DDR5 peut-il laisser l'écran noir plusieurs minutes ?",
+    "choix": ["le BIOS télécharge ses mises à jour", "Windows s'installe en arrière-plan", "la carte mère calibre la mémoire", "le processeur attend de refroidir"],
+    "bonneReponse": 2,
+    "explication": "Au premier démarrage, ou après un changement de RAM ou de réglages, la carte mère « entraîne » la mémoire (memory training) : elle teste et ajuste le timing de chaque signal pour fiabiliser les hautes fréquences. En DDR5, notamment sur les plateformes AMD AM5, cela peut prendre plusieurs minutes, LED DRAM allumée. Surtout ne pas éteindre : les démarrages suivants réutilisent le résultat (option « Memory Context Restore » chez AMD)."
+  },
+  {
+    "id": "montage-pc-e5",
+    "enonce": "Qu'impose principalement la norme ATX 3.0 (2022) aux alimentations ?",
+    "choix": ["d'adopter le format compact SFX dans tous les boîtiers", "d'encaisser de brefs pics au-delà de leur puissance", "de supprimer le connecteur 24 broches de la carte mère", "de fonctionner sans ventilateur jusqu'à 1 000 W"],
+    "bonneReponse": 1,
+    "explication": "Les cartes graphiques récentes provoquent des pics de consommation de quelques microsecondes, qui faisaient disjoncter des alimentations pourtant bien dimensionnées. L'ATX 3.0 exige de supporter des excursions jusqu'à deux fois la puissance nominale pendant 100 µs, et intègre le connecteur 12VHPWR. L'ATX 3.1 (2023) remplace ce dernier par sa révision, le 12V-2x6."
+  },
+  {
+    "id": "montage-pc-e6",
+    "enonce": "Qu'entraîne une « pression positive » dans un boîtier, c'est-à-dire plus d'air entrant que sortant ?",
+    "choix": ["moins de poussière, l'air ressortant par les fentes", "plus de chaleur, l'air chaud restant piégé en haut", "plus de bruit, les ventilateurs forçant davantage", "plus de condensation, l'air froid stagnant au fond"],
+    "bonneReponse": 0,
+    "explication": "L'air en surplus doit sortir par toutes les ouvertures non filtrées (fentes, trous de vis, interstices), ce qui empêche la poussière d'y entrer : seul l'air passé par les filtres de façade pénètre dans le boîtier. En pression négative, c'est l'inverse : de l'air non filtré est aspiré par toutes les fentes. Un léger excédent d'entrée est donc souvent recommandé."
+  },
+  {
+    "id": "montage-pc-e7",
+    "enonce": "Qu'appelle-t-on le « coil whine » d'une carte graphique ou d'une alimentation ?",
+    "choix": ["le grincement d'un ventilateur mal lubrifié", "le bourdonnement d'un disque dur en lecture", "le claquement d'un relais à l'allumage", "le sifflement aigu des bobines sous forte charge"],
+    "bonneReponse": 3,
+    "explication": "Sous forte charge, le courant qui traverse les bobines (inductances) des étages d'alimentation les fait légèrement vibrer : c'est la magnétostriction. Il en résulte un sifflement aigu, inoffensif pour le matériel mais agaçant, souvent maximal quand la carte affiche des centaines d'images par seconde, dans un menu par exemple. Limiter les FPS suffit souvent à l'atténuer."
+  },
+  {
+    "id": "montage-pc-e8",
+    "enonce": "Pourquoi déconseille-t-on d'alimenter une carte graphique gourmande avec un seul câble PCIe à deux prises (« en guirlande ») ?",
+    "choix": ["les deux prises reçoivent des tensions opposées", "la carte ne détecte alors qu'une seule prise", "un seul câble porte alors la charge des deux prises", "le câble gêne le flux d'air vers la carte"],
+    "bonneReponse": 2,
+    "explication": "Chaque prise PCIe 8 broches est prévue pour 150 W : avec un câble en guirlande, un seul faisceau de fils transporte jusqu'à 300 W, en plus des 75 W fournis par l'emplacement PCIe. Les fils et les contacts côté alimentation chauffent davantage. Au-delà de 225 W environ, on recommande donc un câble distinct par prise, même si certaines alimentations dimensionnent leurs guirlandes en conséquence."
+  },
+  {
+    "id": "montage-pc-e9",
+    "enonce": "À quoi sert un « stress test » (OCCT, Prime95, y-cruncher…) après un montage ou un overclocking ?",
+    "choix": ["à mesurer le débit de la connexion Internet", "à vérifier stabilité et températures à pleine charge", "à nettoyer les fichiers temporaires de Windows", "à installer automatiquement les pilotes"],
+    "bonneReponse": 1,
+    "explication": "Un stress test pousse le processeur, la mémoire ou la carte graphique à 100 % pendant de longues minutes, voire des heures. Il révèle ce qu'un usage normal cache : erreurs de calcul, plantages, refroidissement insuffisant ou profil XMP instable. On surveille en parallèle les températures (avec HWiNFO, par exemple) pour vérifier qu'elles restent raisonnables."
+  },
+  {
+    "id": "montage-pc-e10",
+    "enonce": "Après un réglage trop agressif dans l'UEFI, le PC ne démarre plus. Quelle manipulation rétablit les réglages d'usine ?",
+    "choix": ["vider le CMOS par cavalier ou en ôtant la pile", "maintenir le bouton d'allumage une minute", "rebrancher l'écran sur la carte mère", "réinstaller Windows depuis une clé USB"],
+    "bonneReponse": 0,
+    "explication": "Vider le CMOS efface les réglages du BIOS : on relie deux broches marquées CLR_CMOS (ou on appuie sur un bouton dédié), ou on retire la pile bouton quelques minutes, PC débranché. Beaucoup de cartes récentes reviennent aussi d'elles-mêmes aux réglages sûrs après plusieurs échecs de démarrage. Réinstaller Windows n'y changerait rien : le blocage survient avant même le chargement du système."
+  }
+]

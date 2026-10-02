@@ -1,0 +1,72 @@
+[
+  {
+    "id": "postgresql-m1",
+    "enonce": "Quelle est la principale différence entre les types `json` et `jsonb` ?",
+    "choix": ["jsonb compresse le texte mais le garde tel quel", "jsonb accepte aussi le XML et le YAML", "json est réservé aux tableaux, jsonb aux objets", "jsonb est stocké décomposé en binaire et indexable"],
+    "bonneReponse": 3,
+    "explication": "`json` conserve le texte exact (espaces, ordre et doublons de clés) et le réanalyse à chaque lecture. `jsonb` est analysé une seule fois et stocké sous forme binaire : l'écriture est un peu plus lente, mais les lectures sont rapides et l'on peut l'indexer (GIN) ou utiliser des opérateurs comme `@>`."
+  },
+  {
+    "id": "postgresql-m2",
+    "enonce": "À quoi sert la commande VACUUM ?",
+    "choix": ["vider entièrement le contenu d'une table", "fermer les connexions restées inactives", "récupérer l'espace des lignes mortes", "supprimer les index jamais utilisés"],
+    "bonneReponse": 2,
+    "explication": "Avec le MVCC, un UPDATE ou un DELETE ne libère pas la place : l'ancienne version de la ligne reste sur disque. VACUUM marque cet espace comme réutilisable. Le démon autovacuum le fait automatiquement ; VACUUM FULL réécrit carrément la table, mais la verrouille pendant ce temps."
+  },
+  {
+    "id": "postgresql-m3",
+    "enonce": "Que désigne le WAL dans PostgreSQL ?",
+    "choix": ["le journal des écritures anticipées", "la liste des utilisateurs autorisés", "le pare-feu des connexions entrantes", "le cache des plans de requêtes"],
+    "bonneReponse": 0,
+    "explication": "Le Write-Ahead Log enregistre chaque modification AVANT qu'elle ne soit appliquée aux fichiers de données. Après un plantage, PostgreSQL rejoue ce journal pour retrouver un état cohérent. Le WAL sert aussi à la réplication en flux et à la restauration à un instant précis (PITR)."
+  },
+  {
+    "id": "postgresql-m4",
+    "enonce": "Que fait EXPLAIN ANALYZE de plus qu'un simple EXPLAIN ?",
+    "choix": ["il propose des index à créer", "il exécute réellement la requête", "il réécrit la requête optimisée", "il met à jour les statistiques"],
+    "bonneReponse": 1,
+    "explication": "EXPLAIN affiche le plan estimé ; EXPLAIN ANALYZE exécute la requête et ajoute les temps et nombres de lignes réels, ce qui révèle les mauvaises estimations. Attention : sur un UPDATE ou un DELETE, les modifications ont bien lieu — on l'entoure alors d'un BEGIN … ROLLBACK. Mettre à jour les statistiques, c'est le rôle de la commande ANALYZE seule."
+  },
+  {
+    "id": "postgresql-m5",
+    "enonce": "Quel type d'index PostgreSQL crée-t-il quand on ne précise rien dans CREATE INDEX ?",
+    "choix": ["BRIN", "B-tree", "GIN", "Hash"],
+    "bonneReponse": 1,
+    "explication": "Le B-tree (arbre équilibré) convient aux égalités, aux comparaisons (<, >, BETWEEN) et aux tris : c'est le choix par défaut. Les autres types (GIN, GiST, BRIN, Hash…) répondent à des besoins plus spécifiques et se demandent avec `USING`."
+  },
+  {
+    "id": "postgresql-m6",
+    "enonce": "Dans quel schéma une table est-elle créée si l'on ne précise rien ?",
+    "choix": ["main", "dbo", "public", "default"],
+    "bonneReponse": 2,
+    "explication": "Une base PostgreSQL contient des schémas (des espaces de noms), et `public` est celui que l'on utilise par défaut, selon le paramètre `search_path`. `dbo` est l'équivalent chez SQL Server, `main` chez SQLite."
+  },
+  {
+    "id": "postgresql-m7",
+    "enonce": "Que permet la clause RETURNING ajoutée à un INSERT ?",
+    "choix": ["insérer dans une autre table", "annuler l'insertion en cas d'erreur", "réessayer après un conflit", "renvoyer les lignes insérées"],
+    "bonneReponse": 3,
+    "explication": "`INSERT … RETURNING id` renvoie directement les valeurs des lignes écrites, par exemple l'identifiant généré, sans seconde requête. RETURNING fonctionne aussi avec UPDATE et DELETE."
+  },
+  {
+    "id": "postgresql-m8",
+    "enonce": "Quelle syntaxe PostgreSQL réalise un « upsert » (insérer, ou mettre à jour si la ligne existe) ?",
+    "choix": ["INSERT … ON DUPLICATE KEY UPDATE", "UPSERT INTO … VALUES …", "INSERT … ON CONFLICT DO UPDATE", "INSERT OR REPLACE INTO …"],
+    "bonneReponse": 2,
+    "explication": "`ON CONFLICT` existe depuis PostgreSQL 9.5 : en cas de violation d'une contrainte d'unicité, on choisit `DO NOTHING` ou `DO UPDATE`. `ON DUPLICATE KEY UPDATE` est la syntaxe de MySQL, `INSERT OR REPLACE` celle de SQLite. PostgreSQL 15 a aussi ajouté la commande standard MERGE."
+  },
+  {
+    "id": "postgresql-m9",
+    "enonce": "Dans PostgreSQL, sous quelle notion unique les utilisateurs et les groupes sont-ils réunis ?",
+    "choix": ["les rôles", "les comptes", "les profils", "les schémas"],
+    "bonneReponse": 0,
+    "explication": "Depuis la version 8.1, tout est « rôle » : un rôle avec l'attribut LOGIN se comporte comme un utilisateur, et un rôle peut être membre d'un autre, comme d'un groupe. `CREATE USER` n'est qu'un raccourci pour `CREATE ROLE … LOGIN`."
+  },
+  {
+    "id": "postgresql-m10",
+    "enonce": "Quel opérateur extrait un champ d'une colonne `jsonb` sous forme de texte ?",
+    "choix": ["@>", "->>", "->", "#>"],
+    "bonneReponse": 1,
+    "explication": "`data->>'nom'` renvoie du texte, tandis que `data->'nom'` renvoie encore du jsonb (utile pour enchaîner). `#>` suit un chemin, comme `data#>'{adresse,ville}'`, et `@>` teste si un document en contient un autre."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "biais-cognitifs-f1",
+    "enonce": "Qu'appelle-t-on un « biais cognitif » ?",
+    "choix": ["un trouble de la mémoire lié à l'âge", "une erreur ponctuelle due à la fatigue", "une déviation systématique du jugement", "une illusion d'optique due à la rétine"],
+    "bonneReponse": 2,
+    "explication": "Un biais cognitif est une erreur de raisonnement prévisible et répétée, pas un accident : tout le monde la commet, dans les mêmes conditions. Beaucoup naissent d'heuristiques, des raccourcis mentaux le plus souvent utiles mais parfois trompeurs. La notion a été popularisée au début des années 1970 par Amos Tversky et Daniel Kahneman."
+  },
+  {
+    "id": "biais-cognitifs-f2",
+    "enonce": "Quel biais pousse à rechercher et à retenir surtout les informations qui confirment ce que l'on pense déjà ?",
+    "choix": ["le biais de confirmation", "le biais d'ancrage", "l'effet de halo", "le biais rétrospectif"],
+    "bonneReponse": 0,
+    "explication": "Le biais de confirmation nous fait lire les articles qui vont dans notre sens, interpréter les cas ambigus en notre faveur et oublier les contre-exemples. Le psychologue Peter Wason l'a mis en évidence dès 1960. Les algorithmes des réseaux sociaux, qui nous montrent ce qui nous plaît déjà, l'amplifient en « bulles de filtres »."
+  },
+  {
+    "id": "biais-cognitifs-f3",
+    "enonce": "Un candidat beau et souriant est spontanément jugé plus compétent et plus honnête. Quel biais est à l'œuvre ?",
+    "choix": ["le biais de statu quo", "l'effet de halo", "le biais d'optimisme", "l'effet de récence"],
+    "bonneReponse": 1,
+    "explication": "Nommé par le psychologue Edward Thorndike en 1920 : une qualité visible (beauté, prestige, aisance) « rayonne » sur le jugement de toutes les autres, comme un halo. Il pèse sur les entretiens d'embauche, les notes scolaires et même les décisions de justice. L'inverse existe aussi : un seul défaut visible qui ternit tout le reste."
+  },
+  {
+    "id": "biais-cognitifs-f4",
+    "enonce": "Un pull affiché « 120 € → 60 € » semble une affaire, même s'il n'a jamais valu 120 €. Quel biais exploite ce prix barré ?",
+    "choix": ["le biais de négativité", "le biais de confirmation", "l'effet de mode", "le biais d'ancrage"],
+    "bonneReponse": 3,
+    "explication": "Le premier chiffre vu sert d'« ancre » : nos estimations s'en écartent ensuite trop peu. Tversky et Kahneman l'ont montré en 1974 avec une roue de loterie truquée, arrêtée sur 10 ou sur 65 : ce nombre, sans aucun rapport, influençait l'estimation du pourcentage de pays africains à l'ONU (25 % contre 45 % en médiane)."
+  },
+  {
+    "id": "biais-cognitifs-f5",
+    "enonce": "Quel effet décrit le fait que les personnes peu compétentes dans un domaine ont tendance à surestimer leur niveau ?",
+    "choix": ["l'effet Pygmalion", "l'effet Dunning-Kruger", "l'effet Zeigarnik", "l'effet Streisand"],
+    "bonneReponse": 1,
+    "explication": "Décrit en 1999 par David Dunning et Justin Kruger (« Unskilled and Unaware of It ») : il faut déjà un peu de compétence pour mesurer sa propre incompétence. Attention : la fameuse courbe avec un « mont Stupide » est une vulgarisation absente de l'article, et l'ampleur de l'effet est discutée — une partie pourrait n'être qu'un artefact statistique."
+  },
+  {
+    "id": "biais-cognitifs-f6",
+    "enonce": "Après un match, on s'exclame « je le savais depuis le début ! ». Comment appelle-t-on ce biais ?",
+    "choix": ["le biais d'optimisme", "le biais de statu quo", "le biais rétrospectif", "le biais de projection"],
+    "bonneReponse": 2,
+    "explication": "Une fois le résultat connu, il paraît bien plus prévisible qu'il ne l'était vraiment. Le psychologue Baruch Fischhoff l'a étudié dès 1975 (en anglais, « hindsight bias »). Il fausse l'analyse des erreurs : on juge sévèrement des décisions prises sans connaître l'issue, et on croit à tort qu'on aurait fait mieux."
+  },
+  {
+    "id": "biais-cognitifs-f7",
+    "enonce": "La roulette est tombée cinq fois de suite sur le rouge. Un joueur mise sur le noir, persuadé qu'il « doit » sortir. Quel biais le trompe ?",
+    "choix": ["l'erreur du joueur", "l'illusion de contrôle", "le biais de disponibilité", "l'aversion à la perte"],
+    "bonneReponse": 0,
+    "explication": "Chaque tirage est indépendant : la roulette n'a pas de mémoire, et le noir n'a pas plus de chances après une série de rouges. Exemple célèbre : en 1913, au casino de Monte-Carlo, le noir serait sorti 26 fois d'affilée, et des joueurs auraient perdu des fortunes en misant sur le rouge. D'où son autre nom : le « sophisme de Monte-Carlo »."
+  },
+  {
+    "id": "biais-cognitifs-f8",
+    "enonce": "Après plusieurs reportages sur des crashs aériens, on juge l'avion plus dangereux que la voiture. Quel biais explique cette erreur ?",
+    "choix": ["le biais de confirmation", "le biais de statu quo", "l'effet de halo", "le biais de disponibilité"],
+    "bonneReponse": 3,
+    "explication": "On estime la fréquence d'un événement selon la facilité avec laquelle des exemples nous viennent à l'esprit (Tversky et Kahneman, 1973). Les catastrophes spectaculaires et très médiatisées restent gravées en mémoire, alors que, rapporté à la distance parcourue, l'avion est bien plus sûr que la voiture."
+  },
+  {
+    "id": "biais-cognitifs-f9",
+    "enonce": "« Vous êtes sociable, mais vous aimez parfois être seul. » Ce genre de portrait d'horoscope semble décrire chacun parfaitement. Quel effet est-ce ?",
+    "choix": ["l'effet Barnum", "l'effet Pygmalion", "l'effet Mandela", "l'effet Stroop"],
+    "bonneReponse": 0,
+    "explication": "On l'appelle aussi effet Forer : en 1948, le psychologue Bertram Forer remit à ses étudiants un « profil de personnalité »… identique pour tous et tiré d'horoscopes. Ils lui donnèrent en moyenne une note de justesse de 4,3 sur 5. Le nom évoque le showman P. T. Barnum, dont le spectacle avait « quelque chose pour chacun »."
+  },
+  {
+    "id": "biais-cognitifs-f10",
+    "enonce": "Quand on réussit, c'est grâce à notre talent ; quand on échoue, c'est la faute des circonstances. Comment appelle-t-on ce biais ?",
+    "choix": ["l'effet de mode", "le biais rétrospectif", "le biais d'autocomplaisance", "le biais de négativité"],
+    "bonneReponse": 2,
+    "explication": "Le biais d'autocomplaisance (« self-serving bias ») protège l'estime de soi : on s'attribue les succès et on rejette les échecs sur l'extérieur — le correcteur trop sévère, l'arbitre, la malchance. On le repère jusque dans les rapports annuels des entreprises, qui attribuent les bons résultats à la direction et les mauvais à la conjoncture."
+  }
+]

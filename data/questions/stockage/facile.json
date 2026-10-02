@@ -1,0 +1,72 @@
+[
+  {
+    "id": "stockage-f1",
+    "enonce": "Que signifie le sigle « SSD » ?",
+    "choix": ["Super Speed Disk", "Solid State Drive", "System Storage Device", "Secure Serial Drive"],
+    "bonneReponse": 1,
+    "explication": "SSD = Solid State Drive, « disque à semi-conducteurs » : il stocke les données dans des puces de mémoire flash, sans aucune pièce mobile. Il n'a de « disque » que le nom, hérité des disques durs qu'il remplace. Sans moteur ni tête de lecture, il est silencieux et résiste bien mieux aux chocs."
+  },
+  {
+    "id": "stockage-f2",
+    "enonce": "Dans un disque dur classique (HDD), sur quoi les données sont-elles enregistrées ?",
+    "choix": ["des puces de mémoire flash", "une bande magnétique enroulée", "un disque optique gravé au laser", "des plateaux magnétiques en rotation"],
+    "bonneReponse": 3,
+    "explication": "Un disque dur contient un ou plusieurs plateaux recouverts d'une fine couche magnétique, qui tournent à grande vitesse. Une tête de lecture, portée par un bras, survole leur surface à quelques nanomètres sans la toucher pour lire et écrire les bits. Cette mécanique explique sa lenteur relative et sa fragilité face aux chocs."
+  },
+  {
+    "id": "stockage-f3",
+    "enonce": "Quel est le principal avantage d'un SSD sur un disque dur pour l'utilisateur ?",
+    "choix": ["des démarrages et chargements bien plus rapides", "un prix au gigaoctet nettement plus bas", "une durée de vie illimitée en écriture", "une meilleure compatibilité avec les vieux PC"],
+    "bonneReponse": 0,
+    "explication": "Un SSD accède à n'importe quelle donnée en quelques dizaines de microsecondes, là où un disque dur doit attendre que la tête se place et que le plateau tourne (plusieurs millisecondes). Windows démarre en quelques secondes et les logiciels se lancent presque instantanément. Le disque dur reste en revanche moins cher au gigaoctet, d'où son usage pour stocker de gros volumes."
+  },
+  {
+    "id": "stockage-f4",
+    "enonce": "Quelle est la vitesse de rotation courante d'un disque dur de PC de bureau ?",
+    "choix": ["720 tours par minute", "72 000 tours par minute", "7 200 tours par minute", "120 tours par minute"],
+    "bonneReponse": 2,
+    "explication": "Les disques de bureau tournent généralement à 7 200 tr/min ; les modèles économiques ou d'ordinateurs portables se contentent souvent de 5 400 tr/min, et certains disques de serveurs montaient à 10 000, voire 15 000 tr/min. Plus le plateau tourne vite, moins on attend que la bonne donnée passe sous la tête."
+  },
+  {
+    "id": "stockage-f5",
+    "enonce": "Laquelle de ces unités représente la plus grande capacité ?",
+    "choix": ["le gigaoctet (Go)", "le téraoctet (To)", "le mégaoctet (Mo)", "le kilooctet (Ko)"],
+    "bonneReponse": 1,
+    "explication": "Dans l'ordre croissant : kilo (mille), méga (million), giga (milliard), téra (mille milliards). Un téraoctet vaut donc 1 000 Go, soit 10¹² octets. Au-dessus viennent le pétaoctet (Po) puis l'exaoctet (Eo), les unités des grands centres de données."
+  },
+  {
+    "id": "stockage-f6",
+    "enonce": "Quel type de mémoire trouve-t-on à la fois dans une clé USB et dans un SSD ?",
+    "choix": ["la mémoire flash", "la mémoire vive", "la mémoire cache", "la mémoire magnétique"],
+    "bonneReponse": 0,
+    "explication": "La mémoire flash (de type NAND) conserve ses données sans électricité, grâce à des charges piégées dans ses cellules. Inventée par Fujio Masuoka chez Toshiba dans les années 1980, elle équipe aussi les cartes SD et les smartphones. Son nom évoque le flash d'un appareil photo : elle efface d'un coup un bloc entier de données."
+  },
+  {
+    "id": "stockage-f7",
+    "enonce": "Que signifie qu'une mémoire de stockage est « non volatile » ?",
+    "choix": ["elle s'efface à chaque redémarrage", "elle ne peut être écrite qu'une fois", "elle garde ses données hors tension", "elle ne fonctionne qu'à basse température"],
+    "bonneReponse": 2,
+    "explication": "Une mémoire non volatile conserve son contenu quand on coupe le courant : c'est le cas des disques durs, des SSD et des clés USB. À l'inverse, la mémoire vive (RAM) est volatile et perd tout à l'extinction. C'est pourquoi on « enregistre » un document : on le recopie de la RAM vers le stockage."
+  },
+  {
+    "id": "stockage-f8",
+    "enonce": "Quel format de SSD, en forme de petite barrette, se fixe directement sur la carte mère ?",
+    "choix": ["le 3,5 pouces", "le 2,5 pouces", "le 5,25 pouces", "le M.2"],
+    "bonneReponse": 3,
+    "explication": "Le M.2 est une petite carte de 22 mm de large (le plus souvent 80 mm de long, d'où l'appellation « 2280 ») qui se visse sur la carte mère, sans aucun câble. Les SSD de 2,5 pouces reprennent la forme des disques durs de portables et se branchent en SATA ; le 3,5 pouces est le format des disques durs de bureau, et le 5,25 pouces celui des anciens lecteurs de CD et DVD."
+  },
+  {
+    "id": "stockage-f9",
+    "enonce": "Que veut-on dire quand on stocke ses fichiers « dans le cloud » ?",
+    "choix": ["on les compresse pour gagner de la place", "on les place sur des serveurs distants", "on les chiffre avec un mot de passe", "on les répartit sur plusieurs partitions"],
+    "bonneReponse": 1,
+    "explication": "Le « nuage » désigne des serveurs appartenant à un prestataire (Google Drive, OneDrive, iCloud, Dropbox…), joignables par Internet. Les fichiers restent accessibles depuis n'importe quel appareil et survivent à la panne de son propre disque. En contrepartie, ils dépendent d'une connexion et d'une entreprise tierce."
+  },
+  {
+    "id": "stockage-f10",
+    "enonce": "Quelle entreprise a commercialisé le tout premier disque dur, en 1956 ?",
+    "choix": ["Apple", "Seagate", "IBM", "Microsoft"],
+    "bonneReponse": 2,
+    "explication": "Le système IBM 305 RAMAC empilait 50 plateaux de 61 cm de diamètre pour stocker environ 5 millions de caractères (quelques mégaoctets), le tout pesant près d'une tonne. Il se louait plus de 3 000 dollars par mois. Seagate, grand fabricant actuel de disques durs, n'a été fondé qu'en 1979, Apple et Microsoft au milieu des années 1970."
+  }
+]

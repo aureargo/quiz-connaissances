@@ -1,0 +1,72 @@
+[
+  {
+    "id": "montage-pc-f1",
+    "enonce": "Quel composant convertit le courant du secteur pour alimenter tout le PC ?",
+    "choix": ["la carte mère", "l'alimentation", "le processeur", "le ventirad"],
+    "bonneReponse": 1,
+    "explication": "L'alimentation (ou bloc d'alimentation, PSU en anglais) transforme le courant alternatif de 230 V de la prise en courants continus de 12 V, 5 V et 3,3 V. Elle distribue ensuite cette énergie par ses câbles à la carte mère, au processeur, à la carte graphique et aux disques. Une alimentation de mauvaise qualité peut emporter d'autres composants dans sa chute."
+  },
+  {
+    "id": "montage-pc-f2",
+    "enonce": "Que faut-il appliquer entre le processeur et son refroidisseur ?",
+    "choix": ["de la colle forte", "du ruban adhésif", "de l'eau distillée", "de la pâte thermique"],
+    "bonneReponse": 3,
+    "explication": "Les surfaces du processeur et du refroidisseur ne sont jamais parfaitement lisses : l'air piégé dans leurs micro-creux conduit très mal la chaleur. La pâte thermique comble ces vides. Une noisette de la taille d'un petit pois suffit, la pression du refroidisseur l'étale ; beaucoup de ventirads sont d'ailleurs livrés avec une pâte pré-appliquée."
+  },
+  {
+    "id": "montage-pc-f3",
+    "enonce": "Contre quoi se protège-t-on en touchant une surface métallique reliée à la terre avant de manipuler les composants ?",
+    "choix": ["l'électricité statique", "la chaleur des composants", "les champs magnétiques", "la poussière"],
+    "bonneReponse": 0,
+    "explication": "Le corps humain accumule des charges statiques (en marchant sur une moquette, en portant de la laine…). Une décharge, même trop faible pour être ressentie, peut endommager une puce. Toucher une partie métallique reliée à la terre, ou porter un bracelet antistatique, évacue ces charges. On évite aussi de monter son PC sur un tapis."
+  },
+  {
+    "id": "montage-pc-f4",
+    "enonce": "Pourquoi faut-il brancher l'écran sur la carte graphique plutôt que sur la carte mère ?",
+    "choix": ["sinon l'écran risque de griller", "sinon le son ne fonctionnera pas", "sinon la carte graphique ne sert à rien", "sinon Windows refuse de s'installer"],
+    "bonneReponse": 2,
+    "explication": "Les sorties vidéo de la carte mère sont reliées à la puce graphique intégrée au processeur. Y brancher l'écran, c'est jouer avec cette puce bien moins puissante en laissant la carte graphique inutilisée — une erreur de débutant très courante. Et si le processeur n'a pas de partie graphique (les Intel suffixés « F », par exemple), l'écran reste tout simplement noir."
+  },
+  {
+    "id": "montage-pc-f5",
+    "enonce": "Qu'est-il conseillé d'installer sur la carte mère avant de la fixer dans le boîtier ?",
+    "choix": ["la carte graphique et l'alimentation", "le processeur, la RAM et le SSD M.2", "les ventilateurs du boîtier", "les câbles de la façade"],
+    "bonneReponse": 1,
+    "explication": "Posée à plat sur sa boîte en carton, la carte mère est bien plus accessible : on y installe tranquillement le processeur, les barrettes de RAM et le SSD M.2, parfois même le refroidisseur. Une fois vissée dans le boîtier, l'espace manque et certains emplacements deviennent difficiles d'accès. La carte graphique, elle, se pose en dernier."
+  },
+  {
+    "id": "montage-pc-f6",
+    "enonce": "Comment repère-t-on le bon sens d'insertion d'un processeur dans son socket ?",
+    "choix": ["grâce au petit triangle dans un coin", "grâce à la couleur de la carte mère", "il s'insère dans les deux sens", "grâce au logo imprimé au dos"],
+    "bonneReponse": 0,
+    "explication": "Un petit triangle doré marque un coin du processeur ; il s'aligne avec un repère sur le socket (chez Intel, des encoches latérales servent aussi de détrompeurs). Le processeur se pose alors sans aucune force, par simple gravité. S'il faut appuyer, c'est qu'il est mal orienté : forcer tordrait des broches, une réparation délicate, voire impossible."
+  },
+  {
+    "id": "montage-pc-f7",
+    "enonce": "Quel est le rôle des ventilateurs installés sur le boîtier ?",
+    "choix": ["alimenter les composants en électricité", "filtrer la poussière qui entre", "refroidir uniquement l'alimentation", "faire entrer l'air frais et sortir l'air chaud"],
+    "bonneReponse": 3,
+    "explication": "Les composants réchauffent l'air du boîtier ; sans renouvellement, la température grimpe et ils ralentissent pour se protéger. Les ventilateurs de façade aspirent l'air frais, ceux de l'arrière et du dessus évacuent l'air chaud. Ce sont les filtres, eux, qui arrêtent la poussière — à nettoyer régulièrement."
+  },
+  {
+    "id": "montage-pc-f8",
+    "enonce": "De quoi a-t-on besoin pour installer Windows sur un PC fraîchement monté ?",
+    "choix": ["d'un second écran branché en HDMI", "d'une carte graphique dédiée", "d'une clé USB d'installation", "d'un lecteur de disquettes"],
+    "bonneReponse": 2,
+    "explication": "Microsoft fournit gratuitement un outil de création de support qui prépare, depuis un autre ordinateur, une clé USB d'installation (8 Go minimum). On démarre ensuite le nouveau PC sur cette clé. La licence peut être saisie plus tard ; Windows 11 réclame en général, en fin d'installation, une connexion Internet et un compte Microsoft."
+  },
+  {
+    "id": "montage-pc-f9",
+    "enonce": "Quel outil est indispensable pour monter un PC ?",
+    "choix": ["un tournevis cruciforme", "un fer à souder", "un marteau", "une scie à métaux"],
+    "bonneReponse": 0,
+    "explication": "Presque toutes les vis d'un PC (carte mère, SSD, carte graphique, ventilateurs) sont cruciformes, le plus souvent de taille PH2. Aucune soudure n'est nécessaire : tout s'emboîte ou se visse. Un tournevis aimanté est pratique pour ne pas perdre les vis, et sans danger pour les composants modernes."
+  },
+  {
+    "id": "montage-pc-f10",
+    "enonce": "Pourquoi soigner le rangement des câbles (« cable management ») dans un boîtier ?",
+    "choix": ["pour augmenter la puissance du PC", "pour mieux faire circuler l'air", "pour réduire la facture d'électricité", "pour prolonger la garantie des pièces"],
+    "bonneReponse": 1,
+    "explication": "Des câbles qui pendent au milieu du boîtier gênent le flux d'air et retiennent la poussière. Les faire passer derrière le plateau de la carte mère, attachés par des colliers, dégage le passage et facilite l'entretien comme les futures mises à niveau. Et un boîtier vitré bien rangé, c'est aussi plus joli."
+  }
+]

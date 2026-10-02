@@ -1,0 +1,72 @@
+[
+  {
+    "id": "php-m1",
+    "enonce": "Quelle est la différence entre `==` et `===` en PHP ?",
+    "choix": ["`===` compare valeur et type, `==` convertit d'abord", "`==` compare valeur et type, `===` convertit d'abord", "aucune : les deux sont équivalents depuis PHP 8", "`===` compare des références, `==` des valeurs"],
+    "bonneReponse": 0,
+    "explication": "`\"1\" == 1` vaut `true` (la chaîne est convertie), mais `\"1\" === 1` vaut `false`. PHP 8 a rendu la comparaison souple plus saine (`0 == \"a\"` vaut désormais `false`), mais `===` reste recommandé."
+  },
+  {
+    "id": "php-m2",
+    "enonce": "Que se passe-t-il si le fichier demandé est introuvable avec `require` et avec `include` ?",
+    "choix": ["les deux affichent un avertissement et continuent", "`require` provoque une erreur fatale, `include` un avertissement", "`include` provoque une erreur fatale, `require` un avertissement", "les deux arrêtent le script avec une erreur fatale"],
+    "bonneReponse": 1,
+    "explication": "`require` sert pour ce qui est indispensable (configuration, autoloader) : sans lui, inutile de continuer. Les variantes `require_once` et `include_once` évitent de charger deux fois le même fichier."
+  },
+  {
+    "id": "php-m3",
+    "enonce": "Que renvoie l'expression `$a ?? $b` ?",
+    "choix": ["une erreur si `$a` n'est pas défini, sinon `$a`", "la plus grande des deux valeurs `$a` et `$b`", "`$b` dès que `$a` est faux, vide ou zéro, sinon `$a`", "`$a` s'il existe et n'est pas null, sinon `$b`"],
+    "bonneReponse": 3,
+    "explication": "C'est l'opérateur de coalescence nulle (PHP 7), équivalent à `isset($a) ? $a : $b`, sans avertissement si la variable n'existe pas : `$page = $_GET['page'] ?? 1;`. À ne pas confondre avec `?:`, qui teste si la valeur est « fausse »."
+  },
+  {
+    "id": "php-m4",
+    "enonce": "Quel mécanisme permet de réutiliser des méthodes dans plusieurs classes sans héritage ?",
+    "choix": ["les extensions", "les protocoles", "les traits", "les modules"],
+    "bonneReponse": 2,
+    "explication": "On déclare `trait Horodatable { ... }` puis on écrit `use Horodatable;` dans la classe : ses méthodes y sont copiées. Les traits (PHP 5.4) contournent la limite de l'héritage simple."
+  },
+  {
+    "id": "php-m5",
+    "enonce": "Qu'apporte l'expression `match` (PHP 8) par rapport à `switch` ?",
+    "choix": ["Elle compare strictement et renvoie une valeur, sans `break`", "Elle compare de façon souple, comme `switch` avec `==`", "Elle ne fonctionne qu'avec des valeurs entières ou des chaînes", "Elle exige un `break` explicite à la fin de chaque branche"],
+    "bonneReponse": 0,
+    "explication": "`$libelle = match($code) { 200 => 'OK', 404 => 'Introuvable', default => 'Erreur' };` — `match` est une expression, compare avec `===`, n'a pas de « fallthrough » et lève une `UnhandledMatchError` si aucune branche ne correspond."
+  },
+  {
+    "id": "php-m6",
+    "enonce": "Avec PDO, comment se protéger des injections SQL ?",
+    "choix": ["avec des requêtes préparées et des paramètres liés", "en passant les données dans `htmlspecialchars()`", "en entourant les valeurs de guillemets simples", "en désactivant le mode d'erreur de PDO"],
+    "bonneReponse": 0,
+    "explication": "`$stmt = $pdo->prepare('SELECT * FROM users WHERE id = ?'); $stmt->execute([$id]);` : les données sont envoyées à part et ne sont jamais interprétées comme du SQL. `htmlspecialchars()` protège du XSS, pas de l'injection SQL."
+  },
+  {
+    "id": "php-m7",
+    "enonce": "Quelle fonction faut-il utiliser pour stocker un mot de passe ?",
+    "choix": ["password_hash()", "sha1()", "md5()", "base64_encode()"],
+    "bonneReponse": 0,
+    "explication": "`password_hash()` utilise un algorithme lent et salé (bcrypt par défaut, Argon2 possible) ; on vérifie ensuite avec `password_verify()`. MD5 et SHA-1 sont bien trop rapides à attaquer, et base64 n'est qu'un encodage réversible."
+  },
+  {
+    "id": "php-m8",
+    "enonce": "Que change `declare(strict_types=1);` en tête de fichier ?",
+    "choix": ["Les erreurs de type deviennent de simples avertissements", "Le fichier est compilé à l'avance pour aller plus vite", "Toutes les variables doivent être déclarées avant usage", "Les paramètres typés ne sont plus convertis implicitement"],
+    "bonneReponse": 3,
+    "explication": "Sans cette directive, passer `\"5\"` à une fonction attendant un `int` est converti en silence. Avec elle, PHP lève une `TypeError`. Elle s'applique aux appels effectués depuis ce fichier."
+  },
+  {
+    "id": "php-m9",
+    "enonce": "Quelle recommandation PSR décrit le chargement automatique des classes selon leur namespace ?",
+    "choix": ["PSR-1", "PSR-4", "PSR-7", "PSR-3"],
+    "bonneReponse": 1,
+    "explication": "PSR-4 (publiée par le PHP-FIG) associe un préfixe de namespace à un dossier : `App\\Models\\User` → `src/Models/User.php`. Composer l'implémente. PSR-7 décrit les messages HTTP, PSR-3 l'interface des loggers."
+  },
+  {
+    "id": "php-m10",
+    "enonce": "Quel opérateur permet d'accéder à une méthode statique ou à une constante de classe ?",
+    "choix": [".", "=>", "::", "->"],
+    "bonneReponse": 2,
+    "explication": "`Math::PI` ou `self::creer()`. Son nom officiel est « Paamayim Nekudotayim » (« double deux-points » en hébreu), qu'on croise parfois dans les messages d'erreur. `->` sert aux membres d'une instance."
+  }
+]

@@ -28,11 +28,32 @@
     "description": "JavaScript typé : la sûreté du typage statique compilée vers du JavaScript."
   },
   {
+    "id": "nodejs",
+    "nom": "Node.js",
+    "emoji": "🟩",
+    "categorie": "Programmation",
+    "description": "JavaScript côté serveur : boucle d'événements, E/S non bloquantes, npm et streams."
+  },
+  {
     "id": "angular",
     "nom": "Angular",
     "emoji": "🅰️",
     "categorie": "Programmation",
     "description": "Le framework front-end de Google, écrit en TypeScript."
+  },
+  {
+    "id": "react",
+    "nom": "React",
+    "emoji": "⚛️",
+    "categorie": "Programmation",
+    "description": "La bibliothèque d'interfaces de Meta : composants, JSX, hooks et Server Components."
+  },
+  {
+    "id": "vue",
+    "nom": "Vue.js",
+    "emoji": "💚",
+    "categorie": "Programmation",
+    "description": "Le framework front-end progressif : templates, directives, réactivité et Composition API."
   },
   {
     "id": "java",
@@ -47,6 +68,13 @@
     "emoji": "🟪",
     "categorie": "Programmation",
     "description": "Le langage moderne de JetBrains sur la JVM, « Kotlin-first » pour Android."
+  },
+  {
+    "id": "csharp",
+    "nom": "C#",
+    "emoji": "#️⃣",
+    "categorie": "Programmation",
+    "description": "Le langage phare de Microsoft et .NET : LINQ, async/await, records… et les scripts de Unity."
   },
   {
     "id": "c",
@@ -68,6 +96,20 @@
     "emoji": "🦀",
     "categorie": "Programmation",
     "description": "Sûreté mémoire sans ramasse-miettes grâce au système d'ownership."
+  },
+  {
+    "id": "php",
+    "nom": "PHP",
+    "emoji": "🐘",
+    "categorie": "Programmation",
+    "description": "Le pilier historique du web côté serveur, modernisé par PHP 8 : enums, match, readonly et Composer."
+  },
+  {
+    "id": "ruby",
+    "nom": "Ruby",
+    "emoji": "💎",
+    "categorie": "Programmation",
+    "description": "Le langage pensé pour le bonheur des développeurs : blocs, symboles, métaprogrammation et Rails."
   },
   {
     "id": "git",
@@ -140,6 +182,34 @@
     "description": "Processeurs graphiques : rendu 3D, calcul parallèle et IA."
   },
   {
+    "id": "stockage",
+    "nom": "Stockage (SSD, HDD)",
+    "emoji": "💾",
+    "categorie": "Matériel informatique",
+    "description": "Disques durs, SSD, NVMe, RAID et systèmes de fichiers : où et comment dorment nos données."
+  },
+  {
+    "id": "ram",
+    "nom": "Mémoire vive (RAM)",
+    "emoji": "⚡",
+    "categorie": "Matériel informatique",
+    "description": "DDR4, DDR5, double canal, latences et profils XMP : la mémoire de travail de l'ordinateur."
+  },
+  {
+    "id": "cartes-meres",
+    "nom": "Cartes mères & connectique",
+    "emoji": "🔌",
+    "categorie": "Matériel informatique",
+    "description": "Chipsets, PCI Express, BIOS/UEFI, USB et Thunderbolt : le circuit qui relie tous les composants."
+  },
+  {
+    "id": "montage-pc",
+    "nom": "Monter son PC",
+    "emoji": "🛠️",
+    "categorie": "Matériel informatique",
+    "description": "Alimentation, refroidissement, câblage et premier démarrage : assembler sa machine pas à pas."
+  },
+  {
     "id": "sql",
     "nom": "SQL",
     "emoji": "🗃️",
@@ -152,6 +222,41 @@
     "emoji": "🍃",
     "categorie": "Bases de données",
     "description": "Bases non relationnelles : documents, clé-valeur, colonnes et graphes pour passer à l'échelle."
+  },
+  {
+    "id": "postgresql",
+    "nom": "PostgreSQL",
+    "emoji": "🦣",
+    "categorie": "Bases de données",
+    "description": "La base relationnelle libre la plus avancée : MVCC, index, JSONB, extensions et plans d'exécution."
+  },
+  {
+    "id": "mongodb",
+    "nom": "MongoDB",
+    "emoji": "🍀",
+    "categorie": "Bases de données",
+    "description": "La base orientée documents : BSON, requêtes, agrégation, réplication et sharding."
+  },
+  {
+    "id": "redis",
+    "nom": "Redis",
+    "emoji": "🟥",
+    "categorie": "Bases de données",
+    "description": "Le magasin clé-valeur en mémoire : structures de données, TTL, pub/sub, persistance et cluster."
+  },
+  {
+    "id": "modelisation-donnees",
+    "nom": "Modélisation de données",
+    "emoji": "🗂️",
+    "categorie": "Bases de données",
+    "description": "Concevoir un schéma solide : Merise (MCD, MLD), cardinalités et formes normales."
+  },
+  {
+    "id": "data-engineering",
+    "nom": "Data engineering",
+    "emoji": "📊",
+    "categorie": "Bases de données",
+    "description": "Faire circuler la donnée : ETL et ELT, data lakes, entrepôts, Spark, Kafka et pipelines."
   },
   {
     "id": "crypto",
@@ -313,6 +418,13 @@
     "emoji": "🌱",
     "categorie": "Sciences",
     "description": "Climat, biodiversité, énergies renouvelables et pollution : comprendre l'environnement et le défi du réchauffement."
+  },
+  {
+    "id": "biais-cognitifs",
+    "nom": "Biais cognitifs",
+    "emoji": "🤔",
+    "categorie": "Sciences",
+    "description": "Confirmation, ancrage, effet de halo, Dunning-Kruger : les raccourcis de pensée qui nous trompent sans qu'on s'en aperçoive."
   },
   {
     "id": "antiquite",

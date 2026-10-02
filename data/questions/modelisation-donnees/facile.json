@@ -1,0 +1,72 @@
+[
+  {
+    "id": "modelisation-donnees-f1",
+    "enonce": "Dans la méthode Merise, que signifie le sigle MCD ?",
+    "choix": ["Modèle Complet de Diagrammes", "Méthode de Codage des Données", "Modèle Conceptuel de Données", "Mise en Commun des Données"],
+    "bonneReponse": 2,
+    "explication": "Le MCD décrit les données d'un système (entités, associations, cardinalités) sans se soucier de la technique. Il est ensuite traduit en MLD (relationnel), puis en MPD (pour un SGBD précis)."
+  },
+  {
+    "id": "modelisation-donnees-f2",
+    "enonce": "Dans quel pays la méthode Merise a-t-elle été conçue ?",
+    "choix": ["en Allemagne", "en France", "aux États-Unis", "au Royaume-Uni"],
+    "bonneReponse": 1,
+    "explication": "Merise est née à la fin des années 1970 d'un projet soutenu par le ministère de l'Industrie, avec notamment Hubert Tardieu. Très enseignée en France, elle est quasi inconnue ailleurs, où l'on parle plutôt de diagrammes entité-association ou d'UML."
+  },
+  {
+    "id": "modelisation-donnees-f3",
+    "enonce": "Dans un MCD, comment appelle-t-on la propriété qui distingue chaque occurrence d'une entité ?",
+    "choix": ["l'identifiant", "la cardinalité", "l'association", "la dépendance"],
+    "bonneReponse": 0,
+    "explication": "L'identifiant (souligné dans le schéma) prend une valeur différente pour chaque occurrence, comme un numéro de client. Il deviendra la clé primaire de la table lors du passage au modèle relationnel."
+  },
+  {
+    "id": "modelisation-donnees-f4",
+    "enonce": "Que représente une association dans un MCD ?",
+    "choix": ["un attribut composé de plusieurs valeurs", "une table temporaire de calcul", "un lien entre plusieurs entités", "un index pour les recherches"],
+    "bonneReponse": 2,
+    "explication": "Une association relie des entités et porte souvent un verbe : un Client « passe » une Commande. Elle est accompagnée de cardinalités qui précisent combien de fois chaque occurrence peut y participer."
+  },
+  {
+    "id": "modelisation-donnees-f5",
+    "enonce": "Dans « Client (0,n) — passe — (1,1) Commande », que signifie le 0,n côté Client ?",
+    "choix": ["un client passe exactement une commande", "un client passe au moins une commande", "une commande appartient à plusieurs clients", "un client passe zéro, une ou plusieurs commandes"],
+    "bonneReponse": 3,
+    "explication": "En Merise, la cardinalité placée à côté d'une entité dit combien de fois UNE de ses occurrences participe à l'association : minimum 0, maximum n. Le 1,1 côté Commande indique qu'une commande est passée par un et un seul client."
+  },
+  {
+    "id": "modelisation-donnees-f6",
+    "enonce": "Quel modèle Merise traduit le MCD en tables, clés primaires et clés étrangères, sans dépendre d'un SGBD précis ?",
+    "choix": ["le MCT", "le MPD", "le MOT", "le MLD"],
+    "bonneReponse": 3,
+    "explication": "Le Modèle Logique de Données exprime le schéma relationnel. Le MPD (physique) l'adapte ensuite à un SGBD précis : types, index, contraintes. MCT et MOT sont des modèles de traitements (conceptuel et organisationnel), pas de données."
+  },
+  {
+    "id": "modelisation-donnees-f7",
+    "enonce": "Comment appelle-t-on une même information stockée inutilement à plusieurs endroits ?",
+    "choix": ["la granularité", "la cardinalité", "l'intégrité", "la redondance"],
+    "bonneReponse": 3,
+    "explication": "Si l'adresse d'un client est recopiée dans chaque commande, la modifier impose de la changer partout, et un oubli crée des incohérences. Une bonne modélisation stocke chaque information à un seul endroit."
+  },
+  {
+    "id": "modelisation-donnees-f8",
+    "enonce": "Que demande la première forme normale (1FN) ?",
+    "choix": ["une clé primaire d'une seule colonne", "des valeurs atomiques dans chaque colonne", "aucune dépendance entre deux tables", "au moins une clé étrangère par table"],
+    "bonneReponse": 1,
+    "explication": "Une colonne ne doit contenir qu'une seule valeur : pas de « 06 12…, 07 45… » dans une même case `telephones`, ni de groupes répétés (tel1, tel2, tel3). On crée plutôt une table à part, avec une ligne par numéro."
+  },
+  {
+    "id": "modelisation-donnees-f9",
+    "enonce": "Un étudiant suit plusieurs cours et un cours accueille plusieurs étudiants : quel type de relation est-ce ?",
+    "choix": ["une relation N:M", "une relation réflexive", "une relation 1:1", "une relation 1:N"],
+    "bonneReponse": 0,
+    "explication": "C'est une relation plusieurs-à-plusieurs (N:M), notée (0,n) — (0,n) ou (1,n) en Merise. Elle ne peut pas se représenter par une simple clé étrangère : il faut une table intermédiaire, par exemple « Inscription »."
+  },
+  {
+    "id": "modelisation-donnees-f10",
+    "enonce": "Pourquoi est-il risqué de prendre le nom d'une personne comme identifiant ?",
+    "choix": ["un nom occupe trop de place sur le disque", "deux personnes peuvent porter le même nom", "un nom ne peut pas être indexé", "les lettres sont interdites dans une clé"],
+    "bonneReponse": 1,
+    "explication": "Un identifiant doit être unique et stable. Or les homonymes existent et un nom peut changer (mariage, correction d'une faute). D'où l'usage d'un numéro attribué par le système."
+  }
+]

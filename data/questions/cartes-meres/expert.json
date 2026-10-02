@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cartes-meres-e1",
+    "enonce": "Que permet la « bifurcation » d'un emplacement PCIe x16 ?",
+    "choix": ["y relier deux cartes graphiques en série", "doubler sa fréquence de fonctionnement", "le diviser en plusieurs liens plus étroits", "le rendre compatible avec l'ancien AGP"],
+    "bonneReponse": 2,
+    "explication": "La bifurcation découpe les 16 lignes d'un emplacement en liens indépendants, par exemple x8/x8 ou x4/x4/x4/x4. Elle permet notamment d'utiliser une carte d'extension portant quatre SSD NVMe, chacun recevant ses quatre lignes. Le réglage se fait dans l'UEFI, et toutes les cartes mères ne le proposent pas."
+  },
+  {
+    "id": "cartes-meres-e2",
+    "enonce": "Sur les plateformes Intel, comment s'appelle le lien qui relie le processeur au chipset ?",
+    "choix": ["DMI", "QPI", "SPI", "LPC"],
+    "bonneReponse": 0,
+    "explication": "Le DMI (Direct Media Interface) est un lien dérivé du PCIe : en DMI 4.0 x8, il offre environ 16 Go/s par sens sur les chipsets Z790 et Z890. Tout ce qui passe par le chipset (ports USB, SATA, SSD secondaires, réseau) se partage cette bande passante, d'où l'intérêt de brancher le SSD principal sur les lignes du processeur. Le QPI reliait des processeurs entre eux ; SPI et LPC sont des bus lents qui desservent la puce du BIOS et des contrôleurs annexes."
+  },
+  {
+    "id": "cartes-meres-e3",
+    "enonce": "Quel débit désigne l'appellation « USB 3.2 Gen 2x2 » ?",
+    "choix": ["10 Gbit/s", "20 Gbit/s", "5 Gbit/s", "40 Gbit/s"],
+    "bonneReponse": 1,
+    "explication": "Dans la nomenclature USB 3.2, « Gen 1 » vaut 5 Gbit/s (l'ancien USB 3.0), « Gen 2 » 10 Gbit/s, et « x2 » indique deux voies utilisées en parallèle : Gen 2x2 = 2 × 10 = 20 Gbit/s, uniquement en USB-C. Face à la confusion, l'USB-IF a fini par recommander des noms commerciaux explicites, comme « USB 20Gbps »."
+  },
+  {
+    "id": "cartes-meres-e4",
+    "enonce": "Quelle puissance maximale l'USB Power Delivery 3.1 peut-il délivrer en mode étendu (EPR) ?",
+    "choix": ["15 W", "60 W", "100 W", "240 W"],
+    "bonneReponse": 3,
+    "explication": "L'USB PD 3.1 (2021) ajoute des tensions de 28, 36 et 48 V : 48 V × 5 A = 240 W, de quoi alimenter un portable de jeu. Avant lui, le plafond était de 100 W (20 V × 5 A). Au-delà de 3 A, il faut un câble dit « e-marked », doté d'une puce qui annonce ses capacités au chargeur."
+  },
+  {
+    "id": "cartes-meres-e5",
+    "enonce": "Qu'a changé AMD en passant du socket AM4 à l'AM5, en 2022 ?",
+    "choix": ["les broches sont passées du CPU au socket", "le socket accepte la DDR4 et la DDR5", "le processeur se soude sur la carte mère", "le socket ne gère plus le PCI Express"],
+    "bonneReponse": 0,
+    "explication": "L'AM4 était un socket PGA : ses 1 331 broches dépassaient sous le processeur. L'AM5 (LGA 1718) adopte le LGA, comme Intel depuis 2004 : le processeur ne porte plus que des pastilles plates, et ce sont les contacts du socket qui viennent les toucher. L'AM5 n'accepte que la DDR5 et apporte le PCIe 5.0."
+  },
+  {
+    "id": "cartes-meres-e6",
+    "enonce": "Que permet la fonction « BIOS Flashback » (ou « Q-Flash Plus ») de certaines cartes mères ?",
+    "choix": ["revenir au BIOS d'usine à chaque démarrage", "sauvegarder le BIOS dans le cloud du fabricant", "flasher le BIOS sans processeur ni RAM installés", "démarrer une copie de Windows intégrée"],
+    "bonneReponse": 2,
+    "explication": "Avec une clé USB contenant le fichier du BIOS et un simple bouton à l'arrière de la carte, la mise à jour se fait sans processeur, sans mémoire, sans même d'écran. C'est la solution à un cercle vicieux classique : une carte mère livrée avec un vieux BIOS refuse de démarrer avec un processeur plus récent… qu'il faudrait justement installer pour la mettre à jour."
+  },
+  {
+    "id": "cartes-meres-e7",
+    "enonce": "Que permet la fonction MST (Multi-Stream Transport) du DisplayPort ?",
+    "choix": ["transporter un son multicanal 7.1", "chaîner plusieurs écrans sur une sortie", "augmenter le taux de rafraîchissement", "transmettre l'image sans aucun fil"],
+    "bonneReponse": 1,
+    "explication": "Depuis DisplayPort 1.2 (2010), le MST fait circuler plusieurs flux vidéo indépendants dans un même câble. On peut ainsi relier les écrans en chaîne (daisy chain), chacun renvoyant le signal au suivant par sa propre sortie DisplayPort, ou utiliser un hub qui sépare les flux. La bande passante totale reste partagée entre tous les écrans."
+  },
+  {
+    "id": "cartes-meres-e8",
+    "enonce": "Pourquoi le PCIe 3.0 double-t-il presque le débit du 2.0, alors que sa fréquence ne passe que de 5 à 8 GT/s ?",
+    "choix": ["il utilise deux fois plus de fils par ligne", "il compresse les données avant l'envoi", "il supprime la vérification des erreurs", "son encodage 128b/130b gaspille moins de bits"],
+    "bonneReponse": 3,
+    "explication": "Les PCIe 1.x et 2.0 utilisaient un encodage 8b/10b : 10 bits transmis pour 8 utiles, soit 20 % de perte. Le 3.0 passe au 128b/130b, qui ne perd qu'environ 1,5 %. Résultat : 5 GT/s × 0,8 = 4 Gbit/s utiles en PCIe 2.0, contre 8 × 0,985 ≈ 7,9 Gbit/s en 3.0, soit environ 985 Mo/s par ligne."
+  },
+  {
+    "id": "cartes-meres-e9",
+    "enonce": "Quelle technique de signalisation le PCIe 6.0 adopte-t-il pour doubler encore le débit ?",
+    "choix": ["la modulation PAM4", "le codage NRZ", "la modulation QAM", "le codage Manchester"],
+    "bonneReponse": 0,
+    "explication": "Jusqu'au PCIe 5.0, les liens utilisaient le NRZ : deux niveaux de tension, donc 1 bit par symbole. Le PCIe 6.0 (2022) passe au PAM4 : quatre niveaux, donc 2 bits par symbole, pour atteindre 64 GT/s sans doubler la fréquence. Plus sensible aux erreurs, le PAM4 impose une correction d'erreurs (FEC) et un découpage en paquets de taille fixe (FLIT). La GDDR6X des cartes graphiques Nvidia l'utilise aussi."
+  },
+  {
+    "id": "cartes-meres-e10",
+    "enonce": "Que permet le « Resizable BAR », à activer dans l'UEFI ?",
+    "choix": ["à la RAM de servir de mémoire vidéo", "au GPU d'utiliser le cache du processeur", "au CPU d'accéder à toute la VRAM d'un bloc", "au BIOS de redimensionner les partitions"],
+    "bonneReponse": 2,
+    "explication": "Historiquement, le processeur ne voyait la mémoire de la carte graphique qu'à travers une fenêtre de 256 Mo, qu'il fallait déplacer sans cesse. Le Resizable BAR (Base Address Register), une option de la norme PCIe, agrandit cette fenêtre à toute la VRAM. AMD l'a popularisé en 2020 sous le nom de Smart Access Memory ; il exige un démarrage en UEFI pur (CSM désactivé) et apporte des gains dans certains jeux."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "react-f1",
+    "enonce": "Quelle entreprise a créé React ?",
+    "choix": ["Microsoft", "Google", "Facebook", "Twitter"],
+    "bonneReponse": 2,
+    "explication": "React a été conçu par Jordan Walke chez Facebook et publié en open source en 2013. Il est aujourd'hui maintenu par Meta et la communauté. Angular, lui, vient de Google."
+  },
+  {
+    "id": "react-f2",
+    "enonce": "Qu'est-ce que le JSX ?",
+    "choix": ["un moteur JavaScript optimisé pour React", "un langage de styles qui remplace le CSS dans les composants", "une syntaxe proche du HTML écrite dans du JavaScript", "un format d'échange de données concurrent du JSON"],
+    "bonneReponse": 2,
+    "explication": "`<h1>Bonjour {nom}</h1>` n'est pas du HTML : le compilateur le transforme en appels de fonctions JavaScript qui décrivent l'interface. Les accolades insèrent n'importe quelle expression JavaScript."
+  },
+  {
+    "id": "react-f3",
+    "enonce": "Quel hook déclare une variable d'état dans un composant fonction ?",
+    "choix": ["useRef", "useEffect", "useState", "useMemo"],
+    "bonneReponse": 2,
+    "explication": "`const [compteur, setCompteur] = useState(0);` renvoie la valeur actuelle et une fonction pour la modifier. Appeler cette fonction déclenche un nouveau rendu du composant."
+  },
+  {
+    "id": "react-f4",
+    "enonce": "Quel attribut remplace `class` en JSX ?",
+    "choix": ["cssClass", "classList", "className", "styleClass"],
+    "bonneReponse": 2,
+    "explication": "`class` est un mot réservé de JavaScript, d'où `className`. Pour la même raison, l'attribut `for` d'un `<label>` s'écrit `htmlFor`."
+  },
+  {
+    "id": "react-f5",
+    "enonce": "Comment un composant parent transmet-il des données à un enfant ?",
+    "choix": ["par le state de l'enfant", "par le localStorage", "par des variables globales", "par les props"],
+    "bonneReponse": 3,
+    "explication": "`<Carte titre=\"Salut\" />` est reçu par `function Carte({ titre })`. Les props sont en lecture seule : les données descendent du parent vers l'enfant, c'est le flux unidirectionnel de React."
+  },
+  {
+    "id": "react-f6",
+    "enonce": "Pourquoi faut-il une prop `key` sur les éléments d'une liste ?",
+    "choix": ["pour trier automatiquement les éléments de la liste par clé", "pour rendre chaque élément accessible au clavier", "pour définir l'ordre de tabulation des éléments", "pour aider React à suivre chaque élément entre deux rendus"],
+    "bonneReponse": 3,
+    "explication": "Grâce à la clé, React sait quel élément a été ajouté, retiré ou déplacé. Elle doit être stable et unique, typiquement un identifiant. L'index du tableau est à éviter si la liste peut être réordonnée."
+  },
+  {
+    "id": "react-f7",
+    "enonce": "Quel hook exécute un effet de bord, comme un appel réseau, après le rendu ?",
+    "choix": ["useContext", "useId", "useState", "useEffect"],
+    "bonneReponse": 3,
+    "explication": "`useEffect(() => { ... }, [dependances])` s'exécute après l'affichage. C'est l'endroit pour s'abonner à un événement, lancer un timer ou synchroniser le composant avec un système extérieur."
+  },
+  {
+    "id": "react-f8",
+    "enonce": "Comment regrouper plusieurs éléments sans ajouter de nœud au DOM ?",
+    "choix": ["<!-- ... -->", "<div hidden>...</div>", "<>...</>", "<group>...</group>"],
+    "bonneReponse": 2,
+    "explication": "Un composant ne renvoie qu'un seul élément racine ; le fragment `<>...</>` les englobe sans rien produire dans le DOM. La forme longue `<Fragment>` accepte en plus une `key`."
+  },
+  {
+    "id": "react-f9",
+    "enonce": "Create React App ayant été déprécié en 2025, quel outil de build est couramment utilisé pour démarrer un projet React ?",
+    "choix": ["Grunt", "Gulp", "Vite", "Bower"],
+    "bonneReponse": 2,
+    "explication": "Vite offre un serveur de développement quasi instantané. Pour une application complète, la documentation de React conseille plutôt un framework comme Next.js ou React Router. Gulp et Grunt sont d'anciens lanceurs de tâches."
+  },
+  {
+    "id": "react-f10",
+    "enonce": "Que permet React Native ?",
+    "choix": ["créer des applications mobiles natives avec React", "exécuter React dans le navigateur sans JavaScript", "compiler React en code machine pour le serveur", "convertir une application React en extension Chrome"],
+    "bonneReponse": 0,
+    "explication": "Les composants React Native (`<View>`, `<Text>`) deviennent de vrais composants iOS et Android, pas du HTML. On garde le modèle de React : composants, props, état et hooks."
+  }
+]

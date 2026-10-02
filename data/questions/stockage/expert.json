@@ -1,0 +1,72 @@
+[
+  {
+    "id": "stockage-e1",
+    "enonce": "Quelle est la plus petite unité qu'une mémoire flash NAND peut effacer ?",
+    "choix": ["la page", "le bloc", "la cellule", "l'octet"],
+    "bonneReponse": 1,
+    "explication": "La flash NAND lit et écrit par pages (quelques Ko), mais n'efface que par blocs entiers de plusieurs centaines de pages. Pour modifier une page, le SSD écrit donc la nouvelle version ailleurs et marque l'ancienne comme invalide ; un « ramasse-miettes » (garbage collection) recopie plus tard les pages encore valides pour libérer des blocs. Ces recopies font écrire au SSD plus que ce que l'OS demande : c'est l'« amplification d'écriture »."
+  },
+  {
+    "id": "stockage-e2",
+    "enonce": "Que fait le mécanisme de « wear leveling » du contrôleur d'un SSD ?",
+    "choix": ["il abaisse la tension pour ménager les cellules", "il réserve des cellules pour remplacer les mortes", "il trie les fichiers par fréquence d'utilisation", "il répartit les écritures sur toutes les cellules"],
+    "bonneReponse": 3,
+    "explication": "Chaque cellule de flash ne supporte qu'un nombre limité de cycles d'écriture-effacement. Le wear leveling (« nivellement de l'usure ») déplace les écritures, et même les données qui ne bougent jamais, pour que toutes les cellules s'usent au même rythme. Sans lui, les zones souvent réécrites (fichiers système, journaux) mourraient bien avant le reste. Les cellules de réserve, elles, relèvent de l'over-provisioning."
+  },
+  {
+    "id": "stockage-e3",
+    "enonce": "Quelle technique de disque dur fait chevaucher les pistes comme des tuiles, au prix d'écritures plus lentes ?",
+    "choix": ["SMR", "CMR", "HAMR", "MAMR"],
+    "bonneReponse": 0,
+    "explication": "Le SMR (Shingled Magnetic Recording, « en bardeaux ») superpose partiellement les pistes pour gagner en densité ; mais réécrire une piste oblige à réécrire ses voisines, ce qui effondre les performances en écriture aléatoire. En 2020, Western Digital a été critiqué pour avoir glissé sans le dire des disques SMR dans sa gamme Red pour NAS, où les reconstructions de RAID devenaient interminables. Le CMR est l'enregistrement conventionnel ; HAMR et MAMR chauffent ou excitent le plateau (laser, micro-ondes) pour écrire plus dense."
+  },
+  {
+    "id": "stockage-e4",
+    "enonce": "Avec quatre disques de 4 To en RAID 5, quelle capacité utile obtient-on ?",
+    "choix": ["16 To", "4 To", "12 To", "8 To"],
+    "bonneReponse": 2,
+    "explication": "Le RAID 5 répartit sur tous les disques des informations de parité équivalant à la capacité d'un disque : (4 − 1) × 4 To = 12 To. Il survit à la panne d'un disque, dont il recalcule le contenu à partir des autres. 16 To correspondrait au RAID 0, 8 To au RAID 6 ou 10. Sur de gros disques, la reconstruction peut durer des jours, d'où l'intérêt du RAID 6 et de sa double parité."
+  },
+  {
+    "id": "stockage-e5",
+    "enonce": "Quelle limite pousse à préférer une table de partitions GPT plutôt que MBR ?",
+    "choix": ["MBR ne fonctionne qu'avec les disques durs", "MBR ne gère pas plus de 2 To par disque", "MBR interdit plus de deux partitions", "MBR ne sait pas démarrer Windows 10"],
+    "bonneReponse": 1,
+    "explication": "Le MBR (1983) code les adresses de secteurs sur 32 bits : avec des secteurs de 512 octets, il ne voit que 2³² × 512 octets = 2 Tio. Il se limite aussi à 4 partitions principales. La GPT, liée à l'UEFI, adresse des disques gigantesques et accepte 128 partitions par défaut sous Windows. Windows 11, qui exige l'UEFI, s'installe d'ailleurs sur un disque GPT."
+  },
+  {
+    "id": "stockage-e6",
+    "enonce": "Pourquoi la vitesse d'écriture de nombreux SSD s'effondre-t-elle au milieu d'une très longue copie ?",
+    "choix": ["leur cache SLC est saturé", "leur port M.2 se met en veille", "Windows bride les gros fichiers", "leur fonction TRIM se désactive"],
+    "bonneReponse": 0,
+    "explication": "Pour paraître rapides, les SSD TLC et QLC exploitent une partie de leurs cellules en mode SLC (1 bit par cellule), bien plus rapide à écrire. Une fois ce tampon de quelques dizaines de Go rempli, ils écrivent directement en TLC ou QLC, et le débit chute — parfois sous celui d'un disque dur pour certains QLC. Le cache se vide ensuite en arrière-plan, au repos."
+  },
+  {
+    "id": "stockage-e7",
+    "enonce": "Que permet la fonction HMB (Host Memory Buffer) des SSD NVMe dépourvus de DRAM ?",
+    "choix": ["utiliser un disque dur comme cache de secours", "écrire directement dans le cache du processeur", "doubler le débit en combinant deux ports M.2", "loger leur table d'adresses dans la RAM du PC"],
+    "bonneReponse": 3,
+    "explication": "Le contrôleur d'un SSD tient une table qui traduit chaque adresse logique en emplacement physique dans la flash (la FTL). Elle est habituellement rangée dans une puce DRAM dédiée, à raison d'environ 1 Mo par Go de stockage. Les SSD sans DRAM, moins chers, empruntent via le PCIe quelques dizaines de Mo de la RAM du PC pour en garder la partie la plus utile : c'est le HMB, introduit avec NVMe 1.2."
+  },
+  {
+    "id": "stockage-e8",
+    "enonce": "Que mesure l'indicateur « IOPS » d'un périphérique de stockage ?",
+    "choix": ["le débit séquentiel en Mo par seconde", "les erreurs de lecture corrigées par seconde", "les opérations d'entrée-sortie par seconde", "les watts consommés en écriture"],
+    "bonneReponse": 2,
+    "explication": "Les IOPS (Input/Output Operations Per Second) comptent les petites lectures ou écritures indépendantes, typiquement de 4 Ko à des adresses aléatoires — ce qui compte pour démarrer un système ou servir une base de données. Un disque dur à 7 200 tr/min plafonne vers 100 à 200 IOPS, freiné par les mouvements de sa tête ; un SSD NVMe en atteint des centaines de milliers, voire plus d'un million."
+  },
+  {
+    "id": "stockage-e9",
+    "enonce": "Qu'est-ce qui distingue la mémoire « 3D NAND » de la NAND planaire ?",
+    "choix": ["ses cellules sont empilées en couches verticales", "elle stocke trois bits dans chaque cellule", "elle se lit à l'aide d'un faisceau laser", "elle assemble trois puces collées entre elles"],
+    "bonneReponse": 0,
+    "explication": "Les cellules planaires ne pouvaient plus rétrécir sans devenir instables. La 3D NAND empile donc les cellules en couches, comme un gratte-ciel au lieu d'un lotissement. Samsung l'a lancée en série en 2013 (V-NAND) avec 24 couches ; les puces récentes en dépassent 200, voire 300. Trois bits par cellule, c'est autre chose : le TLC, souvent combiné à la 3D NAND."
+  },
+  {
+    "id": "stockage-e10",
+    "enonce": "Sur un disque dur, pourquoi les données du bord extérieur des plateaux sont-elles lues plus vite que celles du centre ?",
+    "choix": ["le moteur accélère quand la tête s'y déplace", "plus de secteurs y passent à chaque tour", "la tête de lecture y est plus sensible", "les fichiers système y sont compressés"],
+    "bonneReponse": 1,
+    "explication": "Le plateau tourne à vitesse angulaire constante, mais une piste extérieure est bien plus longue qu'une piste intérieure : on y loge davantage de secteurs (zone bit recording). À chaque tour, la tête lit donc plus de données au bord, et le débit séquentiel peut y être presque deux fois plus élevé qu'au centre. C'est pourquoi les disques se remplissent en commençant par l'extérieur."
+  }
+]

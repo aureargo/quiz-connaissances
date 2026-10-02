@@ -1,0 +1,72 @@
+[
+  {
+    "id": "redis-e1",
+    "enonce": "Quel fork de Redis, soutenu par la Linux Foundation, est né en 2024 après un changement de licence ?",
+    "choix": ["Dragonfly", "Garnet", "KeyDB", "Valkey"],
+    "bonneReponse": 3,
+    "explication": "En mars 2024, Redis abandonne la licence BSD pour un double régime RSAL / SSPL. La Linux Foundation lance aussitôt Valkey à partir de Redis 7.2.4, avec le soutien d'AWS, Google ou Oracle. Redis 8 a ensuite ajouté l'option AGPLv3 en 2025. KeyDB est un fork plus ancien, Dragonfly et Garnet sont des réécritures compatibles."
+  },
+  {
+    "id": "redis-e2",
+    "enonce": "Que renvoie la commande TTL pour une clé qui existe mais n'a aucune expiration ?",
+    "choix": ["-2", "nil", "-1", "0"],
+    "bonneReponse": 2,
+    "explication": "TTL renvoie le nombre de secondes restantes, -1 si la clé n'expire jamais, et -2 si la clé n'existe pas. PTTL fait de même en millisecondes, et PERSIST retire une expiration."
+  },
+  {
+    "id": "redis-e3",
+    "enonce": "Entre combien d'emplacements de hachage (hash slots) Redis Cluster répartit-il les clés ?",
+    "choix": ["16 384", "65 536", "1 024", "4 096"],
+    "bonneReponse": 0,
+    "explication": "Chaque clé va dans l'emplacement CRC16(clé) mod 16 384, et chaque nœud maître gère une partie des emplacements. Les commandes portant sur plusieurs clés exigent qu'elles soient dans le même emplacement : on les y force avec un « hash tag », comme `user:{42}:panier` et `user:{42}:profil`."
+  },
+  {
+    "id": "redis-e4",
+    "enonce": "Quel est le rôle de Redis Sentinel ?",
+    "choix": ["compresser les instantanés sur disque", "répartir les clés entre plusieurs maîtres", "surveiller les nœuds et basculer en cas de panne", "chiffrer les échanges avec les clients"],
+    "bonneReponse": 2,
+    "explication": "Plusieurs processus Sentinel surveillent un maître et ses réplicas. Si assez d'entre eux jugent le maître injoignable, ils promeuvent un réplica et indiquent aux clients la nouvelle adresse. Répartir les clés entre plusieurs maîtres, c'est le rôle de Redis Cluster."
+  },
+  {
+    "id": "redis-e5",
+    "enonce": "Quel est l'intérêt principal d'un script Lua lancé avec EVAL ?",
+    "choix": ["exécuter plusieurs commandes de façon atomique", "planifier une commande à heure fixe", "lancer les commandes sur plusieurs cœurs", "ajouter des commandes en recompilant Redis"],
+    "bonneReponse": 0,
+    "explication": "Le script s'exécute en entier sans qu'aucune autre commande ne s'intercale, et la logique conditionnelle tourne au plus près des données, sans allers-retours réseau. Contrepartie : un script lent bloque tout le serveur. Redis 7 a ajouté les Functions, des scripts enregistrés côté serveur."
+  },
+  {
+    "id": "redis-e6",
+    "enonce": "Dans les Streams Redis, que permet un groupe de consommateurs ?",
+    "choix": ["diffuser chaque message à tous les clients", "compresser les anciens messages du flux", "trier les messages par ordre de priorité", "se partager les messages avec accusé de réception"],
+    "bonneReponse": 3,
+    "explication": "Avec XREADGROUP, chaque message n'est remis qu'à un seul consommateur du groupe, qui le confirme avec XACK. Les messages non confirmés restent en attente et peuvent être réattribués (XCLAIM) si un consommateur tombe : un fonctionnement proche de Kafka."
+  },
+  {
+    "id": "redis-e7",
+    "enonce": "Comment Redis supprime-t-il les clés expirées ?",
+    "choix": ["par un parcours complet chaque seconde", "uniquement lors d'une sauvegarde sur disque", "à l'accès, plus un échantillonnage périodique", "seulement quand la mémoire est pleine"],
+    "bonneReponse": 2,
+    "explication": "Méthode passive : une clé expirée est supprimée au moment où un client tente de la lire. Méthode active : plusieurs fois par seconde, Redis teste un échantillon aléatoire de clés à expiration et recommence tant qu'il en trouve beaucoup d'expirées. Un parcours complet serait bien trop coûteux."
+  },
+  {
+    "id": "redis-e8",
+    "enonce": "Comment BGSAVE crée-t-il un instantané RDB sans bloquer le serveur ?",
+    "choix": ["avec fork() et la copie sur écriture", "en n'écrivant que les clés modifiées", "en suspendant les écritures des clients", "en déléguant la copie à un réplica"],
+    "bonneReponse": 0,
+    "explication": "Le processus enfant voit une image figée de la mémoire et l'écrit sur disque pendant que le parent continue de servir les clients. Grâce à la copie sur écriture, seules les pages modifiées entre-temps sont dupliquées : sous forte charge d'écriture, la consommation mémoire peut donc fortement augmenter."
+  },
+  {
+    "id": "redis-e9",
+    "enonce": "Quel est le principal gain du pipelining ?",
+    "choix": ["rendre un lot de commandes atomique", "réduire les allers-retours réseau", "compresser les réponses du serveur", "répartir l'exécution sur plusieurs cœurs"],
+    "bonneReponse": 1,
+    "explication": "Le client envoie plusieurs commandes sans attendre chaque réponse, puis lit toutes les réponses d'un coup : on économise la latence réseau à chaque commande. En revanche, rien n'est atomique, d'autres clients peuvent s'intercaler. Pour l'atomicité, il faut MULTI/EXEC ou un script."
+  },
+  {
+    "id": "redis-e10",
+    "enonce": "Quelle structure Redis estime le nombre d'éléments distincts avec au plus 12 Ko de mémoire ?",
+    "choix": ["Bitmap", "HyperLogLog", "Sorted Set", "Bloom filter"],
+    "bonneReponse": 1,
+    "explication": "Un HyperLogLog (PFADD, PFCOUNT) compte des visiteurs uniques sans les stocker, avec une erreur type d'environ 0,81 %, quel que soit leur nombre. Un Bloom filter répond à une autre question, « cet élément est-il probablement présent ? »."
+  }
+]

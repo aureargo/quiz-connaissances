@@ -1,0 +1,72 @@
+[
+  {
+    "id": "mongodb-e1",
+    "enonce": "Quel est le moteur de stockage par défaut de MongoDB depuis la version 3.2 ?",
+    "choix": ["InnoDB", "MMAPv1", "WiredTiger", "RocksDB"],
+    "bonneReponse": 2,
+    "explication": "WiredTiger, racheté par MongoDB en 2014, apporte la compression et un verrouillage au niveau du document. L'ancien moteur MMAPv1 verrouillait toute la collection et a été retiré en version 4.2. InnoDB est le moteur de MySQL ; RocksDB a été utilisé par des variantes comme Percona."
+  },
+  {
+    "id": "mongodb-e2",
+    "enonce": "Sous quelle licence MongoDB Community Server est-il publié depuis fin 2018 ?",
+    "choix": ["AGPL v3", "SSPL", "Apache 2.0", "GPL v3"],
+    "bonneReponse": 1,
+    "explication": "MongoDB est passé de l'AGPL à la Server Side Public License, qui oblige quiconque propose MongoDB « en service » à publier tout le code de son offre. Le but était de freiner les clouds qui revendaient MongoDB. L'OSI ne la reconnaît pas comme libre, et Debian ou Fedora ont retiré MongoDB de leurs dépôts."
+  },
+  {
+    "id": "mongodb-e3",
+    "enonce": "Pour un index composé, quel ordre des champs recommande la règle ESR ?",
+    "choix": ["tri, puis plage, puis égalité", "plage, puis égalité, puis tri", "égalité, puis plage, puis tri", "égalité, puis tri, puis plage"],
+    "bonneReponse": 3,
+    "explication": "Equality, Sort, Range : d'abord les champs testés par égalité, puis ceux du tri, puis ceux filtrés par plage ($gt, $lt…). Placer la plage avant le tri obligerait MongoDB à trier les résultats en mémoire au lieu de les lire déjà ordonnés dans l'index."
+  },
+  {
+    "id": "mongodb-e4",
+    "enonce": "Dans un plan affiché par explain(), quelle étape indique qu'aucun index n'a été utilisé ?",
+    "choix": ["COLLSCAN", "FETCH", "SHARD_MERGE", "IXSCAN"],
+    "bonneReponse": 0,
+    "explication": "COLLSCAN signifie que toute la collection a été parcourue. IXSCAN indique un parcours d'index, FETCH la lecture des documents trouvés via l'index. `explain(\"executionStats\")` donne en plus les nombres de clés et de documents examinés."
+  },
+  {
+    "id": "mongodb-e5",
+    "enonce": "Pourquoi une clé de sharding qui croît sans cesse (date, ObjectId) pose-t-elle problème ?",
+    "choix": ["les index secondaires deviennent inutiles", "les documents dépassent vite les 16 Mo", "les requêtes par plage sont refusées", "toutes les insertions visent le même shard"],
+    "bonneReponse": 3,
+    "explication": "Avec un sharding par plages, chaque nouvelle valeur est la plus grande : toutes les écritures tombent dans le dernier morceau, donc sur un seul shard. On choisit alors une clé plus variée, une clé composée ou un sharding haché, qui répartit les écritures (au prix de requêtes par plage plus coûteuses)."
+  },
+  {
+    "id": "mongodb-e6",
+    "enonce": "Dans un cluster shardé, quel processus reçoit les requêtes des clients et les route vers les bons shards ?",
+    "choix": ["mongod", "mongos", "l'arbitre", "le serveur de configuration"],
+    "bonneReponse": 1,
+    "explication": "`mongos` est le routeur : il lit les métadonnées des serveurs de configuration pour savoir quel shard détient quelles données. `mongod` est le processus qui stocke réellement les données, et l'arbitre ne sert qu'aux élections d'un replica set."
+  },
+  {
+    "id": "mongodb-e7",
+    "enonce": "Que garantit une écriture avec le write concern `{ w: \"majority\" }` ?",
+    "choix": ["elle est répliquée sur tous les nœuds", "elle est appliquée sur la moitié des shards", "elle est journalisée sur le seul primaire", "elle est acquittée par une majorité de nœuds"],
+    "bonneReponse": 3,
+    "explication": "L'écriture n'est confirmée qu'une fois enregistrée par une majorité des membres votants qui portent des données : elle ne pourra pas être annulée lors d'un changement de primaire. C'est la valeur par défaut depuis MongoDB 5.0 dans la plupart des configurations."
+  },
+  {
+    "id": "mongodb-e8",
+    "enonce": "Quelle fonctionnalité permet à une application de suivre en temps réel les modifications d'une collection ?",
+    "choix": ["les change streams", "les vues matérialisées", "les index TTL", "les collections plafonnées"],
+    "bonneReponse": 0,
+    "explication": "Un change stream (`collection.watch()`) diffuse les insertions, mises à jour et suppressions. Il s'appuie sur l'oplog, d'où la nécessité d'un replica set, et fournit un jeton de reprise pour continuer après une coupure. Avant lui, on lisait l'oplog avec un curseur « tailable » sur une collection plafonnée."
+  },
+  {
+    "id": "mongodb-e9",
+    "enonce": "Qu'est-ce qu'une requête « couverte » (covered query) ?",
+    "choix": ["une requête servie par l'index seul", "une requête protégée par chiffrement", "une requête dont le résultat est en cache", "une requête lancée sur tous les shards"],
+    "bonneReponse": 0,
+    "explication": "Si tous les champs filtrés ET renvoyés figurent dans l'index, MongoDB répond sans lire un seul document : `totalDocsExamined` vaut alors 0. Piège classique : il faut exclure `_id` de la projection s'il ne fait pas partie de l'index."
+  },
+  {
+    "id": "mongodb-e10",
+    "enonce": "Pourquoi utiliser $elemMatch sur un tableau de sous-documents ?",
+    "choix": ["pour trier les éléments du tableau", "pour ignorer les tableaux vides ou absents", "pour que les conditions visent le même élément", "pour compter les éléments du tableau"],
+    "bonneReponse": 2,
+    "explication": "`find({ notes: { $elemMatch: { matiere: \"maths\", valeur: { $gt: 15 } } } })` exige un même élément qui remplisse les deux conditions. Sans $elemMatch, MongoDB accepterait un document dont un élément est en maths et un AUTRE élément au-dessus de 15."
+  }
+]

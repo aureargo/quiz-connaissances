@@ -1,0 +1,72 @@
+[
+  {
+    "id": "redis-m1",
+    "enonce": "Quelle structure Redis conserve des membres uniques triés selon un score ?",
+    "choix": ["hash", "set", "list", "zset"],
+    "bonneReponse": 3,
+    "explication": "La commande TYPE répond « zset » pour un Sorted Set (commandes en Z : ZADD, ZRANGE, ZRANK…). Il associe un score à chaque membre et reste trié en permanence. C'est la structure idéale pour un classement de joueurs ou une file à priorités. Un simple set garantit l'unicité mais n'a pas d'ordre."
+  },
+  {
+    "id": "redis-m2",
+    "enonce": "Quelle structure choisir pour ranger un objet (nom, e-mail, âge d'un utilisateur) sous une seule clé ?",
+    "choix": ["List", "Set", "Hash", "Stream"],
+    "bonneReponse": 2,
+    "explication": "Un Hash est un petit dictionnaire de champs : `HSET user:1 nom Ada age 36`, puis `HGET user:1 nom`. On lit ou modifie un champ sans renvoyer tout l'objet, contrairement à une chaîne JSON qu'il faudrait réécrire en entier."
+  },
+  {
+    "id": "redis-m3",
+    "enonce": "Quels sont les deux mécanismes de persistance sur disque de Redis ?",
+    "choix": ["Binlog et Redo", "Oplog et GridFS", "RDB et AOF", "WAL et MVCC"],
+    "bonneReponse": 2,
+    "explication": "RDB écrit périodiquement un instantané compact de toute la base : rapide à recharger, mais on peut perdre les dernières minutes. AOF (Append Only File) ajoute chaque écriture à un journal, en général synchronisé chaque seconde. On peut combiner les deux."
+  },
+  {
+    "id": "redis-m4",
+    "enonce": "Pourquoi la commande `KEYS *` est-elle déconseillée en production ?",
+    "choix": ["elle désactive temporairement la persistance", "elle n'existe que dans les versions payantes", "elle supprime les clés sans demander confirmation", "elle bloque le serveur pendant tout le parcours"],
+    "bonneReponse": 3,
+    "explication": "Redis exécute les commandes une à une : KEYS parcourt toutes les clés d'un coup, et pendant ce temps plus aucun client n'est servi. On utilise SCAN, qui parcourt la base par petits lots à l'aide d'un curseur."
+  },
+  {
+    "id": "redis-m5",
+    "enonce": "Que devient un message envoyé avec PUBLISH si aucun abonné n'écoute le canal ?",
+    "choix": ["il est perdu définitivement", "il attend la connexion d'un abonné", "il est stocké dans une liste", "il est renvoyé à son émetteur"],
+    "bonneReponse": 0,
+    "explication": "Le Pub/Sub de Redis fonctionne en « tire et oublie » : seuls les abonnés connectés à cet instant reçoivent le message, rien n'est conservé. Pour un historique, des relectures et des accusés de réception, on utilise les Streams (XADD, XREADGROUP)."
+  },
+  {
+    "id": "redis-m6",
+    "enonce": "Quel couple de commandes regroupe plusieurs commandes dans une transaction ?",
+    "choix": ["BEGIN / COMMIT", "MULTI / EXEC", "OPEN / CLOSE", "START / END"],
+    "bonneReponse": 1,
+    "explication": "Après MULTI, les commandes sont mises en file, puis EXEC les exécute d'un bloc, sans qu'aucun autre client ne s'intercale. Différence majeure avec SQL : si une commande échoue, les autres ne sont pas annulées. WATCH permet un verrouillage optimiste."
+  },
+  {
+    "id": "redis-m7",
+    "enonce": "Que fait l'option NX de la commande SET ?",
+    "choix": ["elle écrit seulement si la clé n'existe pas", "elle écrit sans durée de vie possible", "elle écrit seulement si la clé existe déjà", "elle écrit sans déclencher de persistance"],
+    "bonneReponse": 0,
+    "explication": "`SET verrou 1 NX EX 30` ne réussit que si la clé est absente : c'est la base d'un verrou distribué simple, qui expire tout seul si son détenteur plante. L'option inverse, XX, n'écrit que si la clé existe déjà."
+  },
+  {
+    "id": "redis-m8",
+    "enonce": "Avec la politique `allkeys-lru`, que fait Redis quand la mémoire atteint `maxmemory` ?",
+    "choix": ["il refuse toute nouvelle écriture", "il évince les clés les moins récemment utilisées", "il augmente lui-même sa limite de mémoire", "il écrit les clés les plus anciennes sur disque"],
+    "bonneReponse": 1,
+    "explication": "LRU signifie Least Recently Used : Redis supprime d'abord les clés lues ou écrites il y a le plus longtemps, ce qui en fait un cache. La politique par défaut, `noeviction`, refuse au contraire les écritures quand la mémoire est pleine. Il existe aussi des variantes LFU (les moins fréquemment utilisées) et `volatile-*`."
+  },
+  {
+    "id": "redis-m9",
+    "enonce": "Pourquoi chaque commande Redis est-elle atomique ?",
+    "choix": ["il écrit chaque commande sur disque avant tout", "il exécute les commandes une à une sur un seul thread", "il verrouille chaque clé avant de la modifier", "il réplique chaque commande avant de l'appliquer"],
+    "bonneReponse": 1,
+    "explication": "Le cœur de Redis est une boucle d'événements à un seul thread : une commande ne peut jamais être interrompue par une autre. Depuis Redis 6, des threads peuvent gérer les entrées/sorties réseau, mais l'exécution des commandes reste séquentielle."
+  },
+  {
+    "id": "redis-m10",
+    "enonce": "Comment utiliser une List Redis comme file d'attente « premier entré, premier sorti » ?",
+    "choix": ["LPUSH puis RPOP", "LPUSH puis LPOP", "ZADD puis ZPOPMAX", "SADD puis SPOP"],
+    "bonneReponse": 0,
+    "explication": "On ajoute à gauche et on retire à droite : le plus ancien élément sort en premier (FIFO). LPUSH + LPOP donnerait une pile (LIFO). Avec BRPOP, un consommateur attend sans consommer de CPU qu'un élément arrive."
+  }
+]

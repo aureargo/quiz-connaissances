@@ -1,0 +1,72 @@
+[
+  {
+    "id": "csharp-f1",
+    "enonce": "Quelle entreprise a créé le langage C# ?",
+    "choix": ["Apple", "Microsoft", "Oracle", "Google"],
+    "bonneReponse": 1,
+    "explication": "C# a été conçu chez Microsoft par l'équipe d'Anders Hejlsberg (déjà auteur de Turbo Pascal et Delphi, et plus tard de TypeScript). Présenté en 2000, il est sorti avec la plateforme .NET en 2002."
+  },
+  {
+    "id": "csharp-f2",
+    "enonce": "Quel mot-clé laisse le compilateur déduire le type d'une variable locale ?",
+    "choix": ["auto", "var", "let", "dim"],
+    "bonneReponse": 1,
+    "explication": "`var total = 0;` : le type (`int`) est déduit et fixé à la compilation, C# reste donc statiquement typé. `let` vient de JavaScript, `auto` de C++, `Dim` de Visual Basic."
+  },
+  {
+    "id": "csharp-f3",
+    "enonce": "Quel est le point d'entrée classique d'un programme C# ?",
+    "choix": ["la fonction init", "la méthode Start", "le constructeur Program", "la méthode Main"],
+    "bonneReponse": 3,
+    "explication": "`static void Main(string[] args)` est appelée au lancement. Depuis C# 9, les « top-level statements » permettent d'écrire le code directement dans `Program.cs` : le compilateur génère `Main` en coulisses."
+  },
+  {
+    "id": "csharp-f4",
+    "enonce": "Comment écrit-on une chaîne interpolée en C# ?",
+    "choix": ["$\"Bonjour {nom}\"", "f\"Bonjour {nom}\"", "\"Bonjour #{nom}\"", "\"Bonjour ${nom}\""],
+    "bonneReponse": 0,
+    "explication": "Le préfixe `$` active l'interpolation : `$\"Total : {prix * 2:F2} €\"` accepte même des expressions et des formats. Les autres syntaxes sont celles de Kotlin, Python et Ruby."
+  },
+  {
+    "id": "csharp-f5",
+    "enonce": "Que fait l'instruction `Console.WriteLine(\"Salut\");` ?",
+    "choix": ["Elle affiche « Salut » sans retour à la ligne", "Elle lit une ligne saisie au clavier par l'utilisateur", "Elle affiche « Salut » suivi d'un retour à la ligne", "Elle écrit « Salut » dans un fichier texte"],
+    "bonneReponse": 2,
+    "explication": "`WriteLine` ajoute un saut de ligne après le texte, contrairement à `Console.Write`. Pour lire une saisie, on utilise `Console.ReadLine()`."
+  },
+  {
+    "id": "csharp-f6",
+    "enonce": "Quel gestionnaire de paquets est utilisé dans l'écosystème .NET ?",
+    "choix": ["npm", "Cargo", "NuGet", "pip"],
+    "bonneReponse": 2,
+    "explication": "On ajoute une bibliothèque avec `dotnet add package Newtonsoft.Json`, qui la télécharge depuis nuget.org et l'inscrit dans le fichier projet `.csproj`."
+  },
+  {
+    "id": "csharp-f7",
+    "enonce": "Quel moteur de jeu vidéo très populaire utilise C# pour ses scripts ?",
+    "choix": ["Unity", "Unreal Engine", "id Tech", "Source"],
+    "bonneReponse": 0,
+    "explication": "Les comportements des objets Unity s'écrivent en C#, en héritant de `MonoBehaviour`. Unreal Engine, Source (Valve) et id Tech reposent sur le C++."
+  },
+  {
+    "id": "csharp-f8",
+    "enonce": "Quel framework de Microsoft sert à créer des sites et des API web en C# ?",
+    "choix": ["Django", "Laravel", "Spring Boot", "ASP.NET Core"],
+    "bonneReponse": 3,
+    "explication": "ASP.NET Core est le framework web multiplateforme de .NET : API REST, pages Razor, temps réel avec SignalR. Spring Boot est l'équivalent Java, Django Python et Laravel PHP."
+  },
+  {
+    "id": "csharp-f9",
+    "enonce": "Comment déclare-t-on une propriété auto-implémentée en C# ?",
+    "choix": ["public string Nom [get, set];", "public property string Nom;", "public string Nom => get, set;", "public string Nom { get; set; }"],
+    "bonneReponse": 3,
+    "explication": "Le compilateur génère lui-même le champ privé caché. On peut restreindre l'écriture (`{ get; private set; }`) ou n'autoriser l'affectation qu'à l'initialisation (`{ get; init; }`)."
+  },
+  {
+    "id": "csharp-f10",
+    "enonce": "Que signifie le `?` dans la déclaration `int? age` ?",
+    "choix": ["la variable est facultative à l'appel", "la variable peut aussi valoir null", "la variable est un entier positif", "la variable n'est pas encore initialisée"],
+    "bonneReponse": 1,
+    "explication": "`int?` est un raccourci pour `Nullable<int>` : un type valeur ne peut normalement pas être `null`. On teste avec `age.HasValue`, ou on fournit une valeur par défaut : `age ?? 0`."
+  }
+]

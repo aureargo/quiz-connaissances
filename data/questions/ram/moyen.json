@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ram-m1",
+    "enonce": "Que signifie le « DDR » de DDR4 ou DDR5 ?",
+    "choix": ["Direct Data Route", "Double Data Rate", "Dual Disk RAM", "Dynamic Data Reader"],
+    "bonneReponse": 1,
+    "explication": "Double Data Rate : la mémoire transfère des données deux fois par cycle d'horloge, sur le front montant et sur le front descendant du signal. Une DDR5-6000 réalise ainsi 6 000 millions de transferts par seconde avec une horloge de 3 000 MHz. Apparue vers 2000, cette astuce a succédé à la SDRAM classique, qui ne transférait qu'une fois par cycle."
+  },
+  {
+    "id": "ram-m2",
+    "enonce": "Pourquoi vaut-il mieux installer deux barrettes de 8 Go qu'une seule de 16 Go ?",
+    "choix": ["pour réduire la consommation électrique", "pour libérer un emplacement M.2", "parce qu'une seule barrette ne démarre pas", "pour profiter du double canal"],
+    "bonneReponse": 3,
+    "explication": "Les processeurs grand public disposent de deux canaux mémoire. Avec deux barrettes placées sur deux canaux différents (dual channel), le contrôleur y accède en parallèle et double la bande passante théorique. Le gain est sensible dans certains jeux, et surtout avec une puce graphique intégrée, qui utilise la RAM comme mémoire vidéo."
+  },
+  {
+    "id": "ram-m3",
+    "enonce": "Que désigne la latence « CL » (CAS Latency) d'une barrette de RAM ?",
+    "choix": ["le délai, en cycles, avant de recevoir une donnée", "la tension électrique appliquée à la barrette", "le nombre de puces soudées sur la barrette", "la température maximale de fonctionnement"],
+    "bonneReponse": 0,
+    "explication": "Le CL compte les cycles d'horloge entre la demande de lecture d'une colonne et l'arrivée des premières données. À fréquence égale, plus il est bas, mieux c'est : une DDR4-3200 CL16 répond plus vite qu'une CL22. Mais pour comparer deux fréquences différentes, il faut convertir en nanosecondes, car un cycle est d'autant plus court que la fréquence est élevée."
+  },
+  {
+    "id": "ram-m4",
+    "enonce": "Que permet d'activer le profil XMP (ou EXPO chez AMD) dans le BIOS ?",
+    "choix": ["le chiffrement du contenu de la mémoire", "le partage de la RAM avec la carte graphique", "la fréquence et les timings annoncés sur la boîte", "un test complet de la RAM à chaque démarrage"],
+    "bonneReponse": 2,
+    "explication": "Par défaut, la carte mère applique des réglages prudents définis par le JEDEC (souvent 4 800 MT/s en DDR5), quelle que soit la vitesse achetée. Le profil XMP (Intel) ou EXPO (AMD), stocké dans la barrette, applique en un clic la fréquence, les timings et la tension validés par le fabricant. Beaucoup de PC tournent ainsi sous leur potentiel, faute de l'avoir activé."
+  },
+  {
+    "id": "ram-m5",
+    "enonce": "Peut-on installer une barrette DDR4 dans un emplacement prévu pour la DDR5 ?",
+    "choix": ["oui, après une mise à jour du BIOS", "non, leur encoche n'est pas au même endroit", "oui, mais elle tournera deux fois moins vite", "oui, si les barrettes ont la même capacité"],
+    "bonneReponse": 1,
+    "explication": "DDR4 et DDR5 ont toutes deux 288 broches, mais leur encoche (le détrompeur) est décalée : impossible d'insérer l'une à la place de l'autre sans forcer. Elles sont de toute façon électriquement incompatibles (tensions, signaux, gestion de l'alimentation). C'est la carte mère, donc le processeur choisi, qui impose la génération de mémoire."
+  },
+  {
+    "id": "ram-m6",
+    "enonce": "Pourquoi la mémoire DRAM doit-elle être constamment « rafraîchie » ?",
+    "choix": ["ses condensateurs se déchargent peu à peu", "ses données se fragmentent avec le temps", "son horloge se décale de celle du CPU", "ses cellules chauffent et changent de valeur"],
+    "bonneReponse": 0,
+    "explication": "Dans la DRAM (Dynamic RAM), chaque bit est une minuscule charge stockée dans un condensateur, gardée par un transistor. Cette charge fuit en quelques dizaines de millisecondes : le contrôleur relit et réécrit donc chaque ligne au moins toutes les 64 ms. Ce rafraîchissement permanent est le prix de sa densité ; la SRAM des caches, elle, n'en a pas besoin."
+  },
+  {
+    "id": "ram-m7",
+    "enonce": "Qu'est-ce que la mémoire « ECC » ?",
+    "choix": ["une mémoire à très basse consommation", "une mémoire réservée aux cartes graphiques", "une mémoire soudée sur la carte mère", "une mémoire qui corrige ses erreurs de bits"],
+    "bonneReponse": 3,
+    "explication": "L'ECC (Error-Correcting Code) ajoute des bits de contrôle (8 pour 64 bits de données) qui permettent de détecter et corriger à la volée un bit erroné, basculé par exemple par un rayonnement cosmique. Indispensable sur les serveurs et stations de travail, elle reste rare sur les PC grand public. La DDR5 intègre une correction interne à chaque puce, mais ce n'est pas une vraie ECC : elle ne protège pas les transferts vers le processeur."
+  },
+  {
+    "id": "ram-m8",
+    "enonce": "Que se passe-t-il si l'on mélange deux barrettes de fréquences différentes ?",
+    "choix": ["chacune garde sa propre vitesse", "elles s'alignent sur la plus lente", "elles s'alignent sur la plus rapide", "le PC refuse toujours de démarrer"],
+    "bonneReponse": 1,
+    "explication": "Le contrôleur mémoire applique les mêmes réglages à toutes les barrettes : elles tournent donc, au mieux, à la vitesse et aux timings de la plus lente. Mélanger des modèles différents peut aussi provoquer des instabilités. C'est pourquoi on achète la RAM en kits de deux ou quatre barrettes, testées ensemble par le fabricant."
+  },
+  {
+    "id": "ram-m9",
+    "enonce": "Quel outil intégré à Windows permet de tester la mémoire vive ?",
+    "choix": ["le Défragmenteur de disque", "le Gestionnaire de périphériques", "le Diagnostic de mémoire Windows", "l'Observateur d'événements"],
+    "bonneReponse": 2,
+    "explication": "Le Diagnostic de mémoire Windows (commande mdsched.exe) redémarre le PC et teste la RAM avant le chargement du système. Pour un test plus poussé, on utilise MemTest86 ou Memtest86+, lancés depuis une clé USB. Des écrans bleus aléatoires ou des fichiers corrompus sans raison doivent faire soupçonner une barrette défectueuse ou un profil XMP instable."
+  },
+  {
+    "id": "ram-m10",
+    "enonce": "Dans l'appellation « DDR5-6000 », que représente le nombre 6000 ?",
+    "choix": ["6 000 millions de transferts par seconde", "une capacité totale de 6 000 mégaoctets", "une latence maximale de 6 000 nanosecondes", "une durée de vie garantie de 6 000 heures"],
+    "bonneReponse": 0,
+    "explication": "6000 désigne le débit en MT/s (mégatransferts par seconde), souvent abusivement appelé « MHz » : l'horloge réelle tourne à 3 000 MHz, la DDR doublant les transferts. La capacité, elle, s'indique à part (16 Go, 32 Go…), et la latence par le CL. Sur une barrette, on lit par exemple « DDR5-6000 CL30 »."
+  }
+]

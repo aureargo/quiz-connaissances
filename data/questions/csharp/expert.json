@@ -1,0 +1,72 @@
+[
+  {
+    "id": "csharp-e1",
+    "enonce": "Pourquoi éviter une méthode `async void`, hors gestionnaires d'événements ?",
+    "choix": ["Elle monopolise un thread du pool pendant toute l'attente", "Le compilateur la refuse purement et simplement depuis C# 8", "Elle s'exécute toujours de façon synchrone, sans attente", "Impossible de l'attendre ou d'en capter les exceptions"],
+    "bonneReponse": 3,
+    "explication": "Sans `Task` renvoyée, il n'y a rien à `await` : impossible de savoir quand elle finit, et une exception remonte directement sur le contexte de synchronisation, au risque de faire planter le processus. Préférer `async Task`."
+  },
+  {
+    "id": "csharp-e2",
+    "enonce": "Avec LINQ to Objects, quand `var r = liste.Where(x => x > 5);` est-elle exécutée ?",
+    "choix": ["Lorsqu'on énumère r, par exemple avec foreach", "Lors du prochain passage du ramasse-miettes", "Immédiatement, à la ligne de sa déclaration", "Une seule fois, puis le résultat est mis en cache"],
+    "bonneReponse": 0,
+    "explication": "C'est l'exécution différée : `r` décrit la requête sans la lancer. Chaque énumération la ré-exécute, en voyant les modifications de `liste`. `ToList()` ou `ToArray()` matérialisent le résultat une bonne fois."
+  },
+  {
+    "id": "csharp-e3",
+    "enonce": "Avec Entity Framework, quelle différence entre `IQueryable<T>` et `IEnumerable<T>` ?",
+    "choix": ["aucune, ce sont deux noms pour le même type", "`IQueryable` charge toute la table avant de filtrer", "`IQueryable` traduit la requête en SQL exécuté par la base", "`IEnumerable` traduit la requête en SQL exécuté par la base"],
+    "bonneReponse": 2,
+    "explication": "`IQueryable` transporte un arbre d'expressions que le fournisseur traduit en SQL : le `Where` s'exécute côté base. Passé en `IEnumerable`, le filtre s'exécute en mémoire, après avoir rapatrié toutes les lignes."
+  },
+  {
+    "id": "csharp-e4",
+    "enonce": "En quoi les génériques de C# diffèrent-ils de ceux de Java ?",
+    "choix": ["Ils sont effacés à la compilation, exactement comme en Java", "Ils existent encore à l'exécution, sans effacement de type", "Ils ne s'appliquent qu'aux classes, pas aux méthodes", "Ils ne supportent pas les contraintes `where`"],
+    "bonneReponse": 1,
+    "explication": "Les génériques .NET sont « réifiés » : `List<int>` existe vraiment au runtime et stocke des `int` sans boxing, et `typeof(T)` fonctionne. Java efface les paramètres de type à la compilation (type erasure)."
+  },
+  {
+    "id": "csharp-e5",
+    "enonce": "Qu'est-ce que `Span<T>` ?",
+    "choix": ["Un type de tâche asynchrone plus léger", "Une vue sur de la mémoire contiguë, sans allocation", "Un intervalle de dates avec un début et une fin", "Une collection redimensionnable et sûre entre threads"],
+    "bonneReponse": 1,
+    "explication": "`Span<T>` peut pointer sur un tableau, la pile (`stackalloc`) ou de la mémoire native, et se découper sans copie (`texte.AsSpan(0, 4)`). C'est une `ref struct` : elle ne peut jamais être placée sur le tas."
+  },
+  {
+    "id": "csharp-e6",
+    "enonce": "Qu'est-ce que le boxing en C# ?",
+    "choix": ["Le passage d'un argument par référence avec le mot-clé `ref`", "La conversion d'un objet en chaîne de caractères", "L'emballage d'un type valeur dans un objet sur le tas", "Le regroupement de plusieurs variables en tuple"],
+    "bonneReponse": 2,
+    "explication": "`object o = 42;` alloue un objet sur le tas pour y copier l'entier ; `(int)o` fait l'inverse (unboxing). Ce coût caché pesait sur les anciennes collections comme `ArrayList`, que les génériques (`List<int>`) ont rendues obsolètes."
+  },
+  {
+    "id": "csharp-e7",
+    "enonce": "Sur quelle hypothèse repose le ramasse-miettes générationnel de .NET ?",
+    "choix": ["La mémoire se libère à la fin du programme", "Les objets anciens doivent partir en premier", "La plupart des objets meurent jeunes", "Chaque objet meurt dès sa dernière utilisation"],
+    "bonneReponse": 2,
+    "explication": "Les objets neufs sont en génération 0, collectée souvent et rapidement ; les survivants sont promus en génération 1 puis 2, examinées plus rarement. Les gros objets (85 000 octets et plus) vont dans un tas dédié, le LOH."
+  },
+  {
+    "id": "csharp-e8",
+    "enonce": "Que fait `ConfigureAwait(false)` sur un `await` ?",
+    "choix": ["La tâche attendue est exécutée de façon synchrone", "Le délai d'attente maximal de la tâche est désactivé", "La suite peut reprendre hors du contexte d'origine", "Les exceptions de la tâche sont ignorées en silence"],
+    "bonneReponse": 2,
+    "explication": "Dans une bibliothèque, inutile de revenir sur le thread d'interface : la continuation peut tourner sur n'importe quel thread du pool. C'est plus rapide et cela évite des interblocages si l'appelant bloque avec `.Result`. ASP.NET Core n'a de toute façon pas de contexte de synchronisation."
+  },
+  {
+    "id": "csharp-e9",
+    "enonce": "Que produit `var p2 = p1 with { Age = 31 };` sur un record ?",
+    "choix": ["p1 modifié en place, puis copié dans p2", "Une erreur : un record est non modifiable", "Une copie de p1 dont seul Age change", "Une référence vers p1, Age étant ignoré"],
+    "bonneReponse": 2,
+    "explication": "L'expression `with` réalise une « mutation non destructive » : `p1` reste intact et `p2` est une copie avec la propriété modifiée. C'est idéal pour manipuler des objets immuables."
+  },
+  {
+    "id": "csharp-e10",
+    "enonce": "Avec les nullable reference types activés (C# 8), qu'arrive-t-il si on affecte `null` à une variable `string` ?",
+    "choix": ["Une erreur de compilation qui bloque tout le projet", "Une NullReferenceException levée dès l'affectation", "Un avertissement à la compilation, rien à l'exécution", "Une chaîne vide affectée à la place de null"],
+    "bonneReponse": 2,
+    "explication": "C'est une analyse statique : on écrit `string?` quand `null` est permis, et l'opérateur `!` fait taire un avertissement injustifié. Une équipe peut transformer ces avertissements en erreurs dans le fichier projet."
+  }
+]

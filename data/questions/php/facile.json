@@ -1,0 +1,72 @@
+[
+  {
+    "id": "php-f1",
+    "enonce": "Par quel symbole commence le nom d'une variable en PHP ?",
+    "choix": ["@", "#", "&", "$"],
+    "bonneReponse": 3,
+    "explication": "Toute variable PHP commence par `$` : `$nom = \"Alice\";`. Ce préfixe permet notamment d'insérer une variable directement dans une chaîne entre guillemets doubles : `\"Bonjour $nom\"`."
+  },
+  {
+    "id": "php-f2",
+    "enonce": "Quel opérateur concatène deux chaînes de caractères en PHP ?",
+    "choix": ["+", "~", ".", "&"],
+    "bonneReponse": 2,
+    "explication": "On écrit `\"Bonjour \" . $nom`. Le `+` est réservé aux additions numériques (et à l'union de tableaux) : `\"a\" + \"b\"` provoque une erreur en PHP 8."
+  },
+  {
+    "id": "php-f3",
+    "enonce": "Quelle balise ouvre un bloc de code PHP ?",
+    "choix": ["<%php", "<php>", "<?php", "<script php>"],
+    "bonneReponse": 2,
+    "explication": "Le code PHP s'écrit entre `<?php` et `?>`. Dans un fichier qui ne contient que du PHP, on omet même la balise fermante, pour éviter d'envoyer par erreur des espaces ou retours à la ligne au navigateur."
+  },
+  {
+    "id": "php-f4",
+    "enonce": "Que signifie aujourd'hui l'acronyme PHP ?",
+    "choix": ["Pre-Hosted Pages", "Programmable HTML Parser", "PHP: Hypertext Preprocessor", "Personal Home Page"],
+    "bonneReponse": 2,
+    "explication": "C'est un acronyme récursif (le « P » de PHP désigne PHP lui-même). À l'origine, en 1995, Rasmus Lerdorf avait appelé son outil « Personal Home Page Tools » ; le nom a changé avec PHP 3."
+  },
+  {
+    "id": "php-f5",
+    "enonce": "Quelle instruction affiche du texte dans la page générée ?",
+    "choix": ["puts", "console.log", "echo", "say"],
+    "bonneReponse": 2,
+    "explication": "`echo \"Bonjour\";` écrit dans la réponse envoyée au navigateur. `echo` est une construction du langage et non une fonction, d'où des parenthèses facultatives. `puts` est l'équivalent en Ruby."
+  },
+  {
+    "id": "php-f6",
+    "enonce": "Comment écrit-on un tableau associatif en PHP ?",
+    "choix": ["['nom' => 'Alice']", "('nom' = 'Alice')", "<'nom', 'Alice'>", "{'nom': 'Alice'}"],
+    "bonneReponse": 0,
+    "explication": "La flèche `=>` associe une clé à une valeur. En PHP, un seul type « array » sert à la fois de liste et de dictionnaire. La syntaxe courte `[]` remplace `array()` depuis PHP 5.4."
+  },
+  {
+    "id": "php-f7",
+    "enonce": "Quelle boucle permet de parcourir simplement tous les éléments d'un tableau ?",
+    "choix": ["loop", "iterate", "forall", "foreach"],
+    "bonneReponse": 3,
+    "explication": "`foreach ($tableau as $cle => $valeur) { ... }` donne accès à chaque clé et à chaque valeur. On peut omettre la clé : `foreach ($tableau as $valeur)`."
+  },
+  {
+    "id": "php-f8",
+    "enonce": "Quelle variable superglobale contient les données d'un formulaire envoyé en méthode POST ?",
+    "choix": ["$_SEND", "$_BODY", "$_FORM", "$_POST"],
+    "bonneReponse": 3,
+    "explication": "`$_POST` contient le corps du formulaire, `$_GET` les paramètres d'URL. Ces « superglobales » sont accessibles partout. Leur contenu vient de l'utilisateur : il faut toujours le valider et l'échapper."
+  },
+  {
+    "id": "php-f9",
+    "enonce": "Quel outil gère les dépendances d'un projet PHP moderne ?",
+    "choix": ["Maven", "npm", "Composer", "pip"],
+    "bonneReponse": 2,
+    "explication": "Composer lit le fichier `composer.json`, télécharge les bibliothèques depuis Packagist dans `vendor/` et génère un chargeur automatique de classes (`vendor/autoload.php`)."
+  },
+  {
+    "id": "php-f10",
+    "enonce": "Quel célèbre CMS, qui propulse une large part des sites web, est écrit en PHP ?",
+    "choix": ["Wix", "Webflow", "WordPress", "Ghost"],
+    "bonneReponse": 2,
+    "explication": "WordPress (2003) fait tourner plus de 40 % des sites web. D'autres géants sont nés en PHP : Wikipédia (MediaWiki), Drupal, ou encore Facebook à ses débuts. Ghost, lui, est écrit en Node.js."
+  }
+]

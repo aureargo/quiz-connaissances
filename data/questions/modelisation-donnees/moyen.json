@@ -1,0 +1,72 @@
+[
+  {
+    "id": "modelisation-donnees-m1",
+    "enonce": "Sur quel modèle, proposé par Peter Chen en 1976, le MCD de Merise s'appuie-t-il ?",
+    "choix": ["le modèle entité-association", "le modèle hiérarchique", "le modèle orienté objet", "le modèle relationnel de Codd"],
+    "bonneReponse": 0,
+    "explication": "Le modèle entité-association (Entity-Relationship) décrit le monde en entités reliées par des associations. Merise l'a adopté pour son MCD ; on le retrouve sous d'autres notations, comme la « patte d'oie » (crow's foot). Le modèle relationnel d'Edgar Codd (1970) intervient, lui, à l'étape suivante : le MLD."
+  },
+  {
+    "id": "modelisation-donnees-m2",
+    "enonce": "Comment implémente-t-on une relation plusieurs-à-plusieurs dans un schéma relationnel ?",
+    "choix": ["une clé étrangère dans chacune des deux tables", "une seule table qui fusionne les deux entités", "une colonne qui contient une liste d'identifiants", "une table de liaison avec deux clés étrangères"],
+    "bonneReponse": 3,
+    "explication": "Une table Inscription(id_etudiant, id_cours) contient une ligne par couple ; sa clé primaire est souvent la combinaison des deux clés étrangères. Une colonne contenant une liste violerait la première forme normale."
+  },
+  {
+    "id": "modelisation-donnees-m3",
+    "enonce": "Au passage au MLD, que devient une association de cardinalités (1,1) — (0,n) ?",
+    "choix": ["une nouvelle table d'association", "la fusion des deux tables en une seule", "une clé étrangère dans la table côté 0,n", "une clé étrangère dans la table côté 1,1"],
+    "bonneReponse": 3,
+    "explication": "Chaque commande a exactement un client : la table Commande reçoit une colonne id_client. Mettre la clé côté Client serait impossible, puisqu'un client a plusieurs commandes. Une table d'association n'est nécessaire que lorsque les deux cardinalités maximales valent n."
+  },
+  {
+    "id": "modelisation-donnees-m4",
+    "enonce": "Qu'interdit la deuxième forme normale (2FN) ?",
+    "choix": ["qu'un attribut dépende d'une partie de la clé", "qu'une colonne contienne plusieurs valeurs", "qu'un attribut dépende d'un autre non-clé", "qu'une table possède une clé composée"],
+    "bonneReponse": 0,
+    "explication": "Dans LigneCommande(num_commande, id_produit, quantite, libelle_produit), le libellé ne dépend que de id_produit, une partie de la clé : il faut le déplacer dans une table Produit. Une table dont la clé tient en une seule colonne respecte donc automatiquement la 2FN."
+  },
+  {
+    "id": "modelisation-donnees-m5",
+    "enonce": "La table Commande(num_commande, id_client, ville_client), de clé num_commande, enfreint quelle forme normale en premier ?",
+    "choix": ["2FN", "1FN", "3FN", "FNBC"],
+    "bonneReponse": 2,
+    "explication": "ville_client dépend de id_client, qui n'est pas une clé : c'est une dépendance transitive, interdite par la 3FN. La 2FN est respectée, puisque la clé n'a qu'une colonne. La correction consiste à ranger la ville dans une table Client."
+  },
+  {
+    "id": "modelisation-donnees-m6",
+    "enonce": "Que signifie la dépendance fonctionnelle A → B ?",
+    "choix": ["à chaque valeur de B correspond une seule valeur de A", "à chaque valeur de A correspond une seule valeur de B", "A se calcule toujours à partir de B", "A et B prennent toujours la même valeur"],
+    "bonneReponse": 1,
+    "explication": "Exemple : num_secu → date_naissance, car un numéro de sécurité sociale donné correspond à une seule date de naissance. L'inverse est faux, plusieurs personnes partageant la même date. Les formes normales se définissent toutes à partir de ces dépendances."
+  },
+  {
+    "id": "modelisation-donnees-m7",
+    "enonce": "Qu'est-ce qu'une clé de substitution (ou clé artificielle) ?",
+    "choix": ["une clé recalculée à partir des autres colonnes", "une clé recopiée depuis une autre table", "un identifiant technique sans signification métier", "une clé formée de plusieurs colonnes métier"],
+    "bonneReponse": 2,
+    "explication": "Un entier auto-incrémenté ou un UUID ne veut rien dire pour le métier, mais il ne changera jamais. Une clé naturelle (numéro ISBN, adresse e-mail…) a un sens, mais peut évoluer ou se révéler moins unique que prévu."
+  },
+  {
+    "id": "modelisation-donnees-m8",
+    "enonce": "Comment appelle-t-on une association qui relie une entité à elle-même, comme « un employé encadre d'autres employés » ?",
+    "choix": ["ternaire", "réflexive", "symétrique", "transitive"],
+    "bonneReponse": 1,
+    "explication": "L'entité Employé apparaît deux fois, avec un rôle différent de chaque côté (encadrant / encadré). En relationnel, elle devient une clé étrangère qui pointe vers la même table, par exemple id_manager dans Employé."
+  },
+  {
+    "id": "modelisation-donnees-m9",
+    "enonce": "Que garantit l'intégrité référentielle ?",
+    "choix": ["deux tables liées ont le même nombre de lignes", "chaque table possède bien une clé primaire", "toute clé étrangère vise une ligne existante", "aucune colonne ne contient de valeur NULL"],
+    "bonneReponse": 2,
+    "explication": "On ne peut pas créer une commande pour un client inexistant, ni supprimer un client qui a encore des commandes, sauf règle explicite comme ON DELETE CASCADE. Le SGBD vérifie cette contrainte à chaque écriture."
+  },
+  {
+    "id": "modelisation-donnees-m10",
+    "enonce": "Dans un MCD où Commande et Produit sont reliés par l'association « contient », où placer la quantité commandée ?",
+    "choix": ["dans l'entité Produit", "dans une entité Quantité dédiée", "dans l'entité Commande", "sur l'association « contient »"],
+    "bonneReponse": 3,
+    "explication": "La quantité ne dépend ni de la commande seule, ni du produit seul, mais du couple des deux : c'est une propriété « portée » par l'association. Au passage au MLD, elle devient une colonne de la table de liaison."
+  }
+]

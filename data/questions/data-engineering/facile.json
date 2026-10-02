@@ -1,0 +1,72 @@
+[
+  {
+    "id": "data-engineering-f1",
+    "enonce": "Que signifie le sigle ETL ?",
+    "choix": ["Extract, Transform, Load", "Export, Translate, Link", "Evaluate, Test, Launch", "Encode, Transfer, Log"],
+    "bonneReponse": 0,
+    "explication": "Extraire les données des sources (bases, API, fichiers), les transformer (nettoyage, jointures, calculs), puis les charger dans leur destination, souvent un entrepôt de données. C'est le schéma de base de la plupart des flux de données."
+  },
+  {
+    "id": "data-engineering-f2",
+    "enonce": "Qu'est-ce qu'un data lake (lac de données) ?",
+    "choix": ["un tableau de bord interactif de suivi", "un stockage de données brutes dans leur format d'origine", "une fuite massive de données personnelles", "une base relationnelle soigneusement normalisée"],
+    "bonneReponse": 1,
+    "explication": "Un data lake accueille toutes sortes de données (fichiers CSV, JSON, logs, images…) sans les structurer à l'avance, souvent sur un stockage objet bon marché comme Amazon S3. Le schéma est appliqué à la lecture (« schema on read »)."
+  },
+  {
+    "id": "data-engineering-f3",
+    "enonce": "Quel framework open source de calcul distribué en mémoire est devenu une référence du big data ?",
+    "choix": ["Apache Tomcat", "Apache Spark", "Apache Struts", "Apache Maven"],
+    "bonneReponse": 1,
+    "explication": "Spark, né à Berkeley en 2009, répartit les calculs sur un cluster et garde les données intermédiaires en mémoire, ce qui le rend bien plus rapide que l'ancien MapReduce. On l'utilise en Python (PySpark), en Scala, en Java ou en SQL. Tomcat est un serveur web Java, Maven un outil de build, Struts un framework web."
+  },
+  {
+    "id": "data-engineering-f4",
+    "enonce": "Qu'est-ce qu'un pipeline de données ?",
+    "choix": ["un format de compression pour les gros fichiers", "un langage de requête pour les fichiers CSV", "une suite d'étapes qui déplace et transforme des données", "un câble réseau réservé aux serveurs de bases"],
+    "bonneReponse": 2,
+    "explication": "Un pipeline enchaîne automatiquement des étapes : ingestion, nettoyage, enrichissement, chargement… Il tourne à intervalles réguliers ou en continu, et le métier de data engineer consiste en grande partie à les construire et à les fiabiliser."
+  },
+  {
+    "id": "data-engineering-f5",
+    "enonce": "Quel outil open source orchestre des workflows de données décrits sous forme de graphes (DAG) en Python ?",
+    "choix": ["Airflow", "Cassandra", "Hadoop", "Kafka"],
+    "bonneReponse": 0,
+    "explication": "Apache Airflow, créé chez Airbnb en 2014, planifie et surveille des tâches reliées par leurs dépendances dans un DAG (graphe orienté sans cycle). Kafka transporte des flux d'événements, Hadoop stocke et traite de gros volumes, Cassandra est une base de données."
+  },
+  {
+    "id": "data-engineering-f6",
+    "enonce": "Qu'est-ce qu'Apache Kafka ?",
+    "choix": ["un moteur de base de données relationnelle", "un planificateur de tâches comme cron", "un outil de visualisation de données", "une plateforme de diffusion d'événements en flux"],
+    "bonneReponse": 3,
+    "explication": "Kafka, créé chez LinkedIn, reçoit des millions de messages par seconde, les conserve dans des journaux répliqués et permet à de nombreux consommateurs de les lire, chacun à son rythme. Il sert de « système nerveux » entre applications."
+  },
+  {
+    "id": "data-engineering-f7",
+    "enonce": "Qu'est-ce qui caractérise un traitement « en flux » (streaming) ?",
+    "choix": ["les données sont saisies à la main", "les données sont traitées une fois par nuit", "les données sont traitées dès leur arrivée", "les données sont archivées sur bande"],
+    "bonneReponse": 2,
+    "explication": "Le streaming traite chaque événement (un clic, une transaction) dans les secondes qui suivent : détection de fraude, tableaux de bord en direct… À l'inverse, le traitement par lots (batch) traite de gros volumes à intervalles réguliers, par exemple chaque nuit."
+  },
+  {
+    "id": "data-engineering-f8",
+    "enonce": "À quoi sert un entrepôt de données (data warehouse) ?",
+    "choix": ["sauvegarder les e-mails de l'entreprise", "centraliser des données fiables pour l'analyse", "stocker les fichiers temporaires des serveurs", "héberger le code source des applications"],
+    "bonneReponse": 1,
+    "explication": "Un entrepôt rassemble des données structurées, nettoyées et historisées, venant de plusieurs sources, pour les analyses et les tableaux de bord. Exemples : Snowflake, Google BigQuery, Amazon Redshift."
+  },
+  {
+    "id": "data-engineering-f9",
+    "enonce": "D'où vient le nom de Hadoop ?",
+    "choix": ["d'un sigle désignant un stockage distribué", "du nom d'un ingénieur de chez Google", "d'un mot hindi signifiant « éléphant »", "de la peluche du fils de son créateur"],
+    "bonneReponse": 3,
+    "explication": "Doug Cutting a nommé le projet d'après l'éléphant en peluche jaune de son fils, d'où le logo. Hadoop (2006) s'inspire de deux articles de Google sur leur système de fichiers distribué et sur MapReduce."
+  },
+  {
+    "id": "data-engineering-f10",
+    "enonce": "Quels sont les « 3 V » classiques du big data ?",
+    "choix": ["Valeur, Vérité, Visibilité", "Vitesse, Version, Vecteur", "Virtualisation, Vente, Veille", "Volume, Vélocité, Variété"],
+    "bonneReponse": 3,
+    "explication": "Volume (des quantités énormes), Vélocité (des données qui arrivent vite, parfois en continu) et Variété (structurées, textes, images, logs…). On y ajoute parfois la Véracité et la Valeur."
+  }
+]

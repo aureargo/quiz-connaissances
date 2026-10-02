@@ -1,0 +1,72 @@
+[
+  {
+    "id": "redis-f1",
+    "enonce": "Que signifie le nom « Redis » ?",
+    "choix": ["Relational Data Index System", "Rapid Data Storage", "Remote Dictionary Server", "Redundant Disk Server"],
+    "bonneReponse": 2,
+    "explication": "Redis est un « serveur de dictionnaire distant » : un grand dictionnaire clé-valeur accessible par le réseau. Il a été créé en 2009 et est devenu l'un des magasins clé-valeur les plus utilisés au monde."
+  },
+  {
+    "id": "redis-f2",
+    "enonce": "Où Redis conserve-t-il principalement ses données ?",
+    "choix": ["en mémoire vive", "sur un disque SSD", "sur la carte graphique", "dans le cache du processeur"],
+    "bonneReponse": 0,
+    "explication": "Redis garde toutes ses données en RAM, ce qui lui permet de répondre en une fraction de milliseconde. Il peut aussi les écrire sur disque pour les retrouver après un redémarrage, mais le jeu de données doit tenir en mémoire."
+  },
+  {
+    "id": "redis-f3",
+    "enonce": "Quel est le port TCP par défaut de Redis ?",
+    "choix": ["6379", "11211", "27017", "5432"],
+    "bonneReponse": 0,
+    "explication": "Son créateur a choisi 6379 parce que ces chiffres tapent « MERZ » sur un clavier de téléphone, en clin d'œil à une showgirl italienne. 5432 est le port de PostgreSQL, 11211 celui de Memcached et 27017 celui de MongoDB."
+  },
+  {
+    "id": "redis-f4",
+    "enonce": "Quelle commande enregistre une valeur sous une clé ?",
+    "choix": ["SAVE", "PUT", "STORE", "SET"],
+    "bonneReponse": 3,
+    "explication": "`SET utilisateur:1:nom \"Ada\"` écrit la valeur, `GET utilisateur:1:nom` la relit. Attention : SAVE existe aussi, mais elle sert à écrire un instantané de toute la base sur disque."
+  },
+  {
+    "id": "redis-f5",
+    "enonce": "Quelle commande fixe une durée de vie, en secondes, sur une clé existante ?",
+    "choix": ["TTL", "EXPIRE", "TIMEOUT", "DELAY"],
+    "bonneReponse": 1,
+    "explication": "`EXPIRE session:42 3600` supprimera la clé dans une heure. TTL, lui, renvoie le temps restant avant expiration. On peut aussi tout faire d'un coup : `SET cle valeur EX 3600`. C'est ce qui fait de Redis un excellent cache."
+  },
+  {
+    "id": "redis-f6",
+    "enonce": "Quelle commande augmente de 1 la valeur numérique d'une clé, de façon atomique ?",
+    "choix": ["PLUS", "INCR", "COUNT", "ADD"],
+    "bonneReponse": 1,
+    "explication": "INCR lit, incrémente et écrit en une seule opération indivisible : deux clients simultanés ne peuvent pas « perdre » un incrément. Parfait pour des compteurs de visites ou une limitation de débit. Il existe aussi INCRBY, DECR et INCRBYFLOAT."
+  },
+  {
+    "id": "redis-f7",
+    "enonce": "Qui a créé Redis ?",
+    "choix": ["Eliot Horowitz", "Michael Stonebraker", "Brad Fitzpatrick", "Salvatore Sanfilippo"],
+    "bonneReponse": 3,
+    "explication": "Le développeur italien Salvatore Sanfilippo, alias « antirez », a écrit Redis en 2009 pour accélérer son outil d'analyse web en temps réel. Il s'en est éloigné en 2020 puis y est revenu fin 2024. Stonebraker a créé PostgreSQL, Horowitz a cofondé MongoDB et Fitzpatrick a créé Memcached."
+  },
+  {
+    "id": "redis-f8",
+    "enonce": "En quel langage Redis est-il écrit ?",
+    "choix": ["Rust", "Go", "C", "C++"],
+    "bonneReponse": 2,
+    "explication": "Redis est écrit en C, avec très peu de dépendances, ce qui le rend compact et rapide. Il embarque aussi un interpréteur Lua pour exécuter des scripts côté serveur."
+  },
+  {
+    "id": "redis-f9",
+    "enonce": "Comment s'appelle le client en ligne de commande fourni avec Redis ?",
+    "choix": ["redis-cli", "rcli", "redis-sh", "redis-console"],
+    "bonneReponse": 0,
+    "explication": "`redis-cli` envoie des commandes au serveur de façon interactive ou dans un script. Un premier test classique : `redis-cli PING`, auquel le serveur répond PONG."
+  },
+  {
+    "id": "redis-f10",
+    "enonce": "Quelle commande supprime une clé ?",
+    "choix": ["DROP", "REMOVE", "ERASE", "DEL"],
+    "bonneReponse": 3,
+    "explication": "`DEL cle1 cle2` supprime une ou plusieurs clés et renvoie le nombre de clés effacées. Pour une très grosse clé, on préfère UNLINK, qui libère la mémoire en arrière-plan sans bloquer le serveur."
+  }
+]

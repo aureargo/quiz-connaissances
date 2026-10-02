@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cartes-meres-f1",
+    "enonce": "Quel est le rôle principal de la carte mère ?",
+    "choix": ["relier tous les composants entre eux", "effectuer les calculs du système", "stocker les fichiers de l'utilisateur", "convertir le courant du secteur"],
+    "bonneReponse": 0,
+    "explication": "La carte mère est la colonne vertébrale du PC : processeur, mémoire, stockage, carte graphique et périphériques y sont branchés et échangent leurs données à travers des pistes de cuivre. Elle fournit aussi les connecteurs extérieurs (USB, réseau, audio) et le micrologiciel de démarrage. Les calculs, eux, reviennent au processeur."
+  },
+  {
+    "id": "cartes-meres-f2",
+    "enonce": "Quel est le format de carte mère le plus répandu dans les PC de bureau ?",
+    "choix": ["BTX", "AT", "ATX", "NLX"],
+    "bonneReponse": 2,
+    "explication": "Le format ATX, défini par Intel en 1995, mesure 30,5 × 24,4 cm et fixe aussi l'emplacement des vis, du panneau arrière et du connecteur d'alimentation. Ses déclinaisons plus petites, le micro-ATX (24,4 × 24,4 cm) et le mini-ITX (17 × 17 cm), permettent des PC plus compacts. L'AT d'IBM l'a précédé ; le BTX, censé le remplacer en 2004, n'a jamais percé."
+  },
+  {
+    "id": "cartes-meres-f3",
+    "enonce": "Que signifie le sigle « USB » ?",
+    "choix": ["Unified System Board", "Universal Serial Bus", "Ultra Speed Bridge", "Universal Signal Box"],
+    "bonneReponse": 1,
+    "explication": "Universal Serial Bus : « universel » car il devait remplacer la jungle des ports série, parallèle, PS/2 et manette ; « série » car les bits y circulent les uns après les autres. Conçu au milieu des années 1990 par un consortium d'entreprises (Intel, Microsoft, IBM, Compaq…), il a été finalisé en 1996."
+  },
+  {
+    "id": "cartes-meres-f4",
+    "enonce": "Lequel de ces connecteurs USB se branche dans les deux sens ?",
+    "choix": ["l'USB-A", "le Micro-USB", "le Mini-USB", "l'USB-C"],
+    "bonneReponse": 3,
+    "explication": "L'USB-C (2014), symétrique et réversible, a mis fin à la loterie du « mauvais sens ». Il est obligatoire dans l'Union européenne sur les smartphones neufs depuis fin 2024, et sur les ordinateurs portables depuis avril 2026. Attention : USB-C désigne la forme de la prise, pas la vitesse — un port USB-C peut aussi bien se limiter à l'USB 2.0 que monter à 80 Gbit/s."
+  },
+  {
+    "id": "cartes-meres-f5",
+    "enonce": "Quel connecteur, présent sur les téléviseurs, transporte à la fois l'image et le son vers un écran ?",
+    "choix": ["HDMI", "VGA", "RJ45", "PS/2"],
+    "bonneReponse": 0,
+    "explication": "Le HDMI (High-Definition Multimedia Interface, 2003) transporte image et son numériques sur un seul câble ; c'est la norme des téléviseurs, consoles et box. Le VGA, analogique, ne transmet que l'image. Sur PC, le DisplayPort, défini par le VESA en 2006, fait le même travail et domine sur les écrans de jeu à haute fréquence."
+  },
+  {
+    "id": "cartes-meres-f6",
+    "enonce": "Quel connecteur sert à brancher un câble réseau Ethernet ?",
+    "choix": ["RJ11", "HDMI", "RJ45", "USB-C"],
+    "bonneReponse": 2,
+    "explication": "Le RJ45 est la prise à 8 contacts, avec son petit clip, des câbles Ethernet. Il ressemble au RJ11, plus étroit, utilisé par les lignes téléphoniques et les anciens modems ADSL. Les cartes mères récentes proposent souvent un port Ethernet à 2,5 Gbit/s, plus rapide que le classique 1 Gbit/s."
+  },
+  {
+    "id": "cartes-meres-f7",
+    "enonce": "Qu'est-ce que le BIOS (ou son successeur, l'UEFI) ?",
+    "choix": ["le pilote principal de la carte graphique", "le programme qui démarre le PC avant le système", "un antivirus intégré à la carte mère", "le système d'exploitation de secours"],
+    "bonneReponse": 1,
+    "explication": "Le BIOS (Basic Input/Output System) est un micrologiciel stocké dans une puce de la carte mère. À l'allumage, il vérifie le matériel (le POST, Power-On Self-Test), l'initialise puis passe la main au système d'exploitation. Son interface de réglages s'ouvre généralement en appuyant sur Suppr ou F2 au démarrage."
+  },
+  {
+    "id": "cartes-meres-f8",
+    "enonce": "À quoi sert la pile bouton présente sur une carte mère ?",
+    "choix": ["à alimenter le PC lors d'une coupure", "à faire clignoter les LED de la carte", "à démarrer le processeur plus vite", "à garder l'heure quand le PC est débranché"],
+    "bonneReponse": 3,
+    "explication": "Cette pile (une CR2032 de 3 V) alimente l'horloge temps réel quand le PC est débranché et, sur les cartes anciennes, la petite mémoire « CMOS » qui conserve les réglages du BIOS. Elle dure des années ; quand elle s'épuise, le PC oublie la date et l'heure à chaque débranchement."
+  },
+  {
+    "id": "cartes-meres-f9",
+    "enonce": "Par convention, de quelle couleur est l'intérieur d'un port USB 3.0 ?",
+    "choix": ["bleu", "blanc", "vert", "rose"],
+    "bonneReponse": 0,
+    "explication": "La norme USB 3.0 (2008) recommande un insert bleu pour distinguer ses ports « SuperSpeed » à 5 Gbit/s des ports USB 2.0, noirs ou blancs. Le vert clair et le rose sont les couleurs des prises jack audio (sortie casque ou enceintes, et micro). Certains fabricants utilisent aussi le rouge ou le turquoise pour des ports USB plus rapides, sans règle officielle."
+  },
+  {
+    "id": "cartes-meres-f10",
+    "enonce": "Quel port rond, violet ou vert, servait autrefois à brancher clavier et souris ?",
+    "choix": ["le VGA", "le DVI", "le PS/2", "le FireWire"],
+    "bonneReponse": 2,
+    "explication": "Le PS/2, introduit par IBM en 1987 avec ses ordinateurs Personal System/2, utilisait le violet pour le clavier et le vert pour la souris. L'USB l'a supplanté au début des années 2000, mais certaines cartes mères conservent un port PS/2, apprécié de quelques joueurs et des possesseurs de vieux claviers."
+  }
+]

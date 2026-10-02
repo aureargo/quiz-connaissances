@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ram-f1",
+    "enonce": "Que signifie le sigle « RAM » ?",
+    "choix": ["Rapid Allocation Module", "Read And Modify", "Random Access Memory", "Remote Access Memory"],
+    "bonneReponse": 2,
+    "explication": "RAM = Random Access Memory, « mémoire à accès aléatoire » : on peut lire n'importe quelle case directement, en un temps quasi identique, sans parcourir les précédentes comme sur une bande magnétique. En français, on parle de « mémoire vive », par opposition à la mémoire « morte » (ROM), en lecture seule."
+  },
+  {
+    "id": "ram-f2",
+    "enonce": "Que devient le contenu de la RAM quand on éteint l'ordinateur ?",
+    "choix": ["il est perdu", "il est figé jusqu'au redémarrage", "il est conservé quelques jours", "il est compressé sur place"],
+    "bonneReponse": 0,
+    "explication": "La RAM est volatile : sans courant, ses cellules se vident en une fraction de seconde. C'est pourquoi un document non enregistré disparaît lors d'une coupure. La mise en veille prolongée (hibernation) contourne le problème en recopiant volontairement le contenu de la RAM sur le disque avant d'éteindre."
+  },
+  {
+    "id": "ram-f3",
+    "enonce": "Quel est le rôle de la mémoire vive dans un ordinateur ?",
+    "choix": ["stocker durablement les fichiers et les photos", "garder à portée les données en cours d'utilisation", "calculer l'affichage des images en 3D", "répartir l'électricité entre les composants"],
+    "bonneReponse": 1,
+    "explication": "Le processeur ne travaille pas directement sur le disque, beaucoup trop lent : les programmes ouverts et leurs données sont chargés en RAM, dont le temps d'accès est des centaines de fois plus court que celui d'un SSD. On la compare souvent à un plan de travail, quand le disque serait l'armoire : plus le plan est grand, plus on peut garder de choses ouvertes en même temps."
+  },
+  {
+    "id": "ram-f4",
+    "enonce": "Sous quelle forme la mémoire vive s'installe-t-elle dans un PC de bureau ?",
+    "choix": ["une cartouche", "une disquette", "une nappe", "une barrette"],
+    "bonneReponse": 3,
+    "explication": "La RAM se présente en barrettes (ou modules DIMM) qui s'enfichent verticalement dans des emplacements de la carte mère, à côté du processeur. Les ordinateurs portables utilisent un format plus court, le SO-DIMM, quand la mémoire n'est pas directement soudée à la carte mère — ce qui est de plus en plus fréquent."
+  },
+  {
+    "id": "ram-f5",
+    "enonce": "Laquelle de ces générations de mémoire vive est la plus récente ?",
+    "choix": ["la DDR5", "la DDR4", "la DDR3", "la DDR2"],
+    "bonneReponse": 0,
+    "explication": "La DDR5 est arrivée sur les PC grand public fin 2021, avec les processeurs Intel Core de 12ᵉ génération ; elle succède à la DDR4 (2014), elle-même héritière des DDR3 (2007) et DDR2 (2003). Chaque génération augmente le débit et réduit la tension. Les générations ne sont pas compatibles entre elles : une carte mère n'accepte en général qu'un seul type."
+  },
+  {
+    "id": "ram-f6",
+    "enonce": "Quel symptôme trahit souvent un manque de mémoire vive ?",
+    "choix": ["l'écran affiche des couleurs délavées", "le ventilateur du boîtier s'arrête", "le PC rame dès qu'on ouvre trop d'onglets", "le Wi-Fi se déconnecte sans arrêt"],
+    "bonneReponse": 2,
+    "explication": "Quand la RAM est pleine, le système déplace des données vers le disque, bien plus lent : tout se met à ralentir, surtout en passant d'une application à l'autre. Les navigateurs, où chaque onglet consomme de la mémoire, sont souvent les premiers responsables. Le Gestionnaire des tâches de Windows (Ctrl+Maj+Échap) montre la mémoire utilisée."
+  },
+  {
+    "id": "ram-f7",
+    "enonce": "En 2026, quelle quantité de RAM recommande-t-on couramment pour un PC de jeu ?",
+    "choix": ["2 à 4 Go", "16 à 32 Go", "512 Mo à 1 Go", "1 à 2 To"],
+    "bonneReponse": 1,
+    "explication": "16 Go restent un minimum pour jouer confortablement, et 32 Go sont devenus la référence pour les jeux récents lancés à côté d'un navigateur ou d'un logiciel de streaming. Au-delà, le gain est faible pour le jeu, mais utile pour le montage vidéo, la 3D ou les machines virtuelles. Au milieu des années 2000, 1 à 2 Go faisaient un PC bien équipé."
+  },
+  {
+    "id": "ram-f8",
+    "enonce": "Pourquoi ne stocke-t-on pas tous ses fichiers en RAM, puisqu'elle est si rapide ?",
+    "choix": ["elle est trop lente pour les gros fichiers", "elle ne peut contenir que du texte", "elle s'use au bout de quelques mois", "elle s'efface hors tension et coûte cher"],
+    "bonneReponse": 3,
+    "explication": "Deux raisons : la RAM perd tout à l'extinction, et son prix au gigaoctet est bien plus élevé que celui d'un SSD, lui-même plus cher qu'un disque dur. Un ordinateur combine donc une petite mémoire très rapide (la RAM) et un grand stockage plus lent mais durable. C'est la « hiérarchie mémoire » : registres, caches, RAM, SSD, disque dur."
+  },
+  {
+    "id": "ram-f9",
+    "enonce": "Quand la RAM est saturée, où Windows déplace-t-il une partie des données ?",
+    "choix": ["dans un fichier d'échange sur le disque", "dans la mémoire de la carte graphique", "dans le cache du processeur", "dans le BIOS de la carte mère"],
+    "bonneReponse": 0,
+    "explication": "Windows recopie les données les moins utilisées dans un fichier d'échange (pagefile.sys) sur le disque ; Linux utilise une partition ou un fichier « swap ». C'est le principe de la mémoire virtuelle : les programmes disposent de plus de mémoire qu'il n'y a de RAM physique. Mais le disque est bien plus lent, d'où les ralentissements."
+  },
+  {
+    "id": "ram-f10",
+    "enonce": "Ajouter de la RAM accélère-t-il un PC qui n'en manque pas ?",
+    "choix": ["oui, sa vitesse double à chaque ajout", "oui, le processeur monte en fréquence", "à peine, l'excédent reste presque inutilisé", "oui, la carte graphique gagne en puissance"],
+    "bonneReponse": 2,
+    "explication": "La RAM est un espace de travail : tant qu'il suffit, l'agrandir ne rend pas le processeur plus rapide. Windows se sert bien de la mémoire libre comme cache de fichiers, ce qui apporte un petit gain, mais rien de spectaculaire. En revanche, sur un PC qui sature sa mémoire, en ajouter est l'une des améliorations les plus efficaces."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "modelisation-donnees-e1",
+    "enonce": "Qu'impose la forme normale de Boyce-Codd (FNBC) ?",
+    "choix": ["aucun attribut non clé ne dépend d'un autre", "tout déterminant est une clé candidate", "toutes les valeurs sont atomiques", "aucun attribut ne dépend d'une partie de la clé"],
+    "bonneReponse": 1,
+    "explication": "La FNBC renforce la 3FN : pour toute dépendance fonctionnelle A → B non triviale, A doit être une clé candidate. Une table peut être en 3FN sans être en FNBC lorsqu'un attribut de la clé dépend d'un attribut non clé. Les autres propositions résument la 2FN (pas de dépendance partielle), la 3FN (pas de dépendance entre attributs non clés) et la 1FN (valeurs atomiques)."
+  },
+  {
+    "id": "modelisation-donnees-e2",
+    "enonce": "Quel type de dépendance la quatrième forme normale (4FN) élimine-t-elle ?",
+    "choix": ["les dépendances circulaires", "les dépendances transitives", "les dépendances partielles", "les dépendances multivaluées"],
+    "bonneReponse": 3,
+    "explication": "Dans Enseignant(nom, matiere, langue), si les matières et les langues d'un enseignant sont indépendantes, il faut une ligne par combinaison : c'est redondant. La 4FN impose de séparer en (nom, matiere) et (nom, langue). Les dépendances partielles relèvent de la 2FN, les transitives de la 3FN."
+  },
+  {
+    "id": "modelisation-donnees-e3",
+    "enonce": "Une table Commande mélange produits et commandes : impossible d'enregistrer un nouveau produit sans créer une commande fictive. Quelle anomalie est-ce ?",
+    "choix": ["une anomalie de mise à jour", "une anomalie de suppression", "une anomalie d'insertion", "une anomalie de lecture"],
+    "bonneReponse": 2,
+    "explication": "Les schémas mal normalisés souffrent de trois anomalies : d'insertion (impossible d'ajouter une donnée sans une autre), de mise à jour (une même information à corriger à plusieurs endroits) et de suppression (effacer la dernière commande fait disparaître le produit). La normalisation les élimine."
+  },
+  {
+    "id": "modelisation-donnees-e4",
+    "enonce": "Une hiérarchie Personne → Client / Employé est stockée en une seule table. Quel est l'inconvénient typique ?",
+    "choix": ["l'impossibilité de définir une clé primaire", "une jointure obligatoire pour chaque lecture", "beaucoup de colonnes à NULL selon le type de ligne", "les colonnes communes dupliquées partout"],
+    "bonneReponse": 2,
+    "explication": "Avec une table unique (et une colonne « type »), les colonnes propres aux clients sont vides pour les employés, et inversement : on ne peut pas non plus les déclarer NOT NULL. Une table par classe impose des jointures, et une table par classe concrète duplique les colonnes communes."
+  },
+  {
+    "id": "modelisation-donnees-e5",
+    "enonce": "Qu'est-ce qu'une clé candidate ?",
+    "choix": ["un ensemble minimal d'attributs identifiant chaque ligne", "une clé étrangère dont la cible reste à vérifier", "une clé primaire générée automatiquement", "tout groupe de colonnes incluant la clé primaire"],
+    "bonneReponse": 0,
+    "explication": "Une table peut avoir plusieurs clés candidates (un numéro d'employé et un e-mail, par exemple) : on en élit une comme clé primaire. Le mot « minimal » est essentiel : un groupe qui contient une clé sans être minimal s'appelle une super-clé."
+  },
+  {
+    "id": "modelisation-donnees-e6",
+    "enonce": "Comment traduit-on une association ternaire de cardinalités (0,n) des trois côtés ?",
+    "choix": ["une table unique qui fusionne les trois entités", "trois tables d'association reliant les entités deux à deux", "une clé étrangère dans chacune des trois tables", "une table dont la clé réunit les trois clés étrangères"],
+    "bonneReponse": 3,
+    "explication": "Par exemple Enseigne(id_prof, id_matiere, id_classe). Découper en trois associations binaires ferait perdre l'information : savoir qu'un prof enseigne les maths, qu'il enseigne en 3ᵉB et que les maths sont enseignées en 3ᵉB ne prouve pas qu'il y enseigne les maths."
+  },
+  {
+    "id": "modelisation-donnees-e7",
+    "enonce": "Pour quelle raison dénormalise-t-on parfois volontairement un schéma ?",
+    "choix": ["pour renforcer l'intégrité référentielle", "pour accélérer des lectures au prix de redondance", "pour faciliter les mises à jour simultanées", "pour réduire l'espace occupé sur le disque"],
+    "bonneReponse": 1,
+    "explication": "Recopier une donnée (un total de commande, le nom d'un client) évite des jointures ou des agrégations coûteuses sur des requêtes très fréquentes. Le prix : plus d'espace et la responsabilité de garder les copies cohérentes. C'est courant dans les entrepôts de données."
+  },
+  {
+    "id": "modelisation-donnees-e8",
+    "enonce": "Qu'est-ce qu'une entité faible ?",
+    "choix": ["une entité qui n'a aucun attribut propre", "une entité identifiée relativement à une autre", "une entité qui n'est reliée à aucune autre", "une entité dont les attributs sont facultatifs"],
+    "bonneReponse": 1,
+    "explication": "Une ligne de commande n'est identifiée que par son numéro AU SEIN d'une commande : « ligne 3 de la commande 42 ». Merise parle d'identification relative. En relationnel, sa clé primaire est composée de la clé de l'entité forte et de son propre numéro."
+  },
+  {
+    "id": "modelisation-donnees-e9",
+    "enonce": "Une association Merise porte 0,n côté Client et 1,1 côté Commande. Dans un diagramme de classes UML, où note-t-on la multiplicité « 0..* » ?",
+    "choix": ["à côté de la classe Commande", "à côté de la classe Client", "nulle part, UML ne l'exprime pas", "au milieu de l'association"],
+    "bonneReponse": 0,
+    "explication": "Les deux notations sont inversées. Merise place près d'une entité le nombre de participations de CETTE entité ; UML place près d'une classe le nombre d'instances de cette classe liées à UNE instance de l'autre. On note donc « 0..* » côté Commande et « 1 » côté Client. Un piège classique quand on passe d'un formalisme à l'autre."
+  },
+  {
+    "id": "modelisation-donnees-e10",
+    "enonce": "Que garantit une décomposition « sans perte » d'une table ?",
+    "choix": ["les morceaux occupent moins de place que l'original", "aucune ligne n'est supprimée pendant la migration", "la jointure des morceaux redonne exactement la table", "les index sont conservés dans les nouvelles tables"],
+    "bonneReponse": 2,
+    "explication": "En normalisant, on découpe une table ; la décomposition est sans perte si la jointure naturelle des morceaux reconstitue la table d'origine, sans ligne en moins ni ligne parasite. Le théorème de Heath le garantit quand on découpe selon une dépendance fonctionnelle."
+  }
+]

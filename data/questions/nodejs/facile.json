@@ -1,0 +1,72 @@
+[
+  {
+    "id": "node-f1",
+    "enonce": "Sur quel moteur JavaScript Node.js repose-t-il ?",
+    "choix": ["V8", "JavaScriptCore", "Chakra", "SpiderMonkey"],
+    "bonneReponse": 0,
+    "explication": "Node.js embarque V8, le moteur open source de Google Chrome. SpiderMonkey est celui de Firefox, JavaScriptCore celui de Safari (et du runtime Bun), Chakra celui de l'ancien Edge."
+  },
+  {
+    "id": "node-f2",
+    "enonce": "Qui a créé Node.js ?",
+    "choix": ["Ryan Dahl", "Brendan Eich", "Evan You", "Isaac Schlueter"],
+    "bonneReponse": 0,
+    "explication": "Ryan Dahl a présenté Node.js en 2009, puis lancé Deno en 2018 pour corriger ce qu'il regrettait de ses choix initiaux. Brendan Eich a créé JavaScript, Isaac Schlueter le gestionnaire npm."
+  },
+  {
+    "id": "node-f3",
+    "enonce": "Quel fichier décrit un projet Node.js et ses dépendances ?",
+    "choix": ["project.yml", "modules.xml", "node.config", "package.json"],
+    "bonneReponse": 3,
+    "explication": "Il contient le nom du projet, sa version, ses dépendances et ses scripts (`npm run build`, `npm test`…). Il est créé par `npm init`."
+  },
+  {
+    "id": "node-f4",
+    "enonce": "Quelle commande installe les dépendances listées dans `package.json` ?",
+    "choix": ["npm build", "npm install", "node install", "npm fetch"],
+    "bonneReponse": 1,
+    "explication": "`npm install` (ou `npm i`) télécharge tout depuis le registre npm et note les versions exactes dans `package-lock.json`. `npm install express` ajoute en plus une nouvelle dépendance."
+  },
+  {
+    "id": "node-f5",
+    "enonce": "Dans quel dossier npm installe-t-il les dépendances d'un projet ?",
+    "choix": ["lib", "vendor", "node_modules", "packages"],
+    "bonneReponse": 2,
+    "explication": "Ce dossier, souvent très volumineux, se régénère à partir de `package.json` : on l'exclut donc de git. `vendor` est l'équivalent chez Composer (PHP)."
+  },
+  {
+    "id": "node-f6",
+    "enonce": "Comment importe-t-on un module avec la syntaxe historique CommonJS ?",
+    "choix": ["import fs from 'fs'", "#include <fs>", "const fs = require('fs')", "using fs;"],
+    "bonneReponse": 2,
+    "explication": "`require` et `module.exports` forment le système de modules d'origine de Node.js. La syntaxe `import`/`export` est celle des modules ES, standardisée par JavaScript et désormais aussi prise en charge par Node.js."
+  },
+  {
+    "id": "node-f7",
+    "enonce": "Pourquoi dit-on que Node.js est « non bloquant » ?",
+    "choix": ["les entrées/sorties s'exécutent sans figer le programme", "chaque requête reçoit son propre thread système", "les fichiers sont tous chargés en mémoire au démarrage", "le code JavaScript s'exécute en parallèle sur tous les cœurs"],
+    "bonneReponse": 0,
+    "explication": "Node.js délègue la lecture d'un fichier ou une requête réseau au système, puis continue son travail ; une fonction de rappel ou une promesse est déclenchée quand le résultat arrive. Un seul thread JavaScript peut ainsi gérer des milliers de connexions."
+  },
+  {
+    "id": "node-f8",
+    "enonce": "Quel framework web minimaliste est le plus utilisé avec Node.js ?",
+    "choix": ["Sinatra", "Express", "Symfony", "Flask"],
+    "bonneReponse": 1,
+    "explication": "Express repose sur des middlewares `(req, res, next)` enchaînés. Fastify, NestJS ou Hono sont des alternatives plus récentes. Flask est un équivalent en Python, Sinatra en Ruby, Symfony un framework PHP."
+  },
+  {
+    "id": "node-f9",
+    "enonce": "Comment exécute-t-on le fichier `app.js` avec Node.js ?",
+    "choix": ["node app.js", "run app.js", "js app.js", "npm app.js"],
+    "bonneReponse": 0,
+    "explication": "La commande `node` suivie du fichier lance le script. `npm start` exécute plutôt le script `start` défini dans `package.json`, qui contient souvent… `node app.js`."
+  },
+  {
+    "id": "node-f10",
+    "enonce": "Quel objet donne accès aux variables d'environnement en Node.js ?",
+    "choix": ["global.vars", "process.env", "window.env", "system.env"],
+    "bonneReponse": 1,
+    "explication": "`process.env.PORT` lit la variable `PORT`. Depuis Node.js 20.6, `node --env-file=.env app.js` charge un fichier `.env` sans dépendance ; auparavant, on utilisait le paquet `dotenv`."
+  }
+]

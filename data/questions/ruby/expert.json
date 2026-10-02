@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ruby-e1",
+    "enonce": "Quand Ruby appelle-t-il la méthode `method_missing` ?",
+    "choix": ["Quand une classe est chargée sans constructeur défini", "Quand une méthode héritée est redéfinie par une sous-classe", "Quand une méthode lève une exception non rattrapée", "Quand un objet reçoit un message qu'il ne sait pas traiter"],
+    "bonneReponse": 3,
+    "explication": "C'est le dernier recours de la recherche de méthode. En la redéfinissant, on crée des API dynamiques, comme les anciens « finders » de Rails (`find_by_email`). Il faut alors aussi redéfinir `respond_to_missing?`."
+  },
+  {
+    "id": "ruby-e2",
+    "enonce": "Comment limiter la portée d'une modification apportée à une classe existante comme `String` ?",
+    "choix": ["en la déclarant dans un bloc `begin`", "avec les refinements, activés par `using`", "avec le mot-clé `private` devant la classe", "en gelant la classe avec `freeze`"],
+    "bonneReponse": 1,
+    "explication": "Les classes Ruby sont « ouvertes » : on peut ajouter des méthodes à `String` (monkey patching), mais l'effet est global et risqué. Avec `refine String do ... end` dans un module, puis `using MonModule`, la modification ne vaut que dans le fichier concerné."
+  },
+  {
+    "id": "ruby-e3",
+    "enonce": "Pourquoi plusieurs threads CRuby n'exécutent-ils pas du code Ruby en parallèle ?",
+    "choix": ["parce que le système limite Ruby à un seul cœur", "à cause du verrou global de la machine virtuelle", "parce que le ramasse-miettes les met en pause", "parce que Ruby ne sait créer que des processus"],
+    "bonneReponse": 1,
+    "explication": "Le GVL (Global VM Lock) ne laisse qu'un thread exécuter du Ruby à la fois. Il est relâché pendant les entrées/sorties, donc les threads restent utiles pour du réseau. Pour du vrai parallélisme : plusieurs processus, ou les Ractors (Ruby 3.0)."
+  },
+  {
+    "id": "ruby-e4",
+    "enonce": "Que fait le commentaire magique `# frozen_string_literal: true` ?",
+    "choix": ["Il compile les chaînes du fichier en symboles", "Il empêche de modifier les constantes du fichier", "Il interdit toute concaténation dans le fichier", "Il rend immuables les littéraux chaîne du fichier"],
+    "bonneReponse": 3,
+    "explication": "Les chaînes écrites en dur sont gelées et dédupliquées : moins d'allocations, et `<<` sur l'une d'elles lève une `FrozenError`. Les versions récentes de Ruby préparent le passage à ce comportement par défaut."
+  },
+  {
+    "id": "ruby-e5",
+    "enonce": "Où sont rangées les « méthodes de classe » définies par `def self.creer` ?",
+    "choix": ["dans le module Kernel, partagé par tous", "dans une table globale tenue par l'interpréteur", "dans la superclasse directe de la classe", "dans la classe singleton propre à l'objet classe"],
+    "bonneReponse": 3,
+    "explication": "Tout objet peut avoir une classe cachée rien qu'à lui (« eigenclass »). Une classe étant elle-même un objet, ses méthodes de classe sont des méthodes singleton. `class << self` ouvre directement cette classe singleton."
+  },
+  {
+    "id": "ruby-e6",
+    "enonce": "Quelle méthode définir pour qu'une classe incluant `Comparable` obtienne `<`, `>` et `between?` ?",
+    "choix": ["compare_to", "<=>", "==", "each"],
+    "bonneReponse": 1,
+    "explication": "L'opérateur « vaisseau spatial » renvoie -1, 0 ou 1 ; `Comparable` en déduit toutes les comparaisons. De même, inclure `Enumerable` et définir `each` offre `map`, `select`, `sort` et des dizaines d'autres méthodes."
+  },
+  {
+    "id": "ruby-e7",
+    "enonce": "Depuis Ruby 3.0, quelle syntaxe sert au pattern matching structurel ?",
+    "choix": ["case … when", "match … with", "switch … case", "case … in"],
+    "bonneReponse": 3,
+    "explication": "`case reponse in { statut: 200, corps: } then ...` déstructure hashes et tableaux et lie des variables au passage. `case … when` se contente de tests avec l'opérateur `===`. `match … with` est la syntaxe d'OCaml."
+  },
+  {
+    "id": "ruby-e8",
+    "enonce": "Quelle différence entre `dup` et `clone` ?",
+    "choix": ["`dup` ne fonctionne que sur les chaînes et les tableaux", "`dup` garde l'état gelé et les méthodes singleton, pas `clone`", "`clone` garde l'état gelé et les méthodes singleton, pas `dup`", "`clone` fait une copie profonde, `dup` une copie superficielle"],
+    "bonneReponse": 2,
+    "explication": "Les deux font une copie superficielle : les objets contenus sont partagés. `clone` reproduit en plus l'état `frozen` et la classe singleton ; `dup` donne une copie « neuve », modifiable."
+  },
+  {
+    "id": "ruby-e9",
+    "enonce": "Qu'est-ce que YJIT ?",
+    "choix": ["un compilateur JIT intégré à CRuby, issu de Shopify", "un framework de tests concurrent de RSpec", "une implémentation de Ruby sur la JVM", "un gestionnaire de versions de Ruby, comme rbenv"],
+    "bonneReponse": 0,
+    "explication": "Développé chez Shopify, intégré à Ruby 3.1 puis réécrit en Rust, YJIT s'active avec l'option `--yjit` et accélère nettement les applications Rails. L'implémentation de Ruby sur la JVM, c'est JRuby."
+  },
+  {
+    "id": "ruby-e10",
+    "enonce": "Avec un ORM comme ActiveRecord, qu'est-ce que le problème « N+1 » ?",
+    "choix": ["une transaction non fermée ; on le corrige avec `commit`", "une requête de trop par migration ; on le corrige avec `rollback`", "une requête par élément d'une liste ; on le corrige avec `includes`", "un index manquant sur une table ; on le corrige avec `add_index`"],
+    "bonneReponse": 2,
+    "explication": "`Article.all.each { |a| puts a.auteur.nom }` lance 1 requête pour les articles puis N pour les auteurs. `Article.includes(:auteur)` précharge tout en deux requêtes. Le piège existe dans tous les ORM."
+  }
+]

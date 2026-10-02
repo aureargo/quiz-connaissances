@@ -1,0 +1,72 @@
+[
+  {
+    "id": "csharp-m1",
+    "enonce": "Quelle est la différence fondamentale entre `class` et `struct` ?",
+    "choix": ["`class` est un type référence, `struct` un type valeur", "`struct` ne peut contenir aucune méthode", "`struct` est un type référence, `class` un type valeur", "`class` ne peut contenir aucun champ public"],
+    "bonneReponse": 0,
+    "explication": "Affecter une `struct` copie toutes ses données ; affecter une `class` copie seulement la référence vers le même objet. Les structs conviennent aux petites valeurs (point, couleur) : `int` et `DateTime` en sont."
+  },
+  {
+    "id": "csharp-m2",
+    "enonce": "Comment le code C# est-il habituellement exécuté sur .NET ?",
+    "choix": ["Interprété ligne à ligne, sans compilation", "Traduit en C++ puis compilé par MSVC", "Compilé en code machine directement par csc", "Compilé en IL, puis en code machine par le JIT"],
+    "bonneReponse": 3,
+    "explication": "Le compilateur produit du langage intermédiaire (IL, ou CIL) stocké dans une `.dll`. Au lancement, le runtime (CLR) le compile à la volée en code machine. Le mode Native AOT permet aussi de tout compiler à l'avance."
+  },
+  {
+    "id": "csharp-m3",
+    "enonce": "Que fait `nombres.Where(n => n > 10).Select(n => n * 2)` ?",
+    "choix": ["Il trie les nombres puis double le plus grand", "Il double chaque nombre puis garde ceux > 10", "Il garde les nombres > 10 puis double chacun", "Il compte les nombres strictement supérieurs à 10"],
+    "bonneReponse": 2,
+    "explication": "C'est du LINQ : `Where` filtre, `Select` projette (l'équivalent de `filter` et `map`). Les opérations s'enchaînent de gauche à droite et produisent une nouvelle séquence sans modifier l'originale."
+  },
+  {
+    "id": "csharp-m4",
+    "enonce": "À quoi sert l'instruction `using (var flux = File.OpenRead(chemin)) { ... }` ?",
+    "choix": ["À appeler `Dispose()` automatiquement en fin de bloc", "À charger le fichier entier en mémoire d'un coup", "À verrouiller le fichier pour les autres threads", "À importer un espace de noms le temps du bloc"],
+    "bonneReponse": 0,
+    "explication": "Pour tout objet `IDisposable`, `using` garantit la libération de la ressource (fichier, connexion…), même en cas d'exception : c'est un `try/finally` déguisé. Depuis C# 8, `using var flux = ...;` libère en fin de portée."
+  },
+  {
+    "id": "csharp-m5",
+    "enonce": "Comment déclare-t-on une méthode d'extension ?",
+    "choix": ["méthode `partial` complétée dans un autre fichier", "méthode statique avec `this` devant le premier paramètre", "méthode d'instance marquée du mot-clé `override`", "méthode déclarée dans une classe avec le mot-clé `extends`"],
+    "bonneReponse": 1,
+    "explication": "`public static bool EstPair(this int n) => n % 2 == 0;` dans une classe statique permet d'écrire `4.EstPair()`, comme si `int` avait cette méthode. Tout LINQ repose sur ce mécanisme."
+  },
+  {
+    "id": "csharp-m6",
+    "enonce": "Quelle est la particularité d'un `record` (C# 9) ?",
+    "choix": ["Son égalité compare les valeurs de ses propriétés", "Il est sérialisé en JSON automatiquement", "Il ne peut contenir absolument aucune méthode", "Il est toujours alloué sur la pile, comme une struct"],
+    "bonneReponse": 0,
+    "explication": "Deux records aux mêmes valeurs sont égaux avec `==`, et `ToString()` affiche leur contenu. Un `record` reste un type référence ; `record struct` (C# 10) en fait un type valeur."
+  },
+  {
+    "id": "csharp-m7",
+    "enonce": "Quelle différence entre `const` et `readonly` pour un champ ?",
+    "choix": ["`const` est fixé à la compilation, `readonly` jusqu'au constructeur", "`readonly` est fixé à la compilation, `const` jusqu'au constructeur", "`const` vaut pour les classes, `readonly` pour les variables locales", "aucune : `readonly` est l'ancien nom du mot-clé `const`"],
+    "bonneReponse": 0,
+    "explication": "Une `const` est une valeur littérale gravée dans le code compilé (nombre, chaîne). Un champ `readonly` peut recevoir une valeur calculée à l'exécution, mais seulement à sa déclaration ou dans un constructeur."
+  },
+  {
+    "id": "csharp-m8",
+    "enonce": "Que fait `await` sur une `Task` qui n'est pas encore terminée ?",
+    "choix": ["Il lance la tâche sur un nouveau thread dédié", "Il bloque le thread courant jusqu'à la fin de la tâche", "Il rend la main à l'appelant sans bloquer le thread", "Il annule la tâche si elle prend trop de temps"],
+    "bonneReponse": 2,
+    "explication": "La suite de la méthode est enregistrée comme continuation et reprise quand la tâche se termine ; le thread est libre entre-temps. À l'inverse, `.Result` ou `.Wait()` bloquent et peuvent provoquer des interblocages."
+  },
+  {
+    "id": "csharp-m9",
+    "enonce": "Que signifie le modificateur d'accès `internal` ?",
+    "choix": ["visible depuis n'importe quel projet", "visible dans les classes dérivées", "visible dans tout le même assembly", "visible seulement dans la classe"],
+    "bonneReponse": 2,
+    "explication": "Un assembly est l'unité de compilation (`.dll` ou `.exe`). `internal` est d'ailleurs l'accès par défaut d'une classe de premier niveau, tandis que les membres d'une classe sont `private` par défaut."
+  },
+  {
+    "id": "csharp-m10",
+    "enonce": "Que vaut `client?.Adresse?.Ville ?? \"inconnue\"` si `client` est null ?",
+    "choix": ["\"inconnue\"", "une NullReferenceException", "null", "une chaîne vide"],
+    "bonneReponse": 0,
+    "explication": "`?.` court-circuite toute la chaîne dès qu'un maillon vaut `null` et renvoie `null` ; `??` remplace alors ce `null` par la valeur de droite. Aucune exception n'est levée."
+  }
+]

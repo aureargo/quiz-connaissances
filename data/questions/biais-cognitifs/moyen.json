@@ -1,0 +1,72 @@
+[
+  {
+    "id": "biais-cognitifs-m1",
+    "enonce": "Pendant la Seconde Guerre mondiale, on voulait blinder les zones des bombardiers revenus criblés de balles. Le statisticien Abraham Wald conseilla l'inverse. Quel biais avait-il repéré ?",
+    "choix": ["le biais de disponibilité", "le biais du survivant", "l'erreur du joueur", "le biais d'optimisme"],
+    "bonneReponse": 1,
+    "explication": "On n'examinait que les avions revenus : leurs impacts montraient où un appareil pouvait être touché sans tomber. Les zones intactes, comme les moteurs, étaient justement celles où les avions touchés ne revenaient pas. Même piège avec les « recettes » des entrepreneurs à succès : on ne voit jamais ceux qui ont échoué en faisant exactement pareil."
+  },
+  {
+    "id": "biais-cognitifs-m2",
+    "enonce": "Perdre 100 € fait davantage souffrir que gagner 100 € ne fait plaisir. Comment s'appelle ce phénomène ?",
+    "choix": ["l'effet de halo", "le biais de récence", "l'illusion de contrôle", "l'aversion à la perte"],
+    "bonneReponse": 3,
+    "explication": "Mise en évidence par Kahneman et Tversky dans leur théorie des perspectives (1979) : une perte pèse environ deux fois plus lourd qu'un gain de même montant. D'où notre réticence à revendre une action en baisse, ou l'efficacité des messages du type « ne laissez pas passer cette offre »."
+  },
+  {
+    "id": "biais-cognitifs-m3",
+    "enonce": "On reste jusqu'au bout d'un film ennuyeux « parce qu'on a payé sa place ». Quel biais nous retient ?",
+    "choix": ["l'erreur des coûts irrécupérables", "l'effet de simple exposition", "le biais de projection", "l'illusion de transparence"],
+    "bonneReponse": 0,
+    "explication": "L'argent ou le temps déjà dépensés sont perdus quoi qu'on fasse : seule la suite devrait compter dans la décision. On parle aussi d'« effet Concorde » : la France et le Royaume-Uni ont poursuivi l'avion supersonique malgré des pertes prévisibles, en partie pour ne pas « gâcher » les sommes déjà investies."
+  },
+  {
+    "id": "biais-cognitifs-m4",
+    "enonce": "Une voiture nous coupe la route : on pense « quel chauffard ! », sans imaginer qu'il conduit peut-être quelqu'un aux urgences. Quel biais est-ce ?",
+    "choix": ["le biais de confirmation", "le biais de négativité", "l'erreur fondamentale d'attribution", "l'illusion de contrôle"],
+    "bonneReponse": 2,
+    "explication": "Nous expliquons le comportement des autres par leur caractère plutôt que par leur situation — alors que, pour nous-mêmes, nous invoquons volontiers les circonstances. Jones et Harris l'ont observé en 1967 : des lecteurs prêtaient à l'auteur d'un texte pro-Castro des convictions pro-Castro… même en sachant que le sujet lui avait été imposé. Le terme a été proposé par Lee Ross en 1977."
+  },
+  {
+    "id": "biais-cognitifs-m5",
+    "enonce": "Un traitement annoncé avec « 90 % de survie » est préféré au même traitement annoncé avec « 10 % de mortalité ». Quel effet joue ici ?",
+    "choix": ["l'effet de récence", "l'effet de cadrage", "l'effet de halo", "l'effet de primauté"],
+    "bonneReponse": 1,
+    "explication": "Le contenu est identique, seule la présentation change. Tversky et Kahneman l'ont montré en 1981 avec le « problème de la maladie asiatique » : selon qu'on parle de vies sauvées ou de morts, deux options équivalentes ne recueillent pas du tout les mêmes choix. Même des médecins y sont sensibles."
+  },
+  {
+    "id": "biais-cognitifs-m6",
+    "enonce": "Quel biais nous fait surestimer la proportion de gens qui partagent nos opinions, nos goûts et nos choix ?",
+    "choix": ["l'effet de mode", "le biais d'endogroupe", "l'effet spectateur", "l'effet de faux consensus"],
+    "bonneReponse": 3,
+    "explication": "En 1977, Lee Ross demandait à des étudiants de se promener sur le campus avec une pancarte « Mangez chez Joe's ». Ceux qui acceptaient pensaient que la plupart des autres accepteraient aussi ; ceux qui refusaient pensaient au contraire que la majorité refuserait. Chacun prend ses propres choix pour la norme."
+  },
+  {
+    "id": "biais-cognitifs-m7",
+    "enonce": "Plus on entend une chanson, plus on a tendance à l'apprécier, même sans y prêter attention. Quel effet est-ce ?",
+    "choix": ["l'effet de simple exposition", "l'effet Zeigarnik", "l'effet de primauté", "l'effet de contraste"],
+    "bonneReponse": 0,
+    "explication": "Décrit par le psychologue Robert Zajonc en 1968 : la familiarité engendre la préférence, même pour des idéogrammes chinois ou des visages entrevus un instant. La publicité répétée en boucle et les « tubes de l'été » matraqués à la radio en tirent parti."
+  },
+  {
+    "id": "biais-cognitifs-m8",
+    "enonce": "On accorde plus de valeur à un objet qu'on a assemblé soi-même, même maladroitement, qu'au même objet acheté tout prêt. Comment s'appelle cet effet ?",
+    "choix": ["l'effet Veblen", "l'effet Diderot", "l'effet IKEA", "l'effet Streisand"],
+    "bonneReponse": 2,
+    "explication": "Décrit en 2011 par Michael Norton, Daniel Mochon et Dan Ariely : des participants étaient prêts à payer nettement plus pour une boîte IKEA ou un origami qu'ils avaient assemblés eux-mêmes — à condition d'avoir terminé. L'effort investi se transforme en attachement, ce qui explique aussi le succès des kits et du « fait maison »."
+  },
+  {
+    "id": "biais-cognitifs-m9",
+    "enonce": "Quel biais explique que les travaux, les projets informatiques ou les devoirs prennent presque toujours plus de temps que prévu ?",
+    "choix": ["le biais de récence", "l'erreur de planification", "le biais de statu quo", "l'illusion de transparence"],
+    "bonneReponse": 1,
+    "explication": "Décrite par Kahneman et Tversky en 1979 : on se fie au scénario idéal de son propre projet au lieu de regarder la durée réelle de projets comparables. L'opéra de Sydney, prévu pour 1963 et 7 millions de dollars australiens, a été achevé en 1973 pour 102 millions. Le remède : partir des statistiques de cas similaires."
+  },
+  {
+    "id": "biais-cognitifs-m10",
+    "enonce": "Un expert n'arrive plus à se mettre à la place de quelqu'un qui ne sait pas, et explique mal aux débutants. Quel biais est-ce ?",
+    "choix": ["la malédiction du savoir", "le biais de négativité", "l'effet de mode", "l'illusion de contrôle"],
+    "bonneReponse": 0,
+    "explication": "En 1990, Elizabeth Newton, à Stanford, demandait à des volontaires de tapoter du doigt le rythme de chansons connues. Ils pensaient être reconnus une fois sur deux ; les auditeurs n'ont identifié que 3 chansons sur 120. Le « tapeur » entend la mélodie dans sa tête, l'auditeur n'entend que des coups secs sur une table."
+  }
+]

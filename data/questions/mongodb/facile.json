@@ -1,0 +1,72 @@
+[
+  {
+    "id": "mongodb-f1",
+    "enonce": "Sous quel format binaire MongoDB stocke-t-il ses documents ?",
+    "choix": ["BSON", "Protobuf", "YAML", "CSV"],
+    "bonneReponse": 0,
+    "explication": "BSON (Binary JSON) reprend la structure de JSON en l'encodant en binaire. Il ajoute des types absents de JSON : dates, ObjectId, Decimal128, données binaires… Il est aussi plus rapide à parcourir qu'un texte JSON."
+  },
+  {
+    "id": "mongodb-f2",
+    "enonce": "Quel champ joue le rôle d'identifiant unique obligatoire dans chaque document ?",
+    "choix": ["id", "uuid", "_id", "_key"],
+    "bonneReponse": 2,
+    "explication": "Chaque document possède un champ `_id`, unique dans sa collection et indexé automatiquement. Si on ne le fournit pas, MongoDB génère un ObjectId. Le nom `_key` est utilisé par une autre base, ArangoDB."
+  },
+  {
+    "id": "mongodb-f3",
+    "enonce": "Quelle méthode insère un seul document dans une collection ?",
+    "choix": ["createOne()", "putOne()", "addOne()", "insertOne()"],
+    "bonneReponse": 3,
+    "explication": "`db.clients.insertOne({ nom: \"Ada\" })` ajoute un document ; `insertMany()` en ajoute plusieurs. L'ancienne méthode `insert()` est dépréciée. La collection est créée automatiquement lors de la première insertion."
+  },
+  {
+    "id": "mongodb-f4",
+    "enonce": "Comment s'appelle le shell moderne de MongoDB ?",
+    "choix": ["mongocmd", "mshell", "mongo-cli", "mongosh"],
+    "bonneReponse": 3,
+    "explication": "`mongosh` est construit sur Node.js : on y tape du JavaScript, avec l'autocomplétion et la coloration syntaxique. Il remplace l'ancien shell `mongo`, retiré en version 6.0."
+  },
+  {
+    "id": "mongodb-f5",
+    "enonce": "D'où vient le nom « MongoDB » ?",
+    "choix": ["de la planète de Flash Gordon", "d'une ville de Mongolie", "de humongous, « gigantesque »", "du prénom de l'un de ses créateurs"],
+    "bonneReponse": 2,
+    "explication": "Le nom est tiré de l'argot américain « humongous », énorme : la base a été pensée pour de très gros volumes de données. Elle a été lancée en 2009 par la société 10gen, rebaptisée depuis MongoDB Inc."
+  },
+  {
+    "id": "mongodb-f6",
+    "enonce": "Comment s'appelle le service cloud officiel qui héberge MongoDB clés en main ?",
+    "choix": ["Aurora", "Cosmos", "Firestore", "Atlas"],
+    "bonneReponse": 3,
+    "explication": "MongoDB Atlas gère les serveurs, la réplication, les sauvegardes et la mise à l'échelle sur AWS, Azure ou Google Cloud. Aurora est une base relationnelle d'AWS, Cosmos DB la base multimodèle d'Azure et Firestore une base documents de Google."
+  },
+  {
+    "id": "mongodb-f7",
+    "enonce": "Quel opérateur de mise à jour modifie un champ sans remplacer le reste du document ?",
+    "choix": ["$set", "$assign", "$change", "$put"],
+    "bonneReponse": 0,
+    "explication": "`updateOne({ _id: 1 }, { $set: { ville: \"Lyon\" } })` ne touche que le champ `ville`. Sans opérateur, `replaceOne()` remplacerait le document entier. D'autres opérateurs existent : `$inc` pour incrémenter, `$unset` pour supprimer un champ, `$push` pour ajouter à un tableau…"
+  },
+  {
+    "id": "mongodb-f8",
+    "enonce": "Quel opérateur de requête signifie « strictement supérieur à » ?",
+    "choix": ["$sup", "$gt", "$more", "$above"],
+    "bonneReponse": 1,
+    "explication": "`find({ age: { $gt: 18 } })` renvoie les documents dont l'âge dépasse 18. Ses cousins : `$gte` (supérieur ou égal), `$lt`, `$lte`, `$ne` (différent) et `$in` (dans une liste)."
+  },
+  {
+    "id": "mongodb-f9",
+    "enonce": "Deux documents d'une même collection doivent-ils avoir les mêmes champs ?",
+    "choix": ["Oui, sauf pour le champ _id", "Oui, sinon l'insertion échoue", "Non, le schéma est flexible", "Non, mais en mode test seulement"],
+    "bonneReponse": 2,
+    "explication": "Une collection n'impose pas de structure : deux documents peuvent avoir des champs différents. C'est pratique pour faire évoluer une application. Si l'on veut des garanties, on peut ajouter une règle de validation fondée sur JSON Schema."
+  },
+  {
+    "id": "mongodb-f10",
+    "enonce": "Dans mongosh, quelle commande affiche la liste des bases de données ?",
+    "choix": ["db.list()", "show dbs", "SHOW DATABASES", "\\l"],
+    "bonneReponse": 1,
+    "explication": "`show dbs` liste les bases, `use maBase` sélectionne une base (en la créant au besoin) et `show collections` en liste les collections. `\\l` est l'équivalent dans psql (PostgreSQL), `SHOW DATABASES` dans MySQL."
+  }
+]

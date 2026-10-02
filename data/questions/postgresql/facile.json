@@ -1,0 +1,72 @@
+[
+  {
+    "id": "postgresql-f1",
+    "enonce": "Quel animal est la mascotte de PostgreSQL ?",
+    "choix": ["une otarie", "un éléphant", "un dauphin", "un manchot"],
+    "bonneReponse": 1,
+    "explication": "La mascotte s'appelle Slonik, « petit éléphant » en russe. Le dauphin est celui de MySQL (il s'appelle Sakila), l'otarie celle de MariaDB et le manchot Tux celui de Linux."
+  },
+  {
+    "id": "postgresql-f2",
+    "enonce": "Dans quelle université le projet POSTGRES, ancêtre de PostgreSQL, est-il né ?",
+    "choix": ["Carnegie Mellon", "Berkeley", "le MIT", "Stanford"],
+    "bonneReponse": 1,
+    "explication": "Michael Stonebraker lance POSTGRES en 1986 à l'université de Californie à Berkeley, comme successeur d'Ingres (d'où « post-Ingres »). Après l'ajout du langage SQL (Postgres95), il prend le nom de PostgreSQL en 1996. Stonebraker a reçu le prix Turing en 2014."
+  },
+  {
+    "id": "postgresql-f3",
+    "enonce": "Quel est le port TCP par défaut d'un serveur PostgreSQL ?",
+    "choix": ["27017", "1521", "3306", "5432"],
+    "bonneReponse": 3,
+    "explication": "PostgreSQL écoute par défaut sur le port 5432. 3306 est celui de MySQL/MariaDB, 1521 celui d'Oracle et 27017 celui de MongoDB."
+  },
+  {
+    "id": "postgresql-f4",
+    "enonce": "Comment s'appelle le client officiel en ligne de commande de PostgreSQL ?",
+    "choix": ["mysql", "psql", "sqlplus", "pgsh"],
+    "bonneReponse": 1,
+    "explication": "`psql` permet d'exécuter des requêtes SQL et propose des méta-commandes commençant par un antislash (`\\dt`, `\\l`…). `sqlplus` est le client d'Oracle et `mysql` celui de MySQL."
+  },
+  {
+    "id": "postgresql-f5",
+    "enonce": "Sous quel type de licence PostgreSQL est-il distribué ?",
+    "choix": ["une licence gratuite non commerciale", "une licence propriétaire payante", "une licence libre permissive", "la licence GPL version 3"],
+    "bonneReponse": 2,
+    "explication": "La « PostgreSQL License » ressemble aux licences BSD et MIT : on peut utiliser, modifier et même revendre le logiciel, y compris dans un produit fermé. C'est pour cela que tant d'offres commerciales s'appuient sur PostgreSQL (Supabase, Neon, la version PostgreSQL d'Amazon Aurora…)."
+  },
+  {
+    "id": "postgresql-f6",
+    "enonce": "Quel outil fourni avec PostgreSQL exporte une base dans un fichier de sauvegarde ?",
+    "choix": ["pg_save", "pg_ctl", "pg_dump", "mysqldump"],
+    "bonneReponse": 2,
+    "explication": "`pg_dump` produit un script SQL ou une archive que `psql` ou `pg_restore` savent recharger. `pg_ctl` sert à démarrer et arrêter le serveur, et `mysqldump` est l'équivalent chez MySQL."
+  },
+  {
+    "id": "postgresql-f7",
+    "enonce": "Quel pseudo-type PostgreSQL crée une colonne d'entiers auto-incrémentée ?",
+    "choix": ["AUTO_INCREMENT", "IDENTITY(1,1)", "ROWID", "SERIAL"],
+    "bonneReponse": 3,
+    "explication": "`SERIAL` crée une séquence et la branche sur la colonne. Depuis PostgreSQL 10, on lui préfère la syntaxe standard `GENERATED ALWAYS AS IDENTITY`. `AUTO_INCREMENT` vient de MySQL, `IDENTITY(1,1)` de SQL Server et `ROWID` de SQLite ou d'Oracle."
+  },
+  {
+    "id": "postgresql-f8",
+    "enonce": "Quelle extension très répandue ajoute à PostgreSQL les données géographiques ?",
+    "choix": ["Citus", "pgvector", "pg_cron", "PostGIS"],
+    "bonneReponse": 3,
+    "explication": "PostGIS ajoute des types (points, lignes, polygones), des index spatiaux et des centaines de fonctions (distances, intersections…). C'est une référence des systèmes d'information géographique. pgvector sert à la recherche vectorielle, pg_cron à planifier des tâches et Citus à distribuer une base sur plusieurs nœuds."
+  },
+  {
+    "id": "postgresql-f9",
+    "enonce": "Comment classe-t-on PostgreSQL parmi les systèmes de gestion de bases de données ?",
+    "choix": ["relationnel-objet", "orienté documents", "orienté graphe", "clé-valeur en mémoire"],
+    "bonneReponse": 0,
+    "explication": "PostgreSQL est un SGBD relationnel enrichi de notions objet : types définis par l'utilisateur, héritage de tables, fonctions écrites dans plusieurs langages. Il sait aussi stocker du JSON, ce qui le rend polyvalent."
+  },
+  {
+    "id": "postgresql-f10",
+    "enonce": "Dans psql, quelle méta-commande liste les tables de la base courante ?",
+    "choix": ["\\dt", "\\c", "\\l", "\\q"],
+    "bonneReponse": 0,
+    "explication": "`\\dt` (« describe tables ») liste les tables, et `\\d nom_table` en détaille une. `\\l` liste les bases, `\\c` se connecte à une autre base et `\\q` quitte psql."
+  }
+]
