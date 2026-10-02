@@ -62,6 +62,10 @@ Le joueur traverse **trois pages**, et les données sont chargées **progressive
 
 1. **Accueil** (`/`, `theme-selection`) — uniquement les **tuiles de thèmes**, chacune
    étant un lien. Appelle `GET /api/themes` (liste **légère**, sans les niveaux).
+   Un **champ de recherche** filtre les tuiles à chaque frappe (côté client, sans
+   appel API) : seuls les thèmes correspondants s'affichent, en haut, classés par
+   pertinence (nom exact > début du nom > mot du nom > inclusion > catégorie).
+   Entrée ouvre le premier résultat, Échap vide le champ.
 2. **Sélection du niveau** (`/themes/:id`, `niveau-selection`) — atteinte au clic sur
    une tuile. C'est **seulement ici** qu'on demande les niveaux de **ce** thème via
    `GET /api/themes/{id}`, puis qu'on affiche les boutons facile/moyen/expert/tous.
@@ -114,7 +118,8 @@ frontend/src/app/
   services/moteur-quiz.ts           → CŒUR : logique de partie (file, mélange…)
   services/moteur-quiz.spec.ts      → tests unitaires du moteur (vitest)
   utils/aleatoire.ts                → mélange Fisher-Yates
-  pages/theme-selection/            → page d'accueil : tuiles de thèmes (lien)
+  utils/recherche.ts (+ .spec.ts)   → filtrage/classement des thèmes (champ de recherche)
+  pages/theme-selection/            → page d'accueil : recherche + tuiles de thèmes (lien)
   pages/niveau-selection/           → sous-page : choix du niveau d'un thème
   pages/quiz/                       → page de jeu (pilote le MoteurQuiz)
 ```
@@ -214,17 +219,17 @@ cd frontend && npm test -- --watch=false  # lancer les tests unitaires une fois
 > longueur et un niveau de détail comparables — voir le template pour les détails
 > et contre-exemples.
 
-## 🗂️ Thèmes actuels (59)
+## 🗂️ Thèmes actuels (75)
 
 État du **contenu** actuel (ce ne sont pas des contraintes du code, cf.
 `QUESTIONNAIRE_TEMPLATE.md`) : chaque thème a aujourd'hui trois fichiers
 (`facile.json`, `moyen.json`, `expert.json`) de 10 questions, soit 30 par thème
-(plus le niveau synthétique **`tous`** = 30). Total : **1770 questions**.
+(plus le niveau synthétique **`tous`** = 30). Total : **2250 questions**.
 
-- **Programmation** : Go, Python, JavaScript, TypeScript, Angular, Java, Kotlin, C, C++, Rust, Git, Lignes de commande Linux, HTML, CSS, Architecture logicielle, Algorithmes & structures de données
+- **Programmation** : Go, Python, JavaScript, TypeScript, Node.js, Angular, React, Vue.js, Java, Kotlin, C#, C, C++, Rust, PHP, Ruby, Git, Lignes de commande Linux, HTML, CSS, Architecture logicielle, Algorithmes & structures de données
 - **DevOps & Conteneurs** : Docker, Kubernetes
-- **Matériel informatique** : Processeurs (CPU), Cartes graphiques (GPU)
-- **Bases de données** : SQL, NoSQL
+- **Matériel informatique** : Processeurs (CPU), Cartes graphiques (GPU), Stockage (SSD, HDD), Mémoire vive (RAM), Cartes mères & connectique, Monter son PC
+- **Bases de données** : SQL, NoSQL, PostgreSQL, MongoDB, Redis, Modélisation de données, Data engineering
 - **Crypto & Web3** : Crypto
 - **Intelligence artificielle** : IA (généralités), LLM (connaissances arrêtées à 2026)
 - **Cybersécurité** : Cybersécurité
@@ -236,7 +241,7 @@ cd frontend && npm test -- --watch=false  # lancer les tests unitaires une fois
 - **Cinéma** : Films des années 1980, 1990, 2000, 2010
 - **Littérature** : Science-fiction (littérature), Littérature d'aventure
 - **Histoire** : Histoire de France, Antiquité
-- **Sciences** : Mathématiques, Chimie, Biologie, Physique, Astronomie, Géologie, Écologie & climat
+- **Sciences** : Mathématiques, Chimie, Biologie, Physique, Astronomie, Géologie, Écologie & climat, Biais cognitifs
 - **Économie & Finance** : Finance
 - **Automobile** : Automobile
 - **Systèmes d'exploitation** : Windows, Android
