@@ -71,7 +71,7 @@ port_pret() {
 
 PREREQUIS=(
     "go|Go|backend (serveur)|1.26|brew install go  (ou: sudo apt install golang)|https://go.dev/dl/"
-    "node|Node.js (inclut npm)|frontend (Angular)|20.19|brew install node  (ou: voir nodesource)|https://nodejs.org/fr/download"
+    "node|Node.js (inclut npm)|frontend (Angular)|22.22.3|brew install node  (ou: voir nodesource)|https://nodejs.org/fr/download"
 )
 
 # --- Diagnostic de l'environnement -----------------------------------------
@@ -160,16 +160,36 @@ echo "  Backend  (API Go)  : http://localhost:8080"
 pids+=($!)
 echo "  Frontend (Angular) : http://localhost:4200"
 
+# Tue un processus ET toute sa descendance (les enfants d'abord).
+#
+# Pourquoi pas un simple « kill $pid » ? Parce que « go run » compile le serveur
+# puis le lance comme processus ENFANT, sans lui relayer le signal reçu : tuer
+# « go run » seul laissait le vrai serveur orphelin, qui gardait le port 8080
+# (et le lancement suivant échouait sur « port déjà utilisé »). Même chose pour
+# npm, qui lance « ng serve » comme enfant.
+tuer_arborescence() {
+    local enfant
+    for enfant in $(pgrep -P "$1" 2>/dev/null); do
+        tuer_arborescence "$enfant"
+    done
+    kill "$1" 2>/dev/null
+}
+
 # À la sortie du script (Ctrl+C ou fin), on coupe proprement les deux serveurs.
 nettoyer() {
     echo ""
     echo "Arrêt des serveurs..."
     for pid in "${pids[@]}"; do
-        # On tue le groupe de processus pour emporter go/npm ET leurs enfants.
-        kill "$pid" 2>/dev/null
+        tuer_arborescence "$pid"
     done
 }
-trap nettoyer EXIT INT TERM
+# Le ménage est fait UNE fois, à la sortie (EXIT). Ctrl+C (INT) et TERM se
+# contentent de provoquer cette sortie : un trap qui appelait directement
+# « nettoyer » laissait ensuite le script CONTINUER — la boucle d'attente
+# ci-dessous repartait pour 5 minutes, puis ouvrait le navigateur sur des
+# serveurs arrêtés.
+trap nettoyer EXIT
+trap 'exit 130' INT TERM
 
 # On attend que le serveur Angular réponde sur le port 4200, puis on ouvre le
 # navigateur. La 1re fois (npm install) ça peut être long, d'où un timeout large.

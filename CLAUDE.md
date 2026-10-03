@@ -271,3 +271,13 @@ d'URL sur les `input()`, encapsulation des styles par composant.
 6. **Phase 5** — enrichissement des questionnaires + doc finale
 
 Utilise `git log --oneline` et `git show <commit>` pour étudier chaque étape.
+
+### Workflow git
+
+Un **seul développeur** travaille sur le dépôt : on reste simple.
+
+- **Commiter directement sur `main`**, puis `git push`. Pas de branche à part, pas de
+  pull request, sauf demande explicite.
+- Ne **jamais** créer de branche de sa propre initiative. Si on se trouve sur une
+  autre branche que `main`, le signaler au lieu de continuer dessus.
+- Commits **petits et cohérents** (un sujet par commit : contenu, fonctionnalité, doc).

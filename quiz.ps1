@@ -1,5 +1,5 @@
 # ============================================================================
-#  lancer.ps1 — Lance le projet « quiz-connaissances » (backend Go + frontend Angular)
+#  quiz.ps1 — Lance le projet « quiz-connaissances » (backend Go + frontend Angular)
 # ----------------------------------------------------------------------------
 #  Ce script :
 #    1. Vérifie que les outils nécessaires sont installés (Go, Node.js/npm).
@@ -10,7 +10,7 @@
 #    3. Si tout est OK, lance le backend (« go run . ») et le frontend
 #       (« npm start ») chacun dans sa propre fenêtre.
 #
-#  Astuce : double-cliquez plutôt sur « lancer.bat » (il appelle ce script en
+#  Astuce : double-cliquez plutôt sur « quiz.bat » (il appelle ce script en
 #  contournant la politique d'exécution PowerShell).
 # ============================================================================
 
@@ -68,7 +68,7 @@ $prerequis = @(
         Nom         = 'Node.js (inclut npm)'
         Role        = 'frontend (Angular)'
         Commande    = 'node'
-        VersionMin  = [version]'20.19'
+        VersionMin  = [version]'22.22.3'
         LireVersion = { Extraire-Version (node -v 2>$null) }
         Winget      = 'winget install --id OpenJS.NodeJS.LTS -e'
         Page        = 'https://nodejs.org/fr/download'
@@ -108,7 +108,7 @@ if ($manquants.Count -gt 0) {
         $lignes += ""
     }
     $lignes += "Angular CLI n'est PAS a installer a la main : il est inclus dans"
-    $lignes += "le projet et sera mis en place automatiquement par « npm install »."
+    $lignes += "le projet et sera mis en place automatiquement par 'npm install'."
     $lignes += ""
     $lignes += "Apres l'installation : fermez puis rouvrez ce script."
     $lignes += ""
