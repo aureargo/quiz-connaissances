@@ -195,7 +195,9 @@ func TestDonneesReglesDures(t *testing.T) {
 	// silence — le travail de rédaction serait invisible dans l'application.
 	if entrees, err := os.ReadDir(filepath.Join(c.racine, "questions")); err == nil {
 		for _, e := range entrees {
-			if e.IsDir() && vus[e.Name()] == "" {
+			// Test de PRÉSENCE (comma ok), pas de valeur : un thème déclaré au
+			// nom vide aurait sinon son dossier signalé à tort comme orphelin.
+			if _, declare := vus[e.Name()]; e.IsDir() && !declare {
 				r.ajouter("questions/%s/ : dossier sans entrée dans themes.json → thème invisible",
 					e.Name())
 			}

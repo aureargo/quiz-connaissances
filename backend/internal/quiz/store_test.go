@@ -375,6 +375,37 @@ func TestQuestionsRelitLeFichierApresModification(t *testing.T) {
 
 func TestQuestionsUtiliseLeCacheSiLeFichierNaPasChange(t *testing.T) {
 	store, racine := storeDeTest(t)
+	chemin := filepath.Join(racine, "questions", "go", "facile.json")
+
+	// 1er accès : met le fichier en cache.
+	if _, ok := store.Questions("go", "facile"); !ok {
+		t.Fatal("premier accès échoué")
+	}
+	infos, err := os.Stat(chemin)
+	if err != nil {
+		t.Fatalf("os.Stat : %v", err)
+	}
+
+	// On change le CONTENU mais on remet la date d'origine : pour le store, le
+	// fichier n'a pas bougé. S'il sert encore l'ancien contenu, c'est la preuve
+	// qu'il a lu le cache au lieu de relire le disque.
+	ecrireJSON(t, chemin, []Question{question("go-f99")})
+	if err := os.Chtimes(chemin, infos.ModTime(), infos.ModTime()); err != nil {
+		t.Fatalf("os.Chtimes : %v", err)
+	}
+
+	questions, ok := store.Questions("go", "facile")
+	if !ok {
+		t.Fatal("second accès échoué")
+	}
+	if attendu := []string{"go-f1", "go-f2"}; !slices.Equal(idsDe(questions), attendu) {
+		t.Errorf("ids = %v, attendu %v — le fichier a été relu au lieu d'utiliser le cache",
+			idsDe(questions), attendu)
+	}
+}
+
+func TestQuestionsEchoueSiLeFichierADisparu(t *testing.T) {
+	store, racine := storeDeTest(t)
 
 	if _, ok := store.Questions("go", "facile"); !ok {
 		t.Fatal("premier accès échoué")

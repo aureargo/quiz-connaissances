@@ -6,6 +6,7 @@ package main
 import (
 	"flag" // lecture des options de ligne de commande (-data, -addr)
 	"log"
+	"net" // net.Listen : réservation du port ; SplitHostPort : découpage de -addr
 	"net/http"
 	"os" // os.Getenv : lecture des variables d'environnement
 
@@ -56,13 +57,39 @@ func main() {
 	// 2) Construire le serveur et son routeur.
 	serveur := api.NewServer(store)
 
-	// 3) Démarrer le serveur HTTP. ListenAndServe est BLOQUANT : il tourne
-	//    tant que le serveur fonctionne. S'il renvoie une erreur, c'est qu'il
-	//    s'est arrêté anormalement.
-	log.Printf("🚀 serveur démarré sur http://localhost%s", *adresse)
-	if err := http.ListenAndServe(*adresse, serveur.Routes()); err != nil {
+	// 3) Réserver le port. On le fait AVANT d'annoncer quoi que ce soit : avec
+	//    un simple ListenAndServe, on affichait « serveur démarré » puis, juste
+	//    après, l'erreur « port déjà utilisé ». net.Listen échoue tout de suite
+	//    si le port est pris, et l'annonce n'est faite qu'une fois le port à nous.
+	ecouteur, err := net.Listen("tcp", *adresse)
+	if err != nil {
+		log.Fatalf("impossible d'écouter sur %q : %v\n"+
+			"→ un autre serveur (une instance précédente ?) utilise peut-être déjà ce port",
+			*adresse, err)
+	}
+	log.Printf("🚀 serveur démarré sur %s", urlAffichee(*adresse))
+
+	// 4) Servir les requêtes. http.Serve est BLOQUANT : il tourne tant que le
+	//    serveur fonctionne. S'il renvoie une erreur, c'est qu'il s'est arrêté
+	//    anormalement.
+	if err := http.Serve(ecouteur, serveur.Routes()); err != nil {
 		log.Fatalf("erreur du serveur : %v", err)
 	}
+}
+
+// urlAffichee transforme l'adresse d'écoute en URL cliquable pour le journal.
+// ":8080" (toutes les interfaces) devient http://localhost:8080, tandis qu'une
+// adresse avec hôte, comme "127.0.0.1:9000", est reprise telle quelle. Avant,
+// on collait l'adresse derrière "localhost", d'où un "http://localhost127.0.0.1:9000".
+func urlAffichee(adresse string) string {
+	hote, port, err := net.SplitHostPort(adresse)
+	if err != nil {
+		return adresse // forme inattendue : on l'affiche sans l'interpréter
+	}
+	if hote == "" || hote == "0.0.0.0" || hote == "::" {
+		hote = "localhost"
+	}
+	return "http://" + net.JoinHostPort(hote, port)
 }
 
 // valeurEnv renvoie la variable d'environnement `cle` si elle est définie et
