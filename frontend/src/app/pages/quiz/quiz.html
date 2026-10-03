@@ -55,11 +55,13 @@
     }
 
     <!-- Cas 2 : une question est en cours.
-         On l'enveloppe dans un @for d'UN seul élément, "tracké" par l'id de la
-         question. Ainsi, quand la question change, Angular recrée le bloc DOM
-         et l'animation d'entrée se rejoue à chaque fois. -->
+         On l'enveloppe dans un @for d'UN seul élément, "tracké" par son numéro
+         d'AFFICHAGE. Ainsi, à chaque nouvelle présentation, Angular recrée le
+         bloc DOM et l'animation d'entrée se rejoue. Pas l'id de la question :
+         la dernière question ratée revient aussitôt avec le MÊME id, et ses
+         choix re-mélangés changeaient alors de place sans aucune animation. -->
     @else {
-      @for (q of [m.questionCourante()]; track q?.question?.id ?? 'aucune') {
+      @for (q of [m.questionCourante()]; track q?.affichage ?? 'aucune') {
         @if (q) {
           <article class="question">
             <p class="question__enonce">{{ q.question.enonce }}</p>

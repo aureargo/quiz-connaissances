@@ -21,11 +21,15 @@ export interface QuestionPreparee {
   question: Question;        // la question d'origine (pour l'énoncé, l'explication...)
   choixMelanges: string[];   // les 4 choix dans un ordre aléatoire
   indexBonneReponse: number; // index de la bonne réponse DANS choixMelanges
+  affichage: number;         // n° d'affichage, nouveau à CHAQUE présentation (même si la question revient)
 }
 
 export class MoteurQuiz {
   // Les questions de départ, conservées pour pouvoir "recommencer".
   private readonly questionsOriginales: Question[];
+
+  // Compteur d'affichages : chaque question préparée reçoit un numéro neuf.
+  private nbAffichages = 0;
 
   // --- État réactif (signals) ---
 
@@ -160,6 +164,11 @@ export class MoteurQuiz {
     const choixMelanges = indexMelanges.map((i) => question.choix[i]);
     const indexBonneReponse = indexMelanges.indexOf(question.bonneReponse);
 
-    this.questionCourante.set({ question, choixMelanges, indexBonneReponse });
+    this.questionCourante.set({
+      question,
+      choixMelanges,
+      indexBonneReponse,
+      affichage: ++this.nbAffichages
+    });
   }
 }

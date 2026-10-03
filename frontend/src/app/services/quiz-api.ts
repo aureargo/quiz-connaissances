@@ -41,14 +41,18 @@ export class QuizApi {
   // Appelé par la sous-page de sélection du niveau : on ne charge les niveaux
   // que du thème réellement consulté, pas de tous les thèmes d'un coup.
   getTheme(themeId: string): Observable<Theme> {
-    return this.http.get<Theme>(`${this.baseUrl}/themes/${themeId}`);
+    return this.http.get<Theme>(`${this.baseUrl}/themes/${encodeURIComponent(themeId)}`);
   }
 
   // Récupère les questions d'un thème POUR UN NIVEAU donné
   // (ex : themeId="animes", niveau="expert").
+  //
+  // encodeURIComponent : les noms de niveaux sont LIBRES (ce sont des noms de
+  // fichiers). Un « # », un « ? » ou un « % » glissé tel quel dans l'URL en
+  // changerait le sens ; encodé, il arrive intact au serveur Go.
   getQuestions(themeId: string, niveau: string): Observable<Question[]> {
     return this.http.get<Question[]>(
-      `${this.baseUrl}/themes/${themeId}/questions/${niveau}`
+      `${this.baseUrl}/themes/${encodeURIComponent(themeId)}/questions/${encodeURIComponent(niveau)}`
     );
   }
 }

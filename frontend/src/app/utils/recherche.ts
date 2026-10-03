@@ -18,7 +18,7 @@ import { Theme } from '../models/quiz.models';
 export function normaliser(texte: string): string {
   return texte
     .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
+    .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
     .trim();
 }

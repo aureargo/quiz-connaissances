@@ -77,6 +77,12 @@ export class Quiz implements OnInit {
    */
   @HostListener('document:keydown', ['$event'])
   gererClavier(evenement: KeyboardEvent): void {
+    // Une combinaison (Ctrl+C pour copier l'énoncé, Ctrl+D pour un favori…)
+    // n'est pas une réponse : sans ce garde-fou, Ctrl+C répondait « C ».
+    if (evenement.ctrlKey || evenement.metaKey || evenement.altKey) {
+      return;
+    }
+
     const m = this.moteur();
     if (!m || m.termine()) {
       return;
@@ -98,6 +104,14 @@ export class Quiz implements OnInit {
         evenement.preventDefault();
       }
     } else if (evenement.key === 'Enter' || evenement.key === ' ') {
+      // Focus sur un lien ou un bouton actif (ex : « ← » atteint avec Tab) : on
+      // laisse le navigateur l'activer normalement au lieu de détourner la
+      // touche. Un bouton de choix DÉSACTIVÉ (celui qu'on vient de cliquer peut
+      // garder le focus) ne compte pas : Entrée doit alors bien passer à la suite.
+      const cible = evenement.target;
+      if (cible instanceof HTMLAnchorElement || (cible instanceof HTMLButtonElement && !cible.disabled)) {
+        return;
+      }
       m.questionSuivante();
       evenement.preventDefault();
     }

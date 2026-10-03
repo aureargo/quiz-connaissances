@@ -83,6 +83,20 @@ describe('MoteurQuiz', () => {
     expect(m.questionCourante()!.question.id).toBe(seule);
   });
 
+  it('donne un nouveau numéro d\'affichage même quand la même question revient', () => {
+    // Le template "tracke" la question par ce numéro : s'il ne changeait pas,
+    // la question revue ne serait pas ré-affichée (ni animation, ni remise à zéro).
+    const m = new MoteurQuiz([questionsFactices()[0]]); // une seule question
+    const avant = m.questionCourante()!;
+
+    m.repondre((avant.indexBonneReponse + 1) % 4);
+    m.questionSuivante();
+
+    const apres = m.questionCourante()!;
+    expect(apres.question.id).toBe(avant.question.id);
+    expect(apres.affichage).not.toBe(avant.affichage);
+  });
+
   it('ignore les clics multiples sur une même question', () => {
     const m = new MoteurQuiz(questionsFactices());
     const q = m.questionCourante()!;
