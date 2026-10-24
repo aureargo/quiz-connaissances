@@ -1,0 +1,72 @@
+[
+  {
+    "id": "clean-code-f1",
+    "enonce": "Que désigne l'expression « clean code », popularisée par Robert C. Martin ?",
+    "choix": ["un code lisible et facile à faire évoluer", "un code compilé sans aucun avertissement", "un code débarrassé de tous ses commentaires", "un code optimisé pour s'exécuter vite"],
+    "bonneReponse": 0,
+    "explication": "Dans son livre « Clean Code » (2008), Robert C. Martin (« Uncle Bob ») défend l'idée qu'un code est lu bien plus souvent qu'il n'est écrit. Un code propre se comprend vite, exprime clairement son intention et se modifie sans crainte. Les performances ou l'absence d'avertissements comptent, mais ne suffisent pas à le rendre « propre »."
+  },
+  {
+    "id": "clean-code-f2",
+    "enonce": "Qu'est-ce que le « refactoring » ?",
+    "choix": ["ajouter de nouvelles fonctionnalités à un programme", "réécrire entièrement une application depuis zéro", "améliorer la structure du code sans changer son comportement", "corriger les bugs signalés par les utilisateurs"],
+    "bonneReponse": 2,
+    "explication": "Martin Fowler, dans « Refactoring » (1999), le définit comme une suite de petites transformations qui améliorent la conception du code tout en préservant son comportement observable. On ne mélange pas refactoring et ajout de fonctionnalité : Kent Beck parle de « deux casquettes » que l'on porte l'une après l'autre."
+  },
+  {
+    "id": "clean-code-f3",
+    "enonce": "Quel nom de variable est le plus explicite pour stocker un nombre de jours ?",
+    "choix": ["nombreTemporaire", "donneesDuJour", "valeurCalculee", "joursDepuisInscription"],
+    "bonneReponse": 3,
+    "explication": "Un bon nom révèle l'intention : ce que contient la variable, et dans quelle unité. « joursDepuisInscription » se passe de commentaire, alors que « valeurCalculee » ou « donneesDuJour » obligent à relire le code pour comprendre. Robert C. Martin résume : si un nom a besoin d'un commentaire, c'est qu'il ne révèle pas son intention."
+  },
+  {
+    "id": "clean-code-f4",
+    "enonce": "Que désigne un « code smell » (odeur de code) ?",
+    "choix": ["une erreur de syntaxe qui empêche la compilation", "un symptôme visible d'un problème de conception", "une faille de sécurité détectée par un scanner", "un fichier source qui n'est plus utilisé nulle part"],
+    "bonneReponse": 1,
+    "explication": "Le terme a été proposé par Kent Beck et popularisé par le livre « Refactoring » de Martin Fowler. Une odeur n'est pas un bug : le code fonctionne, mais quelque chose « sent mauvais » (méthode trop longue, duplication, classe énorme…) et signale qu'un refactoring serait sans doute utile."
+  },
+  {
+    "id": "clean-code-f5",
+    "enonce": "Que recommande le principe « KISS » ?",
+    "choix": ["commenter chaque ligne du code source", "écrire les tests avant le code", "réutiliser au maximum les bibliothèques", "garder la solution aussi simple que possible"],
+    "bonneReponse": 3,
+    "explication": "KISS signifie « Keep It Simple, Stupid ». La formule est attribuée à l'ingénieur Kelly Johnson (Lockheed) dans les années 1960 : un système simple est plus facile à comprendre, à réparer et à faire évoluer. En programmation, elle invite à se méfier des solutions astucieuses mais obscures."
+  },
+  {
+    "id": "clean-code-f6",
+    "enonce": "Que recommande le principe « YAGNI » ?",
+    "choix": ["ne pas coder une fonctionnalité avant d'en avoir besoin", "optimiser le code dès sa toute première version", "documenter toutes les fonctions publiques du projet", "généraliser chaque fonction pour pouvoir la réutiliser"],
+    "bonneReponse": 0,
+    "explication": "YAGNI (« You Aren't Gonna Need It », tu n'en auras pas besoin) vient de l'Extreme Programming. Coder « au cas où » coûte du temps, ajoute de la complexité à maintenir, et le besoin imaginé ne se présente souvent jamais, ou sous une autre forme. On construit ce qui est demandé aujourd'hui."
+  },
+  {
+    "id": "clean-code-f7",
+    "enonce": "Qu'appelle-t-on un « nombre magique » dans du code ?",
+    "choix": ["un nombre généré au hasard à l'exécution", "une constante mathématique comme pi", "une valeur littérale sans nom ni explication", "un identifiant unique attribué à un objet"],
+    "bonneReponse": 2,
+    "explication": "Dans `if (age >= 18)` ou `prix * 1.2`, le lecteur doit deviner ce que représentent 18 ou 1.2. On les remplace par des constantes nommées (`AGE_MAJORITE`, `TAUX_TVA`) : le code devient lisible et la valeur n'est modifiée qu'à un seul endroit. (Le terme désigne aussi, ailleurs, la signature en tête d'un fichier.)"
+  },
+  {
+    "id": "clean-code-f8",
+    "enonce": "Que faire d'un bloc de code mis en commentaire et qui ne sert plus ?",
+    "choix": ["le garder au cas où il resservirait un jour", "le supprimer : l'historique git le conserve", "le déplacer en fin de fichier pour l'archiver", "le décommenter pour vérifier qu'il compile"],
+    "bonneReponse": 1,
+    "explication": "Le code commenté encombre la lecture et vieillit mal : personne n'ose le supprimer, car personne ne sait plus pourquoi il est là. Le gestionnaire de versions garde déjà toutes les anciennes versions du fichier : on peut le retrouver à tout moment avec git."
+  },
+  {
+    "id": "clean-code-f9",
+    "enonce": "Selon « Clean Code », combien de choses une fonction devrait-elle faire ?",
+    "choix": ["une seule, et la faire bien", "trois au plus, pour rester lisible", "autant qu'il faut pour éviter les appels", "une par paramètre qu'elle reçoit"],
+    "bonneReponse": 0,
+    "explication": "Robert C. Martin insiste : une fonction doit faire une seule chose, la faire bien, et ne faire qu'elle. Un indice : si on peut en extraire une autre fonction au nom pertinent, c'est qu'elle en faisait plusieurs. Des fonctions courtes et bien nommées se lisent comme un texte."
+  },
+  {
+    "id": "clean-code-f10",
+    "enonce": "Que propose la « règle du boy-scout » appliquée au code ?",
+    "choix": ["ne jamais toucher au code écrit par un collègue", "relire son code à voix haute avant de commiter", "laisser le code plus propre qu'on ne l'a trouvé", "toujours travailler en binôme sur le code critique"],
+    "bonneReponse": 2,
+    "explication": "Reprise par Robert C. Martin de la devise scoute « laissez le camp plus propre que vous ne l'avez trouvé ». À chaque passage dans un fichier, on améliore un petit détail : renommer une variable, découper une fonction. Ces petits gestes réguliers empêchent le code de se dégrader avec le temps."
+  }
+]

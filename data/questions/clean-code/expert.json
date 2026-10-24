@@ -1,0 +1,72 @@
+[
+  {
+    "id": "clean-code-e1",
+    "enonce": "Que désigne le code smell « Primitive Obsession » ?",
+    "choix": ["convertir les objets en chaînes pour les stocker", "éviter toute allocation d'objet par souci de vitesse", "représenter des notions métier par des types de base", "réécrire en assembleur les fonctions les plus critiques"],
+    "bonneReponse": 2,
+    "explication": "Un e-mail stocké dans une simple `string`, un montant dans un `float`, un code postal dans un `int` : rien n'empêche de les mélanger ou de leur donner une valeur absurde. On les remplace par de petits objets valeur (`Email`, `Montant`) qui portent leur validation et leur comportement."
+  },
+  {
+    "id": "clean-code-e2",
+    "enonce": "Quel smell désigne des données qui voyagent toujours ensemble, comme rue, ville et code postal passés séparément ?",
+    "choix": ["Data Clumps", "Feature Envy", "Lazy Class", "Middle Man"],
+    "bonneReponse": 0,
+    "explication": "« Data Clumps » (amas de données) : les mêmes groupes de variables réapparaissent ensemble dans les signatures et les champs. Test de Fowler : si on en retire une, les autres ont-elles encore un sens ? Sinon, on les regroupe dans un objet (Extract Class, Introduce Parameter Object)."
+  },
+  {
+    "id": "clean-code-e3",
+    "enonce": "Que préconise le principe « Tell, Don't Ask » ?",
+    "choix": ["transmettre des ordres par messages plutôt que par appels", "préférer les exceptions aux codes de retour d'erreur", "documenter les intentions au lieu de poser des questions", "demander à un objet d'agir plutôt que lire son état"],
+    "bonneReponse": 3,
+    "explication": "Popularisé par Andy Hunt et Dave Thomas : plutôt que lire l'état d'un objet pour décider à sa place (`if compte.solde >= montant { compte.solde -= montant }`), on lui dit quoi faire (`compte.debiter(montant)`). La logique reste au plus près des données qu'elle manipule, ce qui renforce l'encapsulation."
+  },
+  {
+    "id": "clean-code-e4",
+    "enonce": "Que désigne le smell « Refused Bequest » (legs refusé) ?",
+    "choix": ["une classe parente qui ignore les surcharges des enfants", "une sous-classe qui n'utilise pas ce dont elle hérite", "une méthode qui rejette certains arguments en silence", "une dépendance impossible à mettre à jour sans casse"],
+    "bonneReponse": 1,
+    "explication": "La sous-classe hérite de méthodes ou de données qu'elle n'utilise pas, voire qu'elle neutralise en levant une exception. C'est souvent le signe d'un héritage mal choisi, qui viole le principe de Liskov. Remède classique : remplacer l'héritage par une délégation (composition)."
+  },
+  {
+    "id": "clean-code-e5",
+    "enonce": "Qu'est-ce qu'un « test de caractérisation », selon Michael Feathers ?",
+    "choix": ["un test qui fige le comportement actuel avant de modifier", "un test qui mesure les performances sous forte charge", "un test qui confronte le code à sa spécification écrite", "un test qui génère automatiquement des entrées au hasard"],
+    "bonneReponse": 0,
+    "explication": "Décrit dans « Working Effectively with Legacy Code » (2004) : face à du code sans tests ni documentation, on écrit des tests qui enregistrent ce que le code fait réellement, même si c'est surprenant. Ils servent de filet de sécurité pour refactorer sans changer le comportement par mégarde."
+  },
+  {
+    "id": "clean-code-e6",
+    "enonce": "Que mesure la « complexité cyclomatique » d'une fonction ?",
+    "choix": ["le nombre d'appels récursifs imbriqués", "le nombre de classes qui en dépendent", "le nombre de chemins indépendants dans son code", "son temps d'exécution dans le pire des cas"],
+    "bonneReponse": 2,
+    "explication": "Définie par Thomas McCabe en 1976, elle vaut en pratique le nombre de points de décision (`if`, boucles, `case`, `&&`…) plus un. Elle donne le nombre minimal de tests pour couvrir chaque chemin. McCabe suggérait de rester sous 10 ; au-delà, la fonction mérite d'être découpée."
+  },
+  {
+    "id": "clean-code-e7",
+    "enonce": "Quel refactoring remplace un `switch` sur le type d'un objet par des méthodes redéfinies dans des sous-classes ?",
+    "choix": ["Decompose Conditional", "Consolidate Conditional Expression", "Replace Nested Conditional with Guard Clauses", "Replace Conditional with Polymorphism"],
+    "bonneReponse": 3,
+    "explication": "« Replace Conditional with Polymorphism » : chaque branche du `switch` devient la méthode d'une sous-classe, et l'appel choisit le bon comportement tout seul. C'est l'application directe du principe ouvert/fermé. Les trois autres existent aussi chez Fowler, mais simplifient une condition sans l'éliminer."
+  },
+  {
+    "id": "clean-code-e8",
+    "enonce": "Que prône le principe CQS (Command-Query Separation) de Bertrand Meyer ?",
+    "choix": ["séparer lectures et écritures dans deux bases distinctes", "une méthode modifie l'état ou renvoie une valeur, pas les deux", "faire passer chaque commande par une file d'attente", "isoler chaque requête SQL dans sa propre classe dédiée"],
+    "bonneReponse": 1,
+    "explication": "Une « commande » change l'état sans rien renvoyer, une « requête » renvoie une valeur sans effet de bord : poser une question ne doit pas changer la réponse. Le motif d'architecture CQRS (Greg Young) étend l'idée à des modèles séparés pour la lecture et l'écriture. Exception célèbre : `pile.pop()`."
+  },
+  {
+    "id": "clean-code-e9",
+    "enonce": "Que recommande la « règle de trois » en refactoring ?",
+    "choix": ["limiter chaque fonction à trois paramètres au plus", "ne pas imbriquer plus de trois niveaux de conditions", "faire relire chaque modification par trois personnes", "attendre la troisième duplication avant d'abstraire"],
+    "bonneReponse": 3,
+    "explication": "Attribuée à Don Roberts et citée par Fowler (« three strikes and you refactor ») : la première fois, on écrit ; la deuxième, on duplique en grimaçant ; la troisième, on factorise. Deux occurrences suffisent rarement à deviner la bonne abstraction, et une abstraction prématurée coûte plus cher qu'une duplication."
+  },
+  {
+    "id": "clean-code-e10",
+    "enonce": "Que préconise la « loi de Déméter » (principe de connaissance minimale) ?",
+    "choix": ["n'appeler aucune fonction plus de trois fois par module", "passer les objets par copie plutôt que par référence", "n'appeler que des méthodes de ses voisins immédiats", "n'utiliser l'héritage que sur un niveau de profondeur"],
+    "bonneReponse": 2,
+    "explication": "Formulée en 1987 à la Northeastern University (projet Demeter) : une méthode ne parle qu'à son objet, ses paramètres, les objets qu'elle crée et ses champs, pas aux « amis de ses amis ». Une chaîne comme `commande.getClient().getAdresse().getVille()` (un « train wreck ») couple le code à toute la structure traversée."
+  }
+]

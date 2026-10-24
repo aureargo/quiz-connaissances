@@ -147,6 +147,13 @@
     "description": "Structurer une application : motifs, couches, microservices et grands principes."
   },
   {
+    "id": "clean-code",
+    "nom": "Clean code & refactoring",
+    "emoji": "🧹",
+    "categorie": "Programmation",
+    "description": "Écrire du code lisible : nommage, code smells, principes SOLID et refactorings classiques."
+  },
+  {
     "id": "algorithmes",
     "nom": "Algorithmes & structures de données",
     "emoji": "🧮",

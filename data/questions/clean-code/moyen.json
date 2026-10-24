@@ -1,0 +1,72 @@
+[
+  {
+    "id": "clean-code-m1",
+    "enonce": "Quel code smell désigne une méthode qui utilise davantage les données d'une autre classe que celles de la sienne ?",
+    "choix": ["Shotgun Surgery", "Feature Envy", "Data Clumps", "Refused Bequest"],
+    "bonneReponse": 1,
+    "explication": "« Feature Envy » (l'envie de fonctionnalité) : la méthode semble « jalouse » d'une autre classe, dont elle lit sans cesse les champs. Le remède habituel est de la déplacer (Move Method) dans la classe dont elle utilise les données, là où elle a naturellement sa place."
+  },
+  {
+    "id": "clean-code-m2",
+    "enonce": "Qu'est-ce qu'un « God Object » (objet dieu) ?",
+    "choix": ["une classe qui concentre beaucoup trop de responsabilités", "une classe dont toutes les autres héritent directement", "un singleton accessible depuis tout le programme", "une classe abstraite sans aucune implémentation"],
+    "bonneReponse": 0,
+    "explication": "C'est l'anti-pattern de la classe qui « sait tout et fait tout » : des milliers de lignes, des dizaines de champs, et des dépendances vers tout le reste du code. Fowler parle de « Large Class ». On la découpe progressivement (Extract Class) en classes ayant chacune une responsabilité claire."
+  },
+  {
+    "id": "clean-code-m3",
+    "enonce": "Que dit le principe ouvert/fermé, le « O » de SOLID ?",
+    "choix": ["une classe expose ses champs en lecture, pas en écriture", "un module est ouvert aux tests mais fermé aux dépendances", "une interface reste ouverte tant qu'elle n'est pas publiée", "un module est ouvert à l'extension, fermé à la modification"],
+    "bonneReponse": 3,
+    "explication": "Formulé par Bertrand Meyer en 1988 : on doit pouvoir ajouter un comportement sans retoucher le code existant et déjà testé. Typiquement, au lieu d'allonger un `switch` à chaque nouveau cas, on ajoute une nouvelle classe qui implémente une interface commune (polymorphisme)."
+  },
+  {
+    "id": "clean-code-m4",
+    "enonce": "Que dit le principe de substitution de Liskov, le « L » de SOLID ?",
+    "choix": ["une classe fille doit redéfinir toutes les méthodes du parent", "une classe ne doit jamais hériter de plus d'un seul parent", "un sous-type doit pouvoir remplacer son parent sans rien casser", "un type parent doit connaître toutes ses classes dérivées"],
+    "bonneReponse": 2,
+    "explication": "Énoncé par Barbara Liskov en 1987 : partout où le code attend un type parent, une instance d'un sous-type doit fonctionner correctement. L'exemple classique : un `Carre` qui hérite de `Rectangle` casse le code qui modifie la largeur sans s'attendre à voir la hauteur changer aussi."
+  },
+  {
+    "id": "clean-code-m5",
+    "enonce": "Que recommande le principe de ségrégation des interfaces, le « I » de SOLID ?",
+    "choix": ["regrouper toutes les opérations dans une interface unique", "préférer plusieurs petites interfaces à une grosse interface", "séparer chaque interface dans un module compilé à part", "ne jamais exposer d'interface hors de son propre package"],
+    "bonneReponse": 1,
+    "explication": "Un client ne devrait pas dépendre de méthodes qu'il n'utilise pas. Une interface « fourre-tout » oblige ses implémenteurs à coder des méthodes vides et couple inutilement les clients. Go l'illustre bien : `io.Reader` et `io.Writer` n'ont qu'une méthode chacune, et on les combine au besoin."
+  },
+  {
+    "id": "clean-code-m6",
+    "enonce": "Que dit le principe d'inversion des dépendances, le « D » de SOLID ?",
+    "choix": ["le haut niveau doit dépendre d'abstractions, pas de détails", "le bas niveau doit appeler directement le haut niveau", "les dépendances doivent être déclarées dans l'ordre inverse", "chaque classe doit instancier elle-même ses dépendances"],
+    "bonneReponse": 0,
+    "explication": "La logique métier ne doit pas dépendre directement d'une base de données ou d'un client HTTP précis, mais d'une interface ; les détails techniques implémentent cette interface. L'injection de dépendances est une technique courante pour l'appliquer, mais ce n'est pas le principe lui-même."
+  },
+  {
+    "id": "clean-code-m7",
+    "enonce": "Quel refactoring consiste à transformer un fragment de code en une fonction nommée ?",
+    "choix": ["Inline Method", "Pull Up Method", "Extract Method", "Rename Method"],
+    "bonneReponse": 2,
+    "explication": "« Extract Method » (rebaptisé « Extract Function » dans la 2e édition de « Refactoring », en 2018) est sans doute le refactoring le plus utilisé : le nom de la nouvelle fonction documente l'intention du fragment. « Inline Method » fait exactement l'inverse, quand une fonction n'apporte rien de plus que son corps."
+  },
+  {
+    "id": "clean-code-m8",
+    "enonce": "Que désigne le code smell « Shotgun Surgery » (chirurgie au fusil de chasse) ?",
+    "choix": ["une classe modifiée pour des raisons très différentes", "une correction appliquée en urgence en production", "un test qui échoue au hasard d'une exécution à l'autre", "un changement qui oblige à modifier de nombreuses classes"],
+    "bonneReponse": 3,
+    "explication": "Une seule évolution fonctionnelle oblige à faire de petites retouches dispersées dans tout le code : on risque d'en oublier une. Son symétrique est « Divergent Change » : une même classe qu'on modifie pour des raisons sans rapport entre elles. Dans les deux cas, les responsabilités sont mal réparties."
+  },
+  {
+    "id": "clean-code-m9",
+    "enonce": "Quel est le prérequis le plus important avant de refactorer un morceau de code ?",
+    "choix": ["obtenir la validation du chef de projet", "disposer de tests qui vérifient son comportement", "geler toutes les autres branches du dépôt", "mesurer ses performances avec un profileur"],
+    "bonneReponse": 1,
+    "explication": "Refactorer, c'est changer la structure sans changer le comportement : seuls des tests automatisés permettent de le vérifier à chaque petite étape. Sans eux, on modifie à l'aveugle. Michael Feathers va jusqu'à définir le « code legacy » comme du code sans tests."
+  },
+  {
+    "id": "clean-code-m10",
+    "enonce": "Pourquoi « Clean Code » déconseille-t-il de passer un booléen en argument d'une fonction ?",
+    "choix": ["il signale que la fonction fait deux choses", "il occupe plus de mémoire qu'un entier", "il empêche le compilateur d'optimiser l'appel", "il ne peut pas avoir de valeur par défaut"],
+    "bonneReponse": 0,
+    "explication": "Un « flag argument » proclame que la fonction fait une chose si c'est vrai, une autre si c'est faux. À l'appel, `afficher(true)` est de plus illisible : vrai quoi ? Mieux vaut deux fonctions au nom explicite, comme `afficherResume()` et `afficherDetail()`."
+  }
+]
