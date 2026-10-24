@@ -219,12 +219,12 @@ cd frontend && npm test -- --watch=false  # lancer les tests unitaires une fois
 > longueur et un niveau de détail comparables — voir le template pour les détails
 > et contre-exemples.
 
-## 🗂️ Thèmes actuels (81)
+## 🗂️ Thèmes actuels (82)
 
 État du **contenu** actuel (ce ne sont pas des contraintes du code, cf.
 `QUESTIONNAIRE_TEMPLATE.md`) : chaque thème a aujourd'hui trois fichiers
 (`facile.json`, `moyen.json`, `expert.json`) de 10 questions, soit 30 par thème
-(plus le niveau synthétique **`tous`** = 30). Total : **2430 questions**.
+(plus le niveau synthétique **`tous`** = 30). Total : **2460 questions**.
 
 - **Programmation** : Go, Python, JavaScript, TypeScript, Node.js, Angular, React, Vue.js, Java, Kotlin, C#, C, C++, Rust, PHP, Ruby, Git, Lignes de commande Linux, HTML, CSS, Architecture logicielle, Clean code & refactoring, Algorithmes & structures de données
 - **DevOps & Conteneurs** : Docker, Kubernetes
@@ -240,7 +240,7 @@ cd frontend && npm test -- --watch=false  # lancer les tests unitaires une fois
 - **Culture générale** : Pays, Géographie, Villes de France, Mythologie
 - **Cinéma** : Films des années 1980, 1990, 2000, 2010
 - **Littérature** : Science-fiction (littérature), Littérature d'aventure
-- **Histoire** : Histoire de France, Antiquité
+- **Histoire** : Histoire de France, Préhistoire, Antiquité
 - **Sciences** : Mathématiques, Chimie, Biologie, Physique, Astronomie, Géologie, Écologie & climat, Biais cognitifs
 - **Économie & Finance** : Finance
 - **Automobile** : Automobile

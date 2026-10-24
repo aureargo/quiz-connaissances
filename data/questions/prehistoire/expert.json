@@ -1,0 +1,72 @@
+[
+  {
+    "id": "prehistoire-e1",
+    "enonce": "Dans quel pays a été découvert Toumaï, l'un des plus anciens hominines connus (environ 7 millions d'années) ?",
+    "choix": ["Kenya", "Éthiopie", "Afrique du Sud", "Tchad"],
+    "bonneReponse": 3,
+    "explication": "Toumaï (Sahelanthropus tchadensis) a été mis au jour en 2001 dans le désert du Djourab par l'équipe de Michel Brunet. Sa découverte loin de la vallée du Rift a remis en cause l'idée d'un berceau humain limité à l'Afrique de l'Est."
+  },
+  {
+    "id": "prehistoire-e2",
+    "enonce": "Laquelle de ces cultures du Paléolithique supérieur européen est la plus récente ?",
+    "choix": ["Le Magdalénien", "L'Aurignacien", "Le Gravettien", "Le Solutréen"],
+    "bonneReponse": 0,
+    "explication": "L'ordre est Aurignacien, Gravettien, Solutréen puis Magdalénien (environ 19 000 à 14 000 ans). Le Magdalénien, nommé d'après l'abri de la Madeleine (Dordogne), est réputé pour son art mobilier et ses harpons en bois de renne."
+  },
+  {
+    "id": "prehistoire-e3",
+    "enonce": "Quel site de Turquie, aux piliers sculptés vieux d'environ 11 500 ans, a été bâti par des chasseurs-cueilleurs ?",
+    "choix": ["Çatal Höyük", "Göbekli Tepe", "Jéricho", "Troie"],
+    "bonneReponse": 1,
+    "explication": "Göbekli Tepe, avec ses enclos de piliers en T ornés d'animaux, a été érigé avant la généralisation de l'agriculture. Il suggère que de grands rassemblements rituels ont pu précéder, voire stimuler, la sédentarisation."
+  },
+  {
+    "id": "prehistoire-e4",
+    "enonce": "Quelle espèce humaine a été identifiée en 2010 principalement grâce à l'ADN d'une phalange trouvée en Sibérie ?",
+    "choix": ["L'Homme de Florès", "Homo naledi", "Les Dénisoviens", "Homo antecessor"],
+    "bonneReponse": 2,
+    "explication": "Les Dénisoviens, du nom de la grotte de Denisova dans l'Altaï, ont d'abord été décrits par leur génome plutôt que par leur squelette. Ils ont transmis une partie de leur ADN aux populations d'Océanie et d'Asie, dont un gène d'adaptation à l'altitude chez les Tibétains."
+  },
+  {
+    "id": "prehistoire-e5",
+    "enonce": "Dans quel pays a été découverte la Vénus de Willendorf, statuette gravettienne ?",
+    "choix": ["France", "Allemagne", "République tchèque", "Autriche"],
+    "bonneReponse": 3,
+    "explication": "Cette statuette en calcaire d'environ 11 cm, vieille d'environ 29 500 ans, a été trouvée en 1908 près de Willendorf, en Basse-Autriche. Ses formes exagérées en font l'archétype des « Vénus paléolithiques »."
+  },
+  {
+    "id": "prehistoire-e6",
+    "enonce": "Jusqu'à quel âge environ la datation au carbone 14 reste-t-elle utilisable ?",
+    "choix": ["5 000 ans", "50 000 ans", "500 000 ans", "5 millions d'années"],
+    "bonneReponse": 1,
+    "explication": "Le carbone 14 a une demi-vie d'environ 5 730 ans : au-delà de 50 000 ans, il en reste trop peu pour être mesuré. Pour les périodes plus anciennes, on utilise d'autres méthodes comme le potassium-argon ou la thermoluminescence."
+  },
+  {
+    "id": "prehistoire-e7",
+    "enonce": "Quelle grotte ornée, près de Marseille, n'est accessible que par un tunnel aujourd'hui immergé ?",
+    "choix": ["Cosquer", "Niaux", "Pech Merle", "Font-de-Gaume"],
+    "bonneReponse": 0,
+    "explication": "Son entrée s'ouvre à 37 m sous la mer, dans les calanques : le plongeur Henri Cosquer l'a découverte en 1985. La montée des eaux depuis la dernière glaciation a noyé une grande partie des peintures, dont des pingouins et des phoques."
+  },
+  {
+    "id": "prehistoire-e8",
+    "enonce": "Quelle période, entre le Paléolithique et le Néolithique, est marquée par l'usage des microlithes ?",
+    "choix": ["Le Chalcolithique", "L'Acheuléen", "Le Mésolithique", "L'âge du bronze"],
+    "bonneReponse": 2,
+    "explication": "Le Mésolithique (environ 10 000 à 6 000 av. J.-C. en Europe) voit les derniers chasseurs-cueilleurs s'adapter au climat plus doux. Les microlithes, minuscules éclats de silex, étaient emmanchés pour former des flèches ou des harpons."
+  },
+  {
+    "id": "prehistoire-e9",
+    "enonce": "Sur quel phénomène astronomique l'axe principal de Stonehenge est-il aligné ?",
+    "choix": ["Les équinoxes", "Les solstices", "Les éclipses", "Le lever de Vénus"],
+    "bonneReponse": 1,
+    "explication": "L'axe du monument pointe vers le lever du soleil au solstice d'été et son coucher au solstice d'hiver. Érigé en plusieurs phases entre 3000 et 1500 av. J.-C., il utilise des pierres bleues venues du pays de Galles, à plus de 200 km."
+  },
+  {
+    "id": "prehistoire-e10",
+    "enonce": "Dans quelle région du monde apparaît le plus ancien foyer d'agriculture connu, vers 9500 av. J.-C. ?",
+    "choix": ["La vallée du Nil", "La Chine du Nord", "La Mésoamérique", "Le Croissant fertile"],
+    "bonneReponse": 3,
+    "explication": "Le Croissant fertile, du Levant à la Mésopotamie, voit domestiquer blé, orge, lentilles, chèvres et moutons. D'autres foyers indépendants suivront : Chine (riz, millet), Mésoamérique (maïs), Andes, Nouvelle-Guinée."
+  }
+]

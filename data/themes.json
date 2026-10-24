@@ -448,6 +448,13 @@
     "description": "Confirmation, ancrage, effet de halo, Dunning-Kruger : les raccourcis de pensée qui nous trompent sans qu'on s'en aperçoive."
   },
   {
+    "id": "prehistoire",
+    "nom": "Préhistoire",
+    "emoji": "🗡️",
+    "categorie": "Histoire",
+    "description": "Lucy, Néandertal, Lascaux, menhirs et âges des métaux : des premiers hominines à l'invention de l'écriture."
+  },
+  {
     "id": "antiquite",
     "nom": "Antiquité",
     "emoji": "🏛️",

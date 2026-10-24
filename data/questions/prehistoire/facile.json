@@ -1,0 +1,72 @@
+[
+  {
+    "id": "prehistoire-f1",
+    "enonce": "Quel événement marque, par convention, la fin de la Préhistoire ?",
+    "choix": ["La maîtrise du feu", "L'invention de l'écriture", "L'apparition de l'agriculture", "La fonte du fer"],
+    "bonneReponse": 1,
+    "explication": "La Préhistoire s'achève avec l'apparition de l'écriture, vers 3300 av. J.-C. en Mésopotamie. La date varie donc selon les régions : certains peuples sont entrés dans l'Histoire bien plus tard."
+  },
+  {
+    "id": "prehistoire-f2",
+    "enonce": "Dans quel département français se trouve la grotte de Lascaux ?",
+    "choix": ["Ardèche", "Ariège", "Dordogne", "Lot"],
+    "bonneReponse": 2,
+    "explication": "Lascaux, découverte en 1940 par quatre adolescents à Montignac (Dordogne), est surnommée la « chapelle Sixtine de la préhistoire ». Fermée au public pour la protéger, elle est visitable via des répliques (Lascaux II et IV)."
+  },
+  {
+    "id": "prehistoire-f3",
+    "enonce": "Que signifie littéralement le mot « Paléolithique » ?",
+    "choix": ["Pierre ancienne", "Pierre nouvelle", "Pierre du milieu", "Pierre brûlée"],
+    "bonneReponse": 0,
+    "explication": "Du grec palaios (ancien) et lithos (pierre). C'est l'âge de la pierre taillée, la plus longue période de l'histoire humaine. Néolithique signifie « pierre nouvelle » et Mésolithique « pierre du milieu »."
+  },
+  {
+    "id": "prehistoire-f4",
+    "enonce": "Dans quel pays le squelette de Lucy a-t-il été découvert en 1974 ?",
+    "choix": ["Kenya", "Tanzanie", "Afrique du Sud", "Éthiopie"],
+    "bonneReponse": 3,
+    "explication": "Lucy, une Australopithecus afarensis vieille d'environ 3,2 millions d'années, a été trouvée dans la région de l'Afar, en Éthiopie. Son surnom vient de la chanson des Beatles « Lucy in the Sky with Diamonds », écoutée le soir de la découverte."
+  },
+  {
+    "id": "prehistoire-f5",
+    "enonce": "Comment appelle-t-on une grande pierre dressée verticalement dans le sol ?",
+    "choix": ["Un dolmen", "Un menhir", "Un cairn", "Un tumulus"],
+    "bonneReponse": 1,
+    "explication": "Menhir vient du breton men (pierre) et hir (longue). Le dolmen, lui, est une table de pierre (dalles posées sur des piliers) qui servait de sépulture ; le cairn et le tumulus sont des amas de pierres ou de terre."
+  },
+  {
+    "id": "prehistoire-f6",
+    "enonce": "Quelle grande transformation caractérise le Néolithique ?",
+    "choix": ["L'agriculture et l'élevage", "L'invention de l'écriture", "La maîtrise du feu", "La fonte des métaux"],
+    "bonneReponse": 0,
+    "explication": "La « révolution néolithique », née au Proche-Orient vers 9500 av. J.-C., voit les humains cultiver des plantes, domestiquer des animaux et se sédentariser dans des villages. Le feu est maîtrisé bien plus tôt, l'écriture et les métaux arrivent plus tard."
+  },
+  {
+    "id": "prehistoire-f7",
+    "enonce": "Quel grand mammifère à fourrure, cousin de l'éléphant, peuplait l'Europe glaciaire ?",
+    "choix": ["Le mégacéros", "Le smilodon", "Le mammouth", "Le tricératops"],
+    "bonneReponse": 2,
+    "explication": "Le mammouth laineux, chassé et représenté sur les parois des grottes (comme à Rouffignac), s'est éteint à la fin de la dernière glaciation. Le mégacéros était un cerf géant, le smilodon un félin à dents de sabre, et le tricératops un dinosaure."
+  },
+  {
+    "id": "prehistoire-f8",
+    "enonce": "Les humains préhistoriques ont-ils côtoyé les dinosaures ?",
+    "choix": ["Oui, en Afrique", "Oui, en Europe", "Oui, au tout début", "Non, jamais"],
+    "bonneReponse": 3,
+    "explication": "Les dinosaures non aviens ont disparu il y a environ 66 millions d'années, alors que les premiers humains (genre Homo) apparaissent il y a environ 2,8 millions d'années. Plus de 60 millions d'années les séparent : c'est un mythe tenace des dessins animés."
+  },
+  {
+    "id": "prehistoire-f9",
+    "enonce": "Quelle espèce humaine, disparue il y a environ 40 000 ans, vivait en Europe avant Homo sapiens ?",
+    "choix": ["L'Homme de Néandertal", "L'Homme de Florès", "L'Australopithèque", "Homo habilis"],
+    "bonneReponse": 0,
+    "explication": "Néandertal, nommé d'après une vallée allemande, a peuplé l'Europe et l'Asie occidentale pendant plus de 300 000 ans. Il a croisé Homo sapiens : les populations non africaines actuelles portent environ 2 % d'ADN néandertalien."
+  },
+  {
+    "id": "prehistoire-f10",
+    "enonce": "Quel site breton est célèbre pour ses milliers de menhirs alignés ?",
+    "choix": ["Brocéliande", "Concarneau", "Saint-Malo", "Carnac"],
+    "bonneReponse": 3,
+    "explication": "Les alignements de Carnac (Morbihan) comptent environ 3 000 menhirs dressés au Néolithique, entre 4500 et 3500 av. J.-C. Leur fonction exacte (religieuse, astronomique, territoriale) reste débattue."
+  }
+]

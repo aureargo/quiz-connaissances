@@ -1,0 +1,72 @@
+[
+  {
+    "id": "prehistoire-m1",
+    "enonce": "Dans quel pays ont été trouvés les plus anciens fossiles connus d'Homo sapiens (environ 300 000 ans) ?",
+    "choix": ["Éthiopie", "Maroc", "Israël", "Kenya"],
+    "bonneReponse": 1,
+    "explication": "Les fossiles du site de Jebel Irhoud, au Maroc, datés en 2017 d'environ 300 000 ans, ont vieilli notre espèce de 100 000 ans. Ils montrent qu'Homo sapiens est apparu à l'échelle de toute l'Afrique, pas seulement à l'Est."
+  },
+  {
+    "id": "prehistoire-m2",
+    "enonce": "Quelle grotte ornée d'Ardèche, découverte en 1994, abrite des peintures d'environ 36 000 ans ?",
+    "choix": ["Lascaux", "Niaux", "Chauvet", "Cosquer"],
+    "bonneReponse": 2,
+    "explication": "La grotte Chauvet-Pont d'Arc, inscrite à l'UNESCO, contient parmi les plus anciennes peintures figuratives connues : lions, rhinocéros, chevaux. Elle est deux fois plus ancienne que Lascaux (environ 17 000 ans)."
+  },
+  {
+    "id": "prehistoire-m3",
+    "enonce": "Quel outil taillé sur ses deux faces est l'emblème de la culture acheuléenne ?",
+    "choix": ["Le biface", "Le burin", "Le microlithe", "Le grattoir"],
+    "bonneReponse": 0,
+    "explication": "Le biface, en forme d'amande, apparaît en Afrique il y a environ 1,7 million d'années avec Homo erectus. L'Acheuléen tient son nom du site de Saint-Acheul, près d'Amiens."
+  },
+  {
+    "id": "prehistoire-m4",
+    "enonce": "À quelle espèce attribue-t-on généralement la première maîtrise du feu ?",
+    "choix": ["Homo sapiens", "L'Australopithèque", "Néandertal", "Homo erectus"],
+    "bonneReponse": 3,
+    "explication": "Les plus anciennes traces de feu contrôlé (vers 1 million d'années, comme à Wonderwerk en Afrique du Sud) sont associées à Homo erectus. Son usage régulier ne se généralise qu'il y a environ 400 000 ans."
+  },
+  {
+    "id": "prehistoire-m5",
+    "enonce": "Comment s'appelle la momie de 5 300 ans découverte en 1991 dans un glacier des Alpes ?",
+    "choix": ["Toumaï", "Lucy", "Cro-Magnon", "Ötzi"],
+    "bonneReponse": 3,
+    "explication": "Ötzi a été trouvé dans les Alpes de l'Ötztal, à la frontière austro-italienne. Il portait une hache en cuivre, un arc et des vêtements de peau ; une pointe de flèche dans l'épaule révèle qu'il a été tué."
+  },
+  {
+    "id": "prehistoire-m6",
+    "enonce": "À quelle espèce appartiennent les hommes de Cro-Magnon ?",
+    "choix": ["Homo sapiens", "Néandertal", "Homo erectus", "Homo habilis"],
+    "bonneReponse": 0,
+    "explication": "« Cro-Magnon » désigne les premiers Homo sapiens d'Europe, du nom d'un abri des Eyzies (Dordogne) fouillé en 1868. Ce sont eux, et non Néandertal, les auteurs des grandes grottes ornées."
+  },
+  {
+    "id": "prehistoire-m7",
+    "enonce": "Dans quel ordre se succèdent les âges des métaux ?",
+    "choix": ["Bronze, cuivre, fer", "Cuivre, bronze, fer", "Fer, bronze, cuivre", "Cuivre, fer, bronze"],
+    "bonneReponse": 1,
+    "explication": "Le cuivre est travaillé en premier (Chalcolithique), puis on l'allie à l'étain pour obtenir le bronze, plus dur. Le fer, qui exige des températures plus élevées, arrive en dernier (vers 1200 av. J.-C. au Proche-Orient)."
+  },
+  {
+    "id": "prehistoire-m8",
+    "enonce": "Le bronze est un alliage de cuivre et de quel autre métal ?",
+    "choix": ["Le zinc", "Le plomb", "L'étain", "Le fer"],
+    "bonneReponse": 2,
+    "explication": "Le bronze contient environ 90 % de cuivre et 10 % d'étain. Le cuivre allié au zinc donne le laiton. L'étain étant rare, son commerce a créé de longs réseaux d'échanges à travers l'Europe."
+  },
+  {
+    "id": "prehistoire-m9",
+    "enonce": "À quoi servaient principalement les dolmens ?",
+    "choix": ["D'habitations", "D'autels druidiques", "De tombes collectives", "De calendriers solaires"],
+    "bonneReponse": 2,
+    "explication": "Les dolmens sont des sépultures collectives du Néolithique, souvent recouvertes à l'origine d'un tertre de terre. La légende des « autels de druides » date du XVIIIe siècle : les druides sont arrivés plusieurs millénaires plus tard."
+  },
+  {
+    "id": "prehistoire-m10",
+    "enonce": "Quel instrument du Paléolithique supérieur permettait de lancer les sagaies plus loin et plus fort ?",
+    "choix": ["Le grattoir", "Le propulseur", "Le biface", "Le burin"],
+    "bonneReponse": 1,
+    "explication": "Le propulseur agit comme un bras de levier qui prolonge celui du chasseur. Certains, en bois de renne, sont finement sculptés, comme le célèbre « faon aux oiseaux » du Mas-d'Azil (Ariège)."
+  }
+]
