@@ -1,0 +1,72 @@
+[
+  {
+    "id": "expressions-francaises-e1",
+    "enonce": "Quel est le sens correct de « faire long feu » ?",
+    "choix": ["Échouer, rater son effet", "Durer longtemps", "Avoir beaucoup de succès", "S'énerver soudainement"],
+    "bonneReponse": 0,
+    "explication": "Une arme « faisait long feu » quand la poudre brûlait lentement sans que le coup parte : le tir était raté. L'expression signifie donc échouer. On la confond souvent avec « ne pas faire long feu », qui veut dire « ne pas durer »."
+  },
+  {
+    "id": "expressions-francaises-e2",
+    "enonce": "« Se mettre martel en tête » signifie…",
+    "choix": ["prendre une décision ferme", "avoir mal à la tête", "se faire du souci", "se mettre en colère"],
+    "bonneReponse": 2,
+    "explication": "« Martel » est l'ancienne forme de « marteau » : les soucis frappent dans la tête comme un marteau, sans relâche. Se mettre martel en tête, c'est se tourmenter."
+  },
+  {
+    "id": "expressions-francaises-e3",
+    "enonce": "« Tenir le haut du pavé » signifie…",
+    "choix": ["habiter un quartier chic", "avoir raison contre tous", "marcher au milieu de la rue", "occuper le premier rang"],
+    "bonneReponse": 3,
+    "explication": "Les rues anciennes étaient bombées, avec une rigole d'eaux sales au milieu. Le « haut du pavé », le long des murs, restait propre : on le cédait aux gens de qualité. Le tenir, c'est occuper le rang le plus élevé."
+  },
+  {
+    "id": "expressions-francaises-e4",
+    "enonce": "Dans « être à l'article de la mort », que signifie « article » ?",
+    "choix": ["La une d'un journal", "Le moment précis", "Une clause du testament", "Un objet de valeur"],
+    "bonneReponse": 1,
+    "explication": "« Article » vient du latin « articulus », la petite articulation, puis le moment précis, la jointure du temps. Être à l'article de la mort, c'est être au moment même de mourir."
+  },
+  {
+    "id": "expressions-francaises-e5",
+    "enonce": "Que signifie « sabler » dans « sabler le champagne » ?",
+    "choix": ["Le boire d'un trait", "L'ouvrir au sabre", "Le rafraîchir dans la glace", "Le servir en cascade"],
+    "bonneReponse": 0,
+    "explication": "« Sabler », c'est boire d'un trait, comme on coule d'un coup le métal en fusion dans un moule de sable. On le confond souvent avec « sabrer » (ouvrir la bouteille d'un coup de sabre), qui est une autre pratique."
+  },
+  {
+    "id": "expressions-francaises-e6",
+    "enonce": "« Avoir voix au chapitre », c'est…",
+    "choix": ["parler plus fort que les autres", "diriger une chorale", "avoir le droit de donner son avis", "lire un texte en public"],
+    "bonneReponse": 2,
+    "explication": "Le chapitre était l'assemblée des chanoines ou des moines d'une communauté. Seuls ses membres y avaient voix délibérative : avoir voix au chapitre, c'est avoir le droit de participer à la décision."
+  },
+  {
+    "id": "expressions-francaises-e7",
+    "enonce": "« Tirer le diable par la queue » signifie…",
+    "choix": ["prendre de grands risques", "faire le malin", "être de mauvaise foi", "avoir peu d'argent pour vivre"],
+    "bonneReponse": 3,
+    "explication": "L'image est celle d'un effort aussi pénible que vain : retenir le diable par la queue. Celui qui tire le diable par la queue peine à joindre les deux bouts."
+  },
+  {
+    "id": "expressions-francaises-e8",
+    "enonce": "Que signifie « faire florès » ?",
+    "choix": ["Faire faillite", "Obtenir un grand succès", "Cultiver des fleurs", "Changer d'avis"],
+    "bonneReponse": 1,
+    "explication": "Faire florès, c'est connaître la réussite, briller. L'origine reste incertaine ; on la rattache souvent à l'occitan « floris », fleuri, florissant. Exemple : « cette mode a fait florès dans les années 1980 »."
+  },
+  {
+    "id": "expressions-francaises-e9",
+    "enonce": "« Peigner la girafe », c'est…",
+    "choix": ["flatter un supérieur", "raconter des histoires", "faire un travail inutile", "agir avec élégance"],
+    "bonneReponse": 2,
+    "explication": "C'est s'occuper à une tâche vaine, ou ne rien faire d'utile. Selon une explication populaire, l'expression viendrait de Zarafa, la girafe offerte à Charles X en 1827 : son soigneur au Jardin des Plantes aurait passé ses journées à la brosser."
+  },
+  {
+    "id": "expressions-francaises-e10",
+    "enonce": "« Ménager la chèvre et le chou » signifie…",
+    "choix": ["concilier des intérêts opposés", "économiser sur tout", "préférer la campagne à la ville", "se méfier des apparences"],
+    "bonneReponse": 0,
+    "explication": "L'expression renvoie à l'énigme du passeur, déjà présente chez Alcuin au VIIIe siècle : faire traverser une rivière à un loup, une chèvre et un chou sans que la chèvre mange le chou ni le loup la chèvre. Il faut ménager chacun."
+  }
+]

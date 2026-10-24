@@ -1,0 +1,72 @@
+[
+  {
+    "id": "expressions-francaises-f1",
+    "enonce": "Que signifie « poser un lapin » à quelqu'un ?",
+    "choix": ["Lui offrir un cadeau inattendu", "Lui mentir pour se défendre", "Ne pas venir au rendez-vous", "Partir sans lui dire au revoir"],
+    "bonneReponse": 2,
+    "explication": "Poser un lapin, c'est faire attendre quelqu'un en vain. Au XIXe siècle, « lapin » désignait une prestation non payée : « poser un lapin » à une fille de joie, c'était partir sans la rémunérer. Le sens a glissé vers « manquer à sa parole », puis « ne pas venir »."
+  },
+  {
+    "id": "expressions-francaises-f2",
+    "enonce": "De quelqu'un qui « a un poil dans la main », on dit qu'il est…",
+    "choix": ["très paresseux", "très avare", "très maladroit", "très bavard"],
+    "bonneReponse": 0,
+    "explication": "L'image est celle d'une main si peu utilisée pour travailler qu'un poil aurait le temps d'y pousser. Pour l'avarice, on dit plutôt « être près de ses sous » ou « avoir des oursins dans les poches »."
+  },
+  {
+    "id": "expressions-francaises-f3",
+    "enonce": "Un objet qui « coûte les yeux de la tête »…",
+    "choix": ["fait très mal", "est introuvable", "est très fragile", "est très cher"],
+    "bonneReponse": 3,
+    "explication": "Les yeux sont ce qu'on a de plus précieux : payer « les yeux de la tête », c'est payer un prix exorbitant. On dit aussi « coûter la peau des fesses » ou « coûter un bras »."
+  },
+  {
+    "id": "expressions-francaises-f4",
+    "enonce": "Que veut dire « tomber dans les pommes » ?",
+    "choix": ["Faire une chute", "S'évanouir", "Avoir de la chance", "Se tromper"],
+    "bonneReponse": 1,
+    "explication": "Tomber dans les pommes, c'est perdre connaissance. Une hypothèse y voit une déformation de « tomber en pâmes » (de « pâmoison », l'évanouissement) ; une autre la rattache à une lettre de George Sand, qui écrit être « dans les pommes cuites » pour dire qu'elle est épuisée."
+  },
+  {
+    "id": "expressions-francaises-f5",
+    "enonce": "Quelqu'un qui « a la tête dans les nuages » est…",
+    "choix": ["très grand", "prétentieux", "distrait, rêveur", "sujet au vertige"],
+    "bonneReponse": 2,
+    "explication": "Avoir la tête dans les nuages, c'est être perdu dans ses pensées, loin des réalités concrètes. Son contraire : « avoir les pieds sur terre »."
+  },
+  {
+    "id": "expressions-francaises-f6",
+    "enonce": "Que fait-on quand on « donne sa langue au chat » ?",
+    "choix": ["On renonce à deviner", "On garde un secret", "On dit du mal d'autrui", "On parle trop vite"],
+    "bonneReponse": 0,
+    "explication": "On abandonne et on demande la réponse. Au XVIIe siècle, on disait « jeter sa langue aux chiens » (on la trouve chez Mme de Sévigné). Le chat, animal mystérieux qui semble tout savoir, a ensuite remplacé le chien."
+  },
+  {
+    "id": "expressions-francaises-f7",
+    "enonce": "Que signifie « il pleut des cordes » ?",
+    "choix": ["Il fait un vent violent", "Il pleut très fort", "Il grêle", "Il bruine légèrement"],
+    "bonneReponse": 1,
+    "explication": "La pluie tombe si dru que les gouttes semblent former des cordes tendues du ciel au sol. Variantes : « il pleut à verse », « il pleut des hallebardes », ou en Belgique « il drache »."
+  },
+  {
+    "id": "expressions-francaises-f8",
+    "enonce": "« Casser les pieds » à quelqu'un, c'est…",
+    "choix": ["le bousculer violemment", "le trahir en secret", "le faire rire aux éclats", "l'agacer, l'importuner"],
+    "bonneReponse": 3,
+    "explication": "Casser les pieds, c'est ennuyer, importuner. On en a tiré l'adjectif « casse-pieds ». Variante familière : « casser les oreilles », pour quelqu'un de trop bruyant."
+  },
+  {
+    "id": "expressions-francaises-f9",
+    "enonce": "Que veut dire « avoir le cafard » ?",
+    "choix": ["Être triste, déprimé", "Être sale", "Avoir peur des insectes", "Être malchanceux"],
+    "bonneReponse": 0,
+    "explication": "L'insecte noir qui fuit la lumière est devenu, au XIXe siècle, l'image des idées noires ; Baudelaire l'emploie déjà dans ce sens. On dit aussi « avoir le bourdon » ou « broyer du noir »."
+  },
+  {
+    "id": "expressions-francaises-f10",
+    "enonce": "« Mettre la main à la pâte » signifie…",
+    "choix": ["faire la cuisine", "voler quelque chose", "participer au travail", "se salir les mains"],
+    "bonneReponse": 2,
+    "explication": "L'image vient du boulanger qui pétrit la pâte lui-même : mettre la main à la pâte, c'est participer concrètement à une tâche au lieu de se contenter de donner des ordres."
+  }
+]

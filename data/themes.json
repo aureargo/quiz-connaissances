@@ -544,5 +544,12 @@
     "emoji": "🚴",
     "categorie": "Sport",
     "description": "Grands tours, maillots, cols mythiques et Monuments : les classiques et les légendes de la petite reine."
+  },
+  {
+    "id": "expressions-francaises",
+    "nom": "Expressions françaises",
+    "emoji": "🗣️",
+    "categorie": "Langue française",
+    "description": "Poser un lapin, faire chou blanc, tirer les vers du nez : le sens et l'origine des expressions imagées."
   }
 ]

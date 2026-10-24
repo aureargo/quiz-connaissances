@@ -1,0 +1,72 @@
+[
+  {
+    "id": "expressions-francaises-m1",
+    "enonce": "Que signifie « faire chou blanc » ?",
+    "choix": ["Réussir du premier coup", "Échouer complètement", "Avoir très peur", "Rougir de honte"],
+    "bonneReponse": 1,
+    "explication": "Faire chou blanc, c'est ne rien obtenir. L'explication la plus courante vient du jeu de quilles : un « coup blanc » (nul, sans quille abattue) se prononçait « choup blanc » en parler berrichon."
+  },
+  {
+    "id": "expressions-francaises-m2",
+    "enonce": "« Tirer les vers du nez » à quelqu'un, c'est…",
+    "choix": ["le soigner", "se moquer de lui", "le contredire", "le faire parler"],
+    "bonneReponse": 3,
+    "explication": "C'est obtenir de quelqu'un, par des questions habiles, ce qu'il voulait cacher. L'origine est discutée : certains y voient le latin « verum » (la vérité), d'autres l'image comique d'un charlatan prétendant extraire des vers du nez de ses patients."
+  },
+  {
+    "id": "expressions-francaises-m3",
+    "enonce": "Être « sur la sellette », c'est…",
+    "choix": ["être mis en cause, jugé", "être au sommet de sa gloire", "être très en retard", "voyager à cheval"],
+    "bonneReponse": 0,
+    "explication": "La sellette était le petit siège bas sur lequel on faisait asseoir l'accusé pour l'interroger au tribunal. Être sur la sellette, c'est donc être exposé aux critiques, en position d'accusé."
+  },
+  {
+    "id": "expressions-francaises-m4",
+    "enonce": "« Payer en monnaie de singe », c'est…",
+    "choix": ["payer le prix fort", "payer en avance", "payer en promesses vaines", "payer en pièces étrangères"],
+    "bonneReponse": 2,
+    "explication": "Sous Saint Louis, le Livre des métiers d'Étienne Boileau dispensait les montreurs de singes du péage du Petit-Pont, à Paris, s'ils faisaient faire des tours à leur animal. Payer en monnaie de singe, c'est donc payer en grimaces, en belles paroles : ne pas payer du tout."
+  },
+  {
+    "id": "expressions-francaises-m5",
+    "enonce": "Une personne « soupe au lait »…",
+    "choix": ["est très gourmande", "s'emporte facilement", "est naïve", "est très pâle"],
+    "bonneReponse": 1,
+    "explication": "Comme le lait qui chauffe et monte d'un coup jusqu'à déborder, la personne soupe au lait se met en colère brusquement… mais se calme souvent aussi vite."
+  },
+  {
+    "id": "expressions-francaises-m6",
+    "enonce": "Que signifie « avoir maille à partir » avec quelqu'un ?",
+    "choix": ["Lui devoir de l'argent", "Partir en voyage avec lui", "Lui tricoter un vêtement", "Avoir un différend avec lui"],
+    "bonneReponse": 3,
+    "explication": "La « maille » était une petite pièce médiévale (un demi-denier), la plus petite qui soit, et « partir » voulait dire « partager » (sens resté dans « répartir »). Vouloir partager une pièce indivisible ne pouvait mener qu'à la dispute."
+  },
+  {
+    "id": "expressions-francaises-m7",
+    "enonce": "Au sens figuré, que veut dire « battre la campagne » ?",
+    "choix": ["Chasser le gibier", "Labourer les champs", "Divaguer, déraisonner", "Fuir l'ennemi"],
+    "bonneReponse": 2,
+    "explication": "Au sens propre, battre la campagne, c'est la parcourir en tous sens, par exemple pour débusquer le gibier. Au figuré, c'est l'esprit qui vagabonde sans but : on divague, on dit des choses sans suite."
+  },
+  {
+    "id": "expressions-francaises-m8",
+    "enonce": "Être « dans de beaux draps » signifie…",
+    "choix": ["être dans une situation fâcheuse", "être très bien installé", "être richement habillé", "être en pleine santé"],
+    "bonneReponse": 0,
+    "explication": "C'est une antiphrase : on dit « beaux » pour signifier exactement l'inverse. Être dans de beaux draps, c'est être dans le pétrin. Le même procédé ironique se retrouve dans « c'est du joli ! »."
+  },
+  {
+    "id": "expressions-francaises-m9",
+    "enonce": "Quelqu'un qui « reste de marbre »…",
+    "choix": ["reste immobile de peur", "ne montre aucune émotion", "refuse de céder", "garde le silence"],
+    "bonneReponse": 1,
+    "explication": "Comme une statue de marbre, froide et figée, il ne laisse paraître aucun sentiment, quelles que soient les circonstances. Proche de « rester impassible » ou « ne pas sourciller »."
+  },
+  {
+    "id": "expressions-francaises-m10",
+    "enonce": "« Prendre la poudre d'escampette », c'est…",
+    "choix": ["se maquiller à outrance", "se mettre en colère", "mentir effrontément", "s'enfuir, détaler"],
+    "bonneReponse": 3,
+    "explication": "« Escampette » vient de l'italien « scampare », s'échapper (d'où aussi « décamper »). La « poudre » évoque la poussière soulevée par celui qui file à toutes jambes."
+  }
+]
