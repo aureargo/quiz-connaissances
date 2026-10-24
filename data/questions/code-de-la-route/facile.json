@@ -1,0 +1,72 @@
+[
+  {
+    "id": "code-de-la-route-f1",
+    "enonce": "Sauf indication contraire, quelle est la vitesse maximale autorisée en agglomération ?",
+    "choix": ["30 km/h", "50 km/h", "70 km/h", "80 km/h"],
+    "bonneReponse": 1,
+    "explication": "En France, la vitesse est limitée par défaut à 50 km/h en agglomération. Les communes peuvent l'abaisser (zones 30, de plus en plus courantes) ou, plus rarement, la relever à 70 km/h sur certains axes."
+  },
+  {
+    "id": "code-de-la-route-f2",
+    "enonce": "Que doit faire le conducteur face à un panneau « STOP » ?",
+    "choix": ["marquer un arrêt complet, puis céder le passage", "ralentir fortement, puis céder le passage", "s'arrêter uniquement si un véhicule arrive", "s'arrêter uniquement si la visibilité est mauvaise"],
+    "bonneReponse": 0,
+    "explication": "Le STOP impose un arrêt absolu à la limite de la chaussée abordée (roues immobilisées), même si la route semble vide, puis de céder le passage à tous les usagers. Ne pas marquer l'arrêt coûte 4 points."
+  },
+  {
+    "id": "code-de-la-route-f3",
+    "enonce": "Un panneau triangulaire, pointe en haut, bordé de rouge, sert à :",
+    "choix": ["signaler une interdiction", "signaler une obligation", "signaler un danger", "donner une indication"],
+    "bonneReponse": 2,
+    "explication": "Les panneaux de danger (série A) sont des triangles pointe en haut à bord rouge : virage, chaussée glissante, passage pour piétons… Les interdictions sont rondes à bord rouge, les obligations rondes à fond bleu."
+  },
+  {
+    "id": "code-de-la-route-f4",
+    "enonce": "Que signale un panneau rond à fond bleu (avec un symbole blanc) ?",
+    "choix": ["une interdiction", "une indication de service", "un danger", "une obligation"],
+    "bonneReponse": 3,
+    "explication": "Les panneaux d'obligation (série B) sont ronds à fond bleu : direction obligatoire, chemin réservé aux cycles, vitesse minimale… À ne pas confondre avec les panneaux carrés bleus, qui donnent des indications."
+  },
+  {
+    "id": "code-de-la-route-f5",
+    "enonce": "À une intersection sans aucune signalisation, à qui doit-on céder le passage ?",
+    "choix": ["aux véhicules venant de droite", "aux véhicules venant de gauche", "aux véhicules les plus rapides", "aux véhicules les plus lourds"],
+    "bonneReponse": 0,
+    "explication": "C'est la règle de la « priorité à droite » : en l'absence de panneau, de feu ou d'agent, on laisse passer les véhicules qui arrivent par la droite. Elle s'applique aussi bien en ville qu'en campagne."
+  },
+  {
+    "id": "code-de-la-route-f6",
+    "enonce": "Que doit faire le conducteur lorsqu'un feu passe à l'orange fixe ?",
+    "choix": ["accélérer pour passer avant le rouge", "s'arrêter, sauf si c'est dangereux", "passer, car l'orange vaut le vert", "s'arrêter seulement si un piéton attend"],
+    "bonneReponse": 1,
+    "explication": "Le feu jaune (orange) fixe impose l'arrêt, comme le rouge, sauf si le conducteur est trop près pour s'arrêter en sécurité (freinage brutal, risque de se faire percuter). Il annonce le rouge, il n'invite pas à accélérer."
+  },
+  {
+    "id": "code-de-la-route-f7",
+    "enonce": "Qu'est-il interdit de faire avec une ligne blanche continue au sol ?",
+    "choix": ["rouler à moins de 50 km/h", "allumer ses feux de route", "la franchir ou la chevaucher", "s'arrêter sur le bas-côté"],
+    "bonneReponse": 2,
+    "explication": "Une ligne continue ne doit être ni franchie ni chevauchée : elle interdit donc de dépasser ou de tourner à gauche en la coupant. Elle est placée là où la visibilité est insuffisante (virages, sommets de côte)."
+  },
+  {
+    "id": "code-de-la-route-f8",
+    "enonce": "Quel est le taux d'alcool maximal autorisé pour un conducteur titulaire du permis depuis plus de 3 ans ?",
+    "choix": ["0,2 g par litre de sang", "0,8 g par litre de sang", "1 g par litre de sang", "0,5 g par litre de sang"],
+    "bonneReponse": 3,
+    "explication": "La limite est de 0,5 g d'alcool par litre de sang, soit 0,25 mg par litre d'air expiré. Elle est abaissée à 0,2 g/L pour les permis probatoires et les conducteurs de transport en commun."
+  },
+  {
+    "id": "code-de-la-route-f9",
+    "enonce": "Par temps sec, quelle est la vitesse maximale autorisée sur autoroute pour une voiture ?",
+    "choix": ["130 km/h", "110 km/h", "120 km/h", "150 km/h"],
+    "bonneReponse": 0,
+    "explication": "La limite est de 130 km/h sur autoroute par temps sec. Elle descend à 110 km/h par temps de pluie, et les jeunes conducteurs sont limités à 110 km/h même par temps sec."
+  },
+  {
+    "id": "code-de-la-route-f10",
+    "enonce": "Quels équipements doivent obligatoirement se trouver dans une voiture en France ?",
+    "choix": ["un extincteur et une trousse de secours", "un gilet haute visibilité et un triangle", "un éthylotest et une roue de secours", "des ampoules et des fusibles de rechange"],
+    "bonneReponse": 1,
+    "explication": "Depuis 2008, le gilet de haute visibilité (accessible sans sortir du véhicule) et le triangle de présignalisation sont obligatoires. L'éthylotest l'a été un temps, mais l'obligation a été supprimée en 2020."
+  }
+]

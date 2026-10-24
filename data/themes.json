@@ -469,6 +469,13 @@
     "description": "Marques, mécanique et histoire de la voiture : du moteur à l'électrique."
   },
   {
+    "id": "code-de-la-route",
+    "nom": "Code de la route",
+    "emoji": "🚦",
+    "categorie": "Automobile",
+    "description": "Panneaux, priorités, vitesses et alcoolémie : les règles à connaître pour réussir l'examen et rouler sereinement."
+  },
+  {
     "id": "windows",
     "nom": "Windows",
     "emoji": "🪟",

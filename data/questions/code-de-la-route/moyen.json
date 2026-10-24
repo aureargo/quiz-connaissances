@@ -1,0 +1,72 @@
+[
+  {
+    "id": "code-de-la-route-m1",
+    "enonce": "Par temps de pluie, quelle est la vitesse maximale autorisée sur autoroute ?",
+    "choix": ["90 km/h", "100 km/h", "110 km/h", "120 km/h"],
+    "bonneReponse": 2,
+    "explication": "Par temps de pluie (ou autres précipitations), la limite passe de 130 à 110 km/h sur autoroute, et de 110 à 100 km/h sur les voies rapides à chaussées séparées. La distance de freinage s'allonge nettement sur route mouillée."
+  },
+  {
+    "id": "code-de-la-route-m2",
+    "enonce": "Quel est le taux d'alcool maximal autorisé pour un conducteur en permis probatoire ?",
+    "choix": ["0,2 g par litre de sang", "0,5 g par litre de sang", "0,4 g par litre de sang", "0,8 g par litre de sang"],
+    "bonneReponse": 0,
+    "explication": "Depuis 2015, les permis probatoires sont limités à 0,2 g/L (0,10 mg/L d'air expiré). En pratique, cela revient à « zéro verre » : un seul verre peut suffire à dépasser ce seuil."
+  },
+  {
+    "id": "code-de-la-route-m3",
+    "enonce": "Avec combien de points démarre un permis de conduire probatoire ?",
+    "choix": ["12 points", "10 points", "8 points", "6 points"],
+    "bonneReponse": 3,
+    "explication": "Le permis probatoire commence avec 6 points. Sans infraction, il en gagne chaque année (2 par an, ou 3 après une conduite accompagnée) jusqu'à atteindre le plafond de 12 points."
+  },
+  {
+    "id": "code-de-la-route-m4",
+    "enonce": "Que signifie un panneau en forme de losange jaune bordé de blanc ?",
+    "choix": ["vous allez devoir céder le passage", "vous circulez sur une route prioritaire", "vous arrivez sur une priorité à droite", "vous quittez une route prioritaire"],
+    "bonneReponse": 1,
+    "explication": "Le losange jaune (panneau AB6) indique une route à caractère prioritaire : on est prioritaire à chaque intersection. Barré d'un trait noir, il annonce au contraire la fin de cette priorité."
+  },
+  {
+    "id": "code-de-la-route-m5",
+    "enonce": "Dans un giratoire signalé par un « Cédez le passage », qui est prioritaire ?",
+    "choix": ["les véhicules qui entrent dans l'anneau", "les véhicules qui arrivent par la voie la plus large", "les véhicules déjà engagés sur l'anneau", "les véhicules qui sortent par la première sortie"],
+    "bonneReponse": 2,
+    "explication": "Le panneau « Cédez le passage » (triangle pointe en bas) à l'entrée oblige à laisser passer ceux qui circulent déjà sur l'anneau. Sans ce panneau, comme sur certaines places anciennes, c'est la priorité à droite qui s'applique."
+  },
+  {
+    "id": "code-de-la-route-m6",
+    "enonce": "Quel intervalle minimal le Code de la route impose-t-il avec le véhicule qui précède ?",
+    "choix": ["environ 2 secondes", "environ 1 seconde", "environ 4 secondes", "environ 5 secondes"],
+    "bonneReponse": 0,
+    "explication": "Il faut garder au moins l'équivalent de 2 secondes de trajet, soit environ deux traits de la ligne de rive sur autoroute. C'est le temps de réaction (environ 1 s) plus une marge de sécurité."
+  },
+  {
+    "id": "code-de-la-route-m7",
+    "enonce": "La nuit, sur une route non éclairée et sans autre usager en vue, quels feux faut-il utiliser ?",
+    "choix": ["les feux de croisement", "les feux de position", "les feux de brouillard arrière", "les feux de route"],
+    "bonneReponse": 3,
+    "explication": "Hors agglomération, sur route non éclairée, on utilise les feux de route (« pleins phares ») pour voir loin. On repasse en feux de croisement dès qu'on croise ou suit un usager, pour ne pas l'éblouir."
+  },
+  {
+    "id": "code-de-la-route-m8",
+    "enonce": "Combien de points coûte l'usage d'un téléphone tenu en main en conduisant ?",
+    "choix": ["1 point", "3 points", "4 points", "6 points"],
+    "bonneReponse": 1,
+    "explication": "Tenir son téléphone en main au volant coûte 3 points et 135 € d'amende. Les écouteurs et oreillettes sont aussi interdits depuis 2015 ; seuls les systèmes intégrés au véhicule (mains libres) restent tolérés."
+  },
+  {
+    "id": "code-de-la-route-m9",
+    "enonce": "Quel panneau marque l'entrée d'une agglomération ?",
+    "choix": ["un rectangle bleu à bord blanc, avec le nom de la ville", "un rectangle vert à bord blanc, avec le nom de la ville", "un rectangle blanc à bord rouge, avec le nom de la ville", "un rectangle jaune à bord noir, avec le nom de la ville"],
+    "bonneReponse": 2,
+    "explication": "Le panneau d'entrée d'agglomération (EB10) est blanc, bordé de rouge, et porte le nom de la commune. Il marque le début de la limitation à 50 km/h ; le même panneau barré (EB20) en marque la sortie."
+  },
+  {
+    "id": "code-de-la-route-m10",
+    "enonce": "Par défaut, quelle est la vitesse maximale hors agglomération sur une route à double sens sans séparateur central ?",
+    "choix": ["80 km/h", "70 km/h", "90 km/h", "110 km/h"],
+    "bonneReponse": 0,
+    "explication": "Depuis le 1er juillet 2018, la limite par défaut sur ces routes est de 80 km/h (contre 90 auparavant). Depuis la loi d'orientation des mobilités de 2019, les départements et les maires peuvent la relever à 90 km/h sur certaines sections."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "code-de-la-route-e1",
+    "enonce": "Que signale une ligne blanche discontinue à traits longs et intervalles courts ?",
+    "choix": ["la fin d'une zone de dépassement interdit", "l'approche d'une ligne continue", "une voie réservée aux bus", "une bande d'arrêt d'urgence"],
+    "bonneReponse": 1,
+    "explication": "C'est la « ligne d'avertissement » : ses traits sont plus longs et ses intervalles plus courts qu'une ligne discontinue ordinaire. Elle annonce une ligne continue, donc il ne faut plus entamer de dépassement."
+  },
+  {
+    "id": "code-de-la-route-e2",
+    "enonce": "À partir de quel taux d'alcool la conduite devient-elle un délit (et non plus une contravention) ?",
+    "choix": ["0,5 g par litre de sang", "1 g par litre de sang", "1,2 g par litre de sang", "0,8 g par litre de sang"],
+    "bonneReponse": 3,
+    "explication": "Entre 0,5 et 0,8 g/L, c'est une contravention (6 points, 135 €). À partir de 0,8 g/L (0,40 mg/L d'air expiré), c'est un délit jugé au tribunal : jusqu'à 2 ans de prison, 4 500 € d'amende et suspension ou annulation du permis."
+  },
+  {
+    "id": "code-de-la-route-e3",
+    "enonce": "Que signifie un panneau rond, bordé de rouge, à fond blanc entièrement vide ?",
+    "choix": ["circulation interdite à tous les véhicules", "stationnement interdit à tous les véhicules", "fin de toutes les interdictions précédentes", "voie réservée aux véhicules de secours"],
+    "bonneReponse": 0,
+    "explication": "Ce panneau (B0) interdit la circulation à tout véhicule, dans les deux sens. Le sens interdit (B1) est un rond rouge barré d'un trait blanc, et la fin des interdictions un rond blanc barré de traits noirs."
+  },
+  {
+    "id": "code-de-la-route-e4",
+    "enonce": "Que signifie un feu jaune clignotant à une intersection ?",
+    "choix": ["un arrêt obligatoire, comme au feu rouge", "une priorité absolue pour ceux qui le voient", "un passage prudent, avec les priorités habituelles", "un passage imminent du feu au rouge fixe"],
+    "bonneReponse": 2,
+    "explication": "Le feu jaune clignotant autorise à passer, avec prudence, en respectant les règles de priorité en vigueur (panneaux, sinon priorité à droite). On le trouve souvent la nuit, quand les feux sont mis en veille."
+  },
+  {
+    "id": "code-de-la-route-e5",
+    "enonce": "Hors agglomération, quelle distance latérale minimale faut-il laisser en dépassant un cycliste ?",
+    "choix": ["0,5 mètre", "1 mètre", "2 mètres", "1,5 mètre"],
+    "bonneReponse": 3,
+    "explication": "Il faut laisser au moins 1,5 m hors agglomération et 1 m en agglomération. Pour respecter cet écart, on a le droit de chevaucher une ligne continue si la visibilité le permet."
+  },
+  {
+    "id": "code-de-la-route-e6",
+    "enonce": "Combien de points retire un excès de vitesse de 50 km/h ou plus au-dessus de la limite ?",
+    "choix": ["3 points", "4 points", "6 points", "8 points"],
+    "bonneReponse": 2,
+    "explication": "Le « grand excès de vitesse » coûte 6 points, soit la totalité du capital d'un permis probatoire au départ, avec rétention immédiate et suspension du permis. Un retrait ne peut pas dépasser 8 points, même en cas d'infractions simultanées."
+  },
+  {
+    "id": "code-de-la-route-e7",
+    "enonce": "Quelle est la vitesse maximale autorisée dans une « zone de rencontre » ?",
+    "choix": ["20 km/h", "10 km/h", "30 km/h", "40 km/h"],
+    "bonneReponse": 0,
+    "explication": "En zone de rencontre, la vitesse est limitée à 20 km/h et les piétons sont prioritaires sur les véhicules, y compris en dehors des trottoirs. À ne pas confondre avec la zone 30, où les piétons doivent toujours traverser sur les passages."
+  },
+  {
+    "id": "code-de-la-route-e8",
+    "enonce": "Quand la visibilité tombe sous 50 mètres (brouillard, neige), à quelle vitesse est-on limité ?",
+    "choix": ["30 km/h", "50 km/h", "70 km/h", "90 km/h"],
+    "bonneReponse": 1,
+    "explication": "Sous 50 m de visibilité, la vitesse est limitée à 50 km/h sur toutes les routes, autoroutes comprises. Une voiture à 50 km/h parcourt environ 14 m par seconde : il faut pouvoir s'arrêter dans la distance visible."
+  },
+  {
+    "id": "code-de-la-route-e9",
+    "enonce": "Dans quelles conditions les feux de brouillard arrière sont-ils autorisés ?",
+    "choix": ["par forte pluie ou par brouillard", "dès la tombée de la nuit", "dans les tunnels mal éclairés", "par brouillard ou chute de neige"],
+    "bonneReponse": 3,
+    "explication": "Le feu de brouillard arrière, très puissant, n'est autorisé que par brouillard ou chute de neige. Par pluie, même forte, il est interdit car il éblouit le conducteur qui suit, surtout sur chaussée mouillée."
+  },
+  {
+    "id": "code-de-la-route-e10",
+    "enonce": "Combien de temps dure le permis probatoire après un apprentissage anticipé de la conduite (conduite accompagnée) ?",
+    "choix": ["1 an", "2 ans", "3 ans", "4 ans"],
+    "bonneReponse": 1,
+    "explication": "La période probatoire dure 2 ans après une conduite accompagnée, contre 3 ans en formation classique. Le permis gagne alors 3 points par an sans infraction (au lieu de 2) pour atteindre 12 points."
+  }
+]
