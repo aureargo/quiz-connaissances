@@ -1,0 +1,72 @@
+[
+  {
+    "id": "etymologie-f1",
+    "enonce": "De quelle langue vient l'essentiel du vocabulaire français ?",
+    "choix": ["Du grec", "Du latin", "Du gaulois", "Du germanique"],
+    "bonneReponse": 1,
+    "explication": "Le français est une langue romane, issue du latin populaire parlé en Gaule après la conquête romaine. Le gaulois n'a laissé qu'une centaine de mots (chêne, ruche, mouton) et le francique, langue germanique, quelques centaines (guerre, jardin, bleu)."
+  },
+  {
+    "id": "etymologie-f2",
+    "enonce": "Que signifie le préfixe grec « télé- », comme dans « téléphone » ?",
+    "choix": ["Image", "Son", "Rapide", "Loin"],
+    "bonneReponse": 3,
+    "explication": "« Têle » signifie « au loin » en grec. Le téléphone transporte la voix (phônê) au loin, le télescope permet de regarder (skopein) au loin, la télévision mêle grec et latin (visio, la vue)."
+  },
+  {
+    "id": "etymologie-f3",
+    "enonce": "À quoi renvoie la racine grecque « hydr- » ?",
+    "choix": ["À l'eau", "Au feu", "À l'air", "À la terre"],
+    "bonneReponse": 0,
+    "explication": "« Hudôr » signifie « eau » : on la retrouve dans hydrater, hydravion ou hydrogène, littéralement « qui engendre l'eau ». Le feu se dit « pur » (pyromane), l'air « aêr » et la terre « gê » (géologie)."
+  },
+  {
+    "id": "etymologie-f4",
+    "enonce": "Dans « bibliothèque », que signifie le grec « biblion » ?",
+    "choix": ["Armoire", "Lecture", "Livre", "Savoir"],
+    "bonneReponse": 2,
+    "explication": "« Biblion » veut dire « livre », et « thêkê » la boîte, le coffre : la bibliothèque est le coffre à livres. Le mot viendrait de Byblos, port phénicien d'où partait le papyrus. La Bible (« les livres ») a la même origine."
+  },
+  {
+    "id": "etymologie-f5",
+    "enonce": "Le mot « chocolat » vient à l'origine…",
+    "choix": ["de l'arabe", "du nahuatl", "du portugais", "du chinois"],
+    "bonneReponse": 1,
+    "explication": "Le nahuatl était la langue des Aztèques. Le mot est passé en français par l'espagnol « chocolate ». Tomate (tomatl) et avocat (ahuacatl) ont suivi le même chemin depuis le Mexique."
+  },
+  {
+    "id": "etymologie-f6",
+    "enonce": "Quel est le sens du préfixe grec « anti- » ?",
+    "choix": ["Contre", "Avant", "Après", "Avec"],
+    "bonneReponse": 0,
+    "explication": "« Anti- » signifie « contre » : antidote, antivol, antibiotique. Attention au piège : le latin « ante- » veut dire « avant », comme dans antérieur ou antichambre (qui s'écrit pourtant avec un i)."
+  },
+  {
+    "id": "etymologie-f7",
+    "enonce": "De quelle langue vient le mot « algèbre » ?",
+    "choix": ["Du grec", "Du latin", "Du sanskrit", "De l'arabe"],
+    "bonneReponse": 3,
+    "explication": "Il vient de « al-jabr » (la réduction), tiré du titre d'un traité du mathématicien al-Khwârizmî au IXe siècle. Son nom à lui a donné le mot « algorithme »."
+  },
+  {
+    "id": "etymologie-f8",
+    "enonce": "Dans « philosophie », que signifie l'élément « philo- » ?",
+    "choix": ["Savoir", "Penser", "Aimer", "Chercher"],
+    "bonneReponse": 2,
+    "explication": "« Philein » signifie « aimer » et « sophia » la sagesse : le philosophe est l'ami de la sagesse. Même racine dans bibliophile, francophile ou Philippe (« qui aime les chevaux »)."
+  },
+  {
+    "id": "etymologie-f9",
+    "enonce": "Que signifie le préfixe « kilo- » ?",
+    "choix": ["Cent", "Mille", "Un million", "Dix"],
+    "bonneReponse": 1,
+    "explication": "Il vient du grec « khilioi », mille. Le système métrique, créé à la Révolution, a puisé dans le grec pour les multiples (déca, hecto, kilo) et dans le latin pour les sous-multiples (déci, centi, milli)."
+  },
+  {
+    "id": "etymologie-f10",
+    "enonce": "« Week-end », « parking » et « sandwich » sont des emprunts à…",
+    "choix": ["l'anglais", "l'allemand", "l'italien", "le néerlandais"],
+    "bonneReponse": 0,
+    "explication": "Ce sont des anglicismes. « Sandwich » a même une histoire : il vient de John Montagu, comte de Sandwich (XVIIIe siècle), qui aurait voulu manger sans quitter sa table de jeu."
+  }
+]

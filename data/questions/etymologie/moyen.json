@@ -1,0 +1,72 @@
+[
+  {
+    "id": "etymologie-m1",
+    "enonce": "Le mot « salaire » vient du latin « salarium ». Que désignait-il ?",
+    "choix": ["Une part du butin", "Une prime de bravoure", "Une allocation pour le sel", "Une pièce d'or"],
+    "bonneReponse": 2,
+    "explication": "« Salarium » dérive de « sal », le sel, denrée précieuse pour conserver les aliments : c'était une indemnité versée aux soldats romains pour s'en procurer. L'idée qu'ils étaient payés directement en sel est, elle, discutée par les historiens."
+  },
+  {
+    "id": "etymologie-m2",
+    "enonce": "Selon l'étymologie traditionnelle, « travail » vient de « tripalium ». Qu'était-ce ?",
+    "choix": ["Un instrument de torture", "Un outil agricole", "Un atelier d'artisan", "Une corvée seigneuriale"],
+    "bonneReponse": 0,
+    "explication": "Le tripalium était un dispositif à trois pieux servant à immobiliser les animaux, ou à torturer. « Travailler » a d'abord voulu dire « tourmenter, faire souffrir ». Cette étymologie classique est aujourd'hui discutée par certains linguistes."
+  },
+  {
+    "id": "etymologie-m3",
+    "enonce": "Pourquoi le mot « candidat » est-il lié à la couleur blanche ?",
+    "choix": ["Les urnes romaines étaient blanches", "Les bulletins étaient sur papyrus blanc", "Le blanc symbolisait la neutralité", "Les postulants portaient une toge blanchie"],
+    "bonneReponse": 3,
+    "explication": "À Rome, celui qui briguait une charge portait une toge blanchie à la craie, signe de pureté : il était « candidatus », vêtu de blanc (de « candidus », blanc éclatant). Même racine que « candide »."
+  },
+  {
+    "id": "etymologie-m4",
+    "enonce": "Qui a proposé en 1955 le mot « ordinateur » ?",
+    "choix": ["Un ingénieur d'IBM", "Un latiniste de la Sorbonne", "Un ministre de la Recherche", "Un membre de l'Académie"],
+    "bonneReponse": 1,
+    "explication": "IBM France cherchait un nom pour ses machines et voulait éviter « calculateur ». Jacques Perret, professeur de philologie latine, suggéra « ordinateur », un vieux mot désignant Dieu qui met de l'ordre dans le monde."
+  },
+  {
+    "id": "etymologie-m5",
+    "enonce": "Que signifiait à l'origine l'adjectif « chétif » ?",
+    "choix": ["Malade", "Petit", "Prisonnier", "Pauvre"],
+    "bonneReponse": 2,
+    "explication": "« Chétif » vient du latin « captivus », captif, via l'ancien français « chaitif » (prisonnier, puis malheureux, puis faible). Le même mot latin a donné l'italien « cattivo », qui signifie « méchant »."
+  },
+  {
+    "id": "etymologie-m6",
+    "enonce": "De quelle langue vient le mot « hasard » ?",
+    "choix": ["Du latin", "Du grec", "Du germanique", "De l'arabe"],
+    "bonneReponse": 3,
+    "explication": "Il viendrait de l'arabe « az-zahr », le dé à jouer, passé par l'espagnol « azar ». Au Moyen Âge, le « hasard » était d'abord un jeu de dés, avant de désigner le sort imprévisible."
+  },
+  {
+    "id": "etymologie-m7",
+    "enonce": "Que signifie étymologiquement le mot « copain » ?",
+    "choix": ["Celui qui partage le pain", "Celui qui travaille avec", "Celui qui habite à côté", "Celui qui combat avec"],
+    "bonneReponse": 0,
+    "explication": "Du latin « cum » (avec) et « panis » (pain) : le copain est celui avec qui l'on partage son pain. « Compagnon » a exactement la même origine, et « compagnie » aussi."
+  },
+  {
+    "id": "etymologie-m8",
+    "enonce": "Que désignait d'abord le mot « bureau » ?",
+    "choix": ["Une petite pièce", "Une étoffe de laine", "Un livre de comptes", "Une table de travail"],
+    "bonneReponse": 1,
+    "explication": "La « bure » était une grosse étoffe de laine ; le « bureau » était le tapis de bure posé sur les tables de travail. Le mot a désigné ensuite la table, puis la pièce, puis les personnes qui y travaillent."
+  },
+  {
+    "id": "etymologie-m9",
+    "enonce": "Le mot « vasistas » vient…",
+    "choix": ["du latin", "de l'italien", "du flamand", "de l'allemand"],
+    "bonneReponse": 3,
+    "explication": "Il vient de la question allemande « Was ist das? » (« Qu'est-ce que c'est ? »), qu'on posait à travers cette petite ouverture pour savoir qui était là. Le mot est attesté en français au XVIIIe siècle."
+  },
+  {
+    "id": "etymologie-m10",
+    "enonce": "« Mesquin » vient de l'arabe « miskîn ». Que signifiait ce mot ?",
+    "choix": ["Avare", "Méchant", "Pauvre", "Petit"],
+    "bonneReponse": 2,
+    "explication": "« Miskîn » veut dire « pauvre, misérable ». Le mot est arrivé par l'italien « meschino » ; l'espagnol a « mezquino ». En français, il a pris le sens de « qui manque de générosité, de grandeur »."
+  }
+]

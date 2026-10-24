@@ -1,0 +1,72 @@
+[
+  {
+    "id": "etymologie-e1",
+    "enonce": "« Muscle » vient du latin « musculus ». Que signifiait ce mot ?",
+    "choix": ["Petit bras", "Petite force", "Petit os", "Petite souris"],
+    "bonneReponse": 3,
+    "explication": "« Musculus » est le diminutif de « mus », la souris. Le muscle qui roule sous la peau évoquait aux Romains une petite souris qui se déplace. Le grec avait d'ailleurs la même image avec « mus »."
+  },
+  {
+    "id": "etymologie-e2",
+    "enonce": "La « pupille » de l'œil vient du latin « pupilla ». Que voulait dire ce mot ?",
+    "choix": ["Petit point", "Petite poupée", "Petite lumière", "Petit cercle"],
+    "bonneReponse": 1,
+    "explication": "« Pupilla » signifie « petite fille, poupée » : quand on regarde quelqu'un dans les yeux, on y voit son propre reflet en miniature. C'est le même mot que « pupille » au sens d'orphelin placé sous tutelle."
+  },
+  {
+    "id": "etymologie-e3",
+    "enonce": "« Faire fiasco » vient d'une langue où « fiasco » signifie « bouteille ». Laquelle ?",
+    "choix": ["L'italien", "Le latin", "L'espagnol", "Le portugais"],
+    "bonneReponse": 0,
+    "explication": "En italien, « fare fiasco » veut dire échouer. L'origine exacte est obscure ; une hypothèse évoque le souffleur de verre qui, ratant une pièce délicate, la transformait en simple bouteille, un « fiasco »."
+  },
+  {
+    "id": "etymologie-e4",
+    "enonce": "« Hôtel » et « hôpital » viennent tous deux du latin « hospitale ». Comment appelle-t-on ce type de paire ?",
+    "choix": ["Un paronyme", "Un homonyme", "Un doublet", "Un calque"],
+    "bonneReponse": 2,
+    "explication": "Un doublet, c'est deux mots issus du même étymon : l'un de formation populaire, usé par des siècles d'évolution phonétique (hôtel), l'autre emprunté plus tard par les savants, plus proche du latin (hôpital). Autres exemples : frêle/fragile, nager/naviguer."
+  },
+  {
+    "id": "etymologie-e5",
+    "enonce": "Quel mot est le doublet populaire de « potion » ?",
+    "choix": ["Pilule", "Portion", "Potage", "Poison"],
+    "bonneReponse": 3,
+    "explication": "Le latin « potio » (boisson) a donné « poison » par évolution populaire, puis « potion » par emprunt savant. Le poison était d'abord un simple breuvage, avant de se spécialiser dans le breuvage mortel."
+  },
+  {
+    "id": "etymologie-e6",
+    "enonce": "En Grèce antique, qui était le « paidagôgos » ?",
+    "choix": ["Un professeur de philosophie", "L'esclave qui conduisait l'enfant", "Le directeur du gymnase", "Un prêtre éducateur"],
+    "bonneReponse": 1,
+    "explication": "De « pais, paidos » (l'enfant) et « agôgos » (qui conduit) : le pédagogue était l'esclave chargé d'accompagner l'enfant à l'école et de veiller sur lui. Le sens d'éducateur est venu ensuite."
+  },
+  {
+    "id": "etymologie-e7",
+    "enonce": "Le mot « rival » vient du latin « rivalis ». Qui désignait-il ?",
+    "choix": ["Un soldat de l'autre camp", "Un frère cadet héritier", "Un riverain du même ruisseau", "Un concurrent aux jeux du cirque"],
+    "bonneReponse": 2,
+    "explication": "« Rivalis » vient de « rivus », le ruisseau : les rivaux étaient ceux qui partageaient le même cours d'eau… et se disputaient l'eau pour irriguer leurs terres."
+  },
+  {
+    "id": "etymologie-e8",
+    "enonce": "D'où vient le mot « bougie » ?",
+    "choix": ["D'une ville d'Algérie", "D'un saint breton", "D'un mot gaulois", "D'un roi franc"],
+    "bonneReponse": 0,
+    "explication": "Bougie (aujourd'hui Béjaïa), en Kabylie, exportait au Moyen Âge une cire réputée vers l'Europe. Le nom de la ville est resté attaché aux chandelles faites de cette cire."
+  },
+  {
+    "id": "etymologie-e9",
+    "enonce": "D'où vient le mot « panique » ?",
+    "choix": ["Du mot « pain »", "D'un vent du désert", "D'une bataille grecque", "Du dieu Pan"],
+    "bonneReponse": 3,
+    "explication": "Pan, dieu grec des bergers et des bois, passait pour semer une terreur soudaine et sans cause apparente, notamment par ses cris. Une peur « panique » est une peur qu'il inspire."
+  },
+  {
+    "id": "etymologie-e10",
+    "enonce": "En grec ancien, que désignait un « sycophante » ?",
+    "choix": ["Un flatteur", "Un délateur", "Un médecin", "Un devin"],
+    "bonneReponse": 1,
+    "explication": "Littéralement « celui qui montre les figues » (sukon, phainein) : à Athènes, le sycophante dénonçait, souvent par intérêt, les exportateurs de figues en fraude, selon l'explication antique. Piège : l'anglais « sycophant » a pris le sens de « flatteur »."
+  }
+]

@@ -551,5 +551,12 @@
     "emoji": "🗣️",
     "categorie": "Langue française",
     "description": "Poser un lapin, faire chou blanc, tirer les vers du nez : le sens et l'origine des expressions imagées."
+  },
+  {
+    "id": "etymologie",
+    "nom": "Étymologie",
+    "emoji": "📜",
+    "categorie": "Langue française",
+    "description": "D'où viennent les mots ? Racines grecques et latines, emprunts et histoires surprenantes du vocabulaire français."
   }
 ]

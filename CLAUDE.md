@@ -219,12 +219,12 @@ cd frontend && npm test -- --watch=false  # lancer les tests unitaires une fois
 > longueur et un niveau de détail comparables — voir le template pour les détails
 > et contre-exemples.
 
-## 🗂️ Thèmes actuels (79)
+## 🗂️ Thèmes actuels (80)
 
 État du **contenu** actuel (ce ne sont pas des contraintes du code, cf.
 `QUESTIONNAIRE_TEMPLATE.md`) : chaque thème a aujourd'hui trois fichiers
 (`facile.json`, `moyen.json`, `expert.json`) de 10 questions, soit 30 par thème
-(plus le niveau synthétique **`tous`** = 30). Total : **2370 questions**.
+(plus le niveau synthétique **`tous`** = 30). Total : **2400 questions**.
 
 - **Programmation** : Go, Python, JavaScript, TypeScript, Node.js, Angular, React, Vue.js, Java, Kotlin, C#, C, C++, Rust, PHP, Ruby, Git, Lignes de commande Linux, HTML, CSS, Architecture logicielle, Clean code & refactoring, Algorithmes & structures de données
 - **DevOps & Conteneurs** : Docker, Kubernetes
@@ -245,7 +245,7 @@ cd frontend && npm test -- --watch=false  # lancer les tests unitaires une fois
 - **Économie & Finance** : Finance
 - **Automobile** : Automobile
 - **Systèmes d'exploitation** : Windows, Android
-- **Langue française** : Grammaire, Conjugaison, Orthographe, Expressions françaises
+- **Langue française** : Grammaire, Conjugaison, Orthographe, Expressions françaises, Étymologie
 
 ## 📚 Concepts à retenir (pour apprendre)
 
