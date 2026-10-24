@@ -1,0 +1,72 @@
+[
+  {
+    "id": "svg-f1",
+    "enonce": "Que signifie l'acronyme SVG ?",
+    "choix": ["Scalable Vector Graphics", "Standard Visual Graphics", "Simple Vector Geometry", "Structured Visual Grid"],
+    "bonneReponse": 0,
+    "explication": "SVG signifie « Scalable Vector Graphics » (graphiques vectoriels adaptables). C'est un format ouvert normalisé par le W3C, dont la première recommandation date de 2001."
+  },
+  {
+    "id": "svg-f2",
+    "enonce": "Sur quel langage de balisage repose le format SVG ?",
+    "choix": ["JSON", "XML", "YAML", "Markdown"],
+    "bonneReponse": 1,
+    "explication": "Un fichier SVG est un document XML : des balises comme `<svg>`, `<circle>` ou `<path>` décrivent les formes. On peut donc l'ouvrir et le modifier dans un simple éditeur de texte."
+  },
+  {
+    "id": "svg-f3",
+    "enonce": "Quel est le principal avantage d'une image SVG par rapport à un PNG ?",
+    "choix": ["Elle gère mieux les photographies", "Elle se charge toujours plus vite", "Elle n'a besoin d'aucun navigateur", "Elle reste nette à toute taille"],
+    "bonneReponse": 3,
+    "explication": "Une image vectorielle est décrite par des formes mathématiques, pas par des pixels : on peut l'agrandir sans flou ni pixelisation. En revanche, pour une photo, un format matriciel (JPEG, PNG, WebP) reste bien plus adapté."
+  },
+  {
+    "id": "svg-f4",
+    "enonce": "Quel élément SVG dessine un cercle ?",
+    "choix": ["<round>", "<oval>", "<circle>", "<disc>"],
+    "bonneReponse": 2,
+    "explication": "`<circle>` dessine un cercle. Pour une forme ovale (deux rayons différents), on utilise `<ellipse>` avec les attributs `rx` et `ry`."
+  },
+  {
+    "id": "svg-f5",
+    "enonce": "Quels attributs fixent le centre et le rayon d'un `<circle>` ?",
+    "choix": ["x, y et size", "cx, cy et r", "left, top et radius", "x1, y1 et d"],
+    "bonneReponse": 1,
+    "explication": "`cx` et `cy` donnent les coordonnées du centre, `r` le rayon : `<circle cx=\"50\" cy=\"50\" r=\"40\" />`. Les attributs `x1`/`y1` appartiennent à `<line>`, et `d` à `<path>`."
+  },
+  {
+    "id": "svg-f6",
+    "enonce": "Quel attribut définit la couleur de remplissage d'une forme SVG ?",
+    "choix": ["fill", "color", "background", "paint"],
+    "bonneReponse": 0,
+    "explication": "`fill` colore l'intérieur d'une forme (noir par défaut). Il s'utilise comme attribut (`fill=\"red\"`) ou comme propriété CSS. `background`, lui, n'a aucun effet sur une forme SVG."
+  },
+  {
+    "id": "svg-f7",
+    "enonce": "Quel attribut définit la couleur du contour d'une forme SVG ?",
+    "choix": ["border", "outline", "line-color", "stroke"],
+    "bonneReponse": 3,
+    "explication": "`stroke` colore le trait du contour, et `stroke-width` en règle l'épaisseur. Par défaut, `stroke` vaut `none` : une forme n'a pas de contour visible."
+  },
+  {
+    "id": "svg-f8",
+    "enonce": "Quel élément SVG dessine un rectangle ?",
+    "choix": ["<box>", "<square>", "<rect>", "<quad>"],
+    "bonneReponse": 2,
+    "explication": "`<rect>` dessine un rectangle avec `x`, `y`, `width` et `height`. Les attributs `rx` et `ry` permettent d'en arrondir les coins."
+  },
+  {
+    "id": "svg-f9",
+    "enonce": "Dans le repère SVG par défaut, où se trouve le point (0, 0) ?",
+    "choix": ["En bas à gauche", "En haut à gauche", "Au centre", "En bas à droite"],
+    "bonneReponse": 1,
+    "explication": "L'origine est en haut à gauche, et l'axe des y pointe vers le BAS, comme pour les pixels d'un écran. C'est l'inverse du repère habituel des mathématiques."
+  },
+  {
+    "id": "svg-f10",
+    "enonce": "Quel élément SVG sert à afficher du texte ?",
+    "choix": ["<label>", "<p>", "<string>", "<text>"],
+    "bonneReponse": 3,
+    "explication": "`<text>` affiche du texte positionné par `x` et `y`. Le texte reste sélectionnable et lisible par les moteurs de recherche, contrairement à du texte « dessiné » dans une image."
+  }
+]

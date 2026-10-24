@@ -140,6 +140,13 @@
     "description": "Les feuilles de style : mise en page, couleurs et responsive design."
   },
   {
+    "id": "svg",
+    "nom": "SVG",
+    "emoji": "📐",
+    "categorie": "Programmation",
+    "description": "Le format d'images vectorielles du Web : formes, chemins, viewBox, dégradés et filtres."
+  },
+  {
     "id": "architecture",
     "nom": "Architecture logicielle",
     "emoji": "🏗️",

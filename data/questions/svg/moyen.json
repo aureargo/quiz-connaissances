@@ -1,0 +1,72 @@
+[
+  {
+    "id": "svg-m1",
+    "enonce": "Quel attribut de `<svg>` définit le système de coordonnées interne (min-x, min-y, largeur, hauteur) ?",
+    "choix": ["viewport", "viewBox", "coords", "canvas"],
+    "bonneReponse": 1,
+    "explication": "`viewBox=\"0 0 100 100\"` déclare la zone du dessin, indépendamment de la taille d'affichage (`width`/`height`). C'est ce qui permet à un SVG de s'adapter à n'importe quel conteneur."
+  },
+  {
+    "id": "svg-m2",
+    "enonce": "Dans l'attribut `d` d'un `<path>`, que fait la commande `M` ?",
+    "choix": ["Elle déplace le crayon sans tracer", "Elle trace une ligne droite", "Elle ferme le chemin courant", "Elle dessine un arc de cercle"],
+    "bonneReponse": 0,
+    "explication": "`M` (« moveto ») déplace le point courant sans rien dessiner : c'est ainsi que commence tout chemin. `L` trace une ligne, `Z` ferme le chemin et `A` dessine un arc."
+  },
+  {
+    "id": "svg-m3",
+    "enonce": "Dans un `<path>`, quelle est la différence entre la commande `L` et la commande `l` ?",
+    "choix": ["Trait épais ou trait fin", "Ligne pleine ou pointillée", "Coordonnées absolues ou relatives", "Tracé visible ou masqué"],
+    "bonneReponse": 2,
+    "explication": "Une commande en majuscule utilise des coordonnées absolues (dans le repère), une commande en minuscule des coordonnées relatives au point courant. `l 10 0` signifie « 10 unités vers la droite »."
+  },
+  {
+    "id": "svg-m4",
+    "enonce": "Quel élément regroupe des formes pour leur appliquer un style ou une transformation commune ?",
+    "choix": ["<group>", "<g>", "<div>", "<set>"],
+    "bonneReponse": 1,
+    "explication": "`<g>` (group) regroupe des éléments : un `transform` ou un `fill` posé sur lui s'applique à tous ses enfants. `<div>` est un élément HTML et `<set>` un élément d'animation."
+  },
+  {
+    "id": "svg-m5",
+    "enonce": "Quel élément contient des éléments réutilisables qui ne sont pas affichés directement ?",
+    "choix": ["<head>", "<template>", "<defs>", "<hidden>"],
+    "bonneReponse": 2,
+    "explication": "`<defs>` (definitions) accueille dégradés, motifs, filtres ou formes à réutiliser. Son contenu n'est rendu que lorsqu'il est référencé ailleurs, par exemple via `url(#id)` ou `<use>`."
+  },
+  {
+    "id": "svg-m6",
+    "enonce": "Quel élément permet de réafficher un élément défini ailleurs grâce à son identifiant ?",
+    "choix": ["<copy>", "<clone>", "<ref>", "<use>"],
+    "bonneReponse": 3,
+    "explication": "`<use href=\"#icone\" x=\"20\" />` duplique l'élément d'id `icone`. C'est la base des « sprites SVG » : un fichier contient toutes les icônes, et chaque page n'en affiche qu'une."
+  },
+  {
+    "id": "svg-m7",
+    "enonce": "Que définit la propriété `stroke-dasharray` ?",
+    "choix": ["Le motif de tirets du contour", "L'épaisseur du trait de contour", "La forme des extrémités du trait", "L'opacité du trait de contour"],
+    "bonneReponse": 0,
+    "explication": "`stroke-dasharray: 5 3` alterne 5 unités de trait et 3 de vide. Combinée à `stroke-dashoffset`, elle permet l'effet classique de « dessin progressif » d'un tracé."
+  },
+  {
+    "id": "svg-m8",
+    "enonce": "Quel élément définit un dégradé de couleur le long d'une droite ?",
+    "choix": ["<gradient>", "<linearGradient>", "<lineFill>", "<colorRamp>"],
+    "bonneReponse": 1,
+    "explication": "`<linearGradient>` contient des `<stop>` (couleur + position). On l'applique ensuite avec `fill=\"url(#monDegrade)\"`. Son cousin `<radialGradient>` rayonne depuis un centre."
+  },
+  {
+    "id": "svg-m9",
+    "enonce": "Que vaut la couleur `currentColor` utilisée dans `fill=\"currentColor\"` ?",
+    "choix": ["La couleur de fond de la page", "La couleur du dernier élément dessiné", "Une couleur choisie par le navigateur", "La valeur de la propriété CSS color"],
+    "bonneReponse": 3,
+    "explication": "`currentColor` reprend la valeur de la propriété `color` héritée. Une icône SVG ainsi écrite prend automatiquement la couleur du texte qui l'entoure (lien, bouton, survol…)."
+  },
+  {
+    "id": "svg-m10",
+    "enonce": "Quel élément dessine une ligne brisée OUVERTE à partir d'une liste de points ?",
+    "choix": ["<polyline>", "<polygon>", "<lines>", "<segment>"],
+    "bonneReponse": 0,
+    "explication": "`<polyline points=\"0,0 10,20 30,5\" />` relie les points sans revenir au départ. `<polygon>` accepte la même liste mais referme automatiquement la forme."
+  }
+]

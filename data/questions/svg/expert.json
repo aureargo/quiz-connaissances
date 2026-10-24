@@ -1,0 +1,72 @@
+[
+  {
+    "id": "svg-e1",
+    "enonce": "Quelle est la valeur par défaut de l'attribut `preserveAspectRatio` ?",
+    "choix": ["xMinYMin meet", "xMidYMid slice", "xMidYMid meet", "none"],
+    "bonneReponse": 2,
+    "explication": "Par défaut, le contenu du `viewBox` est centré (`xMidYMid`) et réduit pour tenir entièrement dans la zone (`meet`), quitte à laisser des marges. `slice` remplit la zone en rognant, `none` déforme."
+  },
+  {
+    "id": "svg-e2",
+    "enonce": "Combien de paramètres prend la commande `A` (arc elliptique) d'un `<path>` ?",
+    "choix": ["5", "7", "4", "6"],
+    "bonneReponse": 1,
+    "explication": "`A rx ry rotation grand-arc sens x y` : deux rayons, la rotation de l'axe x, deux drapeaux (grand arc ou petit, sens du tracé) et le point d'arrivée. C'est la commande de chemin la plus déroutante."
+  },
+  {
+    "id": "svg-e3",
+    "enonce": "Quelle est la valeur par défaut de la propriété `fill-rule` ?",
+    "choix": ["nonzero", "evenodd", "winding", "alternate"],
+    "bonneReponse": 0,
+    "explication": "`nonzero` décide si un point est « dedans » selon le sens des tracés qui l'entourent (nombre d'enroulement). Avec `evenodd`, on compte les traversées : c'est ce qui permet de trouer une forme avec un sous-chemin."
+  },
+  {
+    "id": "svg-e4",
+    "enonce": "De quels types sont les courbes de Bézier tracées par les commandes `C` et `Q` d'un `<path>` ?",
+    "choix": ["Quadratique et cubique", "Linéaire et cubique", "Cubique et quartique", "Cubique et quadratique"],
+    "bonneReponse": 3,
+    "explication": "`C` trace une Bézier cubique (deux points de contrôle), `Q` une Bézier quadratique (un seul). Leurs variantes `S` et `T` prolongent une courbe en reflétant le point de contrôle précédent."
+  },
+  {
+    "id": "svg-e5",
+    "enonce": "Quel espace de noms XML doit déclarer la balise `<svg>` d'un fichier `.svg` autonome ?",
+    "choix": ["http://www.w3.org/1999/xlink", "http://www.w3.org/1999/xhtml", "http://www.w3.org/2000/svg", "http://www.w3.org/1998/Math/MathML"],
+    "bonneReponse": 2,
+    "explication": "`xmlns=\"http://www.w3.org/2000/svg\"` est obligatoire dans un fichier autonome, sinon le navigateur l'affiche comme du XML brut. Il est facultatif pour un SVG inséré directement dans du HTML5."
+  },
+  {
+    "id": "svg-e6",
+    "enonce": "En SVG 2, quel attribut remplace `xlink:href` sur `<use>`, `<image>` ou `<a>` ?",
+    "choix": ["src", "href", "ref", "link"],
+    "bonneReponse": 1,
+    "explication": "SVG 2 abandonne l'espace de noms XLink au profit d'un simple `href`. `xlink:href` reste reconnu par les navigateurs pour la compatibilité, mais il est déprécié."
+  },
+  {
+    "id": "svg-e7",
+    "enonce": "Quelle primitive de filtre SVG produit un effet de flou ?",
+    "choix": ["<feBlur>", "<feSoften>", "<feDiffuse>", "<feGaussianBlur>"],
+    "bonneReponse": 3,
+    "explication": "`<feGaussianBlur stdDeviation=\"4\" />`, placée dans un `<filter>`, applique un flou gaussien. Les primitives `fe*` (filter effect) s'enchaînent : flou, décalage et fusion donnent par exemple une ombre portée."
+  },
+  {
+    "id": "svg-e8",
+    "enonce": "Quelle est la différence entre `<clipPath>` et `<mask>` ?",
+    "choix": ["clipPath découpe net, mask gère des transparences", "mask découpe net, clipPath gère des transparences", "Aucune : mask est l'ancien nom de clipPath", "clipPath agit sur le fond, mask sur le contour"],
+    "bonneReponse": 0,
+    "explication": "Un `<clipPath>` est binaire : chaque point est visible ou non. Un `<mask>` utilise la luminance (ou l'alpha) de son contenu : du blanc au noir, il permet des fondus progressifs."
+  },
+  {
+    "id": "svg-e9",
+    "enonce": "Quel élément natif SVG, hérité de SMIL, anime un attribut au fil du temps ?",
+    "choix": ["<motion>", "<tween>", "<animate>", "<keyframes>"],
+    "bonneReponse": 2,
+    "explication": "`<animate attributeName=\"r\" from=\"10\" to=\"40\" dur=\"2s\" />` anime un attribut sans CSS ni JavaScript. Ses cousins `<animateTransform>`, `<animateMotion>` et `<set>` viennent de la même spécification SMIL."
+  },
+  {
+    "id": "svg-e10",
+    "enonce": "Un SVG affiché via une balise `<img>` peut-il être stylé par le CSS de la page hôte ?",
+    "choix": ["Oui, il hérite de toutes les règles CSS", "Non, il est rendu comme une image isolée", "Oui, mais uniquement pour fill et stroke", "Non, sauf avec l'attribut crossorigin"],
+    "bonneReponse": 1,
+    "explication": "Chargé par `<img>`, un SVG est un document isolé : le CSS de la page ne l'atteint pas et ses scripts sont désactivés. Pour le styler (survol, `currentColor`…), il faut l'insérer en ligne dans le HTML ou via `<use>`."
+  }
+]

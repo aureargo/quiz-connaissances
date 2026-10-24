@@ -219,14 +219,14 @@ cd frontend && npm test -- --watch=false  # lancer les tests unitaires une fois
 > longueur et un niveau de détail comparables — voir le template pour les détails
 > et contre-exemples.
 
-## 🗂️ Thèmes actuels (86)
+## 🗂️ Thèmes actuels (87)
 
 État du **contenu** actuel (ce ne sont pas des contraintes du code, cf.
 `QUESTIONNAIRE_TEMPLATE.md`) : chaque thème a aujourd'hui trois fichiers
 (`facile.json`, `moyen.json`, `expert.json`) de 10 questions, soit 30 par thème
-(plus le niveau synthétique **`tous`** = 30). Total : **2580 questions**.
+(plus le niveau synthétique **`tous`** = 30). Total : **2610 questions**.
 
-- **Programmation** : Go, Python, JavaScript, TypeScript, Node.js, Angular, React, Vue.js, Java, Kotlin, C#, C, C++, Rust, PHP, Ruby, Git, Lignes de commande Linux, HTML, CSS, Architecture logicielle, Clean code & refactoring, Algorithmes & structures de données
+- **Programmation** : Go, Python, JavaScript, TypeScript, Node.js, Angular, React, Vue.js, Java, Kotlin, C#, C, C++, Rust, PHP, Ruby, Git, Lignes de commande Linux, HTML, CSS, SVG, Architecture logicielle, Clean code & refactoring, Algorithmes & structures de données
 - **DevOps & Conteneurs** : Docker, Kubernetes
 - **Matériel informatique** : Processeurs (CPU), Cartes graphiques (GPU), Stockage (SSD, HDD), Mémoire vive (RAM), Cartes mères & connectique, Monter son PC, Écrans, Semi-conducteurs
 - **Bases de données** : SQL, NoSQL, PostgreSQL, MongoDB, Redis, Modélisation de données, Data engineering
