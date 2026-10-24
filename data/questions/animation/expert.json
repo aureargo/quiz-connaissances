@@ -1,0 +1,72 @@
+[
+  {
+    "id": "animation-e1",
+    "enonce": "Quel code, clin d'œil à une salle de cours de CalArts, se cache dans presque tous les films Pixar ?",
+    "choix": ["B612", "THX 1138", "A113", "K-9"],
+    "bonneReponse": 2,
+    "explication": "C'était la salle du California Institute of the Arts où ont étudié John Lasseter, Brad Bird ou Andrew Stanton. On le voit sur une plaque d'immatriculation, une porte ou un appareil photo."
+  },
+  {
+    "id": "animation-e2",
+    "enonce": "De quel récit japonais « Le Conte de la princesse Kaguya » (2013) d'Isao Takahata est-il adapté ?",
+    "choix": ["Le Dit du Genji", "La Légende du pêcheur Urashima", "Momotarō, le garçon de la pêche", "Le Conte du coupeur de bambou"],
+    "bonneReponse": 3,
+    "explication": "Datant du Xᵉ siècle environ, c'est le plus ancien récit en prose japonais connu : une fillette trouvée dans une tige de bambou. Ce fut le dernier film de Takahata, mort en 2018."
+  },
+  {
+    "id": "animation-e3",
+    "enonce": "De quelle romancière britannique « Le Château ambulant » (2004) de Miyazaki adapte-t-il le livre ?",
+    "choix": ["Ursula K. Le Guin", "Diana Wynne Jones", "J. K. Rowling", "Mary Norton"],
+    "bonneReponse": 1,
+    "explication": "Le roman « Howl's Moving Castle » date de 1986. Miyazaki y ajoute une guerre absente du livre, écho à son opposition à la guerre d'Irak. Mary Norton (« Les Chapardeurs ») a inspiré « Arrietty », et Le Guin les « Contes de Terremer »."
+  },
+  {
+    "id": "animation-e4",
+    "enonce": "Quelle technique Lotte Reiniger utilise-t-elle dans « Les Aventures du prince Ahmed » (1926), plus ancien long métrage d'animation conservé ?",
+    "choix": ["La pâte à modeler", "Des silhouettes découpées", "Le dessin sur celluloïd", "Des marionnettes articulées"],
+    "bonneReponse": 1,
+    "explication": "Elle anime image par image des figurines de papier noir découpé, filmées en ombres chinoises. Les longs métrages argentins antérieurs de Quirino Cristiani sont, eux, perdus."
+  },
+  {
+    "id": "animation-e5",
+    "enonce": "Quel réalisateur a signé « Le Géant de fer » (1999) avant de rejoindre Pixar pour « Les Indestructibles » ?",
+    "choix": ["Andrew Stanton", "Pete Docter", "Lee Unkrich", "Brad Bird"],
+    "bonneReponse": 3,
+    "explication": "Échec en salles à sa sortie, « Le Géant de fer » est devenu culte. Chez Pixar, Brad Bird réalise aussi « Ratatouille » (2007) et remporte deux Oscars du film d'animation."
+  },
+  {
+    "id": "animation-e6",
+    "enonce": "Quel film de Miyazaki a remporté l'Oscar du meilleur film d'animation en 2024 ?",
+    "choix": ["Le Garçon et le Héron", "Le vent se lève", "Souvenirs de Marnie", "Arrietty"],
+    "bonneReponse": 0,
+    "explication": "C'est le second Oscar de Miyazaki après « Le Voyage de Chihiro ». Son titre japonais, « Kimitachi wa dō ikiru ka » (« Et vous, comment vivrez-vous ? »), reprend celui d'un roman de Genzaburō Yoshino."
+  },
+  {
+    "id": "animation-e7",
+    "enonce": "« Le vent se lève » (2013) de Miyazaki retrace la vie de quel ingénieur aéronautique japonais ?",
+    "choix": ["Sōichirō Honda", "Isoroku Yamamoto", "Jirō Horikoshi", "Kiichirō Toyoda"],
+    "bonneReponse": 2,
+    "explication": "Horikoshi a conçu le chasseur Mitsubishi « Zéro ». Le titre vient d'un vers de Paul Valéry : « Le vent se lève !... Il faut tenter de vivre ! » (« Le Cimetière marin »)."
+  },
+  {
+    "id": "animation-e8",
+    "enonce": "Quel film de Paul Grimault, écrit avec Jacques Prévert et achevé en 1980, a profondément marqué Takahata et Miyazaki ?",
+    "choix": ["Le Roi et l'Oiseau", "La Planète sauvage", "Kirikou et la Sorcière", "Les Triplettes de Belleville"],
+    "bonneReponse": 0,
+    "explication": "Sa première version inachevée, « La Bergère et le Ramoneur » (1952), sortie sans l'accord de Grimault, avait donné à Takahata l'envie de faire de l'animation. Grimault a mis près de trente ans à reprendre et finir son film."
+  },
+  {
+    "id": "animation-e9",
+    "enonce": "Comment « Toy Story 2 » (1999) a-t-il été sauvé après l'effacement accidentel de ses fichiers ?",
+    "choix": ["Une sauvegarde sur bande", "Une copie chez une employée", "Les dessins préparatoires", "Un serveur de Lucasfilm"],
+    "bonneReponse": 1,
+    "explication": "Une commande de suppression récursive (`rm -rf`) lancée par erreur avait détruit l'essentiel du film, et les sauvegardes sur bande ne fonctionnaient plus. La directrice technique Galyn Susman, en congé maternité, en gardait une copie sur son ordinateur personnel."
+  },
+  {
+    "id": "animation-e10",
+    "enonce": "Quel studio américain d'animation en volume a produit « Coraline » (2009) et « Kubo et l'Armure magique » (2016) ?",
+    "choix": ["Aardman", "Blue Sky", "Illumination", "Laika"],
+    "bonneReponse": 3,
+    "explication": "Installé près de Portland (Oregon), Laika appartient à Phil Knight, cofondateur de Nike ; son fils Travis Knight a réalisé « Kubo ». « Coraline » a été réalisé par Henry Selick (« L'Étrange Noël de monsieur Jack »)."
+  }
+]

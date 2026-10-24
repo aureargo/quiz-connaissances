@@ -1,0 +1,72 @@
+[
+  {
+    "id": "realisateurs-m1",
+    "enonce": "Quel réalisateur italien a signé le western « Le Bon, la Brute et le Truand » (1966) ?",
+    "choix": ["Sergio Corbucci", "Federico Fellini", "Sergio Leone", "Dario Argento"],
+    "bonneReponse": 2,
+    "explication": "C'est le dernier volet de la « trilogie du dollar » avec Clint Eastwood. Leone y impose le style du western spaghetti : gros plans sur les regards, silences, et musique d'Ennio Morricone."
+  },
+  {
+    "id": "realisateurs-m2",
+    "enonce": "Quel cinéaste de la Nouvelle Vague a réalisé « Les Quatre Cents Coups » (1959) ?",
+    "choix": ["François Truffaut", "Jean-Luc Godard", "Éric Rohmer", "Claude Chabrol"],
+    "bonneReponse": 0,
+    "explication": "Ancien critique aux « Cahiers du cinéma », Truffaut y crée Antoine Doinel, joué par Jean-Pierre Léaud, qu'il suivra dans quatre autres films. Le film obtient le prix de la mise en scène à Cannes."
+  },
+  {
+    "id": "realisateurs-m3",
+    "enonce": "Quel réalisateur a signé « 2001, l'Odyssée de l'espace », « Orange mécanique » et « Full Metal Jacket » ?",
+    "choix": ["Ridley Scott", "Andreï Tarkovski", "Francis Ford Coppola", "Stanley Kubrick"],
+    "bonneReponse": 3,
+    "explication": "Perfectionniste célèbre pour ses dizaines de prises, Kubrick a abordé presque tous les genres : science-fiction, guerre, horreur, film historique. Installé en Angleterre, il ne tournait plus aux États-Unis."
+  },
+  {
+    "id": "realisateurs-m4",
+    "enonce": "Quel réalisateur a signé « Seven », « Fight Club » et « The Social Network » ?",
+    "choix": ["Darren Aronofsky", "David Fincher", "Steven Soderbergh", "Christopher Nolan"],
+    "bonneReponse": 1,
+    "explication": "Venu du clip vidéo et de la publicité, David Fincher est réputé pour son image sombre et millimétrée, et pour son goût des prises multiples."
+  },
+  {
+    "id": "realisateurs-m5",
+    "enonce": "Quel réalisateur japonais a signé « Les Sept Samouraïs » (1954) ?",
+    "choix": ["Yasujirō Ozu", "Kenji Mizoguchi", "Akira Kurosawa", "Masaki Kobayashi"],
+    "bonneReponse": 2,
+    "explication": "Le film a été transposé en western avec « Les Sept Mercenaires » (1960). George Lucas s'est aussi inspiré de « La Forteresse cachée » (1958), du même Kurosawa, pour « La Guerre des étoiles »."
+  },
+  {
+    "id": "realisateurs-m6",
+    "enonce": "Quel réalisateur québécois a signé « Premier Contact » (2016) et « Dune » (2021) ?",
+    "choix": ["Xavier Dolan", "Jean-Marc Vallée", "Denys Arcand", "Denis Villeneuve"],
+    "bonneReponse": 3,
+    "explication": "Révélé par « Incendies » (2010), Villeneuve a ensuite repris un monument de la SF avec « Blade Runner 2049 » (2017), avant d'adapter le roman de Frank Herbert en deux parties."
+  },
+  {
+    "id": "realisateurs-m7",
+    "enonce": "Quel réalisateur mexicain a remporté l'Oscar de la réalisation pour « Gravity » (2013) puis pour « Roma » (2018) ?",
+    "choix": ["Alfonso Cuarón", "Alejandro G. Iñárritu", "Guillermo del Toro", "Carlos Reygadas"],
+    "bonneReponse": 0,
+    "explication": "Avec ses amis Iñárritu (« Birdman », « The Revenant ») et del Toro (« La Forme de l'eau »), surnommés les « Three Amigos », il a raflé cinq Oscars de la réalisation en six ans, de 2014 à 2019."
+  },
+  {
+    "id": "realisateurs-m8",
+    "enonce": "Qui est la première femme à avoir remporté l'Oscar de la meilleure réalisation, en 2010 ?",
+    "choix": ["Sofia Coppola", "Kathryn Bigelow", "Jane Campion", "Greta Gerwig"],
+    "bonneReponse": 1,
+    "explication": "Kathryn Bigelow l'emporte pour « Démineurs », face à son ex-mari James Cameron et son « Avatar ». Chloé Zhao (2021) et Jane Campion (2022) lui ont succédé."
+  },
+  {
+    "id": "realisateurs-m9",
+    "enonce": "Quelle réalisatrice française a remporté la Palme d'or 2021 avec « Titane » ?",
+    "choix": ["Céline Sciamma", "Justine Triet", "Julia Ducournau", "Alice Diop"],
+    "bonneReponse": 2,
+    "explication": "Julia Ducournau devient la deuxième femme palmée, après Jane Campion pour « La Leçon de piano » (1993). Justine Triet sera la troisième en 2023, avec « Anatomie d'une chute »."
+  },
+  {
+    "id": "realisateurs-m10",
+    "enonce": "Quel réalisateur hongkongais a signé « In the Mood for Love » (2000) ?",
+    "choix": ["John Woo", "Wong Kar-wai", "Ang Lee", "Zhang Yimou"],
+    "bonneReponse": 1,
+    "explication": "Reconnaissable à ses éternelles lunettes noires, Wong Kar-wai filme les amours impossibles avec des ralentis et des couleurs saturées. Tony Leung a reçu pour ce film le prix d'interprétation à Cannes."
+  }
+]

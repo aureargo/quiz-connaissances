@@ -1,0 +1,72 @@
+[
+  {
+    "id": "films-70-e1",
+    "enonce": "Quel film de Robert Enrico a reçu le tout premier César du meilleur film, en 1976 ?",
+    "choix": ["Les Valseuses", "Cousin, cousine", "Le Vieux Fusil", "Le Juge et l'Assassin"],
+    "bonneReponse": 2,
+    "explication": "Avec Philippe Noiret et Romy Schneider, ce drame sous l'Occupation remporte aussi le César du meilleur acteur et celui de la musique, décerné à titre posthume à François de Roubaix."
+  },
+  {
+    "id": "films-70-e2",
+    "enonce": "Pour qui avaient été conçus les objectifs ultra-lumineux utilisés par Kubrick pour filmer à la bougie dans « Barry Lyndon » (1975) ?",
+    "choix": ["L'armée américaine", "La NASA", "Le CERN", "L'observatoire du mont Palomar"],
+    "bonneReponse": 1,
+    "explication": "Ces objectifs Zeiss 50 mm ouverts à f/0,7 avaient été fabriqués pour le programme Apollo. Kubrick a pu tourner des scènes d'intérieur éclairées uniquement par des chandelles."
+  },
+  {
+    "id": "films-70-e3",
+    "enonce": "Quelle société d'effets spéciaux George Lucas a-t-il fondée en 1975 pour « La Guerre des étoiles » ?",
+    "choix": ["Digital Domain", "Rhythm & Hues Studios", "Weta Workshop", "Industrial Light & Magic"],
+    "bonneReponse": 3,
+    "explication": "ILM a révolutionné les effets visuels avec sa caméra pilotée par ordinateur. Une autre branche de Lucasfilm, la division informatique, deviendra Pixar en 1986."
+  },
+  {
+    "id": "films-70-e4",
+    "enonce": "Quel surnom l'équipe des « Dents de la mer » (1975) donnait-elle au requin mécanique ?",
+    "choix": ["Bruce", "Moby", "Jaws", "Benchley"],
+    "bonneReponse": 0,
+    "explication": "Il porte le prénom de l'avocat de Spielberg. Souvent en panne dans l'eau salée, le requin a obligé le réalisateur à suggérer sa présence (vue subjective, barils jaunes) : une contrainte qui a renforcé le suspense."
+  },
+  {
+    "id": "films-70-e5",
+    "enonce": "Quel artiste suisse a conçu la créature d'« Alien, le huitième passager » (1979) ?",
+    "choix": ["Moebius", "H. R. Giger", "Syd Mead", "Ron Cobb"],
+    "bonneReponse": 1,
+    "explication": "Giger s'inspire de son recueil « Necronomicon » et partage l'Oscar des effets visuels. Le Français Moebius a dessiné les combinaisons spatiales, et Ron Cobb une partie du vaisseau Nostromo."
+  },
+  {
+    "id": "films-70-e6",
+    "enonce": "Quel film australien de 1979 a longtemps détenu le record du rapport recettes/budget dans le Guinness des records ?",
+    "choix": ["Pique-nique à Hanging Rock", "Razorback", "Crocodile Dundee", "Mad Max"],
+    "bonneReponse": 3,
+    "explication": "Tourné pour environ 350 000 dollars australiens par George Miller, avec un Mel Gibson inconnu, il a rapporté environ 100 millions de dollars. Son record ne tombera qu'avec « Le Projet Blair Witch » (1999)."
+  },
+  {
+    "id": "films-70-e7",
+    "enonce": "Dans « Stalker » (1979) d'Andreï Tarkovski, que cache la mystérieuse « Zone » ?",
+    "choix": ["Un vaisseau extraterrestre", "Une chambre qui exauce les vœux", "Une source de jeunesse", "Un passage vers le passé"],
+    "bonneReponse": 1,
+    "explication": "Un passeur, le « stalker », y guide un écrivain et un scientifique vers une chambre censée réaliser le désir le plus profond. Le film adapte « Pique-nique au bord du chemin » des frères Strougatski."
+  },
+  {
+    "id": "films-70-e8",
+    "enonce": "Quel acteur a reçu à titre posthume l'Oscar du meilleur acteur pour « Network » (1976) ?",
+    "choix": ["William Holden", "Robert Duvall", "Peter Finch", "Ned Beatty"],
+    "bonneReponse": 2,
+    "explication": "Peter Finch, mort en janvier 1977, incarnait le présentateur Howard Beale (« I'm as mad as hell! »). C'est le premier Oscar d'interprétation décerné à titre posthume. Les trois autres acteurs jouent aussi dans le film."
+  },
+  {
+    "id": "films-70-e9",
+    "enonce": "Quel acteur incarne le conquistador halluciné d'« Aguirre, la colère de Dieu » (1972) de Werner Herzog ?",
+    "choix": ["Klaus Kinski", "Bruno Ganz", "Rutger Hauer", "Max von Sydow"],
+    "bonneReponse": 0,
+    "explication": "Tourné en pleine Amazonie péruvienne, le film lance la collaboration tumultueuse entre Herzog et Kinski, que le réalisateur racontera dans le documentaire « Ennemi intime » (1999)."
+  },
+  {
+    "id": "films-70-e10",
+    "enonce": "Quelle suite fut la première à remporter l'Oscar du meilleur film ?",
+    "choix": ["French Connection II", "Les Dents de la mer 2", "L'Exorciste II", "Le Parrain, 2e partie"],
+    "bonneReponse": 3,
+    "explication": "Coppola remporte l'Oscar en 1975, et Robert De Niro celui du second rôle pour un Vito Corleone jeune qui parle presque uniquement sicilien. Il faudra attendre « Le Retour du roi » (2003) pour qu'une autre suite gagne."
+  }
+]

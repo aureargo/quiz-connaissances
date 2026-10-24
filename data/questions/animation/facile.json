@@ -1,0 +1,72 @@
+[
+  {
+    "id": "animation-f1",
+    "enonce": "Comment s'appelle le cow-boy jouet, héros de « Toy Story » (1995) ?",
+    "choix": ["Buzz", "Woody", "Rex", "Bayonne"],
+    "bonneReponse": 1,
+    "explication": "Woody, doublé par Tom Hanks en version originale, voit sa place de jouet préféré menacée par Buzz l'Éclair. « Toy Story » est le premier long métrage entièrement réalisé en images de synthèse."
+  },
+  {
+    "id": "animation-f2",
+    "enonce": "Dans « Mon voisin Totoro » (1988), quel véhicule fantastique Totoro emprunte-t-il ?",
+    "choix": ["Un dragon", "Un train fantôme", "Un Chatbus", "Un dirigeable"],
+    "bonneReponse": 2,
+    "explication": "Le Chatbus, un chat géant à douze pattes creux comme un autobus, file à travers la campagne. Totoro, lui, est devenu le logo du studio Ghibli."
+  },
+  {
+    "id": "animation-f3",
+    "enonce": "Dans « Ratatouille » (2007) de Pixar, quel animal rêve de devenir grand chef à Paris ?",
+    "choix": ["Un rat", "Une souris", "Un chat", "Un hamster"],
+    "bonneReponse": 0,
+    "explication": "Rémy, rat au palais exceptionnel, suit la devise du chef Auguste Gusteau : « Tout le monde peut cuisiner ». Il guide le commis Linguini en lui tirant les cheveux."
+  },
+  {
+    "id": "animation-f4",
+    "enonce": "Quel studio a produit « Shrek » (2001) ?",
+    "choix": ["Pixar", "Disney", "Blue Sky", "DreamWorks"],
+    "bonneReponse": 3,
+    "explication": "DreamWorks Animation, cofondé par l'ancien dirigeant de Disney Jeffrey Katzenberg, parodie les contes de fées de son ancien employeur. « Shrek » a remporté le tout premier Oscar du meilleur film d'animation, en 2002."
+  },
+  {
+    "id": "animation-f5",
+    "enonce": "Quelle chanson Elsa interprète-t-elle dans la version française de « La Reine des neiges » (2013) ?",
+    "choix": ["« Ce rêve bleu »", "« Libérée, délivrée »", "« Hakuna Matata »", "« Sous l'océan »"],
+    "bonneReponse": 1,
+    "explication": "C'est l'adaptation de « Let It Go », Oscar de la meilleure chanson originale. Les autres titres viennent d'« Aladdin », du « Roi lion » et de « La Petite Sirène »."
+  },
+  {
+    "id": "animation-f6",
+    "enonce": "Quel studio britannique a créé « Wallace et Gromit » ?",
+    "choix": ["Aardman", "Laika", "Pixar", "Ghibli"],
+    "bonneReponse": 0,
+    "explication": "Basé à Bristol, Aardman anime ses personnages en pâte à modeler, image par image (stop-motion). Nick Park y a créé l'inventeur Wallace et son chien Gromit, qui ne parle jamais."
+  },
+  {
+    "id": "animation-f7",
+    "enonce": "Quel est le tout premier long métrage d'animation des studios Disney (1937) ?",
+    "choix": ["Pinocchio", "Cendrillon", "Blanche-Neige", "Bambi"],
+    "bonneReponse": 2,
+    "explication": "Avant la sortie de « Blanche-Neige et les Sept Nains », Hollywood surnommait le projet « la folie de Disney » : personne ne croyait qu'un dessin animé puisse tenir 80 minutes. Il est devenu l'un des plus grands succès de son époque."
+  },
+  {
+    "id": "animation-f8",
+    "enonce": "Dans « Kiki la petite sorcière » (1989) de Miyazaki, quelle activité Kiki lance-t-elle en ville ?",
+    "choix": ["Une boulangerie", "Une école de magie", "Un salon de thé", "Un service de livraison"],
+    "bonneReponse": 3,
+    "explication": "À 13 ans, Kiki doit vivre seule un an pour devenir sorcière. Hébergée chez une boulangère, elle livre des colis sur son balai, accompagnée de son chat noir Jiji."
+  },
+  {
+    "id": "animation-f9",
+    "enonce": "Dans « Les Indestructibles » (2004), quel super-pouvoir possède le jeune Flèche ?",
+    "choix": ["L'invisibilité", "La super-vitesse", "L'élasticité", "La super-force"],
+    "bonneReponse": 1,
+    "explication": "Flèche (Dash en VO) court si vite qu'il traverse l'eau. Sa sœur Violette devient invisible, sa mère Elastigirl s'étire et son père, M. Indestructible, possède une force colossale."
+  },
+  {
+    "id": "animation-f10",
+    "enonce": "Quelle fête mexicaine est au cœur de « Coco » (2017) de Pixar ?",
+    "choix": ["Le carnaval", "La fête de l'indépendance", "Le jour des Morts", "La Saint-Jean"],
+    "bonneReponse": 2,
+    "explication": "Le jeune Miguel, passionné de guitare, se retrouve au pays des morts pendant le Día de Muertos, où les familles honorent leurs défunts avec des autels et des fleurs orange (cempasúchil)."
+  }
+]

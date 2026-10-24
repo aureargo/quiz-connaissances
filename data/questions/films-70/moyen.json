@@ -1,0 +1,72 @@
+[
+  {
+    "id": "films-70-m1",
+    "enonce": "Quel film de 1975 a remporté les cinq Oscars majeurs (film, réalisation, acteur, actrice, scénario) ?",
+    "choix": ["Les Dents de la mer", "Barry Lyndon", "Vol au-dessus d'un nid de coucou", "Un après-midi de chien"],
+    "bonneReponse": 2,
+    "explication": "Le film de Miloš Forman, avec Jack Nicholson, est le deuxième à réussir ce « grand chelem » après « New York-Miami » (1934). « Le Silence des agneaux » (1991) sera le troisième."
+  },
+  {
+    "id": "films-70-m2",
+    "enonce": "Quel acteur lance « You talkin' to me? » face à son miroir dans « Taxi Driver » (1976) ?",
+    "choix": ["Al Pacino", "Robert De Niro", "Harvey Keitel", "Dustin Hoffman"],
+    "bonneReponse": 1,
+    "explication": "De Niro y incarne Travis Bickle, chauffeur de taxi insomniaque. Le film de Martin Scorsese, écrit par Paul Schrader, a reçu la Palme d'or 1976."
+  },
+  {
+    "id": "films-70-m3",
+    "enonce": "De quel roman « Apocalypse Now » (1979) de Francis Ford Coppola est-il librement adapté ?",
+    "choix": ["Sa Majesté des mouches", "Moby Dick", "L'Île au trésor", "Au cœur des ténèbres"],
+    "bonneReponse": 3,
+    "explication": "Coppola transpose le roman de Joseph Conrad, situé au Congo, dans la guerre du Vietnam : la remontée du fleuve mène au colonel Kurtz, joué par Marlon Brando."
+  },
+  {
+    "id": "films-70-m4",
+    "enonce": "Quel film de Stanley Kubrick (1971) suit le violent Alex et sa bande de « droogs » ?",
+    "choix": ["Orange mécanique", "Barry Lyndon", "Shining", "Lolita"],
+    "bonneReponse": 0,
+    "explication": "Adapté du roman d'Anthony Burgess, le film montre Alex « reconditionné » par la méthode Ludovico. Après des menaces, Kubrick l'a lui-même retiré des salles britanniques jusqu'à sa mort."
+  },
+  {
+    "id": "films-70-m5",
+    "enonce": "Dans « Chinatown » (1974) de Roman Polanski, quel acteur joue le détective privé J. J. Gittes ?",
+    "choix": ["Warren Beatty", "Gene Hackman", "Jack Nicholson", "Robert Redford"],
+    "bonneReponse": 2,
+    "explication": "Ce néo-noir situé dans le Los Angeles des années 1930 tourne autour d'un scandale de détournement d'eau. Robert Towne a remporté l'Oscar du meilleur scénario original."
+  },
+  {
+    "id": "films-70-m6",
+    "enonce": "Face à quel film « Annie Hall » de Woody Allen a-t-il remporté l'Oscar du meilleur film 1978 ?",
+    "choix": ["Les Dents de la mer", "La Guerre des étoiles", "Superman", "Rencontres du troisième type"],
+    "bonneReponse": 1,
+    "explication": "« La Guerre des étoiles » était nommé, mais l'Académie a préféré la comédie romantique new-yorkaise de Woody Allen. « Rencontres du troisième type », sorti la même année, n'était pas nommé dans cette catégorie."
+  },
+  {
+    "id": "films-70-m7",
+    "enonce": "Quel cinéaste français joue un scientifique dans « Rencontres du troisième type » (1977) de Spielberg ?",
+    "choix": ["Jean-Luc Godard", "Claude Lelouch", "Louis Malle", "François Truffaut"],
+    "bonneReponse": 3,
+    "explication": "Truffaut y incarne Claude Lacombe, personnage inspiré de l'ufologue français Jacques Vallée. Avec ses gestes de la main, il dialogue en musique avec les extraterrestres."
+  },
+  {
+    "id": "films-70-m8",
+    "enonce": "Quel film de Michael Cimino (1978) suit trois ouvriers sidérurgistes de Pennsylvanie partis au Vietnam ?",
+    "choix": ["Voyage au bout de l'enfer", "Apocalypse Now", "Platoon", "Le Retour"],
+    "bonneReponse": 0,
+    "explication": "Célèbre pour ses scènes de roulette russe, le film a remporté l'Oscar du meilleur film, et Christopher Walken celui du second rôle. « Platoon » date de 1986."
+  },
+  {
+    "id": "films-70-m9",
+    "enonce": "Quel acteur joue « Le Grand Blond avec une chaussure noire » (1972) d'Yves Robert ?",
+    "choix": ["Jean Rochefort", "Pierre Richard", "Jean-Pierre Marielle", "Gérard Depardieu"],
+    "bonneReponse": 1,
+    "explication": "Pierre Richard incarne François Perrin, violoniste distrait pris pour un agent secret. Jean Rochefort y joue le colonel Toulouse, le chef des services qui monte le piège."
+  },
+  {
+    "id": "films-70-m10",
+    "enonce": "Comment s'appelle le tueur masqué de « Halloween » (1978) de John Carpenter ?",
+    "choix": ["Jason Voorhees", "Freddy Krueger", "Michael Myers", "Leatherface"],
+    "bonneReponse": 2,
+    "explication": "Son masque est un masque du capitaine Kirk (« Star Trek ») repeint en blanc, acheté pour quelques dollars. Jason apparaît dans « Vendredi 13 » (1980), Freddy en 1984, Leatherface en 1974."
+  }
+]

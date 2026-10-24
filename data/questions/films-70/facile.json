@@ -1,0 +1,72 @@
+[
+  {
+    "id": "films-70-f1",
+    "enonce": "Dans « Les Dents de la mer » (1975) de Steven Spielberg, quel animal terrorise la station balnéaire d'Amity ?",
+    "choix": ["Une orque", "Un requin blanc", "Un crocodile", "Un calmar géant"],
+    "bonneReponse": 1,
+    "explication": "Adapté du roman de Peter Benchley, le film est souvent considéré comme le premier « blockbuster » de l'été. Son thème à deux notes, signé John Williams, suffit à annoncer le requin."
+  },
+  {
+    "id": "films-70-f2",
+    "enonce": "Quel cinéaste a écrit et réalisé « La Guerre des étoiles » (1977) ?",
+    "choix": ["Steven Spielberg", "Francis Ford Coppola", "George Lucas", "Ridley Scott"],
+    "bonneReponse": 2,
+    "explication": "George Lucas a écrit et réalisé le premier film, rebaptisé plus tard « Épisode IV – Un nouvel espoir ». Il a ensuite confié la réalisation des deux suites à d'autres."
+  },
+  {
+    "id": "films-70-f3",
+    "enonce": "Dans « Le Parrain » (1972), quel acteur incarne Don Vito Corleone ?",
+    "choix": ["Al Pacino", "Robert De Niro", "James Caan", "Marlon Brando"],
+    "bonneReponse": 3,
+    "explication": "Marlon Brando a obtenu l'Oscar du meilleur acteur pour ce rôle, qu'il a refusé pour protester contre le traitement des Amérindiens. Al Pacino joue son fils Michael ; De Niro incarnera Vito jeune dans « Le Parrain II » (1974)."
+  },
+  {
+    "id": "films-70-f4",
+    "enonce": "Dans « Alien, le huitième passager » (1979), quel personnage joué par Sigourney Weaver affronte la créature ?",
+    "choix": ["Ellen Ripley", "Sarah Connor", "Dana Scully", "Clarice Starling"],
+    "bonneReponse": 0,
+    "explication": "Ripley est l'officier du cargo spatial Nostromo. Le scénario de Dan O'Bannon précisait que chaque rôle pouvait être joué par un homme ou une femme : c'est ainsi qu'est née l'une des premières grandes héroïnes d'action."
+  },
+  {
+    "id": "films-70-f5",
+    "enonce": "Dans « La Fièvre du samedi soir » (1977), quelle passion anime Tony Manero, joué par John Travolta ?",
+    "choix": ["La boxe", "Le rock'n'roll", "Le surf", "La danse disco"],
+    "bonneReponse": 3,
+    "explication": "Vendeur le jour, Tony devient roi de la piste le samedi soir. La bande originale des Bee Gees (« Stayin' Alive ») est l'une des plus vendues de l'histoire."
+  },
+  {
+    "id": "films-70-f6",
+    "enonce": "Quel film de 1978 avec Christopher Reeve avait pour slogan « Vous croirez qu'un homme peut voler » ?",
+    "choix": ["Batman", "Superman", "Flash Gordon", "Spider-Man"],
+    "bonneReponse": 1,
+    "explication": "« Superman » de Richard Donner a montré qu'un film de super-héros pouvait être un grand spectacle. Marlon Brando y joue Jor-El, le père kryptonien du héros."
+  },
+  {
+    "id": "films-70-f7",
+    "enonce": "Dans « Grease » (1978), quel couple forment John Travolta et Olivia Newton-John ?",
+    "choix": ["Danny et Sandy", "Tony et Maria", "Johnny et Baby", "Sam et Molly"],
+    "bonneReponse": 0,
+    "explication": "Danny Zuko, le blouson noir, et Sandy, la gentille étudiante, s'aiment au lycée Rydell des années 1950. Les autres couples viennent de « West Side Story », « Dirty Dancing » et « Ghost »."
+  },
+  {
+    "id": "films-70-f8",
+    "enonce": "Quel film de William Friedkin (1973) raconte la possession démoniaque de la jeune Regan ?",
+    "choix": ["La Malédiction", "Carrie", "L'Exorciste", "Amityville"],
+    "bonneReponse": 2,
+    "explication": "Adapté du roman de William Peter Blatty, « L'Exorciste » est le premier film d'horreur nommé à l'Oscar du meilleur film. « La Malédiction » et « Carrie » datent de 1976, « Amityville » de 1979."
+  },
+  {
+    "id": "films-70-f9",
+    "enonce": "Dans « Les Aventures de Rabbi Jacob » (1973), quel acteur joue Victor Pivert, contraint de se déguiser en rabbin ?",
+    "choix": ["Bourvil", "Louis de Funès", "Fernandel", "Jean Gabin"],
+    "bonneReponse": 1,
+    "explication": "Louis de Funès y incarne un industriel raciste et colérique, entraîné malgré lui dans une aventure qui le force à danser avec des hassidim. Le film de Gérard Oury est un classique de la comédie française."
+  },
+  {
+    "id": "films-70-f10",
+    "enonce": "Quel acteur incarne l'inspecteur Harry Callahan dans « L'Inspecteur Harry » (1971) ?",
+    "choix": ["Charles Bronson", "Steve McQueen", "Robert Redford", "Clint Eastwood"],
+    "bonneReponse": 3,
+    "explication": "Réalisé par Don Siegel, le film impose Clint Eastwood en policier aux méthodes expéditives, armé de son Magnum .44. Il reprendra le rôle dans quatre suites."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "realisateurs-e1",
+    "enonce": "Quel cinéaste soviétique, grand théoricien du montage, a réalisé « Le Cuirassé Potemkine » (1925) ?",
+    "choix": ["Dziga Vertov", "Sergueï Eisenstein", "Andreï Tarkovski", "Vsevolod Poudovkine"],
+    "bonneReponse": 1,
+    "explication": "Sa scène de l'escalier d'Odessa, avec le landau qui dévale les marches, est l'une des plus citées du cinéma. Brian De Palma la reprend dans « Les Incorruptibles » (1987)."
+  },
+  {
+    "id": "realisateurs-e2",
+    "enonce": "Quel cinéaste britannique a remporté deux Palmes d'or, pour « Le vent se lève » (2006) et « Moi, Daniel Blake » (2016) ?",
+    "choix": ["Mike Leigh", "Stephen Frears", "Danny Boyle", "Ken Loach"],
+    "bonneReponse": 3,
+    "explication": "Ken Loach est le cinéaste du réalisme social britannique : chômage, syndicats, précarité. Mike Leigh a lui aussi reçu une Palme d'or, en 1996, pour « Secrets et Mensonges »."
+  },
+  {
+    "id": "realisateurs-e3",
+    "enonce": "Quel réalisateur suédois a signé « Le Septième Sceau » (1957), où un chevalier joue aux échecs contre la Mort ?",
+    "choix": ["Ingmar Bergman", "Victor Sjöström", "Carl Theodor Dreyer", "Bo Widerberg"],
+    "bonneReponse": 0,
+    "explication": "Max von Sydow y incarne le chevalier Antonius Block, de retour des croisades dans une Suède ravagée par la peste. Le Danois Dreyer et le Suédois Sjöström sont des pionniers du cinéma nordique."
+  },
+  {
+    "id": "realisateurs-e4",
+    "enonce": "Quel âge avait Orson Welles lorsqu'il a tourné « Citizen Kane » (1941) ?",
+    "choix": ["19 ans", "32 ans", "25 ans", "40 ans"],
+    "bonneReponse": 2,
+    "explication": "Célèbre pour sa fausse invasion martienne à la radio (« La Guerre des mondes », 1938), Welles obtient de la RKO un contrat d'une liberté inédite. Il réalise, coécrit et joue le rôle-titre."
+  },
+  {
+    "id": "realisateurs-e5",
+    "enonce": "Quel réalisateur japonais est célèbre pour ses plans fixes filmés à hauteur de tatami, comme dans « Voyage à Tokyo » (1953) ?",
+    "choix": ["Kenji Mizoguchi", "Akira Kurosawa", "Mikio Naruse", "Yasujirō Ozu"],
+    "bonneReponse": 3,
+    "explication": "Ozu place sa caméra très bas et ne la bouge presque jamais. En 2012, les réalisateurs interrogés par la revue « Sight & Sound » ont élu « Voyage à Tokyo » meilleur film de tous les temps."
+  },
+  {
+    "id": "realisateurs-e6",
+    "enonce": "Quel réalisateur détient le record de quatre Oscars de la meilleure réalisation ?",
+    "choix": ["William Wyler", "John Ford", "Frank Capra", "Steven Spielberg"],
+    "bonneReponse": 1,
+    "explication": "Paradoxe pour le maître du western : aucun de ses quatre Oscars ne récompense un western. Parmi les films primés : « Les Raisins de la colère » (1940) et « L'Homme tranquille » (1952). Wyler et Capra en ont trois, Spielberg deux."
+  },
+  {
+    "id": "realisateurs-e7",
+    "enonce": "Quelle réalisatrice, surnommée « la grand-mère de la Nouvelle Vague », a signé « Cléo de 5 à 7 » (1962) ?",
+    "choix": ["Chantal Akerman", "Marguerite Duras", "Agnès Varda", "Claire Denis"],
+    "bonneReponse": 2,
+    "explication": "Son premier film, « La Pointe courte » (1955), annonçait la Nouvelle Vague avec quatre ans d'avance. Agnès Varda a reçu un Oscar d'honneur en 2017."
+  },
+  {
+    "id": "realisateurs-e8",
+    "enonce": "Quel cinéaste allemand a réalisé « Nosferatu le vampire » (1922) ?",
+    "choix": ["F. W. Murnau", "Fritz Lang", "Robert Wiene", "G. W. Pabst"],
+    "bonneReponse": 0,
+    "explication": "Adaptation non autorisée de « Dracula », le film a été condamné en justice à la demande de la veuve de Bram Stoker, qui a obtenu la destruction des copies. Quelques-unes ont heureusement survécu."
+  },
+  {
+    "id": "realisateurs-e9",
+    "enonce": "Quel réalisateur français, maître du polar, a signé « Le Samouraï » (1967) avec Alain Delon ?",
+    "choix": ["Henri-Georges Clouzot", "Jacques Becker", "José Giovanni", "Jean-Pierre Melville"],
+    "bonneReponse": 3,
+    "explication": "Né Grumbach, il a choisi son pseudonyme en hommage à l'auteur de « Moby Dick ». Son style épuré a inspiré John Woo (« The Killer ») et Jim Jarmusch (« Ghost Dog »)."
+  },
+  {
+    "id": "realisateurs-e10",
+    "enonce": "Quel pionnier du cinéma, ancien illusionniste, a réalisé « Le Voyage dans la Lune » (1902) ?",
+    "choix": ["Louis Lumière", "Émile Cohl", "Georges Méliès", "Alice Guy"],
+    "bonneReponse": 2,
+    "explication": "Dans son studio de Montreuil, Méliès invente de nombreux trucages, comme l'arrêt de caméra pour faire disparaître un personnage. Scorsese lui rend hommage dans « Hugo Cabret » (2011)."
+  }
+]

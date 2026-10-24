@@ -1,0 +1,72 @@
+[
+  {
+    "id": "realisateurs-f1",
+    "enonce": "Quel réalisateur a signé « Les Dents de la mer », « E.T. » et « Jurassic Park » ?",
+    "choix": ["George Lucas", "Steven Spielberg", "James Cameron", "Ridley Scott"],
+    "bonneReponse": 1,
+    "explication": "Steven Spielberg a inventé le blockbuster moderne, mais aussi signé des drames historiques comme « La Liste de Schindler » (1993), qui lui a valu son premier Oscar de la réalisation."
+  },
+  {
+    "id": "realisateurs-f2",
+    "enonce": "Quel « maître du suspense » a réalisé « Psychose » (1960) et « Les Oiseaux » (1963) ?",
+    "choix": ["Fritz Lang", "Orson Welles", "Alfred Hitchcock", "Billy Wilder"],
+    "bonneReponse": 2,
+    "explication": "Hitchcock apparaît furtivement dans la plupart de ses films, un jeu que les spectateurs guettaient. Paradoxalement, il n'a jamais remporté l'Oscar de la meilleure réalisation."
+  },
+  {
+    "id": "realisateurs-f3",
+    "enonce": "Quel réalisateur néo-zélandais a porté « Le Seigneur des anneaux » à l'écran ?",
+    "choix": ["Taika Waititi", "Jane Campion", "Andrew Adamson", "Peter Jackson"],
+    "bonneReponse": 3,
+    "explication": "Peter Jackson a tourné les trois films d'un seul tenant en Nouvelle-Zélande. « Le Retour du roi » a remporté 11 Oscars, un record partagé avec « Ben-Hur » et « Titanic »."
+  },
+  {
+    "id": "realisateurs-f4",
+    "enonce": "Quel réalisateur, ancien employé de vidéoclub, a signé « Reservoir Dogs » (1992) ?",
+    "choix": ["Quentin Tarantino", "Robert Rodriguez", "Kevin Smith", "Guy Ritchie"],
+    "bonneReponse": 0,
+    "explication": "Tarantino s'est forgé sa culture en travaillant au vidéoclub Video Archives, à Manhattan Beach. Ses films multiplient les références au cinéma de genre et les dialogues fleuves."
+  },
+  {
+    "id": "realisateurs-f5",
+    "enonce": "Quel réalisateur de « The Dark Knight » a remporté l'Oscar de la meilleure réalisation pour « Oppenheimer » (2023) ?",
+    "choix": ["Denis Villeneuve", "Sam Mendes", "Christopher Nolan", "Ridley Scott"],
+    "bonneReponse": 2,
+    "explication": "C'est le premier Oscar de Christopher Nolan. Défenseur de la pellicule, il a fait fabriquer pour l'occasion une pellicule IMAX en noir et blanc, qui n'existait pas encore."
+  },
+  {
+    "id": "realisateurs-f6",
+    "enonce": "Quel réalisateur canadien a signé « Terminator » (1984) et « Titanic » (1997) ?",
+    "choix": ["David Cronenberg", "James Cameron", "Denis Villeneuve", "Ivan Reitman"],
+    "bonneReponse": 1,
+    "explication": "James Cameron a signé plusieurs des plus gros succès de l'histoire du box-office, dont « Titanic » et « Avatar ». Passionné de fonds marins, il a plongé seul au fond de la fosse des Mariannes en 2012."
+  },
+  {
+    "id": "realisateurs-f7",
+    "enonce": "Quel réalisateur français a signé « Le Grand Bleu », « Léon » et « Le Cinquième Élément » ?",
+    "choix": ["Jean-Pierre Jeunet", "Jacques Audiard", "Mathieu Kassovitz", "Luc Besson"],
+    "bonneReponse": 3,
+    "explication": "Luc Besson a imposé un cinéma français à grand spectacle, tourné en anglais pour l'international. Il a fondé la société EuropaCorp et la Cité du cinéma de Saint-Denis."
+  },
+  {
+    "id": "realisateurs-f8",
+    "enonce": "Quel réalisateur a dirigé Louis de Funès et Bourvil dans « Le Corniaud » et « La Grande Vadrouille » ?",
+    "choix": ["Gérard Oury", "Claude Zidi", "Francis Veber", "Jean Girault"],
+    "bonneReponse": 0,
+    "explication": "Avec 17 millions d'entrées, « La Grande Vadrouille » (1966) est resté le plus grand succès en France jusqu'à « Titanic » en 1998. Oury retrouvera de Funès pour « La Folie des grandeurs » et « Rabbi Jacob »."
+  },
+  {
+    "id": "realisateurs-f9",
+    "enonce": "Quel réalisateur à l'univers gothique a signé « Beetlejuice » et « Edward aux mains d'argent » ?",
+    "choix": ["Sam Raimi", "Guillermo del Toro", "Tim Burton", "Terry Gilliam"],
+    "bonneReponse": 2,
+    "explication": "Tim Burton, ancien animateur chez Disney, a tourné huit films avec Johnny Depp, presque toujours sur une musique de Danny Elfman."
+  },
+  {
+    "id": "realisateurs-f10",
+    "enonce": "Quel réalisateur a tourné « Taxi Driver » et « Les Affranchis » avec Robert De Niro ?",
+    "choix": ["Francis Ford Coppola", "Martin Scorsese", "Brian De Palma", "Sergio Leone"],
+    "bonneReponse": 1,
+    "explication": "Scorsese et De Niro ont tourné une dizaine de longs métrages ensemble, de « Mean Streets » (1973) à « Killers of the Flower Moon » (2023). Scorsese a eu l'Oscar de la réalisation pour « Les Infiltrés » (2006)."
+  }
+]

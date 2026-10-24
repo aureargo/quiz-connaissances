@@ -357,6 +357,13 @@
     "description": "Dieux et héros de la Grèce, de Rome, du Nord et de l'Égypte."
   },
   {
+    "id": "films-70",
+    "nom": "Films des années 1970",
+    "emoji": "📽️",
+    "categorie": "Cinéma",
+    "description": "Le Nouvel Hollywood et les premiers blockbusters de 1970-1979."
+  },
+  {
     "id": "films-80",
     "nom": "Films des années 1980",
     "emoji": "🎬",
@@ -383,6 +390,20 @@
     "emoji": "🍿",
     "categorie": "Cinéma",
     "description": "Les grands films de la décennie 2010-2019."
+  },
+  {
+    "id": "animation",
+    "nom": "Animation (Pixar, Ghibli)",
+    "emoji": "🧸",
+    "categorie": "Cinéma",
+    "description": "Pixar, Ghibli, Disney, DreamWorks, Aardman : les grands films d'animation."
+  },
+  {
+    "id": "realisateurs",
+    "nom": "Réalisateurs",
+    "emoji": "🎭",
+    "categorie": "Cinéma",
+    "description": "De Méliès à Nolan : les cinéastes et leurs films marquants."
   },
   {
     "id": "histoire-france",

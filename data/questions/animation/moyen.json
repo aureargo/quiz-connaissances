@@ -1,0 +1,72 @@
+[
+  {
+    "id": "animation-m1",
+    "enonce": "Qui a racheté en 1986 la division informatique de Lucasfilm, qui allait devenir Pixar ?",
+    "choix": ["Bill Gates", "Paul Allen", "Steve Jobs", "Larry Ellison"],
+    "bonneReponse": 2,
+    "explication": "Steve Jobs, alors écarté d'Apple, l'achète pour environ 10 millions de dollars. Quand Disney rachète Pixar en 2006 pour 7,4 milliards, il devient le premier actionnaire individuel de Disney."
+  },
+  {
+    "id": "animation-m2",
+    "enonce": "Quel court métrage Pixar de 1986 met en scène la lampe de bureau devenue mascotte du studio ?",
+    "choix": ["Tin Toy", "Luxo Jr.", "Knick Knack", "Geri's Game"],
+    "bonneReponse": 1,
+    "explication": "Réalisé par John Lasseter, c'est le premier film en images de synthèse nommé aux Oscars. Depuis, la lampe sautille dans le générique de chaque film Pixar et écrase le « I » du logo."
+  },
+  {
+    "id": "animation-m3",
+    "enonce": "Quel réalisateur a cofondé le studio Ghibli avec Hayao Miyazaki en 1985 ?",
+    "choix": ["Isao Takahata", "Mamoru Oshii", "Katsuhiro Otomo", "Satoshi Kon"],
+    "bonneReponse": 0,
+    "explication": "Takahata, son aîné et mentor, a réalisé « Le Tombeau des lucioles » et « Pompoko ». Le producteur Toshio Suzuki complète le trio fondateur, avec le soutien de l'éditeur Tokuma Shoten."
+  },
+  {
+    "id": "animation-m4",
+    "enonce": "Que désigne à l'origine le mot « ghibli », choisi comme nom par le studio ?",
+    "choix": ["Un esprit de la forêt", "Une fleur de cerisier", "Un dragon des nuages", "Un vent chaud du Sahara"],
+    "bonneReponse": 3,
+    "explication": "Passionné d'aviation, Miyazaki connaissait ce mot comme nom d'un avion italien, le Caproni Ca.309 Ghibli. L'idée était de « souffler un vent nouveau » sur l'animation japonaise."
+  },
+  {
+    "id": "animation-m5",
+    "enonce": "Quelle est la tâche quotidienne du robot WALL-E, seul sur une Terre abandonnée ?",
+    "choix": ["Compacter les déchets", "Réparer les vaisseaux", "Planter des arbres", "Explorer l'espace"],
+    "bonneReponse": 0,
+    "explication": "Son nom signifie « Waste Allocation Load Lifter – Earth-Class ». Le film d'Andrew Stanton (2008) se passe presque de dialogues pendant son long premier acte."
+  },
+  {
+    "id": "animation-m6",
+    "enonce": "Dans « Le Voyage de Chihiro » (2001), quel nom la sorcière Yubaba impose-t-elle à Chihiro ?",
+    "choix": ["Haku", "Lin", "Sen", "Kaonashi"],
+    "bonneReponse": 2,
+    "explication": "En lui volant une partie de son nom, Yubaba la retient prisonnière. Le titre original, « Sen to Chihiro no kamikakushi », évoque l'enlèvement de « Sen et Chihiro » par les esprits."
+  },
+  {
+    "id": "animation-m7",
+    "enonce": "Dans « Porco Rosso » (1992) de Miyazaki, quel est le métier du héros à tête de cochon ?",
+    "choix": ["Capitaine de sous-marin", "Gardien de phare", "Pilote de course automobile", "Aviateur chasseur de primes"],
+    "bonneReponse": 3,
+    "explication": "Ancien as de la Grande Guerre, Marco chasse les pirates de l'air à bord de son hydravion rouge au-dessus de l'Adriatique. Le film reflète la passion de Miyazaki pour l'aviation."
+  },
+  {
+    "id": "animation-m8",
+    "enonce": "Quel film fut le premier long métrage d'animation nommé à l'Oscar du meilleur film ?",
+    "choix": ["Le Roi lion", "La Belle et la Bête", "Toy Story", "Aladdin"],
+    "bonneReponse": 1,
+    "explication": "Le Disney de 1991 obtient cette nomination historique en 1992. Seuls « Là-haut » (2009) et « Toy Story 3 » (2010) l'ont rejoint depuis, quand la catégorie s'est élargie à dix films."
+  },
+  {
+    "id": "animation-m9",
+    "enonce": "Dans « Le Château ambulant » (2004), quel démon de feu fait avancer le château ?",
+    "choix": ["Kodama", "Calcifer", "Jiji", "Kaonashi"],
+    "bonneReponse": 1,
+    "explication": "Calcifer est lié au magicien Hauru par un pacte. Les autres noms viennent d'autres films Ghibli : les Kodama de « Princesse Mononoké », Jiji de « Kiki », Kaonashi (le Sans-Visage) de « Chihiro »."
+  },
+  {
+    "id": "animation-m10",
+    "enonce": "Dans quelle ville sont animés les films « Moi, moche et méchant » et les « Minions » ?",
+    "choix": ["Londres", "Montréal", "Los Angeles", "Paris"],
+    "bonneReponse": 3,
+    "explication": "Le producteur américain Illumination confie l'animation à son studio parisien, l'ex-Mac Guff, racheté en 2011. Une large part des animateurs sont issus des écoles françaises comme les Gobelins."
+  }
+]
