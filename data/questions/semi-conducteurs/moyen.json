@@ -1,0 +1,72 @@
+[
+  {
+    "id": "semi-conducteurs-m1",
+    "enonce": "Quelle entreprise est la seule au monde à fabriquer des machines de lithographie EUV ?",
+    "choix": ["Nikon", "ASML", "Canon", "Applied Materials"],
+    "bonneReponse": 1,
+    "explication": "L'entreprise néerlandaise ASML, basée à Veldhoven, est l'unique fournisseur de scanners EUV, indispensables aux puces les plus fines. Une machine coûte plus de 150 millions d'euros, et plus du double pour la version High-NA. Nikon et Canon restent présents sur la lithographie DUV, moins avancée."
+  },
+  {
+    "id": "semi-conducteurs-m2",
+    "enonce": "Quelle est la longueur d'onde de la lumière utilisée en lithographie EUV ?",
+    "choix": ["193 nm", "248 nm", "365 nm", "13,5 nm"],
+    "bonneReponse": 3,
+    "explication": "L'EUV (ultraviolet extrême) travaille à 13,5 nm, contre 193 nm pour la lithographie DUV qui l'a précédée : une longueur d'onde plus courte permet de dessiner des motifs plus fins. Mais cette lumière est absorbée par presque tout, y compris l'air et le verre : la machine fonctionne sous vide et utilise des miroirs au lieu de lentilles."
+  },
+  {
+    "id": "semi-conducteurs-m3",
+    "enonce": "Qu'appelle-t-on le « dopage » du silicium ?",
+    "choix": ["l'ajout volontaire d'impuretés qui modifient sa conduction", "le chauffage du silicium pour le rendre plus pur", "le refroidissement intensif des puces pendant leurs tests", "le dépôt d'une couche de cuivre sur toute sa surface"],
+    "bonneReponse": 0,
+    "explication": "On introduit en quantité infime des atomes étrangers : du phosphore ou de l'arsenic, qui apportent des électrons en plus (silicium de type N), ou du bore, qui crée des « trous » (type P). C'est en juxtaposant des zones N et P qu'on fabrique diodes et transistors."
+  },
+  {
+    "id": "semi-conducteurs-m4",
+    "enonce": "Que mesure réellement le « 3 nm » d'un procédé de gravure moderne ?",
+    "choix": ["la longueur de la grille de chaque transistor", "l'écart entre deux puces voisines sur le wafer", "rien de précis : c'est un nom de génération", "l'épaisseur totale de la puce une fois gravée"],
+    "bonneReponse": 2,
+    "explication": "Les noms de nœuds ont décroché des dimensions physiques depuis longtemps : sur un « 3 nm », les grilles des transistors sont espacées d'environ 45 à 50 nm. Le chiffre sert surtout à situer une génération. Intel a d'ailleurs renommé ses procédés en 2021 (le 10 nm amélioré est devenu « Intel 7 ») pour s'aligner sur la concurrence."
+  },
+  {
+    "id": "semi-conducteurs-m5",
+    "enonce": "Quel type de transistor a succédé au transistor planaire, à partir de la gravure en 22 nm ?",
+    "choix": ["le GAAFET", "le JFET", "l'IGBT", "le FinFET"],
+    "bonneReponse": 3,
+    "explication": "Introduit par Intel en 2011-2012 (processeurs Ivy Bridge), le FinFET dresse le canal en forme d'aileron (fin), que la grille entoure sur trois côtés : elle contrôle mieux le courant et limite les fuites. Le GAAFET, dont la grille entoure complètement le canal, est son successeur, à partir du 3 ou du 2 nm."
+  },
+  {
+    "id": "semi-conducteurs-m6",
+    "enonce": "Que mesure le « rendement » (yield) d'une production de puces ?",
+    "choix": ["le nombre de wafers traités par heure", "la part de puces fonctionnelles sur un wafer", "l'énergie consommée pour graver une puce", "la vitesse maximale atteinte par une puce"],
+    "bonneReponse": 1,
+    "explication": "Des défauts aléatoires touchent toujours une partie des puces d'un wafer. Plus une puce est grande, plus elle a de chances d'en contenir un : le rendement baisse. Les puces partiellement défectueuses sont souvent vendues dans une gamme inférieure, avec des cœurs désactivés : c'est le « binning »."
+  },
+  {
+    "id": "semi-conducteurs-m7",
+    "enonce": "Laquelle de ces entreprises est « fabless », c'est-à-dire sans usine de fabrication ?",
+    "choix": ["Nvidia", "Intel", "Samsung", "Texas Instruments"],
+    "bonneReponse": 0,
+    "explication": "Nvidia conçoit ses GPU mais en confie la fabrication à TSMC (et parfois à Samsung). Intel, Samsung et Texas Instruments possèdent leurs propres usines : on les appelle des IDM (Integrated Device Manufacturers). AMD est elle aussi devenue fabless en 2009, en cédant ses usines à GlobalFoundries."
+  },
+  {
+    "id": "semi-conducteurs-m8",
+    "enonce": "Quel est le diamètre des wafers utilisés dans les usines de puces les plus modernes ?",
+    "choix": ["150 mm", "200 mm", "300 mm", "450 mm"],
+    "bonneReponse": 2,
+    "explication": "Le 300 mm est la norme des usines avancées depuis le début des années 2000 : un wafer plus grand donne davantage de puces pour un coût de traitement voisin. Le passage au 450 mm a été étudié puis abandonné au milieu des années 2010, faute d'accord sur le coût des nouvelles machines. Le 200 mm reste courant pour les puces moins avancées."
+  },
+  {
+    "id": "semi-conducteurs-m9",
+    "enonce": "En photolithographie, à quoi sert la résine photosensible étalée sur le wafer ?",
+    "choix": ["à refroidir le wafer pendant l'exposition", "à coller la puce dans son boîtier final", "à polir la surface du wafer avant gravure", "à reproduire sur le wafer le motif du masque"],
+    "bonneReponse": 3,
+    "explication": "La lumière traverse un masque (ou réticule) et insole la résine selon son motif. Au développement, les zones exposées (ou l'inverse, selon la résine) disparaissent : la résine restante protège le wafer pendant la gravure ou le dopage. L'opération est répétée pour chacune des dizaines de couches de la puce."
+  },
+  {
+    "id": "semi-conducteurs-m10",
+    "enonce": "Qu'est-ce qu'une architecture à « chiplets » ?",
+    "choix": ["une seule grande puce occupant tout un wafer", "plusieurs petites puces réunies dans un boîtier", "une puce découpée pour vendre ses cœurs à part", "un processeur dépourvu de mémoire cache"],
+    "bonneReponse": 1,
+    "explication": "Plutôt qu'une grande puce monolithique, on assemble plusieurs petites puces reliées dans un même boîtier. Les petites puces ont un meilleur rendement, et chacune peut utiliser le procédé le plus adapté. AMD a généralisé l'approche en 2019 avec Zen 2 : cœurs en 7 nm, entrées-sorties sur une puce en 12 ou 14 nm."
+  }
+]

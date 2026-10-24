@@ -224,6 +224,13 @@
     "description": "Dalles IPS, VA et OLED, taux de rafraîchissement, temps de réponse et HDR : bien choisir son écran."
   },
   {
+    "id": "semi-conducteurs",
+    "nom": "Semi-conducteurs",
+    "emoji": "🔬",
+    "categorie": "Matériel informatique",
+    "description": "Wafers, lithographie EUV, TSMC et loi de Moore : comment on grave les puces électroniques."
+  },
+  {
     "id": "sql",
     "nom": "SQL",
     "emoji": "🗃️",

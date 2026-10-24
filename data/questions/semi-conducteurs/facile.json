@@ -1,0 +1,72 @@
+[
+  {
+    "id": "semi-conducteurs-f1",
+    "enonce": "Quel élément chimique est le matériau de base de la grande majorité des puces électroniques ?",
+    "choix": ["le silicium", "le carbone", "le cuivre", "l'aluminium"],
+    "bonneReponse": 0,
+    "explication": "Le silicium est le deuxième élément le plus abondant de la croûte terrestre, après l'oxygène : on l'extrait de la silice (le sable, le quartz), puis on le purifie à l'extrême. Il a donné son nom à la Silicon Valley, berceau de l'industrie des puces en Californie."
+  },
+  {
+    "id": "semi-conducteurs-f2",
+    "enonce": "Que prédit la loi de Moore, dans sa version la plus connue ?",
+    "choix": ["la fréquence des processeurs double chaque année", "le prix des puces est divisé par deux chaque année", "le nombre de transistors double environ tous les deux ans", "la consommation des puces baisse de moitié tous les ans"],
+    "bonneReponse": 2,
+    "explication": "En 1965, Gordon Moore (futur cofondateur d'Intel) observe que le nombre de composants sur une puce double chaque année ; il révise sa prévision en 1975 : un doublement tous les deux ans. Ce n'est pas une loi physique mais une observation devenue l'objectif de toute l'industrie pendant des décennies."
+  },
+  {
+    "id": "semi-conducteurs-f3",
+    "enonce": "Quelle entreprise fabrique la plupart des puces conçues par Apple, AMD et Nvidia ?",
+    "choix": ["Intel", "TSMC", "Texas Instruments", "Micron"],
+    "bonneReponse": 1,
+    "explication": "TSMC (Taiwan Semiconductor Manufacturing Company), fondée en 1987 par Morris Chang, est le premier fondeur mondial. Elle ne vend pas de puces à son nom : elle fabrique celles que d'autres conçoivent, et domine largement la production des puces les plus avancées."
+  },
+  {
+    "id": "semi-conducteurs-f4",
+    "enonce": "Qu'est-ce qu'un transistor, la brique de base d'un processeur ?",
+    "choix": ["une petite pile qui stocke l'énergie", "un fil très fin qui relie deux composants", "un capteur qui mesure la chaleur de la puce", "un interrupteur commandé électriquement"],
+    "bonneReponse": 3,
+    "explication": "Un transistor laisse passer ou bloque le courant selon la tension appliquée sur sa commande (la grille) : c'est un interrupteur sans pièce mobile, qui code les 0 et les 1. Inventé en 1947 aux laboratoires Bell, il se compte aujourd'hui par dizaines de milliards sur une seule puce."
+  },
+  {
+    "id": "semi-conducteurs-f5",
+    "enonce": "Comment appelle-t-on le disque de silicium sur lequel on fabrique des centaines de puces à la fois ?",
+    "choix": ["un wafer", "un die", "un lingot", "un masque"],
+    "bonneReponse": 0,
+    "explication": "Le wafer (ou galette) est une tranche très fine découpée dans un lingot de silicium. On y grave des centaines de puces identiques, puis on le découpe : chaque puce découpée s'appelle un « die ». Le masque, lui, porte le motif à reproduire sur le wafer."
+  },
+  {
+    "id": "semi-conducteurs-f6",
+    "enonce": "Pourquoi les puces sont-elles fabriquées dans des « salles blanches » ?",
+    "choix": ["pour refléter la lumière des machines", "pour garder les machines au frais", "pour éviter que des poussières abîment les puces", "pour protéger les ouvriers des radiations"],
+    "bonneReponse": 2,
+    "explication": "Les motifs gravés sont bien plus petits qu'une poussière : une seule particule suffit à rendre une puce défectueuse. Les salles blanches filtrent l'air en permanence et contiennent des milliers de fois moins de particules qu'un bureau. Le personnel y porte une combinaison intégrale, surnommée « bunny suit »."
+  },
+  {
+    "id": "semi-conducteurs-f7",
+    "enonce": "Que permet en général un procédé de gravure plus fin, par exemple « 3 nm » au lieu de « 7 nm » ?",
+    "choix": ["des puces forcément plus grandes", "plus de transistors sur la même surface", "une fréquence divisée par deux", "un boîtier de puce plus épais"],
+    "bonneReponse": 1,
+    "explication": "Des transistors plus petits et plus serrés permettent d'en loger davantage sur une même surface, et chacun consomme moins pour commuter. Résultat : des puces plus puissantes ou plus économes. Chaque nouvelle génération de gravure s'appelle un « nœud »."
+  },
+  {
+    "id": "semi-conducteurs-f8",
+    "enonce": "Dans l'industrie des semi-conducteurs, que fait une « fonderie » ?",
+    "choix": ["elle fond des lingots de métal pour l'industrie", "elle édite des logiciels de conception de circuits", "elle construit les machines qui gravent les puces", "elle fabrique des puces conçues par d'autres"],
+    "bonneReponse": 3,
+    "explication": "Une fonderie (foundry) produit les puces dessinées par ses clients. Ce modèle a permis l'essor des entreprises « fabless » (sans usine), comme Apple, Nvidia ou Qualcomm, qui se concentrent sur la conception. D'autres, comme Intel ou Samsung, conçoivent et fabriquent à la fois."
+  },
+  {
+    "id": "semi-conducteurs-f9",
+    "enonce": "Quelle entreprise Gordon Moore et Robert Noyce ont-ils fondée en 1968 ?",
+    "choix": ["Intel", "AMD", "IBM", "Texas Instruments"],
+    "bonneReponse": 0,
+    "explication": "Gordon Moore et Robert Noyce quittent Fairchild Semiconductor pour fonder Intel en 1968. Noyce avait coinventé le circuit intégré ; Intel lancera en 1971 le 4004, premier microprocesseur commercialisé. AMD, fondée l'année suivante, est elle aussi issue de Fairchild."
+  },
+  {
+    "id": "semi-conducteurs-f10",
+    "enonce": "Pourquoi qualifie-t-on le silicium de « semi-conducteur » ?",
+    "choix": ["il ne conduit le courant que dans un seul sens", "il conduit la moitié du courant qu'il reçoit", "sa conductivité est entre celle d'un métal et d'un isolant", "il ne conduit le courant qu'à très haute température"],
+    "bonneReponse": 2,
+    "explication": "Un semi-conducteur conduit mieux qu'un isolant mais bien moins qu'un métal. Surtout, sa conductivité se règle : en y ajoutant des impuretés (le dopage), en chauffant, en l'éclairant ou en appliquant une tension. C'est ce contrôle qui permet de fabriquer des transistors. Ne conduire que dans un sens, c'est le rôle d'une diode."
+  }
+]

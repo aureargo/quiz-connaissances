@@ -1,0 +1,72 @@
+[
+  {
+    "id": "semi-conducteurs-e1",
+    "enonce": "Quel procédé sert à faire croître les lingots de silicium monocristallin dont on tire les wafers ?",
+    "choix": ["le procédé Bessemer", "le procédé Hall-Héroult", "le procédé Czochralski", "le procédé Haber-Bosch"],
+    "bonneReponse": 2,
+    "explication": "Dans le procédé Czochralski (du nom du chimiste polonais qui l'a découvert en 1916), on plonge un petit germe cristallin dans du silicium fondu, vers 1414 °C, puis on le remonte très lentement en le faisant tourner : les atomes s'alignent sur le germe et forment un lingot d'un seul cristal. Bessemer concerne l'acier, Hall-Héroult l'aluminium, Haber-Bosch l'ammoniac."
+  },
+  {
+    "id": "semi-conducteurs-e2",
+    "enonce": "Que décrivait la loi d'échelle de Dennard (1974), qui a cessé de s'appliquer vers le milieu des années 2000 ?",
+    "choix": ["une densité de puissance constante malgré la miniaturisation", "un doublement du nombre de cœurs tous les deux ans", "une baisse de moitié du prix des wafers par décennie", "une fréquence plafonnée à 4 GHz par la physique"],
+    "bonneReponse": 0,
+    "explication": "Selon Robert Dennard, en réduisant un transistor, on réduit aussi sa tension et son courant : la puissance par unité de surface reste constante, ce qui permettait de monter la fréquence sans surchauffe. Vers 2005, les courants de fuite empêchent de baisser davantage la tension : les fréquences plafonnent autour de 4 GHz et l'industrie se tourne vers les processeurs multicœurs."
+  },
+  {
+    "id": "semi-conducteurs-e3",
+    "enonce": "Quelle ouverture numérique (NA) offrent les scanners EUV « High-NA » d'ASML ?",
+    "choix": ["0,33", "0,55", "0,75", "1,35"],
+    "bonneReponse": 1,
+    "explication": "L'EUV classique travaille avec une ouverture numérique de 0,33 ; la génération High-NA (EXE:5000, dont Intel a reçu le premier exemplaire fin 2023) passe à 0,55. La résolution s'améliore d'environ 13 à 8 nm, mais le champ exposé en une fois est réduit de moitié. 1,35 est la valeur atteinte par la lithographie DUV à immersion."
+  },
+  {
+    "id": "semi-conducteurs-e4",
+    "enonce": "Sous quel nom Intel désigne-t-il ses transistors à grille enveloppante (GAA) ?",
+    "choix": ["PowerVia", "Foveros", "EMIB", "RibbonFET"],
+    "bonneReponse": 3,
+    "explication": "RibbonFET est la version Intel du transistor GAA : le canal est formé de rubans empilés que la grille entoure entièrement. Il arrive avec le procédé Intel 18A (processeurs Panther Lake), associé à PowerVia, l'alimentation par la face arrière. Foveros et EMIB sont des technologies d'assemblage de puces. Samsung a introduit le GAA dès son 3 nm (2022), TSMC avec son N2."
+  },
+  {
+    "id": "semi-conducteurs-e5",
+    "enonce": "Qu'apporte l'alimentation par la face arrière (backside power delivery) des puces ?",
+    "choix": ["le courant arrive par-dessous, le dessus reste aux signaux", "la puce est refroidie par un liquide circulant au dos", "les transistors sont répartis sur deux wafers collés", "la puce est alimentée sans contact, par induction"],
+    "bonneReponse": 0,
+    "explication": "Traditionnellement, les lignes d'alimentation et celles des signaux s'entassent dans l'empilement de métal au-dessus des transistors. En faisant arriver le courant par l'arrière du wafer aminci, on libère de la place pour les signaux et on réduit les chutes de tension. Intel l'introduit avec PowerVia (18A), TSMC avec son procédé A16 (« Super Power Rail »)."
+  },
+  {
+    "id": "semi-conducteurs-e6",
+    "enonce": "Avant l'EUV, comment gravait-on des motifs plus fins que la limite de la lithographie à 193 nm ?",
+    "choix": ["en remplaçant la lumière par des rayons X", "en chauffant le wafer pendant l'exposition", "en exposant chaque couche en plusieurs passes", "en utilisant des masques en or massif"],
+    "bonneReponse": 2,
+    "explication": "Le multipatterning découpe un motif trop dense en plusieurs motifs plus lâches, exposés et gravés successivement (double, voire quadruple patterning). Efficace mais coûteux : chaque passe ajoute des étapes et des risques de défaut. C'est ainsi que SMIC a produit en 2023 une puce en 7 nm pour Huawei (Kirin 9000S) sans accès aux machines EUV."
+  },
+  {
+    "id": "semi-conducteurs-e7",
+    "enonce": "Quelle technologie d'encapsulage de TSMC associe les GPU d'IA à leur mémoire HBM sur un interposeur en silicium ?",
+    "choix": ["Foveros", "CoWoS", "EMIB", "X-Cube"],
+    "bonneReponse": 1,
+    "explication": "CoWoS (Chip-on-Wafer-on-Substrate) place le GPU et les piles de mémoire HBM côte à côte sur un interposeur en silicium, qui les relie par des milliers de connexions. Ses capacités de production ont été le principal goulot d'étranglement des GPU d'IA en 2023-2024. Foveros et EMIB sont les équivalents d'Intel, X-Cube celui de Samsung."
+  },
+  {
+    "id": "semi-conducteurs-e8",
+    "enonce": "Quel métal a remplacé l'aluminium dans les interconnexions des puces à la fin des années 1990 ?",
+    "choix": ["l'or", "l'argent", "le tungstène", "le cuivre"],
+    "bonneReponse": 3,
+    "explication": "IBM introduit le cuivre en 1997 : moins résistif que l'aluminium et plus résistant à l'électromigration. Comme il se grave mal, on utilise le procédé damascène : on creuse des tranchées dans l'isolant, on les remplit de cuivre, puis on polit l'excédent (CMP). Le tungstène sert, lui, aux contacts au plus près des transistors."
+  },
+  {
+    "id": "semi-conducteurs-e9",
+    "enonce": "Par quoi Intel a-t-il remplacé le dioxyde de silicium de l'isolant de grille, avec son 45 nm en 2007 ?",
+    "choix": ["une couche de nitrure de gallium", "une fine couche de graphène", "un isolant « high-k » à base d'hafnium", "un isolant en carbure de silicium"],
+    "bonneReponse": 2,
+    "explication": "L'oxyde de grille en SiO₂ était descendu à environ 1,2 nm, quelques couches d'atomes : les électrons le traversaient par effet tunnel, d'où de fortes fuites. Un diélectrique à forte permittivité (high-k), à base d'oxyde d'hafnium, offre le même effet électrique avec une couche plus épaisse. Il est associé à une grille métallique : c'est le « HKMG »."
+  },
+  {
+    "id": "semi-conducteurs-e10",
+    "enonce": "Comment les scanners EUV produisent-ils leur lumière à 13,5 nm ?",
+    "choix": ["en frappant des gouttelettes d'étain au laser", "en chauffant un filament de tungstène", "en excitant un mélange d'argon et de fluor", "en faisant circuler des électrons en anneau"],
+    "bonneReponse": 0,
+    "explication": "Environ 50 000 fois par seconde, une gouttelette d'étain est aplatie par une première impulsion laser puis vaporisée par une seconde, très puissante (laser CO₂) : le plasma obtenu, bien plus chaud que la surface du Soleil, émet à 13,5 nm. Le mélange argon-fluor est celui des lasers excimères de la lithographie DUV à 193 nm."
+  }
+]
