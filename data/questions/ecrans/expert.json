@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ecrans-e1",
+    "enonce": "Sur un écran Mini-LED à gradation locale, d'où vient le « blooming » ?",
+    "choix": ["d'un excès de tension sur les sous-pixels", "des zones de rétroéclairage plus grandes que les pixels", "d'un traitement antireflet trop épais", "d'une fréquence de rafraîchissement instable"],
+    "bonneReponse": 1,
+    "explication": "La gradation locale (local dimming) découpe le rétroéclairage en zones pilotées séparément. Même avec plus de 1000 zones, chacune couvre des milliers de pixels : autour d'un objet lumineux sur fond noir (un curseur, des sous-titres), la zone allumée éclaire aussi le noir voisin, d'où un halo. L'OLED, qui pilote chaque pixel, n'a pas ce défaut."
+  },
+  {
+    "id": "ecrans-e2",
+    "enonce": "Dans une dalle QD-OLED, comment obtient-on les sous-pixels rouges et verts ?",
+    "choix": ["des filtres colorés posés sur une OLED blanche", "des diodes OLED rouges et vertes dédiées", "des boîtes quantiques convertissent du bleu", "un rétroéclairage LED filtré par des cristaux"],
+    "bonneReponse": 2,
+    "explication": "Le QD-OLED, lancé par Samsung Display en 2022, utilise une couche OLED qui émet uniquement du bleu. Au-dessus, des boîtes quantiques (quantum dots), des nanocristaux, absorbent ce bleu et le réémettent en rouge ou en vert selon leur taille ; le sous-pixel bleu laisse passer la lumière telle quelle. Sans filtre qui gaspille de la lumière, les couleurs restent vives à forte luminosité."
+  },
+  {
+    "id": "ecrans-e3",
+    "enonce": "Pourquoi les dalles WOLED de LG ajoutent-elles un sous-pixel blanc aux sous-pixels rouge, vert et bleu ?",
+    "choix": ["pour corriger la teinte des noirs", "pour réduire le temps de réponse", "pour masquer d'éventuels pixels morts", "pour augmenter la luminosité"],
+    "bonneReponse": 3,
+    "explication": "En WOLED, toutes les diodes émettent du blanc, et des filtres colorés produisent le rouge, le vert et le bleu, en absorbant une bonne partie de la lumière au passage. Le quatrième sous-pixel, sans filtre, laisse passer tout le blanc : il dope fortement la luminosité. En contrepartie, les couleurs très lumineuses peuvent paraître un peu délavées."
+  },
+  {
+    "id": "ecrans-e4",
+    "enonce": "Quelle luminosité maximale la courbe de transfert PQ (SMPTE ST 2084), utilisée par le HDR10, peut-elle encoder ?",
+    "choix": ["10 000 nits", "1 000 nits", "4 000 nits", "100 000 nits"],
+    "bonneReponse": 0,
+    "explication": "La courbe PQ (Perceptual Quantizer), conçue par Dolby, associe chaque valeur du signal à une luminosité absolue, de 0 à 10 000 nits, en répartissant les niveaux selon la sensibilité de l'œil. Aucun écran grand public n'atteint ce plafond : le contenu est souvent masterisé à 1000 ou 4000 nits, et le téléviseur compresse ce qui dépasse ses capacités (tone mapping)."
+  },
+  {
+    "id": "ecrans-e5",
+    "enonce": "Qu'apportent Dolby Vision et HDR10+ par rapport au HDR10 de base ?",
+    "choix": ["une fréquence d'images doublée à 120 Hz", "une définition native de 8K au minimum", "des métadonnées dynamiques, scène par scène", "une profondeur de couleur limitée à 8 bits"],
+    "bonneReponse": 2,
+    "explication": "Le HDR10 transmet des métadonnées statiques : une seule description de la luminosité pour tout le film, ce qui oblige l'écran à un compromis global. Dolby Vision et HDR10+ ajustent ces informations scène par scène, voire image par image, pour adapter le tone mapping à chaque séquence. Dolby Vision est propriétaire et sous licence ; HDR10+, porté par Samsung, est libre de redevances."
+  },
+  {
+    "id": "ecrans-e6",
+    "enonce": "Pourquoi un mouvement reste-t-il flou sur un écran OLED à 60 Hz, malgré un temps de réponse quasi nul ?",
+    "choix": ["les diodes organiques réagissent trop lentement", "chaque image reste affichée pendant tout le cycle", "le traitement HDR ajoute un flou volontaire", "la dalle mélange deux images successives"],
+    "bonneReponse": 1,
+    "explication": "Les écrans modernes sont « sample-and-hold » : chaque image reste figée pendant 16,7 ms à 60 Hz. Or l'œil, qui suit l'objet en mouvement continu, balaie cette image immobile, et la rétine l'étale : c'est le flou de persistance. Deux remèdes : monter en fréquence (moins de temps par image) ou insérer des images noires (BFI) et faire clignoter le rétroéclairage, comme un vieil écran cathodique."
+  },
+  {
+    "id": "ecrans-e7",
+    "enonce": "Quel artefact provoque un réglage d'overdrive trop agressif sur une dalle LCD ?",
+    "choix": ["un halo inversé derrière les objets mobiles", "un marquage permanent des zones fixes", "une perte de netteté du texte immobile", "une dérive progressive des couleurs"],
+    "bonneReponse": 0,
+    "explication": "L'overdrive applique brièvement une tension plus forte que nécessaire pour accélérer la rotation des cristaux. Trop poussé, le pixel dépasse sa cible (overshoot) avant d'y revenir : une traînée de couleur inversée, plus claire ou plus sombre, suit les objets en mouvement (inverse ghosting). Le réglage intermédiaire est souvent le meilleur compromis."
+  },
+  {
+    "id": "ecrans-e8",
+    "enonce": "Combien de couleurs une dalle 10 bits par canal peut-elle afficher ?",
+    "choix": ["environ 16,7 millions", "environ 68,7 milliards", "environ 262 000", "environ 1,07 milliard"],
+    "bonneReponse": 3,
+    "explication": "En 10 bits, chaque sous-pixel dispose de 1024 niveaux : 1024³ ≈ 1,07 milliard de couleurs. Le 8 bits (256 niveaux) en donne 16,7 millions, et le 6 bits seulement 262 144. Le 10 bits est recommandé en HDR pour éviter l'effet d'escalier dans les dégradés (banding). Beaucoup de dalles le simulent en 8 bits + FRC, en alternant rapidement deux nuances voisines."
+  },
+  {
+    "id": "ecrans-e9",
+    "enonce": "Quel espace colorimétrique, défini pour l'ultra-haute définition, est le plus large des quatre ?",
+    "choix": ["sRGB", "DCI-P3", "Rec. 2020", "Adobe RGB"],
+    "bonneReponse": 2,
+    "explication": "La recommandation UIT-R BT.2020 (Rec. 2020) couvre environ 76 % des couleurs visibles du diagramme CIE 1931, contre environ 54 % pour le DCI-P3 et 36 % pour le sRGB. Elle sert de « conteneur » au HDR, mais aucun écran grand public ne la couvre entièrement : en pratique, les contenus sont masterisés en DCI-P3, la gamme du cinéma numérique."
+  },
+  {
+    "id": "ecrans-e10",
+    "enonce": "Que permet le DSC (Display Stream Compression), présent en DisplayPort et en HDMI 2.1 ?",
+    "choix": ["réduire la consommation de la dalle en veille", "calibrer automatiquement les couleurs", "faire passer plus de pixels dans le même câble", "synchroniser plusieurs écrans entre eux"],
+    "bonneReponse": 2,
+    "explication": "Le DSC est une compression définie par la VESA, qualifiée de « visuellement sans perte » : elle réduit le débit d'un facteur allant jusqu'à 3 environ, sans artefact perceptible en usage normal. Elle permet par exemple la 4K à 240 Hz ou la 8K à 60 Hz sur des liaisons dont la bande passante brute ne suffirait pas. La compression et la décompression sont faites matériellement, avec une latence négligeable."
+  }
+]

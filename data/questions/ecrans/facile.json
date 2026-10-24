@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ecrans-f1",
+    "enonce": "Que signifie le sigle « LCD » ?",
+    "choix": ["Light Color Diode", "Liquid Crystal Display", "Low Contrast Display", "Linear Cell Device"],
+    "bonneReponse": 1,
+    "explication": "LCD = Liquid Crystal Display, « écran à cristaux liquides ». Les cristaux ne produisent pas de lumière : ils pivotent sous l'effet d'une tension pour laisser passer plus ou moins la lumière d'un rétroéclairage placé derrière eux. Les dalles IPS, VA et TN sont toutes des variantes de LCD, qui diffèrent par l'orientation de ces cristaux."
+  },
+  {
+    "id": "ecrans-f2",
+    "enonce": "Quel nom donne-t-on couramment à la définition 1920 × 1080 pixels ?",
+    "choix": ["la 4K", "le QHD", "le Full HD", "le 8K"],
+    "bonneReponse": 2,
+    "explication": "Le Full HD (ou 1080p) compte 1920 pixels en largeur et 1080 en hauteur, soit environ 2 millions de pixels. Le QHD (2560 × 1440) en compte 1,8 fois plus, et la 4K UHD (3840 × 2160) exactement 4 fois plus. Le « p » de 1080p signifie « progressif » : toutes les lignes sont affichées à chaque image."
+  },
+  {
+    "id": "ecrans-f3",
+    "enonce": "La taille d'un écran s'exprime en pouces. Combien mesure un pouce ?",
+    "choix": ["1,85 cm", "2,00 cm", "3,12 cm", "2,54 cm"],
+    "bonneReponse": 3,
+    "explication": "Un pouce vaut exactement 2,54 cm. Un écran de 27 pouces mesure donc environ 68,6 cm. Attention : cette valeur est la diagonale de la zone d'affichage, d'un coin au coin opposé, et non sa largeur ; à diagonale égale, un écran 21:9 est plus large mais moins haut qu'un 16:9."
+  },
+  {
+    "id": "ecrans-f4",
+    "enonce": "Dans quelle unité exprime-t-on le taux de rafraîchissement d'un écran ?",
+    "choix": ["en hertz", "en nits", "en pixels", "en millisecondes"],
+    "bonneReponse": 0,
+    "explication": "Le hertz (Hz) compte un événement par seconde : un écran 60 Hz redessine son image 60 fois par seconde. Les nits mesurent la luminosité, et les millisecondes servent plutôt au temps de réponse des pixels. Les écrans de jeu montent couramment à 144, 240 Hz, voire bien au-delà."
+  },
+  {
+    "id": "ecrans-f5",
+    "enonce": "Concrètement, que signifie l'indication « 144 Hz » sur un moniteur ?",
+    "choix": ["la dalle contient 144 zones lumineuses", "il affiche jusqu'à 144 images par seconde", "il consomme 144 watts au maximum", "ses pixels réagissent en 144 microsecondes"],
+    "bonneReponse": 1,
+    "explication": "L'écran peut rafraîchir son image 144 fois par seconde, contre 60 pour un modèle classique. Le mouvement paraît plus fluide et le jeu plus réactif, car chaque image est affichée plus tôt. Encore faut-il que la carte graphique produise autant d'images par seconde : sinon, l'écran réaffiche les mêmes."
+  },
+  {
+    "id": "ecrans-f6",
+    "enonce": "Quelle technologie d'écran se passe de rétroéclairage, chaque pixel produisant sa propre lumière ?",
+    "choix": ["IPS", "VA", "OLED", "TN"],
+    "bonneReponse": 2,
+    "explication": "Dans un écran OLED (Organic Light-Emitting Diode), chaque sous-pixel est une diode organique qui s'allume ou s'éteint individuellement. Un pixel éteint n'émet rien du tout : d'où des noirs parfaits et un contraste quasi infini. Les dalles IPS, VA et TN sont des LCD, qui filtrent la lumière d'un rétroéclairage toujours allumé."
+  },
+  {
+    "id": "ecrans-f7",
+    "enonce": "Quelle connectique, présente sur presque toutes les télévisions, transporte à la fois l'image et le son ?",
+    "choix": ["VGA", "S-Vidéo", "DVI", "HDMI"],
+    "bonneReponse": 3,
+    "explication": "Le HDMI (High-Definition Multimedia Interface), apparu en 2003, transmet en numérique la vidéo et l'audio dans un seul câble. Le VGA est analogique et ne porte que l'image, tout comme la S-Vidéo ; le DVI, numérique, n'a officiellement pas de son. Sur ordinateur, le DisplayPort joue le même rôle que le HDMI."
+  },
+  {
+    "id": "ecrans-f8",
+    "enonce": "Que désigne le format « 16:9 » d'un écran ?",
+    "choix": ["le rapport entre largeur et hauteur", "le rapport entre contraste et luminosité", "le nombre de pixels par centimètre", "le nombre d'images par seconde"],
+    "bonneReponse": 0,
+    "explication": "16:9 signifie que l'écran est 16 unités de large pour 9 de haut : c'est le format standard des télévisions et de la plupart des moniteurs. Les vieux écrans cathodiques étaient en 4:3, plus carrés. Les moniteurs « ultra-larges » en 21:9 offrent un champ de vision panoramique, apprécié en jeu et en montage vidéo."
+  },
+  {
+    "id": "ecrans-f9",
+    "enonce": "De quelles couleurs sont les sous-pixels qui composent chaque pixel d'un écran ?",
+    "choix": ["rouge, jaune et bleu", "rouge, vert et bleu", "cyan, magenta et jaune", "noir, blanc et gris"],
+    "bonneReponse": 1,
+    "explication": "Chaque pixel est formé de trois sous-pixels : rouge, vert et bleu (RVB, ou RGB en anglais). En dosant leur intensité, on obtient toutes les couleurs par synthèse additive : les trois à fond donnent du blanc. Le cyan-magenta-jaune est le système soustractif de l'imprimerie, où l'encre absorbe la lumière au lieu d'en émettre."
+  },
+  {
+    "id": "ecrans-f10",
+    "enonce": "Que signifie le sigle « HDR » sur une télévision ou un moniteur ?",
+    "choix": ["High Definition Resolution", "Hybrid Display Rendering", "High Dynamic Range", "Hyper Digital Refresh"],
+    "bonneReponse": 2,
+    "explication": "HDR = High Dynamic Range, « plage dynamique étendue ». L'image peut afficher à la fois des zones très lumineuses (reflets, soleil) et des ombres détaillées, plus proches de ce que perçoit l'œil. Le HDR ne concerne pas la définition : une image Full HD peut être HDR, et une image 4K peut ne pas l'être."
+  }
+]

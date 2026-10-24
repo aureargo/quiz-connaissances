@@ -210,6 +210,13 @@
     "description": "Alimentation, refroidissement, câblage et premier démarrage : assembler sa machine pas à pas."
   },
   {
+    "id": "ecrans",
+    "nom": "Écrans",
+    "emoji": "🖥️",
+    "categorie": "Matériel informatique",
+    "description": "Dalles IPS, VA et OLED, taux de rafraîchissement, temps de réponse et HDR : bien choisir son écran."
+  },
+  {
     "id": "sql",
     "nom": "SQL",
     "emoji": "🗃️",

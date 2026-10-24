@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ecrans-m1",
+    "enonce": "Parmi les dalles LCD, laquelle offre traditionnellement le meilleur contraste natif ?",
+    "choix": ["IPS", "TN", "PLS", "VA"],
+    "bonneReponse": 3,
+    "explication": "Les dalles VA (Vertical Alignment) bloquent très bien la lumière quand leurs cristaux sont alignés verticalement : leur contraste atteint couramment 3000:1, contre environ 1000:1 pour l'IPS et le TN. En échange, elles ont des angles de vision plus étroits et des transitions sombres plus lentes. Le PLS est la variante d'IPS développée par Samsung."
+  },
+  {
+    "id": "ecrans-m2",
+    "enonce": "Qu'appelle-t-on l'« IPS glow » ?",
+    "choix": ["une lueur visible dans les coins sur fond noir", "un rétroéclairage qui jaunit avec les années", "un traînage d'image lors des mouvements rapides", "un halo coloré qui apparaît après la chauffe"],
+    "bonneReponse": 0,
+    "explication": "Sur une dalle IPS, les noirs vus de biais laissent passer un peu de lumière : sur une image sombre, les coins semblent briller d'une lueur grisâtre ou dorée, qui change quand on bouge la tête. C'est une limite de la technologie, pas un défaut de fabrication. À ne pas confondre avec le « backlight bleed », une fuite fixe due à un mauvais assemblage."
+  },
+  {
+    "id": "ecrans-m3",
+    "enonce": "Quel défaut menace surtout un écran OLED qui affiche longtemps une image fixe ?",
+    "choix": ["le traînage des noirs", "le marquage de l'image", "les fuites de rétroéclairage", "le jaunissement du verre"],
+    "bonneReponse": 1,
+    "explication": "Les diodes organiques s'usent à mesure qu'elles émettent : si un logo ou une barre des tâches reste affiché des centaines d'heures, ces pixels vieillissent plus vite que les autres et une trace fantôme persiste (burn-in). Les fabricants le limitent par un léger décalage des pixels, une baisse automatique de luminosité et des cycles de compensation en veille."
+  },
+  {
+    "id": "ecrans-m4",
+    "enonce": "Que mesure le temps de réponse « GtG » annoncé par les fabricants ?",
+    "choix": ["le délai entre le clic et l'affichage", "la durée d'affichage de chaque image", "le passage d'un pixel d'un gris à un autre", "le temps nécessaire pour allumer la dalle"],
+    "bonneReponse": 2,
+    "explication": "GtG = Gray to Gray : c'est le temps que met un pixel pour changer de nuance. Trop lent, il laisse une traînée derrière les objets en mouvement (ghosting). Le délai entre l'action du joueur et l'affichage est une autre mesure, l'« input lag ». Les valeurs annoncées (1 ms…) sont souvent obtenues avec l'overdrive au maximum, dans les meilleures conditions."
+  },
+  {
+    "id": "ecrans-m5",
+    "enonce": "À quoi servent les technologies FreeSync (AMD) et G-Sync (NVIDIA) ?",
+    "choix": ["augmenter la luminosité en mode HDR", "réduire la lumière bleue le soir", "étendre l'image sur plusieurs écrans", "caler le rafraîchissement sur le GPU"],
+    "bonneReponse": 3,
+    "explication": "Avec un taux de rafraîchissement variable (VRR), l'écran attend que la carte graphique ait fini une image avant de l'afficher, au lieu de rafraîchir à rythme fixe. On supprime ainsi le « tearing » sans la latence ni les saccades du V-Sync classique. FreeSync s'appuie sur le standard ouvert Adaptive-Sync du DisplayPort."
+  },
+  {
+    "id": "ecrans-m6",
+    "enonce": "Qu'est-ce que le « tearing » à l'écran ?",
+    "choix": ["une image coupée en deux parties décalées", "un pixel resté bloqué sur une couleur", "un scintillement dû à un câble abîmé", "une baisse de luminosité sur les bords"],
+    "bonneReponse": 0,
+    "explication": "Le déchirement survient quand la carte graphique envoie une nouvelle image pendant que l'écran est en train d'afficher la précédente : le haut montre une image, le bas la suivante, avec une cassure horizontale très visible lors des mouvements de caméra. Le V-Sync l'élimine en faisant attendre le GPU, le VRR en faisant attendre l'écran."
+  },
+  {
+    "id": "ecrans-m7",
+    "enonce": "À quoi correspond un « nit », l'unité de luminosité des écrans ?",
+    "choix": ["un lumen par centimètre", "une candela par mètre carré", "un lux par pixel affiché", "un watt par pouce carré"],
+    "bonneReponse": 1,
+    "explication": "Le nit est un nom usuel de la candela par mètre carré (cd/m²), l'unité de luminance : l'intensité lumineuse émise par une surface. Un moniteur de bureau tourne autour de 250 à 350 nits ; en HDR, les reflets lumineux peuvent dépasser 1000 nits sur les meilleurs téléviseurs. Le lux, lui, mesure la lumière reçue par une surface."
+  },
+  {
+    "id": "ecrans-m8",
+    "enonce": "Que garantit avant tout la certification VESA DisplayHDR 400 ?",
+    "choix": ["400 zones de rétroéclairage local", "une dalle de 400 Hz au minimum", "une luminosité de crête de 400 nits", "une densité de 400 pixels par pouce"],
+    "bonneReponse": 2,
+    "explication": "Le chiffre des labels DisplayHDR (400, 600, 1000…) indique la luminosité de crête minimale en nits. Le niveau 400 n'exige ni gradation locale ni gamme de couleurs étendue : le rendu HDR y reste souvent décevant. Pour un vrai effet HDR, on vise plutôt DisplayHDR 1000 ou les labels « True Black » réservés aux écrans OLED."
+  },
+  {
+    "id": "ecrans-m9",
+    "enonce": "Pourquoi une image Full HD paraît-elle moins nette sur un écran de 27 pouces que sur un 24 pouces ?",
+    "choix": ["la dalle de 27 pouces filtre plus la lumière", "le câble limite la qualité du grand écran", "les pixels sont plus gros et plus espacés", "l'image est compressée pour remplir l'écran"],
+    "bonneReponse": 2,
+    "explication": "Avec le même nombre de pixels étalé sur une plus grande surface, la densité baisse : environ 92 pixels par pouce (PPI) sur un 24 pouces 1080p, contre 82 sur un 27 pouces. À distance de bureau, on distingue alors la grille des pixels et le texte paraît crénelé. C'est pourquoi on associe souvent le 27 pouces au QHD (environ 109 PPI)."
+  },
+  {
+    "id": "ecrans-m10",
+    "enonce": "Quelle version de HDMI faut-il au minimum pour afficher de la 4K à 120 Hz ?",
+    "choix": ["HDMI 1.4", "HDMI 2.0", "DVI Dual Link", "HDMI 2.1"],
+    "bonneReponse": 3,
+    "explication": "Le HDMI 2.0 plafonne à 18 Gbit/s, ce qui limite la 4K à 60 Hz. Le HDMI 2.1 monte à 48 Gbit/s et ouvre la 4K à 120 Hz, le VRR et l'ALLM (mode jeu automatique) : c'est ce qu'exploitent la PS5 et la Xbox Series X. Il faut aussi un câble certifié « Ultra High Speed » pour garantir ce débit."
+  }
+]
