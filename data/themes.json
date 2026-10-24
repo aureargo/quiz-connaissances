@@ -558,5 +558,12 @@
     "emoji": "📜",
     "categorie": "Langue française",
     "description": "D'où viennent les mots ? Racines grecques et latines, emprunts et histoires surprenantes du vocabulaire français."
+  },
+  {
+    "id": "anglais",
+    "nom": "Anglais (vocabulaire)",
+    "emoji": "💂",
+    "categorie": "Langues étrangères",
+    "description": "Mots du quotidien, faux amis et vocabulaire plus pointu : testez votre anglais, de « apple » à « serendipity »."
   }
 ]

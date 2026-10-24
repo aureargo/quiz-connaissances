@@ -1,0 +1,72 @@
+[
+  {
+    "id": "anglais-e1",
+    "enonce": "Que signifie « in hindsight » ?",
+    "choix": ["À première vue", "En secret", "Par hasard", "Avec le recul"],
+    "bonneReponse": 3,
+    "explication": "« Hindsight » = le regard en arrière (hind = arrière, sight = vue). « In hindsight » = avec le recul, rétrospectivement. Proverbe : « hindsight is 20/20 » (après coup, on voit toujours parfaitement clair)."
+  },
+  {
+    "id": "anglais-e2",
+    "enonce": "Que signifie l'adjectif « wary » ?",
+    "choix": ["Fatigué", "Méfiant", "Usé", "Furieux"],
+    "bonneReponse": 1,
+    "explication": "« Wary » = méfiant, sur ses gardes (« be wary of strangers »). Ne pas le confondre avec « weary », qui signifie las, fatigué."
+  },
+  {
+    "id": "anglais-e3",
+    "enonce": "Un silence « eerie » est…",
+    "choix": ["étrange et inquiétant", "joyeux et bruyant", "vaste et désert", "lent et ennuyeux"],
+    "bonneReponse": 0,
+    "explication": "« Eerie » = étrange au point d'en être inquiétant, sinistre, qui donne la chair de poule. On le rencontre souvent dans « an eerie silence » ou « an eerie feeling »."
+  },
+  {
+    "id": "anglais-e4",
+    "enonce": "Quel animal est un « sloth » ?",
+    "choix": ["Une limace", "Un blaireau", "Un paresseux", "Une loutre"],
+    "bonneReponse": 2,
+    "explication": "« Sloth » = paresseux, l'animal… et aussi la paresse, l'un des sept péchés capitaux (de « slow », lent). Limace = slug, blaireau = badger, loutre = otter."
+  },
+  {
+    "id": "anglais-e5",
+    "enonce": "Que désigne le mot « serendipity » ?",
+    "choix": ["La nostalgie", "L'entêtement", "La mélancolie", "Le hasard heureux"],
+    "bonneReponse": 3,
+    "explication": "C'est l'art de trouver par hasard ce qu'on ne cherchait pas. Le mot a été forgé en 1754 par Horace Walpole, d'après un conte persan, « Les Trois Princes de Serendip ». Le français l'a emprunté : « sérendipité »."
+  },
+  {
+    "id": "anglais-e6",
+    "enonce": "Un travail « thorough » est…",
+    "choix": ["superficiel", "minutieux", "rugueux", "bâclé"],
+    "bonneReponse": 1,
+    "explication": "« Thorough » = minutieux, approfondi, consciencieux. Attention aux mots voisins : « through » (à travers), « though » (bien que) et « thought » (pensée)."
+  },
+  {
+    "id": "anglais-e7",
+    "enonce": "Que veut dire « to cringe » ?",
+    "choix": ["Avoir un mouvement de gêne", "Pousser un cri de joie", "Faire une révérence", "Rire aux éclats"],
+    "bonneReponse": 0,
+    "explication": "« To cringe » = se crisper, grimacer de gêne ou d'embarras, comme pour se recroqueviller. Le mot est passé dans l'argot français : une situation « cringe » est embarrassante."
+  },
+  {
+    "id": "anglais-e8",
+    "enonce": "Un silence « awkward » est…",
+    "choix": ["arrogant", "ennuyeux", "gênant", "sournois"],
+    "bonneReponse": 2,
+    "explication": "« Awkward » = gênant, embarrassant, ou maladroit (« an awkward moment », « an awkward teenager »)."
+  },
+  {
+    "id": "anglais-e9",
+    "enonce": "Comment traduire « nonetheless » ?",
+    "choix": ["Par conséquent", "Autrement dit", "De plus", "Néanmoins"],
+    "bonneReponse": 3,
+    "explication": "« Nonetheless » (ou « nevertheless ») = néanmoins, malgré tout. Par conséquent = therefore, autrement dit = in other words, de plus = moreover."
+  },
+  {
+    "id": "anglais-e10",
+    "enonce": "Que signifie « a bargain » ?",
+    "choix": ["Une dispute", "Une bonne affaire", "Un pot-de-vin", "Une enchère"],
+    "bonneReponse": 1,
+    "explication": "« A bargain » = une bonne affaire, une occasion ; « to bargain » = marchander. Pot-de-vin se dit « bribe » et vente aux enchères « auction »."
+  }
+]

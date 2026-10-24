@@ -1,0 +1,72 @@
+[
+  {
+    "id": "anglais-f1",
+    "enonce": "Que signifie le mot anglais « apple » ?",
+    "choix": ["Une poire", "Une pomme", "Une prune", "Une pêche"],
+    "bonneReponse": 1,
+    "explication": "« Apple » = pomme. Les autres : pear (poire), plum (prune), peach (pêche). D'où le surnom de New York, « The Big Apple »."
+  },
+  {
+    "id": "anglais-f2",
+    "enonce": "Comment dit-on « chien » en anglais ?",
+    "choix": ["dog", "cat", "horse", "bird"],
+    "bonneReponse": 0,
+    "explication": "« Dog » = chien. Cat (chat), horse (cheval), bird (oiseau). Le chiot se dit « puppy »."
+  },
+  {
+    "id": "anglais-f3",
+    "enonce": "Quel jour de la semaine est « Thursday » ?",
+    "choix": ["Mardi", "Mercredi", "Vendredi", "Jeudi"],
+    "bonneReponse": 3,
+    "explication": "« Thursday » est le jour de Thor (Thor's day), dieu du tonnerre, comme « jeudi » est le jour de Jupiter. Tuesday (mardi) honore Tiw, Wednesday (mercredi) Woden et Friday (vendredi) Frigg."
+  },
+  {
+    "id": "anglais-f4",
+    "enonce": "Quelle pièce de la maison est la « kitchen » ?",
+    "choix": ["La chambre", "Le salon", "La cuisine", "Le grenier"],
+    "bonneReponse": 2,
+    "explication": "« Kitchen » = cuisine. La chambre se dit « bedroom », le salon « living room » et le grenier « attic »."
+  },
+  {
+    "id": "anglais-f5",
+    "enonce": "De quelle couleur est quelque chose de « yellow » ?",
+    "choix": ["Vert", "Jaune", "Rouge", "Violet"],
+    "bonneReponse": 1,
+    "explication": "« Yellow » = jaune. Vert se dit « green », rouge « red » et violet « purple ». Le célèbre sous-marin des Beatles était un « Yellow Submarine »."
+  },
+  {
+    "id": "anglais-f6",
+    "enonce": "Comment dit-on « merci » en anglais ?",
+    "choix": ["Thank you", "Please", "Sorry", "Welcome"],
+    "bonneReponse": 0,
+    "explication": "« Thank you » (ou « thanks ») = merci. « Please » = s'il vous plaît, « sorry » = désolé. Pour répondre « de rien », on dit « you're welcome »."
+  },
+  {
+    "id": "anglais-f7",
+    "enonce": "Que désigne le mot anglais « library » ?",
+    "choix": ["Une librairie", "Un libraire", "Une bibliothèque", "Un livret"],
+    "bonneReponse": 2,
+    "explication": "C'est un « faux ami » classique : « library » = bibliothèque. Une librairie se dit « bookshop » (UK) ou « bookstore » (US)."
+  },
+  {
+    "id": "anglais-f8",
+    "enonce": "Que veut dire le verbe « to run » ?",
+    "choix": ["Marcher", "Sauter", "Nager", "Courir"],
+    "bonneReponse": 3,
+    "explication": "« To run » = courir. Marcher se dit « to walk », sauter « to jump » et nager « to swim ». « Run » s'emploie aussi pour une machine qui fonctionne : « the engine is running »."
+  },
+  {
+    "id": "anglais-f9",
+    "enonce": "Qui est la « grandmother » ?",
+    "choix": ["La grand-mère", "La tante", "La belle-mère", "La cousine"],
+    "bonneReponse": 0,
+    "explication": "« Grandmother » (familièrement « grandma » ou « granny ») = grand-mère. La tante se dit « aunt », la belle-mère « mother-in-law » (ou « stepmother » pour la femme du père) et la cousine « cousin »."
+  },
+  {
+    "id": "anglais-f10",
+    "enonce": "Quel est le contraire de « cold » ?",
+    "choix": ["wet", "dark", "hot", "slow"],
+    "bonneReponse": 2,
+    "explication": "« Cold » = froid, « hot » = chaud (« warm » = tiède, doucement chaud). Les autres : wet (mouillé), dark (sombre), slow (lent)."
+  }
+]

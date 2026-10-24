@@ -1,0 +1,72 @@
+[
+  {
+    "id": "anglais-m1",
+    "enonce": "Que signifie « actually » en anglais ?",
+    "choix": ["Actuellement", "Activement", "En fait", "Bientôt"],
+    "bonneReponse": 2,
+    "explication": "Faux ami : « actually » = en fait, en réalité. « Actuellement » se traduit par « currently » ou « at the moment »."
+  },
+  {
+    "id": "anglais-m2",
+    "enonce": "Que signifie « eventually » ?",
+    "choix": ["Finalement", "Éventuellement", "Évidemment", "Rarement"],
+    "bonneReponse": 0,
+    "explication": "Faux ami : « eventually » = finalement, à la longue. « Éventuellement » se traduit par « possibly » ou « if necessary »."
+  },
+  {
+    "id": "anglais-m3",
+    "enonce": "Une personne « sensible », en anglais, est…",
+    "choix": ["sensible", "raisonnable", "fragile", "sentimentale"],
+    "bonneReponse": 1,
+    "explication": "Faux ami : « sensible » = raisonnable, plein de bon sens (« a sensible decision »). Le français « sensible » se traduit par « sensitive »."
+  },
+  {
+    "id": "anglais-m4",
+    "enonce": "Dans « I realized I was wrong », que signifie « to realize » ?",
+    "choix": ["Mettre en œuvre", "Avoir des regrets", "Faire semblant", "Se rendre compte"],
+    "bonneReponse": 3,
+    "explication": "« To realize » = prendre conscience, se rendre compte. L'emploi français de « réaliser » dans ce sens est d'ailleurs un anglicisme critiqué. « Réaliser un projet » se dit « to carry out » ou « to achieve »."
+  },
+  {
+    "id": "anglais-m5",
+    "enonce": "Que désigne le mot « scissors » ?",
+    "choix": ["Des ciseaux", "Des lunettes", "Des tenailles", "Des aiguilles"],
+    "bonneReponse": 0,
+    "explication": "« Scissors » = ciseaux. Le mot est toujours au pluriel : on dit « a pair of scissors » pour une paire de ciseaux, tout comme « a pair of glasses » pour des lunettes."
+  },
+  {
+    "id": "anglais-m6",
+    "enonce": "Que signifie le verbe « to borrow » ?",
+    "choix": ["Prêter", "Rendre", "Emprunter", "Voler"],
+    "bonneReponse": 2,
+    "explication": "« To borrow » = emprunter (« can I borrow your pen? »). Son opposé est « to lend », prêter. Rendre se dit « to give back » et voler « to steal »."
+  },
+  {
+    "id": "anglais-m7",
+    "enonce": "Que signifie le mot anglais « deception » ?",
+    "choix": ["Une déception", "Une tromperie", "Une décision", "Une attente"],
+    "bonneReponse": 1,
+    "explication": "Faux ami : « deception » = tromperie, supercherie (« to deceive » = tromper). Une déception se dit « a disappointment »."
+  },
+  {
+    "id": "anglais-m8",
+    "enonce": "Un article « cheap » est…",
+    "choix": ["cher", "rapide à livrer", "gratuit", "bon marché"],
+    "bonneReponse": 3,
+    "explication": "« Cheap » = bon marché, pas cher (parfois avec une nuance de mauvaise qualité). Cher se dit « expensive », gratuit « free »."
+  },
+  {
+    "id": "anglais-m9",
+    "enonce": "Quel légume est un « cucumber » ?",
+    "choix": ["Une courgette", "Une citrouille", "Un concombre", "Un poivron"],
+    "bonneReponse": 2,
+    "explication": "« Cucumber » = concombre. La courgette se dit « courgette » (UK) ou « zucchini » (US), la citrouille « pumpkin » et le poivron « pepper »."
+  },
+  {
+    "id": "anglais-m10",
+    "enonce": "Quel métier exerce un « lawyer » ?",
+    "choix": ["Avocat", "Juge", "Policier", "Notaire"],
+    "bonneReponse": 0,
+    "explication": "« Lawyer » (de « law », la loi) = avocat, juriste ; on dit aussi « attorney » aux États-Unis. Le juge est le « judge ». Et l'avocat, le fruit ? « Avocado »."
+  }
+]
