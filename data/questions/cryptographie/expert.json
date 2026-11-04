@@ -1,0 +1,122 @@
+[
+  {
+    "id": "cryptographie-e1",
+    "enonce": "Pourquoi le mode ECB est-il déconseillé pour chiffrer des données avec AES ?",
+    "choix": [
+      "Il n'accepte que des clés de 64 bits au plus",
+      "Deux blocs clairs identiques donnent le même bloc chiffré",
+      "Il est beaucoup trop lent sur les processeurs actuels",
+      "Il oblige à transmettre la clé avec chaque message"
+    ],
+    "bonneReponse": 1,
+    "explication": "En mode ECB (Electronic Codebook), chaque bloc de 16 octets est chiffré indépendamment avec la même clé : les motifs du clair restent visibles. L'exemple célèbre est le « pingouin ECB », une image de Tux dont la silhouette reste parfaitement reconnaissable une fois chiffrée. Les modes CBC, CTR ou GCM introduisent un vecteur d'initialisation ou un compteur pour l'éviter."
+  },
+  {
+    "id": "cryptographie-e2",
+    "enonce": "Qu'apporte un mode de chiffrement authentifié comme AES-GCM ?",
+    "choix": [
+      "Une clé deux fois plus longue que l'AES classique",
+      "Un déchiffrement possible sans connaître la clé",
+      "Une résistance prouvée aux ordinateurs quantiques",
+      "La confidentialité et l'intégrité en une seule opération"
+    ],
+    "bonneReponse": 3,
+    "explication": "Un chiffrement seul ne détecte pas les modifications : un attaquant peut inverser des bits du chiffré et altérer le clair à l'aveugle. Les modes AEAD (Authenticated Encryption with Associated Data), comme AES-GCM ou ChaCha20-Poly1305, ajoutent une étiquette d'authentification qui fait échouer le déchiffrement au moindre octet modifié. TLS 1.3 n'accepte plus que ce type de chiffrement."
+  },
+  {
+    "id": "cryptographie-e3",
+    "enonce": "Quelle erreur a permis de retrouver la clé privée de signature de la PlayStation 3, en 2010 ?",
+    "choix": [
+      "Une clé privée laissée en clair dans le micrologiciel",
+      "Des signatures fondées sur SHA-1, sujet aux collisions",
+      "Un même nombre aléatoire réutilisé pour chaque signature",
+      "Une clé RSA trop courte, de 512 bits seulement"
+    ],
+    "bonneReponse": 2,
+    "explication": "ECDSA exige un nombre aléatoire secret, différent à chaque signature (le nonce k). Sony utilisait toujours le même : avec deux signatures, une simple équation livre la clé privée. Le groupe fail0verflow l'a démontré fin 2010, ouvrant la console aux logiciels non signés. Pour éviter ce piège, Ed25519 dérive le nonce du message de façon déterministe, ce que la RFC 6979 permet aussi pour ECDSA."
+  },
+  {
+    "id": "cryptographie-e4",
+    "enonce": "Quel algorithme quantique menace RSA et les courbes elliptiques ?",
+    "choix": [
+      "L'algorithme de Grover",
+      "L'algorithme de Shor",
+      "L'algorithme de Dijkstra",
+      "L'algorithme de Rabin"
+    ],
+    "bonneReponse": 1,
+    "explication": "Publié par Peter Shor en 1994, il factorise les entiers et calcule les logarithmes discrets en temps polynomial sur un ordinateur quantique assez grand, ce qui casserait RSA, Diffie-Hellman et ECDSA. L'algorithme de Grover, lui, ne fait qu'accélérer la recherche exhaustive : doubler la taille des clés symétriques (AES-256) suffit à s'en prémunir."
+  },
+  {
+    "id": "cryptographie-e5",
+    "enonce": "Sur quelle famille mathématique repose ML-KEM (ex-Kyber), standardisé par le NIST en 2024 ?",
+    "choix": [
+      "Les courbes elliptiques",
+      "La factorisation d'entiers",
+      "Les réseaux euclidiens",
+      "Les fonctions de hachage"
+    ],
+    "bonneReponse": 2,
+    "explication": "ML-KEM (norme FIPS 203) et la signature ML-DSA (ex-Dilithium) reposent sur des problèmes de réseaux euclidiens (lattices), comme « Learning With Errors », réputés résister aux ordinateurs quantiques. SLH-DSA (ex-SPHINCS+) repose, lui, sur les fonctions de hachage. Chrome, Signal ou iMessage utilisent déjà Kyber ou ML-KEM, combiné par prudence à une courbe elliptique classique."
+  },
+  {
+    "id": "cryptographie-e6",
+    "enonce": "Pour une empreinte de n bits, combien d'essais faut-il environ pour trouver une collision ?",
+    "choix": [
+      "Environ 2^n",
+      "Environ 2^(n/2)",
+      "Environ n^2",
+      "Environ 2^(n-1)"
+    ],
+    "bonneReponse": 1,
+    "explication": "C'est le paradoxe des anniversaires : dans un groupe de 23 personnes, il y a plus d'une chance sur deux que deux partagent la même date de naissance. Pour une empreinte de 128 bits comme MD5, une collision demande donc de l'ordre de 2^64 essais seulement, et non 2^128. C'est pourquoi on vise des empreintes de 256 bits pour une sécurité de 128 bits."
+  },
+  {
+    "id": "cryptographie-e7",
+    "enonce": "Que garantit la confidentialité persistante (forward secrecy) ?",
+    "choix": [
+      "Le vol de la clé à long terme ne révèle pas les sessions passées",
+      "Les messages restent chiffrés même une fois déchiffrés",
+      "La clé de session est réutilisée pour les connexions futures",
+      "Le certificat du serveur ne peut jamais expirer ni être révoqué"
+    ],
+    "bonneReponse": 0,
+    "explication": "Chaque session utilise une clé éphémère, issue d'un échange Diffie-Hellman (ECDHE) puis effacée. Même si la clé privée du serveur est volée plus tard, les échanges enregistrés auparavant restent indéchiffrables. Avec l'ancien échange de clés RSA de TLS, au contraire, une clé volée permettait de tout relire ; TLS 1.3 a rendu la confidentialité persistante obligatoire."
+  },
+  {
+    "id": "cryptographie-e8",
+    "enonce": "Pourquoi SHA-256(clé ‖ message) est-il une mauvaise façon d'authentifier un message ?",
+    "choix": [
+      "Il permet une attaque par extension de longueur",
+      "Il révèle une partie de la clé dans l'empreinte",
+      "Il produit une empreinte trop courte pour être sûre",
+      "Il est trop lent pour un usage en temps réel"
+    ],
+    "bonneReponse": 0,
+    "explication": "L'empreinte de SHA-256 (construction de Merkle-Damgård) n'est autre que son état interne final : connaissant SHA-256(clé ‖ message), un attaquant peut calculer celle de clé ‖ message ‖ remplissage ‖ suite, sans connaître la clé. HMAC, qui hache deux fois avec la clé, évite ce piège, tout comme SHA-3, dont la construction « éponge » n'expose pas son état. L'API de Flickr en a été victime en 2009."
+  },
+  {
+    "id": "cryptographie-e9",
+    "enonce": "Quel cryptographe a conçu la courbe Curve25519 et le chiffrement ChaCha20 ?",
+    "choix": [
+      "Bruce Schneier",
+      "Ron Rivest",
+      "Whitfield Diffie",
+      "Daniel J. Bernstein"
+    ],
+    "bonneReponse": 3,
+    "explication": "Daniel J. Bernstein (« djb ») a conçu Curve25519 (2005), Salsa20 puis ChaCha20 (2008) et l'authentificateur Poly1305, en visant des implémentations rapides et difficiles à mal programmer. On les trouve aujourd'hui partout : TLS 1.3, SSH, WireGuard, Signal. Il est aussi connu pour son procès contre le gouvernement américain sur l'exportation des logiciels de chiffrement."
+  },
+  {
+    "id": "cryptographie-e10",
+    "enonce": "Qui avait découvert le principe du chiffrement à clé publique avant Diffie, Hellman et RSA, mais en secret ?",
+    "choix": [
+      "Des ingénieurs d'IBM qui travaillaient sur DES",
+      "Des chercheurs de la NSA, à Fort Meade",
+      "Des cryptographes du GCHQ britannique",
+      "Des mathématiciens soviétiques du KGB"
+    ],
+    "bonneReponse": 2,
+    "explication": "Au GCHQ, James Ellis a imaginé le « chiffrement non secret » en 1970 ; Clifford Cocks en a tiré en 1973 un équivalent de RSA, et Malcolm Williamson un équivalent de Diffie-Hellman en 1974. Classés secret défense, ces travaux n'ont été révélés qu'en 1997."
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ethereum-e1",
+    "enonce": "Quel ordre d'opérations protège une fonction Solidity contre la réentrance ?",
+    "choix": [
+      "Appeler l'extérieur, puis vérifier, puis mettre à jour l'état",
+      "Vérifier, puis appeler l'extérieur, puis mettre à jour l'état",
+      "Vérifier, puis mettre à jour l'état, puis appeler l'extérieur",
+      "Mettre à jour l'état, puis appeler l'extérieur, puis vérifier"
+    ],
+    "bonneReponse": 2,
+    "explication": "C'est le motif « Checks-Effects-Interactions » : on vérifie les conditions, on modifie l'état (solde remis à zéro…), et seulement ensuite on envoie l'ether ou on appelle un autre contrat. Un rappel malveillant trouve alors un état déjà à jour. On le complète souvent par un verrou anti-réentrance, comme le `ReentrancyGuard` d'OpenZeppelin."
+  },
+  {
+    "id": "ethereum-e2",
+    "enonce": "Que fait l'instruction `delegatecall` ?",
+    "choix": [
+      "Elle exécute le code d'un autre contrat sur son propre stockage",
+      "Elle fait payer le gas de l'appel par le contrat appelé",
+      "Elle transfère la propriété du contrat à une autre adresse",
+      "Elle appelle un contrat déployé sur une autre blockchain"
+    ],
+    "bonneReponse": 0,
+    "explication": "Avec `delegatecall`, le code du contrat cible s'exécute dans le contexte de l'appelant : même stockage, même `msg.sender`, même solde. C'est la base des bibliothèques et des proxys évolutifs, mais aussi une source de failles graves si le code appelé n'est pas de confiance, ou si les deux contrats n'organisent pas leur stockage de la même façon."
+  },
+  {
+    "id": "ethereum-e3",
+    "enonce": "Comment l'EVM sait-elle quelle fonction d'un contrat est appelée ?",
+    "choix": [
+      "Par le rang de la fonction dans le code source",
+      "Par le nom de la fonction, transmis en clair",
+      "Par une adresse mémoire fixée au déploiement",
+      "Par 4 octets tirés du hachage de sa signature"
+    ],
+    "bonneReponse": 3,
+    "explication": "Le « sélecteur » correspond aux 4 premiers octets du Keccak-256 de la signature : `transfer(address,uint256)` donne `0xa9059cbb`. Il ouvre les données d'appel, suivi des arguments encodés selon l'ABI. Avec seulement 4 octets, deux fonctions différentes peuvent avoir le même sélecteur : le compilateur refuse ce cas au sein d'un même contrat."
+  },
+  {
+    "id": "ethereum-e4",
+    "enonce": "Qu'a apporté l'EIP-4844 (« proto-danksharding »), activée en mars 2024 ?",
+    "choix": [
+      "Le retrait des ETH mis en jeu par les validateurs",
+      "Le passage de la preuve de travail à l'enjeu",
+      "Des « blobs » de données qui allègent le coût des rollups",
+      "La destruction d'une partie des frais de transaction"
+    ],
+    "bonneReponse": 2,
+    "explication": "Avec la mise à jour Dencun, les blocs peuvent transporter des « blobs » : des données bon marché, conservées environ 18 jours seulement, que l'EVM ne peut pas lire. Elles suffisent aux rollups pour publier leurs lots de transactions, dont les frais ont été divisés par 10 ou plus. Les autres réponses correspondent à Shanghai (2023), The Merge (2022) et London (2021)."
+  },
+  {
+    "id": "ethereum-e5",
+    "enonce": "Comment une adresse Ethereum est-elle dérivée de la clé publique ?",
+    "choix": [
+      "Les 20 derniers octets de son hachage Keccak-256",
+      "Les 20 premiers octets de son hachage SHA-256",
+      "Son double hachage SHA-256 puis RIPEMD-160",
+      "Son encodage en Base58 avec une somme de contrôle"
+    ],
+    "bonneReponse": 0,
+    "explication": "On hache la clé publique (64 octets, non compressée) avec Keccak-256 et on garde les 20 derniers octets. Keccak-256 est la version d'origine de SHA-3, avec un remplissage différent de la norme finale : les deux ne donnent pas le même résultat. Le double hachage SHA-256 puis RIPEMD-160 et l'encodage Base58 sont ceux des anciennes adresses Bitcoin."
+  },
+  {
+    "id": "ethereum-e6",
+    "enonce": "En quoi consiste une attaque « sandwich » sur un échange décentralisé ?",
+    "choix": [
+      "Bloquer une transaction en saturant la mempool de copies",
+      "Encadrer l'ordre d'une victime par un achat et une revente",
+      "Voler les clés d'un utilisateur via une fausse interface",
+      "Faire valider deux fois la même transaction par deux blocs"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un robot repère dans la mempool un gros achat en attente, achète juste avant (ce qui fait monter le prix), laisse la victime acheter plus cher, puis revend juste après. C'est une forme de MEV (Maximal Extractable Value), la valeur que l'on peut extraire en ordonnant les transactions d'un bloc. Une tolérance de glissement (slippage) serrée limite les dégâts."
+  },
+  {
+    "id": "ethereum-e7",
+    "enonce": "Depuis Solidity 0.8, que se passe-t-il par défaut lors d'un dépassement d'entier ?",
+    "choix": [
+      "La valeur repart silencieusement à zéro",
+      "La valeur est plafonnée au maximum du type",
+      "La transaction échoue et l'état est annulé",
+      "Le type est agrandi automatiquement"
+    ],
+    "bonneReponse": 2,
+    "explication": "Avant la 0.8, les entiers « bouclaient » en silence (255 + 1 = 0 pour un `uint8`), d'où des failles célèbres et l'usage quasi obligatoire de la bibliothèque SafeMath. Depuis Solidity 0.8 (2020), chaque opération est vérifiée et provoque un revert en cas de dépassement. Un bloc `unchecked { … }` désactive ces contrôles pour économiser du gas."
+  },
+  {
+    "id": "ethereum-e8",
+    "enonce": "Quelle est la particularité d'un « flash loan » en DeFi ?",
+    "choix": [
+      "Il est accordé sans intérêts pendant 24 heures",
+      "Il est garanti par un NFT déposé en collatéral",
+      "Il est remboursé automatiquement par les validateurs",
+      "Il est emprunté et remboursé dans la même transaction"
+    ],
+    "bonneReponse": 3,
+    "explication": "Un flash loan se passe de garantie : si les fonds ne sont pas rendus (avec une petite commission) avant la fin de la transaction, tout est annulé comme si rien ne s'était passé. On peut ainsi emprunter des millions pour un arbitrage… ou pour manipuler un oracle de prix : de nombreuses attaques DeFi s'en servent."
+  },
+  {
+    "id": "ethereum-e9",
+    "enonce": "En novembre 2017, comment plus de 500 000 ETH se sont-ils retrouvés gelés dans des portefeuilles Parity ?",
+    "choix": [
+      "Un utilisateur a détruit la bibliothèque dont ils dépendaient",
+      "Un groupe de mineurs a censuré toutes leurs transactions",
+      "Un bug du compilateur Solidity a corrompu leurs adresses",
+      "Leurs clés privées ont été perdues lors d'une migration"
+    ],
+    "bonneReponse": 0,
+    "explication": "Les portefeuilles multisignatures Parity déléguaient leur logique (via `delegatecall`) à un unique contrat bibliothèque, resté non initialisé. Un utilisateur s'en est déclaré propriétaire, puis a appelé sa fonction d'autodestruction : tous les portefeuilles qui en dépendaient sont devenus inutilisables. Les fonds sont toujours bloqués."
+  },
+  {
+    "id": "ethereum-e10",
+    "enonce": "Comment rend-on un smart contract « évolutif » malgré l'immuabilité de son code ?",
+    "choix": [
+      "En demandant aux validateurs de réécrire son bytecode",
+      "Par un proxy qui délègue ses appels à un contrat remplaçable",
+      "En publiant un correctif signé par la clé du déployeur",
+      "En modifiant son code source vérifié sur Etherscan"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les utilisateurs appellent toujours l'adresse d'un contrat proxy, qui garde le stockage et transmet chaque appel par `delegatecall` à un contrat d'implémentation. Pour « mettre à jour », on change l'adresse de cette implémentation. Le revers : celui qui détient ce droit de mise à jour peut tout changer, ce qui réintroduit un point de confiance."
+  }
+]

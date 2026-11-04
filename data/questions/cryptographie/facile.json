@@ -1,0 +1,122 @@
+[
+  {
+    "id": "cryptographie-f1",
+    "enonce": "Dans le chiffre de César, comment transforme-t-on chaque lettre ?",
+    "choix": [
+      "On la remplace par un symbole tiré au hasard",
+      "On la décale d'un nombre fixe de rangs dans l'alphabet",
+      "On inverse l'ordre des lettres de chaque mot",
+      "On la remplace par son rang dans l'alphabet"
+    ],
+    "bonneReponse": 1,
+    "explication": "Jules César décalait chaque lettre de trois rangs : A devient D, B devient E… Avec seulement 25 décalages possibles, on le casse en les essayant tous. Le ROT13, encore utilisé pour masquer un spoiler, est un chiffre de César de décalage 13."
+  },
+  {
+    "id": "cryptographie-f2",
+    "enonce": "Qu'est-ce que la cryptanalyse ?",
+    "choix": [
+      "L'art de cacher un message dans une image",
+      "L'étude des virus qui chiffrent les fichiers",
+      "L'art de casser des systèmes de chiffrement",
+      "La création de mots de passe robustes"
+    ],
+    "bonneReponse": 2,
+    "explication": "La cryptanalyse cherche à retrouver un message ou une clé sans y être autorisé ; avec la cryptographie (concevoir des chiffrements), elle forme la cryptologie. Cacher l'existence même d'un message, par exemple dans les pixels d'une image, s'appelle la stéganographie."
+  },
+  {
+    "id": "cryptographie-f3",
+    "enonce": "Quel algorithme de chiffrement symétrique est aujourd'hui le standard mondial ?",
+    "choix": [
+      "AES",
+      "RSA",
+      "SHA-256",
+      "MD5"
+    ],
+    "bonneReponse": 0,
+    "explication": "AES (Advanced Encryption Standard), conçu par les Belges Joan Daemen et Vincent Rijmen sous le nom de Rijndael, a été choisi par le NIST en 2001 pour remplacer DES. Il chiffre des blocs de 128 bits avec des clés de 128, 192 ou 256 bits. RSA est asymétrique ; SHA-256 et MD5 sont des fonctions de hachage, pas des chiffrements."
+  },
+  {
+    "id": "cryptographie-f4",
+    "enonce": "Quelle propriété essentielle a une fonction de hachage cryptographique ?",
+    "choix": [
+      "Elle produit une sortie plus longue que l'entrée",
+      "Elle peut être inversée avec la bonne clé",
+      "On ne peut pas retrouver l'entrée à partir de l'empreinte",
+      "Elle donne un résultat différent à chaque appel"
+    ],
+    "bonneReponse": 2,
+    "explication": "Une fonction de hachage est à sens unique : facile à calculer, impossible à inverser en pratique. Elle est aussi déterministe (même entrée, même empreinte) et produit une sortie de taille fixe, quelle que soit l'entrée : 256 bits pour SHA-256, qu'on hache un mot ou un film. Il n'y a pas de clé : hacher n'est pas chiffrer."
+  },
+  {
+    "id": "cryptographie-f5",
+    "enonce": "Quelle machine de chiffrement allemande a été cassée par les Alliés pendant la Seconde Guerre mondiale ?",
+    "choix": [
+      "Colossus",
+      "ENIAC",
+      "Zuse Z3",
+      "Enigma"
+    ],
+    "bonneReponse": 3,
+    "explication": "Enigma chiffrait grâce à des rotors qui changeaient la substitution à chaque lettre. Des mathématiciens polonais, dont Marian Rejewski, l'ont cassée dès 1932 ; à Bletchley Park, Alan Turing et son équipe ont ensuite automatisé l'attaque avec les « bombes ». Colossus, premier calculateur électronique programmable, servait à casser un autre chiffre allemand, celui de la machine Lorenz."
+  },
+  {
+    "id": "cryptographie-f6",
+    "enonce": "En chiffrement asymétrique, quelle clé peut-on diffuser à tout le monde ?",
+    "choix": [
+      "La clé privée",
+      "La clé publique",
+      "La clé maîtresse",
+      "La clé de session"
+    ],
+    "bonneReponse": 1,
+    "explication": "Chacun possède une paire de clés : la clé publique, diffusée librement, sert à chiffrer un message qui vous est destiné ou à vérifier votre signature ; la clé privée, gardée secrète, sert à déchiffrer et à signer. Ce qui est chiffré avec l'une ne se déchiffre qu'avec l'autre."
+  },
+  {
+    "id": "cryptographie-f7",
+    "enonce": "Quel algorithme asymétrique, publié en 1977, porte les initiales de ses trois inventeurs ?",
+    "choix": [
+      "AES",
+      "DES",
+      "SHA",
+      "RSA"
+    ],
+    "bonneReponse": 3,
+    "explication": "RSA vient de Ron Rivest, Adi Shamir et Leonard Adleman, chercheurs au MIT. C'est le premier système pratique permettant à la fois le chiffrement et la signature à clé publique. Il reste très utilisé, même si les courbes elliptiques le remplacent progressivement."
+  },
+  {
+    "id": "cryptographie-f8",
+    "enonce": "Que garantit le chiffrement de bout en bout d'une messagerie ?",
+    "choix": [
+      "Les messages s'effacent dès qu'ils ont été lus",
+      "Le serveur peut lire les messages sans les modifier",
+      "Seuls l'expéditeur et le destinataire peuvent les lire",
+      "Les messages sont signés par l'opérateur du service"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les messages sont chiffrés sur l'appareil de l'expéditeur et ne sont déchiffrés que sur celui du destinataire : le serveur ne transporte que du charabia. Signal, WhatsApp ou iMessage fonctionnent ainsi. À distinguer du simple chiffrement « en transit » (HTTPS), où le serveur voit les messages en clair."
+  },
+  {
+    "id": "cryptographie-f9",
+    "enonce": "À quoi sert une signature numérique ?",
+    "choix": [
+      "À prouver l'auteur d'un message et son intégrité",
+      "À rendre un message illisible pour les tiers",
+      "À compresser un message avant son envoi",
+      "À dater un message sur un serveur officiel"
+    ],
+    "bonneReponse": 0,
+    "explication": "L'auteur signe l'empreinte du message avec sa clé privée ; n'importe qui peut vérifier avec sa clé publique. La moindre modification du message invalide la signature, et seul le détenteur de la clé privée a pu la produire. Elle ne cache rien : le message reste lisible."
+  },
+  {
+    "id": "cryptographie-f10",
+    "enonce": "Quels prénoms désignent traditionnellement les deux interlocuteurs dans les exemples de cryptographie ?",
+    "choix": [
+      "Adam et Ève",
+      "Alice et Bob",
+      "Tom et Jerry",
+      "Roméo et Juliette"
+    ],
+    "bonneReponse": 1,
+    "explication": "Alice et Bob apparaissent dans l'article de RSA de 1978, à la place de « A » et « B ». La distribution s'est enrichie depuis : Eve écoute la conversation (eavesdropper), Mallory modifie les messages (malicious), Trent joue le tiers de confiance (trusted)."
+  }
+]

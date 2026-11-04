@@ -315,6 +315,27 @@
     "description": "Bitcoin, blockchain, smart contracts et compagnie."
   },
   {
+    "id": "bitcoin",
+    "nom": "Bitcoin",
+    "emoji": "₿",
+    "categorie": "Crypto & Web3",
+    "description": "Minage, halving, UTXO et Lightning Network : le fonctionnement de la première cryptomonnaie."
+  },
+  {
+    "id": "ethereum",
+    "nom": "Ethereum & smart contracts",
+    "emoji": "🔷",
+    "categorie": "Crypto & Web3",
+    "description": "Solidity, gas, EVM, preuve d'enjeu et DeFi : la blockchain programmable."
+  },
+  {
+    "id": "cryptographie",
+    "nom": "Cryptographie",
+    "emoji": "🔐",
+    "categorie": "Crypto & Web3",
+    "description": "Du chiffre de César à l'après-quantique : symétrique, asymétrique, hachage, RSA et courbes elliptiques."
+  },
+  {
     "id": "ia",
     "nom": "IA (généralités)",
     "emoji": "🧠",

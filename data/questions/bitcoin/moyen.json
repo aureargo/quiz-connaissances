@@ -1,0 +1,122 @@
+[
+  {
+    "id": "bitcoin-m1",
+    "enonce": "Combien de bitcoins un mineur reçoit-il par bloc depuis le halving d'avril 2024 ?",
+    "choix": [
+      "6,25 BTC",
+      "3,125 BTC",
+      "12,5 BTC",
+      "1,5625 BTC"
+    ],
+    "bonneReponse": 1,
+    "explication": "La récompense est partie de 50 BTC en 2009, puis 25 (2012), 12,5 (2016), 6,25 (2020) et 3,125 depuis le bloc 840 000, en avril 2024. Elle passera à 1,5625 BTC vers 2028. Les frais de transaction s'y ajoutent, et devront à terme prendre le relais."
+  },
+  {
+    "id": "bitcoin-m2",
+    "enonce": "Quel mécanisme maintient un rythme d'environ un bloc toutes les 10 minutes, quelle que soit la puissance de calcul ?",
+    "choix": [
+      "L'ajustement de la difficulté tous les 2 016 blocs",
+      "Le halving de la récompense tous les 210 000 blocs",
+      "Un plafond de transactions fixé par chaque mineur",
+      "Une horloge de référence tenue par Bitcoin Core"
+    ],
+    "bonneReponse": 0,
+    "explication": "Tous les 2 016 blocs (environ deux semaines), chaque nœud compare le temps réellement écoulé aux 14 jours visés et ajuste la cible en conséquence : plus il y a de mineurs, plus c'est difficile. Chaque ajustement est borné à un facteur 4, dans un sens comme dans l'autre."
+  },
+  {
+    "id": "bitcoin-m3",
+    "enonce": "Comment Bitcoin enregistre-t-il qui possède quoi ?",
+    "choix": [
+      "Par des soldes de comptes mis à jour à chaque bloc",
+      "Par un registre de propriété tenu par chaque portefeuille",
+      "Par des sorties de transactions pas encore dépensées",
+      "Par des jetons numérotés rattachés à chaque adresse"
+    ],
+    "bonneReponse": 2,
+    "explication": "C'est le modèle UTXO (Unspent Transaction Output). Une transaction consomme des sorties existantes en entier et en crée de nouvelles, dont souvent une « monnaie » qui revient à l'expéditeur. Le « solde » affiché par un portefeuille est la somme de ses UTXO. Ethereum utilise au contraire un modèle à comptes."
+  },
+  {
+    "id": "bitcoin-m4",
+    "enonce": "Quel problème la mise à jour SegWit, activée en 2017, a-t-elle notamment corrigé ?",
+    "choix": [
+      "La malléabilité des transactions",
+      "La consommation électrique du minage",
+      "Le plafond des 21 millions d'unités",
+      "Le manque de confidentialité des adresses"
+    ],
+    "bonneReponse": 0,
+    "explication": "Avant SegWit (Segregated Witness), un tiers pouvait modifier la signature d'une transaction sans l'invalider, ce qui changeait son identifiant. En sortant les signatures (le « témoin ») du calcul de cet identifiant, SegWit a rendu fiables les chaînes de transactions non confirmées, indispensables au Lightning Network. Il a aussi augmenté la capacité effective des blocs."
+  },
+  {
+    "id": "bitcoin-m5",
+    "enonce": "Quel désaccord a donné naissance à Bitcoin Cash en août 2017 ?",
+    "choix": [
+      "Le passage à la preuve d'enjeu",
+      "Le plafond des 21 millions",
+      "La taille maximale des blocs",
+      "L'anonymat des transactions"
+    ],
+    "bonneReponse": 2,
+    "explication": "Pendant la « guerre de la taille des blocs », une partie de la communauté voulait agrandir les blocs (limités à 1 Mo) pour faire passer plus de transactions sur la chaîne ; l'autre préférait SegWit et les surcouches comme Lightning. Le camp des « gros blocs » a créé un fork, Bitcoin Cash, avec des blocs de 8 Mo, puis 32 Mo."
+  },
+  {
+    "id": "bitcoin-m6",
+    "enonce": "Qu'est-ce que la « mempool » d'un nœud Bitcoin ?",
+    "choix": [
+      "La mémoire où le nœud range ses clés privées",
+      "Le dossier qui contient l'historique des blocs",
+      "La réserve des bitcoins qui restent à miner",
+      "La file des transactions en attente de bloc"
+    ],
+    "bonneReponse": 3,
+    "explication": "Chaque nœud garde en mémoire les transactions valides reçues mais pas encore incluses dans un bloc. Les mineurs y piochent en priorité celles qui paient le plus de frais par octet virtuel (sat/vB) : quand la mempool déborde, les frais montent. Il n'existe pas une mempool unique : chaque nœud a la sienne."
+  },
+  {
+    "id": "bitcoin-m7",
+    "enonce": "Comment fonctionne un canal de paiement du Lightning Network ?",
+    "choix": [
+      "Chaque paiement passe dans un petit bloc dédié, miné plus vite",
+      "Un serveur central valide les paiements, puis les publie",
+      "Deux parties bloquent des fonds, puis s'échangent des soldes hors chaîne",
+      "Les mineurs réservent une part de chaque bloc aux paiements"
+    ],
+    "bonneReponse": 2,
+    "explication": "L'ouverture d'un canal est une transaction sur la chaîne qui place des fonds dans une adresse multisignature 2-sur-2. Ensuite, les deux parties s'échangent des transactions signées qui redistribuent ce solde, sans les publier. Seul l'état final est inscrit sur la chaîne, à la fermeture du canal."
+  },
+  {
+    "id": "bitcoin-m8",
+    "enonce": "Quelle plateforme, qui traitait alors la majorité des échanges de bitcoins, a fait faillite en 2014 après un piratage massif ?",
+    "choix": [
+      "Coinbase",
+      "Binance",
+      "FTX",
+      "Mt. Gox"
+    ],
+    "bonneReponse": 3,
+    "explication": "Basée à Tokyo, Mt. Gox gérait environ 70 % des échanges de bitcoins vers 2013. En février 2014, elle a suspendu ses retraits puis annoncé la disparition d'environ 850 000 bitcoins, volés sur plusieurs années (200 000 ont ensuite été retrouvés). Les créanciers n'ont commencé à être remboursés qu'en 2024. FTX, elle, s'est effondrée en 2022 pour détournement de fonds."
+  },
+  {
+    "id": "bitcoin-m9",
+    "enonce": "Que fait principalement varier un mineur pour chercher un bloc valide ?",
+    "choix": [
+      "Le montant total des frais",
+      "Un nombre arbitraire, le nonce",
+      "La date du bloc précédent",
+      "Le nombre de bitcoins créés"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le mineur hache l'en-tête de 80 octets du bloc (double SHA-256) en changeant le nonce à chaque essai, jusqu'à obtenir une empreinte inférieure à la cible. Le nonce ne fait que 32 bits, soit environ 4,3 milliards de valeurs, épuisées en une fraction de seconde par un ASIC : on modifie alors aussi un « extraNonce » dans la transaction coinbase, ou l'horodatage."
+  },
+  {
+    "id": "bitcoin-m10",
+    "enonce": "Qui a reçu la toute première transaction en bitcoins, envoyée par Satoshi Nakamoto en janvier 2009 ?",
+    "choix": [
+      "Hal Finney",
+      "Nick Szabo",
+      "Adam Back",
+      "Vitalik Buterin"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le 12 janvier 2009, Satoshi a envoyé 10 BTC à Hal Finney, cryptographe et pionnier du logiciel PGP, dans le bloc 170. Finney avait été l'un des premiers à télécharger le logiciel et à miner. Son tweet du 11 janvier 2009, « Running bitcoin », est resté célèbre."
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "bitcoin-f1",
+    "enonce": "Quelle est la plus petite unité du bitcoin ?",
+    "choix": [
+      "Le satoshi",
+      "Le wei",
+      "Le gwei",
+      "Le centime"
+    ],
+    "bonneReponse": 0,
+    "explication": "Un satoshi vaut 0,00000001 BTC : un bitcoin se divise donc en 100 millions de satoshis. L'unité rend hommage au créateur pseudonyme, Satoshi Nakamoto. Le wei et le gwei sont des unités de l'ether, sur Ethereum."
+  },
+  {
+    "id": "bitcoin-f2",
+    "enonce": "En moyenne, combien de temps faut-il pour produire un nouveau bloc Bitcoin ?",
+    "choix": [
+      "Environ 10 secondes",
+      "Environ 10 minutes",
+      "Environ 1 heure",
+      "Environ 1 journée"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le protocole vise un bloc toutes les 10 minutes. Ce n'est qu'une moyenne : trouver un bloc est un tirage aléatoire, et deux blocs peuvent se suivre à quelques secondes comme à plus d'une heure d'écart. Pour un paiement important, on attend souvent 6 confirmations, soit environ une heure."
+  },
+  {
+    "id": "bitcoin-f3",
+    "enonce": "Que reçoit le mineur qui trouve un bloc valide ?",
+    "choix": [
+      "Un droit de vote sur les futures règles du réseau",
+      "Un certificat délivré par les développeurs de Bitcoin",
+      "Des bitcoins neufs, plus les frais des transactions",
+      "Une commission versée par chaque portefeuille du réseau"
+    ],
+    "bonneReponse": 2,
+    "explication": "La première transaction de chaque bloc, dite « coinbase », crée de nouveaux bitcoins au profit du mineur : c'est la subvention de bloc. Il empoche aussi les frais de toutes les transactions incluses. C'est le seul moyen par lequel de nouveaux bitcoins entrent en circulation."
+  },
+  {
+    "id": "bitcoin-f4",
+    "enonce": "Tous les combien d'années environ le halving du Bitcoin a-t-il lieu ?",
+    "choix": [
+      "Tous les ans",
+      "Tous les 2 ans",
+      "Tous les 4 ans",
+      "Tous les 10 ans"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le halving divise par deux la récompense des mineurs tous les 210 000 blocs. À raison d'un bloc toutes les 10 minutes, cela fait environ 4 ans. Les derniers ont eu lieu en 2012, 2016, 2020 et avril 2024 ; le prochain est attendu vers 2028."
+  },
+  {
+    "id": "bitcoin-f5",
+    "enonce": "Quel est le principal avantage d'un paiement via le Lightning Network ?",
+    "choix": [
+      "Il est quasi instantané et coûte très peu",
+      "Il est anonyme grâce à un mélangeur intégré",
+      "Il est garanti et remboursable par une banque",
+      "Il crée de nouveaux bitcoins à chaque paiement"
+    ],
+    "bonneReponse": 0,
+    "explication": "Lightning est une surcouche (« layer 2 ») : les paiements circulent hors de la blockchain, dans des canaux ouverts entre utilisateurs, et ne sont réglés sur la chaîne qu'à l'ouverture et à la fermeture du canal. Résultat : un paiement en une fraction de seconde pour quelques satoshis, là où la chaîne principale ne traite que quelques transactions par seconde."
+  },
+  {
+    "id": "bitcoin-f6",
+    "enonce": "En quelle année le premier bloc de Bitcoin a-t-il été miné ?",
+    "choix": [
+      "En 2005",
+      "En 2009",
+      "En 2013",
+      "En 2017"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le bloc genèse (bloc 0) a été miné par Satoshi Nakamoto le 3 janvier 2009, quelques mois après la publication du livre blanc (octobre 2008). Le logiciel Bitcoin a été rendu public le 9 janvier 2009."
+  },
+  {
+    "id": "bitcoin-f7",
+    "enonce": "Contre quoi Laszlo Hanyecz a-t-il échangé 10 000 bitcoins en mai 2010 ?",
+    "choix": [
+      "Une voiture d'occasion",
+      "Un ordinateur portable",
+      "Un billet d'avion",
+      "Deux pizzas"
+    ],
+    "bonneReponse": 3,
+    "explication": "Le 22 mai 2010, ce programmeur a payé deux pizzas 10 000 bitcoins (environ 40 dollars à l'époque) : c'est le premier achat connu d'un bien réel en bitcoins. Le 22 mai est depuis célébré comme le « Bitcoin Pizza Day ». Ces bitcoins vaudraient aujourd'hui des centaines de millions de dollars."
+  },
+  {
+    "id": "bitcoin-f8",
+    "enonce": "Quel matériel domine aujourd'hui le minage de Bitcoin ?",
+    "choix": [
+      "Des processeurs de PC",
+      "Des cartes graphiques",
+      "Des puces ASIC dédiées",
+      "Des smartphones"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un ASIC (Application-Specific Integrated Circuit) est une puce conçue pour un seul calcul : ici, le double SHA-256. Il est des milliers de fois plus efficace qu'un processeur ou une carte graphique, qui ont servi à miner jusque vers 2013. Miner sans ASIC n'est plus rentable depuis longtemps."
+  },
+  {
+    "id": "bitcoin-f9",
+    "enonce": "Quel pays a été le premier à faire du bitcoin une monnaie légale, en 2021 ?",
+    "choix": [
+      "La Suisse",
+      "Le Salvador",
+      "Le Japon",
+      "L'Argentine"
+    ],
+    "bonneReponse": 1,
+    "explication": "La loi est entrée en vigueur en septembre 2021, sous le président Nayib Bukele : les commerçants devaient accepter le bitcoin. En 2025, dans le cadre d'un accord avec le FMI, cette acceptation est devenue facultative. La République centrafricaine avait suivi en 2022, avant de faire marche arrière l'année suivante."
+  },
+  {
+    "id": "bitcoin-f10",
+    "enonce": "Que signifie l'adage « Not your keys, not your coins » ?",
+    "choix": [
+      "Il faut utiliser une nouvelle clé pour chaque transaction",
+      "Une clé perdue peut toujours être récupérée auprès du réseau",
+      "Les clés appartiennent à la plateforme qui a émis les bitcoins",
+      "Sans détenir ses clés, on ne possède pas vraiment ses bitcoins"
+    ],
+    "bonneReponse": 3,
+    "explication": "Laisser ses bitcoins sur une plateforme d'échange, c'est lui confier les clés privées : on ne détient alors qu'une promesse de remboursement. Les faillites de Mt. Gox (2014) ou de FTX (2022) l'ont rappelé. D'où l'intérêt d'un portefeuille personnel, dont on est seul à détenir les clés."
+  }
+]

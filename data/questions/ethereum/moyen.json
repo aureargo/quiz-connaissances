@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ethereum-m1",
+    "enonce": "Dans quelle unité exprime-t-on couramment le prix du gas ?",
+    "choix": [
+      "En satoshis",
+      "En lamports",
+      "En gwei",
+      "En finneys"
+    ],
+    "bonneReponse": 2,
+    "explication": "1 gwei = 10⁻⁹ ETH. Le coût d'une transaction vaut la quantité de gas consommée multipliée par le prix du gas : un simple transfert d'ether consomme 21 000 gas, soit 0,000021 ETH à 1 gwei. Le lamport est l'unité de base de Solana."
+  },
+  {
+    "id": "ethereum-m2",
+    "enonce": "Qu'a changé l'EIP-1559, en 2021, dans les frais de transaction d'Ethereum ?",
+    "choix": [
+      "Les frais sont désormais fixes, quel que soit l'encombrement",
+      "Les frais de base sont détruits au lieu d'être versés au mineur",
+      "Les frais sont payés en dollars, via un oracle intégré",
+      "Les frais sont remboursés si la transaction échoue"
+    ],
+    "bonneReponse": 1,
+    "explication": "Depuis la mise à jour London (août 2021), chaque bloc a des frais de base calculés par le protocole selon l'encombrement, et ces frais sont brûlés. L'utilisateur ajoute un pourboire (priority fee) pour le producteur du bloc. Quand l'activité est forte, on brûle plus d'ETH qu'on n'en émet : l'offre peut alors diminuer."
+  },
+  {
+    "id": "ethereum-m3",
+    "enonce": "Que se passe-t-il si une transaction manque de gas en cours d'exécution ?",
+    "choix": [
+      "Elle reprend automatiquement au bloc suivant",
+      "Elle est exécutée à crédit, puis facturée plus tard",
+      "Elle est annulée et intégralement remboursée",
+      "Elle est annulée, mais le gas consommé reste dû"
+    ],
+    "bonneReponse": 3,
+    "explication": "L'erreur « out of gas » annule tous les effets de la transaction (revert), mais le travail déjà effectué par le réseau reste payé. D'où l'intérêt de bien estimer la limite de gas : le gas non utilisé est rendu, celui brûlé dans un échec ne l'est pas."
+  },
+  {
+    "id": "ethereum-m4",
+    "enonce": "Quel standard définit les jetons non fongibles (NFT) sur Ethereum ?",
+    "choix": [
+      "ERC-20",
+      "ERC-4337",
+      "EIP-1559",
+      "ERC-721"
+    ],
+    "bonneReponse": 3,
+    "explication": "ERC-721 (2018) donne à chaque jeton un identifiant unique et un propriétaire. CryptoKitties (2017) a popularisé le concept. ERC-1155 permet ensuite de gérer jetons fongibles et non fongibles dans un même contrat ; ERC-4337 concerne l'abstraction de compte, EIP-1559 les frais."
+  },
+  {
+    "id": "ethereum-m5",
+    "enonce": "Qu'est-ce qui distingue un compte externe (EOA) d'un compte de contrat ?",
+    "choix": [
+      "Il ne peut recevoir que des jetons, jamais d'ether",
+      "Il est hébergé sur une autre blockchain qu'Ethereum",
+      "Il est contrôlé par une clé privée, pas par du code",
+      "Il est géré par une plateforme d'échange centralisée"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un EOA (Externally Owned Account) appartient à qui détient sa clé privée : c'est lui qui signe et initie les transactions. Un compte de contrat n'a pas de clé ; il exécute son code quand on l'appelle, mais ne peut jamais lancer une transaction de lui-même. Depuis Pectra (2025, EIP-7702), un EOA peut toutefois déléguer son comportement à du code de contrat."
+  },
+  {
+    "id": "ethereum-m6",
+    "enonce": "En quoi consiste une attaque par réentrance ?",
+    "choix": [
+      "Rappeler un contrat avant qu'il ait mis à jour son état",
+      "Rejouer une transaction déjà validée sur une autre chaîne",
+      "Saturer un contrat d'appels pour épuiser son gas",
+      "Réutiliser la clé privée d'un compte déjà vidé"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le contrat victime envoie de l'ether avant de mettre à jour le solde ; le contrat de l'attaquant, en recevant ces fonds, rappelle aussitôt la fonction de retrait, qui voit encore l'ancien solde. C'est ainsi que The DAO a perdu 3,6 millions d'ETH en 2016, ce qui a conduit au fork d'Ethereum Classic."
+  },
+  {
+    "id": "ethereum-m7",
+    "enonce": "Que risque un validateur qui signe deux blocs différents pour le même créneau ?",
+    "choix": [
+      "Une partie de son dépôt est détruite et il est exclu",
+      "Il doit attendre un mois avant de valider à nouveau",
+      "Sa récompense est partagée entre les autres validateurs",
+      "Rien : le réseau conserve simplement le premier bloc"
+    ],
+    "bonneReponse": 0,
+    "explication": "C'est le « slashing » : signer deux versions contradictoires est une faute prouvable, punie par la destruction d'une partie de l'ETH en dépôt et l'éjection du validateur. Une simple absence n'est que légèrement pénalisée. En preuve d'enjeu, c'est ce risque financier qui remplace le coût électrique de la preuve de travail."
+  },
+  {
+    "id": "ethereum-m8",
+    "enonce": "Pourquoi un smart contract a-t-il besoin d'un « oracle » ?",
+    "choix": [
+      "Pour prédire le montant des frais de gas à venir",
+      "Pour accélérer la confirmation de ses transactions",
+      "Pour chiffrer les données qu'il garde en mémoire",
+      "Pour obtenir des données extérieures à la blockchain"
+    ],
+    "bonneReponse": 3,
+    "explication": "Un contrat ne peut lire que l'état de la blockchain : il ignore le cours de l'euro, la météo ou un résultat sportif. Un oracle, comme Chainlink, inscrit ces données sur la chaîne. C'est un point de confiance sensible : un oracle manipulé peut vider un protocole de prêt qui s'y fie."
+  },
+  {
+    "id": "ethereum-m9",
+    "enonce": "En Solidity, que contient `msg.sender` ?",
+    "choix": [
+      "L'adresse du compte qui a déployé le contrat",
+      "L'adresse qui appelle directement la fonction",
+      "L'adresse du validateur qui produit le bloc",
+      "L'adresse qui a signé la transaction d'origine"
+    ],
+    "bonneReponse": 1,
+    "explication": "`msg.sender` est l'appelant immédiat : un compte, ou un autre contrat. L'adresse qui a signé la transaction initiale, elle, est `tx.origin`. Vérifier des droits avec `tx.origin` est une faille classique : un contrat piège appelé par la victime passerait le contrôle à sa place."
+  },
+  {
+    "id": "ethereum-m10",
+    "enonce": "Que permet le service ENS (Ethereum Name Service) ?",
+    "choix": [
+      "Associer un nom lisible comme alice.eth à une adresse",
+      "Enregistrer un nom de domaine classique en .com",
+      "Vérifier l'identité civile du détenteur d'un compte",
+      "Envoyer des e-mails chiffrés entre deux portefeuilles"
+    ],
+    "bonneReponse": 0,
+    "explication": "ENS joue le rôle du DNS pour Ethereum : au lieu de copier une adresse de 42 caractères, on envoie des fonds à « alice.eth ». Les noms sont eux-mêmes des NFT, loués à l'année. Lancé en 2017, ENS gère aussi des sous-domaines et des métadonnées (avatar, site web…)."
+  }
+]

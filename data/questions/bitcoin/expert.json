@@ -1,0 +1,122 @@
+[
+  {
+    "id": "bitcoin-e1",
+    "enonce": "Quel titre du Times Satoshi Nakamoto a-t-il inscrit dans le bloc genèse, le 3 janvier 2009 ?",
+    "choix": [
+      "Lehman Brothers files for bankruptcy protection",
+      "Chancellor on brink of second bailout for banks",
+      "Federal Reserve cuts interest rates to near zero",
+      "Wall Street suffers its worst week since 1929"
+    ],
+    "bonneReponse": 1,
+    "explication": "La phrase « The Times 03/Jan/2009 Chancellor on brink of second bailout for banks » figure dans la transaction coinbase du bloc 0. Elle sert d'horodatage (le bloc n'a pas pu être créé avant cette date) et sonne comme une critique du sauvetage des banques par les États, en pleine crise financière. Les 50 BTC de ce bloc ne sont pas dépensables."
+  },
+  {
+    "id": "bitcoin-e2",
+    "enonce": "Quel schéma de signature la mise à jour Taproot, activée en 2021, a-t-elle introduit ?",
+    "choix": [
+      "Les signatures BLS",
+      "Les signatures de Lamport",
+      "Les signatures de Schnorr",
+      "Les signatures en anneau"
+    ],
+    "bonneReponse": 2,
+    "explication": "Taproot (BIP 340 à 342), activé en novembre 2021, ajoute les signatures de Schnorr à côté d'ECDSA. Elles sont linéaires : plusieurs signataires peuvent produire une seule signature agrégée, indiscernable d'une signature simple, ce qui rend les multisignatures moins coûteuses et plus discrètes. Satoshi leur avait préféré ECDSA, mieux normalisé : le brevet de Schnorr n'avait expiré qu'en 2008."
+  },
+  {
+    "id": "bitcoin-e3",
+    "enonce": "Sur quelle courbe elliptique reposent les clés de Bitcoin ?",
+    "choix": [
+      "secp256k1",
+      "Curve25519",
+      "P-256",
+      "BLS12-381"
+    ],
+    "bonneReponse": 0,
+    "explication": "secp256k1 est une courbe de Koblitz d'équation y² = x³ + 7, normalisée par le SECG. Peu utilisée avant Bitcoin, elle a des paramètres très simples qui rassurent sur l'absence de porte dérobée, un soupçon qui pèse sur les courbes du NIST comme P-256. Ethereum utilise la même courbe."
+  },
+  {
+    "id": "bitcoin-e4",
+    "enonce": "Combien de blocs faut-il attendre avant de pouvoir dépenser les bitcoins d'une transaction coinbase ?",
+    "choix": [
+      "6 blocs",
+      "10 blocs",
+      "100 blocs",
+      "2 016 blocs"
+    ],
+    "bonneReponse": 2,
+    "explication": "Cette « maturité » de 100 blocs protège contre les réorganisations de chaîne : si le bloc du mineur est abandonné au profit d'une branche concurrente, ses bitcoins neufs disparaissent. Sans ce délai, ils auraient pu être dépensés entre-temps, invalidant toutes les transactions en aval. Les 6 confirmations ne sont qu'une convention pour les paiements ordinaires."
+  },
+  {
+    "id": "bitcoin-e5",
+    "enonce": "Quel mécanisme permet de router un paiement Lightning à travers des nœuds intermédiaires sans leur faire confiance ?",
+    "choix": [
+      "Des contrats verrouillés par un hachage et un délai",
+      "Des signatures aveugles émises par chaque nœud relais",
+      "Un dépôt de garantie confié aux mineurs du réseau",
+      "Une transaction confirmée sur la chaîne à chaque saut"
+    ],
+    "bonneReponse": 0,
+    "explication": "Ce sont les HTLC (Hashed Timelock Contracts). Le destinataire choisit un secret et en communique l'empreinte ; chaque intermédiaire n'est payé qu'en révélant ce secret, qui remonte la route de proche en proche. Si le secret n'arrive pas avant l'expiration du délai, les fonds reviennent à leur propriétaire : personne ne peut partir avec l'argent."
+  },
+  {
+    "id": "bitcoin-e6",
+    "enonce": "Sur Lightning, que risque celui qui publie un ancien état de canal plus favorable pour lui ?",
+    "choix": [
+      "Voir sa transaction simplement ignorée par les mineurs",
+      "Être banni du réseau Lightning pendant plusieurs mois",
+      "Payer une amende fixée par les nœuds de routage",
+      "Perdre la totalité des fonds du canal au profit de l'autre"
+    ],
+    "bonneReponse": 3,
+    "explication": "À chaque mise à jour, les parties s'échangent de quoi « révoquer » l'état précédent. Si l'une publie un état périmé, l'autre dispose d'un délai pour diffuser une transaction de pénalité et récupérer tout le canal. Il faut donc surveiller la chaîne, ou déléguer cette veille à une « tour de guet » (watchtower)."
+  },
+  {
+    "id": "bitcoin-e7",
+    "enonce": "De quel système antispam, proposé par Adam Back en 1997, s'inspire la preuve de travail de Bitcoin ?",
+    "choix": [
+      "B-money",
+      "Bit Gold",
+      "DigiCash",
+      "Hashcash"
+    ],
+    "bonneReponse": 3,
+    "explication": "Hashcash obligeait l'expéditeur d'un e-mail à calculer une empreinte commençant par un certain nombre de zéros : gratuit pour un message, ruineux pour des millions de spams. Le livre blanc de Bitcoin le cite. B-money (Wei Dai) et Bit Gold (Nick Szabo) sont d'autres précurseurs ; DigiCash, la société de David Chaum, misait sur une monnaie électronique centralisée."
+  },
+  {
+    "id": "bitcoin-e8",
+    "enonce": "Par quel préfixe commence une adresse Bitcoin de type Taproot ?",
+    "choix": [
+      "bc1q",
+      "bc1p",
+      "1",
+      "3"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les adresses Taproot (encodage bech32m) commencent par « bc1p », les adresses SegWit natives par « bc1q ». Les plus anciennes commencent par « 1 » (P2PKH : une clé publique hachée) ou par « 3 » (P2SH : un script haché, souvent une multisignature)."
+  },
+  {
+    "id": "bitcoin-e9",
+    "enonce": "Qu'ont introduit les « Ordinals », apparus sur Bitcoin en 2023 ?",
+    "choix": [
+      "La numérotation des satoshis pour y inscrire des données",
+      "Un ordre de priorité des transactions selon leurs frais",
+      "Une sidechain rapide dédiée aux paiements anonymes",
+      "Des contrats intelligents complets, comme sur Ethereum"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le protocole de Casey Rodarmor numérote chaque satoshi selon son ordre de minage, puis y attache des « inscriptions » (images, textes) stockées dans les données témoin des transactions Taproot. Ces NFT natifs ont fait grimper les frais en 2023 et relancé le débat sur les usages légitimes de l'espace des blocs."
+  },
+  {
+    "id": "bitcoin-e10",
+    "enonce": "Combien de bitcoins existeront au maximum, précisément ?",
+    "choix": [
+      "Exactement 21 millions",
+      "Un peu moins de 21 millions",
+      "Un peu plus de 21 millions",
+      "Un nombre qui varie selon le minage"
+    ],
+    "bonneReponse": 1,
+    "explication": "La récompense, divisée par deux tous les 210 000 blocs, est arrondie au satoshi inférieur à chaque palier : la somme converge vers 20 999 999,9769 BTC environ, et non 21 millions pile. Le dernier satoshi sera miné vers 2140. Des milliers de bitcoins sont en outre perdus à jamais (clés égarées, sorties non dépensables)."
+  }
+]

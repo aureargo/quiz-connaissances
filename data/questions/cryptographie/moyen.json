@@ -1,0 +1,122 @@
+[
+  {
+    "id": "cryptographie-m1",
+    "enonce": "Qu'apporte le chiffre de Vigenère par rapport à celui de César ?",
+    "choix": [
+      "Les lettres sont remplacées par des nombres premiers",
+      "Le message est écrit en lignes puis lu en colonnes",
+      "Le décalage varie selon les lettres d'un mot-clé",
+      "Chaque lettre est chiffrée deux fois de suite"
+    ],
+    "bonneReponse": 2,
+    "explication": "Avec la clé « CLE », la 1re lettre est décalée de 2 (C), la 2e de 11 (L), la 3e de 4 (E), puis on recommence. Une même lettre claire donne donc des lettres chiffrées différentes, ce qui déjoue l'analyse des fréquences simple. Surnommé « le chiffre indéchiffrable », il a été cassé au XIXe siècle par Babbage et Kasiski, en retrouvant la longueur de la clé."
+  },
+  {
+    "id": "cryptographie-m2",
+    "enonce": "Quelle technique casse facilement une substitution monoalphabétique ?",
+    "choix": [
+      "L'analyse des fréquences des lettres",
+      "La factorisation de grands nombres",
+      "L'attaque par dictionnaire de mots de passe",
+      "La recherche de collisions de hachage"
+    ],
+    "bonneReponse": 0,
+    "explication": "Si chaque lettre est toujours remplacée par la même, les fréquences de la langue se retrouvent dans le texte chiffré : en français, le symbole le plus fréquent correspond très probablement au E. La méthode a été décrite dès le IXe siècle par le savant arabe Al-Kindi."
+  },
+  {
+    "id": "cryptographie-m3",
+    "enonce": "Que permet l'échange de clés de Diffie-Hellman, publié en 1976 ?",
+    "choix": [
+      "Signer un document avec une clé privée",
+      "Établir un secret commun sur un canal public",
+      "Stocker des clés sous une forme chiffrée",
+      "Révoquer un certificat qui a été compromis"
+    ],
+    "bonneReponse": 1,
+    "explication": "Alice et Bob échangent publiquement des valeurs calculées à partir de leurs secrets respectifs, et obtiennent chacun le même nombre, qu'un espion ne peut pas recalculer : il lui faudrait résoudre le problème du logarithme discret. Ce secret sert ensuite de clé symétrique. C'est le premier protocole à clé publique publié."
+  },
+  {
+    "id": "cryptographie-m4",
+    "enonce": "Sur quel problème mathématique difficile repose la sécurité de RSA ?",
+    "choix": [
+      "Le logarithme discret sur une courbe",
+      "La recherche de collisions de hachage",
+      "Le problème du voyageur de commerce",
+      "La factorisation de grands nombres"
+    ],
+    "bonneReponse": 3,
+    "explication": "La clé publique contient le produit n de deux grands nombres premiers secrets. Multiplier est facile ; retrouver les deux facteurs d'un n de 2 048 bits (617 chiffres décimaux) est hors de portée des ordinateurs classiques. Le logarithme discret sur courbe elliptique est, lui, le problème derrière ECDSA."
+  },
+  {
+    "id": "cryptographie-m5",
+    "enonce": "Pourquoi TLS combine-t-il chiffrement asymétrique et symétrique ?",
+    "choix": [
+      "L'asymétrique convient d'une clé, le symétrique chiffre vite",
+      "Le symétrique authentifie, l'asymétrique compresse les données",
+      "Chacun chiffre un message sur deux, pour plus de sécurité",
+      "L'asymétrique sert aux mobiles, le symétrique aux PC"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le chiffrement asymétrique est des centaines à des milliers de fois plus lent que le symétrique. TLS ne s'en sert donc qu'au début de la connexion, pour authentifier le serveur et convenir d'une clé de session ; tout le reste est chiffré en AES ou ChaCha20 avec cette clé. On parle de chiffrement hybride."
+  },
+  {
+    "id": "cryptographie-m6",
+    "enonce": "Qu'est-ce qu'une « collision » pour une fonction de hachage ?",
+    "choix": [
+      "Deux empreintes différentes pour la même entrée",
+      "Une empreinte qui révèle une partie de l'entrée",
+      "Deux entrées différentes qui ont la même empreinte",
+      "Un calcul d'empreinte qui ne se termine jamais"
+    ],
+    "bonneReponse": 2,
+    "explication": "Comme il y a infiniment plus d'entrées possibles que d'empreintes, les collisions existent forcément ; une bonne fonction rend seulement impossible d'en trouver une. Des collisions ont été produites pour MD5 (2004) puis SHA-1 (SHAttered, 2017) : on peut alors faire signer un document, puis lui en substituer un autre de même empreinte."
+  },
+  {
+    "id": "cryptographie-m7",
+    "enonce": "Quel est le principal avantage de la cryptographie sur courbes elliptiques par rapport à RSA ?",
+    "choix": [
+      "Une résistance aux futurs ordinateurs quantiques",
+      "Des clés bien plus courtes pour une sécurité égale",
+      "L'absence de clé privée à protéger",
+      "Un déchiffrement possible sans la clé"
+    ],
+    "bonneReponse": 1,
+    "explication": "Une clé elliptique de 256 bits offre une sécurité comparable à une clé RSA de 3 072 bits : calculs plus rapides, signatures et certificats plus légers. Mais face à un ordinateur quantique, les courbes elliptiques tombent elles aussi, via l'algorithme de Shor."
+  },
+  {
+    "id": "cryptographie-m8",
+    "enonce": "Quel système de chiffrement est prouvé incassable, s'il est correctement utilisé ?",
+    "choix": [
+      "Le chiffre de Vigenère",
+      "La machine Enigma",
+      "Le chiffrement RSA",
+      "Le masque jetable"
+    ],
+    "bonneReponse": 3,
+    "explication": "Le masque jetable (ou chiffre de Vernam) combine le message avec une clé aléatoire aussi longue que lui. Claude Shannon a prouvé en 1949 qu'il offre une sécurité parfaite… à condition que la clé soit vraiment aléatoire, aussi longue que le message, et utilisée une seule fois. Ces contraintes le rendent peu pratique ; il a notamment servi au « téléphone rouge » entre Washington et Moscou."
+  },
+  {
+    "id": "cryptographie-m9",
+    "enonce": "Selon le principe de Kerckhoffs, qu'est-ce qui doit rester secret dans un système de chiffrement ?",
+    "choix": [
+      "L'algorithme seulement",
+      "La clé seulement",
+      "L'algorithme et la clé",
+      "Le nom des correspondants"
+    ],
+    "bonneReponse": 1,
+    "explication": "Énoncé en 1883 par le cryptologue Auguste Kerckhoffs, ce principe veut qu'un système reste sûr même si l'adversaire connaît tout de son fonctionnement, sauf la clé. D'où le choix d'algorithmes publics et éprouvés comme AES, plutôt que d'algorithmes « maison » dont la sécurité repose sur le secret de leur conception."
+  },
+  {
+    "id": "cryptographie-m10",
+    "enonce": "Pourquoi préfère-t-on Argon2 ou bcrypt à SHA-256 pour stocker des mots de passe ?",
+    "choix": [
+      "Ils produisent des empreintes plus courtes",
+      "Ils permettent de retrouver un mot de passe oublié",
+      "Ils sont volontairement lents et coûteux à calculer",
+      "Ils sont plus rapides à vérifier à la connexion"
+    ],
+    "bonneReponse": 2,
+    "explication": "SHA-256 est conçu pour être rapide : un GPU en calcule des milliards par seconde, ce qui facilite la force brute sur une base volée. Bcrypt, scrypt ou Argon2 (vainqueur de la Password Hashing Competition en 2015) ont un coût réglable, et Argon2 consomme aussi beaucoup de mémoire pour gêner GPU et ASIC. Quelques dixièmes de seconde sont indolores pour un utilisateur, ruineux pour un attaquant."
+  }
+]

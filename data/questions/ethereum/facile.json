@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ethereum-f1",
+    "enonce": "Qui est le principal concepteur d'Ethereum ?",
+    "choix": [
+      "Satoshi Nakamoto",
+      "Vitalik Buterin",
+      "Charles Hoskinson",
+      "Changpeng Zhao"
+    ],
+    "bonneReponse": 1,
+    "explication": "Vitalik Buterin, programmeur russo-canadien, a décrit Ethereum dans un livre blanc fin 2013, à 19 ans. Il l'a cofondé avec notamment Gavin Wood (auteur du « Yellow Paper », puis fondateur de Polkadot) et Charles Hoskinson (futur fondateur de Cardano). Changpeng Zhao est le fondateur de Binance."
+  },
+  {
+    "id": "ethereum-f2",
+    "enonce": "Quel est le langage le plus utilisé pour écrire des smart contracts sur Ethereum ?",
+    "choix": [
+      "Solidity",
+      "Rust",
+      "Move",
+      "Haskell"
+    ],
+    "bonneReponse": 0,
+    "explication": "Solidity, proposé en 2014 par Gavin Wood, a une syntaxe inspirée de JavaScript et de C++. Il est compilé en bytecode pour l'EVM. Vyper, inspiré de Python, est l'alternative la plus connue. Rust domine sur Solana, Move sur Aptos et Sui."
+  },
+  {
+    "id": "ethereum-f3",
+    "enonce": "Qu'est-ce qu'un smart contract ?",
+    "choix": [
+      "Un contrat papier signé électroniquement chez un notaire",
+      "Un accord juridique entre deux plateformes d'échange",
+      "Un abonnement réglé chaque mois en cryptomonnaie",
+      "Un programme stocké sur la blockchain qui s'exécute seul"
+    ],
+    "bonneReponse": 3,
+    "explication": "Un smart contract est un programme déployé à une adresse de la blockchain. Quand une transaction l'appelle, tous les nœuds exécutent son code et obtiennent le même résultat : il s'applique sans intermédiaire, mais aussi sans possibilité de le corriger facilement. Le terme a été forgé par Nick Szabo dans les années 1990."
+  },
+  {
+    "id": "ethereum-f4",
+    "enonce": "Quelle est la plus petite unité de l'ether ?",
+    "choix": [
+      "Le gwei",
+      "Le finney",
+      "Le satoshi",
+      "Le wei"
+    ],
+    "bonneReponse": 3,
+    "explication": "1 ether = 10¹⁸ wei. L'unité doit son nom à Wei Dai, auteur de b-money. Le gwei (un milliard de wei) sert à exprimer le prix du gas ; le finney (10¹⁵ wei) rend hommage à Hal Finney. Le satoshi est l'unité du bitcoin."
+  },
+  {
+    "id": "ethereum-f5",
+    "enonce": "À quoi sert la norme ERC-20 ?",
+    "choix": [
+      "À créer des jetons uniques, non interchangeables",
+      "À créer des jetons interchangeables entre eux",
+      "À raccourcir le format des adresses Ethereum",
+      "À faire tourner un nœud Ethereum allégé"
+    ],
+    "bonneReponse": 1,
+    "explication": "ERC-20 (2015) définit une interface commune (`transfer`, `balanceOf`, `approve`…) pour les jetons fongibles : chaque unité en vaut une autre, comme des pièces de monnaie. Les stablecoins USDT et USDC en sont des exemples. Les jetons uniques (NFT) relèvent, eux, de la norme ERC-721."
+  },
+  {
+    "id": "ethereum-f6",
+    "enonce": "En quelle année le réseau Ethereum a-t-il été lancé ?",
+    "choix": [
+      "En 2009",
+      "En 2013",
+      "En 2015",
+      "En 2018"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le bloc genèse d'Ethereum date du 30 juillet 2015 (version « Frontier »). Le livre blanc avait été publié fin 2013, et le projet financé en 2014 par une prévente d'ether qui a rapporté environ 18 millions de dollars en bitcoins."
+  },
+  {
+    "id": "ethereum-f7",
+    "enonce": "Par quels caractères commence une adresse Ethereum ?",
+    "choix": [
+      "bc1",
+      "0x",
+      "1E",
+      "@"
+    ],
+    "bonneReponse": 1,
+    "explication": "« 0x » signale une notation hexadécimale. Suivent 40 caractères hexadécimaux, soit 20 octets. Le mélange de majuscules et de minuscules qu'on y voit souvent n'est pas décoratif : c'est une somme de contrôle (EIP-55) qui détecte les fautes de frappe."
+  },
+  {
+    "id": "ethereum-f8",
+    "enonce": "Combien d'ETH faut-il déposer au minimum pour faire tourner son propre validateur ?",
+    "choix": [
+      "1 ETH",
+      "8 ETH",
+      "32 ETH",
+      "100 ETH"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un validateur doit bloquer 32 ETH pour participer à la preuve d'enjeu. Ceux qui en ont moins passent par des pools de staking ou des jetons de « staking liquide » (comme ceux de Lido). Depuis la mise à jour Pectra (2025), un même validateur peut cumuler jusqu'à 2 048 ETH, mais le minimum reste 32."
+  },
+  {
+    "id": "ethereum-f9",
+    "enonce": "Qu'est-ce que l'EVM ?",
+    "choix": [
+      "La machine virtuelle qui exécute les smart contracts",
+      "Le portefeuille officiel de la Fondation Ethereum",
+      "Le registre des noms de domaine en « .eth »",
+      "L'algorithme de minage historique d'Ethereum"
+    ],
+    "bonneReponse": 0,
+    "explication": "L'Ethereum Virtual Machine est une machine à pile, déterministe, que chaque nœud fait tourner à l'identique. Chaque instruction (opcode) a un coût en gas, ce qui empêche une boucle infinie de bloquer le réseau. D'autres blockchains (BNB Chain, Polygon, Avalanche…) ont repris l'EVM pour être compatibles."
+  },
+  {
+    "id": "ethereum-f10",
+    "enonce": "Quel mot-clé Solidity autorise une fonction à recevoir de l'ether ?",
+    "choix": [
+      "`view`",
+      "`pure`",
+      "`external`",
+      "`payable`"
+    ],
+    "bonneReponse": 3,
+    "explication": "Sans `payable`, une fonction rejette tout appel accompagné d'ether, par sécurité. Dans une fonction `payable`, `msg.value` donne le montant reçu, en wei. `view` et `pure` signalent au contraire des fonctions qui ne modifient pas l'état ; `external` indique seulement qu'elle s'appelle de l'extérieur du contrat."
+  }
+]
