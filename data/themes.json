@@ -357,6 +357,13 @@
     "description": "Supervisé ou non, surapprentissage, validation et métriques : les bases de l'apprentissage automatique."
   },
   {
+    "id": "deep-learning",
+    "nom": "Deep learning",
+    "emoji": "🕸️",
+    "categorie": "Intelligence artificielle",
+    "description": "Neurones, rétropropagation, CNN, RNN et transformers : comment apprennent les réseaux profonds."
+  },
+  {
     "id": "mangas",
     "nom": "Mangas",
     "emoji": "📖",

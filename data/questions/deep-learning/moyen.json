@@ -1,0 +1,122 @@
+[
+  {
+    "id": "deep-learning-m1",
+    "enonce": "Sur quelle règle mathématique repose la rétropropagation du gradient (backpropagation) ?",
+    "choix": [
+      "La transformée de Fourier rapide",
+      "La dérivation des fonctions composées",
+      "Le théorème central limite",
+      "L'inégalité de Cauchy-Schwarz"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un réseau est une longue composition de fonctions : couche après couche. Pour savoir comment la perte varie quand on modifie un poids situé loin de la sortie, on applique la règle de dérivation en chaîne (chain rule) : on multiplie les dérivées locales en remontant de la sortie vers l'entrée. La rétropropagation organise ce calcul pour réutiliser les résultats intermédiaires, si bien qu'obtenir le gradient de tous les poids coûte à peu près autant qu'une passe avant. Elle a été popularisée par Rumelhart, Hinton et Williams en 1986."
+  },
+  {
+    "id": "deep-learning-m2",
+    "enonce": "Que risque-t-on avec un taux d'apprentissage (learning rate) beaucoup trop élevé ?",
+    "choix": [
+      "L'entraînement devient extrêmement lent",
+      "Le réseau mémorise ses données par cœur",
+      "Les poids restent bloqués à leur valeur initiale",
+      "La perte oscille ou explose au lieu de baisser"
+    ],
+    "bonneReponse": 3,
+    "explication": "Le taux d'apprentissage règle la taille du pas fait dans la direction opposée au gradient. Trop grand, chaque pas enjambe le creux visé : la perte rebondit d'un bord à l'autre, voire diverge jusqu'à des valeurs infinies (NaN). Trop petit, l'entraînement avance au contraire à pas de fourmi. En pratique, on utilise souvent un échauffement (warm-up) puis une décroissance progressive du taux au fil de l'entraînement."
+  },
+  {
+    "id": "deep-learning-m3",
+    "enonce": "Que fait la technique du « dropout » pendant l'entraînement ?",
+    "choix": [
+      "Elle désactive au hasard une partie des neurones à chaque passe",
+      "Elle supprime pour de bon les neurones jugés les moins utiles",
+      "Elle retire du jeu de données les exemples mal étiquetés",
+      "Elle stoppe l'entraînement dès que la perte cesse de baisser"
+    ],
+    "bonneReponse": 0,
+    "explication": "À chaque itération, chaque neurone est « éteint » avec une probabilité p (souvent 0,1 à 0,5). Le réseau ne peut donc plus compter sur un neurone précis et doit répartir l'information : c'est une technique de régularisation contre le surapprentissage, popularisée par Hinton et ses collègues (2012-2014). À l'inférence, tous les neurones sont actifs, et une remise à l'échelle des activations compense la différence. Arrêter l'entraînement quand la perte de validation stagne, c'est une autre technique : l'early stopping."
+  },
+  {
+    "id": "deep-learning-m4",
+    "enonce": "Pourquoi les fonctions sigmoïde et tanh freinaient-elles l'entraînement des réseaux très profonds ?",
+    "choix": [
+      "Elles sont trop lentes à calculer sur un GPU",
+      "Elles n'acceptent que des valeurs d'entrée positives",
+      "Leur dérivée, toujours faible, fait fondre le gradient",
+      "Elles rendent le réseau entièrement linéaire"
+    ],
+    "bonneReponse": 2,
+    "explication": "La dérivée de la sigmoïde ne dépasse jamais 0,25, et celle de tanh tend vers 0 dès que l'entrée s'éloigne de zéro (saturation). Or la rétropropagation multiplie ces dérivées couche après couche : 0,25 multiplié dix fois par lui-même donne environ 0,000001. Les premières couches ne reçoivent quasiment plus de signal et cessent d'apprendre : c'est l'évanouissement du gradient (vanishing gradient). La ReLU, de dérivée 1 sur la partie positive, a largement contourné le problème."
+  },
+  {
+    "id": "deep-learning-m5",
+    "enonce": "Dans un réseau convolutif (CNN), pourquoi fait-on glisser le même petit filtre sur toute l'image plutôt que de relier chaque pixel à chaque neurone ?",
+    "choix": [
+      "Pour augmenter la résolution de l'image à chaque couche",
+      "Pour repérer un motif partout, avec bien moins de poids",
+      "Pour convertir l'image en couleur en niveaux de gris",
+      "Pour se passer complètement de fonction de perte"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un filtre 3×3 n'a que 9 poids par canal, réutilisés à chaque position de l'image : c'est le partage de poids. Un bord vertical se détecte de la même façon en haut à gauche ou en bas à droite, donc inutile d'apprendre un détecteur par emplacement. À l'inverse, relier tous les pixels d'une image 1000×1000 à 1000 neurones demanderait un milliard de poids pour une seule couche. Cette idée, inspirée du cortex visuel, a été popularisée par Yann LeCun avec LeNet."
+  },
+  {
+    "id": "deep-learning-m6",
+    "enonce": "Que fait une couche de « max pooling » dans un CNN ?",
+    "choix": [
+      "Elle garde uniquement l'image la mieux classée du lot",
+      "Elle pousse au maximum le contraste de chaque pixel",
+      "Elle fusionne les prédictions de plusieurs réseaux",
+      "Elle sous-échantillonne en gardant le maximum de chaque zone"
+    ],
+    "bonneReponse": 3,
+    "explication": "Le max pooling découpe la carte de caractéristiques en petites fenêtres (souvent 2×2) et ne conserve que la plus grande valeur de chacune : la largeur et la hauteur sont divisées par deux. On réduit ainsi le calcul des couches suivantes, et le réseau devient un peu insensible aux petits décalages : peu importe où, dans la fenêtre, le motif a été détecté. Beaucoup d'architectures récentes le remplacent par des convolutions à pas de 2 (stride)."
+  },
+  {
+    "id": "deep-learning-m7",
+    "enonce": "Quel avantage décisif les transformers ont-ils sur les réseaux récurrents (RNN) au moment de l'entraînement ?",
+    "choix": [
+      "Ils fonctionnent sans aucune fonction d'activation",
+      "Ils se passent entièrement de la rétropropagation",
+      "Ils traitent tous les tokens d'une séquence en parallèle",
+      "Leur mémoire reste constante quelle que soit la longueur"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un RNN lit une séquence token après token : le calcul de l'étape t attend celui de l'étape t−1, ce qui interdit de paralléliser. Le transformer, lui, relie directement chaque token à tous les autres par l'attention, en une seule série de multiplications matricielles que les GPU exécutent d'un bloc. C'est ce qui a permis d'entraîner des modèles sur des volumes de texte gigantesques. Revers de la médaille : la matrice d'attention grossit avec le carré de la longueur de la séquence."
+  },
+  {
+    "id": "deep-learning-m8",
+    "enonce": "Quel problème les cellules LSTM ont-elles été conçues pour résoudre dans les réseaux récurrents ?",
+    "choix": [
+      "Traiter des images de très haute résolution",
+      "Conserver une information sur de longues séquences",
+      "Répartir l'entraînement sur plusieurs GPU",
+      "Compresser le modèle pour qu'il tienne en mémoire"
+    ],
+    "bonneReponse": 1,
+    "explication": "Dans un RNN simple, le gradient est multiplié à chaque pas de temps et s'évanouit vite : le réseau « oublie » ce qu'il a lu quelques dizaines de mots plus tôt. La LSTM (Long Short-Term Memory, Hochreiter et Schmidhuber, 1997) ajoute une cellule mémoire contrôlée par des portes qui décident quoi y écrire et quoi en lire ; une porte d'oubli a complété le dispositif en 2000. L'information peut ainsi traverser de longues séquences. Les LSTM ont dominé la traduction et la reconnaissance vocale jusqu'à l'arrivée des transformers."
+  },
+  {
+    "id": "deep-learning-m9",
+    "enonce": "En quoi consiste l'apprentissage par transfert (transfer learning) ?",
+    "choix": [
+      "Déplacer l'entraînement du processeur vers la carte graphique",
+      "Copier les données d'entraînement d'un modèle vers un autre",
+      "Échanger leurs poids entre deux réseaux en cours d'entraînement",
+      "Repartir d'un réseau déjà entraîné sur une autre tâche proche"
+    ],
+    "bonneReponse": 3,
+    "explication": "Un réseau entraîné sur des millions d'images (ImageNet par exemple) a déjà appris des détecteurs génériques : bords, textures, formes. Pour reconnaître des radios pulmonaires ou des espèces d'oiseaux, on garde ces couches et on ne réentraîne que les dernières, ou on ajuste légèrement l'ensemble (fine-tuning). On obtient de bons résultats avec quelques milliers d'exemples au lieu de millions. C'est aussi le principe des LLM : un pré-entraînement massif, puis une spécialisation."
+  },
+  {
+    "id": "deep-learning-m10",
+    "enonce": "En 2012, quel réseau convolutif a remporté de loin le concours ImageNet, déclenchant l'essor du deep learning ?",
+    "choix": [
+      "AlexNet",
+      "LeNet-5",
+      "ResNet",
+      "VGGNet"
+    ],
+    "bonneReponse": 0,
+    "explication": "AlexNet, conçu par Alex Krizhevsky, Ilya Sutskever et Geoffrey Hinton, a abaissé le taux d'erreur top-5 à environ 15 %, contre 26 % pour le deuxième, qui n'utilisait pas de réseau de neurones. Il combinait ReLU, dropout et entraînement sur deux GPU. LeNet-5 (Yann LeCun, 1998) lisait les chiffres manuscrits des chèques ; VGGNet (2014) et ResNet (2015) lui ont succédé, ResNet abaissant l'erreur à 3,6 %, sous le niveau humain estimé à environ 5 %."
+  }
+]

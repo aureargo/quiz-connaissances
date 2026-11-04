@@ -1,0 +1,122 @@
+[
+  {
+    "id": "deep-learning-f1",
+    "enonce": "Qu'est-ce qui rend un réseau de neurones « profond » ?",
+    "choix": [
+      "Il a été entraîné sur des milliards d'exemples",
+      "Il tourne pendant des semaines sur des serveurs",
+      "Il empile de nombreuses couches successives",
+      "Il est capable de raisonner comme un humain"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le « deep » de deep learning désigne la profondeur de l'architecture : plusieurs couches de neurones (dites cachées) s'intercalent entre l'entrée et la sortie. Chaque couche construit une représentation un peu plus abstraite que la précédente : sur une image, les premières repèrent des bords, les suivantes des formes, puis des objets entiers. La quantité de données ou la durée d'entraînement n'entrent pas dans la définition."
+  },
+  {
+    "id": "deep-learning-f2",
+    "enonce": "Que calcule un neurone artificiel avant d'appliquer sa fonction d'activation ?",
+    "choix": [
+      "Une somme pondérée de ses entrées, plus un biais",
+      "Le produit de toutes ses entrées, sans aucun poids",
+      "La moyenne des sorties de la couche suivante",
+      "La plus grande valeur parmi toutes ses entrées"
+    ],
+    "bonneReponse": 0,
+    "explication": "Chaque entrée xᵢ est multipliée par un poids wᵢ, on additionne le tout puis on ajoute un biais b : z = w₁x₁ + w₂x₂ + … + b. La fonction d'activation est ensuite appliquée à z. Sans elle, empiler des couches ne servirait à rien : une suite d'opérations linéaires reste linéaire, et le réseau entier se résumerait à une seule couche."
+  },
+  {
+    "id": "deep-learning-f3",
+    "enonce": "Que sont les « poids » d'un réseau de neurones ?",
+    "choix": [
+      "La taille en mégaoctets du fichier du modèle",
+      "Le nombre de couches empilées dans le réseau",
+      "La part de chaque exemple dans les données",
+      "Les nombres ajustés pendant l'entraînement"
+    ],
+    "bonneReponse": 3,
+    "explication": "Les poids (avec les biais) sont les paramètres du réseau : des nombres qui fixent l'influence de chaque connexion entre deux neurones. Entraîner un réseau, c'est précisément chercher les valeurs de poids qui minimisent l'erreur. Un grand modèle de langage en compte des dizaines voire des centaines de milliards — d'où des fichiers de plusieurs centaines de gigaoctets, mais la taille du fichier n'est qu'une conséquence."
+  },
+  {
+    "id": "deep-learning-f4",
+    "enonce": "Quelle fonction d'activation, définie par f(x) = max(0, x), est la plus répandue dans les couches cachées ?",
+    "choix": [
+      "La sigmoïde",
+      "La ReLU",
+      "La tangente hyperbolique",
+      "La softmax"
+    ],
+    "bonneReponse": 1,
+    "explication": "La ReLU (Rectified Linear Unit) laisse passer les valeurs positives telles quelles et met les négatives à zéro. Elle est très peu coûteuse à calculer et, contrairement à la sigmoïde ou à tanh, sa dérivée vaut 1 sur toute la partie positive : le gradient ne s'écrase pas en traversant les couches. Elle s'est imposée vers 2010-2012 ; des variantes comme Leaky ReLU, GELU ou SiLU sont aujourd'hui courantes dans les transformers."
+  },
+  {
+    "id": "deep-learning-f5",
+    "enonce": "Que fait la fonction softmax, placée en sortie d'un réseau de classification ?",
+    "choix": [
+      "Elle supprime les classes jugées trop improbables",
+      "Elle arrondit chaque score de sortie à 0 ou à 1",
+      "Elle transforme les scores en probabilités de somme 1",
+      "Elle ramène les pixels de l'image entre 0 et 1"
+    ],
+    "bonneReponse": 2,
+    "explication": "La softmax prend l'exponentielle de chaque score (logit) puis divise par la somme de ces exponentielles. On obtient des valeurs positives qui totalisent 1, interprétables comme des probabilités : « chat 0,85, chien 0,12, renard 0,03 ». L'exponentielle accentue les écarts : le score le plus élevé « rafle » l'essentiel de la masse, d'où le nom de maximum « adouci »."
+  },
+  {
+    "id": "deep-learning-f6",
+    "enonce": "Lors de l'entraînement d'un réseau, que désigne une « époque » (epoch) ?",
+    "choix": [
+      "Un passage complet sur toutes les données d'entraînement",
+      "Une mise à jour des poids après un seul et unique exemple",
+      "La durée maximale d'entraînement fixée avant de démarrer",
+      "Une sauvegarde intermédiaire des poids du modèle sur disque"
+    ],
+    "bonneReponse": 0,
+    "explication": "Une époque correspond au moment où le réseau a « vu » une fois chaque exemple du jeu d'entraînement. Comme les données sont découpées en mini-lots (batches), une époque contient de nombreuses mises à jour des poids : 50 000 images en lots de 100 font 500 itérations. On entraîne généralement sur plusieurs époques, en surveillant le jeu de validation pour s'arrêter avant le surapprentissage."
+  },
+  {
+    "id": "deep-learning-f7",
+    "enonce": "Quel matériel a rendu possible l'essor du deep learning, grâce à sa capacité de calcul massivement parallèle ?",
+    "choix": [
+      "Les disques SSD",
+      "Les cartes réseau",
+      "Les cartes son",
+      "Les cartes graphiques"
+    ],
+    "bonneReponse": 3,
+    "explication": "Entraîner un réseau revient surtout à multiplier d'énormes matrices : des milliers d'opérations identiques et indépendantes, exactement ce que les GPU, conçus pour calculer des millions de pixels en parallèle, savent faire. La plateforme CUDA de NVIDIA (2007) a permis de les programmer pour autre chose que l'affichage, et AlexNet a été entraîné en 2012 sur deux cartes graphiques grand public. Des puces dédiées ont suivi, comme les TPU de Google."
+  },
+  {
+    "id": "deep-learning-f8",
+    "enonce": "Que mesure la « fonction de perte » (loss) pendant l'entraînement ?",
+    "choix": [
+      "Le temps de calcul nécessaire pour traiter chaque exemple",
+      "L'écart entre les prédictions du réseau et les bonnes réponses",
+      "La quantité de mémoire perdue au fil des itérations du calcul",
+      "La part des neurones qui ne s'activent jamais sur les données"
+    ],
+    "bonneReponse": 1,
+    "explication": "La fonction de perte chiffre à quel point le réseau se trompe : plus elle est basse, meilleures sont les prédictions. Tout l'entraînement consiste à la faire diminuer en ajustant les poids. On utilise typiquement l'erreur quadratique moyenne pour prédire un nombre (régression) et l'entropie croisée pour choisir une classe (classification)."
+  },
+  {
+    "id": "deep-learning-f9",
+    "enonce": "Quelles sont les deux bibliothèques Python les plus utilisées pour construire et entraîner des réseaux de neurones ?",
+    "choix": [
+      "NumPy et Pandas",
+      "Django et Flask",
+      "PyTorch et TensorFlow",
+      "Matplotlib et Seaborn"
+    ],
+    "bonneReponse": 2,
+    "explication": "TensorFlow (Google, 2015) et PyTorch (Meta, 2016) dominent le domaine ; PyTorch est devenu la référence de la recherche et de la plupart des grands modèles actuels. Tous deux calculent automatiquement les gradients (différentiation automatique) et exécutent les calculs sur GPU. Keras offre une API de haut niveau, et JAX (Google) gagne du terrain. NumPy et Pandas servent aux données, Django et Flask au web, Matplotlib et Seaborn aux graphiques."
+  },
+  {
+    "id": "deep-learning-f10",
+    "enonce": "Que désigne l'« inférence » pour un réseau de neurones déjà entraîné ?",
+    "choix": [
+      "L'utiliser pour prédire sur de nouvelles données",
+      "Ajuster ses poids sur un nouveau lot d'exemples",
+      "Déduire seul la meilleure architecture possible",
+      "Nettoyer les données avant de les lui fournir"
+    ],
+    "bonneReponse": 0,
+    "explication": "Un réseau a deux vies : l'entraînement, où l'on ajuste les poids (long et coûteux, souvent une seule fois), puis l'inférence, où les poids sont figés et où l'on se contente de faire passer de nouvelles entrées pour obtenir une prédiction. C'est l'inférence qui tourne quand votre téléphone reconnaît un visage ou quand un chatbot vous répond. Elle est bien moins coûteuse par requête, mais se répète des milliards de fois."
+  }
+]

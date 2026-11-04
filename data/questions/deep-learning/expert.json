@@ -1,0 +1,122 @@
+[
+  {
+    "id": "deep-learning-e1",
+    "enonce": "Quelle idée a permis à ResNet (2015) d'entraîner efficacement des réseaux de plus de 100 couches ?",
+    "choix": [
+      "Réinitialiser les poids d'un bloc dès qu'il stagne",
+      "N'activer chaque bloc qu'une époque sur deux",
+      "Ajouter l'entrée de chaque bloc à sa sortie",
+      "Entraîner les couches une par une, de bas en haut"
+    ],
+    "bonneReponse": 2,
+    "explication": "Une connexion résiduelle calcule y = F(x) + x : le bloc n'apprend que la correction à apporter à son entrée. Si une couche est inutile, il lui suffit de ramener F vers zéro pour laisser passer x intact, et le gradient emprunte ce raccourci sans être atténué. Avant ResNet, empiler des couches finissait par dégrader l'erreur, même sur les données d'entraînement. ResNet-152 (Kaiming He et al.) a remporté ImageNet 2015, et chaque bloc de transformer utilise aujourd'hui ces connexions. Entraîner couche par couche était une technique antérieure (pré-entraînement glouton, vers 2006)."
+  },
+  {
+    "id": "deep-learning-e2",
+    "enonce": "Dans l'attention des transformers, softmax(QKᵀ/√d_k)·V, pourquoi divise-t-on les produits scalaires par √d_k ?",
+    "choix": [
+      "Pour éviter que la softmax sature et étouffe les gradients",
+      "Pour que les poids d'attention totalisent exactement 1",
+      "Pour diviser par deux la mémoire de la matrice d'attention",
+      "Pour égaliser la longueur des séquences d'un même lot"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le produit scalaire de deux vecteurs de dimension d_k aux composantes de variance 1 a une variance d'environ d_k. Avec d_k = 64, les scores s'étalent typiquement sur ±8, voire plus : la softmax devient quasiment « tout ou rien » et ses gradients deviennent minuscules. Diviser par √d_k ramène la variance des scores autour de 1, dans la zone où la softmax reste sensible. Que les poids totalisent 1, c'est le rôle de la softmax elle-même, pas de ce facteur d'échelle."
+  },
+  {
+    "id": "deep-learning-e3",
+    "enonce": "Pourquoi un transformer a-t-il besoin d'un encodage positionnel ?",
+    "choix": [
+      "Sans lui, le modèle ne peut dépasser 512 tokens",
+      "Sans lui, les gradients explosent dès la 1re couche",
+      "Sans lui, les embeddings ne sont plus normalisés",
+      "Sans lui, l'attention ignore l'ordre des tokens"
+    ],
+    "bonneReponse": 3,
+    "explication": "L'auto-attention traite la séquence comme un ensemble : si l'on permute les tokens, les sorties sont simplement permutées de la même façon. « Le chien mord l'homme » et « l'homme mord le chien » seraient alors indiscernables. On injecte donc la position dans chaque token : sinusoïdes de fréquences variées dans l'article de 2017, vecteurs appris (BERT, GPT-2), ou rotation des vecteurs requête et clé (RoPE), très répandue dans les LLM actuels. La limite de 512 tokens de BERT vient, elle, de la taille de sa table de positions apprises."
+  },
+  {
+    "id": "deep-learning-e4",
+    "enonce": "Comment le coût de l'auto-attention standard évolue-t-il avec la longueur n de la séquence ?",
+    "choix": [
+      "O(n)",
+      "O(n²)",
+      "O(n log n)",
+      "O(log n)"
+    ],
+    "bonneReponse": 1,
+    "explication": "Chaque token calcule un score avec chacun des n tokens : on obtient une matrice n × n. Doubler la longueur du contexte multiplie donc par quatre le calcul et la mémoire de l'attention. FlashAttention (2022) réorganise le calcul pour ne jamais stocker cette matrice entière dans la mémoire lente du GPU, mais le nombre d'opérations reste quadratique. L'attention à fenêtre glissante, l'attention linéaire ou les modèles à espace d'états (Mamba) cherchent à contourner cette limite."
+  },
+  {
+    "id": "deep-learning-e5",
+    "enonce": "Dans un transformer décodeur de type GPT, à quoi sert le masque causal appliqué à l'attention ?",
+    "choix": [
+      "Empêcher chaque token de voir les tokens qui le suivent",
+      "Masquer au hasard 15 % des tokens à deviner",
+      "Ignorer les tokens de remplissage en fin de lot",
+      "Cacher les poids du modèle aux utilisateurs finaux"
+    ],
+    "bonneReponse": 0,
+    "explication": "Un GPT apprend à prédire le token suivant, et il le fait pour toutes les positions d'une séquence en parallèle. Sans masque, la position t pourrait simplement regarder le token t+1 qu'elle doit deviner : ce serait de la triche. On fixe donc à −∞ les scores des positions futures avant la softmax, ce qui leur donne un poids nul. Masquer 15 % des tokens au hasard, c'est l'objectif de BERT, un encodeur qui lit dans les deux sens ; ignorer le remplissage, c'est le rôle du masque de padding."
+  },
+  {
+    "id": "deep-learning-e6",
+    "enonce": "Pourquoi n'initialise-t-on jamais tous les poids d'un réseau à zéro (ou à une même valeur) ?",
+    "choix": [
+      "La fonction de perte ne serait plus dérivable",
+      "Le GPU ne sait pas multiplier des matrices nulles",
+      "Les neurones d'une couche apprendraient tous la même chose",
+      "Le réseau surapprendrait dès la première époque"
+    ],
+    "bonneReponse": 2,
+    "explication": "Si deux neurones d'une même couche partent des mêmes poids, ils calculent la même sortie, reçoivent le même gradient et restent donc identiques à jamais : la symétrie n'est jamais brisée, et mille neurones ne valent pas mieux qu'un seul. On tire donc les poids au hasard, avec une variance calibrée pour que le signal ne s'éteigne ni n'explose d'une couche à l'autre : initialisation de Xavier/Glorot (2010), pensée pour tanh, puis de He (2015), adaptée à la ReLU. Les biais, eux, peuvent démarrer à zéro."
+  },
+  {
+    "id": "deep-learning-e7",
+    "enonce": "Que combine l'optimiseur Adam, le plus utilisé pour entraîner les réseaux profonds ?",
+    "choix": [
+      "Un pas fixe et un tirage au hasard des couches",
+      "Une inertie et un pas adapté à chaque paramètre",
+      "Une recherche exhaustive des meilleurs poids",
+      "Un second réseau chargé de prédire les gradients"
+    ],
+    "bonneReponse": 1,
+    "explication": "Adam (Adaptive Moment Estimation, Kingma et Ba, 2014) tient deux moyennes mobiles : celle des gradients, qui donne de l'inertie (momentum) et lisse les oscillations, et celle de leurs carrés, qui adapte le pas de chaque paramètre — les poids aux gradients toujours forts avancent prudemment, les autres plus vite. Une correction de biais compense le démarrage à zéro de ces moyennes. Sa variante AdamW, qui découple la décroissance des poids (weight decay), est le standard pour entraîner les LLM."
+  },
+  {
+    "id": "deep-learning-e8",
+    "enonce": "Que garantit le théorème d'approximation universelle (Cybenko, 1989 ; Hornik, 1991) ?",
+    "choix": [
+      "Un réseau assez profond converge toujours vers l'optimum global",
+      "Tout réseau entraîné assez longtemps finit par bien généraliser",
+      "Deux couches suffisent à résoudre tout problème NP-complet",
+      "Une couche cachée assez large peut approcher toute fonction continue"
+    ],
+    "bonneReponse": 3,
+    "explication": "Le théorème affirme qu'un réseau à une seule couche cachée, avec une activation non linéaire et suffisamment de neurones, peut approcher d'aussi près que voulu n'importe quelle fonction continue sur un domaine borné. Mais c'est un résultat d'existence : il ne dit ni combien de neurones il faut (parfois un nombre astronomique), ni si la descente de gradient trouvera les bons poids, ni si le réseau généralisera. En pratique, la profondeur permet d'exprimer les mêmes fonctions avec bien moins de neurones."
+  },
+  {
+    "id": "deep-learning-e9",
+    "enonce": "Combien de paramètres compte une couche convolutive de 64 filtres 3×3 appliquée à une image RVB (3 canaux), biais compris ?",
+    "choix": [
+      "576",
+      "1 728",
+      "1 792",
+      "640"
+    ],
+    "bonneReponse": 2,
+    "explication": "Chaque filtre couvre une fenêtre 3×3 sur les 3 canaux, soit 27 poids, plus 1 biais : 28 paramètres. Avec 64 filtres : 28 × 64 = 1 792. Oublier les biais donne 1 728, oublier les canaux donne 576 (ou 640 avec les biais). Point remarquable : ce nombre ne dépend pas de la taille de l'image. La même couche traite une vignette 32×32 ou une photo 4000×3000, puisque les filtres sont partagés sur toutes les positions."
+  },
+  {
+    "id": "deep-learning-e10",
+    "enonce": "Comment un Vision Transformer (ViT) fait-il entrer une image dans un transformer ?",
+    "choix": [
+      "Il la découpe en petits carrés traités comme des tokens",
+      "Il la décrit d'abord en texte grâce à un autre modèle",
+      "Il lit chaque pixel comme un token, un par un",
+      "Il la compresse en JPEG et lit la suite d'octets"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le ViT (Dosovitskiy et al., 2020, « An Image is Worth 16x16 Words ») découpe l'image en patches de 16×16 pixels, aplatit chacun en vecteur, le projette linéairement et lui ajoute un encodage de position : une image 224×224 devient 196 tokens. Traiter chaque pixel comme un token en donnerait 50 176, et l'attention quadratique comparerait alors 2,5 milliards de paires. Moins guidé par la structure de l'image qu'un CNN, le ViT ne le surpasse que pré-entraîné sur de très grands jeux de données."
+  }
+]
