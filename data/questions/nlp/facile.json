@@ -1,0 +1,117 @@
+[
+  {
+    "id": "nlp-f1",
+    "enonce": "En intelligence artificielle, que désigne le sigle « NLP » (TAL en français) ?",
+    "choix": [
+      "Le traitement automatique du langage naturel",
+      "La programmation neuro-linguistique",
+      "Le protocole de liaison entre nœuds réseau",
+      "La planification linéaire non déterministe"
+    ],
+    "bonneReponse": 0,
+    "explication": "NLP signifie Natural Language Processing ; en français, on parle de TAL, traitement automatique des langues. Le domaine regroupe tout ce qui permet à une machine de manipuler du texte ou de la parole humaine : traduction, correction, résumé, extraction d'informations, chatbots… Attention à l'homonyme : la « programmation neuro-linguistique » (PNL en français) est une méthode de développement personnel née dans les années 1970, sans aucun lien avec l'informatique, et sans fondement scientifique reconnu."
+  },
+  {
+    "id": "nlp-f2",
+    "enonce": "Comment appelle-t-on l'étape qui découpe un texte en unités élémentaires (mots, morceaux de mots, ponctuation) avant tout traitement ?",
+    "choix": [
+      "La lemmatisation",
+      "La normalisation",
+      "La tokenisation",
+      "La vectorisation"
+    ],
+    "bonneReponse": 2,
+    "explication": "La tokenisation transforme « J'aime le NLP ! » en une liste d'unités appelées tokens, par exemple « J' », « aime », « le », « NLP » et « ! ». C'est la toute première étape : un programme ne peut compter, comparer ou vectoriser des mots qu'une fois qu'ils sont séparés. C'est moins simple qu'il n'y paraît : faut-il couper « aujourd'hui », « l'avion » ou « New York » ? Les grands modèles de langage, eux, découpent souvent en sous-mots plutôt qu'en mots entiers."
+  },
+  {
+    "id": "nlp-f3",
+    "enonce": "Comment appelle-t-on les mots très fréquents comme « le », « de » ou « et », souvent retirés d'un texte avant de l'analyser ?",
+    "choix": [
+      "Les hapax",
+      "Les lemmes",
+      "Les néologismes",
+      "Les mots vides"
+    ],
+    "bonneReponse": 3,
+    "explication": "Les mots vides (stop words en anglais) apparaissent partout et n'aident guère à distinguer un texte d'un autre : pour classer des articles par sujet, « le » ou « de » n'apprennent rien. Les retirer allège les calculs des méthodes classiques (sac de mots, moteurs de recherche). Prudence toutefois : dans « ce film n'est pas bon », supprimer « pas » inverserait le sens, et les modèles modernes gardent généralement tous les mots. À l'opposé, un hapax est un mot qui n'apparaît qu'une seule fois dans un corpus."
+  },
+  {
+    "id": "nlp-f4",
+    "enonce": "Classer automatiquement des avis clients en « positifs » ou « négatifs » est une tâche de…",
+    "choix": [
+      "Reconnaissance d'entités nommées",
+      "Analyse de sentiment",
+      "Traduction automatique",
+      "Résumé automatique"
+    ],
+    "bonneReponse": 1,
+    "explication": "L'analyse de sentiment (ou analyse d'opinion) estime la tonalité d'un texte : positive, négative, neutre, parfois avec une intensité. Les marques l'utilisent pour surveiller leurs avis clients et les réseaux sociaux. Elle bute sur l'ironie (« Génial, encore en panne ! »), les négations et le contexte : « imprévisible » est un compliment pour un thriller, beaucoup moins pour des freins."
+  },
+  {
+    "id": "nlp-f5",
+    "enonce": "Dans « Marie Curie a travaillé à Paris », quelle tâche identifie « Marie Curie » comme une personne et « Paris » comme un lieu ?",
+    "choix": [
+      "L'analyse de sentiment",
+      "La détection de langue",
+      "La reconnaissance d'entités nommées",
+      "La correction orthographique"
+    ],
+    "bonneReponse": 2,
+    "explication": "La reconnaissance d'entités nommées (NER, pour Named Entity Recognition) repère dans un texte les noms propres et les classe : personnes, lieux, organisations, dates, montants… C'est une brique clé pour extraire de l'information, par exemple pour savoir quelles entreprises sont citées dans des milliers d'articles de presse. L'ambiguïté la complique : « Orange » peut être une ville, une entreprise ou un fruit."
+  },
+  {
+    "id": "nlp-f6",
+    "enonce": "En NLP, qu'est-ce qu'un « embedding » (plongement) de mot ?",
+    "choix": [
+      "Un vecteur de nombres qui représente le mot",
+      "La définition du mot tirée d'un dictionnaire",
+      "La traduction du mot dans une langue pivot",
+      "Le code Unicode des lettres qui forment le mot"
+    ],
+    "bonneReponse": 0,
+    "explication": "Un embedding associe à chaque mot (ou token) une liste de nombres, typiquement quelques centaines, qui le situe dans un espace géométrique. Ces vecteurs sont appris de sorte que des mots de sens proche se retrouvent proches : « chat » est voisin de « chien », et loin de « carburateur ». Sous cette forme, le sens devient calculable : c'est ce que manipulent tous les réseaux de neurones qui traitent du texte."
+  },
+  {
+    "id": "nlp-f7",
+    "enonce": "Combien de bigrammes de mots (paires de mots consécutifs) contient la phrase « le chat dort » ?",
+    "choix": ["1", "2", "3", "4"],
+    "bonneReponse": 1,
+    "explication": "Les deux bigrammes sont « le chat » et « chat dort » : une phrase de n mots contient n − 1 bigrammes. Plus généralement, un n-gramme est une suite de n éléments consécutifs, mots ou caractères. Avant les réseaux de neurones, les modèles de langage reposaient sur eux : la probabilité du mot suivant était estimée en comptant, dans un grand corpus, quels mots suivaient les n − 1 mots précédents."
+  },
+  {
+    "id": "nlp-f8",
+    "enonce": "Quelle entreprise, cofondée en 2016 par trois Français, est devenue la grande plateforme de partage de modèles de NLP en libre accès ?",
+    "choix": [
+      "Kaggle",
+      "Mistral AI",
+      "Docker Hub",
+      "Hugging Face"
+    ],
+    "bonneReponse": 3,
+    "explication": "Hugging Face, dont le logo est l'emoji 🤗, a été fondée à New York par Clément Delangue, Julien Chaumond et Thomas Wolf. D'abord une application de chatbot pour adolescents, elle a pivoté autour de sa bibliothèque open source « transformers », puis de son « Hub », qui héberge aujourd'hui plus d'un million de modèles et de jeux de données. Mistral AI, autre pépite française cofondée par trois Français, n'est apparue qu'en 2023 et conçoit ses propres modèles."
+  },
+  {
+    "id": "nlp-f9",
+    "enonce": "Quel service de traduction automatique, réputé pour sa qualité, a été lancé en 2017 par une entreprise de Cologne, en Allemagne ?",
+    "choix": [
+      "DeepL",
+      "Reverso",
+      "Google Traduction",
+      "Babel Fish"
+    ],
+    "bonneReponse": 0,
+    "explication": "DeepL est né de l'équipe du dictionnaire en ligne Linguee, dont l'immense collection de traductions humaines alignées a servi à entraîner ses réseaux de neurones. Sa sortie en 2017 a marqué les esprits par des traductions plus naturelles que celles de la concurrence. Clin d'œil : Babel Fish, l'ancien traducteur d'AltaVista (1997), tirait son nom du poisson traducteur du « Guide du voyageur galactique »."
+  },
+  {
+    "id": "nlp-f10",
+    "enonce": "Quand le clavier d'un smartphone suggère le mot suivant pendant la frappe, sur quoi s'appuie-t-il ?",
+    "choix": [
+      "Un dictionnaire parcouru par ordre alphabétique",
+      "Une liste fixe de mots choisie par le fabricant",
+      "Un modèle qui estime le mot suivant le plus probable",
+      "Un tirage au hasard parmi les mots de la langue"
+    ],
+    "bonneReponse": 2,
+    "explication": "C'est un modèle de langage : à partir des mots déjà tapés, il calcule quelles suites sont les plus probables et propose les meilleures. Les premiers claviers prédictifs comptaient des n-grammes ; les plus récents utilisent de petits réseaux de neurones qui tournent sur le téléphone et s'adaptent à votre façon d'écrire. C'est, en miniature, le même principe que celui des grands LLM : prédire la suite d'un texte."
+  }
+]

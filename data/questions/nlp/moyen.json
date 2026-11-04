@@ -1,0 +1,117 @@
+[
+  {
+    "id": "nlp-m1",
+    "enonce": "Quelle différence y a-t-il entre la racinisation (stemming) et la lemmatisation ?",
+    "choix": [
+      "La racinisation coupe les suffixes, la lemmatisation retrouve la forme du dictionnaire",
+      "La racinisation traduit les mots, la lemmatisation les classe par ordre alphabétique",
+      "La racinisation corrige l'orthographe, la lemmatisation supprime les mots vides",
+      "La racinisation vise les verbes, la lemmatisation ne traite que les noms communs"
+    ],
+    "bonneReponse": 0,
+    "explication": "Un raciniseur, comme l'algorithme de Porter (1980), applique des règles mécaniques : « mangeaient » peut devenir « mang », une racine qui n'est pas forcément un vrai mot. Un lemmatiseur s'appuie sur un dictionnaire et sur l'analyse grammaticale pour ramener « mangeaient » à « manger » ou « chevaux » à « cheval ». Les deux servent à regrouper les variantes d'un même mot ; la lemmatisation est plus précise mais plus coûteuse, et précieuse dans une langue aussi fléchie que le français."
+  },
+  {
+    "id": "nlp-m2",
+    "enonce": "Avec la pondération TF-IDF, quel mot obtient un score élevé pour un document donné ?",
+    "choix": [
+      "Un mot fréquent dans ce document et dans tous les autres",
+      "Un mot fréquent dans ce document mais rare dans le reste du corpus",
+      "Un mot rare dans ce document mais fréquent dans le reste du corpus",
+      "Un mot présent exactement une fois dans chaque document du corpus"
+    ],
+    "bonneReponse": 1,
+    "explication": "TF (term frequency) compte combien de fois le mot apparaît dans le document. IDF (inverse document frequency) vaut le logarithme du rapport entre le nombre total de documents et le nombre de documents contenant le mot : il tombe à 0 pour un mot présent partout. Le produit des deux fait ressortir les mots caractéristiques : dans un article sur les volcans, « magma » pèse lourd, « le » presque rien. Ce calcul simple a longtemps été le cœur des moteurs de recherche."
+  },
+  {
+    "id": "nlp-m3",
+    "enonce": "Avec des embeddings de type Word2Vec, quel mot obtient-on en calculant vecteur(« roi ») − vecteur(« homme ») + vecteur(« femme ») ?",
+    "choix": [
+      "Princesse",
+      "Royaume",
+      "Reine",
+      "Trône"
+    ],
+    "bonneReponse": 2,
+    "explication": "Cet exemple célèbre, popularisé par Tomas Mikolov et son équipe chez Google en 2013, montre que les embeddings capturent des relations : le passage « homme → femme » correspond à une direction à peu près constante dans l'espace, que l'on peut appliquer à « roi ». De même, « Paris − France + Italie » tombe près de « Rome ». Nuance : le résultat n'est qu'approximativement « reine », et l'on exclut les mots de départ de la recherche, sinon « roi » lui-même ressort souvent en tête."
+  },
+  {
+    "id": "nlp-m4",
+    "enonce": "Pour comparer deux embeddings, on utilise souvent la « similarité cosinus ». Que mesure-t-elle ?",
+    "choix": [
+      "La différence de longueur entre les deux vecteurs",
+      "Le nombre de coordonnées identiques dans les deux vecteurs",
+      "La somme de toutes les coordonnées des deux vecteurs",
+      "L'angle entre les deux vecteurs, quelle que soit leur longueur"
+    ],
+    "bonneReponse": 3,
+    "explication": "La similarité cosinus est le cosinus de l'angle entre les deux vecteurs : 1 s'ils pointent dans la même direction, 0 s'ils sont orthogonaux (aucun rapport), −1 s'ils sont opposés. Ignorer la longueur est voulu : la norme d'un vecteur reflète souvent la fréquence d'un mot ou la longueur d'un texte plutôt que son sens. C'est la mesure reine de la recherche sémantique, par exemple pour retrouver les documents les plus proches d'une question."
+  },
+  {
+    "id": "nlp-m5",
+    "enonce": "Pourquoi les modèles récents découpent-ils le texte en sous-mots (BPE, WordPiece…) plutôt qu'en mots entiers ?",
+    "choix": [
+      "Pour traiter n'importe quel mot, même inconnu, avec un vocabulaire limité",
+      "Pour que chaque token corresponde exactement à une syllabe prononcée",
+      "Pour empêcher le modèle de lire des mots écrits dans d'autres langues",
+      "Pour que tous les tokens du vocabulaire aient exactement la même taille"
+    ],
+    "bonneReponse": 0,
+    "explication": "Un vocabulaire de mots entiers devrait contenir toutes les conjugaisons, tous les noms propres, toutes les fautes de frappe… et bloquerait sur tout mot jamais vu, remplacé par un token « inconnu ». Les sous-mots offrent un compromis : les mots courants restent entiers, les mots rares se décomposent en morceaux connus, par exemple « anticonstitutionnellement » en quelque chose comme « anti », « constitution » et « nellement ». L'algorithme BPE (Byte Pair Encoding) construit ce vocabulaire en fusionnant, encore et encore, les paires de symboles les plus fréquentes du corpus."
+  },
+  {
+    "id": "nlp-m6",
+    "enonce": "Sur quelle tâche principale le modèle BERT (Google, 2018) est-il pré-entraîné ?",
+    "choix": [
+      "Traduire des phrases de l'anglais vers l'allemand",
+      "Prédire uniquement le mot qui suit dans le texte",
+      "Deviner des mots masqués au hasard dans une phrase",
+      "Classer des avis de films en positifs ou négatifs"
+    ],
+    "bonneReponse": 2,
+    "explication": "BERT (Bidirectional Encoder Representations from Transformers) cache environ 15 % des tokens d'un texte et doit les retrouver : c'est le « masked language modeling ». Comme le mot caché peut être au milieu de la phrase, le modèle exploite le contexte à gauche ET à droite, d'où le « B » de bidirectionnel. Il apprenait aussi à deviner si deux phrases se suivent réellement. Une fois pré-entraîné, on l'adapte (fine-tuning) à la classification, aux questions-réponses ou à la reconnaissance d'entités, ce qui a fait bondir les résultats de tout le NLP fin 2018. Les modèles GPT, eux, prédisent uniquement le mot suivant."
+  },
+  {
+    "id": "nlp-m7",
+    "enonce": "Pourquoi les LLM ont-ils longtemps eu du mal à compter les « r » du mot anglais « strawberry » ?",
+    "choix": [
+      "Leur vocabulaire ne contient aucun mot de plus de 8 lettres",
+      "Ils lisent des tokens de plusieurs lettres, pas des lettres isolées",
+      "Ils suppriment toutes les lettres doublées avant de lire un mot",
+      "Ils ignorent les consonnes pour économiser de la mémoire"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le modèle ne voit jamais « s-t-r-a-w-b-e-r-r-y » : il reçoit quelques tokens, par exemple « str », « aw » et « berry », chacun converti en un vecteur. L'orthographe exacte n'est donc pas directement visible : il doit l'avoir apprise indirectement. D'où les erreurs sur le comptage de lettres, les anagrammes ou l'écriture à l'envers. Les modèles qui « réfléchissent » avant de répondre contournent le problème en épelant d'abord le mot lettre par lettre."
+  },
+  {
+    "id": "nlp-m8",
+    "enonce": "Quelle limite des embeddings « statiques » comme Word2Vec les embeddings contextuels (ELMo, BERT) ont-ils corrigée ?",
+    "choix": [
+      "Les vecteurs ne pouvaient pas dépasser dix dimensions",
+      "Les mots devaient être rangés par ordre alphabétique",
+      "Seuls les noms communs pouvaient recevoir un vecteur",
+      "Un mot garde le même vecteur, quel que soit son sens"
+    ],
+    "bonneReponse": 3,
+    "explication": "Dans Word2Vec ou GloVe, « avocat » possède un vecteur unique, mélange du fruit et du métier. Un modèle contextuel calcule le vecteur d'un mot à partir de toute la phrase : « l'avocat plaide » et « l'avocat est mûr » donnent deux représentations différentes. ELMo (début 2018, à base de LSTM) puis BERT (fin 2018, à base de transformers) ont imposé cette idée, qui est au cœur de tous les modèles de langage actuels."
+  },
+  {
+    "id": "nlp-m9",
+    "enonce": "Quelle est la distance de Levenshtein entre les mots « chat » et « chien » ?",
+    "choix": ["2", "3", "4", "5"],
+    "bonneReponse": 1,
+    "explication": "La distance de Levenshtein (1965) compte le nombre minimal d'opérations sur un caractère (insertion, suppression ou substitution) pour passer d'un mot à l'autre. Ici : on garde « ch », on remplace « a » par « i » et « t » par « e », puis on ajoute « n », soit 3 opérations. Impossible de faire moins : seules les lettres « c » et « h » sont communes, donc au moins 3 des 5 lettres de « chien » doivent être créées. Cette mesure sert aux correcteurs orthographiques (« chein » est à 1 de « chien »), à la recherche approximative et à la comparaison de séquences d'ADN."
+  },
+  {
+    "id": "nlp-m10",
+    "enonce": "Que dit la loi de Zipf à propos des mots d'un grand corpus de textes ?",
+    "choix": [
+      "La fréquence d'un mot est à peu près inversement proportionnelle à son rang",
+      "Les mots les plus longs sont aussi les plus fréquents du corpus",
+      "Tous les mots d'une langue finissent par avoir la même fréquence",
+      "Le nombre de mots différents ne dépasse jamais quelques milliers"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le linguiste George Kingsley Zipf a observé, dans les années 1930-1940, que le 2ᵉ mot le plus fréquent apparaît environ deux fois moins que le 1ᵉʳ, le 3ᵉ trois fois moins, et ainsi de suite. Conséquence pour le NLP : une poignée de mots (« de », « la », « le »…) couvre une grosse part de n'importe quel texte, tandis qu'une immense « longue traîne » de mots n'apparaît qu'une ou deux fois. C'est l'une des raisons pour lesquelles les mots rares sont si difficiles à apprendre."
+  }
+]

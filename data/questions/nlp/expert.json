@@ -1,0 +1,122 @@
+[
+  {
+    "id": "nlp-e1",
+    "enonce": "Dans Word2Vec, que fait l'architecture « skip-gram » pendant l'entraînement ?",
+    "choix": [
+      "Elle prédit les mots du contexte à partir du mot central",
+      "Elle prédit le mot central à partir des mots qui l'entourent",
+      "Elle saute un mot sur deux pour accélérer l'apprentissage",
+      "Elle reconstruit chaque mot à partir de ses propres lettres"
+    ],
+    "bonneReponse": 0,
+    "explication": "Word2Vec (Mikolov et al., 2013) propose deux variantes. CBOW (Continuous Bag of Words) devine le mot central à partir de ses voisins ; skip-gram fait l'inverse : à partir de « chat », il doit prédire les mots qui l'entourent, dans une fenêtre de quelques positions. Ces tâches ne sont qu'un prétexte : ce que l'on garde à la fin, ce sont les poids appris, qui deviennent les embeddings. Skip-gram est plus lent, mais représente mieux les mots rares."
+  },
+  {
+    "id": "nlp-e2",
+    "enonce": "Quel problème l'« échantillonnage négatif » (negative sampling) de Word2Vec permet-il de contourner ?",
+    "choix": [
+      "La présence de mots grossiers ou offensants dans le corpus",
+      "Le coût d'un softmax calculé sur tout le vocabulaire à chaque exemple",
+      "La difficulté à représenter les nombres négatifs en mémoire",
+      "Le déséquilibre entre avis positifs et négatifs du corpus"
+    ],
+    "bonneReponse": 1,
+    "explication": "Prédire un mot parmi 100 000 exige normalement de calculer un score pour chacun d'eux, à chaque exemple : beaucoup trop cher. L'échantillonnage négatif reformule la tâche : apprendre à distinguer la vraie paire (« chat », « miaule ») de quelques paires tirées au hasard, comme (« chat », « fiscalité ») — de 2 à 20 selon l'article original. Chaque mise à jour ne touche plus qu'une poignée de mots, ce qui a permis d'entraîner Word2Vec sur des milliards de mots avec de simples processeurs."
+  },
+  {
+    "id": "nlp-e3",
+    "enonce": "Quel avantage fastText (Facebook, 2016) apporte-t-il par rapport à Word2Vec ?",
+    "choix": [
+      "Il calcule ses vecteurs sans aucun corpus d'entraînement",
+      "Il produit un vecteur différent selon le contexte de la phrase",
+      "Il construit un vecteur même pour un mot jamais vu à l'entraînement",
+      "Il remplace les vecteurs de mots par des arbres de décision"
+    ],
+    "bonneReponse": 2,
+    "explication": "fastText représente un mot comme la somme des vecteurs de ses n-grammes de caractères : « manger » est vu comme « <ma », « man », « ang », « nge »… (de 3 à 6 caractères, avec des marqueurs de début et de fin). Un mot inconnu ou mal orthographié, comme « mangeassions », reçoit donc un vecteur bâti à partir de morceaux connus. C'est précieux pour les langues riches en flexions, comme le français, le finnois ou le turc. En revanche, comme Word2Vec, il donne un seul vecteur par mot, quel que soit le contexte."
+  },
+  {
+    "id": "nlp-e4",
+    "enonce": "Dans le tokenizer WordPiece de BERT, que signale le préfixe « ## » devant un token, comme dans « ##ing » ?",
+    "choix": [
+      "Le token est un commentaire, ignoré par le modèle",
+      "Le token est un nombre écrit en hexadécimal",
+      "Le token marque le début d'une nouvelle phrase",
+      "Le token prolonge le précédent, sans espace entre eux"
+    ],
+    "bonneReponse": 3,
+    "explication": "WordPiece découpe un mot absent du vocabulaire en morceaux : « tokenization » devient « token » + « ##ization ». Le « ## » indique que le morceau se colle au précédent, ce qui permet de reconstituer le texte exact. D'autres tokenizers marquent plutôt le début des mots : SentencePiece (T5, premiers Llama) remplace l'espace par « ▁ », et le BPE de GPT-2 par « Ġ ». Chez BERT, le début de la séquence est signalé par un token spécial, [CLS]."
+  },
+  {
+    "id": "nlp-e5",
+    "enonce": "Quel avantage apporte le BPE « au niveau des octets » (byte-level BPE), popularisé par GPT-2 ?",
+    "choix": [
+      "Aucun texte ne produit de token « inconnu », emojis compris",
+      "Chaque mot du texte correspond toujours à un seul token",
+      "Le vocabulaire se limite aux 26 lettres de l'alphabet latin",
+      "Le texte est chiffré avant d'être transmis au modèle"
+    ],
+    "bonneReponse": 0,
+    "explication": "Un BPE classique part des caractères Unicode : il en existe plus de 150 000, et un caractère absent du vocabulaire devient un token inconnu ([UNK]). Le BPE de GPT-2 part des 256 valeurs d'octet possibles : comme tout texte encodé en UTF-8 est une suite d'octets, n'importe quelle chaîne (chinois, emoji, code, faute de frappe) reste représentable, au pire octet par octet. Les fusions apprises regroupent ensuite les séquences fréquentes en tokens plus longs. La plupart des LLM actuels reposent sur ce principe."
+  },
+  {
+    "id": "nlp-e6",
+    "enonce": "Que teste un « schéma de Winograd », comme « Les conseillers ont refusé l'autorisation aux manifestants, car ils craignaient la violence » ?",
+    "choix": [
+      "La vitesse de traduction d'une phrase vers une autre langue",
+      "La capacité à résoudre un pronom ambigu grâce au sens commun",
+      "La capacité à repérer les fautes d'accord dans une phrase",
+      "La résistance d'un modèle aux mots grossiers ou offensants"
+    ],
+    "bonneReponse": 1,
+    "explication": "Qui craignait la violence ? Les conseillers. Remplacez « craignaient » par « prônaient » et « ils » désigne désormais les manifestants : rien dans la grammaire ne tranche, il faut des connaissances sur le monde. Terry Winograd a proposé cet exemple en 1972 ; Hector Levesque en a fait en 2011 une alternative au test de Turing. Les grands modèles de langage ont fini par atteindre des scores proches de ceux des humains, ce qui a relancé le débat : comprennent-ils, ou exploitent-ils des raccourcis statistiques ? En français, il faut choisir deux noms de même genre, sinon l'accord du pronom trahit la réponse."
+  },
+  {
+    "id": "nlp-e7",
+    "enonce": "Un modèle de langage obtient une perplexité de 10 sur un texte. Comment l'interpréter intuitivement ?",
+    "choix": [
+      "Il se trompe en moyenne sur un token sur dix du texte",
+      "Il a eu besoin de dix passes pour lire l'ensemble du texte",
+      "Il hésite comme s'il choisissait au hasard entre 10 tokens",
+      "Il connaît dix fois plus de mots que le texte n'en contient"
+    ],
+    "bonneReponse": 2,
+    "explication": "La perplexité est l'exponentielle de l'entropie croisée moyenne : c'est l'inverse de la moyenne géométrique des probabilités que le modèle a attribuées aux vrais tokens. Une perplexité de 10 équivaut à un modèle qui, à chaque position, répartirait sa confiance uniformément sur 10 candidats. Plus elle est basse, mieux le modèle prédit le texte ; 1 serait la certitude parfaite. Attention : on ne compare que des modèles ayant le même tokenizer, car la valeur dépend de la façon dont le texte est découpé."
+  },
+  {
+    "id": "nlp-e8",
+    "enonce": "Pourquoi le score BLEU, qui évalue les traductions automatiques, inclut-il une « pénalité de brièveté » ?",
+    "choix": [
+      "Pour favoriser les traductions qui tiennent dans un seul SMS",
+      "Parce que les phrases courtes sont toujours grammaticalement fausses",
+      "Pour compenser la lenteur des modèles sur les phrases longues",
+      "Sinon, une traduction très courte mais sûre obtiendrait un score élevé"
+    ],
+    "bonneReponse": 3,
+    "explication": "BLEU (IBM, 2002) mesure la part des n-grammes (de 1 à 4 mots) de la traduction produite qui figurent aussi dans une ou plusieurs traductions humaines de référence. C'est une précision : si la référence est « le petit chat noir dort sur le canapé », une sortie réduite à « le petit chat noir » a tous ses n-grammes justes et serait jugée parfaite. La pénalité de brièveté fait chuter le score quand la traduction est plus courte que la référence. BLEU reste très utilisé car il est automatique et bon marché, mais il note mal les paraphrases correctes ; on lui préfère de plus en plus des métriques neuronales comme COMET."
+  },
+  {
+    "id": "nlp-e9",
+    "enonce": "Qu'étaient les « glitch tokens » comme « SolidGoldMagikarp », repérés en 2023 dans les modèles GPT ?",
+    "choix": [
+      "Des tokens du vocabulaire presque absents des données d'entraînement",
+      "Des mots de passe cachés par les développeurs dans le modèle",
+      "Des tokens ajoutés exprès pour tracer les textes générés",
+      "Des noms de code internes de versions secrètes du modèle"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le vocabulaire du tokenizer de GPT-2 et GPT-3 avait été construit sur un corpus contenant notamment des pseudonymes très actifs sur Reddit, comme « SolidGoldMagikarp ». Mais ces chaînes étaient quasi absentes des données ayant servi à entraîner le modèle : leurs embeddings n'ont presque jamais été mis à jour. Interrogés sur ces tokens, les modèles refusaient de les répéter, les remplaçaient par d'autres mots ou répondaient de façon absurde. L'épisode rappelle que le tokenizer et le modèle sont entraînés séparément, et que tout décalage entre les deux crée des angles morts."
+  },
+  {
+    "id": "nlp-e10",
+    "enonce": "Avant de devenir le cœur des transformers, pour quelle tâche le mécanisme d'attention a-t-il été introduit (Bahdanau et al., 2014) ?",
+    "choix": [
+      "La reconnaissance d'écriture manuscrite",
+      "La traduction automatique neuronale",
+      "La synthèse vocale à partir de texte",
+      "Le jeu de go et les jeux de plateau"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les premiers traducteurs neuronaux (seq2seq, 2014) compressaient toute la phrase source dans un seul vecteur de taille fixe avant de générer la traduction : les longues phrases y perdaient beaucoup. Dzmitry Bahdanau, Kyunghyun Cho et Yoshua Bengio ont permis au décodeur de « regarder », à chaque mot produit, toutes les positions de la phrase source, pondérées selon leur pertinence. Ces poids forment au passage un alignement entre les mots des deux langues. En 2017, l'article « Attention Is All You Need » a gardé l'attention et supprimé les réseaux récurrents."
+  }
+]

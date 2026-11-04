@@ -219,19 +219,19 @@ cd frontend && npm test -- --watch=false  # lancer les tests unitaires une fois
 > longueur et un niveau de détail comparables — voir le template pour les détails
 > et contre-exemples.
 
-## 🗂️ Thèmes actuels (96)
+## 🗂️ Thèmes actuels (97)
 
 État du **contenu** actuel (ce ne sont pas des contraintes du code, cf.
 `QUESTIONNAIRE_TEMPLATE.md`) : chaque thème a aujourd'hui trois fichiers
 (`facile.json`, `moyen.json`, `expert.json`) de 10 questions, soit 30 par thème
-(plus le niveau synthétique **`tous`** = 30). Total : **2880 questions**.
+(plus le niveau synthétique **`tous`** = 30). Total : **2910 questions**.
 
 - **Programmation** : Go, Python, JavaScript, TypeScript, Node.js, Angular, React, Vue.js, Java, Kotlin, C#, C, C++, Rust, PHP, Ruby, Lua, Git, Lignes de commande Linux, HTML, CSS, SVG, Architecture logicielle, Clean code & refactoring, Algorithmes & structures de données, Programmation concurrente, Programmation fonctionnelle
 - **DevOps & Conteneurs** : Docker, Kubernetes
 - **Matériel informatique** : Processeurs (CPU), Cartes graphiques (GPU), Stockage (SSD, HDD), Mémoire vive (RAM), Cartes mères & connectique, Monter son PC, Écrans, Semi-conducteurs
 - **Bases de données** : SQL, NoSQL, PostgreSQL, MongoDB, Redis, Modélisation de données, Data engineering
 - **Crypto & Web3** : Crypto, Bitcoin, Ethereum & smart contracts, Cryptographie
-- **Intelligence artificielle** : IA (généralités), LLM (connaissances arrêtées à 2026), Machine learning, Deep learning, Vision par ordinateur
+- **Intelligence artificielle** : IA (généralités), LLM (connaissances arrêtées à 2026), Machine learning, Deep learning, Vision par ordinateur, Traitement du langage (NLP)
 - **Cybersécurité** : Cybersécurité
 - **Réseaux & Internet** : Réseaux
 - **Culture geek** : Mangas, Animés, Jeux vidéo, Bande dessinée

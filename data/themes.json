@@ -371,6 +371,13 @@
     "description": "Pixels, filtres, détection d'objets, segmentation et 3D : comment les machines apprennent à voir."
   },
   {
+    "id": "nlp",
+    "nom": "Traitement du langage (NLP)",
+    "emoji": "🗣️",
+    "categorie": "Intelligence artificielle",
+    "description": "Tokenisation, embeddings, Word2Vec, BERT et traduction : comment les machines apprennent à lire."
+  },
+  {
     "id": "mangas",
     "nom": "Mangas",
     "emoji": "📖",
