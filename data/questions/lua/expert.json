@@ -1,0 +1,72 @@
+[
+  {
+    "id": "lua-e1",
+    "enonce": "D'après le manuel de référence, que renvoie `#t` si `t = {1, nil, 3}` ?",
+    "choix": ["3, le nombre de cases déclarées", "1, la position avant le premier nil", "2, le nombre de valeurs non nil", "1 ou 3 : la spécification ne tranche pas"],
+    "bonneReponse": 3,
+    "explication": "`#t` renvoie une « bordure » : un indice `n` tel que `t[n]` n'est pas `nil` et `t[n+1]` l'est (ou 0). Ici, 1 et 3 sont toutes deux des bordures, et l'implémentation peut renvoyer l'une ou l'autre. `#` n'est fiable que sur une séquence sans trou."
+  },
+  {
+    "id": "lua-e2",
+    "enonce": "Par quel mécanisme le code C et le code Lua échangent-ils des valeurs via l'API C de Lua ?",
+    "choix": ["Une mémoire partagée", "Une pile virtuelle", "Des fichiers temporaires", "Des sockets locales"],
+    "bonneReponse": 1,
+    "explication": "Le C empile des valeurs (`lua_pushnumber`, `lua_pushstring`…) et les lit par indice (`lua_tonumber(L, -1)`, les indices négatifs partant du sommet). Cette API minimaliste est l'une des raisons pour lesquelles Lua s'intègre si facilement dans un moteur de jeu."
+  },
+  {
+    "id": "lua-e3",
+    "enonce": "En Lua 5.4, que renvoie `math.type(4 / 2)` ?",
+    "choix": ["\"integer\"", "\"float\"", "\"number\"", "nil"],
+    "bonneReponse": 1,
+    "explication": "Depuis Lua 5.3, les nombres ont deux sous-types : entier et flottant. L'opérateur `/` renvoie toujours un flottant (`2.0`), alors que `//` (division entière) renvoie un entier si ses deux opérandes en sont. `type()` répond `\"number\"` dans les deux cas : seul `math.type` distingue les sous-types."
+  },
+  {
+    "id": "lua-e4",
+    "enonce": "Comment appelle-t-on, en Lua, une variable locale d'une fonction englobante capturée par une fonction interne ?",
+    "choix": ["Une métavaleur", "Une globale", "Une upvalue", "Un registre"],
+    "bonneReponse": 2,
+    "explication": "Une closure garde l'accès aux variables locales de la fonction qui l'a créée, même après le retour de celle-ci : ces variables capturées sont des « upvalues ». Deux closures créées dans le même appel partagent la même upvalue."
+  },
+  {
+    "id": "lua-e5",
+    "enonce": "Depuis Lua 5.2, en quoi le compilateur traduit-il un accès à une variable globale `x` ?",
+    "choix": ["`_G.x`", "`_ENV.x`", "`self.x`", "`global.x`"],
+    "bonneReponse": 1,
+    "explication": "Tout nom libre est réécrit en `_ENV.x`, où `_ENV` est une upvalue de chaque morceau de code, initialisée avec la table globale. Déclarer `local _ENV = {}` permet donc d'isoler un script (bac à sable). `_G` n'est qu'un champ de la table globale qui pointe vers elle-même."
+  },
+  {
+    "id": "lua-e6",
+    "enonce": "Quel attribut, introduit en Lua 5.4, déclenche la métaméthode `__close` d'une variable quand elle sort de sa portée ?",
+    "choix": ["<const>", "<close>", "<defer>", "<scoped>"],
+    "bonneReponse": 1,
+    "explication": "`local f <close> = ouvrir()` garantit l'appel de `__close` à la sortie du bloc, même en cas d'erreur : c'est l'équivalent du `defer` de Go ou du `with` de Python, idéal pour fermer un fichier. L'autre attribut de Lua 5.4, `<const>`, interdit simplement la réaffectation."
+  },
+  {
+    "id": "lua-e7",
+    "enonce": "Sur quelle version du langage LuaJIT, très utilisé par LÖVE ou Neovim, est-il resté fondamentalement aligné ?",
+    "choix": ["Lua 5.1", "Lua 5.2", "Lua 5.3", "Lua 5.4"],
+    "bonneReponse": 0,
+    "explication": "LuaJIT, le compilateur à la volée de Mike Pall, implémente Lua 5.1 avec quelques ajouts de la 5.2 (`goto`…), mais pas les entiers de la 5.3 ni les attributs de la 5.4. C'est pourquoi une grande partie de l'écosystème (LÖVE, Neovim, OpenResty) reste sur la sémantique 5.1."
+  },
+  {
+    "id": "lua-e8",
+    "enonce": "Comment qualifie-t-on le modèle d'exécution des coroutines Lua ?",
+    "choix": ["Préemptif : l'ordonnanceur les interrompt", "Parallèle : chacune a son thread système", "Coopératif : chacune cède la main d'elle-même", "Événementiel : une boucle native les réveille"],
+    "bonneReponse": 2,
+    "explication": "Une coroutine s'exécute jusqu'à ce qu'elle appelle `coroutine.yield` : rien ne l'interrompt de l'extérieur et une seule tourne à la fois, dans le même thread système. Même si `type(co)` renvoie `\"thread\"`, il n'y a aucun parallélisme."
+  },
+  {
+    "id": "lua-e9",
+    "enonce": "Pourquoi préférer `select('#', ...)` à `#{...}` pour compter les arguments variables d'une fonction ?",
+    "choix": ["Il trie les arguments avant de les compter", "Il compte aussi les `nil` passés en argument", "Il ne compte que les arguments numériques", "Il renvoie la taille mémoire des arguments"],
+    "bonneReponse": 1,
+    "explication": "`#{...}` repose sur l'opérateur `#`, qui n'est pas fiable si des `nil` créent des trous dans la table. `select('#', ...)` renvoie le nombre exact d'arguments reçus, `nil` compris. Lua 5.2 a aussi ajouté `table.pack(...)`, qui stocke ce nombre dans le champ `n`."
+  },
+  {
+    "id": "lua-e10",
+    "enonce": "Quel effet a le champ `__mode = \"k\"` placé dans la métatable d'une table ?",
+    "choix": ["Ses clés sont en lecture seule", "Ses clés sont triées à l'insertion", "Ses clés doivent être des chaînes", "Ses clés sont des références faibles"],
+    "bonneReponse": 3,
+    "explication": "C'est une table « faible » : ses clés n'empêchent pas le ramasse-miettes de collecter les objets qu'elles désignent, et l'entrée disparaît alors de la table. `\"v\"` rend les valeurs faibles, `\"kv\"` les deux. Utile pour associer des données à des objets sans provoquer de fuite mémoire."
+  }
+]

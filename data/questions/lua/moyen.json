@@ -1,0 +1,72 @@
+[
+  {
+    "id": "lua-m1",
+    "enonce": "Quel opérateur renvoie la longueur d'une chaîne ou d'une séquence ?",
+    "choix": ["#", "@", "~", "$"],
+    "bonneReponse": 0,
+    "explication": "`#\"bonjour\"` vaut 7 et `#{10, 20, 30}` vaut 3. Une table peut redéfinir ce comportement via la métaméthode `__len`. Le `~` existe aussi, mais c'est le « ou exclusif » bit à bit (depuis Lua 5.3)."
+  },
+  {
+    "id": "lua-m2",
+    "enonce": "Quelle fonction parcourt une séquence dans l'ordre 1, 2, 3… en s'arrêtant au premier `nil` ?",
+    "choix": ["pairs", "ipairs", "next", "select"],
+    "bonneReponse": 1,
+    "explication": "`for i, v in ipairs(t) do` parcourt les indices entiers consécutifs à partir de 1. `pairs` parcourt toutes les clés de la table, mais dans un ordre non garanti : il ne faut pas s'y fier pour un tableau."
+  },
+  {
+    "id": "lua-m3",
+    "enonce": "Quelle fonction associe une métatable à une table ?",
+    "choix": ["getmetatable", "setmetatable", "rawset", "table.pack"],
+    "bonneReponse": 1,
+    "explication": "`setmetatable(t, mt)` attache la métatable `mt` à `t` et renvoie `t`. La métatable contient des métaméthodes (`__index`, `__add`, `__tostring`…) qui personnalisent le comportement de la table. `getmetatable` sert à la lire."
+  },
+  {
+    "id": "lua-m4",
+    "enonce": "Quelle métaméthode est consultée quand on lit une clé absente d'une table ?",
+    "choix": ["__newindex", "__call", "__index", "__get"],
+    "bonneReponse": 2,
+    "explication": "Si `t.cle` vaut `nil`, Lua consulte `__index` dans la métatable : ce peut être une autre table (où la recherche continue) ou une fonction. C'est la base de l'héritage par prototype et des « classes » en Lua. `__newindex` intercepte l'écriture, pas la lecture."
+  },
+  {
+    "id": "lua-m5",
+    "enonce": "À quoi équivaut l'appel `obj:methode(x)` ?",
+    "choix": ["`obj.methode(x, obj)`", "`obj.methode(obj, x)`", "`methode(obj.x)`", "`obj[methode](x)`"],
+    "bonneReponse": 1,
+    "explication": "Les deux-points sont du sucre syntaxique : l'objet est passé comme premier argument, que la méthode reçoit sous le nom `self` si on la définit avec `function obj:methode(x)`. Oublier les deux-points (`obj.methode(x)`) est une erreur classique : `self` vaut alors `x`."
+  },
+  {
+    "id": "lua-m6",
+    "enonce": "Avec `local function f() return 1, 2 end`, que vaut `c` après `local a, b, c = f()` ?",
+    "choix": ["nil", "0", "2", "Une erreur est levée"],
+    "bonneReponse": 0,
+    "explication": "Une fonction Lua peut renvoyer plusieurs valeurs. Lors d'une affectation multiple, les valeurs manquantes sont complétées par `nil` et les valeurs en trop sont ignorées : ici `a = 1`, `b = 2`, `c = nil`."
+  },
+  {
+    "id": "lua-m7",
+    "enonce": "Quelle fonction suspend une coroutine pour rendre la main à celui qui l'a relancée ?",
+    "choix": ["coroutine.resume", "coroutine.yield", "coroutine.wrap", "coroutine.status"],
+    "bonneReponse": 1,
+    "explication": "`coroutine.yield(...)` met la coroutine en pause et transmet ses arguments à l'appelant. `coroutine.resume(co, ...)` la relance là où elle s'était arrêtée. Dans un jeu, c'est pratique pour écrire une cinématique ou une IA « pas à pas »."
+  },
+  {
+    "id": "lua-m8",
+    "enonce": "Quelle fonction exécute une fonction en capturant une éventuelle erreur au lieu de la propager ?",
+    "choix": ["assert", "error", "pcall", "require"],
+    "bonneReponse": 2,
+    "explication": "`pcall(f, ...)` (« protected call ») renvoie `true` suivi des résultats en cas de succès, ou `false` suivi du message d'erreur. Lua n'a pas de `try/catch` : c'est `pcall` (ou `xpcall`, avec un gestionnaire) qui joue ce rôle. `error` lève une erreur."
+  },
+  {
+    "id": "lua-m9",
+    "enonce": "Que vaut l'expression `\"10\" + 5` en Lua ?",
+    "choix": ["\"105\"", "15", "nil", "Une erreur de type"],
+    "bonneReponse": 1,
+    "explication": "Lua convertit automatiquement une chaîne numérique en nombre dans une opération arithmétique. La concaténation passe exclusivement par `..` : c'est `10 .. 5` qui donnerait la chaîne `\"105\"`."
+  },
+  {
+    "id": "lua-m10",
+    "enonce": "Dans le framework de jeu LÖVE, quelle fonction est appelée à chaque image pour dessiner à l'écran ?",
+    "choix": ["love.update", "love.load", "love.render", "love.draw"],
+    "bonneReponse": 3,
+    "explication": "LÖVE (ou Love2D) appelle des fonctions que le jeu définit : `love.load` une fois au démarrage, `love.update(dt)` pour la logique, avec le temps écoulé `dt`, puis `love.draw` pour l'affichage. `love.render` n'existe pas."
+  }
+]

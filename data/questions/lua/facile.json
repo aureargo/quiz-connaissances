@@ -1,0 +1,72 @@
+[
+  {
+    "id": "lua-f1",
+    "enonce": "Dans quel pays le langage Lua a-t-il été créé ?",
+    "choix": ["Le Portugal", "Le Brésil", "Le Japon", "La Finlande"],
+    "bonneReponse": 1,
+    "explication": "Lua est né en 1993 à la PUC-Rio (Université pontificale catholique de Rio de Janeiro), créé par Roberto Ierusalimschy, Luiz Henrique de Figueiredo et Waldemar Celes. « Lua » signifie « lune » en portugais : il succédait à un langage nommé SOL (« soleil »)."
+  },
+  {
+    "id": "lua-f2",
+    "enonce": "Comment commence un commentaire sur une ligne en Lua ?",
+    "choix": ["//", "#", "--", ";"],
+    "bonneReponse": 2,
+    "explication": "`--` commente jusqu'à la fin de la ligne. Pour un commentaire sur plusieurs lignes, on utilise `--[[ ... ]]`. Le `#` est en Lua l'opérateur de longueur, pas un commentaire."
+  },
+  {
+    "id": "lua-f3",
+    "enonce": "Dans la table `{\"a\", \"b\", \"c\"}`, quel indice porte l'élément `\"a\"` ?",
+    "choix": ["0", "1", "-1", "2"],
+    "bonneReponse": 1,
+    "explication": "Par convention, les séquences Lua commencent à l'indice 1, pas 0 : le constructeur numérote les éléments 1, 2, 3, et `ipairs`, `#` ou `table.insert` suivent cette convention. C'est l'une des surprises classiques pour qui vient du C ou du JavaScript."
+  },
+  {
+    "id": "lua-f4",
+    "enonce": "Quel opérateur concatène deux chaînes de caractères en Lua ?",
+    "choix": ["+", "..", "&", "."],
+    "bonneReponse": 1,
+    "explication": "`\"Bon\" .. \"jour\"` donne `\"Bonjour\"`. Le `+` est réservé à l'arithmétique : Lua sépare clairement addition et concaténation, ce qui évite les ambiguïtés de JavaScript (`\"1\" + 1`)."
+  },
+  {
+    "id": "lua-f5",
+    "enonce": "Quel opérateur signifie « différent de » en Lua ?",
+    "choix": ["!=", "~=", "<>", "=/="],
+    "bonneReponse": 1,
+    "explication": "Lua écrit `a ~= b` pour « a différent de b ». Le `!` n'existe pas dans le langage : la négation logique s'écrit avec le mot-clé `not`."
+  },
+  {
+    "id": "lua-f6",
+    "enonce": "Dans une condition `if`, laquelle de ces valeurs est considérée comme fausse ?",
+    "choix": ["0", "\"\"", "nil", "{}"],
+    "bonneReponse": 2,
+    "explication": "En Lua, seules `nil` et `false` sont fausses. Tout le reste est vrai, y compris `0` et la chaîne vide `\"\"`, contrairement au C, au Python ou au JavaScript."
+  },
+  {
+    "id": "lua-f7",
+    "enonce": "Quel mot-clé déclare une variable dont la portée est limitée au bloc courant ?",
+    "choix": ["var", "let", "local", "my"],
+    "bonneReponse": 2,
+    "explication": "`local x = 10` crée une variable locale au bloc. Sans `local`, l'affectation crée une variable globale : c'est une source de bugs fréquente, d'où la règle d'or « tout en local par défaut »."
+  },
+  {
+    "id": "lua-f8",
+    "enonce": "Quelle structure de données sert à la fois de tableau, de dictionnaire et d'objet en Lua ?",
+    "choix": ["La liste", "La table", "Le tuple", "La structure"],
+    "bonneReponse": 1,
+    "explication": "La table est l'unique structure composite de Lua : un tableau associatif dont les clés peuvent être des nombres, des chaînes ou n'importe quelle valeur sauf `nil`. Modules, objets et tableaux sont tous des tables."
+  },
+  {
+    "id": "lua-f9",
+    "enonce": "Quel mot-clé termine un bloc `if`, `for`, `while` ou `function` ?",
+    "choix": ["}", "fi", "done", "end"],
+    "bonneReponse": 3,
+    "explication": "Lua délimite ses blocs par des mots-clés plutôt que par des accolades : `if ... then ... end`, `for ... do ... end`, `function ... end`. Seule exception : la boucle `repeat ... until condition`."
+  },
+  {
+    "id": "lua-f10",
+    "enonce": "Sur quelle plateforme de jeux les créateurs programment-ils en Luau, un dérivé de Lua ?",
+    "choix": ["Minecraft", "Fortnite", "Roblox", "Dreams"],
+    "bonneReponse": 2,
+    "explication": "Roblox a développé Luau à partir de Lua 5.1, en y ajoutant notamment un typage graduel et de meilleures performances, puis l'a rendu open source en 2021. Fortnite utilise le langage Verse, et Minecraft repose sur Java (et JavaScript pour l'édition Bedrock)."
+  }
+]

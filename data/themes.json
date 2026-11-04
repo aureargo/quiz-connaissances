@@ -112,6 +112,13 @@
     "description": "Le langage pensé pour le bonheur des développeurs : blocs, symboles, métaprogrammation et Rails."
   },
   {
+    "id": "lua",
+    "nom": "Lua",
+    "emoji": "🌙",
+    "categorie": "Programmation",
+    "description": "Le petit langage de script venu du Brésil : tables, métatables, coroutines et jeu vidéo."
+  },
+  {
     "id": "git",
     "nom": "Git",
     "emoji": "🌿",
