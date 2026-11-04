@@ -1,0 +1,112 @@
+[
+  {
+    "id": "concurrence-m1",
+    "enonce": "Qu'est-ce qui distingue un sémaphore à compteur d'un simple mutex ?",
+    "choix": [
+      "Il ne s'utilise qu'entre deux processus, jamais entre threads",
+      "Il garantit que les threads passent dans leur ordre d'arrivée",
+      "Il laisse jusqu'à N threads accéder en même temps à la ressource",
+      "Il libère tout seul la ressource au bout d'un délai fixé"
+    ],
+    "bonneReponse": 2,
+    "explication": "Inventé par Dijkstra (1965), le sémaphore tient un compteur : `acquire` le décrémente (et bloque à zéro), `release` l'incrémente. Initialisé à 10, il limite par exemple à 10 le nombre de connexions simultanées à une base. Un mutex, lui, n'admet qu'un détenteur, et seul ce détenteur peut le libérer."
+  },
+  {
+    "id": "concurrence-m2",
+    "enonce": "Quelle règle simple évite l'interblocage quand des threads doivent prendre plusieurs verrous ?",
+    "choix": [
+      "Toujours acquérir les verrous dans le même ordre global",
+      "Toujours libérer les verrous dans l'ordre où on les a pris",
+      "Toujours donner la priorité maximale au thread qui verrouille",
+      "Toujours prendre les verrous depuis le thread principal"
+    ],
+    "bonneReponse": 0,
+    "explication": "Si tout le monde prend A avant B, personne ne peut tenir B en attendant A : l'attente circulaire devient impossible. Pour un virement entre deux comptes, on verrouille par exemple d'abord celui dont l'identifiant est le plus petit. L'ordre de libération, lui, n'a aucune influence sur l'interblocage."
+  },
+  {
+    "id": "concurrence-m3",
+    "enonce": "En CPython, qu'est-ce qui empêche historiquement plusieurs threads d'exécuter du code Python en parallèle ?",
+    "choix": [
+      "Le ramasse-miettes générationnel",
+      "La taille limitée de la pile d'appels",
+      "L'ordonnanceur du système d'exploitation",
+      "Le verrou global de l'interpréteur"
+    ],
+    "bonneReponse": 3,
+    "explication": "Le GIL (Global Interpreter Lock) ne laisse qu'un thread exécuter du bytecode à la fois. Les threads restent utiles pour les entrées-sorties, pendant lesquelles le GIL est relâché ; pour du calcul, on passe par `multiprocessing`. Depuis Python 3.13, une version « free-threaded », sans GIL, existe en option (PEP 703)."
+  },
+  {
+    "id": "concurrence-m4",
+    "enonce": "Node.js exécute le JavaScript sur un seul thread. Comment gère-t-il pourtant des milliers de connexions simultanées ?",
+    "choix": [
+      "En créant en coulisse un thread système par connexion ouverte",
+      "Avec une boucle d'événements et des entrées-sorties non bloquantes",
+      "En confiant chaque requête à un processus séparé du système",
+      "En suspendant les connexions inactives jusqu'à la fin des autres"
+    ],
+    "bonneReponse": 1,
+    "explication": "Via la bibliothèque libuv, Node demande au système de le prévenir quand une socket est prête (epoll sous Linux, IOCP sous Windows), puis exécute le callback correspondant : le thread n'attend jamais une entrée-sortie. Revers de la médaille, un calcul long bloque toutes les connexions, d'où les `worker_threads` pour le travail lourd."
+  },
+  {
+    "id": "concurrence-m5",
+    "enonce": "Qu'est-ce qu'un verrou réentrant ?",
+    "choix": [
+      "Un verrou que son détenteur peut reprendre sans se bloquer lui-même",
+      "Un verrou qui se libère tout seul si son détenteur plante",
+      "Un verrou que plusieurs threads peuvent détenir en même temps",
+      "Un verrou qui passe automatiquement au thread suivant en file"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le verrou compte les acquisitions de son détenteur et ne se libère qu'au dernier `unlock`. Une méthode `synchronized` peut ainsi en appeler une autre sur le même objet. En Java, `synchronized` et `ReentrantLock` sont réentrants ; le `sync.Mutex` de Go ne l'est pas : le reprendre dans la même goroutine provoque un interblocage."
+  },
+  {
+    "id": "concurrence-m6",
+    "enonce": "Deux personnes dans un couloir s'écartent sans cesse du même côté pour se laisser passer. Quel problème de concurrence cela illustre-t-il ?",
+    "choix": ["Le deadlock", "La famine", "Le livelock", "Le faux partage"],
+    "bonneReponse": 2,
+    "explication": "Contrairement au deadlock, les threads ne sont pas bloqués : ils s'agitent et réagissent l'un à l'autre… sans progresser. Cela arrive par exemple quand deux threads relâchent leurs verrous en voyant l'autre, puis réessaient au même rythme. Le remède classique est un délai aléatoire avant de réessayer, comme le fait Ethernet après une collision."
+  },
+  {
+    "id": "concurrence-m7",
+    "enonce": "Que fait l'instruction atomique compare-and-swap (CAS) ?",
+    "choix": [
+      "Elle échange les valeurs de deux variables en les verrouillant",
+      "Elle compare deux threads et suspend le moins prioritaire",
+      "Elle copie une variable dans le cache de tous les cœurs",
+      "Elle écrit une valeur seulement si l'actuelle est celle attendue"
+    ],
+    "bonneReponse": 3,
+    "explication": "`CAS(adresse, attendu, nouveau)` réussit si la case contient encore `attendu` et échoue sinon, le tout de façon indivisible. On l'utilise en boucle : lire, calculer, tenter le CAS, recommencer en cas d'échec. C'est la brique des structures sans verrou (lock-free) et des classes `Atomic*` de Java (`compareAndSet`)."
+  },
+  {
+    "id": "concurrence-m8",
+    "enonce": "« Ne communiquez pas en partageant la mémoire ; partagez la mémoire en communiquant. » Quel mécanisme de Go cette maxime met-elle en avant ?",
+    "choix": ["Les mutex", "Les canaux", "Les variables atomiques", "Les pointeurs partagés"],
+    "bonneReponse": 1,
+    "explication": "Ce proverbe de Go (Rob Pike) encourage à faire circuler les données d'une goroutine à l'autre par des canaux (`ch <- v`, `v := <-ch`) : à chaque instant, une seule goroutine « possède » la donnée. Go fournit quand même `sync.Mutex`, souvent plus simple pour protéger un petit état partagé comme un compteur."
+  },
+  {
+    "id": "concurrence-m9",
+    "enonce": "Quelle philosophie Erlang associe-t-il à ses arbres de superviseurs ?",
+    "choix": [
+      "« Tout vérifier » : chaque processus intercepte toutes ses erreurs",
+      "« Jamais seul » : chaque processus est dupliqué sur deux machines",
+      "« Laisser planter » : un superviseur relance le processus en échec",
+      "« Tout partager » : les processus mettent leur état en commun"
+    ],
+    "bonneReponse": 2,
+    "explication": "Plutôt que de prévoir chaque erreur, on laisse le processus fautif mourir, et son superviseur le redémarre dans un état propre (stratégies `one_for_one`, `one_for_all`…). Ça marche parce que les processus Erlang sont légers et isolés : la panne de l'un ne corrompt pas la mémoire des autres. L'idée, « let it crash », est portée par Joe Armstrong et la bibliothèque OTP."
+  },
+  {
+    "id": "concurrence-m10",
+    "enonce": "Qu'apportent les threads virtuels de Java 21 (projet Loom) ?",
+    "choix": [
+      "Des millions de threads légers, répartis sur quelques threads système",
+      "Des threads qui s'exécutent sur la carte graphique plutôt que le processeur",
+      "Des threads simulés, exécutés l'un après l'autre sur un seul cœur",
+      "Des threads dont la mémoire est entièrement isolée de celle des autres"
+    ],
+    "bonneReponse": 0,
+    "explication": "La JVM ordonnance les threads virtuels sur un petit pool de threads « porteurs ». Quand l'un attend une entrée-sortie, il est décroché de son porteur, qui en exécute un autre. On garde ainsi le style simple « un thread par requête » sans exploser la mémoire, comme avec les goroutines de Go. Ils n'accélèrent pas le calcul pur : ils servent à attendre efficacement."
+  }
+]

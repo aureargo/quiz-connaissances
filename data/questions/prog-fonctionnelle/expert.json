@@ -1,0 +1,112 @@
+[
+  {
+    "id": "prog-fonctionnelle-e1",
+    "enonce": "En Haskell, que représente une instance de la classe de types `Functor` ?",
+    "choix": [
+      "Une fonction qui reçoit un type en argument et renvoie une valeur",
+      "Un type dont chaque calcul est garanti de se terminer sans erreur",
+      "Une classe qui ne contient qu'une méthode abstraite à redéfinir",
+      "Un type « conteneur » sur lequel on peut appliquer une fonction avec `fmap`"
+    ],
+    "bonneReponse": 3,
+    "explication": "`fmap :: (a -> b) -> f a -> f b` applique une fonction « à l'intérieur » : à chaque élément d'une liste, à la valeur éventuelle d'un `Maybe`, au résultat futur d'une action `IO`. Deux lois s'imposent : `fmap id = id` et `fmap (g . h) = fmap g . fmap h`. Attention : en C++, « foncteur » désigne tout autre chose, un objet appelable comme une fonction."
+  },
+  {
+    "id": "prog-fonctionnelle-e2",
+    "enonce": "Laquelle de ces équations est l'une des trois lois des monades ?",
+    "choix": [
+      "`return a >>= f` équivaut à `f a`",
+      "`m >>= return` équivaut à `return m`",
+      "`(m >>= f) >>= g` équivaut à `m >>= (g . f)`",
+      "`fmap f (return a)` équivaut à `f a`"
+    ],
+    "bonneReponse": 0,
+    "explication": "C'est l'identité à gauche. Les deux autres lois : l'identité à droite, `m >>= return` équivaut à `m` (et non `return m`), et l'associativité, `(m >>= f) >>= g` équivaut à `m >>= (\\x -> f x >>= g)`. Le compilateur ne vérifie rien : c'est au programmeur de les respecter, faute de quoi la notation `do` se comporterait de façon surprenante."
+  },
+  {
+    "id": "prog-fonctionnelle-e3",
+    "enonce": "En λ-calcul, à quoi sert le combinateur Y ?",
+    "choix": [
+      "À transformer une fonction à plusieurs arguments en fonctions unaires",
+      "À exprimer la récursion sans qu'une fonction ait à se nommer elle-même",
+      "À retarder l'évaluation d'une expression jusqu'au moment où elle sert",
+      "À vérifier qu'une expression est bien typée avant de l'évaluer"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le λ-calcul n'a que des fonctions anonymes : impossible d'écrire `fact` qui appelle `fact`. Y calcule un point fixe, `Y f = f (Y f)`, ce qui fournit à `f` « elle-même » en argument. Sa définition, `λf.(λx.f (x x)) (λx.f (x x))`, boucle en évaluation stricte, où l'on utilise plutôt le combinateur Z. L'incubateur Y Combinator lui doit son nom."
+  },
+  {
+    "id": "prog-fonctionnelle-e4",
+    "enonce": "Avec l'encodage de Church, comment le nombre 2 s'écrit-il en λ-calcul pur ?",
+    "choix": ["`λf.λx.x`", "`λf.λx.f x`", "`λf.λx.f (f x)`", "`λf.λx.f x x`"],
+    "bonneReponse": 2,
+    "explication": "Le nombre n est « la fonction qui applique f n fois à x ». Donc 0 = `λf.λx.x`, 1 = `λf.λx.f x`, 2 = `λf.λx.f (f x)`. Le successeur, l'addition ou la multiplication se définissent eux aussi par des fonctions : le λ-calcul d'Alonzo Church n'a besoin de rien d'autre pour tout calculer."
+  },
+  {
+    "id": "prog-fonctionnelle-e5",
+    "enonce": "Quel système d'inférence de types est au cœur de ML, d'OCaml et de Haskell ?",
+    "choix": ["Hindley-Milner", "Knuth-Bendix", "Floyd-Hoare", "Boyer-Moore"],
+    "bonneReponse": 0,
+    "explication": "Il déduit le type le plus général d'une expression sans aucune annotation, par unification : en OCaml, `let id x = x` reçoit le type `'a -> 'a`. L'algorithme W de Damas et Milner (1982) l'implémente. Knuth-Bendix complète des systèmes de réécriture, Boyer-Moore est un algorithme de recherche de texte, et la logique de Floyd-Hoare sert à prouver des programmes impératifs."
+  },
+  {
+    "id": "prog-fonctionnelle-e6",
+    "enonce": "Que met en correspondance l'isomorphisme de Curry-Howard ?",
+    "choix": [
+      "Les fonctions récursives et les boucles, la pile et le tas mémoire",
+      "Les monades et les objets, les foncteurs et les classes abstraites",
+      "Les langages purs et impurs, l'évaluation stricte et la paresseuse",
+      "Les types et les propositions logiques, les programmes et les preuves"
+    ],
+    "bonneReponse": 3,
+    "explication": "Un type `A -> B` se lit « A implique B », et un programme de ce type en est une preuve : il fabrique un B à partir d'un A. Un type produit correspond au « et », un type somme au « ou ». C'est le principe des assistants de preuve comme Coq (devenu Rocq), Agda ou Lean."
+  },
+  {
+    "id": "prog-fonctionnelle-e7",
+    "enonce": "En Haskell, pourquoi `foldl (+) 0 [1..10000000]` peut-il épuiser la mémoire, alors que `foldl'` non ?",
+    "choix": [
+      "Car `foldl` parcourt la liste à l'envers et doit d'abord la copier",
+      "Car `foldl` empile des additions différées au lieu de les effectuer",
+      "Car `foldl` crée un thread par élément pour paralléliser les sommes",
+      "Car `foldl` convertit chaque entier en flottant avant de l'ajouter"
+    ],
+    "bonneReponse": 1,
+    "explication": "Par paresse, `foldl` construit d'abord l'expression `(((0 + 1) + 2) + 3)…` sous forme de calculs en attente (des « thunks »), et ne l'évalue qu'à la fin. `foldl'` (module `Data.List`) force l'accumulateur à chaque étape. Avec l'optimisation `-O`, GHC repère souvent le problème tout seul, mais mieux vaut ne pas compter dessus."
+  },
+  {
+    "id": "prog-fonctionnelle-e8",
+    "enonce": "Qu'appelle-t-on le style « point-free » (ou tacite) ?",
+    "choix": [
+      "Écrire un programme sans aucun nombre à virgule flottante",
+      "Définir une fonction sans jamais manipuler de pointeur explicite",
+      "Définir une fonction par composition, sans nommer ses arguments",
+      "Écrire des instructions sans point-virgule pour les terminer"
+    ],
+    "bonneReponse": 2,
+    "explication": "On écrit `somme = foldr (+) 0` plutôt que `somme xs = foldr (+) 0 xs`. Le « point » désigne l'argument, au sens mathématique d'un point d'un espace, et non le caractère `.`… que ce style utilise pourtant beaucoup, puisque c'est l'opérateur de composition. Poussé trop loin, on le surnomme « pointless »."
+  },
+  {
+    "id": "prog-fonctionnelle-e9",
+    "enonce": "Qu'est-ce qui distingue l'appel par nécessité (call-by-need, Haskell) de l'appel par nom (call-by-name, Algol 60) ?",
+    "choix": [
+      "L'appel par nécessité évalue un argument au plus une fois et garde le résultat",
+      "L'appel par nom évalue tous les arguments avant d'entrer dans la fonction",
+      "L'appel par nécessité copie chaque argument au lieu de le référencer",
+      "L'appel par nom n'accepte que des arguments de type entier"
+    ],
+    "bonneReponse": 0,
+    "explication": "Les deux retardent l'évaluation d'un argument jusqu'à son utilisation. Mais l'appel par nom la refait à chaque usage, alors que l'appel par nécessité la mémorise : c'est la paresse « avec partage » de Haskell. Évaluer tous les arguments avant l'appel, c'est l'appel par valeur, celui de la plupart des langages."
+  },
+  {
+    "id": "prog-fonctionnelle-e10",
+    "enonce": "Comment Haskell, langage pur, parvient-il à afficher du texte à l'écran ?",
+    "choix": [
+      "Une fonction marquée `unsafe` suspend la pureté le temps de l'affichage",
+      "`putStrLn` renvoie une action `IO`, que le runtime exécute via `main`",
+      "Le compilateur repère les affichages et les déplace hors du programme",
+      "Les entrées-sorties passent par un processus séparé, écrit en C"
+    ],
+    "bonneReponse": 1,
+    "explication": "Évaluer `putStrLn s` n'affiche rien : cela produit une valeur de type `IO ()`, la description d'une action. Le programme est une grande action, `main :: IO ()`, assemblée avec `>>=` ou la notation `do`, et c'est le runtime qui l'exécute. Le code pur reste pur. `unsafePerformIO` existe, mais comme échappatoire déconseillée."
+  }
+]

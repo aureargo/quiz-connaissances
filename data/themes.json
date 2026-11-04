@@ -175,6 +175,20 @@
     "description": "Tris, complexité (grand O), arbres, piles et files : les fondamentaux de l'algorithmique."
   },
   {
+    "id": "concurrence",
+    "nom": "Programmation concurrente",
+    "emoji": "🔀",
+    "categorie": "Programmation",
+    "description": "Threads, verrous, interblocages et modèle d'acteurs : faire plusieurs choses à la fois sans tout casser."
+  },
+  {
+    "id": "prog-fonctionnelle",
+    "nom": "Programmation fonctionnelle",
+    "emoji": "🔗",
+    "categorie": "Programmation",
+    "description": "Fonctions pures, immutabilité, ordre supérieur, currying et monades : programmer sans effets de bord."
+  },
+  {
     "id": "docker",
     "nom": "Docker",
     "emoji": "🐳",

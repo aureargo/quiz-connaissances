@@ -1,0 +1,102 @@
+[
+  {
+    "id": "concurrence-e1",
+    "enonce": "Quelle affirmation sur les « data races » et les « race conditions » est exacte ?",
+    "choix": [
+      "Les deux termes désignent exactement le même phénomène",
+      "Un programme peut avoir une race condition sans aucune data race",
+      "Une data race est sans danger tant que les écritures restent rares",
+      "Un verrou autour de chaque accès élimine toute race condition"
+    ],
+    "bonneReponse": 1,
+    "explication": "Une data race, c'est deux accès simultanés à la même case mémoire, dont au moins une écriture, sans synchronisation (comportement indéfini en C/C++, détecté par `go test -race`). Une race condition est un bug logique de timing. Exemple : `if (!map.containsKey(k)) map.put(k, v)` sur une `ConcurrentHashMap` : chaque appel est sûr, donc pas de data race, mais la séquence « tester puis agir » ne l'est pas. D'où `putIfAbsent`."
+  },
+  {
+    "id": "concurrence-e2",
+    "enonce": "Un thread lit A, puis est suspendu ; un autre écrit B, puis remet A ; le premier réussit alors son compare-and-swap. Comment s'appelle ce piège ?",
+    "choix": ["Le problème ABA", "L'inversion de priorité", "Le faux partage", "L'effet de convoi"],
+    "bonneReponse": 0,
+    "explication": "Le CAS ne compare que des valeurs : il ne voit pas l'historique A → B → A. Dans une pile sans verrou, le nœud A a pu être dépilé, libéré puis réalloué entre-temps, et le CAS raccroche alors une structure corrompue. Parades : un compteur de version accolé à la valeur (`AtomicStampedReference` en Java), les « hazard pointers », ou un ramasse-miettes qui empêche la réutilisation."
+  },
+  {
+    "id": "concurrence-e3",
+    "enonce": "En 1997, une fois posée sur Mars, la sonde Mars Pathfinder redémarrait sans cesse. Quel problème de concurrence en était la cause ?",
+    "choix": ["Un interblocage circulaire", "Une fuite de threads", "Une inversion de priorité", "Un débordement de pile"],
+    "bonneReponse": 2,
+    "explication": "Une tâche de basse priorité tenait un mutex partagé ; une tâche de haute priorité l'attendait ; une tâche de priorité moyenne, prioritaire sur la première, l'empêchait de le relâcher. Un minuteur de surveillance voyait la tâche haute bloquée et redémarrait le système. La NASA a corrigé à distance en activant l'héritage de priorité sur ce mutex VxWorks."
+  },
+  {
+    "id": "concurrence-e4",
+    "enonce": "Deux threads incrémentent chacun leur propre compteur, sans rien partager, et pourtant le programme ralentit fortement. Quelle cause est la plus probable ?",
+    "choix": [
+      "L'inversion de priorité entre les deux threads concurrents",
+      "Le ramasse-miettes, qui se déclenche à chaque incrément",
+      "Le verrou implicite que le processeur pose sur chaque variable",
+      "Le faux partage : les deux compteurs sont sur la même ligne de cache"
+    ],
+    "bonneReponse": 3,
+    "explication": "Les caches travaillent par lignes de 64 octets. Si les deux compteurs y sont voisins, chaque écriture d'un cœur invalide la ligne dans le cache de l'autre (protocole de cohérence MESI) : la ligne fait le ping-pong entre les cœurs. Remède : espacer les données (padding), par exemple avec `@Contended` en Java ou `alignas(64)` en C++."
+  },
+  {
+    "id": "concurrence-e5",
+    "enonce": "Selon la loi d'Amdahl, si 10 % d'un programme reste séquentiel, quelle accélération maximale peut-on espérer, même avec une infinité de cœurs ?",
+    "choix": ["×10", "×90", "×100", "Illimitée"],
+    "bonneReponse": 0,
+    "explication": "Accélération = 1 / (s + (1 − s) / N), où s est la part séquentielle. Quand N tend vers l'infini, il reste 1 / s = 1 / 0,1 = 10. Avec 1 000 cœurs, on n'obtient même que ×9,9. La loi de Gustafson nuance ce constat : en pratique, on profite des cœurs supplémentaires pour traiter des problèmes plus gros."
+  },
+  {
+    "id": "concurrence-e6",
+    "enonce": "En Java, que garantit le mot-clé `volatile` sur un champ `int compteur` partagé entre threads ?",
+    "choix": [
+      "L'atomicité de `compteur++`, mais pas la visibilité des écritures",
+      "La visibilité des écritures, mais pas l'atomicité de `compteur++`",
+      "L'exclusion mutuelle : un seul thread accède au champ à la fois",
+      "Le stockage du champ dans un registre, pour un accès plus rapide"
+    ],
+    "bonneReponse": 1,
+    "explication": "Une écriture volatile « se produit avant » (happens-before) toute lecture ultérieure du champ : les autres threads voient la nouvelle valeur, et certains réordonnancements sont interdits. Mais `compteur++` reste lecture + calcul + écriture : deux threads peuvent encore perdre un incrément. Il faut `AtomicInteger` ou un verrou. `volatile` convient à un drapeau d'arrêt, écrit par un thread et lu par d'autres."
+  },
+  {
+    "id": "concurrence-e7",
+    "enonce": "Pourquoi l'attente sur une variable de condition s'écrit-elle dans une boucle `while` plutôt que dans un `if` ?",
+    "choix": [
+      "Car un `if` libérerait le verrou avant de tester la condition",
+      "Car la boucle évite au thread de reprendre le verrou au réveil",
+      "Car un appel unique à `wait()` expire au bout d'une milliseconde",
+      "Car le thread peut se réveiller alors que la condition est fausse"
+    ],
+    "bonneReponse": 3,
+    "explication": "Deux raisons. Les réveils intempestifs (spurious wakeups) sont autorisés par POSIX comme par Java. Et avec la sémantique dite « Mesa », utilisée presque partout, une notification n'est qu'un indice : entre le `notify` et la reprise du verrou, un autre thread a pu consommer l'élément attendu. La boucle reteste donc la condition après chaque réveil."
+  },
+  {
+    "id": "concurrence-e8",
+    "enonce": "Qu'est-ce qui distingue le modèle CSP, dont s'inspirent les canaux de Go, du modèle d'acteurs d'Erlang ?",
+    "choix": [
+      "En CSP, les processus partagent leur mémoire ; les acteurs s'envoient des messages",
+      "En CSP, l'envoi est asynchrone ; chez les acteurs, il attend toujours le destinataire",
+      "En CSP, on écrit dans un canal anonyme ; un acteur envoie à une adresse précise",
+      "En CSP, un processus ne peut écrire qu'au processus qui l'a créé"
+    ],
+    "bonneReponse": 2,
+    "explication": "Dans CSP (Tony Hoare), les processus sont anonymes et se parlent via des canaux, qui sont les entités nommées ; l'échange est un rendez-vous synchrone, comme avec un canal Go sans tampon. Chez les acteurs, c'est l'acteur qui a une identité : on dépose un message à son adresse, dans sa boîte aux lettres, sans attendre qu'il le lise."
+  },
+  {
+    "id": "concurrence-e9",
+    "enonce": "Coffman a énoncé en 1971 quatre conditions nécessaires à un interblocage. Laquelle n'en fait PAS partie ?",
+    "choix": ["L'exclusion mutuelle", "L'absence de préemption", "L'attente circulaire", "L'inégalité des priorités"],
+    "bonneReponse": 3,
+    "explication": "Les quatre conditions : exclusion mutuelle, détention et attente (garder une ressource en en réclamant une autre), absence de préemption (on ne peut pas reprendre une ressource de force) et attente circulaire. Il suffit d'en casser une : ordre global des verrous, tout acquérir d'un coup, ou `tryLock` avec abandon. Les priorités n'y jouent aucun rôle."
+  },
+  {
+    "id": "concurrence-e10",
+    "enonce": "Qu'est-ce qui distingue un algorithme « wait-free » d'un algorithme seulement « lock-free » ?",
+    "choix": [
+      "Il n'utilise aucune instruction atomique, contrairement au lock-free",
+      "Chaque thread finit en un nombre borné d'étapes, quoi que fassent les autres",
+      "Il tolère les verrous, à condition qu'ils ne soient jamais contestés",
+      "Il ne fonctionne correctement que sur un processeur à un seul cœur"
+    ],
+    "bonneReponse": 1,
+    "explication": "Lock-free garantit que le système progresse : à tout instant, au moins un thread avance, mais un thread malchanceux peut voir son CAS échouer indéfiniment (famine). Wait-free garantit la progression de chaque thread individuellement. C'est plus fort, et beaucoup plus difficile à obtenir : tout algorithme wait-free est lock-free, l'inverse est faux."
+  }
+]

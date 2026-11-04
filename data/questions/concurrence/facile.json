@@ -1,0 +1,112 @@
+[
+  {
+    "id": "concurrence-f1",
+    "enonce": "Quelle phrase distingue le mieux concurrence et parallélisme ?",
+    "choix": [
+      "La concurrence exige plusieurs cœurs ; le parallélisme fonctionne sur un seul",
+      "La concurrence gère plusieurs tâches à la fois ; le parallélisme les exécute simultanément",
+      "Les deux termes sont synonymes et désignent l'exécution sur plusieurs machines",
+      "Le parallélisme concerne les threads ; la concurrence ne concerne que les processus"
+    ],
+    "bonneReponse": 1,
+    "explication": "Selon la formule de Rob Pike, la concurrence consiste à « gérer » beaucoup de choses à la fois (structurer un programme en tâches indépendantes), le parallélisme à en « faire » beaucoup à la fois. Un seul cœur peut exécuter un programme concurrent en entrelaçant les tâches ; le parallélisme, lui, exige plusieurs unités d'exécution."
+  },
+  {
+    "id": "concurrence-f2",
+    "enonce": "Qu'est-ce qu'un thread ?",
+    "choix": [
+      "Un programme indépendant doté de son propre espace mémoire",
+      "Une file d'attente de messages entre deux machines du réseau",
+      "Une copie du processus créée par l'appel système fork",
+      "Un fil d'exécution qui partage la mémoire de son processus"
+    ],
+    "bonneReponse": 3,
+    "explication": "Les threads d'un même processus partagent le tas, le code et les fichiers ouverts ; chacun n'a en propre que sa pile et ses registres. C'est ce partage qui les rend légers… et dangereux, puisque deux threads peuvent modifier la même donnée en même temps. Un processus, lui, a un espace mémoire isolé (c'est ce que crée `fork`)."
+  },
+  {
+    "id": "concurrence-f3",
+    "enonce": "Comment appelle-t-on un bug dont le résultat dépend de l'ordre, imprévisible, dans lequel s'exécutent plusieurs threads ?",
+    "choix": ["Un interblocage", "Une famine", "Une condition de course", "Un changement de contexte"],
+    "bonneReponse": 2,
+    "explication": "En anglais « race condition » : les threads font la course, et le vainqueur change d'une exécution à l'autre. C'est ce qui rend ces bugs si pénibles : ils peuvent passer mille tests, puis apparaître en production sous une charge différente. On dit aussi « situation de compétition »."
+  },
+  {
+    "id": "concurrence-f4",
+    "enonce": "Deux threads exécutent chacun 1 000 fois `compteur++` sur la même variable, sans protection. Pourquoi le total peut-il être inférieur à 2 000 ?",
+    "choix": [
+      "Car l'opération se décompose en lecture, calcul puis écriture",
+      "Car le processeur arrondit les entiers partagés entre threads",
+      "Car le système refuse l'écriture tant qu'un autre thread lit",
+      "Car un thread n'a pas le droit de modifier une variable globale"
+    ],
+    "bonneReponse": 0,
+    "explication": "`compteur++` n'est pas atomique : le thread lit la valeur (disons 41), ajoute 1, puis écrit 42. Si l'autre thread a lu 41 entre-temps, il écrit lui aussi 42 : un incrément est perdu. Il faut un verrou ou une opération atomique (`AtomicInteger` en Java, `sync/atomic` en Go)."
+  },
+  {
+    "id": "concurrence-f5",
+    "enonce": "À quoi sert un verrou de type mutex ?",
+    "choix": [
+      "À accélérer un thread en lui réservant davantage de cœurs",
+      "À garantir qu'un seul thread à la fois exécute une section critique",
+      "À empêcher le système de suspendre le thread en cours d'exécution",
+      "À copier les données partagées dans la pile de chaque thread"
+    ],
+    "bonneReponse": 1,
+    "explication": "« Mutex » vient de « mutual exclusion ». Un thread appelle `lock()` avant la section critique et `unlock()` après ; les autres attendent leur tour. Oublier de libérer bloque tout le monde, d'où `defer mu.Unlock()` en Go ou le bloc `synchronized` en Java, qui libère le verrou même en cas d'exception."
+  },
+  {
+    "id": "concurrence-f6",
+    "enonce": "Qu'est-ce qu'un interblocage (deadlock) ?",
+    "choix": [
+      "Un thread qui s'exécute trop longtemps et monopolise le processeur",
+      "Deux threads qui écrivent en même temps dans la même variable",
+      "Des threads qui s'attendent mutuellement et ne progressent plus jamais",
+      "Un programme qui crée plus de threads que le système n'en autorise"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le cas d'école : le thread 1 tient le verrou A et attend B, le thread 2 tient B et attend A. Aucun ne lâche ce qu'il a, donc aucun n'avance. Le programme ne plante pas : il se fige, sans message d'erreur. Un « thread dump » (liste des threads et de ce qu'ils attendent) aide à le diagnostiquer."
+  },
+  {
+    "id": "concurrence-f7",
+    "enonce": "Que signifie qu'une opération est atomique ?",
+    "choix": [
+      "Elle s'exécute toujours en une seule instruction du processeur",
+      "Elle ne peut être appelée que par le thread principal du programme",
+      "Elle doit obligatoirement être protégée par un verrou",
+      "Elle s'exécute en entier ou pas du tout, sans état intermédiaire visible"
+    ],
+    "bonneReponse": 3,
+    "explication": "Les autres threads voient l'état d'avant ou l'état d'après, jamais un état à moitié modifié. Ce n'est pas forcément une seule instruction (certaines opérations atomiques sont des boucles), ni forcément un verrou : `AtomicInteger.incrementAndGet()` en Java s'appuie sur des instructions spéciales du processeur."
+  },
+  {
+    "id": "concurrence-f8",
+    "enonce": "Dans le modèle d'acteurs, comment deux acteurs communiquent-ils ?",
+    "choix": [
+      "En s'envoyant des messages asynchrones",
+      "En lisant et en écrivant une mémoire partagée",
+      "En verrouillant chacun les données de l'autre",
+      "En appelant directement les méthodes de l'autre"
+    ],
+    "bonneReponse": 0,
+    "explication": "Chaque acteur a un état privé et une boîte aux lettres ; il traite ses messages un par un. Comme personne d'autre ne touche à son état, aucun verrou n'est nécessaire. Proposé par Carl Hewitt en 1973, ce modèle est au cœur d'Erlang et d'Elixir, et de la bibliothèque Akka sur la JVM."
+  },
+  {
+    "id": "concurrence-f9",
+    "enonce": "Comment appelle-t-on un ensemble de threads créés à l'avance, puis réutilisés pour exécuter une file de tâches ?",
+    "choix": ["Un thread démon", "Un sémaphore", "Un pool de threads", "Une fibre"],
+    "bonneReponse": 2,
+    "explication": "Créer un thread coûte cher (mémoire pour sa pile, appel système). Un pool en garde quelques-uns en réserve, qui piochent les tâches dans une file. En Java, c'est le rôle d'`ExecutorService` (`Executors.newFixedThreadPool(8)`) ; en Python, celui de `ThreadPoolExecutor`."
+  },
+  {
+    "id": "concurrence-f10",
+    "enonce": "Pourquoi faut-il éviter de lancer un long calcul sur le thread de l'interface graphique ?",
+    "choix": [
+      "Car le calcul serait automatiquement réparti sur tous les cœurs",
+      "Car l'interface se fige : elle ne traite plus clics ni affichage",
+      "Car ce thread n'a pas accès aux variables du reste du programme",
+      "Car ce thread s'exécute deux fois moins vite que les autres"
+    ],
+    "bonneReponse": 1,
+    "explication": "L'interface tourne sur une boucle d'événements unique : tant qu'elle calcule, elle ne redessine plus rien et ignore les clics. Android affiche alors « L'application ne répond pas ». La solution : déporter le calcul sur un thread de fond (ou un Web Worker dans le navigateur), puis revenir sur le thread de l'interface pour afficher le résultat."
+  }
+]

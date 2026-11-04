@@ -1,0 +1,102 @@
+[
+  {
+    "id": "prog-fonctionnelle-m1",
+    "enonce": "Que signifie qu'une expression est « référentiellement transparente » ?",
+    "choix": [
+      "On peut lire son code depuis n'importe quel autre module du programme",
+      "On peut la remplacer par sa valeur sans changer le comportement du programme",
+      "On peut la modifier pendant l'exécution sans recompiler le reste du code",
+      "On peut la passer par référence plutôt que par valeur, sans aucune copie"
+    ],
+    "bonneReponse": 1,
+    "explication": "Si `f` est pure, `f(2) + f(2)` équivaut à `let y = f(2) in y + y` : on peut remplacer un appel par son résultat, comme en algèbre. Ce raisonnement « équationnel » autorise les refactorings sûrs, la mise en cache et bien des optimisations. Avec `random()` ou `lireLigne()`, c'est faux : deux appels donnent deux valeurs."
+  },
+  {
+    "id": "prog-fonctionnelle-m2",
+    "enonce": "Quelle est la différence entre currying et application partielle ?",
+    "choix": [
+      "Le currying restructure la fonction ; l'application partielle fixe des arguments",
+      "L'application partielle restructure la fonction ; le currying fixe des arguments",
+      "Le currying n'existe qu'en Haskell ; l'application partielle existe partout",
+      "Aucune : ce sont deux noms pour la même technique selon les langages"
+    ],
+    "bonneReponse": 0,
+    "explication": "Curryfier `f(a, b, c)` donne `f(a)(b)(c)`, une chaîne de fonctions à un argument. Appliquer partiellement, c'est fixer certains arguments pour obtenir une fonction des autres : `f.bind(null, a)` en JavaScript ou `functools.partial(f, a)` en Python. Les deux se marient bien : en Haskell, `map (+ 1)` est une application partielle rendue naturelle par la curryfication."
+  },
+  {
+    "id": "prog-fonctionnelle-m3",
+    "enonce": "En Haskell, l'opérateur `.` compose deux fonctions. Que vaut `(f . g) x` ?",
+    "choix": ["`g (f x)`", "`f x . g x`", "`f (g x)`", "`(f x) (g x)`"],
+    "bonneReponse": 2,
+    "explication": "Comme f ∘ g en mathématiques, on applique d'abord `g`, puis `f` à son résultat : la composition se lit de droite à gauche. `(succ . (* 2)) 5` vaut 11 (5 × 2, puis + 1), et non 12. F# et Elm proposent aussi `>>`, qui compose dans le sens de la lecture."
+  },
+  {
+    "id": "prog-fonctionnelle-m4",
+    "enonce": "Grâce à l'évaluation paresseuse, laquelle de ces expressions Haskell termine malgré la liste infinie `[1..]` ?",
+    "choix": ["`length [1..]`", "`sum [1..]`", "`last [1..]`", "`take 3 [1..]`"],
+    "bonneReponse": 3,
+    "explication": "Une valeur n'est calculée que lorsqu'on en a besoin. `take 3` ne réclame que trois éléments et renvoie `[1, 2, 3]` ; les trois autres expressions doivent parcourir la liste entière, donc ne terminent jamais. La paresse permet ainsi de séparer la production d'une suite infinie de sa consommation."
+  },
+  {
+    "id": "prog-fonctionnelle-m5",
+    "enonce": "Qu'est-ce qu'un appel récursif terminal (tail call) ?",
+    "choix": [
+      "Un appel récursif qui est la toute dernière opération de la fonction",
+      "Un appel récursif qui n'a lieu que lorsque la liste reçue est vide",
+      "Un appel récursif placé en fin de fichier, après les déclarations",
+      "Un appel récursif qui renvoie la même valeur que le cas de base"
+    ],
+    "bonneReponse": 0,
+    "explication": "Rien ne reste à faire après l'appel, donc le cadre de pile courant devient inutile : le compilateur peut transformer la récursion en boucle et éviter le débordement de pile. `n * fact(n - 1)` n'est pas terminal (il reste la multiplication) ; une version avec accumulateur, `fact(n - 1, acc * n)`, l'est. Scheme impose cette optimisation ; Java et CPython ne la font pas."
+  },
+  {
+    "id": "prog-fonctionnelle-m6",
+    "enonce": "Qu'est-ce qu'une fermeture (closure) ?",
+    "choix": [
+      "Une fonction qui libère ses ressources dès la fin de son exécution",
+      "Une fonction qui ne peut plus être appelée après son premier appel",
+      "Une fonction qui capture les variables du contexte où elle est définie",
+      "Une fonction marquée comme finale, impossible à redéfinir ensuite"
+    ],
+    "bonneReponse": 2,
+    "explication": "Avec `const ajouter = n => x => x + n`, l'appel `ajouter(5)` renvoie une fonction qui « se souvient » de `n = 5`, même après la fin de `ajouter`. C'est ainsi que les fonctions transportent leur contexte : callbacks, fabriques de fonctions, application partielle…"
+  },
+  {
+    "id": "prog-fonctionnelle-m7",
+    "enonce": "En Java, quelle interface de `java.util.function` représente un test renvoyant un booléen, comme celui qu'attend `Stream.filter` ?",
+    "choix": ["`Supplier<T>`", "`Predicate<T>`", "`Consumer<T>`", "`Function<T, R>`"],
+    "bonneReponse": 1,
+    "explication": "`Predicate<T>` déclare `boolean test(T t)`. Les autres : `Supplier<T>` produit une valeur sans argument, `Consumer<T>` en consomme une sans rien renvoyer, `Function<T, R>` transforme un `T` en `R`. Toutes sont des interfaces fonctionnelles (une seule méthode abstraite), qu'une lambda peut implémenter directement."
+  },
+  {
+    "id": "prog-fonctionnelle-m8",
+    "enonce": "En OCaml, comment appelle-t-on un type défini par `type forme = Cercle of float | Carre of float` ?",
+    "choix": ["Un type somme", "Un type produit", "Un type fantôme", "Un type récursif"],
+    "bonneReponse": 0,
+    "explication": "Une valeur est un `Cercle` OU un `Carre` : c'est une somme de cas (on dit aussi variant, ou union étiquetée). Un enregistrement ou un tuple, qui réunit un champ ET un autre, est un type produit. Le filtrage `match … with` traite chaque cas, et le compilateur avertit si on en oublie un."
+  },
+  {
+    "id": "prog-fonctionnelle-m9",
+    "enonce": "Par quoi la plupart des langages fonctionnels remplacent-ils la valeur `null` ?",
+    "choix": [
+      "Par une exception levée dès qu'une variable n'est pas initialisée",
+      "Par une valeur zéro par défaut, choisie selon le type de la variable",
+      "Par un pointeur spécial qui renvoie à la dernière valeur valide",
+      "Par un type qui contient soit une valeur, soit explicitement rien"
+    ],
+    "bonneReponse": 3,
+    "explication": "En Haskell, `Maybe a` vaut `Nothing` ou `Just x` ; OCaml, Rust et Scala ont `Option`, et Java propose `Optional` depuis la version 8. Le type oblige à traiter le cas vide avant d'utiliser la valeur. Tony Hoare, qui a introduit `null` en 1965, l'a qualifié d'« erreur à un milliard de dollars »."
+  },
+  {
+    "id": "prog-fonctionnelle-m10",
+    "enonce": "Comment une liste chaînée immuable évite-t-elle de tout recopier quand on lui ajoute un élément en tête ?",
+    "choix": [
+      "Le langage la modifie en place, puis masque l'ancienne version",
+      "Elle réserve dès sa création la place de futurs éléments",
+      "La nouvelle liste réutilise l'ancienne comme queue, sans copie",
+      "Le ramasse-miettes fusionne les deux listes en arrière-plan"
+    ],
+    "bonneReponse": 2,
+    "explication": "En OCaml, `0 :: l` crée un seul maillon, qui pointe vers `l` ; `l` reste valide et inchangée. Comme rien n'est jamais modifié, ce partage structurel est sans danger. Les structures « persistantes » de Clojure ou d'Immutable.js généralisent l'idée aux vecteurs et aux dictionnaires, à l'aide d'arbres."
+  }
+]

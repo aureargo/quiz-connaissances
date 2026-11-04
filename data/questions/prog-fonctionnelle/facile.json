@@ -1,0 +1,92 @@
+[
+  {
+    "id": "prog-fonctionnelle-f1",
+    "enonce": "Qu'est-ce qu'une fonction pure ?",
+    "choix": [
+      "Une fonction écrite sans aucune boucle, seulement avec de la récursion",
+      "Une fonction qui ne prend aucun argument et renvoie une constante",
+      "Une fonction sans effet de bord, dont le résultat ne dépend que de ses arguments",
+      "Une fonction déclarée dans un module qui ne contient aucune classe"
+    ],
+    "bonneReponse": 2,
+    "explication": "Mêmes arguments, même résultat, et rien d'autre ne change autour : pas d'écriture dans un fichier, pas de variable globale modifiée, pas d'affichage. `Math.max(a, b)` est pure ; `Math.random()` ne l'est pas. Une fonction pure se teste sans préparation, et se met en cache ou en parallèle sans risque."
+  },
+  {
+    "id": "prog-fonctionnelle-f2",
+    "enonce": "Que signifie qu'une donnée est immuable ?",
+    "choix": [
+      "Elle ne peut plus être modifiée après sa création",
+      "Elle ne peut être lue que par la fonction qui l'a créée",
+      "Elle est enregistrée de façon permanente sur le disque",
+      "Elle est recopiée automatiquement à chaque lecture"
+    ],
+    "bonneReponse": 0,
+    "explication": "Pour « modifier » une donnée immuable, on en crée une nouvelle version, l'ancienne restant intacte. Les chaînes de Java et de Python fonctionnent déjà ainsi : `s.toUpperCase()` renvoie une nouvelle chaîne. Avantage majeur : une valeur qui ne change jamais peut être partagée entre threads sans verrou."
+  },
+  {
+    "id": "prog-fonctionnelle-f3",
+    "enonce": "Qu'est-ce qu'une fonction d'ordre supérieur ?",
+    "choix": [
+      "Une fonction qui s'appelle elle-même jusqu'à un cas de base",
+      "Une fonction qui reçoit une fonction en argument ou en renvoie une",
+      "Une fonction déclarée au niveau le plus haut du fichier source",
+      "Une fonction dont la priorité d'exécution est la plus élevée"
+    ],
+    "bonneReponse": 1,
+    "explication": "`map` et `filter` en sont les exemples classiques : on leur passe la fonction à appliquer. Trier avec un comparateur personnalisé ou s'abonner à un clic avec `addEventListener` relève du même principe. Une fonction qui s'appelle elle-même, c'est simplement de la récursion."
+  },
+  {
+    "id": "prog-fonctionnelle-f4",
+    "enonce": "Que renvoie `[1, 2, 3].map(x => x * 2)` en JavaScript ?",
+    "choix": ["`12`", "`[1, 4, 9]`", "`[1, 2, 3, 1, 2, 3]`", "`[2, 4, 6]`"],
+    "bonneReponse": 3,
+    "explication": "`map` applique la fonction à chaque élément et renvoie un nouveau tableau de même longueur ; le tableau d'origine n'est pas modifié. `[1, 4, 9]` correspondrait à `x => x * x`, et `12` à la somme des doubles."
+  },
+  {
+    "id": "prog-fonctionnelle-f5",
+    "enonce": "Quelle fonction combine tous les éléments d'une liste en une seule valeur, par exemple leur somme ?",
+    "choix": ["`reduce`", "`map`", "`filter`", "`zip`"],
+    "bonneReponse": 0,
+    "explication": "`[1, 2, 3].reduce((acc, x) => acc + x, 0)` vaut 6 : l'accumulateur part de 0 et absorbe chaque élément tour à tour. En Haskell ou en OCaml, on parle de « fold » (`foldl`, `foldr`). `reduce` est si général qu'on peut réécrire `map` et `filter` avec lui."
+  },
+  {
+    "id": "prog-fonctionnelle-f6",
+    "enonce": "Comment appelle-t-on une fonction définie sans nom, comme `x => x + 1` ?",
+    "choix": ["Une fonction virtuelle", "Une fonction statique", "Une fonction anonyme", "Une fonction abstraite"],
+    "bonneReponse": 2,
+    "explication": "On dit aussi « lambda », en hommage au λ-calcul d'Alonzo Church (années 1930), fondement théorique de la programmation fonctionnelle. Même idée en Python (`lambda x: x + 1`) et en Java depuis la version 8 (`x -> x + 1`)."
+  },
+  {
+    "id": "prog-fonctionnelle-f7",
+    "enonce": "Quel langage créé par John McCarthy en 1958, célèbre pour ses parenthèses, est l'ancêtre des langages fonctionnels ?",
+    "choix": ["Fortran", "Lisp", "Simula", "COBOL"],
+    "bonneReponse": 1,
+    "explication": "Lisp (« LISt Processing ») a popularisé les fonctions manipulées comme des valeurs, la récursion omniprésente et le ramasse-miettes. Son code est lui-même une liste, d'où les parenthèses. Il vit encore à travers Common Lisp, Scheme, Racket, Clojure ou Emacs Lisp."
+  },
+  {
+    "id": "prog-fonctionnelle-f8",
+    "enonce": "En style purement fonctionnel, par quoi remplace-t-on le plus souvent une boucle `for` qui modifie un compteur ?",
+    "choix": ["Par des exceptions", "Par des variables globales", "Par des sauts `goto`", "Par la récursion"],
+    "bonneReponse": 3,
+    "explication": "Sans variable modifiable, pas de compteur à incrémenter : une fonction s'appelle elle-même sur un problème plus petit, jusqu'à un cas de base. En pratique, des fonctions comme `map` cachent souvent cette récursion. Haskell n'a d'ailleurs aucune boucle `for`."
+  },
+  {
+    "id": "prog-fonctionnelle-f9",
+    "enonce": "Qu'est-ce que le currying (curryfication) ?",
+    "choix": [
+      "Transformer une fonction à plusieurs arguments en suite de fonctions à un argument",
+      "Mémoriser le résultat d'une fonction pour ne pas la recalculer plus tard",
+      "Appeler une fonction avec ses arguments dans l'ordre inverse de leur déclaration",
+      "Combiner deux fonctions pour que la sortie de l'une alimente l'autre"
+    ],
+    "bonneReponse": 0,
+    "explication": "`add(a, b)` devient `add(a)(b)` : `add(2)` renvoie une fonction qui attend encore `b`. Le nom vient du logicien Haskell Curry, qui a aussi prêté son prénom au langage Haskell, où toutes les fonctions sont curryfiées. Mémoriser un résultat, c'est la mémoïsation ; enchaîner deux fonctions, la composition."
+  },
+  {
+    "id": "prog-fonctionnelle-f10",
+    "enonce": "Lequel de ces langages est purement fonctionnel ?",
+    "choix": ["C", "Pascal", "Haskell", "COBOL"],
+    "bonneReponse": 2,
+    "explication": "En Haskell (1990), aucune fonction ne peut avoir d'effet de bord caché : les entrées-sorties apparaissent dans les types. Beaucoup de langages fonctionnels tolèrent les effets (OCaml, F#, Scala, Clojure) ; C, Pascal et COBOL sont, eux, impératifs."
+  }
+]
