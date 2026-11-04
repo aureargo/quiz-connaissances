@@ -350,6 +350,13 @@
     "description": "Les grands modèles de langage — connaissances arrêtées à 2026."
   },
   {
+    "id": "machine-learning",
+    "nom": "Machine learning",
+    "emoji": "📈",
+    "categorie": "Intelligence artificielle",
+    "description": "Supervisé ou non, surapprentissage, validation et métriques : les bases de l'apprentissage automatique."
+  },
+  {
     "id": "mangas",
     "nom": "Mangas",
     "emoji": "📖",

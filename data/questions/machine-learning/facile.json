@@ -1,0 +1,122 @@
+[
+  {
+    "id": "machine-learning-f1",
+    "enonce": "Laquelle de ces tâches relève de l'apprentissage non supervisé ?",
+    "choix": [
+      "Prédire le prix d'une maison à partir des ventes passées",
+      "Repérer un spam grâce à des e-mails déjà triés",
+      "Regrouper des clients aux habitudes d'achat similaires",
+      "Reconnaître des chiffres manuscrits déjà annotés"
+    ],
+    "bonneReponse": 2,
+    "explication": "En non supervisé, les données n'ont pas d'étiquette : personne n'a indiqué au modèle quelle est la « bonne réponse ». Il doit trouver seul une structure, par exemple des groupes de clients qui se ressemblent : c'est le clustering, ou segmentation. Les trois autres tâches sont supervisées : le prix de vente, la mention « spam » ou le chiffre annoté servent d'exemples corrigés."
+  },
+  {
+    "id": "machine-learning-f2",
+    "enonce": "Prédire le prix de vente d'un appartement, en euros, est un problème de…",
+    "choix": [
+      "classification",
+      "régression",
+      "clustering",
+      "réduction de dimension"
+    ],
+    "bonneReponse": 1,
+    "explication": "On parle de régression quand la valeur à prédire est un nombre continu : un prix, une température, une durée. La classification, elle, prédit une catégorie parmi un ensemble fini : « spam / pas spam », « chat / chien / oiseau ». Piège de vocabulaire classique : la « régression logistique » est… un algorithme de classification. Elle prédit la probabilité d'appartenir à une classe."
+  },
+  {
+    "id": "machine-learning-f3",
+    "enonce": "Pourquoi met-on de côté un « jeu de test » que le modèle ne voit jamais pendant l'entraînement ?",
+    "choix": [
+      "Pour réduire le temps de calcul de l'entraînement",
+      "Pour corriger les étiquettes erronées des données",
+      "Pour lui fournir des exemples en fin d'apprentissage",
+      "Pour estimer ses performances sur des données nouvelles"
+    ],
+    "bonneReponse": 3,
+    "explication": "Un modèle évalué sur ses propres données d'entraînement a « vu les réponses » : son score serait trop optimiste. Le jeu de test simule des données jamais rencontrées, comme celles qu'il traitera une fois en service. On y réserve souvent 20 à 30 % des données, et on ne s'en sert qu'à la toute fin : l'utiliser pour faire ses choix le rendrait lui aussi trop optimiste."
+  },
+  {
+    "id": "machine-learning-f4",
+    "enonce": "Un modèle obtient 99 % de bonnes réponses sur ses données d'entraînement, mais seulement 60 % sur le jeu de test. Quel est le diagnostic le plus probable ?",
+    "choix": [
+      "Un surapprentissage",
+      "Un sous-apprentissage",
+      "Un jeu de test trop volumineux",
+      "Un taux d'apprentissage nul"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le modèle a appris ses exemples « par cœur », bruit et cas particuliers compris, au lieu d'en extraire des règles générales : c'est le surapprentissage (overfitting). Le signe qui ne trompe pas est le grand écart entre le score d'entraînement et le score de test. Un sous-apprentissage donnerait au contraire de mauvais scores partout, y compris à l'entraînement."
+  },
+  {
+    "id": "machine-learning-f5",
+    "enonce": "En apprentissage supervisé, comment appelle-t-on la valeur que le modèle doit apprendre à prédire ?",
+    "choix": [
+      "Une caractéristique",
+      "Un hyperparamètre",
+      "La cible",
+      "Un poids"
+    ],
+    "bonneReponse": 2,
+    "explication": "La cible (target), ou étiquette (label) en classification, est la « bonne réponse » associée à chaque exemple : le prix d'un logement, la mention « fraude » d'une transaction… Les autres colonnes sont les caractéristiques (features), aussi appelées variables explicatives : c'est à partir d'elles que le modèle prédit la cible."
+  },
+  {
+    "id": "machine-learning-f6",
+    "enonce": "Comment l'algorithme des k plus proches voisins (k-NN) classe-t-il un nouveau point ?",
+    "choix": [
+      "Il trace la droite qui sépare le mieux les deux classes",
+      "Il pose une suite de questions oui/non sur les variables",
+      "Il répartit tous les points en k groupes de même taille",
+      "Il retient la classe majoritaire parmi les k points proches"
+    ],
+    "bonneReponse": 3,
+    "explication": "Le k-NN n'apprend presque rien à l'avance : il mémorise les exemples, puis, pour un nouveau point, cherche les k exemples les plus proches (souvent en distance euclidienne) et les fait voter. Avec k = 1, il copie la classe du voisin le plus proche, ce qui le rend très sensible au bruit ; un k plus grand lisse la décision. On choisit souvent un k impair pour éviter les égalités entre deux classes."
+  },
+  {
+    "id": "machine-learning-f7",
+    "enonce": "Que fait l'algorithme k-means ?",
+    "choix": [
+      "Il partage les données en k groupes autour de centres",
+      "Il prédit une valeur en moyennant k modèles distincts",
+      "Il sélectionne les k variables les plus utiles",
+      "Il découpe les données en k plis pour la validation"
+    ],
+    "bonneReponse": 0,
+    "explication": "k-means est un algorithme de clustering, donc non supervisé. Il place k centres (centroïdes), affecte chaque point au centre le plus proche, puis déplace chaque centre à la moyenne de ses points — d'où son nom — et recommence jusqu'à stabilisation. Le nombre k doit être fixé à l'avance, par exemple à l'aide de la « méthode du coude » ou du score de silhouette."
+  },
+  {
+    "id": "machine-learning-f8",
+    "enonce": "Que mesure l'« exactitude » (accuracy) d'un classifieur ?",
+    "choix": [
+      "Le temps moyen nécessaire pour produire une prédiction",
+      "La part des cas positifs que le modèle parvient à détecter",
+      "La part des prédictions correctes sur l'ensemble des cas",
+      "L'écart moyen entre la valeur prédite et la valeur réelle"
+    ],
+    "bonneReponse": 2,
+    "explication": "L'exactitude est le rapport « prédictions justes / prédictions totales ». Simple et intuitive, elle devient trompeuse quand les classes sont déséquilibrées : sur 1 000 patients dont 10 malades, un modèle qui déclare tout le monde sain atteint 99 % d'exactitude… sans détecter un seul malade. La part des positifs détectés s'appelle le rappel ; l'écart moyen entre valeur prédite et valeur réelle est une métrique de régression (la MAE)."
+  },
+  {
+    "id": "machine-learning-f9",
+    "enonce": "Que résume l'adage « garbage in, garbage out », bien connu en machine learning ?",
+    "choix": [
+      "Un modèle doit oublier ses anciennes données régulièrement",
+      "Des données de mauvaise qualité donnent un mauvais modèle",
+      "Les données aberrantes doivent toujours être supprimées",
+      "Un modèle trop complexe finit par produire des absurdités"
+    ],
+    "bonneReponse": 1,
+    "explication": "« Déchets en entrée, déchets en sortie » : aucun algorithme, si sophistiqué soit-il, ne compense des données erronées, incomplètes ou biaisées. C'est pourquoi la préparation des données (nettoyage, valeurs manquantes, vérification des étiquettes) occupe souvent l'essentiel du temps d'un projet. Et un jeu de données biaisé produit un modèle biaisé : il reproduit fidèlement les travers de ses exemples."
+  },
+  {
+    "id": "machine-learning-f10",
+    "enonce": "Quelle bibliothèque Python est la référence du machine learning « classique » : régressions, arbres, SVM, clustering… ?",
+    "choix": [
+      "scikit-learn",
+      "pandas",
+      "Matplotlib",
+      "Requests"
+    ],
+    "bonneReponse": 0,
+    "explication": "Lancée en 2007 lors d'un Google Summer of Code, puis développée à partir de 2010 par une équipe de l'Inria, scikit-learn offre une interface uniforme : chaque modèle s'entraîne avec fit() et prédit avec predict(). pandas sert à manipuler des tableaux de données, Matplotlib à tracer des graphiques et Requests à faire des appels HTTP : des outils voisins, souvent utilisés ensemble, mais qui n'apprennent rien."
+  }
+]

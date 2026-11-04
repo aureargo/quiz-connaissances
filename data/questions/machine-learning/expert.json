@@ -1,0 +1,122 @@
+[
+  {
+    "id": "machine-learning-e1",
+    "enonce": "Pourquoi est-ce une erreur de standardiser l'ensemble des données (moyenne, écart-type) avant de les découper en jeux d'entraînement et de test ?",
+    "choix": [
+      "La standardisation devient impossible à inverser ensuite",
+      "Des informations du jeu de test fuient dans l'entraînement",
+      "Les variables catégorielles sont alors définitivement perdues",
+      "L'entraînement converge alors beaucoup plus lentement"
+    ],
+    "bonneReponse": 1,
+    "explication": "La moyenne et l'écart-type calculés sur toutes les données contiennent une information sur le jeu de test : c'est une fuite de données (data leakage), et le score de test devient trop optimiste. La règle : toute transformation (standardisation, imputation, sélection de variables…) s'ajuste sur le seul jeu d'entraînement, puis s'applique telle quelle au test. Dans scikit-learn, un Pipeline évalué en validation croisée garantit cette discipline à chaque pli."
+  },
+  {
+    "id": "machine-learning-e2",
+    "enonce": "Que permet l'« astuce du noyau » (kernel trick) utilisée par les SVM ?",
+    "choix": [
+      "Ne garder qu'un vecteur de support par classe pour accélérer les prédictions",
+      "Entraîner le classifieur sans étiquettes, en devinant les classes par les marges",
+      "Remplacer la recherche de la marge maximale par une simple descente de gradient",
+      "Séparer les données dans un espace plus vaste sans jamais y projeter les points"
+    ],
+    "bonneReponse": 3,
+    "explication": "Des données non séparables par une droite peuvent le devenir dans un espace de dimension supérieure, en ajoutant par exemple x², y² ou xy. Or l'entraînement d'un SVM n'utilise que des produits scalaires entre points : un noyau calcule directement ce produit scalaire dans l'espace étendu, sans jamais y projeter les points. Le noyau gaussien (RBF) correspond même à un espace de dimension infinie, impossible à construire explicitement."
+  },
+  {
+    "id": "machine-learning-e3",
+    "enonce": "Que désigne la « malédiction de la dimension » (curse of dimensionality) ?",
+    "choix": [
+      "En grande dimension, les points sont épars et les distances perdent leur sens",
+      "Au-delà de trois variables, un modèle linéaire ne peut plus être entraîné correctement",
+      "Chaque variable ajoutée double mécaniquement la durée d'entraînement de tout modèle",
+      "Plus les variables sont nombreuses, plus elles finissent toutes fortement corrélées"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le volume de l'espace croît exponentiellement avec le nombre de dimensions : pour garder 10 points par axe, il en faut 10 en 1D, 100 en 2D… et 10 milliards en dimension 10. En grande dimension, les données sont donc éparses, et la distance au plus proche voisin devient presque égale à celle du plus lointain : les méthodes fondées sur la proximité, comme le k-NN, s'effondrent. L'expression est due au mathématicien Richard Bellman, à la fin des années 1950."
+  },
+  {
+    "id": "machine-learning-e4",
+    "enonce": "En gradient boosting (XGBoost, LightGBM…), sur quoi chaque nouvel arbre est-il entraîné ?",
+    "choix": [
+      "Sur un échantillon bootstrap tiré indépendamment des autres arbres",
+      "Sur les erreurs résiduelles laissées par les arbres déjà construits",
+      "Sur les seules variables que les arbres précédents n'ont pas utilisées",
+      "Sur la moyenne des prédictions fournies par une forêt aléatoire"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le boosting construit ses arbres en série. Chaque nouvel arbre, souvent peu profond, apprend ce qui manque encore : les résidus du modèle actuel, ou plus généralement le gradient négatif de la fonction de perte — d'où le nom. Sa prédiction s'ajoute à l'ensemble, multipliée par un petit taux d'apprentissage. Le bootstrap indépendant, lui, est la marque du bagging et des forêts aléatoires. Sur les données tabulaires, le boosting rivalise encore très souvent avec les réseaux de neurones, voire les devance."
+  },
+  {
+    "id": "machine-learning-e5",
+    "enonce": "Quelle hypothèse rend « naïf » le classifieur bayésien naïf ?",
+    "choix": [
+      "Toutes les classes sont supposées avoir la même probabilité",
+      "Les variables sont supposées suivre une loi uniforme",
+      "Les variables sont supposées indépendantes, sachant la classe",
+      "Les données sont supposées sans aucune valeur aberrante"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le théorème de Bayes donne P(classe | variables), mais estimer la loi jointe de toutes les variables exigerait des quantités de données gigantesques. L'hypothèse naïve la découpe en un simple produit : P(x₁, …, xₙ | classe) = P(x₁ | classe) × … × P(xₙ | classe). Elle est presque toujours fausse — dans un e-mail, « Nouvel » et « An » ne sont pas indépendants ! — et pourtant le modèle marche étonnamment bien : il a longtemps régné sur les filtres anti-spam."
+  },
+  {
+    "id": "machine-learning-e6",
+    "enonce": "Que dit le théorème « No Free Lunch » appliqué à l'apprentissage automatique ?",
+    "choix": [
+      "Aucun algorithme ne surpasse tous les autres sur tous les problèmes",
+      "Tout modèle finit par surapprendre si on l'entraîne assez longtemps",
+      "Doubler la quantité de données divise toujours l'erreur par deux",
+      "Un modèle plus précis est forcément plus coûteux à entraîner"
+    ],
+    "bonneReponse": 0,
+    "explication": "Démontré par David Wolpert en 1996, il affirme qu'en moyenne sur tous les problèmes possibles, tous les algorithmes d'apprentissage se valent. Un algorithme ne gagne que parce que ses hypothèses (linéarité, régularité, proximité…) collent à la structure du problème réel. Conséquence pratique : il n'existe pas de « meilleur modèle » universel, il faut comparer plusieurs approches sur ses propres données."
+  },
+  {
+    "id": "machine-learning-e7",
+    "enonce": "Qu'observe-t-on dans le phénomène de « double descente » (double descent) ?",
+    "choix": [
+      "L'erreur d'entraînement baisse en deux paliers, séparés par une longue stagnation",
+      "Le taux d'apprentissage optimal est divisé par deux à chaque doublement des données",
+      "La précision et le rappel diminuent ensemble quand on abaisse le seuil de décision",
+      "L'erreur de test culmine au seuil d'interpolation, puis rebaisse si le modèle grossit"
+    ],
+    "bonneReponse": 3,
+    "explication": "La courbe en U classique du compromis biais-variance prédit que l'erreur de test augmente dès qu'un modèle devient trop complexe. Belkin et ses coauteurs (2019) ont montré que ce n'est qu'une partie de l'histoire : l'erreur culmine quand le modèle a tout juste assez de paramètres pour mémoriser parfaitement ses données (le seuil d'interpolation), puis redescend, parfois plus bas qu'avant, si on continue à l'agrandir. Une piste pour comprendre pourquoi d'énormes réseaux de neurones généralisent bien."
+  },
+  {
+    "id": "machine-learning-e8",
+    "enonce": "Face à des classes très déséquilibrées, que fait la technique SMOTE ?",
+    "choix": [
+      "Elle supprime au hasard des exemples de la classe majoritaire",
+      "Elle duplique à l'identique les exemples de la classe minoritaire",
+      "Elle crée des exemples minoritaires synthétiques entre voisins proches",
+      "Elle donne un poids plus fort aux erreurs sur la classe minoritaire"
+    ],
+    "bonneReponse": 2,
+    "explication": "SMOTE (Synthetic Minority Over-sampling Technique, Chawla et al., 2002) prend un exemple minoritaire, choisit l'un de ses k plus proches voisins de la même classe, et crée un nouveau point quelque part sur le segment qui les relie. Contrairement à la simple duplication, le modèle ne peut pas se contenter de mémoriser quelques points répétés. Les trois autres propositions sont de vraies alternatives : sous-échantillonnage, sur-échantillonnage simple et pondération des classes. Dans tous les cas, on ne rééchantillonne que le jeu d'entraînement."
+  },
+  {
+    "id": "machine-learning-e9",
+    "enonce": "Pourquoi une validation croisée à plis tirés au hasard est-elle trompeuse pour prévoir une série temporelle (ventes, consommation électrique…) ?",
+    "choix": [
+      "Les plis contiennent alors trop peu de valeurs extrêmes",
+      "Les dates ne peuvent pas être converties en nombres",
+      "Le calcul de l'erreur devient alors bien trop coûteux",
+      "Le modèle apprend sur le futur pour prédire le passé"
+    ],
+    "bonneReponse": 3,
+    "explication": "Avec des plis aléatoires, des observations postérieures à la période testée se retrouvent dans l'entraînement : c'est une fuite de données temporelle, et le score obtenu ne reflète pas la situation réelle, où l'on ne connaît que le passé. On utilise plutôt une validation « glissante » (walk-forward, ou TimeSeriesSplit dans scikit-learn) : on entraîne sur les données jusqu'à une date, on teste sur la période suivante, puis on avance."
+  },
+  {
+    "id": "machine-learning-e10",
+    "enonce": "Un classifieur a une précision de 1,0 mais un rappel de 0,1. Que vaut son F1-score ?",
+    "choix": [
+      "0,10",
+      "0,18",
+      "0,32",
+      "0,55"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le F1-score est la moyenne harmonique de la précision P et du rappel R : F1 = 2PR / (P + R) = 2 × 1 × 0,1 / 1,1 ≈ 0,18. La moyenne arithmétique (0,55) récompenserait un modèle qui ne détecte que 10 % des positifs ; la moyenne harmonique, elle, reste proche de la plus faible des deux valeurs. Impossible donc d'obtenir un bon F1 en sacrifiant l'une des deux métriques. Quant à 0,32, ce serait la moyenne géométrique."
+  }
+]

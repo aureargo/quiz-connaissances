@@ -1,0 +1,122 @@
+[
+  {
+    "id": "machine-learning-m1",
+    "enonce": "Pour un test de dépistage d'une maladie grave, on veut avant tout ne laisser passer aucun malade. Quelle métrique faut-il chercher à maximiser ?",
+    "choix": [
+      "La précision",
+      "Le rappel",
+      "La spécificité",
+      "L'exactitude"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le rappel (recall, ou sensibilité) est la part des vrais malades que le test détecte : VP / (VP + FN). Le maximiser revient à traquer les faux négatifs, ces malades déclarés sains à tort. En contrepartie, on accepte davantage de faux positifs, qu'un examen complémentaire écartera. La précision mesure l'inverse : la fiabilité d'une alerte, pas la couverture des malades. La spécificité, elle, est la part des personnes saines correctement reconnues."
+  },
+  {
+    "id": "machine-learning-m2",
+    "enonce": "Un filtre anti-spam a une précision de 95 %. Qu'est-ce que cela signifie ?",
+    "choix": [
+      "Il intercepte 95 % de tous les spams reçus",
+      "Il classe correctement 95 % de tous les e-mails",
+      "95 % des e-mails qu'il bloque sont vraiment des spams",
+      "Il laisse passer 95 % des e-mails légitimes"
+    ],
+    "bonneReponse": 2,
+    "explication": "La précision répond à la question « quand le modèle crie au spam, a-t-il raison ? » : VP / (VP + FP). Elle ne dit rien des spams qui passent entre les mailles du filet — ça, c'est le rappel. Bien classer 95 % de tous les e-mails, ce serait l'exactitude. Pour un anti-spam, la précision est cruciale : un e-mail important envoyé à tort dans les indésirables coûte bien plus cher qu'un spam qui passe."
+  },
+  {
+    "id": "machine-learning-m3",
+    "enonce": "Comment se déroule une validation croisée à 5 plis (5-fold cross-validation) ?",
+    "choix": [
+      "On entraîne 5 modèles différents et l'on ne garde que le meilleur",
+      "On répète 5 fois l'entraînement sur exactement les mêmes données",
+      "On réserve 5 % des données au test et le reste à l'entraînement",
+      "On découpe en 5 parts, chacune servant de test à tour de rôle"
+    ],
+    "bonneReponse": 3,
+    "explication": "Les données sont découpées en 5 plis. Le modèle est entraîné 5 fois, chaque fois sur 4 plis, puis évalué sur le pli restant ; on fait ensuite la moyenne des 5 scores. Chaque exemple sert ainsi exactement une fois au test, et la dispersion des scores renseigne sur la stabilité du modèle. C'est bien plus fiable qu'un découpage unique, surtout avec peu de données, au prix de 5 fois plus de calcul."
+  },
+  {
+    "id": "machine-learning-m4",
+    "enonce": "Un modèle trop simple se trompe souvent, même sur ses propres données d'entraînement. De quoi souffre-t-il surtout ?",
+    "choix": [
+      "D'une variance trop élevée",
+      "D'un biais trop élevé",
+      "D'une fuite de données",
+      "D'un surapprentissage"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le biais est l'erreur due à des hypothèses trop simplistes : une droite ne peut pas épouser une courbe, quelle que soit la quantité de données. C'est le sous-apprentissage. La variance mesure au contraire la sensibilité du modèle aux particularités de son échantillon d'entraînement ; trop élevée, elle mène au surapprentissage. Tout l'art est de trouver le bon compromis biais-variance : assez de complexité, mais pas trop."
+  },
+  {
+    "id": "machine-learning-m5",
+    "enonce": "Quel effet caractéristique la régularisation L1 (Lasso) a-t-elle sur les coefficients d'un modèle linéaire ?",
+    "choix": [
+      "Elle les réduit tous sans jamais en annuler aucun",
+      "Elle les rend tous positifs pour faciliter la lecture",
+      "Elle les arrondit tous à l'entier le plus proche",
+      "Elle en force certains à valoir exactement zéro"
+    ],
+    "bonneReponse": 3,
+    "explication": "La régularisation pénalise les grands coefficients pour limiter le surapprentissage. La pénalité L1, somme des valeurs absolues, a une propriété précieuse : elle pousse les coefficients des variables peu utiles exactement à zéro, ce qui revient à une sélection automatique de variables. La pénalité L2 (Ridge), somme des carrés, se contente de les rapetisser sans jamais les annuler. Elastic Net combine les deux."
+  },
+  {
+    "id": "machine-learning-m6",
+    "enonce": "Sur quel principe repose une forêt aléatoire (random forest) ?",
+    "choix": [
+      "Faire voter des arbres entraînés chacun sur un tirage aléatoire",
+      "Entraîner des arbres l'un après l'autre pour corriger le précédent",
+      "Construire un unique arbre très profond, élagué ensuite au hasard",
+      "Tirer au sort la classe prédite parmi les feuilles d'un même arbre"
+    ],
+    "bonneReponse": 0,
+    "explication": "Une forêt aléatoire combine des centaines d'arbres de décision. Chacun est entraîné sur un échantillon tiré avec remise (bootstrap) et ne considère, à chaque nœud, qu'un sous-ensemble aléatoire de variables : les arbres diffèrent, et leurs erreurs se compensent lors du vote ou de la moyenne. Leo Breiman a proposé le bagging en 1996, puis les forêts aléatoires en 2001. Entraîner les arbres en série pour corriger les erreurs, c'est le boosting."
+  },
+  {
+    "id": "machine-learning-m7",
+    "enonce": "Pourquoi faut-il mettre les variables à la même échelle avant d'utiliser un k-NN ?",
+    "choix": [
+      "Sinon l'algorithme refuse de traiter les nombres négatifs",
+      "Sinon le nombre k de voisins doit être choisi bien plus grand",
+      "Sinon les variables aux grandes valeurs écrasent les distances",
+      "Sinon les valeurs manquantes ne peuvent pas être détectées"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le k-NN compare des distances. Si l'on mélange un revenu annuel (des dizaines de milliers d'euros) et un âge (quelques dizaines d'années), 1 000 € d'écart pèsent bien plus que 40 ans d'écart : l'âge devient invisible. La standardisation (moyenne 0, écart-type 1) ou la normalisation min-max remet les variables sur un pied d'égalité. Même chose pour k-means, les SVM ou la descente de gradient ; les arbres de décision, eux, y sont insensibles."
+  },
+  {
+    "id": "machine-learning-m8",
+    "enonce": "Lequel de ces éléments est un hyperparamètre, c'est-à-dire fixé avant l'entraînement au lieu d'être appris ?",
+    "choix": [
+      "Les coefficients d'une régression linéaire",
+      "Les positions des centres trouvés par k-means",
+      "Les seuils de coupure d'un arbre de décision",
+      "Le nombre de voisins k d'un algorithme k-NN"
+    ],
+    "bonneReponse": 3,
+    "explication": "Les paramètres sont appris à partir des données : coefficients, centres, seuils. Les hyperparamètres règlent l'algorithme lui-même et sont choisis avant : nombre de voisins, profondeur maximale d'un arbre, force de régularisation, taux d'apprentissage… On les ajuste en comparant plusieurs valeurs sur un jeu de validation (recherche en grille, recherche aléatoire, optimisation bayésienne), jamais sur le jeu de test."
+  },
+  {
+    "id": "machine-learning-m9",
+    "enonce": "Que fait l'analyse en composantes principales (ACP, ou PCA en anglais) ?",
+    "choix": [
+      "Elle projette les données sur les axes de plus grande variance",
+      "Elle supprime les lignes qui contiennent des valeurs manquantes",
+      "Elle génère de nouveaux exemples réalistes pour enrichir les données",
+      "Elle attribue chaque point à la composante dont il est le plus proche"
+    ],
+    "bonneReponse": 0,
+    "explication": "L'ACP est une méthode non supervisée de réduction de dimension. Elle construit de nouveaux axes, combinaisons linéaires des variables d'origine, orthogonaux entre eux et classés par variance expliquée décroissante. En ne gardant que les premiers, on compresse les données en perdant le moins d'information possible : pratique pour visualiser en 2D un jeu à 50 variables, ou pour retirer du bruit avant d'entraîner un autre modèle."
+  },
+  {
+    "id": "machine-learning-m10",
+    "enonce": "Que vaut l'AUC (aire sous la courbe ROC) d'un classifieur qui répond totalement au hasard ?",
+    "choix": [
+      "0",
+      "0,25",
+      "0,5",
+      "1"
+    ],
+    "bonneReponse": 2,
+    "explication": "La courbe ROC trace le taux de vrais positifs en fonction du taux de faux positifs, pour tous les seuils de décision possibles. Un classifieur aléatoire suit la diagonale, d'aire 0,5 ; un classifieur parfait atteint 1. Lecture intuitive : l'AUC est la probabilité qu'un positif tiré au hasard reçoive un score plus élevé qu'un négatif tiré au hasard. Une AUC proche de 0 n'est pas « nulle » : le modèle se trompe systématiquement, il suffit d'inverser ses réponses."
+  }
+]
