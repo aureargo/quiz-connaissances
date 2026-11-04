@@ -1,0 +1,122 @@
+[
+  {
+    "id": "vision-f1",
+    "enonce": "Comment appelle-t-on le plus petit élément d'une image numérique, dont la grille forme l'image entière ?",
+    "choix": [
+      "Le voxel",
+      "Le pixel",
+      "Le texel",
+      "Le bit"
+    ],
+    "bonneReponse": 1,
+    "explication": "« Pixel » est la contraction de *picture element*. Une image numérique est une grille de pixels, chacun portant une ou plusieurs valeurs d'intensité : pour un ordinateur, une photo n'est donc qu'un grand tableau de nombres. Le voxel est son équivalent en 3D (*volume element*, utilisé en imagerie médicale), le texel un point d'une texture plaquée sur un objet 3D."
+  },
+  {
+    "id": "vision-f2",
+    "enonce": "Une image couleur est le plus souvent codée sur trois canaux. Lesquels ?",
+    "choix": [
+      "Rouge, jaune, bleu",
+      "Cyan, magenta, jaune",
+      "Rouge, vert, bleu",
+      "Noir, blanc, gris"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les écrans et les capteurs fonctionnent en synthèse additive : en mélangeant du rouge, du vert et du bleu (RVB, ou RGB en anglais), on obtient toutes les couleurs affichables. Le cyan-magenta-jaune sert à l'impression (synthèse soustractive), et le rouge-jaune-bleu est le trio des peintres. Petit piège classique : la bibliothèque OpenCV charge les images dans l'ordre BGR (bleu, vert, rouge), ce qui donne des couleurs inversées quand on l'oublie."
+  },
+  {
+    "id": "vision-f3",
+    "enonce": "Dans une image en niveaux de gris codée sur 8 bits, combien de valeurs différentes un pixel peut-il prendre ?",
+    "choix": [
+      "2",
+      "16",
+      "1024",
+      "256"
+    ],
+    "bonneReponse": 3,
+    "explication": "8 bits permettent 2⁸ = 256 combinaisons, de 0 (noir) à 255 (blanc). En couleur, on utilise 8 bits par canal R, V et B, soit 24 bits par pixel et environ 16,7 millions de couleurs possibles. Avant de les donner à un réseau de neurones, on ramène souvent ces valeurs entre 0 et 1 en les divisant par 255 : c'est la normalisation."
+  },
+  {
+    "id": "vision-f4",
+    "enonce": "Quelle tâche consiste à repérer chaque objet d'une image, à donner sa classe et à l'entourer d'un rectangle ?",
+    "choix": [
+      "La classification d'images",
+      "La détection d'objets",
+      "La compression d'images",
+      "La colorisation d'images"
+    ],
+    "bonneReponse": 1,
+    "explication": "La détection d'objets produit, pour chaque objet trouvé, une classe (« voiture », « piéton ») et une boîte englobante (*bounding box*). La classification, elle, ne donne qu'une étiquette pour toute l'image (« il y a un chat »), sans dire où. Un cran plus loin, la segmentation délimite les objets au pixel près."
+  },
+  {
+    "id": "vision-f5",
+    "enonce": "Quel sigle désigne la technologie qui transforme l'image d'un texte (scan, photo) en texte modifiable ?",
+    "choix": [
+      "Le RAW",
+      "Le HDR",
+      "Le DPI",
+      "L'OCR"
+    ],
+    "bonneReponse": 3,
+    "explication": "L'OCR (*Optical Character Recognition*, reconnaissance optique de caractères) détecte les zones de texte dans une image puis reconnaît chaque caractère. C'est l'une des plus anciennes applications de la vision : tri automatique du courrier, numérisation de livres, lecture des plaques d'immatriculation. Tesseract, longtemps maintenu par Google, en est le moteur libre le plus connu. RAW est un format photo brut, HDR une technique de plage dynamique étendue, DPI une mesure de résolution."
+  },
+  {
+    "id": "vision-f6",
+    "enonce": "Quelle bibliothèque open source, lancée par Intel en 1999, est la référence historique du traitement d'images ?",
+    "choix": [
+      "OpenCV",
+      "OpenGL",
+      "OpenSSL",
+      "OpenMP"
+    ],
+    "bonneReponse": 0,
+    "explication": "OpenCV (*Open Source Computer Vision Library*) rassemble des milliers d'algorithmes : filtres, détection de contours, calibration de caméra, suivi d'objets, et même l'exécution de réseaux de neurones. Écrite en C++, elle est surtout utilisée depuis Python (`import cv2`). OpenGL sert au rendu 3D, OpenSSL au chiffrement, OpenMP à la programmation parallèle."
+  },
+  {
+    "id": "vision-f7",
+    "enonce": "Quelle base de plus de 14 millions d'images annotées à la main, lancée en 2009 par la chercheuse Fei-Fei Li, a servi de référence à toute la vision par ordinateur ?",
+    "choix": [
+      "COCO",
+      "ImageNet",
+      "Open Images",
+      "Pascal VOC"
+    ],
+    "bonneReponse": 1,
+    "explication": "ImageNet classe ses images dans plus de 20 000 catégories, étiquetées grâce à des milliers de travailleurs d'Amazon Mechanical Turk. Son concours annuel (ILSVRC, 2010-2017), sur 1 000 classes, a mesuré les progrès du domaine : la victoire écrasante du réseau AlexNet en 2012 a lancé la vague du deep learning. Fei-Fei Li défendait une idée alors à contre-courant : les données comptent autant que les algorithmes."
+  },
+  {
+    "id": "vision-f8",
+    "enonce": "En vision par ordinateur, que fait la segmentation d'une image ?",
+    "choix": [
+      "Elle attribue une étiquette à chacun de ses pixels",
+      "Elle réduit sa taille pour accélérer les calculs",
+      "Elle la découpe en carrés de taille identique",
+      "Elle supprime le bruit et les pixels parasites"
+    ],
+    "bonneReponse": 0,
+    "explication": "Segmenter, c'est décider pour chaque pixel à quoi il appartient : route, trottoir, piéton, ciel… On obtient une carte aussi détaillée que l'image elle-même. C'est ce qui permet au mode portrait d'un smartphone de flouter l'arrière-plan sans toucher au sujet, à un logiciel médical de délimiter une tumeur, ou à une voiture autonome de savoir où s'arrête la chaussée."
+  },
+  {
+    "id": "vision-f9",
+    "enonce": "Quel capteur, présent sur de nombreuses voitures autonomes, mesure les distances grâce à des impulsions laser ?",
+    "choix": [
+      "Le radar",
+      "Le sonar",
+      "Le LiDAR",
+      "L'altimètre"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le LiDAR (*Light Detection And Ranging*) envoie des impulsions laser et chronomètre leur retour : il en tire un nuage de millions de points 3D qui donne directement la forme et la distance des obstacles. Le radar utilise des ondes radio, le sonar des ondes sonores. Choix notable : Tesla refuse le LiDAR et a même retiré le radar de ses voitures en 2021 pour ne compter que sur ses caméras, alors que Waymo combine caméras, radars et LiDAR."
+  },
+  {
+    "id": "vision-f10",
+    "enonce": "Quel jeu de 70 000 chiffres manuscrits en 28 × 28 pixels est le « Hello world » de la vision par ordinateur ?",
+    "choix": [
+      "MNIST",
+      "COCO",
+      "KITTI",
+      "CelebA"
+    ],
+    "bonneReponse": 0,
+    "explication": "MNIST (*Modified NIST*), publié en 1998 par l'équipe de Yann LeCun, contient 60 000 images d'entraînement et 10 000 de test, en niveaux de gris. Le réseau LeNet-5 du même LeCun lisait déjà les montants des chèques bancaires à l'époque. Aujourd'hui, un modèle simple y dépasse 99 % de réussite : MNIST sert surtout à apprendre et à tester. COCO regroupe des scènes du quotidien, KITTI des scènes de conduite, CelebA des visages de célébrités."
+  }
+]

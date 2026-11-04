@@ -1,0 +1,122 @@
+[
+  {
+    "id": "vision-e1",
+    "enonce": "À quoi sert la transformée de Hough en vision par ordinateur ?",
+    "choix": [
+      "Passer une image dans le domaine des fréquences spatiales",
+      "Estimer la profondeur à partir de deux images décalées",
+      "Détecter des droites ou des cercles par un vote des pixels",
+      "Compresser une image en ne gardant que ses contours nets"
+    ],
+    "bonneReponse": 2,
+    "explication": "Chaque pixel de contour « vote » pour toutes les droites qui pourraient passer par lui. Ces droites sont décrites par deux paramètres (distance à l'origine ρ et angle θ), et les votes s'accumulent dans une grille de ces paramètres. Les cases qui recueillent le plus de votes correspondent aux droites réellement présentes, même interrompues ou bruitées. Imaginée par Paul Hough en 1962 pour suivre des particules, la méthode sert par exemple à repérer les lignes de marquage routier. Le passage en fréquences est le rôle de la transformée de Fourier."
+  },
+  {
+    "id": "vision-e2",
+    "enonce": "Quelle propriété a fait le succès des descripteurs SIFT (David Lowe, 1999-2004) pour mettre en correspondance des points entre deux images ?",
+    "choix": [
+      "Leur invariance aux changements d'échelle et de rotation",
+      "Leur calcul direct sur les pixels, sans aucun lissage",
+      "Leur aptitude à donner le nom des objets qu'ils décrivent",
+      "Leur usage exclusif de l'information de couleur RVB"
+    ],
+    "bonneReponse": 0,
+    "explication": "SIFT (*Scale-Invariant Feature Transform*) cherche des points saillants à plusieurs échelles, grâce à des différences de flous gaussiens. Il les oriente selon le gradient dominant, puis les décrit par un vecteur de 128 valeurs bâti sur des histogrammes d'orientations. Un même coin de bâtiment est ainsi reconnu de près ou de loin, penché ou non, et même sous un autre éclairage. SIFT a servi aux panoramas, à la reconstruction 3D et à la reconnaissance d'objets. Son brevet a expiré en 2020, ce qui l'a fait entrer dans le cœur d'OpenCV."
+  },
+  {
+    "id": "vision-e3",
+    "enonce": "En vision stéréo, comment la profondeur Z d'un point varie-t-elle avec sa disparité d, c'est-à-dire son décalage horizontal entre les deux images ?",
+    "choix": [
+      "Elle est proportionnelle à d",
+      "Elle est inversement proportionnelle à d",
+      "Elle croît comme le carré de d",
+      "Elle ne dépend pas du tout de d"
+    ],
+    "bonneReponse": 1,
+    "explication": "Avec deux caméras parallèles séparées d'une base B et de focale f, on a Z = f × B / d. Un objet proche se décale beaucoup d'une image à l'autre, un objet lointain presque pas : c'est le même principe que notre vision binoculaire. Conséquence pratique : la précision s'effondre avec la distance, car une erreur d'un seul pixel sur une petite disparité donne une grosse erreur de profondeur. Pour voir loin, il faut écarter davantage les caméras."
+  },
+  {
+    "id": "vision-e4",
+    "enonce": "Une homographie, transformation décrite par une matrice 3 × 3, relie exactement deux vues d'une scène dans quel cas ?",
+    "choix": [
+      "Scène quelconque, pourvu que l'éclairage reste stable",
+      "Caméra qui se translate en ligne droite, sans tourner",
+      "Objets en mouvement, filmés par une caméra immobile",
+      "Scène plane, ou caméra qui tourne sans se déplacer"
+    ],
+    "bonneReponse": 3,
+    "explication": "Si la scène est plane (une façade, une feuille, un terrain de foot) ou si la caméra pivote sur son centre optique sans se déplacer, chaque point d'une image se projette exactement sur l'autre via une homographie. Celle-ci a 8 degrés de liberté : 4 correspondances de points suffisent pour la calculer, en général avec RANSAC pour écarter les erreurs. C'est la base de l'assemblage de panoramas et du redressement de documents photographiés. Dès que la caméra se déplace devant une scène en relief, la parallaxe brise cette relation."
+  },
+  {
+    "id": "vision-e5",
+    "enonce": "Qu'a apporté le modèle Segment Anything (SAM), publié par Meta en 2023 ?",
+    "choix": [
+      "Segmenter n'importe quel objet désigné par un clic ou une boîte",
+      "Générer des images réalistes à partir d'un simple masque",
+      "Classer chaque image parmi les 21 000 catégories d'ImageNet",
+      "Reconnaître un visage à partir d'un seul cliché de référence"
+    ],
+    "bonneReponse": 0,
+    "explication": "SAM est un modèle de segmentation « à consigne » (*promptable*) : on désigne un objet par un point, une boîte ou un masque grossier, et il en renvoie le contour précis, même pour un type d'objet jamais vu, sans réentraînement. Il a été entraîné sur SA-1B, un jeu de 11 millions d'images et plus d'un milliard de masques, en partie produits par le modèle lui-même puis vérifiés. SAM 2 (2024) a étendu l'approche à la vidéo."
+  },
+  {
+    "id": "vision-e6",
+    "enonce": "En 2014, un bruit invisible à l'œil, ajouté à la photo d'un panda, a fait répondre « gibbon » à un réseau de neurones avec 99 % de confiance. Comment appelle-t-on une telle image ?",
+    "choix": [
+      "Un deepfake",
+      "Une hallucination",
+      "Un exemple adverse",
+      "Un artefact de compression"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un exemple adverse (*adversarial example*) est une entrée modifiée exprès, de façon presque imperceptible, pour tromper un modèle. L'exemple du panda vient de Goodfellow et al. (2014) : leur méthode FGSM pousse chaque pixel dans la direction qui augmente le plus l'erreur du réseau. Le phénomène existe aussi dans le monde physique : quelques autocollants bien placés ont suffi à faire lire un panneau stop comme une limitation de vitesse. C'est un enjeu de sécurité majeur pour les voitures autonomes et la reconnaissance faciale."
+  },
+  {
+    "id": "vision-e7",
+    "enonce": "Comment le modèle CLIP d'OpenAI (2021) a-t-il appris à relier images et textes ?",
+    "choix": [
+      "En apprenant à dessiner une image à partir de chaque légende",
+      "En rapprochant les paires image-légende trouvées sur le web",
+      "En classant 400 millions d'images annotées à la main",
+      "En traduisant chaque image en mots, pixel après pixel"
+    ],
+    "bonneReponse": 1,
+    "explication": "CLIP entraîne deux encodeurs, l'un pour les images, l'autre pour le texte, sur 400 millions de paires image-légende collectées sur Internet. Dans chaque lot, il rapproche les vecteurs des paires qui vont ensemble et éloigne les autres : c'est l'apprentissage contrastif. On peut ensuite classer une image sans entraînement spécifique (*zero-shot*), en la comparant à des phrases comme « une photo de chien ». Son encodeur de texte a guidé des générateurs d'images comme DALL·E 2 et Stable Diffusion."
+  },
+  {
+    "id": "vision-e8",
+    "enonce": "Que représente un NeRF, technique présentée en 2020 ?",
+    "choix": [
+      "Un filtre qui retire le bruit des photos prises de nuit",
+      "Un détecteur d'objets conçu pour la vision infrarouge",
+      "Un format de compression d'image fondé sur un réseau",
+      "Une scène 3D, sous forme de couleur et densité en tout point"
+    ],
+    "bonneReponse": 3,
+    "explication": "Un NeRF (*Neural Radiance Field*, Mildenhall et al.) est un petit réseau qui, pour toute position 3D et direction de vue, renvoie une couleur et une densité. À partir de quelques dizaines de photos d'une scène, prises sous des angles connus, il apprend la scène entière ; on calcule ensuite de nouvelles vues en accumulant ces valeurs le long de chaque rayon (rendu volumique). Le Gaussian Splatting (2023), qui décrit la scène par des millions d'ellipsoïdes colorés, a depuis rendu ce type de rendu bien plus rapide, jusqu'au temps réel."
+  },
+  {
+    "id": "vision-e9",
+    "enonce": "En calcul du flux optique, que dit le « problème de l'ouverture » (aperture problem) ?",
+    "choix": [
+      "Localement, on ne mesure que le mouvement normal à un bord",
+      "Une grande ouverture d'objectif fausse le calcul du mouvement",
+      "Un objet trop lent ne produit aucun flux mesurable",
+      "Le calcul exige une caméra à obturateur global"
+    ],
+    "bonneReponse": 0,
+    "explication": "Vu à travers une petite fenêtre, un bord rectiligne qui glisse le long de lui-même ne change pas d'apparence : seul le déplacement perpendiculaire au bord est observable (c'est l'illusion de l'enseigne de barbier). Une seule équation pour deux inconnues, le mouvement local est donc indéterminé. Lucas–Kanade (1981) suppose un mouvement identique dans tout un voisinage, Horn–Schunck un champ de mouvement lisse sur toute l'image. Les coins, où plusieurs orientations se croisent, échappent au problème : c'est pourquoi on les suit en priorité."
+  },
+  {
+    "id": "vision-e10",
+    "enonce": "Sur le benchmark de détection COCO, que désigne la métrique principale notée mAP@[.5:.95] ?",
+    "choix": [
+      "La part d'images où l'on trouve de 50 à 95 % des objets",
+      "La précision moyenne, moyennée sur des seuils d'IoU de 0,5 à 0,95",
+      "La précision obtenue avec 50 à 95 % des données d'entraînement",
+      "La part d'objets détectés avec une confiance de 0,5 à 0,95"
+    ],
+    "bonneReponse": 1,
+    "explication": "Pour chaque classe, on calcule l'AP (*average precision*), l'aire sous la courbe précision-rappel. On en fait la moyenne sur les 80 classes, puis sur 10 seuils d'IoU (0,50, 0,55… 0,95) qui fixent à partir de quand une boîte compte comme correcte. Exiger jusqu'à 0,95 de recouvrement récompense les boîtes très bien placées, là où l'ancienne métrique de Pascal VOC se contentait d'une IoU de 0,5. Un modèle peut donc briller à mAP@.5 et décevoir sur COCO."
+  }
+]

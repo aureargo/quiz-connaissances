@@ -364,6 +364,13 @@
     "description": "Neurones, rétropropagation, CNN, RNN et transformers : comment apprennent les réseaux profonds."
   },
   {
+    "id": "vision",
+    "nom": "Vision par ordinateur",
+    "emoji": "👁️",
+    "categorie": "Intelligence artificielle",
+    "description": "Pixels, filtres, détection d'objets, segmentation et 3D : comment les machines apprennent à voir."
+  },
+  {
     "id": "mangas",
     "nom": "Mangas",
     "emoji": "📖",

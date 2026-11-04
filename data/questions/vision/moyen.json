@@ -1,0 +1,122 @@
+[
+  {
+    "id": "vision-m1",
+    "enonce": "Que fait-on concrètement quand on applique à une image un filtre de convolution, avec un noyau de 3 × 3 ?",
+    "choix": [
+      "On remplace chaque pixel par une somme pondérée de ses voisins",
+      "On trie les pixels de l'image du plus sombre au plus clair",
+      "On découpe l'image en blocs 3 × 3 qui ne se chevauchent pas",
+      "On réduit le nombre de couleurs à 9 teintes représentatives"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le noyau (*kernel*) glisse sur l'image. À chaque position, on multiplie les 9 pixels du voisinage par les 9 coefficients du noyau, puis on additionne. Le choix des coefficients décide de l'effet : des valeurs toutes égales floutent (moyenne), un noyau gaussien floute en douceur, d'autres accentuent la netteté ou font ressortir les contours. Un réseau convolutif (CNN) fait exactement la même opération, sauf que ses coefficients sont appris au lieu d'être choisis à la main."
+  },
+  {
+    "id": "vision-m2",
+    "enonce": "À quoi sert principalement le filtre de Sobel en traitement d'images ?",
+    "choix": [
+      "Réduire le bruit d'une image",
+      "Compresser les données de l'image",
+      "Détecter les contours d'une image",
+      "Corriger la balance des couleurs"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le filtre de Sobel applique deux petits noyaux 3 × 3 qui estiment la variation d'intensité horizontale et verticale, c'est-à-dire le gradient de l'image. Là où la luminosité change brusquement, le gradient est fort : c'est un contour. Le détecteur de Canny (1986) va plus loin : il lisse d'abord l'image, puis ne garde que des contours fins et continus grâce à un double seuil."
+  },
+  {
+    "id": "vision-m3",
+    "enonce": "En détection d'objets, que mesure l'IoU (Intersection over Union) ?",
+    "choix": [
+      "La confiance du modèle dans la classe qu'il a prédite",
+      "Le recouvrement entre la boîte prédite et la vraie boîte",
+      "Le nombre d'objets détectés par rapport aux objets réels",
+      "La vitesse de détection, en images traitées par seconde"
+    ],
+    "bonneReponse": 1,
+    "explication": "L'IoU divise l'aire commune aux deux rectangles par l'aire totale qu'ils couvrent ensemble. Elle vaut 1 si les boîtes coïncident parfaitement et 0 si elles ne se touchent pas. On considère souvent qu'une détection est correcte si son IoU avec la vraie boîte dépasse 0,5. Cette mesure sert aussi à éliminer les doublons et à calculer les scores des benchmarks."
+  },
+  {
+    "id": "vision-m4",
+    "enonce": "Que signifie le nom du célèbre détecteur d'objets YOLO, et quelle idée résume-t-il ?",
+    "choix": [
+      "You Only Learn Once : s'entraîner sur un seul exemple",
+      "Your Own Local Object : détecter sur l'appareil local",
+      "You Only Label Once : annoter chaque image une fois",
+      "You Only Look Once : tout détecter en une seule passe"
+    ],
+    "bonneReponse": 3,
+    "explication": "Avant YOLO (Joseph Redmon, 2015), les détecteurs examinaient des centaines de régions candidates une par une, ce qui était lent. YOLO découpe l'image en grille et prédit toutes les boîtes et leurs classes en un seul passage du réseau : on passe au temps réel (45 images par seconde à l'origine). Redmon a quitté la recherche en vision en 2020, inquiet des usages militaires et de surveillance. D'autres équipes ont poursuivi la série jusqu'aux versions actuelles."
+  },
+  {
+    "id": "vision-m5",
+    "enonce": "Sur la photo d'une foule, quelle différence y a-t-il entre segmentation sémantique et segmentation d'instances ?",
+    "choix": [
+      "L'instance sépare chaque personne ; la sémantique les confond",
+      "La sémantique sépare chaque personne ; l'instance les confond",
+      "L'instance traite les vidéos ; la sémantique les images fixes",
+      "La sémantique s'appuie sur du texte ; l'instance sur des pixels"
+    ],
+    "bonneReponse": 0,
+    "explication": "La segmentation sémantique colore tous les pixels « personne » de la même étiquette : impossible de compter les gens si leurs silhouettes se touchent. La segmentation d'instances distingue chaque individu (personne 1, personne 2…) avec son propre masque, comme le fait Mask R-CNN. La segmentation panoptique combine les deux : des instances pour les objets dénombrables, une étiquette commune pour le fond (route, ciel)."
+  },
+  {
+    "id": "vision-m6",
+    "enonce": "À la sortie d'un détecteur d'objets, à quoi sert la suppression des non-maxima (NMS) ?",
+    "choix": [
+      "À supprimer les pixels les plus sombres de l'image",
+      "À retirer les classes rares du jeu d'entraînement",
+      "À garder une seule boîte par objet parmi des doublons",
+      "À effacer les objets trop petits pour être reconnus"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un détecteur propose souvent une dizaine de boîtes légèrement décalées autour du même objet. La NMS garde la boîte la plus confiante, supprime toutes celles qui la recouvrent trop (IoU supérieure à un seuil, souvent 0,5), puis recommence avec la suivante. Revers de la méthode : deux objets réellement très proches risquent d'être fusionnés. Des détecteurs récents comme DETR (2020) apprennent à s'en passer."
+  },
+  {
+    "id": "vision-m7",
+    "enonce": "Pourquoi applique-t-on des retournements, rotations et recadrages aléatoires aux images d'entraînement ?",
+    "choix": [
+      "Pour réduire la place que les images prennent sur le disque",
+      "Pour multiplier les exemples et rendre le modèle plus robuste",
+      "Pour empêcher un humain de reconnaître les données privées",
+      "Pour accélérer chaque passe de l'entraînement du réseau"
+    ],
+    "bonneReponse": 1,
+    "explication": "C'est l'augmentation de données (*data augmentation*) : un chat retourné ou un peu recadré reste un chat. Le modèle voit ainsi des variantes nouvelles à chaque époque, ce qui limite le surapprentissage et l'habitue aux variations du monde réel. Il faut toutefois choisir des transformations qui ne changent pas la réponse : retourner un 6 en fait un 9, et un panneau « tourner à gauche » inversé devient l'inverse."
+  },
+  {
+    "id": "vision-m8",
+    "enonce": "Sur la plupart des capteurs photo, une mosaïque de filtres (dite « de Bayer ») ne laisse passer qu'une couleur par photosite. Pourquoi compte-t-elle deux fois plus de filtres verts que de rouges ou de bleus ?",
+    "choix": [
+      "Parce que le vert domine dans les paysages naturels",
+      "Parce que les filtres verts coûtent moins cher à produire",
+      "Parce que le vert traverse mieux la lentille de l'objectif",
+      "Parce que l'œil humain est plus sensible au vert"
+    ],
+    "bonneReponse": 3,
+    "explication": "Inventée par Bryce Bayer chez Kodak (brevet de 1976), la mosaïque répète un motif de 2 × 2 : un rouge, un bleu et deux verts. Notre perception de la luminosité et des détails passe surtout par le vert : doubler ces photosites améliore donc la netteté perçue. Chaque photosite ne mesurant qu'une couleur, l'appareil reconstitue les deux manquantes par interpolation avec les voisins : c'est le dématriçage (*demosaicing*)."
+  },
+  {
+    "id": "vision-m9",
+    "enonce": "Quelle architecture, faite d'un encodeur qui contracte l'image, d'un décodeur qui l'agrandit et de connexions entre les deux, a été créée en 2015 pour segmenter des images biomédicales ?",
+    "choix": [
+      "ResNet",
+      "LeNet",
+      "U-Net",
+      "Inception"
+    ],
+    "bonneReponse": 2,
+    "explication": "U-Net (Ronneberger et al., 2015) doit son nom à son schéma en U. L'encodeur réduit l'image pour en extraire le sens (« il y a une cellule »), le décodeur la remonte à pleine résolution pour retrouver le « où ». Les connexions de saut (*skip connections*) lui transmettent les détails fins perdus en route. Efficace même avec peu d'images annotées, U-Net est devenu un standard de la segmentation, puis le cœur débruiteur des premiers modèles de diffusion comme Stable Diffusion."
+  },
+  {
+    "id": "vision-m10",
+    "enonce": "Quelle méthode de 2001, fondée sur des caractéristiques de Haar et une cascade de classifieurs, a rendu possible la détection de visages en temps réel dans les appareils photo ?",
+    "choix": [
+      "Viola–Jones",
+      "Lucas–Kanade",
+      "Harris–Stephens",
+      "Canny–Deriche"
+    ],
+    "bonneReponse": 0,
+    "explication": "Paul Viola et Michael Jones combinent trois idées : des motifs simples de rectangles clairs et sombres (caractéristiques de Haar) calculés très vite grâce à l'« image intégrale », une sélection des meilleurs motifs par AdaBoost, et une cascade qui rejette en quelques tests les zones sans visage. Résultat : du temps réel sur le matériel de l'époque, d'où les petits carrés autour des visages sur les appareils photo. Lucas–Kanade calcule le flux optique, Harris–Stephens détecte des coins, Canny–Deriche des contours."
+  }
+]
