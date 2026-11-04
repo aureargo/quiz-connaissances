@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ia-generative-e1",
+    "enonce": "Dans un DDPM (Ho et al., 2020), quelle cible le réseau de débruitage apprend-il à prédire ?",
+    "choix": [
+      "L'image finale, obtenue directement en une seule passe",
+      "La probabilité que l'image soit une véritable photo",
+      "Le bruit gaussien qui a été ajouté à l'image",
+      "Le prompt textuel ayant servi à créer l'image"
+    ],
+    "bonneReponse": 2,
+    "explication": "On prend une image x₀, on tire un pas t et un bruit gaussien ε, et on forme l'image bruitée x_t = √ᾱ_t·x₀ + √(1−ᾱ_t)·ε. Le réseau, qui reçoit x_t et t, doit retrouver ε : la perte est une simple erreur quadratique. Ho et al. ont montré que cette cible, plus simple que les formulations précédentes, donne de bien meilleures images. Prédire le bruit revient d'ailleurs à connaître l'image propre, qu'on en déduit à partir de x_t ; des variantes prédisent directement x₀ ou une « vitesse » v. La probabilité d'être une vraie photo, c'est ce qu'estime le discriminateur d'un GAN."
+  },
+  {
+    "id": "ia-generative-e2",
+    "enonce": "Comment fonctionne le « classifier-free guidance », qui pousse un modèle de diffusion à respecter le prompt ?",
+    "choix": [
+      "Il prédit le bruit avec et sans le prompt, puis amplifie l'écart",
+      "Un classifieur séparé corrige l'image à chaque étape de débruitage",
+      "Il répète le prompt plusieurs fois pour renforcer son poids",
+      "Il génère plusieurs images et garde celle que CLIP préfère"
+    ],
+    "bonneReponse": 0,
+    "explication": "Pendant l'entraînement, on remplace le prompt par un texte vide dans 10 à 20 % des cas : le même réseau apprend ainsi à débruiter avec et sans condition. À la génération, on calcule les deux prédictions et on extrapole : ε̂ = ε_vide + w·(ε_prompt − ε_vide). Avec w > 1 (7,5 par défaut dans Stable Diffusion), l'image colle davantage au prompt, au prix de la diversité, et les couleurs saturent si w est trop fort. Proposée par Ho et Salimans (2021), la méthode a remplacé le « classifier guidance », qui exigeait un classifieur entraîné à part sur des images bruitées. Garder la meilleure image selon CLIP, c'était le reclassement utilisé par le premier DALL·E."
+  },
+  {
+    "id": "ia-generative-e3",
+    "enonce": "Dans le U-Net de Stable Diffusion, par quel mécanisme les vecteurs issus du prompt influencent-ils le débruitage ?",
+    "choix": [
+      "Par concaténation du texte, converti en image, au bruit de départ",
+      "Par un filtre appliqué une fois l'image entièrement débruitée",
+      "Par un ajustement des poids du réseau propre à chaque prompt",
+      "Par attention croisée : l'image latente interroge les tokens du texte"
+    ],
+    "bonneReponse": 3,
+    "explication": "Le prompt est d'abord encodé par l'encodeur de texte de CLIP (dans Stable Diffusion 1.x : 77 tokens de 768 dimensions). Dans les couches d'attention croisée du U-Net, les requêtes (Q) proviennent des caractéristiques de l'image en cours de débruitage, tandis que les clés (K) et les valeurs (V) proviennent des tokens du texte : chaque zone de l'image « va chercher » les mots qui la concernent. Les cartes d'attention montrent d'ailleurs où agit chaque mot, ce qu'exploitent des méthodes d'édition comme Prompt-to-Prompt (2022)."
+  },
+  {
+    "id": "ia-generative-e4",
+    "enonce": "Quelle architecture a remplacé le U-Net comme débruiteur dans des modèles récents tels que Stable Diffusion 3, Flux ou Sora ?",
+    "choix": [
+      "Un réseau récurrent LSTM qui lit l'image ligne par ligne",
+      "Un transformer qui traite le latent découpé en patchs",
+      "Un GAN dont le discriminateur sert aussi de débruiteur",
+      "Un autoencodeur variationnel, sans étape de débruitage"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les « transformers de diffusion » (DiT, Peebles et Xie, 2023) découpent le latent en petits carrés transformés en tokens, comme le Vision Transformer, et les traitent par auto-attention. Leur atout : la qualité progresse régulièrement avec la taille du modèle et le calcul investi, comme pour les LLM. William Peebles a ensuite codirigé Sora, qui étend l'idée à des « patchs spatio-temporels » de vidéo. Stable Diffusion 3 (2024) et Flux, de Black Forest Labs (fondé par des créateurs de Stable Diffusion), combinent ce type de transformer avec le flow matching, une variante de la diffusion aux trajectoires plus directes."
+  },
+  {
+    "id": "ia-generative-e5",
+    "enonce": "Quel défaut du GAN original le Wasserstein GAN (Arjovsky, Chintala et Bottou, 2017) cherche-t-il à corriger ?",
+    "choix": [
+      "Des gradients quasi nuls si vraies et fausses données ne se recouvrent pas",
+      "Un discriminateur bien trop lent à évaluer les images en haute définition",
+      "L'incapacité du GAN original à produire des images en couleurs",
+      "La mémorisation pure et simple des images d'entraînement par le générateur"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le GAN original revient à minimiser la divergence de Jensen-Shannon entre vraies et fausses images. Or, en grande dimension, les deux distributions occupent souvent des régions disjointes : cette divergence reste alors bloquée à une constante (log 2), et le générateur ne reçoit plus de gradient utile. La distance de Wasserstein, ou « distance du terrassier » (earth mover's distance), mesure le travail nécessaire pour déplacer une distribution sur l'autre et varie continûment, même sans recouvrement. Le discriminateur devient un « critique » qui note les images au lieu de les classer ; il doit rester 1-lipschitzien, d'abord par écrêtage des poids, puis par pénalité de gradient (WGAN-GP, 2017)."
+  },
+  {
+    "id": "ia-generative-e6",
+    "enonce": "Quelle contrainte permet à CycleGAN (2017) d'apprendre à changer des chevaux en zèbres sans aucune paire d'images correspondantes ?",
+    "choix": [
+      "Les deux jeux d'images doivent partager les mêmes arrière-plans",
+      "Le générateur recopie les rayures depuis une banque de zèbres fixe",
+      "Une image traduite puis retraduite doit redonner l'image d'origine",
+      "Le discriminateur apprend sur des paires annotées à la main"
+    ],
+    "bonneReponse": 2,
+    "explication": "CycleGAN (Zhu, Park, Isola et Efros, Berkeley) entraîne deux générateurs, G : cheval → zèbre et F : zèbre → cheval, chacun face à son discriminateur. Comme rien n'empêcherait G de produire un zèbre sans rapport avec la photo de départ, on ajoute une perte de cohérence de cycle : F(G(x)) doit redonner x, et inversement. Contrairement à pix2pix, qui exige des paires alignées, deux collections d'images suffisent : photos et tableaux de Monet, été et hiver… Limite connue : il change les textures plus que les formes, au point de rayer aussi le cavalier."
+  },
+  {
+    "id": "ia-generative-e7",
+    "enonce": "Que mesure le FID (Fréchet Inception Distance), métrique de référence pour évaluer les générateurs d'images ?",
+    "choix": [
+      "La part des images générées que des humains prennent pour vraies",
+      "L'écart statistique entre vraies et fausses images vues par un réseau",
+      "Le nombre d'images générées par seconde sur une carte graphique donnée",
+      "La part des pixels communs entre une image générée et son modèle"
+    ],
+    "bonneReponse": 1,
+    "explication": "On fait passer des milliers d'images réelles et générées (souvent 50 000) dans le réseau Inception v3, entraîné sur ImageNet, et on récupère pour chacune un vecteur de 2 048 caractéristiques. Chaque nuage de vecteurs est résumé par une gaussienne (moyenne et covariance), et le FID est la distance de Fréchet entre ces deux gaussiennes. Plus il est bas, mieux c'est : il pénalise à la fois les images peu réalistes et le manque de diversité. Proposé par Heusel et al. en 2017, il est critiqué pour sa dépendance à un réseau ancien, entraîné sur ImageNet, qui ne perçoit pas tout ce que voit un œil humain."
+  },
+  {
+    "id": "ia-generative-e8",
+    "enonce": "Comment WaveNet (DeepMind, 2016), qui a marqué un saut de qualité en synthèse vocale, génère-t-il le son ?",
+    "choix": [
+      "En assemblant des syllabes préenregistrées par un comédien",
+      "En débruitant d'un bloc le spectrogramme de la phrase entière",
+      "En modulant une onde sinusoïdale selon des règles phonétiques",
+      "Échantillon par échantillon, chacun prédit à partir des précédents"
+    ],
+    "bonneReponse": 3,
+    "explication": "WaveNet est autorégressif : il prédit chaque échantillon de l'onde sonore (16 000 par seconde dans l'article) à partir de tous ceux qui le précèdent. Pour voir assez loin dans le passé, il empile des convolutions causales « dilatées », dont l'écart double à chaque couche (1, 2, 4… 512). Le résultat surpassait nettement la synthèse par concaténation de sons préenregistrés et la synthèse paramétrique, mais il était très lent : il a fallu une version distillée, Parallel WaveNet (2017), pour le déployer dans l'Assistant Google."
+  },
+  {
+    "id": "ia-generative-e9",
+    "enonce": "Quel rôle jouent les codecs audio neuronaux, comme SoundStream (Google) ou EnCodec (Meta), dans des modèles tels que VALL-E ou MusicGen ?",
+    "choix": [
+      "Ils changent le son en jetons discrets qu'un transformer peut prédire",
+      "Ils compressent les poids du modèle pour qu'il tienne sur un téléphone",
+      "Ils filtrent le bruit de fond des enregistrements d'entraînement",
+      "Ils chiffrent l'audio produit pour empêcher toute copie illégale"
+    ],
+    "bonneReponse": 0,
+    "explication": "Un encodeur réduit l'audio à quelques dizaines de vecteurs par seconde (75 pour EnCodec à 24 kHz), puis une quantification vectorielle résiduelle (RVQ) remplace chacun par des numéros piochés dans plusieurs dictionnaires successifs, chaque dictionnaire codant l'erreur laissée par le précédent. Le son devient une suite de jetons, et générer de l'audio se ramène à prédire le jeton suivant, comme le fait un LLM : VALL-E se décrit d'ailleurs comme un « modèle de langage à codec neuronal ». Le décodeur du codec reconstitue ensuite l'onde sonore."
+  },
+  {
+    "id": "ia-generative-e10",
+    "enonce": "Dans le transfert de style neuronal de Gatys et al. (2015), comment représente-t-on le « style » d'un tableau ?",
+    "choix": [
+      "Par l'histogramme des couleurs de chaque zone du tableau",
+      "Par les contours du tableau extraits avec un filtre de Sobel",
+      "Par les corrélations entre les cartes d'activation d'un CNN",
+      "Par le vecteur du tableau dans l'espace commun de CLIP"
+    ],
+    "bonneReponse": 2,
+    "explication": "Gatys, Ecker et Bethge font passer les images dans VGG-19, un CNN entraîné sur ImageNet. Le contenu correspond aux activations d'une couche profonde ; le style, aux matrices de Gram, qui mesurent à quel point deux filtres s'activent ensemble, en sommant sur toutes les positions. Cette somme efface la disposition spatiale et ne garde que les textures, les touches et les couleurs typiques. On modifie ensuite une image pixel par pixel pour qu'elle colle au contenu d'une photo et au style, disons, de La Nuit étoilée. L'application Prisma a popularisé ce rendu en 2016, grâce à des réseaux qui l'appliquent en une seule passe. CLIP, lui, n'est apparu qu'en 2021."
+  }
+]

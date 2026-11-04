@@ -1,0 +1,92 @@
+[
+  {
+    "id": "ia-generative-f1",
+    "enonce": "Que fait un modèle d'IA dit « text-to-image » ?",
+    "choix": [
+      "Il extrait le texte présent sur une image scannée",
+      "Il rédige une légende qui décrit une photo donnée",
+      "Il génère une image à partir d'une description écrite",
+      "Il traduit le texte d'une image dans une autre langue"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un modèle text-to-image (« texte vers image ») prend en entrée un prompt, par exemple « un chat astronaute peint à l'aquarelle », et produit une image qui n'existait pas. DALL·E, Midjourney, Stable Diffusion, Imagen ou Flux en sont des exemples. Les autres choix décrivent le chemin inverse : extraire le texte d'une image relève de l'OCR, et décrire une photo par une phrase s'appelle le sous-titrage d'images (image captioning)."
+  },
+  {
+    "id": "ia-generative-f2",
+    "enonce": "D'où vient le nom de DALL·E, le générateur d'images présenté par OpenAI en 2021 ?",
+    "choix": [
+      "Du peintre Salvador Dalí et du robot WALL·E de Pixar",
+      "D'un sigle anglais : Deep Adversarial Latent Learning Engine",
+      "Du prénom de la fille de l'un de ses créateurs",
+      "Du nom de code d'un ancien robot dessinateur d'OpenAI"
+    ],
+    "bonneReponse": 0,
+    "explication": "DALL·E est un mot-valise entre Salvador Dalí, maître du surréalisme, et WALL·E, le petit robot du film de Pixar (2008). La première version, en janvier 2021, a fait sensation avec son « fauteuil en forme d'avocat ». Ont suivi DALL·E 2 (2022) puis DALL·E 3 (2023), intégré à ChatGPT, avant que la génération d'images native de GPT-4o ne prenne le relais en 2025."
+  },
+  {
+    "id": "ia-generative-f3",
+    "enonce": "À ses débuts en 2022, par quelle plateforme de discussion passait-on pour générer des images avec Midjourney ?",
+    "choix": ["Slack", "Discord", "Telegram", "WhatsApp"],
+    "bonneReponse": 1,
+    "explication": "Midjourney, laboratoire indépendant fondé par David Holz (cofondateur de Leap Motion), a ouvert sa bêta publique en juillet 2022 sous la forme d'un robot Discord : on tapait la commande /imagine suivie du prompt, et les images apparaissaient sous les yeux de tous dans des salons partagés. Son serveur est devenu l'un des plus peuplés de Discord ; une interface web n'a été ouverte à tous qu'en 2024. En août 2022, une image créée avec Midjourney, « Théâtre D'opéra Spatial », a remporté un concours d'art numérique au Colorado, déclenchant une vive polémique."
+  },
+  {
+    "id": "ia-generative-f4",
+    "enonce": "Comment appelle-t-on une vidéo truquée par IA, où le visage ou la voix d'une personne réelle est imité de façon réaliste ?",
+    "choix": ["Un mème", "Un GIF animé", "Un filtre de réalité augmentée", "Un deepfake"],
+    "bonneReponse": 3,
+    "explication": "Le mot associe deep learning (apprentissage profond) et fake (faux). Il vient du pseudonyme d'un utilisateur de Reddit, « deepfakes », qui publiait fin 2017 des vidéos où il remplaçait des visages grâce à des autoencodeurs. Depuis, les deepfakes servent aussi bien au cinéma (rajeunir un acteur) qu'à la désinformation, aux arnaques et au harcèlement, ce qui pousse à développer des outils de détection et de marquage des contenus."
+  },
+  {
+    "id": "ia-generative-f5",
+    "enonce": "En 2019, que montrait à chaque visite le site « This Person Does Not Exist » ?",
+    "choix": [
+      "Le portrait d'une personne disparue, en vieillissement simulé",
+      "Le visage photoréaliste d'une personne inventée par une IA",
+      "La photo d'un inconnu tirée au hasard sur un réseau social",
+      "Le croquis d'un suspect dessiné à partir d'un témoignage"
+    ],
+    "bonneReponse": 1,
+    "explication": "Créé par l'ingénieur Phillip Wang, le site affichait un nouveau visage à chaque rechargement grâce à StyleGAN, un GAN publié par Nvidia fin 2018. Un GAN (réseau antagoniste génératif) fait s'affronter deux réseaux : un générateur qui fabrique des images, et un discriminateur qui tente de les distinguer de vraies photos. À force de vouloir tromper son adversaire, le générateur produit des visages bluffants… à quelques détails près : boucles d'oreilles dépareillées, arrière-plans incohérents."
+  },
+  {
+    "id": "ia-generative-f6",
+    "enonce": "Quelle partie du corps les générateurs d'images de 2022 rataient-ils si souvent qu'elle est devenue l'indice classique d'une image générée ?",
+    "choix": ["Les mains", "Les oreilles", "Les pieds", "Les yeux"],
+    "bonneReponse": 0,
+    "explication": "Doigts en trop ou fusionnés, pouces tordus, mains à six doigts : c'était le signe le plus sûr d'une image d'IA. La main peut prendre d'innombrables poses, elle est souvent à moitié cachée ou floue sur les photos d'entraînement, et le modèle ne « sait » pas qu'elle compte cinq doigts : il reproduit des motifs statistiques. Les modèles sortis à partir de 2023 (Midjourney v5, DALL·E 3…) ont nettement progressé ; le texte écrit dans les images est longtemps resté un autre point faible."
+  },
+  {
+    "id": "ia-generative-f7",
+    "enonce": "Quel modèle d'OpenAI, dévoilé en février 2024, génère des vidéos réalistes à partir d'une description écrite ?",
+    "choix": ["Whisper", "Codex", "Jukebox", "Sora"],
+    "bonneReponse": 3,
+    "explication": "Sora (« ciel » en japonais) a impressionné par ses clips d'une minute, comme celui d'une femme marchant de nuit dans une rue de Tokyo. Il a été ouvert au public en décembre 2024, puis Sora 2 (septembre 2025) a ajouté un son synchronisé et une application sociale. Ses concurrents s'appellent Veo (Google), Kling (Kuaishou) ou Runway. Les autres noms sont aussi d'OpenAI : Whisper transcrit la parole, Codex écrit du code et Jukebox (2020) générait de la musique."
+  },
+  {
+    "id": "ia-generative-f8",
+    "enonce": "Quel service, lancé fin 2023, compose des chansons complètes (paroles, voix et instruments) à partir d'une simple description ?",
+    "choix": ["Shazam", "Deezer", "Suno", "SoundCloud"],
+    "bonneReponse": 2,
+    "explication": "Suno, start-up américaine, produit en quelques secondes un morceau chanté dans le style demandé (« une ballade folk sur un chat qui s'ennuie »). Son concurrent Udio est apparu en 2024. Tous deux ont été attaqués en justice en 2024 par les grandes maisons de disques, qui leur reprochaient d'avoir entraîné leurs modèles sur des chansons protégées, avant de signer des accords de licence avec certaines d'entre elles en 2025. Shazam, lui, fait l'inverse : il reconnaît un morceau qui existe déjà."
+  },
+  {
+    "id": "ia-generative-f9",
+    "enonce": "Comment appelle-t-on la technique qui remplit de façon cohérente une zone effacée d'une image, pour faire disparaître un passant par exemple ?",
+    "choix": ["L'inpainting", "L'outpainting", "L'upscaling", "Le morphing"],
+    "bonneReponse": 0,
+    "explication": "L'inpainting (de l'anglais to paint in, « peindre dedans ») reconstruit la zone masquée à partir de son contexte : c'est ce que font la « gomme magique » des smartphones ou le « remplissage génératif » de Photoshop (2023). L'outpainting fait l'inverse : il prolonge l'image au-delà de ses bords pour agrandir le cadre. L'upscaling augmente la résolution, et le morphing transforme progressivement une image en une autre."
+  },
+  {
+    "id": "ia-generative-f10",
+    "enonce": "À quoi sert le filigrane invisible (watermark) que certains outils glissent dans les images qu'ils génèrent ?",
+    "choix": [
+      "À réduire la taille du fichier sans perte visible",
+      "À permettre de reconnaître ensuite qu'elle vient d'une IA",
+      "À empêcher toute capture d'écran de l'image",
+      "À améliorer la netteté de l'image quand on zoome"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le filigrane est un signal imperceptible à l'œil, inscrit dans les pixels, qu'un logiciel de détection peut retrouver même après un recadrage ou une compression. Google DeepMind a lancé SynthID en 2023, depuis étendu au texte, à l'audio et à la vidéo. En complément, le standard C2PA (« Content Credentials ») attache au fichier des métadonnées signées qui décrivent son origine, et l'AI Act européen exige que les contenus synthétiques soient marqués de façon détectable. Aucune méthode n'est infaillible : une métadonnée s'efface facilement, et un filigrane peut être dégradé."
+  }
+]

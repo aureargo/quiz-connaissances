@@ -378,6 +378,13 @@
     "description": "Tokenisation, embeddings, Word2Vec, BERT et traduction : comment les machines apprennent à lire."
   },
   {
+    "id": "ia-generative",
+    "nom": "IA générative (images, audio, vidéo)",
+    "emoji": "🎨",
+    "categorie": "Intelligence artificielle",
+    "description": "Diffusion, GAN, deepfakes et voix clonées : comment les machines apprennent à créer images, sons et vidéos."
+  },
+  {
     "id": "mangas",
     "nom": "Mangas",
     "emoji": "📖",

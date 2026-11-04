@@ -1,0 +1,112 @@
+[
+  {
+    "id": "ia-generative-m1",
+    "enonce": "Comment un modèle de diffusion, comme Stable Diffusion, apprend-il à générer des images ?",
+    "choix": [
+      "En faisant s'affronter un réseau faussaire et un réseau détective",
+      "En apprenant à retirer, pas à pas, du bruit ajouté à des images",
+      "En découpant puis en recollant des morceaux d'images existantes",
+      "En cherchant dans sa base l'image la plus proche du prompt"
+    ],
+    "bonneReponse": 1,
+    "explication": "À l'entraînement, on abîme des images en y ajoutant du bruit aléatoire, un peu plus à chaque étape, jusqu'à n'avoir que de la « neige », et le réseau apprend à défaire chaque étape. Pour créer, on part d'un bruit pur qu'on débruite pas à pas, guidé par le prompt, jusqu'à faire émerger une image nouvelle. L'idée date de 2015 (Sohl-Dickstein et al., inspirés par la thermodynamique) et a percé avec les DDPM de Ho et al. en 2020. Le premier choix décrit un GAN. Quant au collage, le modèle ne stocke pas ses images d'entraînement, même si des chercheurs ont montré qu'il peut en recracher quelques-unes, parmi les plus dupliquées."
+  },
+  {
+    "id": "ia-generative-m2",
+    "enonce": "Pourquoi Stable Diffusion débruite-t-il un « espace latent » plutôt que directement les pixels de l'image ?",
+    "choix": [
+      "Pour pouvoir produire des images en noir et blanc plus fidèles",
+      "Pour dissimuler les images d'entraînement à l'intérieur du modèle",
+      "Pour que l'image reste modifiable ensuite dans un logiciel de retouche",
+      "Pour travailler sur une version compressée, bien moins coûteuse"
+    ],
+    "bonneReponse": 3,
+    "explication": "Un autoencodeur (VAE) compresse d'abord une image couleur de 512 × 512 pixels en un tableau de 64 × 64 × 4 valeurs, soit 48 fois moins de nombres, tout en gardant l'essentiel de son contenu. Le débruitage se fait dans ce petit espace, puis le décodeur du VAE reconstitue les pixels. C'est l'idée de la « diffusion latente » (Rombach et al., 2022), qui a permis à Stable Diffusion, publié en open source en août 2022 avec Stability AI, de tourner sur une simple carte graphique de joueur."
+  },
+  {
+    "id": "ia-generative-m3",
+    "enonce": "Que détermine la « graine » (seed) choisie lors d'une génération d'image ?",
+    "choix": [
+      "Le bruit aléatoire d'où part le débruitage",
+      "Le style artistique appliqué à l'image",
+      "La résolution finale de l'image produite",
+      "La langue dans laquelle le prompt est lu"
+    ],
+    "bonneReponse": 0,
+    "explication": "La graine initialise le générateur de nombres pseudo-aléatoires qui fabrique le bruit de départ. Même modèle, même prompt, mêmes réglages et même graine : on obtient la même image, à de minuscules écarts près selon le matériel. C'est précieux pour itérer : on garde une composition qui plaît et on ne change qu'un mot du prompt pour voir son effet. Changer la graine, à l'inverse, donne une nouvelle variante du même prompt."
+  },
+  {
+    "id": "ia-generative-m4",
+    "enonce": "À quoi sert un « prompt négatif » dans un outil comme Stable Diffusion ?",
+    "choix": [
+      "À obtenir une image aux couleurs inversées, comme un négatif",
+      "À bloquer les demandes que l'éditeur juge offensantes",
+      "À décrire ce que l'image ne doit surtout pas contenir",
+      "À réduire la luminosité générale de l'image produite"
+    ],
+    "bonneReponse": 2,
+    "explication": "On y liste ce qu'on veut éviter : « flou, texte, filigrane, doigts en trop ». Techniquement, il remplace le prompt vide dans le mécanisme de guidage (classifier-free guidance) : à chaque étape, le modèle est poussé vers le prompt positif et éloigné du négatif. Les filtres de modération, eux, sont un mécanisme distinct, appliqué par l'éditeur avant ou après la génération."
+  },
+  {
+    "id": "ia-generative-m5",
+    "enonce": "À quoi sert ControlNet (2023), greffé sur un modèle comme Stable Diffusion ?",
+    "choix": [
+      "À vérifier que l'image produite respecte le droit d'auteur",
+      "À imposer la composition par une pose, des contours ou une profondeur",
+      "À limiter le temps de calcul accordé à chaque génération",
+      "À répartir le calcul entre plusieurs cartes graphiques"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un prompt décrit mal une composition précise. ControlNet, proposé par Lvmin Zhang, Anyi Rao et Maneesh Agrawala (Stanford), ajoute une condition visuelle : le squelette d'une pose, les contours d'un croquis, une carte de profondeur… L'astuce : on entraîne une copie de l'encodeur du réseau, reliée au modèle d'origine par des « convolutions zéro » initialisées à zéro. Au départ, elle ne perturbe donc rien, et le modèle d'origine, gelé, garde tout son savoir-faire."
+  },
+  {
+    "id": "ia-generative-m6",
+    "enonce": "Qu'appelle-t-on l'« effondrement de modes » (mode collapse) lors de l'entraînement d'un GAN ?",
+    "choix": [
+      "Le générateur ne produit plus que quelques variantes quasi identiques",
+      "Le modèle oublie ce qu'il savait dès qu'on l'entraîne sur autre chose",
+      "Les images produites deviennent de plus en plus floues au fil du temps",
+      "La mémoire de la carte graphique sature et l'entraînement s'interrompt"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le générateur ne cherche qu'à tromper le discriminateur. S'il trouve un type d'image qui passe à coup sûr, il a intérêt à le répéter : entraîné sur des chiffres manuscrits, il peut finir par ne plus dessiner que des « 1 ». Quand le discriminateur s'en aperçoit, le générateur saute vers un autre mode, et ainsi de suite. Ce manque de diversité, ajouté à l'instabilité de l'entraînement, explique en partie pourquoi les modèles de diffusion ont supplanté les GAN pour la génération d'images vers 2021-2022. Le deuxième choix décrit l'« oubli catastrophique »."
+  },
+  {
+    "id": "ia-generative-m7",
+    "enonce": "En 2018, le « Portrait d'Edmond de Belamy », généré par un GAN, a été vendu aux enchères chez Christie's. À quel prix ?",
+    "choix": ["Environ 4 300 $", "Environ 43 000 $", "Environ 430 000 $", "Environ 4,3 millions $"],
+    "bonneReponse": 2,
+    "explication": "Estimé entre 7 000 et 10 000 $, le tableau du collectif français Obvious est parti à 432 500 $, une première pour une œuvre d'IA dans une grande maison de ventes. En guise de signature figure la formule mathématique de la fonction objectif d'un GAN. Le nom est un clin d'œil à Ian Goodfellow, inventeur des GAN en 2014 : « bel ami » traduit à peu près good fellow. La vente a aussi fait polémique, car le code utilisé reprenait largement celui d'un jeune programmeur, Robbie Barrat, publié en open source."
+  },
+  {
+    "id": "ia-generative-m8",
+    "enonce": "Beaucoup de modèles de synthèse vocale ou musicale produisent d'abord un spectrogramme. Que représente-t-il ?",
+    "choix": [
+      "Le volume moyen de chaque piste d'un morceau mixé",
+      "La partition des notes jouées par chaque instrument",
+      "Le texte des paroles, aligné sur la mélodie",
+      "L'intensité de chaque fréquence au fil du temps"
+    ],
+    "bonneReponse": 3,
+    "explication": "Un spectrogramme est une image : le temps à l'horizontale, les fréquences à la verticale (souvent sur l'échelle « mel », calquée sur l'oreille humaine) et l'intensité en couleur. Pour le transformer en son audible, il faut un « vocodeur ». C'est le schéma de Tacotron 2 (Google, 2017), qui prédit un spectrogramme à partir du texte puis confie la conversion en onde sonore à un vocodeur neuronal. Puisque c'est une image, on peut même la générer avec un modèle d'images : Riffusion (2022) a ainsi composé de la musique avec Stable Diffusion."
+  },
+  {
+    "id": "ia-generative-m9",
+    "enonce": "Présenté par Microsoft en janvier 2023, de quelle durée d'enregistrement le modèle VALL-E a-t-il besoin pour imiter la voix d'un inconnu ?",
+    "choix": ["3 secondes", "3 minutes", "30 minutes", "3 heures"],
+    "bonneReponse": 0,
+    "explication": "VALL-E reproduit le timbre, et même l'émotion et l'acoustique de la pièce, à partir d'un extrait de 3 secondes seulement. Jugeant le risque d'usurpation trop grand, Microsoft ne l'a pas mis à disposition du public, mais d'autres outils de clonage vocal le sont. Les arnaques au « faux proche » en détresse se sont multipliées, et en janvier 2024 un faux appel imitant la voix de Joe Biden a incité des électeurs du New Hampshire à ne pas voter à la primaire. D'où le conseil de convenir d'un mot de passe familial pour les appels urgents."
+  },
+  {
+    "id": "ia-generative-m10",
+    "enonce": "Quelle difficulté est propre à la génération de vidéo, par rapport à celle d'une image fixe ?",
+    "choix": [
+      "Respecter le format d'écran demandé, 16:9 ou vertical",
+      "Garder objets et personnages cohérents d'une image à l'autre",
+      "Choisir une musique de fond adaptée au rythme des scènes",
+      "Produire un fichier assez léger pour être diffusé en ligne"
+    ],
+    "bonneReponse": 1,
+    "explication": "Une vidéo, c'est au moins 24 images par seconde qui doivent s'enchaîner sans accroc. Générées une par une, elles scintillent : un visage change d'une image à l'autre, un objet apparaît puis disparaît. Les modèles récents (Sora, Veo, Kling…) débruitent donc toute la séquence d'un bloc, dans un espace latent qui inclut le temps. Restent des failles de « physique » : un verre qui ne se brise pas, des jambes qui s'emmêlent en marchant… La vidéo virale et grotesque de Will Smith mangeant des spaghettis (2023) sert depuis d'étalon pour mesurer les progrès."
+  }
+]
